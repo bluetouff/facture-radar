@@ -14,12 +14,12 @@ interface Props {
 const { title, description, canonical = Astro.url.pathname } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
 const nav = [
-  { href: "/verifier-mon-outil/", label: "Vérifier un outil", shortLabel: "Vérifier" },
-  { href: "/diagnostic/", label: "Comparer si besoin", shortLabel: "Comparer" },
-  { href: "/plateformes/", label: `${platforms.length} fiches`, shortLabel: "Fiches" },
-  { href: "/annuaire/", label: "Annuaire DGFiP", shortLabel: "Annuaire" },
-  { href: "/methodologie/", label: "Méthode", shortLabel: "Méthode" },
-];
+  { href: "/verifier-mon-outil/", label: "Vérifier un outil", shortLabel: "Vérifier", icon: "search" },
+  { href: "/diagnostic/", label: "Comparer si besoin", shortLabel: "Comparer", icon: "verdict" },
+  { href: "/plateformes/", label: `${platforms.length} fiches`, shortLabel: "Fiches", icon: "proof" },
+  { href: "/annuaire/", label: "Annuaire DGFiP", shortLabel: "Annuaire", icon: "check" },
+  { href: "/methodologie/", label: "Méthode", shortLabel: "Méthode", icon: "shield" },
+] as const;
 ---
 
 <!doctype html>
@@ -30,7 +30,7 @@ const nav = [
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#18313a" />
+    <meta name="theme-color" content="#f4f7fb" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self'; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
@@ -49,17 +49,18 @@ const nav = [
       <div class="shell header-inner">
         <a class="brand" href="/" aria-label="PA Check, accueil">
           <span class="brand-mark"><InterfaceIcon name="invoice" /></span>
-          <span class="brand-copy"><strong>PA <span>/ CHECK</span></strong><small>vérificateur de parcours</small></span>
+          <span class="brand-copy"><strong>PA <span>Check</span></strong><small>Vérifier avant de changer</small></span>
         </a>
-        <strong class="header-promise">Pour les cabinets comptables</strong>
+        <nav class="main-nav" aria-label="Navigation principale">
+          {nav.map(({ href, label, shortLabel, icon }) => (
+            <a href={href} aria-current={Astro.url.pathname.startsWith(href) ? "page" : undefined}>
+              <InterfaceIcon name={icon} />
+              <span class="nav-label">{label}</span><span class="nav-short">{shortLabel}</span>
+            </a>
+          ))}
+        </nav>
+        <strong class="header-promise"><InterfaceIcon name="shield" /> Sources vérifiées</strong>
       </div>
-      <nav class="shell main-nav" aria-label="Navigation principale">
-        {nav.map(({ href, label, shortLabel }) => (
-          <a href={href} aria-current={Astro.url.pathname.startsWith(href) ? "page" : undefined}>
-            <span class="nav-label">{label}</span><span class="nav-short">{shortLabel}</span>
-          </a>
-        ))}
-      </nav>
     </header>
     <main id="contenu">
       <slot />
@@ -67,7 +68,7 @@ const nav = [
     <footer class="site-footer">
       <div class="shell footer-grid">
         <div>
-          <p class="mono-label">pa//check</p>
+          <p class="mono-label">PA Check</p>
           <strong>Choisir une plateforme, preuves à l'appui.</strong>
           <p>Calcul local, aucun compte, aucune facture déposée, aucun classement acheté.</p>
         </div>

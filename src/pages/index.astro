@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PlatformCard from "../components/PlatformCard.astro";
 import ToolVerifier from "../components/ToolVerifier.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
+import ProofOrbit from "../components/ProofOrbit.astro";
 import { platforms } from "../data/platforms";
 import sources from "../data/sources.json";
 import directory from "../data/official-directory.json";
@@ -12,24 +13,27 @@ import directory from "../data/official-directory.json";
   title="PA Check | Vérifier l'outil de facturation d'un client"
   description="Une réponse sourcée et directement transmissible pour savoir si l'outil de facturation d'un client peut être conservé."
 >
-  <section class="shell hero">
-    <div class="hero-intro">
-      <span class="eyebrow">facturation électronique · pour les cabinets</span>
-      <h1>Votre client peut-il <strong>garder son outil&nbsp;?</strong></h1>
-      <p class="hero-copy">Saisissez son logiciel. Vous obtenez une réponse sourcée et l'action exacte à lui transmettre.</p>
-    </div>
-    <div class="hero-verifier"><ToolVerifier /></div>
-    <div class="hero-support">
-      <div class="hero-guide" aria-label="Parcours du vérificateur">
-        <div><span><InterfaceIcon name="invoice" /></span><p><strong>Un outil</strong><small>Le logiciel déjà utilisé</small></p></div>
-        <div><span><InterfaceIcon name="verdict" /></span><p><strong>Un verdict</strong><small>Rester, confirmer ou agir</small></p></div>
-        <div><span><InterfaceIcon name="action" /></span><p><strong>Une action</strong><small>À transmettre au client</small></p></div>
+  <section class="hero-stage">
+    <ProofOrbit />
+    <div class="shell hero">
+      <div class="hero-intro">
+        <span class="eyebrow">facturation électronique · pour les cabinets</span>
+        <h1>Votre client peut-il <strong>garder son outil&nbsp;?</strong></h1>
+        <p class="hero-copy">Saisissez son logiciel. Vous obtenez une réponse sourcée et l'action exacte à lui transmettre.</p>
       </div>
-      <a class="quiet-link" href="/methodologie/">Voir comment les réponses sont vérifiées <InterfaceIcon name="arrow" /></a>
+      <div class="hero-verifier"><ToolVerifier /></div>
+      <div class="hero-support">
+        <div class="hero-guide" aria-label="Parcours du vérificateur">
+          <div><span><InterfaceIcon name="invoice" /></span><p><strong>Un outil</strong><small>Le logiciel déjà utilisé</small></p></div>
+          <div><span><InterfaceIcon name="verdict" /></span><p><strong>Un verdict</strong><small>Rester, confirmer ou agir</small></p></div>
+          <div><span><InterfaceIcon name="action" /></span><p><strong>Une action</strong><small>À transmettre au client</small></p></div>
+        </div>
+        <a class="quiet-link" href="/methodologie/">Voir comment les réponses sont vérifiées <InterfaceIcon name="arrow" /></a>
+      </div>
     </div>
   </section>
 
-  <section class="shell" aria-label="État du corpus">
+  <section class="shell stats-shell" aria-label="État du corpus">
     <div class="stats-strip">
       <div><strong>{platforms.length}</strong><span>outils vérifiables</span></div>
       <div><strong>{sources.length}</strong><span>sources publiques liées</span></div>
@@ -81,17 +85,27 @@ import directory from "../data/official-directory.json";
 </BaseLayout>
 
 <style>
+  .hero-stage { position: relative; overflow: hidden; border-radius: 0 0 2.4rem 2.4rem; background: radial-gradient(circle at 78% 18%, rgba(64,91,216,.32), transparent 22rem), radial-gradient(circle at 20% 100%, rgba(117,87,214,.18), transparent 25rem), #101d3a; }
+  .hero-stage::after { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(196,206,255,.17) 1px, transparent 1.2px); background-size: 24px 24px; mask-image: linear-gradient(90deg, #000, transparent 48%, #000); content: ""; opacity: .36; pointer-events: none; }
+  .hero-stage .hero { position: relative; z-index: 2; }
+  .hero-stage .hero h1 { color: #f8faff; }
+  .hero-stage .hero h1 strong { color: #9caaff; }
+  .hero-stage .hero-copy { color: rgba(237,242,255,.76); }
+  .hero-stage .eyebrow { border-color: rgba(174,186,255,.28); background: rgba(255,255,255,.07); color: #bdc7ff; }
   .hero-intro { grid-area: intro; }
-  .hero-verifier { grid-area: verifier; align-self: center; }
+  .hero-verifier { grid-area: verifier; align-self: center; position: relative; z-index: 2; }
   .hero-support { grid-area: support; }
-  .hero-guide { display: grid; max-width: 35rem; border: 1px solid var(--line-strong); background: var(--line); gap: 1px; }
-  .hero-guide > div { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: center; padding: .8rem .9rem; background: color-mix(in srgb, var(--surface) 76%, transparent); }
-  .hero-guide > div > span { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border: 1px solid var(--line-strong); border-radius: 50%; color: var(--signal); }
+  .hero-guide { display: grid; max-width: 35rem; gap: .55rem; }
+  .hero-guide > div { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: center; border: 1px solid rgba(190,202,255,.16); border-radius: var(--radius-md); padding: .75rem .8rem; background: rgba(255,255,255,.055); backdrop-filter: blur(12px); }
+  .hero-guide > div > span { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: .65rem; background: rgba(142,161,255,.14); color: #bdc7ff; }
   .hero-guide p { display: grid; margin: 0; }
-  .hero-guide strong { color: var(--bright); font-size: .78rem; }
-  .hero-guide small { color: var(--muted); font: .56rem/1.5 var(--font-mono); text-transform: uppercase; }
-  .quiet-link { display: inline-flex; gap: .55rem; align-items: center; margin-top: 1rem; color: var(--signal); font: 700 .65rem/1.4 var(--font-mono); }
+  .hero-guide strong { color: #fff; font-size: .78rem; }
+  .hero-guide small { color: rgba(237,242,255,.58); font-size: .58rem; font-weight: 560; }
+  .quiet-link { display: inline-flex; gap: .55rem; align-items: center; margin-top: 1rem; color: #bdc7ff; font-size: .66rem; font-weight: 700; }
   .quiet-link :global(svg) { width: 1rem; height: 1rem; }
-  .quiet-section { border-block: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 60%, transparent); }
+  .stats-shell { position: relative; z-index: 3; margin-top: -1.75rem; }
+  .stats-shell .stats-strip > div { background: rgba(255,255,255,.94); box-shadow: 0 .8rem 2.2rem rgba(27,40,72,.09); backdrop-filter: blur(12px); }
+  .quiet-section { border-block: 1px solid color-mix(in srgb, var(--signal) 12%, var(--line)); background: color-mix(in srgb, var(--signal-soft) 46%, transparent); }
   @media (min-width: 901px) { .hero-guide { grid-template-columns: repeat(3, 1fr); } .hero-guide > div { grid-template-columns: 1fr; align-items: start; } }
+  @media (max-width: 620px) { .hero-stage { border-radius: 0 0 1.5rem 1.5rem; } .stats-shell { margin-top: -1rem; } }
 </style>

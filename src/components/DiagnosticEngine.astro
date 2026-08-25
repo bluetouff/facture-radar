@@ -197,47 +197,52 @@
 </script>
 
 <style is:global>
-  .diagnostic { border: 1px solid var(--line); background: var(--surface); box-shadow: 0 24px 70px var(--shadow); }
-  .diagnostic-head { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-bottom: 1px solid var(--line); padding: 1.2rem; }
+  .diagnostic { overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal) 20%, var(--line)); border-radius: 1.45rem; background: rgba(255,255,255,.9); box-shadow: 0 1.5rem 4.5rem rgba(41,57,86,.1); }
+  .diagnostic-head { position: relative; display: grid; overflow: hidden; grid-template-columns: 1fr 1fr; gap: 2rem; border-bottom: 1px solid var(--line); padding: 1.3rem; background: linear-gradient(110deg, var(--signal-soft), #fff 58%, color-mix(in srgb, var(--accent) 8%, #fff)); }
+  .diagnostic-head::after { position: absolute; top: -5rem; right: 8%; width: 9rem; height: 9rem; border: 1px solid rgba(64,91,216,.13); border-radius: 50%; box-shadow: 0 0 0 1.5rem rgba(64,91,216,.035), 0 0 0 3rem rgba(117,87,214,.025); content: ""; }
   .diagnostic-head > div { display: flex; gap: 0.8rem; align-items: center; }
   legend span { color: var(--accent); font: 800 1.2rem/1 var(--font-mono); }
-  .diagnostic-head > p { margin: 0; color: var(--muted); font-size: 0.78rem; }
-  .question-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1.2rem; }
+  .diagnostic-head > p { position: relative; z-index: 1; margin: 0; color: var(--muted); font-size: 0.78rem; }
+  .question-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1.3rem; }
   .question-grid label { display: grid; gap: 0.5rem; }
   .question-grid label > span { color: var(--paper); font-size: 0.78rem; font-weight: 650; }
   .question-grid label > span b { margin-right: .45rem; color: var(--accent); font: 750 .65rem/1 var(--font-mono); }
-  input[type="number"], select { width: 100%; min-height: 3rem; border: 1px solid var(--line); border-radius: 0; padding: 0.7rem 0.8rem; outline: 0; background: var(--surface-2); color: var(--bright); }
+  input[type="number"], select { width: 100%; min-height: 3.2rem; border: 1px solid var(--line); border-radius: .75rem; padding: 0.7rem 0.8rem; outline: 0; background: var(--surface-2); color: var(--bright); }
   input:focus, select:focus { border-color: var(--signal); box-shadow: 0 0 0 2px color-mix(in srgb, var(--signal) 18%, transparent); }
-  fieldset { margin: 0; border: 0; border-top: 1px solid var(--line); padding: 1.2rem; }
+  fieldset { margin: 0; border: 0; border-top: 1px solid var(--line); padding: 1.3rem; }
   legend { padding: 0 0.7rem 0 0; color: var(--bright); font-weight: 750; }
   .constraint-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 0.8rem; }
-  .constraint-grid label { display: flex; gap: 0.7rem; align-items: flex-start; border: 1px solid var(--line); padding: 0.8rem; cursor: pointer; }
-  .constraint-grid label:hover { border-color: var(--signal); }
+  .constraint-grid label { position: relative; display: flex; gap: 0.7rem; min-height: 5.2rem; align-items: flex-start; border: 1px solid var(--line); border-radius: .85rem; padding: 0.85rem; background: rgba(244,247,251,.72); cursor: pointer; transition: border-color 160ms ease, translate 160ms ease, background 160ms ease, box-shadow 160ms ease; }
+  .constraint-grid label:hover { translate: 0 -2px; border-color: color-mix(in srgb, var(--signal) 46%, var(--line)); background: #fff; }
+  .constraint-grid label:has(input:checked) { border-color: color-mix(in srgb, var(--signal) 52%, var(--line)); background: var(--signal-soft); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--signal) 8%, transparent), 0 .45rem 1.1rem rgba(64,91,216,.08); }
   .constraint-grid input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; accent-color: var(--signal); }
   .constraint-grid span { display: grid; }
-  .constraint-grid strong { color: var(--paper); font-size: 0.78rem; }
+  .constraint-grid strong { color: var(--bright); font-size: 0.78rem; }
   .constraint-grid small { margin-top: 0.2rem; color: var(--muted); font-size: 0.66rem; }
-  .form-actions { display: flex; gap: 0.7rem; border-top: 1px solid var(--line); padding: 1.2rem; }
+  .form-actions { display: flex; gap: 0.7rem; border-top: 1px solid var(--line); padding: 1.2rem 1.3rem; background: rgba(237,242,248,.55); }
   .form-actions button { cursor: pointer; }
   .results { scroll-margin-top: 1rem; margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 2rem; }
   .results > header { display: flex; justify-content: space-between; align-items: end; gap: 1rem; }
   .results h2 { margin: 0.55rem 0 0; color: var(--bright); font-size: clamp(1.6rem, 4vw, 2.5rem); letter-spacing: -0.045em; }
-  .share-button { border: 1px solid var(--line); padding: 0.6rem 0.8rem; background: var(--surface); color: var(--signal); cursor: pointer; font: 0.64rem/1 var(--font-mono); }
+  .share-button { border: 1px solid var(--line); border-radius: .65rem; padding: 0.7rem 0.85rem; background: var(--surface); color: var(--signal); cursor: pointer; font: 650 0.64rem/1 var(--font-sans); }
   .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.3rem; }
-  .result-card { display: flex; min-width: 0; flex-direction: column; border: 1px solid var(--line); padding: 1rem; background: var(--surface); }
+  .result-card { position: relative; display: flex; overflow: hidden; min-width: 0; min-height: 23rem; flex-direction: column; border: 1px solid color-mix(in srgb, var(--signal) 18%, var(--line)); border-radius: 1.15rem; padding: 1.1rem; background: linear-gradient(145deg, var(--signal-soft), #fff 35%, #fff); box-shadow: 0 .7rem 2rem rgba(41,57,86,.06); }
+  .result-card::after { position: absolute; top: -4rem; right: -4rem; width: 9rem; height: 9rem; border: 1px solid rgba(64,91,216,.14); border-radius: 50%; box-shadow: 0 0 0 1.3rem rgba(64,91,216,.035); content: ""; }
+  .result-card > * { position: relative; z-index: 1; }
   .result-top { display: flex; justify-content: space-between; gap: 0.5rem; }
-  .rank { color: var(--accent); font: 0.6rem/1 var(--font-mono); }
-  .compatibility { color: var(--signal); font: 0.64rem/1 var(--font-mono); }
+  .rank { color: var(--accent); font: 730 0.6rem/1 var(--font-sans); letter-spacing: .04em; }
+  .compatibility { border-radius: 999px; padding: .3rem .45rem; background: var(--success-soft); color: var(--success); font: 680 0.58rem/1 var(--font-sans); }
   .result-card h3 { margin: 1rem 0 0; color: var(--bright); font-size: 1.4rem; }
   .result-card .price { min-height: 3.8rem; color: var(--muted); font-size: 0.76rem; }
   .result-card h4 { margin: 1rem 0 0.45rem; color: var(--paper); font-size: 0.72rem; }
   .result-card ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.7rem; }
   .result-card li + li { margin-top: 0.35rem; }
   .unknown-list li::marker { color: var(--amber); }
-  .result-link { margin-top: auto; padding-top: 1.2rem; color: var(--signal); font: 0.65rem/1 var(--font-mono); }
+  .result-link { display: flex; justify-content: space-between; margin-top: auto; border-radius: .7rem; padding: .75rem; background: var(--signal-soft); color: var(--signal); font-size: .65rem; font-weight: 720; }
+  .result-link::after { content: "→"; }
   .no-result { grid-column: 1 / -1; border-left: 3px solid var(--amber); padding: 1rem; background: var(--surface); color: var(--paper); }
-  .excluded-results { margin-top: 1rem; border: 1px solid var(--line); background: var(--surface); }
-  .excluded-results summary { padding: 1rem; color: var(--paper); cursor: pointer; font: 0.72rem/1.4 var(--font-mono); }
+  .excluded-results { overflow: hidden; margin-top: 1rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
+  .excluded-results summary { padding: 1rem; color: var(--paper); cursor: pointer; font-size: .72rem; font-weight: 670; }
   .excluded-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding: 0.8rem 1rem; }
   .excluded-row > div { display: flex; justify-content: space-between; gap: 0.6rem; }
   .excluded-row strong { color: var(--bright); }

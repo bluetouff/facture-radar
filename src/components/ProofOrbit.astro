@@ -1,0 +1,48 @@
+<div class="proof-orbit" aria-hidden="true">
+  <svg viewBox="0 0 640 440" fill="none">
+    <defs>
+      <linearGradient id="orbit-stroke" x1="94" y1="56" x2="548" y2="380" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#8ea1ff" />
+        <stop offset=".52" stop-color="#7557d6" />
+        <stop offset="1" stop-color="#39c6a0" />
+      </linearGradient>
+      <radialGradient id="orbit-core" cx="0" cy="0" r="1" gradientTransform="translate(320 220) rotate(90) scale(108)">
+        <stop stop-color="#405bd8" stop-opacity=".42" />
+        <stop offset="1" stop-color="#405bd8" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <circle cx="320" cy="220" r="204" class="ring ring-outer" />
+    <circle cx="320" cy="220" r="151" class="ring ring-mid" />
+    <circle cx="320" cy="220" r="96" fill="url(#orbit-core)" class="core-halo" />
+    <path d="M117 220h406M320 17v406" class="axis" />
+    <path d="M164 88c100-78 254-72 346 20M496 348c-104 72-252 60-336-30" class="scan-arc" />
+    <path d="M266 151h88l34 34v104H252V165l14-14Z" class="document" />
+    <path d="M354 151v34h34M282 210h72M282 236h50" class="document-lines" />
+    <path d="m300 269 17 17 39-47" class="core-check" />
+    <g class="node node-one"><circle cx="170" cy="122" r="10" /><circle cx="170" cy="122" r="3" /></g>
+    <g class="node node-two"><circle cx="500" cy="167" r="10" /><circle cx="500" cy="167" r="3" /></g>
+    <g class="node node-three"><circle cx="438" cy="356" r="10" /><circle cx="438" cy="356" r="3" /></g>
+    <g class="node node-four"><circle cx="141" cy="301" r="10" /><circle cx="141" cy="301" r="3" /></g>
+  </svg>
+</div>
+
+<style>
+  .proof-orbit { position: absolute; top: 50%; right: max(-10rem, -8vw); width: min(54vw, 690px); translate: 0 -50%; color: #aebaff; opacity: .72; pointer-events: none; }
+  svg { width: 100%; height: auto; filter: drop-shadow(0 0 2.8rem rgba(64,91,216,.2)); }
+  .ring { stroke: currentColor; stroke-width: 1; }
+  .ring-outer { stroke-dasharray: 2 11; opacity: .42; }
+  .ring-mid { stroke-dasharray: 42 12 4 12; opacity: .56; }
+  .axis { stroke: currentColor; stroke-width: .8; stroke-dasharray: 2 8; opacity: .2; }
+  .scan-arc { stroke: url(#orbit-stroke); stroke-width: 3; stroke-linecap: round; opacity: .72; }
+  .document, .document-lines { stroke: url(#orbit-stroke); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .document { fill: rgba(255,255,255,.025); }
+  .core-check { stroke: #53d9b5; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+  .node circle:first-child { fill: #111f42; stroke: url(#orbit-stroke); stroke-width: 2; }
+  .node circle:last-child { fill: #fff; }
+  .node-one, .node-three { animation: orbit-pulse 3.8s ease-in-out infinite; transform-origin: center; }
+  .node-two, .node-four { animation: orbit-pulse 3.8s 1.4s ease-in-out infinite; transform-origin: center; }
+  @keyframes orbit-pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+  @media (max-width: 900px) { .proof-orbit { top: 8rem; right: -13rem; width: 35rem; translate: 0; opacity: .4; } }
+  @media (max-width: 620px) { .proof-orbit { top: 3rem; right: -14rem; width: 28rem; opacity: .3; } }
+  @media (prefers-reduced-motion: reduce) { .node { animation: none; } }
+</style>

@@ -12,6 +12,14 @@ export function getStaticPaths() {
 
 const { platform } = Astro.props;
 const coverage = documentationCoverage(platform);
+const platformIndex = Math.max(0, platforms.findIndex((candidate) => candidate.slug === platform.slug));
+const profileTone = `tone-${platformIndex % 6}`;
+const initials = platform.displayName
+  .split(/\s+/)
+  .map((part) => part[0])
+  .join("")
+  .slice(0, 2)
+  .toLocaleUpperCase("fr");
 const linkedSourceIds = new Set<string>();
 for (const value of Object.values(platform)) {
   if (!value || typeof value !== "object" || !("sourceIds" in value)) continue;
@@ -43,18 +51,30 @@ const rows = [
   title={`${platform.displayName} : dossier de preuve | PA Check`}
   description={`Prix, fonctions, dépendances et inconnues documentées pour ${platform.displayName}, plateforme agréée de facturation électronique.`}
 >
-  <section class="shell profile-hero">
-    <div>
+  <section class:list={["shell", "profile-hero", profileTone]}>
+    <div class="profile-copy">
       <a class="back-link" href="/plateformes/">← {platforms.length} fiches de preuve</a>
-      <span class="eyebrow">dossier {platform.officialName}</span>
-      <h1>{platform.displayName}</h1>
+      <div class="profile-heading">
+        <div class="profile-monogram" aria-hidden="true"><span>{initials}</span></div>
+        <div>
+          <span class="profile-index">Dossier {String(platformIndex + 1).padStart(2, "0")} / {platforms.length}</span>
+          <h1>{platform.displayName}</h1>
+        </div>
+      </div>
+      <span class="official-name">{platform.officialName}</span>
       <p>{platform.summary}</p>
       <div class="tag-row">{platform.targets.map((target) => <span class="tag">{target}</span>)}</div>
     </div>
     <div class="profile-stamp">
-      <EvidenceBadge status="official" label="Liste DGFiP" />
-      <strong>{coverage} %</strong><span>de couverture documentaire</span>
-      <small>{sourceCount(platform)} sources liées · vérifié le 25/08/2026</small>
+      <div class="stamp-head"><EvidenceBadge status="official" label="Liste DGFiP" /><span>Revue active</span></div>
+      <div class="coverage-ring" style={`--coverage: ${coverage * 3.6}deg`} aria-label={`${coverage} % de couverture documentaire`}>
+        <div><strong>{coverage}</strong><small>%</small></div>
+      </div>
+      <span class="coverage-label">Couverture documentaire</span>
+      <div class="stamp-meta">
+        <span><strong>{sourceCount(platform)}</strong> pièces liées</span>
+        <span><strong>25.08.26</strong> dernière revue</span>
+      </div>
     </div>
   </section>
 
@@ -81,19 +101,41 @@ const rows = [
 </BaseLayout>
 
 <style>
-  .profile-hero { display: grid; grid-template-columns: 1fr 18rem; gap: 3rem; align-items: end; padding-block: clamp(3rem, 7vw, 6rem); }
-  .back-link { display: block; margin-bottom: 1.5rem; color: var(--muted); font: .65rem/1 var(--font-mono); }
-  .profile-hero h1 { margin: .8rem 0 0; color: var(--bright); font-size: clamp(3rem, 8vw, 6rem); line-height: .95; letter-spacing: -.07em; }
-  .profile-hero p:not(.mono-label) { max-width: 45rem; color: var(--paper); }
-  .profile-stamp { display: grid; justify-items: start; border: 1px solid var(--line); padding: 1.1rem; background: var(--surface); }
-  .profile-stamp > strong { margin-top: 1.3rem; color: var(--signal); font-size: 3rem; line-height: 1; letter-spacing: -.06em; }
-  .profile-stamp > span, .profile-stamp small { color: var(--muted); font: .6rem/1.5 var(--font-mono); text-transform: uppercase; }
-  .profile-stamp small { margin-top: 1rem; text-transform: none; }
-  .profile-layout { display: grid; grid-template-columns: minmax(0, 1fr) 18rem; gap: 2rem; }
-  .matrix-head { border-bottom: 1px solid var(--line); padding-bottom: 1.2rem; }
+  .profile-hero { --profile-tone: #405bd8; --profile-tone-2: #7557d6; position: relative; display: grid; overflow: hidden; grid-template-columns: minmax(0, 1fr) 19rem; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; margin-top: 2rem; border: 1px solid color-mix(in srgb, var(--profile-tone) 24%, var(--line)); border-radius: 1.65rem; padding: clamp(1.4rem, 4vw, 3.3rem); background: linear-gradient(135deg, color-mix(in srgb, var(--profile-tone) 8%, #fff), #fff 52%, color-mix(in srgb, var(--profile-tone-2) 7%, #fff)); box-shadow: 0 1.4rem 4rem rgba(41,57,86,.1); }
+  .profile-hero::before { position: absolute; top: -10rem; right: 8rem; width: 25rem; height: 25rem; border: 1px solid color-mix(in srgb, var(--profile-tone) 17%, transparent); border-radius: 50%; box-shadow: 0 0 0 3rem color-mix(in srgb, var(--profile-tone) 4%, transparent), 0 0 0 7rem color-mix(in srgb, var(--profile-tone-2) 3%, transparent); content: ""; pointer-events: none; }
+  .profile-hero.tone-1 { --profile-tone: #7557d6; --profile-tone-2: #405bd8; }
+  .profile-hero.tone-2 { --profile-tone: #178b77; --profile-tone-2: #3f70c8; }
+  .profile-hero.tone-3 { --profile-tone: #b15b40; --profile-tone-2: #8d57c8; }
+  .profile-hero.tone-4 { --profile-tone: #2f6fa5; --profile-tone-2: #2b9b8c; }
+  .profile-hero.tone-5 { --profile-tone: #9456a8; --profile-tone-2: #d06b58; }
+  .profile-copy, .profile-stamp { position: relative; z-index: 1; }
+  .back-link { display: inline-flex; margin-bottom: 1.8rem; color: var(--muted); font-size: .67rem; font-weight: 650; }
+  .profile-heading { display: flex; gap: 1.1rem; align-items: center; }
+  .profile-monogram { display: grid; flex: 0 0 auto; place-items: center; width: 4.6rem; height: 4.6rem; border-radius: 1.35rem; background: linear-gradient(145deg, var(--profile-tone), var(--profile-tone-2)); color: #fff; box-shadow: 0 .9rem 2.2rem color-mix(in srgb, var(--profile-tone) 25%, transparent); }
+  .profile-monogram span { font-size: 1.1rem; font-weight: 790; letter-spacing: -.03em; }
+  .profile-index { color: var(--profile-tone); font-size: .62rem; font-weight: 760; letter-spacing: .06em; text-transform: uppercase; }
+  .profile-hero h1 { margin: .25rem 0 0; color: var(--bright); font-size: clamp(2.4rem, 6vw, 4.7rem); font-weight: 750; line-height: .97; letter-spacing: -.065em; }
+  .official-name { display: block; margin-top: 1.3rem; color: var(--muted); font: .61rem/1.5 var(--font-mono); }
+  .profile-hero p { max-width: 45rem; margin: .85rem 0 0; color: var(--paper); font-size: .93rem; }
+  .profile-stamp { display: grid; justify-items: center; border: 1px solid color-mix(in srgb, var(--profile-tone) 21%, var(--line)); border-radius: 1.35rem; padding: 1.1rem; background: rgba(255,255,255,.82); box-shadow: 0 .8rem 2.4rem rgba(41,57,86,.08); backdrop-filter: blur(12px); }
+  .stamp-head { display: flex; width: 100%; justify-content: space-between; gap: .5rem; align-items: center; }
+  .stamp-head > span { color: var(--success); font-size: .56rem; font-weight: 710; }
+  .coverage-ring { display: grid; place-items: center; width: 8.7rem; height: 8.7rem; margin-top: 1.2rem; border-radius: 50%; background: conic-gradient(var(--profile-tone) var(--coverage), var(--surface-3) 0); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--profile-tone) 12%, transparent); }
+  .coverage-ring > div { display: flex; width: 6.6rem; height: 6.6rem; align-items: baseline; justify-content: center; border-radius: 50%; padding-top: 1.55rem; background: #fff; box-shadow: 0 .4rem 1.3rem rgba(41,57,86,.08); }
+  .coverage-ring strong { color: var(--bright); font-size: 2.5rem; line-height: 1; letter-spacing: -.07em; }
+  .coverage-ring small { color: var(--profile-tone); font-size: .75rem; font-weight: 750; }
+  .coverage-label { margin-top: .65rem; color: var(--muted); font-size: .62rem; font-weight: 650; }
+  .stamp-meta { display: grid; width: 100%; grid-template-columns: 1fr 1fr; gap: .45rem; margin-top: 1rem; }
+  .stamp-meta span { border-radius: .65rem; padding: .55rem; background: var(--surface-2); color: var(--muted); font-size: .51rem; line-height: 1.35; }
+  .stamp-meta strong { display: block; color: var(--bright); font-size: .67rem; }
+  .profile-layout { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 1.3rem; padding-top: 2rem; }
+  .matrix-head { border-bottom: 1px solid var(--line); padding: 1rem .3rem 1.4rem; }
   .matrix-head h2 { max-width: 18ch; margin: .5rem 0 0; color: var(--bright); font-size: clamp(1.7rem, 4vw, 2.8rem); letter-spacing: -.05em; }
+  .evidence-matrix { display: grid; gap: .55rem; margin-top: .75rem; }
   .profile-layout aside { display: grid; gap: 1rem; align-content: start; }
-  .unknown-panel, .source-panel { border: 1px solid var(--line); padding: 1rem; background: var(--surface); }
+  .unknown-panel, .source-panel { border: 1px solid var(--line); border-radius: 1.1rem; padding: 1rem; background: rgba(255,255,255,.8); box-shadow: 0 .5rem 1.5rem rgba(41,57,86,.045); }
+  .unknown-panel { border-top: 3px solid var(--amber); }
+  .source-panel { border-top: 3px solid var(--signal); }
   aside h2 { color: var(--bright); font-size: 1.1rem; }
   aside ul { padding-left: 1rem; color: var(--muted); font-size: .72rem; }
   aside li + li { margin-top: .45rem; }
@@ -103,6 +145,6 @@ const rows = [
   .source-panel a { display: grid; }
   .source-panel strong { color: var(--paper); font-size: .67rem; line-height: 1.4; }
   .source-panel span { margin-top: .25rem; color: var(--muted); font: .53rem/1.4 var(--font-mono); }
-  @media (max-width: 920px) { .profile-layout { grid-template-columns: 1fr; } .profile-layout aside { grid-template-columns: repeat(2, 1fr); } .profile-layout aside .button { grid-column: 1 / -1; } }
-  @media (max-width: 620px) { .profile-hero { grid-template-columns: 1fr; } .profile-layout aside { grid-template-columns: 1fr; } .profile-layout aside .button { grid-column: auto; } }
+  @media (max-width: 920px) { .profile-hero, .profile-layout { grid-template-columns: 1fr; } .profile-stamp { grid-template-columns: auto 1fr; justify-items: start; column-gap: 1.2rem; } .stamp-head { grid-column: 1 / -1; } .coverage-ring { grid-row: 2 / 4; } .coverage-label { align-self: end; } .stamp-meta { align-self: start; } .profile-layout aside { grid-template-columns: repeat(2, 1fr); } .profile-layout aside .button { grid-column: 1 / -1; } }
+  @media (max-width: 620px) { .profile-hero { margin-top: .8rem; border-radius: 1.2rem; } .profile-heading { align-items: flex-start; } .profile-monogram { width: 3.6rem; height: 3.6rem; border-radius: 1rem; } .profile-stamp { grid-template-columns: 1fr; justify-items: center; } .stamp-head { grid-column: auto; } .coverage-ring { grid-row: auto; } .coverage-label { align-self: auto; } .stamp-meta { align-self: auto; } .profile-layout aside { grid-template-columns: 1fr; } .profile-layout aside .button { grid-column: auto; } }
 </style>

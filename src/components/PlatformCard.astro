@@ -17,22 +17,35 @@ const pricingLabels = {
   quote: "sur devis",
 } as const;
 const pricingLabel = platform.pricing.value ? pricingLabels[platform.pricing.value.kind] : "prix à confirmer";
+const initials = platform.displayName.replace(/[^\p{L}\p{N}]/gu, "").slice(0, 2).toLocaleUpperCase("fr");
+const proofSlots = Array.from({ length: 5 }, (_, slot) => slot < Math.min(sources, 5));
 ---
 
-<article class="platform-card">
+<article class={`platform-card tone-${index % 6}`}>
   <div class="card-top">
-    <span class="card-index">{String(index + 1).padStart(2, "0")}</span>
+    <div class="platform-identity">
+      <span class="platform-monogram" aria-hidden="true">{initials}</span>
+      <div>
+        <span class="card-index">Dossier {String(index + 1).padStart(2, "0")}</span>
+        <h3>{platform.displayName}</h3>
+      </div>
+    </div>
     <EvidenceBadge status={platform.officialStatus.status} label="DGFiP" />
   </div>
-  <h3>{platform.displayName}</h3>
-  <p>{platform.summary}</p>
+  <p class="card-summary">{platform.summary}</p>
   <div class="tag-row">
     {platform.targets.map((target) => <span class="tag">{target}</span>)}
     <span class="tag">{pricingLabel}</span>
   </div>
+  <div class="proof-density" aria-label={`${sources} sources liées`}>
+    <div class="proof-bars" aria-hidden="true">
+      {proofSlots.map((filled) => <span class:list={{ filled }}></span>)}
+    </div>
+    <span><strong>{sources}</strong> sources liées</span>
+  </div>
   <div class="card-metrics">
     <div><span>Dernière vérification</span><strong>{platform.officialStatus.checkedAt.split("-").reverse().join("/")}</strong></div>
-    <div><span>Sources liées</span><strong>{sources}</strong></div>
+    <div><span>Positionnement</span><strong>{pricingLabel}</strong></div>
   </div>
   <a class="card-link" href={`/plateformes/${platform.slug}/`}>
     <span>Ouvrir le dossier</span><span aria-hidden="true">↗</span>
