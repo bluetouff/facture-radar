@@ -438,5 +438,29 @@
     "url": "https://www.cegedim-business-services.com/factures-achats/reforme-de-la-facturation-electronique-ce-que-vous-devez-savoir-avant-le-1er-septembre-2026/",
     "type": "documentation",
     "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "dgfip-specs-v3-2-2026",
+    "title": "Spécifications externes de la facturation électronique B2B, version 3.2",
+    "publisher": "Direction générale des Finances publiques",
+    "url": "https://www.impots.gouv.fr/specifications-externes-b2b",
+    "type": "institutional",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "dgfip-electronic-invoice-guide-2026",
+    "title": "Plateforme agréée et formats de facture électronique",
+    "publisher": "Direction générale des Finances publiques",
+    "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/fiches_reforme/fiche-pdp.pdf",
+    "type": "institutional",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "fnfe-facturx-1-09-2-2026",
+    "title": "Factur-X 1.09.2, profils et syntaxe CII D22B",
+    "publisher": "Forum National de la Facture Électronique et des Marchés Publics Électroniques",
+    "url": "https://fnfe-mpe.org/factur-x/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
   }
 ]

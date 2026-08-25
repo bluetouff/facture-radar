@@ -15,10 +15,10 @@ const { title, description, canonical = Astro.url.pathname } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
 const nav = [
   { href: "/verifier-mon-outil/", label: "Mon outil actuel", shortLabel: "Mon outil", icon: "search" },
+  { href: "/verifier-une-facture/", label: "Vérifier une facture", shortLabel: "Facture", icon: "invoice" },
   { href: "/diagnostic/", label: "Choisir une plateforme", shortLabel: "Choisir", icon: "verdict" },
   { href: "/plateformes/", label: `${platforms.length} plateformes`, shortLabel: "Plateformes", icon: "proof" },
   { href: "/annuaire/", label: "Annuaire officiel", shortLabel: "Annuaire", icon: "check" },
-  { href: "/methodologie/", label: "Comment ça marche", shortLabel: "Comprendre", icon: "shield" },
 ] as const;
 ---
 
@@ -33,7 +33,7 @@ const nav = [
     <meta name="theme-color" content="#f4f7fb" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self'; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
+      content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' data:; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
     />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -49,7 +49,7 @@ const nav = [
       <div class="shell header-inner">
         <a class="brand" href="/" aria-label="PA Check, accueil">
           <span class="brand-mark"><InterfaceIcon name="invoice" /></span>
-          <span class="brand-copy"><strong>PA <span>Check</span></strong><small>Choisir sa plateforme</small></span>
+          <span class="brand-copy"><strong>PA <span>Check</span></strong><small>Choisir et vérifier</small></span>
         </a>
         <nav class="main-nav" aria-label="Navigation principale">
           {nav.map(({ href, label, shortLabel, icon }) => (
@@ -69,8 +69,8 @@ const nav = [
       <div class="shell footer-grid">
         <div>
           <p class="mono-label">PA Check</p>
-          <strong>Choisir une plateforme adaptée à son activité.</strong>
-          <p>Vos réponses restent sur votre appareil. Aucun compte ni dépôt de facture.</p>
+          <strong>Choisir sa plateforme et vérifier ses factures test.</strong>
+          <p>Vos réponses et vos fichiers restent sur votre appareil. Aucun compte nécessaire.</p>
         </div>
         <nav aria-label="Pied de page">
           <a href="/methodologie/">Méthodologie</a>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InvoiceVerifier from "../components/InvoiceVerifier.astro";
+import InterfaceIcon from "../components/InterfaceIcon.astro";
+---
+
+<BaseLayout
+  title="Vérifier une facture Factur-X | PA Check"
+  description="Contrôlez localement la structure d'un PDF Factur-X ou d'un XML CII, sans envoyer ni conserver votre facture."
+>
+  <section class="shell page-hero invoice-hero">
+    <div>
+      <span class="eyebrow">un fichier · une réponse · aucun envoi</span>
+      <h1>Votre facture contient-elle les bonnes données&nbsp;?</h1>
+      <p>Déposez une facture test. PA Check lit sa partie structurée sur votre appareil et vous indique les points utiles à corriger avant de la tester dans votre plateforme.</p>
+    </div>
+    <div class="hero-seal" aria-label="Contrôle effectué localement">
+      <span><InterfaceIcon name="shield" /></span>
+      <strong>Local</strong>
+      <small>aucun transfert</small>
+    </div>
+  </section>
+
+  <section class="shell verifier-section">
+    <InvoiceVerifier />
+  </section>
+
+  <section class="shell invoice-explainer">
+    <article>
+      <span>01</span>
+      <h2>Ce qui est lu</h2>
+      <p>Le profil Factur-X, les parties, les dates, la devise, les lignes, la TVA et les totaux présents dans le XML CII.</p>
+    </article>
+    <article>
+      <span>02</span>
+      <h2>Ce qui reste privé</h2>
+      <p>Le fichier n'est ni téléversé, ni enregistré, ni envoyé à une API. Fermer la page suffit pour terminer la session.</p>
+    </article>
+    <article>
+      <span>03</span>
+      <h2>Ce que le résultat ne promet pas</h2>
+      <p>Le contrôle ne remplace pas les validations de votre plateforme, un contrôle fiscal ou un conseil adapté à votre situation.</p>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .invoice-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; }
+  .invoice-hero h1 { max-width: 21ch; }
+  .hero-seal { position: relative; display: grid; place-items: center; width: 10rem; height: 10rem; border: 1px solid color-mix(in srgb, var(--signal) 24%, var(--line)); border-radius: 50%; background: radial-gradient(circle, #fff 52%, var(--signal-soft) 53%); color: var(--signal); box-shadow: 0 1rem 3rem rgba(64,91,216,.12), inset 0 0 0 .7rem rgba(255,255,255,.72); }
+  .hero-seal::before, .hero-seal::after { position: absolute; border: 1px solid color-mix(in srgb, var(--signal) 18%, transparent); border-radius: 50%; content: ""; }
+  .hero-seal::before { inset: -.55rem; }
+  .hero-seal::after { inset: .75rem; border-style: dashed; }
+  .hero-seal span { color: var(--success); }
+  .hero-seal strong { margin-top: -.65rem; color: var(--bright); font-size: 1.2rem; }
+  .hero-seal small { margin-top: -1.1rem; color: var(--muted); font-size: .66rem; }
+  .verifier-section { padding-bottom: clamp(2.5rem, 6vw, 5rem); }
+  .invoice-explainer { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; padding-bottom: clamp(3.5rem, 7vw, 6rem); }
+  .invoice-explainer article { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; padding: 1.1rem; background: rgba(255,255,255,.72); }
+  .invoice-explainer article > span { color: var(--signal); font: 730 .66rem/1 var(--font-mono); }
+  .invoice-explainer h2 { margin: 1.3rem 0 .4rem; color: var(--bright); font-size: 1.05rem; }
+  .invoice-explainer p { margin: 0; color: var(--muted); font-size: .79rem; }
+  @media (max-width: 700px) { .invoice-hero { grid-template-columns: 1fr; } .hero-seal { display: none; } .invoice-explainer { grid-template-columns: 1fr; } }
+</style>

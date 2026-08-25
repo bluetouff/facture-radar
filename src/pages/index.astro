@@ -19,14 +19,14 @@ import directory from "../data/official-directory.json";
       <div class="hero-intro">
         <span class="eyebrow">facturation électronique · indépendants et entreprises</span>
         <h1>Comprenez votre <strong>parcours facture.</strong></h1>
-        <p class="hero-copy">Voyez si votre outil est réellement prêt, quelle plateforme agréée il utilise, ce qu'il reste à faire et combien cela peut coûter.</p>
+        <p class="hero-copy">Voyez si votre outil est réellement prêt, quelle plateforme agréée il utilise, ce qu'il reste à faire et contrôlez une facture test sans l'envoyer.</p>
       </div>
       <div class="hero-verifier"><ToolJourney /></div>
       <div class="hero-support">
         <div class="hero-guide" aria-label="Les usages de PA Check">
           <div><span><InterfaceIcon name="invoice" /></span><p><strong>Vous êtes déjà équipé</strong><small>Faites le point sur votre outil</small></p></div>
           <div><span><InterfaceIcon name="verdict" /></span><p><strong>Vous devez choisir</strong><small>Obtenez jusqu'à trois options</small></p></div>
-          <div><span><InterfaceIcon name="action" /></span><p><strong>Vous voulez comparer</strong><small>Consultez prix et fonctions</small></p></div>
+          <div><span><InterfaceIcon name="invoice" /></span><p><strong>Vous avez une facture test</strong><small>Contrôlez son Factur-X localement</small></p></div>
         </div>
         <a class="quiet-link" href="/methodologie/">Comprendre comment les informations sont mises à jour <InterfaceIcon name="arrow" /></a>
       </div>
@@ -39,6 +39,30 @@ import directory from "../data/official-directory.json";
       <div><strong>{sources.length}</strong><span>sources publiques consultables</span></div>
       <div><strong>0</strong><span>donnée personnelle demandée</span></div>
       <div><strong>{directory.approved.length}</strong><span>plateformes agréées recensées</span></div>
+    </div>
+  </section>
+
+  <section class="shell invoice-callout" aria-labelledby="invoice-callout-title">
+    <div class="invoice-visual" aria-hidden="true">
+      <div class="invoice-sheet">
+        <span class="sheet-corner"></span>
+        <strong>FACTURE</strong>
+        <i></i><i></i><i></i>
+        <div><span>XML</span><b>✓</b></div>
+      </div>
+      <span class="scan-line"></span>
+      <span class="visual-chip"><InterfaceIcon name="shield" /> local</span>
+    </div>
+    <div class="invoice-callout-copy">
+      <p class="mono-label">nouveau · vérificateur de facture</p>
+      <h2 id="invoice-callout-title">Un fichier. Une réponse utile.</h2>
+      <p>Déposez un PDF Factur-X ou un XML CII. PA Check repère les données structurées présentes, les incohérences de base et les trois prochaines vérifications à faire.</p>
+      <div class="callout-points">
+        <span><InterfaceIcon name="shield" /> Aucun envoi</span>
+        <span><InterfaceIcon name="check" /> Résultat immédiat</span>
+        <span><InterfaceIcon name="action" /> Trois actions maximum</span>
+      </div>
+      <a class="button" href="/verifier-une-facture/">Vérifier une facture test <InterfaceIcon name="arrow" /></a>
     </div>
   </section>
 
@@ -103,12 +127,35 @@ import directory from "../data/official-directory.json";
   .hero-guide > div > span { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: .65rem; background: rgba(142,161,255,.14); color: #bdc7ff; }
   .hero-guide p { display: grid; margin: 0; }
   .hero-guide strong { color: #fff; font-size: .78rem; }
-  .hero-guide small { color: rgba(237,242,255,.58); font-size: .58rem; font-weight: 560; }
-  .quiet-link { display: inline-flex; gap: .55rem; align-items: center; margin-top: 1rem; color: #bdc7ff; font-size: .66rem; font-weight: 700; }
+  .hero-guide small { color: rgba(237,242,255,.64); font-size: .64rem; font-weight: 560; }
+  .quiet-link { display: inline-flex; gap: .55rem; align-items: center; margin-top: 1rem; color: #bdc7ff; font-size: .7rem; font-weight: 700; }
   .quiet-link :global(svg) { width: 1rem; height: 1rem; }
   .stats-shell { position: relative; z-index: 3; margin-top: -1.75rem; }
   .stats-shell .stats-strip > div { background: rgba(255,255,255,.94); box-shadow: 0 .8rem 2.2rem rgba(27,40,72,.09); backdrop-filter: blur(12px); }
+  .invoice-callout { position: relative; display: grid; grid-template-columns: minmax(15rem, .72fr) minmax(0, 1.28fr); gap: clamp(2rem, 7vw, 5rem); align-items: center; overflow: hidden; margin-top: clamp(3rem, 7vw, 5.5rem); border: 1px solid color-mix(in srgb, var(--signal) 18%, var(--line)); border-radius: 1.5rem; padding: clamp(1.4rem, 5vw, 3rem); background: linear-gradient(135deg, #fff, color-mix(in srgb, var(--signal-soft) 76%, #fff)); box-shadow: 0 1.2rem 3.5rem rgba(41,57,86,.08); }
+  .invoice-callout::before { position: absolute; top: -9rem; right: -5rem; width: 22rem; height: 22rem; border: 1px solid rgba(64,91,216,.12); border-radius: 50%; box-shadow: 0 0 0 2.5rem rgba(64,91,216,.035), 0 0 0 5rem rgba(117,87,214,.025); content: ""; }
+  .invoice-visual { position: relative; display: grid; place-items: center; min-height: 18rem; border-radius: 1.15rem; background: radial-gradient(circle at 50% 50%, rgba(64,91,216,.18), transparent 9rem), #15233f; }
+  .invoice-sheet { position: relative; display: grid; width: 10.5rem; min-height: 13.5rem; align-content: start; border-radius: .45rem; padding: 1.3rem; background: #fff; box-shadow: 0 1.5rem 3rem rgba(0,0,0,.25); rotate: -3deg; }
+  .invoice-sheet strong { color: var(--bright); font: 760 .76rem/1 var(--font-mono); letter-spacing: .08em; }
+  .invoice-sheet > i { height: .38rem; margin-top: .75rem; border-radius: 999px; background: var(--surface-2); }
+  .invoice-sheet > i:nth-of-type(2) { width: 72%; }
+  .invoice-sheet > i:nth-of-type(3) { width: 88%; }
+  .invoice-sheet > div { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; border-top: 1px solid var(--line); padding-top: .8rem; }
+  .invoice-sheet > div span { color: var(--signal); font: 730 .65rem/1 var(--font-mono); }
+  .invoice-sheet > div b { display: grid; place-items: center; width: 1.45rem; height: 1.45rem; border-radius: 50%; background: var(--success-soft); color: var(--success); }
+  .sheet-corner { position: absolute; top: 0; right: 0; border-width: 0 0 2rem 2rem; border-style: solid; border-color: transparent transparent var(--signal-soft) transparent; }
+  .scan-line { position: absolute; right: 14%; left: 14%; top: 50%; height: 2px; background: #84f2d1; box-shadow: 0 0 .8rem #84f2d1; }
+  .visual-chip { position: absolute; right: 1rem; bottom: 1rem; display: inline-flex; gap: .35rem; align-items: center; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: .4rem .6rem; background: rgba(255,255,255,.08); color: #a9f2dc; font-size: .64rem; font-weight: 710; }
+  .visual-chip :global(svg) { width: .9rem; height: .9rem; }
+  .invoice-callout-copy { position: relative; z-index: 1; }
+  .invoice-callout-copy h2 { max-width: 17ch; margin: .8rem 0 0; color: var(--bright); font-size: clamp(1.8rem, 3.7vw, 2.8rem); line-height: 1.08; letter-spacing: -.045em; }
+  .invoice-callout-copy > p:not(.mono-label) { max-width: 42rem; color: var(--paper); font-size: .9rem; }
+  .callout-points { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0 1.2rem; }
+  .callout-points span { display: inline-flex; gap: .35rem; align-items: center; border-radius: 999px; padding: .4rem .55rem; background: #fff; color: var(--paper); font-size: .66rem; font-weight: 650; box-shadow: inset 0 0 0 1px var(--line); }
+  .callout-points :global(svg), .invoice-callout .button :global(svg) { width: .9rem; height: .9rem; }
+  .invoice-callout .button { gap: .5rem; }
   .quiet-section { border-block: 1px solid color-mix(in srgb, var(--signal) 12%, var(--line)); background: color-mix(in srgb, var(--signal-soft) 46%, transparent); }
   @media (min-width: 901px) { .hero-guide { grid-template-columns: repeat(3, 1fr); } .hero-guide > div { grid-template-columns: 1fr; align-items: start; } }
+  @media (max-width: 700px) { .invoice-callout { grid-template-columns: 1fr; } .invoice-visual { min-height: 15rem; } .invoice-sheet { scale: .88; } }
   @media (max-width: 620px) { .hero-stage { border-radius: 0 0 1.5rem 1.5rem; } .stats-shell { margin-top: -1rem; } }
 </style>

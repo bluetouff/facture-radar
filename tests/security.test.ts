@@ -36,3 +36,27 @@ test("le récapitulatif local ne demande aucun identifiant d'entreprise", async 
   assert.doesNotMatch(component, /name=["'](?:siren|siret|email|telephone|phone)["']/i);
   assert.match(component, /new Blob\(\[copyText\]/);
 });
+
+test("le vérificateur de facture traite le fichier localement sans injection HTML", async () => {
+  const component = await readFile(new URL("../src/components/InvoiceVerifier.astro", import.meta.url), "utf8");
+  assert.match(component, /file\.arrayBuffer\(\)/);
+  assert.match(component, /textContent =/);
+  assert.match(component, /MAX_INVOICE_FILE_BYTES/);
+  assert.match(component, /\.verifier-progress\[hidden\].*display: none !important/);
+  assert.doesNotMatch(component, /\bfetch\s*\(/);
+  assert.doesNotMatch(component, /localStorage/);
+  assert.doesNotMatch(component, /sessionStorage/);
+  assert.doesNotMatch(component, /\.innerHTML\s*=/);
+});
+
+test("l'extraction PDF désactive les fonctions de rendu inutiles et détruit le document après lecture", async () => {
+  const module = await readFile(new URL("../src/lib/pdf-facturx.ts", import.meta.url), "utf8");
+  assert.match(module, /disableFontFace: true/);
+  assert.match(module, /useWasm: false/);
+  assert.match(module, /enableXfa: false/);
+  assert.match(module, /stopAtErrors: true/);
+  assert.match(module, /document\.getAttachmentContent\(key\)/);
+  assert.match(module, /loadingTask\.destroy\(\)/);
+  assert.doesNotMatch(module, /\.getPage\s*\(/);
+  assert.doesNotMatch(module, /\.render\s*\(/);
+});

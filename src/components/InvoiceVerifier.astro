@@ -1,0 +1,423 @@
+---
+import InterfaceIcon from "./InterfaceIcon.astro";
+import sources from "../data/sources.json";
+import { invoiceVerifierSourceIds } from "../lib/invoice-verifier.ts";
+
+const verifierSources = invoiceVerifierSourceIds.map((id) => {
+  const source = sources.find((entry) => entry.id === id);
+  if (!source) throw new Error(`Source introuvable : ${id}`);
+  return source;
+});
+---
+
+<section class="invoice-verifier" aria-labelledby="invoice-verifier-title">
+  <header class="verifier-head">
+    <span class="verifier-mark"><InterfaceIcon name="invoice" /></span>
+    <div>
+      <p class="mono-label">contrôle local</p>
+      <h2 id="invoice-verifier-title">Déposez une facture test.</h2>
+      <p>PDF Factur-X ou XML CII, 10 Mo maximum. Le fichier reste sur cet appareil.</p>
+    </div>
+    <span class="local-badge"><InterfaceIcon name="shield" /> Aucun envoi</span>
+  </header>
+
+  <div class="verifier-input" data-input-panel>
+    <input class="file-input" id="invoice-file" type="file" accept=".pdf,.xml,application/pdf,application/xml,text/xml" />
+    <label class="drop-zone" for="invoice-file" data-drop-zone>
+      <span class="drop-icon"><InterfaceIcon name="proof" /></span>
+      <span class="drop-copy">
+        <strong>Glissez votre facture ici</strong>
+        <small>ou cliquez pour choisir un fichier PDF ou XML</small>
+      </span>
+      <span class="drop-action">Choisir un fichier</span>
+    </label>
+    <div class="privacy-strip">
+      <span><InterfaceIcon name="shield" /><strong>Traitement local</strong> dans votre navigateur</span>
+      <span><InterfaceIcon name="check" /><strong>Lecture seule</strong> du fichier</span>
+      <span><InterfaceIcon name="proof" /><strong>Rien n'est conservé</strong> après la page</span>
+    </div>
+  </div>
+
+  <div class="verifier-progress" data-progress hidden aria-live="polite">
+    <span class="progress-orbit" aria-hidden="true"></span>
+    <div><strong>Lecture du fichier en cours</strong><small data-progress-text>Recherche des données Factur-X…</small></div>
+  </div>
+
+  <div class="verifier-result" data-result data-status="usable" hidden>
+    <header class="result-head">
+      <span class="result-symbol" aria-hidden="true"><InterfaceIcon name="check" /></span>
+      <div>
+        <p class="result-kicker" data-result-kicker>Contrôle terminé</p>
+        <h3 data-result-title></h3>
+        <p data-result-summary></p>
+      </div>
+      <span class="file-chip" data-file-name></span>
+    </header>
+
+    <div class="scope-note"><InterfaceIcon name="shield" /><p><strong>Ce résultat est un prévol technique.</strong> Il ne certifie ni l'authenticité, ni la conformité juridique complète, ni l'acceptation par une plateforme agréée.</p></div>
+
+    <dl class="invoice-metadata" aria-label="Informations lues dans la facture">
+      <div><dt>Format</dt><dd data-meta="format">-</dd></div>
+      <div><dt>Profil</dt><dd data-meta="profile">-</dd></div>
+      <div><dt>Facture</dt><dd data-meta="number">-</dd></div>
+      <div><dt>Date</dt><dd data-meta="date">-</dd></div>
+      <div><dt>Vendeur</dt><dd data-meta="seller">-</dd></div>
+      <div><dt>Acheteur</dt><dd data-meta="buyer">-</dd></div>
+      <div><dt>Total</dt><dd data-meta="total">-</dd></div>
+      <div><dt>Lignes</dt><dd data-meta="lines">-</dd></div>
+    </dl>
+
+    <div class="result-columns">
+      <section class="check-panel" aria-labelledby="checks-title">
+        <div class="panel-heading"><span>01</span><div><small>Points contrôlés</small><h4 id="checks-title">Ce que contient le fichier</h4></div></div>
+        <ul class="check-list" data-checks></ul>
+      </section>
+      <section class="action-panel" aria-labelledby="actions-title">
+        <div class="panel-heading"><span>02</span><div><small>Pour avancer</small><h4 id="actions-title">Vos prochaines actions</h4></div></div>
+        <ol class="invoice-actions" data-actions></ol>
+        <p class="action-limit">Trois actions maximum, classées par priorité.</p>
+      </section>
+    </div>
+
+    <div class="result-tools">
+      <button type="button" class="button" data-copy><InterfaceIcon name="copy" /> Copier le récapitulatif</button>
+      <button type="button" class="button secondary" data-reset>Vérifier un autre fichier</button>
+      <span data-copy-status aria-live="polite"></span>
+    </div>
+  </div>
+
+  <footer class="verifier-foot">
+    <details>
+      <summary>Règles, sources et limites du contrôle</summary>
+      <p>Lecture de la structure CII d'un Factur-X selon les spécifications françaises externes. Cette version ne contrôle pas UBL, les signatures, l'archivage ou la transmission réelle.</p>
+      <ul>
+        {verifierSources.map((source) => <li><a href={source.url}>{source.title}</a><small>{source.publisher} · consultée le {source.accessedAt.split("-").reverse().join("/")}</small></li>)}
+      </ul>
+      <p class="ruleset" data-ruleset></p>
+    </details>
+  </footer>
+</section>
+
+<script>
+  import { analyzeFacturXXml, INVOICE_RULESET_VERSION, MAX_FACTURX_XML_BYTES, MAX_INVOICE_FILE_BYTES, type InvoiceAnalysis } from "../lib/invoice-verifier.ts";
+
+  const input = document.querySelector<HTMLInputElement>("#invoice-file");
+  const inputPanel = document.querySelector<HTMLElement>("[data-input-panel]");
+  const dropZone = document.querySelector<HTMLElement>("[data-drop-zone]");
+  const progress = document.querySelector<HTMLElement>("[data-progress]");
+  const progressText = document.querySelector<HTMLElement>("[data-progress-text]");
+  const result = document.querySelector<HTMLElement>("[data-result]");
+  const checks = document.querySelector<HTMLUListElement>("[data-checks]");
+  const actions = document.querySelector<HTMLOListElement>("[data-actions]");
+  const copyButton = document.querySelector<HTMLButtonElement>("[data-copy]");
+  const resetButton = document.querySelector<HTMLButtonElement>("[data-reset]");
+  const copyStatus = document.querySelector<HTMLElement>("[data-copy-status]");
+  const ruleset = document.querySelector<HTMLElement>("[data-ruleset]");
+  let currentAnalysis: InvoiceAnalysis | null = null;
+
+  if (ruleset) ruleset.textContent = `Règles utilisées : ${INVOICE_RULESET_VERSION}, vérifiées le 25/08/2026.`;
+
+  function setText(selector: string, value: string): void {
+    const element = document.querySelector<HTMLElement>(selector);
+    if (element) element.textContent = value;
+  }
+
+  function showInput(): void {
+    currentAnalysis = null;
+    if (input) input.value = "";
+    if (inputPanel) inputPanel.hidden = false;
+    if (progress) progress.hidden = true;
+    if (result) result.hidden = true;
+    if (copyStatus) copyStatus.textContent = "";
+  }
+
+  function showProgress(message: string): void {
+    if (inputPanel) inputPanel.hidden = true;
+    if (result) result.hidden = true;
+    if (progress) progress.hidden = false;
+    if (progressText) progressText.textContent = message;
+  }
+
+  function formatDate(raw: string | null): string {
+    if (!raw) return "Non trouvé";
+    if (/^\d{8}$/.test(raw)) return `${raw.slice(6, 8)}/${raw.slice(4, 6)}/${raw.slice(0, 4)}`;
+    return raw;
+  }
+
+  function formatAmount(value: number | null, currency: string | null): string {
+    if (value === null) return "Non trouvé";
+    try {
+      return new Intl.NumberFormat("fr-FR", { style: "currency", currency: currency ?? "EUR" }).format(value);
+    } catch {
+      return `${value.toLocaleString("fr-FR")} ${currency ?? ""}`.trim();
+    }
+  }
+
+  function appendCheck(check: InvoiceAnalysis["checks"][number]): void {
+    if (!checks) return;
+    const item = document.createElement("li");
+    item.dataset.status = check.status;
+    const symbol = document.createElement("span");
+    symbol.className = "check-symbol";
+    symbol.textContent = check.status === "pass" ? "✓" : check.status === "warning" ? "!" : "×";
+    const copy = document.createElement("span");
+    const label = document.createElement("strong");
+    const detail = document.createElement("small");
+    label.textContent = check.label;
+    detail.textContent = check.detail;
+    copy.append(label, detail);
+    item.append(symbol, copy);
+    checks.append(item);
+  }
+
+  function appendAction(action: string): void {
+    if (!actions) return;
+    const item = document.createElement("li");
+    const copy = document.createElement("span");
+    const label = document.createElement("strong");
+    const detail = document.createElement("small");
+    label.textContent = action;
+    detail.textContent = "À vérifier dans votre outil ou auprès de votre plateforme.";
+    copy.append(label, detail);
+    item.append(copy);
+    actions.append(item);
+  }
+
+  function renderAnalysis(analysis: InvoiceAnalysis, filename: string): void {
+    currentAnalysis = analysis;
+    if (inputPanel) inputPanel.hidden = true;
+    if (progress) progress.hidden = true;
+    if (result) {
+      result.hidden = false;
+      result.dataset.status = analysis.status;
+    }
+    setText("[data-result-kicker]", analysis.status === "usable" ? "Structure lisible" : analysis.status === "action" ? "Corrections nécessaires" : "Format non exploitable");
+    setText("[data-result-title]", analysis.headline);
+    setText("[data-result-summary]", analysis.summary);
+    setText("[data-file-name]", filename.slice(0, 90));
+    setText('[data-meta="format"]', analysis.metadata.container === "pdf" ? "PDF Factur-X" : "XML CII");
+    setText('[data-meta="profile"]', analysis.metadata.profile ?? "Non trouvé");
+    setText('[data-meta="number"]', analysis.metadata.invoiceNumber ?? "Non trouvé");
+    setText('[data-meta="date"]', formatDate(analysis.metadata.issueDate));
+    setText('[data-meta="seller"]', analysis.metadata.seller ?? "Non trouvé");
+    setText('[data-meta="buyer"]', analysis.metadata.buyer ?? "Non trouvé");
+    setText('[data-meta="total"]', formatAmount(analysis.metadata.grandTotal, analysis.metadata.currency));
+    setText('[data-meta="lines"]', String(analysis.metadata.lineCount));
+    checks?.replaceChildren();
+    actions?.replaceChildren();
+    analysis.checks.forEach(appendCheck);
+    analysis.actions.slice(0, 3).forEach(appendAction);
+  }
+
+  function unsupportedAnalysis(container: "pdf" | "xml", headline: string, summary: string): InvoiceAnalysis {
+    return {
+      status: "unsupported",
+      headline,
+      summary,
+      metadata: { container, profile: null, invoiceNumber: null, issueDate: null, seller: null, buyer: null, currency: null, grandTotal: null, lineCount: 0 },
+      checks: [{ id: "file", label: "Fichier", status: "fail", detail: summary, action: "Exportez une facture test au format Factur-X, puis recommencez.", sourceIds: [] }],
+      actions: ["Exportez une facture test au format Factur-X, puis recommencez."],
+      ruleVersion: INVOICE_RULESET_VERSION,
+      checkedAt: "2026-08-25",
+      sourceIds: [],
+    };
+  }
+
+  async function analyzeFile(file: File): Promise<void> {
+    if (file.size === 0) {
+      renderAnalysis(unsupportedAnalysis("xml", "Le fichier est vide", "Aucune donnée n'a pu être lue."), file.name);
+      return;
+    }
+    if (file.size > MAX_INVOICE_FILE_BYTES) {
+      renderAnalysis(unsupportedAnalysis("xml", "Le fichier dépasse 10 Mo", "Le contrôle s'arrête avant la lecture par sécurité."), file.name);
+      return;
+    }
+
+    showProgress("Lecture locale du fichier…");
+    await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+    const bytes = new Uint8Array(await file.arrayBuffer());
+    const isPdf = bytes.length >= 5 && String.fromCharCode(...bytes.slice(0, 5)) === "%PDF-";
+
+    if (isPdf) {
+      if (progressText) progressText.textContent = "Recherche du XML Factur-X embarqué…";
+      try {
+        const { extractFacturXFromPdf } = await import("../lib/pdf-facturx.ts");
+        const embedded = await extractFacturXFromPdf(bytes);
+        if (!embedded) {
+          renderAnalysis(unsupportedAnalysis("pdf", "Aucune donnée Factur-X trouvée", "Le PDF ne contient pas de XML CII Factur-X lisible. Un PDF simple ou scanné ne suffit pas."), file.name);
+          return;
+        }
+        renderAnalysis(analyzeFacturXXml(embedded.xml, "pdf"), file.name);
+      } catch {
+        renderAnalysis(unsupportedAnalysis("pdf", "Le PDF n'a pas pu être lu", "Le fichier est endommagé, chiffré ou utilise une structure non prise en charge."), file.name);
+      }
+      return;
+    }
+
+    if (bytes.byteLength > MAX_FACTURX_XML_BYTES) {
+      renderAnalysis(unsupportedAnalysis("xml", "Le XML dépasse 2 Mo", "Le contrôle s'arrête avant l'analyse par sécurité."), file.name);
+      return;
+    }
+    try {
+      const xml = new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+      if (!/^\uFEFF?\s*</.test(xml)) {
+        renderAnalysis(unsupportedAnalysis("xml", "Format de fichier non reconnu", "Choisissez un PDF Factur-X ou son XML CII."), file.name);
+        return;
+      }
+      renderAnalysis(analyzeFacturXXml(xml, "xml"), file.name);
+    } catch {
+      renderAnalysis(unsupportedAnalysis("xml", "Encodage XML non pris en charge", "Cette version attend un fichier XML encodé en UTF-8."), file.name);
+    }
+  }
+
+  input?.addEventListener("change", () => {
+    const file = input.files?.[0];
+    if (file) void analyzeFile(file);
+  });
+
+  for (const eventName of ["dragenter", "dragover"]) {
+    dropZone?.addEventListener(eventName, (event) => {
+      event.preventDefault();
+      dropZone.dataset.dragging = "true";
+    });
+  }
+  for (const eventName of ["dragleave", "drop"]) {
+    dropZone?.addEventListener(eventName, (event) => {
+      event.preventDefault();
+      delete dropZone.dataset.dragging;
+    });
+  }
+  dropZone?.addEventListener("drop", (event) => {
+    const file = event.dataTransfer?.files[0];
+    if (file) void analyzeFile(file);
+  });
+
+  resetButton?.addEventListener("click", showInput);
+  copyButton?.addEventListener("click", async () => {
+    if (!currentAnalysis) return;
+    const analysis = currentAnalysis;
+    const report = [
+      `PA Check — ${analysis.headline}`,
+      analysis.summary,
+      `Format : ${analysis.metadata.container === "pdf" ? "PDF Factur-X" : "XML CII"}`,
+      `Profil : ${analysis.metadata.profile ?? "non trouvé"}`,
+      `Facture : ${analysis.metadata.invoiceNumber ?? "non trouvée"}`,
+      "",
+      "Actions :",
+      ...analysis.actions.slice(0, 3).map((action, index) => `${index + 1}. ${action}`),
+      "",
+      `Règles : ${analysis.ruleVersion} · contrôle technique local, pas une certification juridique.`,
+    ].join("\n");
+    try {
+      await navigator.clipboard.writeText(report);
+      if (copyStatus) copyStatus.textContent = "Récapitulatif copié.";
+    } catch {
+      if (copyStatus) copyStatus.textContent = "La copie n'est pas disponible dans ce navigateur.";
+    }
+  });
+</script>
+
+<style>
+  .verifier-input[hidden], .verifier-progress[hidden], .verifier-result[hidden] { display: none !important; }
+  .invoice-verifier { overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal) 19%, var(--line)); border-radius: 1.45rem; background: rgba(255,255,255,.96); box-shadow: 0 1.3rem 4rem rgba(41,57,86,.1); }
+  .verifier-head { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: clamp(1rem, 3vw, 1.4rem); background: linear-gradient(135deg, var(--signal-soft), rgba(255,255,255,.9) 58%, color-mix(in srgb, var(--success-soft) 65%, #fff)); }
+  .verifier-mark { display: grid; place-items: center; width: 3.15rem; height: 3.15rem; border-radius: .9rem; background: linear-gradient(145deg, var(--signal), var(--accent)); color: #fff; box-shadow: 0 .7rem 1.5rem rgba(64,91,216,.2); }
+  .verifier-mark :global(svg) { width: 1.55rem; height: 1.55rem; }
+  .verifier-head h2 { margin: .35rem 0 0; color: var(--bright); font-size: clamp(1.25rem, 2.6vw, 1.65rem); line-height: 1.1; letter-spacing: -.035em; }
+  .verifier-head p:last-child { margin: .35rem 0 0; color: var(--muted); font-size: .78rem; }
+  .local-badge { display: inline-flex; gap: .4rem; align-items: center; border: 1px solid color-mix(in srgb, var(--success) 24%, var(--line)); border-radius: 999px; padding: .48rem .65rem; background: #fff; color: var(--success); font-size: .68rem; font-weight: 720; white-space: nowrap; }
+  .local-badge :global(svg) { width: .95rem; height: .95rem; }
+  .verifier-input { padding: clamp(1rem, 3.5vw, 2rem); }
+  .file-input { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
+  .file-input:focus-visible + .drop-zone { outline: 3px solid color-mix(in srgb, var(--signal) 28%, transparent); outline-offset: 3px; }
+  .drop-zone { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; min-height: 10rem; border: 1.5px dashed color-mix(in srgb, var(--signal) 40%, var(--line)); border-radius: 1.1rem; padding: clamp(1rem, 4vw, 2rem); background: radial-gradient(circle at 10% 30%, rgba(64,91,216,.1), transparent 8rem), var(--signal-soft); cursor: pointer; transition: border-color 160ms ease, background 160ms ease, translate 160ms ease; }
+  .drop-zone:hover, .drop-zone[data-dragging="true"] { translate: 0 -2px; border-color: var(--signal); background-color: color-mix(in srgb, var(--signal-soft) 80%, #fff); }
+  .drop-icon { display: grid; place-items: center; width: 4rem; height: 4rem; border-radius: 1rem; background: #fff; color: var(--signal); box-shadow: 0 .6rem 1.6rem rgba(64,91,216,.13); }
+  .drop-icon :global(svg) { width: 1.8rem; height: 1.8rem; }
+  .drop-copy { display: grid; }
+  .drop-copy strong { color: var(--bright); font-size: 1.05rem; }
+  .drop-copy small { margin-top: .22rem; color: var(--muted); font-size: .74rem; }
+  .drop-action { border-radius: .7rem; padding: .72rem .85rem; background: var(--signal); color: #fff; font-size: .7rem; font-weight: 730; }
+  .privacy-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: .8rem; }
+  .privacy-strip > span { display: flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .66rem; }
+  .privacy-strip strong { color: var(--paper); }
+  .privacy-strip :global(svg) { flex: 0 0 auto; width: .9rem; height: .9rem; color: var(--success); }
+  .verifier-progress { display: flex; gap: 1rem; align-items: center; min-height: 13rem; justify-content: center; padding: 2rem; }
+  .verifier-progress > div { display: grid; }
+  .verifier-progress strong { color: var(--bright); }
+  .verifier-progress small { color: var(--muted); font-size: .72rem; }
+  .progress-orbit { width: 2.5rem; height: 2.5rem; border: 3px solid var(--signal-soft); border-top-color: var(--signal); border-radius: 50%; animation: spin .8s linear infinite; }
+  .verifier-result { padding: clamp(1rem, 3.5vw, 2rem); }
+  .result-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .9rem; align-items: center; }
+  .result-symbol { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: .85rem; background: var(--success); color: #fff; }
+  .verifier-result[data-status="action"] .result-symbol { background: var(--danger); }
+  .verifier-result[data-status="unsupported"] .result-symbol { background: var(--amber); }
+  .result-kicker { margin: 0; color: var(--success); font-size: .66rem; font-weight: 760; letter-spacing: .045em; text-transform: uppercase; }
+  .verifier-result[data-status="action"] .result-kicker { color: var(--danger); }
+  .verifier-result[data-status="unsupported"] .result-kicker { color: var(--amber); }
+  .result-head h3 { margin: .18rem 0 0; color: var(--bright); font-size: clamp(1.35rem, 3vw, 1.85rem); line-height: 1.1; letter-spacing: -.035em; }
+  .result-head p:last-child { margin: .35rem 0 0; color: var(--muted); font-size: .78rem; }
+  .file-chip { overflow: hidden; max-width: 13rem; border-radius: 999px; padding: .42rem .6rem; background: var(--surface-2); color: var(--muted); font: .61rem/1.2 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
+  .scope-note { display: flex; gap: .65rem; align-items: flex-start; margin-top: 1rem; border: 1px solid color-mix(in srgb, var(--amber) 18%, var(--line)); border-radius: .75rem; padding: .75rem .85rem; background: var(--amber-soft); }
+  .scope-note :global(svg) { flex: 0 0 auto; width: 1rem; height: 1rem; margin-top: .12rem; color: var(--amber); }
+  .scope-note p { margin: 0; color: var(--paper); font-size: .7rem; }
+  .invoice-metadata { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; margin: 1rem 0 0; }
+  .invoice-metadata > div { min-width: 0; border: 1px solid var(--line); border-radius: .7rem; padding: .7rem; background: var(--surface); }
+  .invoice-metadata dt { color: var(--muted); font-size: .62rem; font-weight: 680; text-transform: uppercase; }
+  .invoice-metadata dd { overflow: hidden; margin: .25rem 0 0; color: var(--bright); font-size: .76rem; font-weight: 710; overflow-wrap: anywhere; }
+  .result-columns { display: grid; grid-template-columns: 1.18fr .82fr; gap: .8rem; margin-top: .8rem; }
+  .check-panel, .action-panel { border: 1px solid var(--line); border-radius: .9rem; padding: 1rem; background: rgba(255,255,255,.82); }
+  .panel-heading { display: flex; gap: .6rem; align-items: center; }
+  .panel-heading > span { display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: .55rem; background: var(--signal-soft); color: var(--signal); font: 740 .62rem/1 var(--font-mono); }
+  .panel-heading small { display: block; color: var(--signal); font-size: .62rem; font-weight: 730; letter-spacing: .04em; text-transform: uppercase; }
+  .panel-heading h4 { margin: .1rem 0 0; color: var(--bright); font-size: .9rem; }
+  .check-list, .invoice-actions { display: grid; gap: .42rem; margin: .85rem 0 0; padding: 0; list-style: none; }
+  .check-list :global(li) { display: grid; grid-template-columns: auto 1fr; gap: .55rem; align-items: start; border-radius: .62rem; padding: .55rem; background: var(--surface); }
+  .check-list :global(li > span:last-child) { display: grid; }
+  .check-symbol { display: grid; place-items: center; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: var(--success-soft); color: var(--success); font-size: .65rem; font-weight: 800; }
+  .check-list :global(li[data-status="warning"] .check-symbol) { background: var(--amber-soft); color: var(--amber); }
+  .check-list :global(li[data-status="fail"] .check-symbol) { background: var(--danger-soft); color: var(--danger); }
+  .check-list :global(strong) { color: var(--bright); font-size: .71rem; }
+  .check-list :global(small) { margin-top: .08rem; color: var(--muted); font-size: .66rem; }
+  .invoice-actions { counter-reset: invoice-action; }
+  .invoice-actions :global(li) { display: grid; grid-template-columns: auto 1fr; gap: .55rem; border-radius: .65rem; padding: .65rem; background: var(--surface); counter-increment: invoice-action; }
+  .invoice-actions :global(li)::before { display: grid; place-items: center; width: 1.55rem; height: 1.55rem; border-radius: 50%; background: var(--bright); color: #fff; content: counter(invoice-action); font-size: .62rem; font-weight: 780; }
+  .invoice-actions :global(li > span) { display: grid; }
+  .invoice-actions :global(strong) { color: var(--bright); font-size: .72rem; }
+  .invoice-actions :global(small) { margin-top: .12rem; color: var(--muted); font-size: .64rem; }
+  .action-limit { margin: .65rem 0 0; color: var(--muted); font-size: .64rem; }
+  .result-tools { display: flex; flex-wrap: wrap; gap: .55rem; align-items: center; margin-top: 1rem; }
+  .result-tools .button { min-height: 2.7rem; cursor: pointer; }
+  .result-tools :global(svg) { width: 1rem; height: 1rem; margin-right: .35rem; }
+  .result-tools > span { color: var(--success); font-size: .66rem; }
+  .verifier-foot { border-top: 1px solid var(--line); padding: .85rem 1rem; background: color-mix(in srgb, var(--surface-2) 60%, #fff); }
+  .verifier-foot details { margin: 0; border: 0; padding: 0; }
+  .verifier-foot summary { color: var(--signal); cursor: pointer; font-size: .68rem; font-weight: 710; }
+  .verifier-foot p { max-width: 70rem; color: var(--muted); font-size: .67rem; }
+  .verifier-foot ul { display: grid; gap: .4rem; margin: .7rem 0 0; padding: 0; list-style: none; }
+  .verifier-foot li { display: grid; }
+  .verifier-foot a { color: var(--paper); font-size: .68rem; text-decoration: underline; text-underline-offset: .16em; }
+  .verifier-foot li small, .ruleset { color: var(--muted); font-size: .62rem; }
+  @keyframes spin { to { rotate: 360deg; } }
+  @media (max-width: 760px) {
+    .verifier-head, .result-head { grid-template-columns: auto 1fr; }
+    .local-badge, .file-chip { grid-column: 1 / -1; justify-self: start; }
+    .drop-zone { grid-template-columns: auto 1fr; }
+    .drop-action { grid-column: 1 / -1; text-align: center; }
+    .privacy-strip, .invoice-metadata { grid-template-columns: repeat(2, 1fr); }
+    .result-columns { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    .verifier-head { grid-template-columns: 1fr; }
+    .verifier-mark { width: 2.7rem; height: 2.7rem; }
+    .drop-zone { grid-template-columns: 1fr; text-align: center; }
+    .drop-icon { justify-self: center; }
+    .privacy-strip { grid-template-columns: 1fr; }
+    .invoice-metadata { grid-template-columns: 1fr 1fr; }
+    .result-head { grid-template-columns: 1fr; }
+    .result-symbol { width: 2.7rem; height: 2.7rem; }
+    .result-tools { display: grid; }
+    .result-tools .button { width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) { .progress-orbit { animation: none; } }
+</style>

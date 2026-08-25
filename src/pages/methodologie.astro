@@ -8,7 +8,7 @@ import { platforms } from "../data/platforms";
   description="Découvrez comment PA Check rassemble ses informations, prépare ses réponses et corrige ses fiches."
 >
   <section class="shell page-hero">
-    <span class="eyebrow">comment ça marche · version 0.2</span>
+    <span class="eyebrow">comment ça marche · version 0.3</span>
     <h1>Comment PA Check prépare ses réponses.</h1>
     <p>Nous consultons les listes officielles, les tarifs, les contrats et la documentation des éditeurs. Cette page explique simplement ce que nous regardons et comment nous signaler une erreur.</p>
   </section>
@@ -38,6 +38,11 @@ import { platforms } from "../data/platforms";
       <h2>Lire les prix</h2>
       <p>Nous reprenons le prix mensuel public de l'offre étudiée et écartons les promotions temporaires. Si le tarif dépend du nombre d'utilisateurs, du volume ou d'un devis, la fiche indique qu'il reste à confirmer. Les frais de mise en service, de dépassement, de connecteur, d'archivage et de sortie sont ajoutés lorsqu'ils sont publiés.</p>
 
+      <h2>Vérifier une facture test</h2>
+      <p>Le vérificateur lit localement un PDF Factur-X ou un XML CII. Il recherche le profil, le numéro, la date, les parties, la devise, les lignes, la ventilation de TVA et les totaux structurés. Il contrôle aussi que la base de TVA et le montant de TVA correspondent au total TTC, avec une tolérance d'arrondi de deux centimes.</p>
+      <p>Le fichier ne quitte pas le navigateur et n'est pas conservé. Les déclarations XML <code>DOCTYPE</code> et <code>ENTITY</code> sont refusées, la profondeur du document et sa taille sont limitées, et le PDF n'est pas rendu à l'écran. Le résultat est un prévol technique fondé sur les <a href="https://www.impots.gouv.fr/specifications-externes-b2b">spécifications externes de la DGFiP</a> et la <a href="https://fnfe-mpe.org/factur-x/">publication Factur-X du FNFE-MPE</a>, pas une certification juridique.</p>
+      <p>Cette première version ne valide pas UBL, les signatures électroniques, l'authenticité de l'émetteur, l'archivage ou l'acceptation effective par une plateforme agréée. Un fichier lisible doit encore être testé dans le parcours réel de votre outil.</p>
+
       <h2>Les quinze plateformes étudiées</h2>
       <p>La liste officielle comptait 148 plateformes approuvées au 19 août 2026. Elle donne leur statut, mais ne détaille pas leurs tarifs, leurs intégrations ou leurs conditions de sortie.</p>
       <p>Nous avons commencé par {platforms.length} acteurs de grande portée ou disposant d'informations publiques particulièrement détaillées. La sélection couvre les besoins des indépendants, TPE, PME, ETI, grandes entreprises et cabinets comptables. L'<a href="/annuaire/">annuaire complet</a> reste disponible pour retrouver les autres plateformes.</p>
@@ -50,7 +55,7 @@ import { platforms } from "../data/platforms";
         <li>Les conditions de résiliation et d'export restent incomplètes pour plusieurs acteurs.</li>
         <li>Les certificats de sécurité annoncés par les éditeurs n'ont pas tous pu être contrôlés dans leur intégralité.</li>
         <li>Les chiffres d'utilisateurs publiés par les acteurs ne sont pas directement comparables.</li>
-        <li>PA Check ne valide pas encore vos fichiers Factur-X, UBL ou CII.</li>
+        <li>Le vérificateur accepte Factur-X et le XML CII correspondant, mais pas encore UBL.</li>
         <li>PA Check fournit des informations générales. Un professionnel du droit peut vous conseiller sur votre situation particulière.</li>
       </ul>
     </article>
@@ -59,7 +64,8 @@ import { platforms } from "../data/platforms";
       <dl>
         <div><dt>Résultats sponsorisés</dt><dd>Aucun</dd></div>
         <div><dt>Données personnelles</dt><dd>Non collectées</dd></div>
-        <div><dt>Facture à déposer</dt><dd>Non</dd></div>
+        <div><dt>Fichier envoyé</dt><dd>Jamais</dd></div>
+        <div><dt>Contrôle Factur-X</dt><dd>Local</dd></div>
         <div><dt>Information manquante</dt><dd>Signalée</dd></div>
         <div><dt>Dernière mise à jour</dt><dd>25 août 2026</dd></div>
       </dl>
@@ -73,8 +79,8 @@ import { platforms } from "../data/platforms";
   aside { position: sticky; top: 1rem; align-self: start; border: 1px solid var(--line); padding: 1rem; background: var(--surface); }
   aside dl { margin: 1rem 0; }
   aside dl div { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; border-top: 1px solid var(--line); padding-block: .65rem; }
-  aside dt { color: var(--muted); font: .57rem/1.4 var(--font-mono); text-transform: uppercase; }
-  aside dd { margin: 0; color: var(--paper); font-size: .68rem; text-align: right; }
+  aside dt { color: var(--muted); font: .64rem/1.4 var(--font-mono); text-transform: uppercase; }
+  aside dd { margin: 0; color: var(--paper); font-size: .74rem; text-align: right; }
   aside .button { width: 100%; }
   @media (max-width: 800px) { .method-layout { grid-template-columns: 1fr; } aside { position: static; } }
 </style>

@@ -3,6 +3,7 @@ import corpusSelectionData from "../src/data/corpus-selection.json" with { type:
 import sourcesData from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-profiles.ts";
+import { INVOICE_RULESET_CHECKED_AT, invoiceVerifierSourceIds } from "../src/lib/invoice-verifier.ts";
 import { platformsSchema, sourcesSchema } from "../src/data/schema.ts";
 import { z } from "zod";
 
@@ -33,6 +34,15 @@ const slugs = new Set<string>();
 const approvedByName = new Map(officialDirectory.approved.map((entry) => [entry.name, entry]));
 const referencedSourceIds = new Set(["aife-calendar-2026"]);
 const coreFields = ["sendsInvoices", "receivesInvoices", "eReporting"] as const;
+
+for (const sourceId of invoiceVerifierSourceIds) {
+  const source = sourcesById.get(sourceId);
+  if (!source) throw new Error(`Source du vérificateur de facture inconnue : ${sourceId}`);
+  if (source.accessedAt > INVOICE_RULESET_CHECKED_AT) {
+    throw new Error(`La source ${sourceId} est postérieure aux règles du vérificateur de facture`);
+  }
+  referencedSourceIds.add(sourceId);
+}
 
 for (const platform of checkedPlatforms) {
   if (slugs.has(platform.slug)) throw new Error(`Slug dupliqué : ${platform.slug}`);

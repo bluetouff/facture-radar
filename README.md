@@ -2,11 +2,12 @@
 
 PA Check est un service public d'aide au choix pour la facturation électronique. Il s'adresse aux indépendants, entrepreneurs, dirigeants, équipes administratives et comptables qui doivent vérifier leur outil actuel ou choisir une plateforme agréée.
 
-L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte, sans dépôt de facture et sans classement sponsorisé.
+L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte et sans classement sponsorisé. Le vérificateur de facture traite les fichiers localement dans le navigateur, sans téléversement ni conservation.
 
 ## Ce que propose le site
 
 - quinze parcours détaillés, avec circuit, échéances, coût minimum connu, actions et sources consultables ;
+- un prévol local des PDF Factur-X et XML CII, avec contrôles structurés et trois actions maximum ;
 - un traitement distinct des offres sur devis, sans faux zéro ni projection lorsque le minimum public manque ;
 - trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
 - 15 fiches détaillées, chacune reliée à des sources publiques et datées ;
@@ -53,9 +54,15 @@ Les données enrichies vivent dans `src/data/platforms.ts`. Les sources sont dan
 
 Le validateur vérifie notamment que les quinze fiches correspondent exactement à la sélection, que chaque information référence une source existante, que les dates d'immatriculation concordent avec la liste DGFiP et qu'aucune fonction réglementaire positive ne repose sur une déclaration faible ou une source absente.
 
+## Vérificateur Factur-X
+
+Le composant `src/components/InvoiceVerifier.astro` lit le fichier uniquement côté navigateur. Les PDF sont inspectés avec PDF.js pour retrouver leur pièce jointe XML ; ils ne sont pas rendus. Le XML CII est analysé avec `fast-xml-parser`, sans entités, avec limites de taille et de profondeur. Le moteur pur et testable se trouve dans `src/lib/invoice-verifier.ts`.
+
+Le résultat est un prévol technique. Il ne certifie pas la conformité juridique complète, l'authenticité, la signature, l'archivage, la transmission ou l'acceptation par une plateforme agréée.
+
 ## Limites
 
-La bêta ne valide pas encore un fichier Factur-X, UBL ou CII. Elle ne constitue ni un conseil juridique ni une garantie de conformité individuelle. Les attributs non présents dans l'annuaire DGFiP ne sont jamais déduits pour les plateformes non enrichies.
+La bêta ne contrôle pas encore UBL. Elle ne constitue ni un conseil juridique ni une garantie de conformité individuelle. Les attributs non présents dans l'annuaire DGFiP ne sont jamais déduits pour les plateformes non enrichies.
 
 ## Signaler une correction
 

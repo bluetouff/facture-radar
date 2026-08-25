@@ -14,6 +14,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section class="shell changelog">
     <article>
       <time datetime="2026-08-25">25 août 2026</time>
+      <div><span class="change-type">vérificateur</span><h2>Contrôle local des factures test Factur-X</h2><p>Un PDF Factur-X ou son XML CII peut être contrôlé sans quitter le navigateur. PA Check lit les principales données structurées, signale les incohérences de base et propose trois actions au maximum. Les petits textes des parcours ont aussi été agrandis pour rester confortablement lisibles.</p></div>
+    </article>
+    <article>
+      <time datetime="2026-08-25">25 août 2026</time>
       <div><span class="change-type">parcours</span><h2>Les quinze plateformes étudiées ont un parcours détaillé</h2><p>Les huit parcours ajoutés couvrent Sellsy, Septeo Ingeneo, Cegid, MyUnisoft, SAP, Generix, Esker et Cegedim SY business. Les offres sur devis restent non calculables tant qu'aucun minimum public n'est disponible. Les projets grands comptes suivent leurs entités, intégrations et tests sans inventer un bouton d'activation universel.</p></div>
     </article>
     <article>
@@ -54,8 +58,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <style>
   .changelog { border-top: 1px solid var(--line); }
   .changelog article { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 2rem; border-bottom: 1px solid var(--line); padding-block: 1.5rem; }
-  .changelog time { color: var(--muted); font: .64rem/1.5 var(--font-mono); }
-  .change-type { color: var(--accent); font: .58rem/1 var(--font-mono); text-transform: uppercase; }
+  .changelog time { color: var(--muted); font: .68rem/1.5 var(--font-mono); }
+  .change-type { color: var(--accent); font: .64rem/1 var(--font-mono); text-transform: uppercase; }
   .change-type.official { color: var(--blue); }
   .changelog h2 { margin: .5rem 0 0; color: var(--bright); font-size: 1.25rem; }
   .changelog p { max-width: 48rem; color: var(--muted); }
