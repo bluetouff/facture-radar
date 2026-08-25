@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dgfip-list-2026-08-19",
+    "title": "Liste des plateformes agréées satisfaisant à l'ensemble des conditions, incluant les tests d'interopérabilité",
+    "publisher": "DGFiP",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "aife-calendar-2026",
+    "title": "Facturation électronique interentreprises",
+    "publisher": "AIFE",
+    "url": "https://aife.economie.gouv.fr/nos-applications/facturation-electronique-b2b/",
+    "type": "institutional",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "abby-pricing-2026",
+    "title": "Nos offres et abonnements",
+    "publisher": "Abby",
+    "url": "https://abby.fr/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "abby-electronic-invoicing-2026",
+    "title": "La facturation électronique est-elle gratuite sur Abby ?",
+    "publisher": "Abby",
+    "url": "https://aide.abby.fr/fr/articles/15276234-la-facturation-electronique-est-elle-gratuite-sur-abby",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "abby-guide-2026",
+    "title": "Guide de la facturation électronique 2026-2027",
+    "publisher": "Abby",
+    "url": "https://abby.fr/ressources/guide-de-la-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "axonaut-pricing-2026",
+    "title": "Tarifs Axonaut",
+    "publisher": "Axonaut",
+    "url": "https://axonaut.com/content/prix",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "cegid-pa-2026",
+    "title": "Comprendre la Plateforme Agréée Cegid",
+    "publisher": "Cegid",
+    "url": "https://www.cegid.com/fr/facture-electronique-obligatoire/pdp/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "dougs-invoicing-2026",
+    "title": "Le logiciel de facturation électronique 100 % gratuit",
+    "publisher": "Dougs",
+    "url": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "indy-invoicing-2026",
+    "title": "La facturation électronique avec Indy",
+    "publisher": "Indy",
+    "url": "https://www.indy.fr/facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "indy-billing-2026",
+    "title": "Le logiciel de facturation gratuit pensé pour les indépendants",
+    "publisher": "Indy",
+    "url": "https://www.indy.fr/facturation/",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "macompta-pa-2026",
+    "title": "Facturation électronique : Plateforme Agréée macompta.fr",
+    "publisher": "macompta.fr",
+    "url": "https://www.macompta.fr/facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "macompta-terms-2026",
+    "title": "Conditions générales de services",
+    "publisher": "macompta.fr",
+    "url": "https://www.macompta.fr/conditions-generales-de-services",
+    "type": "contract",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "pennylane-free-2026",
+    "title": "Facture électronique gratuite pour les micro-entreprises",
+    "publisher": "Pennylane",
+    "url": "https://www.pennylane.com/fr/facturation-electronique-gratuite",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "pennylane-formats-2026",
+    "title": "Comprendre les formats de la facturation électronique",
+    "publisher": "Pennylane",
+    "url": "https://help.pennylane.com/fr/articles/367168-comprendre-les-formats-de-la-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "qonto-invoicing-2026",
+    "title": "Outil de facturation électronique",
+    "publisher": "Qonto",
+    "url": "https://qonto.com/fr/invoicing/e-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "qonto-billing-2026",
+    "title": "Gagnez du temps sur la gestion de vos factures",
+    "publisher": "Qonto",
+    "url": "https://qonto.com/fr/invoicing",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sage-pa-2026",
+    "title": "La facture électronique obligatoire en 2026",
+    "publisher": "Sage France",
+    "url": "https://www.sage.com/fr-fr/blog/facture-electronique-etre-accompagne/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sage-products-2026",
+    "title": "Logiciels conformes pour la facturation électronique",
+    "publisher": "Sage France",
+    "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/logiciels/",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sage-terms-2026",
+    "title": "Conditions générales du service Plateforme Agréée Sage",
+    "publisher": "Sage France",
+    "url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/terms_and_conditions/current/sage-plateforme-agree/conditions-generales-du-service-plateforme-agreee-de-sage.pdf",
+    "type": "contract",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sellsy-pricing-2026",
+    "title": "Tarifs, plans et offres des abonnements Sellsy",
+    "publisher": "Sellsy",
+    "url": "https://go.sellsy.com/offres",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sellsy-pa-2026",
+    "title": "Sellsy devient Plateforme Agréée",
+    "publisher": "Sellsy",
+    "url": "https://go.sellsy.com/blog/sellsy-plateforme-agreee-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "shine-pa-2026",
+    "title": "Shine, Plateforme Agréée de facturation électronique",
+    "publisher": "Shine",
+    "url": "https://help.shine.fr/fr/articles/11459160-shine-plateforme-agreee-de-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "shine-billing-2026",
+    "title": "Outil de devis et facturation en ligne",
+    "publisher": "Shine",
+    "url": "https://www.shine.fr/facturation/",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "tiime-pricing-2026",
+    "title": "Tarifs et coûts de la solution Tiime",
+    "publisher": "Tiime",
+    "url": "https://www.tiime.fr/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "tiime-accountant-2026",
+    "title": "Accès Tiime Expert pour l'expert-comptable",
+    "publisher": "Tiime",
+    "url": "https://www.tiime.fr/ec/invitation-client",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  }
+]

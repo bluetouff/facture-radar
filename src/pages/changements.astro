@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Journal des changements | Facture Radar"
+  description="Historique public des sources, règles, données et corrections du moteur de choix de plateformes agréées."
+>
+  <section class="shell page-hero">
+    <span class="eyebrow">journal public · données et méthode</span>
+    <h1>Ce qui change reste visible.</h1>
+    <p>Le journal distinguera les changements de la liste officielle, les corrections de fiches, les tarifs, les contrats et les modifications du moteur.</p>
+  </section>
+  <section class="shell changelog">
+    <article>
+      <time datetime="2026-08-25">25 août 2026</time>
+      <div><span class="change-type">lancement</span><h2>Corpus initial et moteur explicable</h2><p>Import de 148 plateformes approuvées et 18 opérateurs en attente depuis les listes DGFiP du 19 août. Publication de 12 fiches enrichies, 25 sources et de la méthode de filtrage fail closed.</p></div>
+    </article>
+    <article>
+      <time datetime="2026-08-19">19 août 2026</time>
+      <div><span class="change-type official">source officielle</span><h2>Mise à jour des listes DGFiP</h2><p>La page officielle passe à 148 opérateurs satisfaisant aux conditions et tests d'interopérabilité. La liste distincte des dossiers en attente contient 18 opérateurs.</p></div>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .changelog { border-top: 1px solid var(--line); }
+  .changelog article { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 2rem; border-bottom: 1px solid var(--line); padding-block: 1.5rem; }
+  .changelog time { color: var(--muted); font: .64rem/1.5 var(--font-mono); }
+  .change-type { color: var(--accent); font: .58rem/1 var(--font-mono); text-transform: uppercase; }
+  .change-type.official { color: var(--blue); }
+  .changelog h2 { margin: .5rem 0 0; color: var(--bright); font-size: 1.25rem; }
+  .changelog p { max-width: 48rem; color: var(--muted); }
+  @media (max-width: 620px) { .changelog article { grid-template-columns: 1fr; gap: .6rem; } }
+</style>

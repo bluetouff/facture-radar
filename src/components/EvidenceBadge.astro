@@ -1,0 +1,13 @@
+---
+import { evidenceLabels } from "../lib/evidence";
+import type { EvidenceStatus } from "../data/types";
+
+interface Props {
+  status: EvidenceStatus;
+  label?: string;
+}
+
+const { status, label = evidenceLabels[status] } = Astro.props;
+---
+
+<span class="evidence-badge" data-status={status}>{label}</span>

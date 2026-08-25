@@ -1,0 +1,133 @@
+---
+import { platforms } from "../data/platforms";
+---
+
+<section class="compare-tool">
+  <div class="compare-controls" aria-label="Choisir jusqu'à trois plateformes">
+    {[0, 1, 2].map((index) => (
+      <label>
+        <span>Plateforme {index + 1}</span>
+        <select class="compare-select" data-index={index}>
+          <option value="">Choisir</option>
+          {platforms.map((platform) => <option value={platform.slug}>{platform.displayName}</option>)}
+        </select>
+      </label>
+    ))}
+  </div>
+  <div class="compare-status" role="status">Choisissez deux ou trois plateformes.</div>
+  <div class="table-wrap compare-output" hidden>
+    <table>
+      <thead><tr id="compare-head"><th>Critère</th></tr></thead>
+      <tbody id="compare-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+  import { platforms } from "../data/platforms";
+  import { evidenceLabels } from "../lib/evidence";
+
+  const selects = [...document.querySelectorAll<HTMLSelectElement>(".compare-select")];
+  const output = document.querySelector<HTMLElement>(".compare-output");
+  const status = document.querySelector<HTMLElement>(".compare-status");
+  const head = document.querySelector<HTMLTableRowElement>("#compare-head");
+  const body = document.querySelector<HTMLTableSectionElement>("#compare-body");
+
+  const text = (tag: string, value: string, className?: string) => {
+    const element = document.createElement(tag);
+    element.textContent = value;
+    if (className) element.className = className;
+    return element;
+  };
+
+  const valueText = (value: unknown) => {
+    if (value === null) return "Non documenté";
+    if (typeof value === "boolean") return value ? "Oui" : "Non";
+    if (typeof value === "string" || typeof value === "number") return String(value);
+    if (Array.isArray(value)) return value.length ? value.join(", ") : "Non documenté";
+    if (typeof value === "object" && value) {
+      if ("label" in value && typeof value.label === "string") return value.label;
+      if ("available" in value) {
+        const api = value as { available: boolean; includedInFree: boolean | null };
+        if (!api.available) return "Non";
+        if (api.includedInFree === true) return "Oui, gratuit";
+        if (api.includedInFree === false) return "Oui, offre payante";
+        return "Oui, tarif à confirmer";
+      }
+    }
+    return "Valeur structurée";
+  };
+
+  const fields = [
+    ["Cible", (p: (typeof platforms)[number]) => ({ value: p.targets, status: "documented" })],
+    ["Prix", (p: (typeof platforms)[number]) => p.pricing],
+    ["Volume inclus", (p: (typeof platforms)[number]) => p.allowance],
+    ["Compte bancaire requis", (p: (typeof platforms)[number]) => p.bankAccountRequired],
+    ["Accès expert-comptable", (p: (typeof platforms)[number]) => p.accountantAccess],
+    ["API publique", (p: (typeof platforms)[number]) => p.publicApi],
+    ["Export documenté", (p: (typeof platforms)[number]) => p.exportDocumented],
+    ["Intégrations", (p: (typeof platforms)[number]) => p.integrations],
+    ["Formats", (p: (typeof platforms)[number]) => p.formats],
+    ["Hébergement", (p: (typeof platforms)[number]) => p.hostingCountries],
+    ["ISO 27001", (p: (typeof platforms)[number]) => p.iso27001],
+    ["Engagement minimal", (p: (typeof platforms)[number]) => p.commitmentMonths],
+  ] as const;
+
+  const cell = (evidence: { value: unknown; status: keyof typeof evidenceLabels }) => {
+    const td = document.createElement("td");
+    td.append(text("strong", valueText(evidence.value)));
+    td.append(text("span", evidenceLabels[evidence.status], `cell-status status-${evidence.status}`));
+    return td;
+  };
+
+  const render = () => {
+    if (!head || !body || !output || !status) return;
+    const ids = selects.map((select) => select.value).filter(Boolean);
+    const uniqueIds = [...new Set(ids)];
+    const selected = uniqueIds.map((id) => platforms.find((platform) => platform.slug === id)).filter((platform) => platform !== undefined);
+    const params = new URLSearchParams();
+    if (uniqueIds.length) params.set("ids", uniqueIds.join(","));
+    const query = params.toString();
+    history.replaceState(null, "", `${location.pathname}${query ? `?${query}` : ""}`);
+    if (selected.length < 2) {
+      output.hidden = true;
+      status.textContent = "Choisissez au moins deux plateformes distinctes.";
+      return;
+    }
+    status.textContent = `${selected.length} plateformes comparées, sans note globale.`;
+    output.hidden = false;
+    head.replaceChildren(text("th", "Critère"), ...selected.map((platform) => text("th", platform.displayName)));
+    const rows = fields.map(([label, getEvidence]) => {
+      const tr = document.createElement("tr");
+      tr.append(text("th", label));
+      for (const platform of selected) tr.append(cell(getEvidence(platform) as Parameters<typeof cell>[0]));
+      return tr;
+    });
+    body.replaceChildren(...rows);
+  };
+
+  const ids = new URLSearchParams(location.search).get("ids")?.split(",").filter(Boolean) || [];
+  ids.slice(0, 3).forEach((id, index) => { if (selects[index]) selects[index].value = id; });
+  selects.forEach((select) => select.addEventListener("change", render));
+  render();
+</script>
+
+<style is:global>
+  .compare-tool { border: 1px solid var(--line); padding: 1rem; background: var(--surface); }
+  .compare-controls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .compare-controls label { display: grid; gap: .5rem; }
+  .compare-controls span { color: var(--muted); font: .6rem/1 var(--font-mono); text-transform: uppercase; }
+  select { min-height: 3rem; border: 1px solid var(--line); border-radius: 0; padding: .7rem; background: var(--surface-2); color: var(--bright); }
+  select:focus { border-color: var(--signal); outline: 2px solid color-mix(in srgb, var(--signal) 15%, transparent); }
+  .compare-status { margin-block: 1rem; color: var(--muted); font: .65rem/1.5 var(--font-mono); }
+  .compare-output { max-height: 70vh; }
+  th { min-width: 12rem; }
+  td { min-width: 15rem; }
+  td strong { display: block; color: var(--paper); font-size: .75rem; }
+  .cell-status { display: inline-block; margin-top: .45rem; font: .55rem/1 var(--font-mono); text-transform: uppercase; }
+  .status-official { color: var(--blue); }
+  .status-documented { color: var(--signal); }
+  .status-declared { color: var(--amber); }
+  .status-non_documented { color: var(--muted); }
+  @media (max-width: 700px) { .compare-controls { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,85 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/jetbrains-mono";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+}
+
+const { title, description, canonical = Astro.url.pathname } = Astro.props;
+const canonicalUrl = new URL(canonical, Astro.site);
+const nav: Array<[string, string]> = [
+  ["/diagnostic/", "Vérifier mon parcours"],
+  ["/plateformes/", "12 fiches de preuve"],
+  ["/comparer/", "Comparer"],
+  ["/annuaire/", "Annuaire DGFiP"],
+  ["/methodologie/", "Méthode"],
+];
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0b1114" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self'; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
+    />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <div class="signal-line" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Facture Radar, accueil">
+          <span class="brand-mark">FR<span>/</span>26</span>
+          <span class="brand-copy"><strong>Facture Radar</strong><small>vérificateur de parcours</small></span>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème" aria-pressed="false">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+      <nav class="shell main-nav" aria-label="Navigation principale">
+        {nav.map(([href, label]) => (
+          <a href={href} aria-current={Astro.url.pathname.startsWith(href) ? "page" : undefined}>{label}</a>
+        ))}
+      </nav>
+    </header>
+    <main id="contenu">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <p class="mono-label">facture//radar</p>
+          <strong>Choisir une plateforme, preuves à l'appui.</strong>
+          <p>Calcul local, aucun compte, aucune facture déposée, aucun classement acheté.</p>
+        </div>
+        <nav aria-label="Pied de page">
+          <a href="/methodologie/">Méthodologie</a>
+          <a href="/changements/">Journal des changements</a>
+          <a href="/api/platforms.json">API JSON</a>
+          <a href="https://l0g.fr/publications/grand-peage-facture/">Enquête l0g</a>
+          <a href="https://github.com/bluetouff/facture-radar">Code source</a>
+        </nav>
+      </div>
+      <div class="shell footer-note">Données vérifiées le 25 août 2026 · liste DGFiP du 19 août 2026 · bêta publique</div>
+    </footer>
+    <script is:inline type="module" src="/theme.js"></script>
+  </body>
+</html>

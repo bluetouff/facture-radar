@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PlatformCard from "../components/PlatformCard.astro";
+import ProofRail from "../components/ProofRail.astro";
+import { platforms } from "../data/platforms";
+import sources from "../data/sources.json";
+import directory from "../data/official-directory.json";
+---
+
+<BaseLayout
+  title="Facture Radar | Vérifier sa plateforme de facturation électronique"
+  description="Un moteur de choix sourcé pour vérifier le coût, les dépendances, la documentation et la sortie des plateformes agréées."
+>
+  <section class="shell hero">
+    <div>
+      <span class="eyebrow">vérificateur indépendant · bêta</span>
+      <h1>Avant de choisir, <strong>vérifiez les preuves.</strong></h1>
+      <p class="hero-copy">Facture Radar confronte votre besoin réel aux tarifs, limites, dépendances, intégrations et conditions de sortie publiquement documentées. Aucun classement universel, aucune rémunération dans l'ordre des résultats.</p>
+      <div class="hero-actions">
+        <a class="button" href="/diagnostic/">Vérifier mon parcours</a>
+        <a class="button secondary" href="/methodologie/">Auditer la méthode</a>
+      </div>
+    </div>
+    <ProofRail />
+  </section>
+
+  <section class="shell" aria-label="État du corpus">
+    <div class="stats-strip">
+      <div><strong>{directory.approved.length}</strong><span>PA dans la liste approuvée</span></div>
+      <div><strong>{directory.pending.length}</strong><span>opérateurs encore en attente</span></div>
+      <div><strong>{platforms.length}</strong><span>fiches enrichies au lancement</span></div>
+      <div><strong>{sources.length}</strong><span>sources publiques liées</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <header class="section-head">
+        <div>
+          <p class="mono-label">corpus initial</p>
+          <h2>Douze acteurs, documentés champ par champ.</h2>
+        </div>
+        <p>Le diagnostic utilise uniquement ces fiches enrichies. Les 148 plateformes officielles restent consultables dans un annuaire séparé, sans leur inventer des caractéristiques.</p>
+      </header>
+      <div class="platform-grid">
+        {platforms.slice(0, 6).map((platform, index) => <PlatformCard platform={platform} index={index} />)}
+      </div>
+      <div class="hero-actions">
+        <a class="button secondary" href="/plateformes/">Voir les 12 dossiers</a>
+        <a class="button secondary" href="/annuaire/">Parcourir la liste DGFiP</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface)">
+    <div class="shell">
+      <header class="section-head">
+        <div>
+          <p class="mono-label">moteur explicable</p>
+          <h2>Chaque résultat montre son raisonnement.</h2>
+        </div>
+        <p>Les critères impératifs filtrent. Les préférences ordonnent. Une preuve absente ne devient jamais un avantage supposé.</p>
+      </header>
+      <div class="method-steps">
+        <article><span>01</span><h3>Votre contexte</h3><p>Taille, volume de factures et contraintes non négociables.</p></article>
+        <article><span>02</span><h3>Filtres impératifs</h3><p>Budget, compte bancaire, API, accès comptable et e-reporting.</p></article>
+        <article><span>03</span><h3>Parcours compatibles</h3><p>Trois chemins maximum, avec raisons, limites et coût calculable.</p></article>
+        <article><span>04</span><h3>Retour aux pièces</h3><p>Chaque affirmation importante renvoie à sa source et à sa date de vérification.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell section">
+    <div class="notice"><strong>Point de départ éditorial.</strong> Ce projet prolonge l'enquête l0g <a href="https://l0g.fr/publications/grand-peage-facture/">Le grand péage de la facture</a>. Les constats de l'enquête deviennent ici des critères testables : coût réel, chaîne de données, réversibilité et continuité.</div>
+  </section>
+</BaseLayout>

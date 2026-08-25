@@ -1,0 +1,260 @@
+<form class="diagnostic" id="diagnostic-form">
+  <div class="diagnostic-head">
+    <div><span>01</span><p class="mono-label">profil</p></div>
+    <p>Les réponses restent dans votre navigateur. Aucun SIREN, compte ou document n'est demandé.</p>
+  </div>
+
+  <div class="question-grid">
+    <label>
+      <span>Taille de l'entreprise</span>
+      <select name="size" required>
+        <option value="micro">Micro-entreprise ou indépendant</option>
+        <option value="tpe">TPE, 1 à 9 salariés</option>
+        <option value="pme">PME, 10 à 249 salariés</option>
+        <option value="eti">ETI</option>
+        <option value="ge">Grande entreprise</option>
+      </select>
+    </label>
+    <label>
+      <span>Factures par mois, achats et ventes</span>
+      <input name="monthlyInvoices" type="number" min="0" max="1000000" value="10" required />
+    </label>
+  </div>
+
+  <fieldset>
+    <legend><span>02</span> Contraintes impératives</legend>
+    <div class="check-grid">
+      <label><input type="checkbox" name="freeOnly" /> <span><strong>Parcours gratuit</strong><small>Aucun abonnement obligatoire pour le volume indiqué</small></span></label>
+      <label><input type="checkbox" name="noBankAccount" /> <span><strong>Sans compte bancaire imposé</strong><small>La PA doit rester distincte d'un compte pro</small></span></label>
+      <label><input type="checkbox" name="needsAccountantAccess" /> <span><strong>Accès expert-comptable</strong><small>Accès ou collaboration directement documentée</small></span></label>
+      <label><input type="checkbox" name="needsApi" /> <span><strong>API publique</strong><small>Pour relier un outil ou un flux existant</small></span></label>
+      <label><input type="checkbox" name="needsInternationalReporting" /> <span><strong>B2C ou international</strong><small>E-reporting publiquement documenté</small></span></label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><span>03</span> Préférences</legend>
+    <div class="check-grid compact">
+      <label><input type="checkbox" name="priority" value="simplicity" /> <span><strong>Simplicité</strong></span></label>
+      <label><input type="checkbox" name="priority" value="ecosystem" /> <span><strong>Écosystème</strong></span></label>
+      <label><input type="checkbox" name="priority" value="documentation" checked /> <span><strong>Documentation</strong></span></label>
+      <label><input type="checkbox" name="priority" value="reversibility" /> <span><strong>Réversibilité</strong></span></label>
+    </div>
+  </fieldset>
+
+  <div class="form-actions">
+    <button class="button" type="submit">Vérifier les parcours</button>
+    <button class="button secondary" type="reset">Effacer</button>
+  </div>
+</form>
+
+<section class="results" id="diagnostic-results" aria-live="polite" hidden>
+  <header>
+    <div><p class="mono-label">résultat explicable</p><h2 id="result-title"></h2></div>
+    <button type="button" class="share-button">Copier le lien du diagnostic</button>
+  </header>
+  <div id="eligible-results" class="result-grid"></div>
+  <details class="excluded-results">
+    <summary>Voir les parcours écartés et les preuves manquantes</summary>
+    <div id="excluded-list"></div>
+  </details>
+</section>
+
+<script>
+  import { platforms } from "../data/platforms";
+  import { runDiagnostic } from "../lib/matcher";
+
+  const form = document.querySelector<HTMLFormElement>("#diagnostic-form");
+  const resultsSection = document.querySelector<HTMLElement>("#diagnostic-results");
+  const eligibleContainer = document.querySelector<HTMLElement>("#eligible-results");
+  const excludedContainer = document.querySelector<HTMLElement>("#excluded-list");
+  const resultTitle = document.querySelector<HTMLElement>("#result-title");
+  const shareButton = document.querySelector<HTMLButtonElement>(".share-button");
+
+  const text = (tag: string, value: string, className?: string) => {
+    const element = document.createElement(tag);
+    element.textContent = value;
+    if (className) element.className = className;
+    return element;
+  };
+
+  const getInput = () => {
+    if (!form) throw new Error("Formulaire introuvable");
+    const data = new FormData(form);
+    return {
+      size: String(data.get("size")),
+      monthlyInvoices: Number(data.get("monthlyInvoices")),
+      freeOnly: data.has("freeOnly"),
+      noBankAccount: data.has("noBankAccount"),
+      needsAccountantAccess: data.has("needsAccountantAccess"),
+      needsApi: data.has("needsApi"),
+      needsInternationalReporting: data.has("needsInternationalReporting"),
+      priorities: data.getAll("priority").map(String),
+    };
+  };
+
+  const inputToParams = (input: ReturnType<typeof getInput>) => {
+    const params = new URLSearchParams();
+    params.set("size", input.size);
+    params.set("volume", String(input.monthlyInvoices));
+    if (input.freeOnly) params.set("gratuit", "1");
+    if (input.noBankAccount) params.set("sans-banque", "1");
+    if (input.needsAccountantAccess) params.set("comptable", "1");
+    if (input.needsApi) params.set("api", "1");
+    if (input.needsInternationalReporting) params.set("reporting", "1");
+    for (const priority of input.priorities) params.append("priorite", priority);
+    return params;
+  };
+
+  const renderEligible = (result: ReturnType<typeof runDiagnostic>[number], rank: number) => {
+    const article = document.createElement("article");
+    article.className = "result-card";
+    const top = document.createElement("div");
+    top.className = "result-top";
+    top.append(text("span", `PARCOURS ${String(rank + 1).padStart(2, "0")}`, "rank"));
+    top.append(text("strong", `${result.compatibility} % compatible`, "compatibility"));
+    article.append(top);
+    article.append(text("h3", result.platform.displayName));
+    article.append(text("p", result.platform.pricing.value?.label || "Prix non documenté", "price"));
+
+    const reasonTitle = text("h4", "Pourquoi il reste compatible");
+    const reasons = document.createElement("ul");
+    for (const reason of result.reasons.slice(0, 5)) reasons.append(text("li", reason));
+    article.append(reasonTitle, reasons);
+
+    if (result.platform.importantUnknowns.length) {
+      article.append(text("h4", "À vérifier avant de signer"));
+      const unknowns = document.createElement("ul");
+      unknowns.className = "unknown-list";
+      for (const unknown of result.platform.importantUnknowns.slice(0, 4)) unknowns.append(text("li", unknown));
+      article.append(unknowns);
+    }
+
+    const link = document.createElement("a");
+    link.href = `/plateformes/${result.platform.slug}/`;
+    link.className = "result-link";
+    link.textContent = "Ouvrir le dossier de preuve";
+    article.append(link);
+    return article;
+  };
+
+  const renderExcluded = (result: ReturnType<typeof runDiagnostic>[number]) => {
+    const row = document.createElement("article");
+    row.className = "excluded-row";
+    const heading = document.createElement("div");
+    heading.append(text("strong", result.platform.displayName));
+    heading.append(text("span", `${result.compatibility} %`));
+    const list = document.createElement("ul");
+    for (const blocker of result.blockers) list.append(text("li", blocker));
+    row.append(heading, list);
+    return row;
+  };
+
+  const render = () => {
+    if (!form || !resultsSection || !eligibleContainer || !excludedContainer || !resultTitle) return;
+    const input = getInput();
+    const matches = runDiagnostic(platforms, input as Parameters<typeof runDiagnostic>[1]);
+    const eligible = matches.filter((match) => match.eligible).slice(0, 3);
+    const excluded = matches.filter((match) => !match.eligible);
+    eligibleContainer.replaceChildren(...eligible.map(renderEligible));
+    excludedContainer.replaceChildren(...excluded.map(renderExcluded));
+    if (eligible.length) resultTitle.textContent = `${eligible.length} parcours compatible${eligible.length > 1 ? "s" : ""}`;
+    else {
+      resultTitle.textContent = "Aucun parcours ne satisfait toutes les preuves exigées";
+      eligibleContainer.append(text("p", "Relâchez un critère impératif ou consultez les exclusions. Le moteur refuse de transformer une inconnue en compatibilité supposée.", "no-result"));
+    }
+    resultsSection.hidden = false;
+    const params = inputToParams(input);
+    history.replaceState(null, "", `${location.pathname}?${params.toString()}`);
+    resultsSection.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  };
+
+  const loadParams = () => {
+    if (!form) return false;
+    const params = new URLSearchParams(location.search);
+    if (!params.has("size")) return false;
+    const setValue = (name: string, value: string | null) => {
+      const input = form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | null;
+      if (input && value !== null) input.value = value;
+    };
+    setValue("size", params.get("size"));
+    setValue("monthlyInvoices", params.get("volume"));
+    const booleanParams: Array<[string, string]> = [["freeOnly", "gratuit"], ["noBankAccount", "sans-banque"], ["needsAccountantAccess", "comptable"], ["needsApi", "api"], ["needsInternationalReporting", "reporting"]];
+    for (const [name, key] of booleanParams) {
+      const input = form.elements.namedItem(name) as HTMLInputElement | null;
+      if (input) input.checked = params.get(key) === "1";
+    }
+    const priorities = new Set(params.getAll("priorite"));
+    form.querySelectorAll<HTMLInputElement>('input[name="priority"]').forEach((input) => { input.checked = priorities.has(input.value); });
+    return true;
+  };
+
+  form?.addEventListener("submit", (event) => { event.preventDefault(); render(); });
+  form?.addEventListener("reset", () => {
+    requestAnimationFrame(() => {
+      resultsSection?.setAttribute("hidden", "");
+      history.replaceState(null, "", location.pathname);
+    });
+  });
+  shareButton?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(location.href);
+      shareButton.textContent = "Lien copié";
+    } catch {
+      shareButton.textContent = "Copie refusée par le navigateur";
+    }
+  });
+  if (loadParams()) render();
+</script>
+
+<style is:global>
+  .diagnostic { border: 1px solid var(--line); background: var(--surface); box-shadow: 0 24px 70px var(--shadow); }
+  .diagnostic-head { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-bottom: 1px solid var(--line); padding: 1.2rem; }
+  .diagnostic-head > div { display: flex; gap: 0.8rem; align-items: center; }
+  .diagnostic-head > div > span, legend span { color: var(--accent); font: 800 1.2rem/1 var(--font-mono); }
+  .diagnostic-head > p { margin: 0; color: var(--muted); font-size: 0.78rem; }
+  .question-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1.2rem; }
+  .question-grid label { display: grid; gap: 0.5rem; }
+  .question-grid label > span { color: var(--paper); font-size: 0.78rem; font-weight: 650; }
+  input[type="number"], select { width: 100%; min-height: 3rem; border: 1px solid var(--line); border-radius: 0; padding: 0.7rem 0.8rem; outline: 0; background: var(--surface-2); color: var(--bright); }
+  input:focus, select:focus { border-color: var(--signal); box-shadow: 0 0 0 2px color-mix(in srgb, var(--signal) 18%, transparent); }
+  fieldset { margin: 0; border: 0; border-top: 1px solid var(--line); padding: 1.2rem; }
+  legend { padding: 0 0.7rem 0 0; color: var(--bright); font-weight: 750; }
+  .check-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.7rem; margin-top: 0.8rem; }
+  .check-grid.compact { grid-template-columns: repeat(4, 1fr); }
+  .check-grid label { display: flex; gap: 0.7rem; align-items: flex-start; border: 1px solid var(--line); padding: 0.8rem; cursor: pointer; }
+  .check-grid label:hover { border-color: var(--signal); }
+  .check-grid input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; accent-color: var(--signal); }
+  .check-grid span { display: grid; }
+  .check-grid strong { color: var(--paper); font-size: 0.78rem; }
+  .check-grid small { margin-top: 0.2rem; color: var(--muted); font-size: 0.66rem; }
+  .form-actions { display: flex; gap: 0.7rem; border-top: 1px solid var(--line); padding: 1.2rem; }
+  .form-actions button { cursor: pointer; }
+  .results { scroll-margin-top: 1rem; margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 2rem; }
+  .results > header { display: flex; justify-content: space-between; align-items: end; gap: 1rem; }
+  .results h2 { margin: 0.55rem 0 0; color: var(--bright); font-size: clamp(1.6rem, 4vw, 2.5rem); letter-spacing: -0.045em; }
+  .share-button { border: 1px solid var(--line); padding: 0.6rem 0.8rem; background: var(--surface); color: var(--signal); cursor: pointer; font: 0.64rem/1 var(--font-mono); }
+  .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.3rem; }
+  .result-card { display: flex; min-width: 0; flex-direction: column; border: 1px solid var(--line); padding: 1rem; background: var(--surface); }
+  .result-top { display: flex; justify-content: space-between; gap: 0.5rem; }
+  .rank { color: var(--accent); font: 0.6rem/1 var(--font-mono); }
+  .compatibility { color: var(--signal); font: 0.64rem/1 var(--font-mono); }
+  .result-card h3 { margin: 1rem 0 0; color: var(--bright); font-size: 1.4rem; }
+  .result-card .price { min-height: 3.8rem; color: var(--muted); font-size: 0.76rem; }
+  .result-card h4 { margin: 1rem 0 0.45rem; color: var(--paper); font-size: 0.72rem; }
+  .result-card ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.7rem; }
+  .result-card li + li { margin-top: 0.35rem; }
+  .unknown-list li::marker { color: var(--amber); }
+  .result-link { margin-top: auto; padding-top: 1.2rem; color: var(--signal); font: 0.65rem/1 var(--font-mono); }
+  .no-result { grid-column: 1 / -1; border-left: 3px solid var(--amber); padding: 1rem; background: var(--surface); color: var(--paper); }
+  .excluded-results { margin-top: 1rem; border: 1px solid var(--line); background: var(--surface); }
+  .excluded-results summary { padding: 1rem; color: var(--paper); cursor: pointer; font: 0.72rem/1.4 var(--font-mono); }
+  .excluded-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding: 0.8rem 1rem; }
+  .excluded-row > div { display: flex; justify-content: space-between; gap: 0.6rem; }
+  .excluded-row strong { color: var(--bright); }
+  .excluded-row span { color: var(--muted); font: 0.62rem/1.5 var(--font-mono); }
+  .excluded-row ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.7rem; }
+  .excluded-row li::marker { color: var(--accent); }
+  @media (max-width: 850px) { .result-grid { grid-template-columns: 1fr; } .check-grid.compact { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .diagnostic-head, .question-grid, .check-grid, .check-grid.compact { grid-template-columns: 1fr; } .question-grid .wide { grid-column: auto; } .excluded-row { grid-template-columns: 1fr; } .results > header { align-items: start; flex-direction: column; } }
+</style>

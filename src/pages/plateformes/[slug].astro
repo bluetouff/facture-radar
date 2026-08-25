@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBadge from "../../components/EvidenceBadge.astro";
+import EvidenceRow from "../../components/EvidenceRow.astro";
+import { platforms } from "../../data/platforms";
+import sources from "../../data/sources.json";
+import { documentationCoverage, sourceCount } from "../../lib/evidence";
+
+export function getStaticPaths() {
+  return platforms.map((platform) => ({ params: { slug: platform.slug }, props: { platform } }));
+}
+
+const { platform } = Astro.props;
+const coverage = documentationCoverage(platform);
+const linkedSourceIds = new Set<string>();
+for (const value of Object.values(platform)) {
+  if (!value || typeof value !== "object" || !("sourceIds" in value)) continue;
+  for (const sourceId of value.sourceIds as string[]) linkedSourceIds.add(sourceId);
+}
+const linkedSources = sources.filter((source) => linkedSourceIds.has(source.id));
+
+const rows = [
+  ["Statut DGFiP", platform.officialStatus],
+  ["Date d'immatriculation", platform.registeredAt],
+  ["Prix du parcours étudié", platform.pricing],
+  ["Volume inclus", platform.allowance],
+  ["Émission", platform.sendsInvoices],
+  ["Réception", platform.receivesInvoices],
+  ["E-reporting", platform.eReporting],
+  ["Compte bancaire requis", platform.bankAccountRequired],
+  ["Accès expert-comptable", platform.accountantAccess],
+  ["API publique", platform.publicApi],
+  ["Export documenté", platform.exportDocumented],
+  ["Intégrations", platform.integrations],
+  ["Formats", platform.formats],
+  ["Pays d'hébergement", platform.hostingCountries],
+  ["ISO 27001", platform.iso27001],
+  ["Engagement minimal", platform.commitmentMonths],
+] as const;
+---
+
+<BaseLayout
+  title={`${platform.displayName} : dossier de preuve | Facture Radar`}
+  description={`Prix, fonctions, dépendances et inconnues documentées pour ${platform.displayName}, plateforme agréée de facturation électronique.`}
+>
+  <section class="shell profile-hero">
+    <div>
+      <a class="back-link" href="/plateformes/">← 12 fiches de preuve</a>
+      <span class="eyebrow">dossier {platform.officialName}</span>
+      <h1>{platform.displayName}</h1>
+      <p>{platform.summary}</p>
+      <div class="tag-row">{platform.targets.map((target) => <span class="tag">{target}</span>)}</div>
+    </div>
+    <div class="profile-stamp">
+      <EvidenceBadge status="official" label="Liste DGFiP" />
+      <strong>{coverage} %</strong><span>de couverture documentaire</span>
+      <small>{sourceCount(platform)} sources liées · vérifié le 25/08/2026</small>
+    </div>
+  </section>
+
+  <section class="shell profile-layout">
+    <article>
+      <header class="matrix-head"><p class="mono-label">matrice de preuve</p><h2>Ce qui est établi, déclaré ou absent.</h2></header>
+      <div class="evidence-matrix">
+        {rows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
+      </div>
+    </article>
+    <aside>
+      <section class="unknown-panel">
+        <p class="mono-label">avant de signer</p>
+        <h2>Points encore ouverts</h2>
+        <ul>{platform.importantUnknowns.map((unknown) => <li>{unknown}</li>)}</ul>
+      </section>
+      <section class="source-panel">
+        <p class="mono-label">pièces rattachées</p>
+        <ol>{linkedSources.map((source) => <li><a href={source.url} rel="noopener"><strong>{source.title}</strong><span>{source.publisher} · consulté le {source.accessedAt}</span></a></li>)}</ol>
+      </section>
+      <a class="button" href={`/comparer/?ids=${platform.slug}`}>Ajouter à une comparaison</a>
+    </aside>
+  </section>
+</BaseLayout>
+
+<style>
+  .profile-hero { display: grid; grid-template-columns: 1fr 18rem; gap: 3rem; align-items: end; padding-block: clamp(3rem, 7vw, 6rem); }
+  .back-link { display: block; margin-bottom: 1.5rem; color: var(--muted); font: .65rem/1 var(--font-mono); }
+  .profile-hero h1 { margin: .8rem 0 0; color: var(--bright); font-size: clamp(3rem, 8vw, 6rem); line-height: .95; letter-spacing: -.07em; }
+  .profile-hero p:not(.mono-label) { max-width: 45rem; color: var(--paper); }
+  .profile-stamp { display: grid; justify-items: start; border: 1px solid var(--line); padding: 1.1rem; background: var(--surface); }
+  .profile-stamp > strong { margin-top: 1.3rem; color: var(--signal); font-size: 3rem; line-height: 1; letter-spacing: -.06em; }
+  .profile-stamp > span, .profile-stamp small { color: var(--muted); font: .6rem/1.5 var(--font-mono); text-transform: uppercase; }
+  .profile-stamp small { margin-top: 1rem; text-transform: none; }
+  .profile-layout { display: grid; grid-template-columns: minmax(0, 1fr) 18rem; gap: 2rem; }
+  .matrix-head { border-bottom: 1px solid var(--line); padding-bottom: 1.2rem; }
+  .matrix-head h2 { max-width: 18ch; margin: .5rem 0 0; color: var(--bright); font-size: clamp(1.7rem, 4vw, 2.8rem); letter-spacing: -.05em; }
+  .profile-layout aside { display: grid; gap: 1rem; align-content: start; }
+  .unknown-panel, .source-panel { border: 1px solid var(--line); padding: 1rem; background: var(--surface); }
+  aside h2 { color: var(--bright); font-size: 1.1rem; }
+  aside ul { padding-left: 1rem; color: var(--muted); font-size: .72rem; }
+  aside li + li { margin-top: .45rem; }
+  .unknown-panel li::marker { color: var(--amber); }
+  .source-panel ol { margin: 1rem 0 0; padding: 0; list-style: none; }
+  .source-panel li { border-top: 1px solid var(--line); padding-block: .65rem; }
+  .source-panel a { display: grid; }
+  .source-panel strong { color: var(--paper); font-size: .67rem; line-height: 1.4; }
+  .source-panel span { margin-top: .25rem; color: var(--muted); font: .53rem/1.4 var(--font-mono); }
+  @media (max-width: 920px) { .profile-layout { grid-template-columns: 1fr; } .profile-layout aside { grid-template-columns: repeat(2, 1fr); } .profile-layout aside .button { grid-column: 1 / -1; } }
+  @media (max-width: 620px) { .profile-hero { grid-template-columns: 1fr; } .profile-layout aside { grid-template-columns: 1fr; } .profile-layout aside .button { grid-column: auto; } }
+</style>

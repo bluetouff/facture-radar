@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DiagnosticEngine from "../components/DiagnosticEngine.astro";
+---
+
+<BaseLayout
+  title="Vérifier mon parcours | Facture Radar"
+  description="Un diagnostic local et explicable pour identifier les plateformes agréées compatibles avec vos contraintes documentées."
+>
+  <section class="shell page-hero">
+    <span class="eyebrow">trois étapes · calcul local</span>
+    <h1>Vérifiez votre parcours de facturation.</h1>
+    <p>Le moteur ne désigne pas une meilleure plateforme universelle. Il cherche les parcours compatibles avec vos impératifs, puis expose les preuves et les lacunes qui doivent encore être contrôlées.</p>
+  </section>
+  <section class="shell">
+    <DiagnosticEngine />
+  </section>
+</BaseLayout>

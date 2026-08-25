@@ -1,0 +1,1488 @@
+{
+  "snapshotDate": "2026-08-19",
+  "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+  "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+  "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+  "approvedSha256": "146796398c5fc9461ab8a44baa629d78e8e19249063c1eeeb07f62a5626ac058",
+  "pendingSha256": "b52644a8701472afc84da047e4eda1546e1939e0d1e4375c0dea2d9ddf496dee",
+  "approved": [
+    {
+      "name": "A-Cube",
+      "street": "via Pisani Vittor 20, Milan",
+      "postalCode": "20124",
+      "city": "Italie",
+      "website": "https://www.acubeapi.com/",
+      "contact": "france@a-cube.io",
+      "registeredAt": "2026-07-21"
+    },
+    {
+      "name": "ABBY",
+      "street": "223-225 avenue Général Leclerc",
+      "postalCode": "54000",
+      "city": "Nancy",
+      "website": "https://abby.fr/",
+      "contact": "contact@abby.fr",
+      "registeredAt": "2026-01-29"
+    },
+    {
+      "name": "ACCENTURE",
+      "street": "118 Avenue de France",
+      "postalCode": "75013",
+      "city": "Paris",
+      "website": "https://www.accenture.com/fr-fr",
+      "contact": "fr.contact.ecv@accenture.com",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "ADEMICO SOFTWARE",
+      "street": "204 Heidebergstraat, Louvain",
+      "postalCode": "3010",
+      "city": "Belgique",
+      "website": "https://ademico-software.com/",
+      "contact": "info@ademico-software.com",
+      "registeredAt": "2026-01-16"
+    },
+    {
+      "name": "AGENA 3000",
+      "street": "88 Rue du Paradis",
+      "postalCode": "49300",
+      "city": "Cholet",
+      "website": "https://www.agena3000.com/fr/nos-solutions/a3-e-facture",
+      "contact": "https://www.agena3000.com/fr/contact",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "AGICAP",
+      "street": "57 rue de Saint-Cyr 57-59 imm Lyon Vaise",
+      "postalCode": "69009",
+      "city": "Lyon",
+      "website": "https://agicap.com/fr/",
+      "contact": "contact-pa@agicap.com",
+      "registeredAt": "2026-01-20"
+    },
+    {
+      "name": "AGS RECORDS MANAGEMENT",
+      "street": "20 Rue de la Guillauderie",
+      "postalCode": "44118",
+      "city": "La Chevrolière",
+      "website": "https://www.ags-recordsmanagement.com/",
+      "contact": "supportcommercial@agsrm.com",
+      "registeredAt": "2026-07-15"
+    },
+    {
+      "name": "Arratech",
+      "street": "Drottninggatan 33, Stockholm",
+      "postalCode": "111 51",
+      "city": "Suède",
+      "website": "https://www.arratech.com/",
+      "contact": "contact@arratech.com",
+      "registeredAt": "2026-07-03"
+    },
+    {
+      "name": "ARTEVA",
+      "street": "330 Allée des Hêtres",
+      "postalCode": "69760",
+      "city": "Limonest",
+      "website": "https://www.arteva.fr/",
+      "contact": "contact-pdp@arteva.fr",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "Aruba S.p.A.",
+      "street": "Via San Clemente n. 53 Ponte San Pietro",
+      "postalCode": "24036",
+      "city": "Italie",
+      "website": "https://www.arubaonesuite.fr/",
+      "contact": "contact-pa@staff.aruba.it",
+      "registeredAt": "2026-07-29"
+    },
+    {
+      "name": "ATGP",
+      "street": "20, rue des Acacias",
+      "postalCode": "26120",
+      "city": "Montélier",
+      "website": "https://www.atgp.net/",
+      "contact": "contact.pdp@atgp.net",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "AVALARA",
+      "street": "33 Rue François 1er",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://www.avalara.com/eu/fr",
+      "contact": "pdp-contact@avalara.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "AXELOR",
+      "street": "23 Rue Alfred Nobel",
+      "postalCode": "77420",
+      "city": "Champs-sur-Marne",
+      "website": "https://axelor.com/fr/",
+      "contact": "pa@axelor.com",
+      "registeredAt": "2026-04-13"
+    },
+    {
+      "name": "AXONAUT",
+      "street": "12 Rue Louis Renault",
+      "postalCode": "31130",
+      "city": "Balma",
+      "website": "https://axonaut.com/",
+      "contact": "hello@axonaut.com",
+      "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "AXWAY SOFTWARE",
+      "street": "1 Bis Place de la Défense",
+      "postalCode": "92035",
+      "city": "Paris La Défense Cedex",
+      "website": "https://www.axway.com/fr",
+      "contact": "https://www.axway.com/fr",
+      "registeredAt": "2026-04-14"
+    },
+    {
+      "name": "AZOPIO",
+      "street": "38 rue de Wagram",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://www.azopio.com/fr/",
+      "contact": "contact@azopio.com",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "B2BRouter",
+      "street": "Avenida Diagonal 433 1 - 1 CP, Barcelona",
+      "postalCode": "08036",
+      "city": "Espagne",
+      "website": "https://www.b2brouter.net/fr",
+      "contact": "comercial@b2brouter.net",
+      "registeredAt": "2025-12-12"
+    },
+    {
+      "name": "B4VALUE.NET",
+      "street": "Trippstadter Str. 122,Kaiserslautern",
+      "postalCode": "67663",
+      "city": "Allemagne",
+      "website": "https://www.b4value.net/en/",
+      "contact": "pdp@b4value.net",
+      "registeredAt": "2026-03-04"
+    },
+    {
+      "name": "BASWARE",
+      "street": "Linnoitustie 2, Espoo",
+      "postalCode": "02600",
+      "city": "Finlande",
+      "website": "https://www.basware.com/fr",
+      "contact": "FranceMandate@basware.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "BC SOLUTIONS",
+      "street": "1330 Av. Jean-René Guillibert Gautier de la Lauzière",
+      "postalCode": "13290",
+      "city": "Aix-en-Provence",
+      "website": "https://bcsolutions.fr/",
+      "contact": "easinvoice.info@bcsolutions.fr",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "BILLIT",
+      "street": "Oktrooiplein 1 boite 302, Gent",
+      "postalCode": "9000",
+      "city": "Belgique",
+      "website": "https://www.billit.eu/fr-be/",
+      "contact": "support@billit.be",
+      "registeredAt": "2025-12-19"
+    },
+    {
+      "name": "CBS Corporate Business Solutions",
+      "street": "Rudolf-Diesel-Straße 9 en Heidelberg",
+      "postalCode": "69115",
+      "city": "Allemagne",
+      "website": "https://www.cbs-consulting.com/en/",
+      "contact": "kontakt@cbs-consulting.de",
+      "registeredAt": "2026-02-25"
+    },
+    {
+      "name": "CECURITY",
+      "street": "75 Rue Saint-Lazare",
+      "postalCode": "75009",
+      "city": "Paris",
+      "website": "https://www.cecurity.com/",
+      "contact": "contact_cecurity@cecurity.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "CEGEDIM",
+      "street": "137 Rue d'Aguesseau",
+      "postalCode": "92100",
+      "city": "Boulogne-Billancourt",
+      "website": "https://www.cegedim.fr/",
+      "contact": "sy-pa@cegedim.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "CEGI ALFA",
+      "street": "21 Rue Jules Verne, ZI du Brezet",
+      "postalCode": "63000",
+      "city": "Clermont-Ferrand",
+      "website": "https://www.cegi.fr/",
+      "contact": "contact-pa@cegialfa.fr",
+      "registeredAt": "2026-04-14"
+    },
+    {
+      "name": "CEGID",
+      "street": "52 Quai Paul Sédallian",
+      "postalCode": "69279",
+      "city": "Lyon Cedex 09",
+      "website": "https://www.cegid.com/fr",
+      "contact": "contact-pa@cegid.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "CHAINTRUST by Visma",
+      "street": "9 rue des Colonnes",
+      "postalCode": "75002",
+      "city": "Paris",
+      "website": "https://www.chaintrust.io/",
+      "contact": "pdp-contact@visma.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "CLEARTAX",
+      "street": "42 rue Cambronne",
+      "postalCode": "75015",
+      "city": "Paris",
+      "website": "https://www.cleartax.com/fr",
+      "contact": "sales-europe@clear.in",
+      "registeredAt": "2026-04-24"
+    },
+    {
+      "name": "COMARCH SA",
+      "street": "al. Jana Pawła II 39a Kraków",
+      "postalCode": "/",
+      "city": "Pologne",
+      "website": "https://www.comarch.com/",
+      "contact": "contact@comarch.fr",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "CYCLOPE",
+      "street": "92 Cours Vitton",
+      "postalCode": "69006",
+      "city": "Lyon",
+      "website": "https://cyclope.digital/",
+      "contact": "cyclope@gallo.fr",
+      "registeredAt": "à venir"
+    },
+    {
+      "name": "DARVA",
+      "street": "245 rue du stade",
+      "postalCode": "79180",
+      "city": "Chauray",
+      "website": "https://www.darva.com/",
+      "contact": "ofeli-pdp@darva.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "DEXT",
+      "street": "34 rue Laffitte",
+      "postalCode": "75009",
+      "city": "Paris",
+      "website": "https://dext.com/fr/produits/logiciel-facturation",
+      "contact": "pdp@dext.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "DIGIPHARMACIE",
+      "street": "28 rue des Marguettes",
+      "postalCode": "75012",
+      "city": "Paris",
+      "website": "https://digipharmacie.fr/",
+      "contact": "jonathan.blajman@digipharmacie.fr",
+      "registeredAt": "2025-12-23"
+    },
+    {
+      "name": "DIGITAL TECHNOLOGIES",
+      "street": "Via San Vittore 14, Milan",
+      "postalCode": "20122",
+      "city": "Italie",
+      "website": "https://digtechs.com/?lang=fr",
+      "contact": "info@digtechs.com",
+      "registeredAt": "2025-12-15"
+    },
+    {
+      "name": "Docnova, MELASOFT GmbH",
+      "street": "Gerbermühlstraße 32, Frankfurt",
+      "postalCode": "60594",
+      "city": "Allemagne",
+      "website": "https://www.melasoft.com/",
+      "contact": "info@melasoft.com",
+      "registeredAt": "2026-05-13"
+    },
+    {
+      "name": "DOCOON",
+      "street": "81 Rue Réaumur",
+      "postalCode": "75002",
+      "city": "Paris",
+      "website": "https://docoon.com/",
+      "contact": "contact@docoon.com",
+      "registeredAt": "2025-12-15"
+    },
+    {
+      "name": "DOCOON IMMO / FREEDZ",
+      "street": "32 Boulevard Michelet",
+      "postalCode": "13008",
+      "city": "Marseille",
+      "website": "https://docoon.immo/",
+      "contact": "pdp@docoon.com",
+      "registeredAt": "2025-12-23"
+    },
+    {
+      "name": "DOCPROCESS",
+      "street": "14 Chemin des Clos",
+      "postalCode": "38240",
+      "city": "Meylan",
+      "website": "https://doc-process.com/fr",
+      "contact": "contact@doc-process.com",
+      "registeredAt": "2025-12-15"
+    },
+    {
+      "name": "DOCUWARE",
+      "street": "17 rue du Colisée",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://start.docuware.com/fr/",
+      "contact": "infoline@docuware.com",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "DOKAPI",
+      "street": "75 Schuttersvest, Malines",
+      "postalCode": "2800",
+      "city": "Belgique",
+      "website": "https://www.dokapi.io/",
+      "contact": "katrien.dewolf@dokapi.io",
+      "registeredAt": "2026-07-08"
+    },
+    {
+      "name": "Dougs Facturation gratuite",
+      "street": "Route de Sully la Chapelle",
+      "postalCode": "45450",
+      "city": "Fay-aux-Loges",
+      "website": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+      "contact": "support@dougs.fr",
+      "registeredAt": "2025-12-12"
+    },
+    {
+      "name": "DOXALLIA",
+      "street": "Rue du Causse Comtal",
+      "postalCode": "12340",
+      "city": "Bozouls",
+      "website": "https://www.doxallia.com/",
+      "contact": "contact@doxallia.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "ECOSIO",
+      "street": "Wiedner Gürtel 9, Vienne",
+      "postalCode": "1100",
+      "city": "Autriche",
+      "website": "https://ecosio.com/",
+      "contact": "einvoice@ecosio.com",
+      "registeredAt": "2026-01-12"
+    },
+    {
+      "name": "ecosio InterCom, a Vertex Company",
+      "street": "Maximilianstraße 35a, Munich",
+      "postalCode": "80539",
+      "city": "Allemagne",
+      "website": "https://ecosio.com/fr/",
+      "contact": "einvoice@ecosio.com",
+      "registeredAt": "2026-04-30"
+    },
+    {
+      "name": "EDICOM France",
+      "street": "55 Rue d'Amsterdam",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://edicomgroup.fr/",
+      "contact": "info_france@edicomgroup.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "EDICOM Group",
+      "street": "C/ Charles Robert Darwin,8 Parque Tecnologico de Paterna, Valencia",
+      "postalCode": "46980",
+      "city": "Espagne",
+      "website": "https://edicomgroup.com/",
+      "contact": "info_france@edicomgroup.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "EDICS France",
+      "street": "5 Allée Moulin Berger",
+      "postalCode": "69130",
+      "city": "Écully",
+      "website": "https://edics.fr/",
+      "contact": "support@edics.cloud",
+      "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "EdiEyes Vision Care",
+      "street": "14 Allée du Haras",
+      "postalCode": "49100",
+      "city": "Angers",
+      "website": "https://www.edieyes.fr/",
+      "contact": "commerce@edieyes.fr",
+      "registeredAt": "2026-06-01"
+    },
+    {
+      "name": "EDT",
+      "street": "85 Rue Lavoisier",
+      "postalCode": "38330",
+      "city": "Montbonnot-Saint-Martin",
+      "website": "https://www.group-edt.fr/",
+      "contact": "marketing@edt.fr",
+      "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "EEZI powered by VAT IT",
+      "street": "29-31 Boulevard de le Paix",
+      "postalCode": "78100",
+      "city": "SaintGermain-en-Laye",
+      "website": "https://eezi.io/",
+      "contact": "PDP@eezi.io",
+      "registeredAt": "2026-01-13"
+    },
+    {
+      "name": "Effinum by SPEE",
+      "street": "18 Rue de l'Armorique",
+      "postalCode": "75015",
+      "city": "Paris",
+      "website": "https://www.effinum.fr/",
+      "contact": "contact@effinum.fr",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "ENERJ",
+      "street": "3 Chemin de l'Orée du Bois",
+      "postalCode": "69570",
+      "city": "Dardilly",
+      "website": "https://www.enerj.fr/",
+      "contact": "contact@enerj.fr",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "ENTROPICS",
+      "street": "4 rue Paul Lintier",
+      "postalCode": "69002",
+      "city": "Lyon",
+      "website": "https://entropics.fr/",
+      "contact": "contact.pdp@entropics.fr",
+      "registeredAt": "2026-01-13"
+    },
+    {
+      "name": "ESALINK",
+      "street": "2 Rue Jules Méline",
+      "postalCode": "51430",
+      "city": "Bezannes",
+      "website": "https://www.esalink.com/",
+      "contact": "contact@esalink.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "ESI",
+      "street": "50 Rue Jean Zay",
+      "postalCode": "69800",
+      "city": "Saint-Priest",
+      "website": "https://www.esi-groupe.com/",
+      "contact": "contact.pdp@esi-groupe.com",
+      "registeredAt": "2026-01-13"
+    },
+    {
+      "name": "ESKER",
+      "street": "113 Boulevard de la Bataille de Stalingrad",
+      "postalCode": "69100",
+      "city": "Villeurbanne",
+      "website": "https://www.esker.fr/",
+      "contact": "contact-pdp@esker.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "EURO INFORMATION",
+      "street": "4 Rue Frédéric-Guillaume Raiffeisen",
+      "postalCode": "67000",
+      "city": "Strasbourg",
+      "website": "https://www.e-i.com/fr",
+      "contact": "epithetecontact@epithete.com",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "FACNOTE PDP",
+      "street": "Sky Center La Marseille 2B Bd Euroméditerranée",
+      "postalCode": "13002",
+      "city": "MARSEILLE",
+      "website": "https://www.facnote.com/",
+      "contact": "pdp@facnote.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "FIDUCIAL CLOUD",
+      "street": "41 Rue Du Capitaine Guynemer",
+      "postalCode": "92400",
+      "city": "Courbevoie",
+      "website": "https://www.fiducial.fr/",
+      "contact": "contact@fiducialcloud.fr",
+      "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "FLOWIE",
+      "street": "229 Rue Saint-Honoré",
+      "postalCode": "75001",
+      "city": "Paris",
+      "website": "https://www.get-flowie.com/",
+      "contact": "hello.pdp@flowie.fr",
+      "registeredAt": "2026-01-07"
+    },
+    {
+      "name": "Fonoa Technologies Limited",
+      "street": "6th Floor, South Bank House, Barrow Street, Dublin 4, Dublin",
+      "postalCode": "D04TR29",
+      "city": "Irlande",
+      "website": "https://www.fonoa.com/",
+      "contact": "e-invoicing@fonoa.com",
+      "registeredAt": "2026-04-29"
+    },
+    {
+      "name": "FULLL",
+      "street": "14 Rue Rhin et Danube",
+      "postalCode": "69009",
+      "city": "Lyon",
+      "website": "https://www.fulll.fr/",
+      "contact": "e-invoicing@fulll.fr",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "GEP",
+      "street": "Innopoli 2 Tekniikantie 14",
+      "postalCode": "2600",
+      "city": "Espoo (Finlande)",
+      "website": "https://www.gep.com/software/e-invoicing",
+      "contact": "https://www.gep.com",
+      "registeredAt": "2026-06-17"
+    },
+    {
+      "name": "GENERIX Group",
+      "street": "Tour Légende 20 place de la Défense",
+      "postalCode": "92050",
+      "city": "Paris La Défense",
+      "website": "https://www.generixgroup.com/fr",
+      "contact": "pdp@generixgroup.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "GESTAV",
+      "street": "57 bis rue de la pomme rouge",
+      "postalCode": "2100",
+      "city": "Saint Quentin",
+      "website": "https://gestav.com/",
+      "contact": "contact@gestav.com",
+      "registeredAt": "2025-12-19"
+    },
+    {
+      "name": "GROUPE SIGMA",
+      "street": "Rue Newton",
+      "postalCode": "44240",
+      "city": "La Chapelle-sur-Erdre",
+      "website": "https://www.sigma.fr/",
+      "contact": "produit.lixa.pa@sigma.fr",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "GURUSOFT",
+      "street": "Avda Brasil 29, Madrid",
+      "postalCode": "28020",
+      "city": "Espagne",
+      "website": "https://guru-soft.com/fr/france/",
+      "contact": "sales.fr@guru-soft.com",
+      "registeredAt": "2026-03-31"
+    },
+    {
+      "name": "IAF",
+      "street": "27 Rue Alfred Nobel",
+      "postalCode": "77420",
+      "city": "Champs-sur-Marne",
+      "website": "https://www.assistances.fr/",
+      "contact": "sebastien.b@iaf.fr",
+      "registeredAt": "2026-06-15"
+    },
+    {
+      "name": "ICD International",
+      "street": "17 Rue Jeanne Braconnier",
+      "postalCode": "92360",
+      "city": "Meudon",
+      "website": "https://icdint.fr/",
+      "contact": "commercial@icdint.fr",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "iEDI ApS",
+      "street": "Bybjergvej 14, Espergærde",
+      "postalCode": "3060",
+      "city": "Danemark",
+      "website": "https://www.iedi.com/",
+      "contact": "ds@iedi.com",
+      "registeredAt": "2026-02-11"
+    },
+    {
+      "name": "IGA ASSURANCE",
+      "street": "58 Rue Etienne Dolet",
+      "postalCode": "92240",
+      "city": "Malakoff",
+      "website": "https://www.iga-assurance.fr/",
+      "contact": "info@iga-e-invoicing.fr",
+      "registeredAt": "2026-03-03"
+    },
+    {
+      "name": "INDICOM",
+      "street": "Via Carnevali 39, Milano",
+      "postalCode": "20158",
+      "city": "Italie",
+      "website": "https://www.indicom.eu/en/idc-home",
+      "contact": "pdp.contact@indicom.eu",
+      "registeredAt": "2026-01-13"
+    },
+    {
+      "name": "INDY",
+      "street": "94 Rue Robert",
+      "postalCode": "69006",
+      "city": "LYON",
+      "website": "https://www.indy.fr/",
+      "contact": "pdp@indy.fr",
+      "registeredAt": "2026-01-09"
+    },
+    {
+      "name": "INFOLOGIC",
+      "street": "99 Avenue de Lyon",
+      "postalCode": "26500",
+      "city": "Bourg-lès-Valence",
+      "website": "https://www.infologic-copilote.fr/",
+      "contact": "facture-elec@infologic.fr",
+      "registeredAt": "2026-01-28"
+    },
+    {
+      "name": "In.Te.S.A. spa",
+      "street": "Strada Pianezza, 289, Torino",
+      "postalCode": "10151",
+      "city": "Italie",
+      "website": "https://www.intesa.it/",
+      "contact": "intesa@pec.trustedmail.intesa.it",
+      "registeredAt": "2026-08-06"
+    },
+    {
+      "name": "INVOPOP",
+      "street": "Calle Pradillo 42, Madrid",
+      "postalCode": "28002",
+      "city": "Espagne",
+      "website": "https://www.invopop.com/",
+      "contact": "pdp@invopop.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "IOPOLE",
+      "street": "145 Impasse John Locke",
+      "postalCode": "34470",
+      "city": "Pérols",
+      "website": "https://www.iopole.com/",
+      "contact": "contact@iopole.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "iPaidThat",
+      "street": "Avenue d'Alphasis",
+      "postalCode": "35760",
+      "city": "Saint-Grégoire",
+      "website": "https://ipaidthat.io/fr",
+      "contact": "contact@ipaidthat.io",
+      "registeredAt": "2026-01-06"
+    },
+    {
+      "name": "ITESOFT",
+      "street": "Chemin du Mas d'Andron",
+      "postalCode": "30470",
+      "city": "Aimargues",
+      "website": "https://www.itesoft.com/fr",
+      "contact": "contact@itesoft.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "jefacture.com",
+      "street": "216 Rue Raymond Losserand",
+      "postalCode": "75014",
+      "city": "Paris",
+      "website": "https://www.ecma-solutions.com/",
+      "contact": "https://go.jefacture.com/pa",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "KLEKOON",
+      "street": "12, Rue Paul Langevin",
+      "postalCode": "93270",
+      "city": "Sevran",
+      "website": "https://www.klekoon.com/",
+      "contact": "contact.pa@klekoon.com",
+      "registeredAt": "2026-01-16"
+    },
+    {
+      "name": "KOLECTO PA",
+      "street": "155 Boulevard Haussmann",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://www.kolecto.fr/",
+      "contact": "admin-pa-client@kolecto.fr",
+      "registeredAt": "2026-04-22"
+    },
+    {
+      "name": "KOLECTO PDP",
+      "street": "50 Rue la Boétie",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://www.kolecto.fr/",
+      "contact": "admin@kolecto.fr",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "LE VILLAGE CONNECTE",
+      "street": "2322 Route du Latéral",
+      "postalCode": "47400",
+      "city": "FAUGUEROLLES",
+      "website": "https://village-connecte.fr/",
+      "contact": "contact-pdp@coaxis.com",
+      "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "Legalinvoice by Tinexta Infocert",
+      "street": "Piazzale Flaminio 1B, Rome",
+      "postalCode": "00196",
+      "city": "Italie",
+      "website": "https://www.infocert.it/",
+      "contact": "pdp@infocert.it",
+      "registeredAt": "2026-04-13"
+    },
+    {
+      "name": "LOGILEC",
+      "street": "Route de Kerscao",
+      "postalCode": "29480",
+      "city": "Le Relecq-Kerhuon",
+      "website": "https://www.logilec.fr/",
+      "contact": "service.clients@logilec.leclerc",
+      "registeredAt": "2026-01-06"
+    },
+    {
+      "name": "LUCCA",
+      "street": "151 Avenue de France",
+      "postalCode": "75013",
+      "city": "Paris",
+      "website": "https://www.lucca.fr/",
+      "contact": "plateforme-agreee@luccasoftware.com",
+      "registeredAt": "2026-04-24"
+    },
+    {
+      "name": "LUNDI MATIN",
+      "street": "1025 Avenue Henri Becquerel",
+      "postalCode": "34000",
+      "city": "Montpellier",
+      "website": "https://www.lundimatin.fr/",
+      "contact": "contact@lundimatin.fr",
+      "registeredAt": "à venir"
+    },
+    {
+      "name": "MACOMPTA.FR",
+      "street": "20 Rue des Greffières",
+      "postalCode": "17140",
+      "city": "Lagord",
+      "website": "https://www.macompta.fr/",
+      "contact": "commercial@macompta.fr",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "MAROSA",
+      "street": "C/ Policarpo Sanz 36 - 2e D, VigoPontevedra",
+      "postalCode": "36202",
+      "city": "Espagne",
+      "website": "https://marosavat.com/",
+      "contact": "marosanotifications@marosavat.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "MEDIUS",
+      "street": "35 Rue des Jeuneurs",
+      "postalCode": "75002",
+      "city": "Paris",
+      "website": "https://www.medius.com/fr",
+      "contact": "info.france@medius.com",
+      "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "MY FITECO",
+      "street": "Rue Albert Einstein",
+      "postalCode": "53810",
+      "city": "Changé",
+      "website": "https://myfiteco.com/",
+      "contact": "pa+contact@fiteco.com",
+      "registeredAt": "2026-05-12"
+    },
+    {
+      "name": "MY UNISOFT",
+      "street": "Immeuble le Carré, 2 Rue George Stephenson",
+      "postalCode": "78180",
+      "city": "Montigny-le-Bretonneux",
+      "website": "https://myunisoft.fr/",
+      "contact": "pa-support@myunisoft.fr",
+      "registeredAt": "2026-04-15"
+    },
+    {
+      "name": "MyKinexo PDP",
+      "street": "10 RUE ALAIN GERBAULT",
+      "postalCode": "35000",
+      "city": "Rennes",
+      "website": "https://www.kinexo.fr/",
+      "contact": "contact@kinexo.fr",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "MySupply Aps",
+      "street": "Østre Fælledvej 8, Nørresundby",
+      "postalCode": "9400",
+      "city": "Danemark",
+      "website": "https://mysupply.dk/en",
+      "contact": "info@mysupply.dk",
+      "registeredAt": "2026-03-03"
+    },
+    {
+      "name": "N2F PDP",
+      "street": "233 Chemin des Grandes Terres",
+      "postalCode": "01250",
+      "city": "Montagnat",
+      "website": "https://www.n2f.com/fr/note-de-frais/",
+      "contact": "sales@n2f.com",
+      "registeredAt": "2025-12-19"
+    },
+    {
+      "name": "NEOTIMO",
+      "street": "27 rue de la Tuilerie",
+      "postalCode": "45200",
+      "city": "Amilly",
+      "website": "https://neotimo.com/",
+      "contact": "https://neotimo.com/contact",
+      "registeredAt": "2026-04-13"
+    },
+    {
+      "name": "NTT DATA Business Solutions",
+      "street": "Philipp-Reis-Str 2, Bautzen",
+      "postalCode": "02625",
+      "city": "Allemagne",
+      "website": "https://fr.nttdata.com/",
+      "contact": "sol-fr-contact@nttdata.com",
+      "registeredAt": "2026-05-13"
+    },
+    {
+      "name": "ODOO",
+      "street": "40, Chaussée de Namur, Grand Rosière",
+      "postalCode": "1367",
+      "city": "Belgique",
+      "website": "https://www.odoo.com/fr_FR",
+      "contact": "pdp-contact@odoo.com",
+      "registeredAt": "2026-04-15"
+    },
+    {
+      "name": "OfficeIn",
+      "street": "15 Rue Pierre Lescot",
+      "postalCode": "75001",
+      "city": "Paris",
+      "website": "https://officein.fr/",
+      "contact": "contact@officein.fr",
+      "registeredAt": "2026-07-09"
+    },
+    {
+      "name": "ONE UP",
+      "street": "124 Rue Réaumur",
+      "postalCode": "75002",
+      "city": "Paris",
+      "website": "https://smallbusiness.oneup.com/fr/",
+      "contact": "purchasing@oneup.com",
+      "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "OPEN BEE",
+      "street": "ZAC des Longerays",
+      "postalCode": "74370",
+      "city": "Epagny Metz-Tessy",
+      "website": "https://www.openbee.com/",
+      "contact": "https://www.openbee.com/nous-contacter/",
+      "registeredAt": "2026-01-13"
+    },
+    {
+      "name": "OPENTEXT",
+      "street": "Taurusavenue 15 Zuidtoren, Hoofddorp",
+      "postalCode": "2132",
+      "city": "Pays-Bas",
+      "website": "https://www.opentext.fr/",
+      "contact": "pdp.nl@opentext.com",
+      "registeredAt": "2025-12-12"
+    },
+    {
+      "name": "PAGERO",
+      "street": "Västra Hamngatan 1, Göteborg",
+      "postalCode": "411 17",
+      "city": "Suède",
+      "website": "https://www.pagero.com/fr",
+      "contact": "info@pagero.fr",
+      "registeredAt": "2025-12-19"
+    },
+    {
+      "name": "PARAGON",
+      "street": "274 Boulevard Clémenceau",
+      "postalCode": "59700",
+      "city": "Marcq-en-Barœul",
+      "website": "https://www.paragon.world/fr",
+      "contact": "ipp@paragon-cc.fr",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "PAYFLOWS",
+      "street": "17 Rue de la Comète",
+      "postalCode": "75007",
+      "city": "Paris",
+      "website": "https://payflows.io/",
+      "contact": "joseph@payflows.io",
+      "registeredAt": "2026-04-15"
+    },
+    {
+      "name": "PENNYLANE",
+      "street": "2-4 Rue Jules Lefebvre",
+      "postalCode": "75009",
+      "city": "Paris",
+      "website": "https://www.pennylane.com/fr",
+      "contact": "portabilite.pa@pennylane.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "PITNEY BOWES",
+      "street": "5 rue Francis de Pressensé",
+      "postalCode": "93210",
+      "city": "Saint-Denis",
+      "website": "https://www.pitneybowes.com/fr",
+      "contact": "admin.pdp@pb.com",
+      "registeredAt": "2026-01-13"
+    },
+    {
+      "name": "QONTO",
+      "street": "18 Rue de Navarin",
+      "postalCode": "75009",
+      "city": "Paris",
+      "website": "https://qonto.com/fr",
+      "contact": "contact-pdp@qonto.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "QWEEBY",
+      "street": "8 Rue Louis Braille",
+      "postalCode": "42000",
+      "city": "Saint-Étienne",
+      "website": "https://www.qweeby.fr/",
+      "contact": "hello_pdp@qweeby.com",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "SAGE",
+      "street": "10 Place de Belgique",
+      "postalCode": "92250",
+      "city": "La Garenne-Colombes",
+      "website": "https://www.sage.com/fr-fr/",
+      "contact": "pdp.france@sage.com",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "SAP",
+      "street": "Dietmar-Hopp-Allee 16, Walldorf",
+      "postalCode": "69190",
+      "city": "Allemagne",
+      "website": "https://www.sap.com/france/",
+      "contact": "sap_pdp_contact@sap.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "SCRIBEE",
+      "street": "128 Rue la Boétie",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://www.scribee.tech/",
+      "contact": "contact@scribee.tech",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "SEEBURGER",
+      "street": "1 Edisonstrasse, Bretten",
+      "postalCode": "75015",
+      "city": "Allemagne",
+      "website": "https://www.seeburger.com/",
+      "contact": "info.fr@seeburger.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "SEPTEO",
+      "street": "194 avenue de la Gare sud de france",
+      "postalCode": "34970",
+      "city": "Lattes",
+      "website": "https://www.septeopdp.com/",
+      "contact": "contact@septeopdp.com",
+      "registeredAt": "2026-01-09"
+    },
+    {
+      "name": "SEQINO",
+      "street": "2 Route de la Noue",
+      "postalCode": "91190",
+      "city": "Gif-sur-Yvette",
+      "website": "https://seqino.com/",
+      "contact": "contact-pdp@seqino.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "SERENSIA by Quadient",
+      "street": "15 Rue des Mathurins",
+      "postalCode": "75009",
+      "city": "Paris",
+      "website": "https://www.serensia.com/",
+      "contact": "contact.marketing@quadient.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "SERES",
+      "street": "45 Bd Paul Vaillant Couturier",
+      "postalCode": "94200",
+      "city": "Ivry-sur-Seine",
+      "website": "https://www.seres.fr/",
+      "contact": "contact@seres.fr",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "Shine",
+      "street": "Fiolstræde 17B, København",
+      "postalCode": "1171",
+      "city": "Danemark",
+      "website": "https://www.shine.fr/",
+      "contact": "contact@shine.co",
+      "registeredAt": "2026-05-21"
+    },
+    {
+      "name": "SNI",
+      "street": "Dunajska jesta 136, Ljubljana",
+      "postalCode": "1000",
+      "city": "Slovénie",
+      "website": "https://snitechnology.net/fr",
+      "contact": "regulation@snitechnology.net",
+      "registeredAt": "2026-04-13"
+    },
+    {
+      "name": "SOLO",
+      "street": "Sveavägen 13, Stockholm",
+      "postalCode": "111 57",
+      "city": "Suède",
+      "website": "https://www.solo.fr/",
+      "contact": "hello@solo.fr",
+      "registeredAt": "2026-02-16"
+    },
+    {
+      "name": "SOVOS",
+      "street": "Rua do Viriato, nº 13, 3º étage, 233 Lisbonne",
+      "postalCode": "1050",
+      "city": "Portugal",
+      "website": "https://www.saphety.com/fr",
+      "contact": "sovos-pdp_contact@sovos.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "SPENDESK",
+      "street": "51 Rue de Londres",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://www.spendesk.com/fr/",
+      "contact": "hello@spendesk.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "SPS COMMERCE",
+      "street": "De Corridor 5 ZA, Breukelen",
+      "postalCode": "3621",
+      "city": "Pays-Bas",
+      "website": "https://tiekinetix.com/fr",
+      "contact": "pdpcontact@spscommerce.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "SRCI",
+      "street": "4 Rue Joseph Fourier",
+      "postalCode": "28000",
+      "city": "Chartres",
+      "website": "https://solutions.srci.fr/",
+      "contact": "commercial@srci.fr",
+      "registeredAt": "2026-01-19"
+    },
+    {
+      "name": "STORECOVE",
+      "street": "s-Gravelandseweg 46D, Hilversum",
+      "postalCode": "1211 BT",
+      "city": "Pays-Bas",
+      "website": "https://www.storecove.com/fr/fr",
+      "contact": "info@storecove.com",
+      "registeredAt": "2026-04-28"
+    },
+    {
+      "name": "SUPER PDP",
+      "street": "6 rue de la Dhuis",
+      "postalCode": "75020",
+      "city": "Paris",
+      "website": "https://www.superpdp.tech/",
+      "contact": "contact@superpdp.tech",
+      "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "SYMTRAX",
+      "street": "11 Rue Raymond Marc",
+      "postalCode": "30000",
+      "city": "Nîmes",
+      "website": "https://www.symtrax.com/fr",
+      "contact": "contact.pdp@symtrax.eu",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "TAXERA",
+      "street": "40 Rue Alexandre Dumas",
+      "postalCode": "75011",
+      "city": "Paris",
+      "website": "https://taxera.tech/",
+      "contact": "france@taxera.tech",
+      "registeredAt": "2026-06-04"
+    },
+    {
+      "name": "TeamSystem Sellsy",
+      "street": "Avenue du Lazaret",
+      "postalCode": "17000",
+      "city": "La Rochelle",
+      "website": "https://go.sellsy.com/",
+      "contact": "contact@sellsy.com",
+      "registeredAt": "2025-12-24"
+    },
+    {
+      "name": "TENOR",
+      "street": "5 Rue des Anciennes Tanneries",
+      "postalCode": "69600",
+      "city": "Oullins",
+      "website": "https://tenorsolutions.com/",
+      "contact": "contact.pdp@tenorsolutions.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "TESISQUARE SPA",
+      "street": "Via Mendicità Istruita 24, Bra CN",
+      "postalCode": "12042",
+      "city": "Italie",
+      "website": "https://www.tesisquare.com/fr",
+      "contact": "digital_compliance@service.tesisquare.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "TESSI Technologies",
+      "street": "Immeuble Cassiopee, 1-3 Avenue des Satellites",
+      "postalCode": "33185",
+      "city": "Le Haillan",
+      "website": "https://www.tessi.eu/fr",
+      "contact": "pdp.support@tessi.fr",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "TIIME PDP",
+      "street": "15 Rue Auber",
+      "postalCode": "75009",
+      "city": "Paris",
+      "website": "https://www.tiime.fr/",
+      "contact": "contact@tiimepdp.com",
+      "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "TRADESHIFT BABELWAY",
+      "street": "Chemin du Cyclotron 6, Ottignies-Louvain-la-Neuve",
+      "postalCode": "1348",
+      "city": "Belgique",
+      "website": "https://tradeshift.com/fr",
+      "contact": "support@tradeshift.com",
+      "registeredAt": "2026-01-06"
+    },
+    {
+      "name": "Transalis Limited",
+      "street": "Kyriakou Matsi 16, Nicosie",
+      "postalCode": "1082",
+      "city": "Chypre",
+      "website": "https://www.transalis.com/",
+      "contact": "mstares@transalis.com",
+      "registeredAt": "2026-01-19"
+    },
+    {
+      "name": "TRESO2",
+      "street": "35 Rue des Mathurins",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "http://www.treso2.com/",
+      "contact": "contact.pdp@treso2.com",
+      "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "TUNGSTEN AUTOMATION FRANCE",
+      "street": "18 Boulevard Malesherbes",
+      "postalCode": "75008",
+      "city": "Paris",
+      "website": "https://www.tungstenautomation.fr/",
+      "contact": "ruud.vanhilten@tungstenautomation.com",
+      "registeredAt": "2025-12-23"
+    },
+    {
+      "name": "TX2 Concept",
+      "street": "491 Boulevard Duhamel du Monceau",
+      "postalCode": "45160",
+      "city": "Olivet",
+      "website": "https://tx2.fr/",
+      "contact": "adm@tx2.fr",
+      "registeredAt": "2026-01-14"
+    },
+    {
+      "name": "VENTYA",
+      "street": "3, Boulevard des Bouvets",
+      "postalCode": "92000",
+      "city": "Nanterre",
+      "website": "https://www.ventya.fr/",
+      "contact": "contact@ventya.fr",
+      "registeredAt": "2026-12-18"
+    },
+    {
+      "name": "VERYSWING",
+      "street": "143bis Rue Yves le Coz",
+      "postalCode": "78000",
+      "city": "Versailles",
+      "website": "https://veryswing.com/",
+      "contact": "einvoicing@veryswing.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "VosFactures",
+      "street": "FACTUALI 470 Promenade des Anglais",
+      "postalCode": "6200",
+      "city": "Nice",
+      "website": "https://vosfactures.fr/",
+      "contact": "info@vosfactures.fr",
+      "registeredAt": "2026-04-15"
+    },
+    {
+      "name": "VOXEL, an Amadeus company",
+      "street": "Carrer Cristóbal de Moura 115 1st floor, Barcelone",
+      "postalCode": "8019",
+      "city": "Espagne",
+      "website": "https://www.voxelgroup.net/facture-electronique/",
+      "contact": "pdp.contact-voxel@amadeus.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "WEPROC",
+      "street": "2 Parvis des Écoles",
+      "postalCode": "83000",
+      "city": "Toulon",
+      "website": "https://www.weproc.com/fr/",
+      "contact": "contact-pdp@weproc.com",
+      "registeredAt": "2025-12-23"
+    },
+    {
+      "name": "WiseTech GLOBAL",
+      "street": "25 Bourke Road, Alexandria NSW 2015",
+      "postalCode": "/",
+      "city": "Australie",
+      "website": "https://www.wisetechglobal.com/fr-fr/",
+      "contact": "communications@wisetechglobal.com",
+      "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "XELYA",
+      "street": "1 Rue Royale 174 Bureaux de la Colline",
+      "postalCode": "92210",
+      "city": "Saint-Cloud",
+      "website": "https://www.xelya.com/",
+      "contact": "contact-pa@xelya.com",
+      "registeredAt": "2026-05-13"
+    },
+    {
+      "name": "YOOZ PDP",
+      "street": "Le Sequoia Parc d'Andron",
+      "postalCode": "30470",
+      "city": "Aimargues",
+      "website": "https://www.getyooz.com/fr",
+      "contact": "contact@yoozpdp.com",
+      "registeredAt": "2025-12-11"
+    },
+    {
+      "name": "YTEMS",
+      "street": "11 Rue de Lourmel",
+      "postalCode": "75015",
+      "city": "Paris",
+      "website": "https://com.ytems.app/",
+      "contact": "pa@ytems.co",
+      "registeredAt": "2026-08-03"
+    }
+  ],
+  "pending": [
+    {
+      "name": "Basikon",
+      "street": "17 Rue de Kronstadt",
+      "postalCode": "92380",
+      "city": "Garches",
+      "website": "https://www.basikon.com/fr",
+      "contact": "info@fiskaltrust.fr"
+    },
+    {
+      "name": "BLG",
+      "street": "1 Rue de la Sous-Préfecture",
+      "postalCode": "60200",
+      "city": "Compiègne",
+      "website": "https://www.blgcloud.fr/",
+      "contact": "contact@blgcloud.com"
+    },
+    {
+      "name": "BE FRESH S.à r.l.",
+      "street": "13, rue de l'Innovation, Kockelscheuer",
+      "postalCode": "1896",
+      "city": "Luxembourg",
+      "website": "https://befresh.lu/",
+      "contact": "info@befresh.lu"
+    },
+    {
+      "name": "CENSE",
+      "street": "4 Place Sadi Carnot",
+      "postalCode": "13002",
+      "city": "Marseille",
+      "website": "https://www.cpem.fr/o",
+      "contact": "contact@cpem.fr"
+    },
+    {
+      "name": "EAGLESSOFT",
+      "street": "Excelsiorlaan 31, Zaventem",
+      "postalCode": "1930",
+      "city": "Belgique",
+      "website": "https://eaglessoft.com/",
+      "contact": "info@eaglessoft.com"
+    },
+    {
+      "name": "EY Expertises & Transactions",
+      "street": "1-2 place des saisons",
+      "postalCode": "92400",
+      "city": "Courbevoie",
+      "website": "https://www.ey.com/fr_fr",
+      "contact": "pdp.ey@fr.ey.com"
+    },
+    {
+      "name": "FACTUREAPP",
+      "street": "16 rue Cuvier",
+      "postalCode": "69002",
+      "city": "Lyon",
+      "website": "https://www.factureapp.com/",
+      "contact": "contact@facturesapp.com"
+    },
+    {
+      "name": "FISKALTRUST",
+      "street": "132 Rue Bossuet",
+      "postalCode": "69006",
+      "city": "Lyon",
+      "website": "https://fiskaltrust.eu/fr-fr/",
+      "contact": "info@fiskaltrust.fr"
+    },
+    {
+      "name": "Insiders Technologies GmbH",
+      "street": "Brüsseler Straße 1, Kaiserslautern",
+      "postalCode": "67657",
+      "city": "Allemagne",
+      "website": "https://insiders-technologies.com/en/",
+      "contact": "e-invoicing@insiders-technologies.de"
+    },
+    {
+      "name": "KALANDA",
+      "street": "94 Avenue de la Sarriette",
+      "postalCode": "13600",
+      "city": "La Ciotat",
+      "website": "https://www.kalanda.net/",
+      "contact": "kalandaefacture@kalanda.net"
+    },
+    {
+      "name": "MY-EDDY",
+      "street": "2507 Avenue de l'Europe",
+      "postalCode": "69140",
+      "city": "Rillieux-la-Pape",
+      "website": "https://dailyapps.fr/",
+      "contact": "m.cure@my-eddy.fr"
+    },
+    {
+      "name": "NUMERIA",
+      "street": "5 allée Rosa Luxembourg",
+      "postalCode": "95610",
+      "city": "Eragny",
+      "website": "https://www.numeria.fr/",
+      "contact": "info@numeria.fr"
+    },
+    {
+      "name": "RATIOO",
+      "street": "300 Rue du Noir Debout",
+      "postalCode": "59242",
+      "city": "Cappelle-en-Pévèle",
+      "website": "https://ratioo.fr/",
+      "contact": "contact@ratioo.fr"
+    },
+    {
+      "name": "SWILE",
+      "street": "561 Rue Georges Méliès",
+      "postalCode": "34000",
+      "city": "Montpellier",
+      "website": "https://www.swile.co/",
+      "contact": "gregory.truchetet@swile.co"
+    },
+    {
+      "name": "Taxilla Europe BV",
+      "street": "Rue des Colonies 11, Brussels",
+      "postalCode": "1000",
+      "city": "Belgique",
+      "website": "https://www.taxilla.com/",
+      "contact": "support.pdp@taxilla.com"
+    },
+    {
+      "name": "WAKASTELLAR",
+      "street": "17 Rue de la Guillauderie",
+      "postalCode": "44118",
+      "city": "La Chevrolière",
+      "website": "https://www.wakastellar.com/",
+      "contact": "pdp@wakastellar.com"
+    },
+    {
+      "name": "YUMAN",
+      "street": "Square de Meuûs 35",
+      "postalCode": "1000",
+      "city": "Belgique",
+      "website": "https://www.yuman.io/",
+      "contact": "contact@yuman.io"
+    },
+    {
+      "name": "ZEFYR",
+      "street": "12 Rue Ernest Psichari",
+      "postalCode": "75007",
+      "city": "Paris",
+      "website": "https://www.zefyr.net/",
+      "contact": "facturation-electronique@zefyr.net"
+    }
+  ]
+}

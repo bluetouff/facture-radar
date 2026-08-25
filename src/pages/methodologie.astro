@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Méthodologie | Facture Radar"
+  description="Méthode publique du moteur de choix : périmètre, niveaux de preuve, règles d'exclusion, calcul des coûts et politique de correction."
+>
+  <section class="shell page-hero">
+    <span class="eyebrow">méthode publique · version 0.1</span>
+    <h1>Une recommandation doit pouvoir être contestée.</h1>
+    <p>Le corpus, les règles et les limites sont publiés pour qu'un opérateur, un cabinet ou un utilisateur puisse reproduire le raisonnement et signaler une erreur précise.</p>
+  </section>
+  <section class="shell method-layout">
+    <article class="prose">
+      <h2>Ce que le moteur vérifie</h2>
+      <p>Facture Radar compare des parcours complets : outil visible, plateforme agréée, dépendances commerciales, volume inclus, fonctions documentées et possibilité de sortie. Il ne juge ni la qualité générale d'une entreprise ni la sécurité réelle d'un système à partir de son site marketing.</p>
+
+      <h2>Quatre niveaux de preuve</h2>
+      <ul>
+        <li><strong>Officiel :</strong> information publiée par la DGFiP, l'AIFE ou un texte applicable.</li>
+        <li><strong>Documenté :</strong> tarif, contrat, documentation ou certificat public directement consultable.</li>
+        <li><strong>Déclaré :</strong> affirmation de l'opérateur sans pièce publique suffisante pour contrôler le périmètre.</li>
+        <li><strong>Non documenté :</strong> aucune preuve publique retenue à la date de vérification.</li>
+      </ul>
+      <p>« Non documenté » ne signifie pas « faux » ni « non conforme ». Cela signifie que le moteur ne dispose pas de la pièce nécessaire pour utiliser le fait.</p>
+
+      <h2>Règles du diagnostic</h2>
+      <p>Un critère impératif agit comme un filtre. Si sa valeur est négative ou inconnue, le parcours est écarté. Les préférences servent ensuite à ordonner les parcours restants. Le pourcentage affiché exprime la part des critères de votre requête satisfaits, pas une note générale de la plateforme.</p>
+      <p>Trois résultats maximum sont affichés. Chaque résultat présente les raisons de compatibilité, les inconnues importantes et le coût annuel seulement lorsqu'un prix de départ reproductible est public.</p>
+
+      <h2>Calcul du coût</h2>
+      <p>La version initiale annualise le prix mensuel public du parcours étudié. Les promotions temporaires sont exclues. Lorsqu'un tarif varie selon les utilisateurs, le volume ou un devis, le coût est indiqué comme non calculable. Les futurs profils intégreront les frais de mise en service, dépassements, connecteurs, archivage et sortie uniquement lorsque ces montants sont publiés.</p>
+
+      <h2>Pourquoi douze fiches</h2>
+      <p>La liste officielle compte 148 plateformes approuvées au 19 août 2026. Elle ne contient pas les tarifs, intégrations ou clauses de sortie. Le diagnostic reste donc limité à douze fiches enrichies. L'annuaire complet est consultable séparément et ne reçoit aucun attribut inventé.</p>
+
+      <h2>Corrections et droit de réponse</h2>
+      <p>Une correction doit identifier le champ contesté, fournir une URL publique ou une pièce publiable, préciser l'entité et le périmètre concernés, puis indiquer la date d'effet. La correction et sa source seront enregistrées dans le journal des changements. Aucune rémunération ne modifie les règles, le périmètre ou l'ordre des résultats.</p>
+
+      <h2>Limites de la bêta</h2>
+      <ul>
+        <li>Les profils contractuels et de réversibilité restent incomplets pour plusieurs acteurs.</li>
+        <li>Les certifications citées par les éditeurs ne valent pas vérification du certificat et de son périmètre.</li>
+        <li>Le moteur ne valide pas encore un fichier Factur-X, UBL ou CII.</li>
+        <li>Le moteur ne constitue ni un conseil juridique ni une garantie de conformité individuelle.</li>
+      </ul>
+    </article>
+    <aside>
+      <p class="mono-label">contrat éditorial</p>
+      <dl>
+        <div><dt>Classement payé</dt><dd>Interdit</dd></div>
+        <div><dt>Données personnelles</dt><dd>Aucune collecte</dd></div>
+        <div><dt>Facture déposée</dt><dd>Jamais</dd></div>
+        <div><dt>Inconnue</dt><dd>Bloquante si impérative</dd></div>
+        <div><dt>Dernière revue</dt><dd>25 août 2026</dd></div>
+      </dl>
+      <a class="button secondary" href="/api/platforms.json">Télécharger les données</a>
+    </aside>
+  </section>
+</BaseLayout>
+
+<style>
+  .method-layout { display: grid; grid-template-columns: minmax(0, 1fr) 18rem; gap: clamp(2rem, 7vw, 6rem); }
+  aside { position: sticky; top: 1rem; align-self: start; border: 1px solid var(--line); padding: 1rem; background: var(--surface); }
+  aside dl { margin: 1rem 0; }
+  aside dl div { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; border-top: 1px solid var(--line); padding-block: .65rem; }
+  aside dt { color: var(--muted); font: .57rem/1.4 var(--font-mono); text-transform: uppercase; }
+  aside dd { margin: 0; color: var(--paper); font-size: .68rem; text-align: right; }
+  aside .button { width: 100%; }
+  @media (max-width: 800px) { .method-layout { grid-template-columns: 1fr; } aside { position: static; } }
+</style>

@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PlatformCard from "../../components/PlatformCard.astro";
+import { platforms } from "../../data/platforms";
+---
+
+<BaseLayout
+  title="12 fiches de preuve | Facture Radar"
+  description="Douze plateformes agréées documentées en profondeur pour les indépendants, TPE, PME et organisations équipées d'un ERP."
+>
+  <section class="shell page-hero">
+    <span class="eyebrow">corpus enrichi · 12 acteurs</span>
+    <h1>Les dossiers utilisés par le moteur.</h1>
+    <p>Ces fiches ne reprennent pas un argumentaire commercial. Elles séparent le statut DGFiP, les documents publics, les déclarations éditeur et ce qui reste inconnu. Leur couverture varie, et cette variation est visible.</p>
+  </section>
+  <section class="shell">
+    <div class="notice"><strong>Périmètre honnête.</strong> Le diagnostic porte sur ces 12 solutions uniquement. L'<a href="/annuaire/">annuaire DGFiP</a> recense séparément 148 plateformes approuvées et 18 opérateurs en attente, sans enrichissement artificiel.</div>
+    <div class="platform-grid section">
+      {platforms.map((platform, index) => <PlatformCard platform={platform} index={index} />)}
+    </div>
+  </section>
+</BaseLayout>

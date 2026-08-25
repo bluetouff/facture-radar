@@ -1,0 +1,34 @@
+---
+import type { Platform } from "../data/types";
+import { documentationCoverage, sourceCount } from "../lib/evidence";
+import EvidenceBadge from "./EvidenceBadge.astro";
+
+interface Props {
+  platform: Platform;
+  index: number;
+}
+
+const { platform, index } = Astro.props;
+const coverage = documentationCoverage(platform);
+const sources = sourceCount(platform);
+---
+
+<article class="platform-card">
+  <div class="card-top">
+    <span class="card-index">{String(index + 1).padStart(2, "0")}</span>
+    <EvidenceBadge status={platform.officialStatus.status} label="DGFiP" />
+  </div>
+  <h3>{platform.displayName}</h3>
+  <p>{platform.summary}</p>
+  <div class="tag-row">
+    {platform.targets.map((target) => <span class="tag">{target}</span>)}
+    <span class="tag">{platform.pricing.value?.kind === "free" ? "socle gratuit" : platform.pricing.value?.kind}</span>
+  </div>
+  <div class="card-metrics">
+    <div><span>Preuves couvertes</span><strong>{coverage} %</strong></div>
+    <div><span>Sources liées</span><strong>{sources}</strong></div>
+  </div>
+  <a class="card-link" href={`/plateformes/${platform.slug}/`}>
+    <span>Ouvrir le dossier</span><span aria-hidden="true">↗</span>
+  </a>
+</article>

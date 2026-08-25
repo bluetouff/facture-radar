@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import directory from "../data/official-directory.json";
+import { normalizePublicHttpUrl } from "../lib/urls.ts";
+
+const approvedEntries = directory.approved.map((entry) => ({ ...entry, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) }));
+const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) }));
+---
+
+<BaseLayout
+  title="Annuaire officiel des plateformes agréées | Facture Radar"
+  description="Snapshot vérifiable des listes DGFiP de plateformes agréées : 148 approuvées et 18 opérateurs encore en attente au 19 août 2026."
+>
+  <section class="shell page-hero">
+    <span class="eyebrow">snapshot DGFiP · {directory.snapshotDate}</span>
+    <h1>L'annuaire officiel, séparé du diagnostic.</h1>
+    <p>Cette page reprend les deux fichiers DGFiP sans attribuer de fonctions commerciales non vérifiées. Seules les 12 fiches enrichies alimentent le moteur de choix.</p>
+  </section>
+  <section class="shell directory-section">
+    <div class="directory-meta">
+      <div><strong>{directory.approved.length}</strong><span>approuvées</span></div>
+      <div><strong>{directory.pending.length}</strong><span>en attente</span></div>
+      <div class="hash"><span>SHA-256 liste approuvée</span><code>{directory.approvedSha256}</code></div>
+      <div class="hash"><span>SHA-256 liste en attente</span><code>{directory.pendingSha256}</code></div>
+    </div>
+    <div class="directory-controls">
+      <label><span>Rechercher</span><input id="directory-search" type="search" placeholder="Nom, ville, pays" /></label>
+      <label><span>Statut</span><select id="directory-status"><option value="all">Toutes</option><option value="approved">Approuvées</option><option value="pending">En attente</option></select></label>
+      <p id="directory-count" aria-live="polite"></p>
+    </div>
+    <div class="directory-list">
+      {approvedEntries.map((entry) => (
+        <article class="directory-row" data-status="approved" data-search={`${entry.name} ${entry.city} ${entry.postalCode}`.toLocaleLowerCase("fr")}>
+          <span class="directory-state approved">Approuvée</span>
+          <div><strong>{entry.name}</strong><small>{entry.city}{entry.postalCode ? ` · ${entry.postalCode}` : ""} · immatriculée le {entry.registeredAt}</small></div>
+          <a href={entry.website} rel="noopener">Site<span aria-hidden="true">↗</span></a>
+        </article>
+      ))}
+      {pendingEntries.map((entry) => (
+        <article class="directory-row" data-status="pending" data-search={`${entry.name} ${entry.city} ${entry.postalCode}`.toLocaleLowerCase("fr")}>
+          <span class="directory-state pending">En attente</span>
+          <div><strong>{entry.name}</strong><small>{entry.city}{entry.postalCode ? ` · ${entry.postalCode}` : ""}</small></div>
+          <a href={entry.website} rel="noopener">Site<span aria-hidden="true">↗</span></a>
+        </article>
+      ))}
+    </div>
+    <p class="source-note">Source : <a href={directory.sourcePage}>DGFiP, liste des plateformes agréées</a>. Le libellé « en attente » désigne ici les opérateurs dont l'immatriculation définitive reste conditionnée à la réussite des tests d'interopérabilité, selon la page officielle.</p>
+  </section>
+  <script is:inline type="module" src="/directory.js"></script>
+</BaseLayout>
+
+<style>
+  .directory-section { display: grid; gap: 1rem; }
+  .directory-meta { display: grid; grid-template-columns: 9rem 9rem 1fr 1fr; gap: 1px; border: 1px solid var(--line); background: var(--line); }
+  .directory-meta > div { padding: 1rem; background: var(--surface); }
+  .directory-meta strong { display: block; color: var(--bright); font-size: 2rem; line-height: 1; }
+  .directory-meta span { color: var(--muted); font: .57rem/1.4 var(--font-mono); text-transform: uppercase; }
+  .directory-meta code { display: block; overflow-wrap: anywhere; margin-top: .35rem; color: var(--signal); font: .53rem/1.45 var(--font-mono); }
+  .directory-controls { display: grid; grid-template-columns: 1fr 15rem auto; gap: 1rem; align-items: end; border: 1px solid var(--line); padding: 1rem; background: var(--surface); }
+  .directory-controls label { display: grid; gap: .4rem; }
+  .directory-controls label span { color: var(--muted); font: .58rem/1 var(--font-mono); text-transform: uppercase; }
+  .directory-controls input, .directory-controls select { min-height: 2.8rem; border: 1px solid var(--line); padding: .65rem; background: var(--surface-2); color: var(--bright); }
+  .directory-controls p { margin: 0 0 .7rem; color: var(--signal); font: .62rem/1 var(--font-mono); }
+  .directory-list { border: 1px solid var(--line); background: var(--surface); }
+  .directory-row { display: grid; grid-template-columns: 7rem minmax(0, 1fr) 4rem; gap: 1rem; align-items: center; border-bottom: 1px solid var(--line); padding: .75rem 1rem; }
+  .directory-row[hidden] { display: none; }
+  .directory-state { font: .56rem/1 var(--font-mono); text-transform: uppercase; }
+  .directory-state.approved { color: var(--signal); }
+  .directory-state.pending { color: var(--amber); }
+  .directory-row > div { display: grid; }
+  .directory-row strong { color: var(--paper); font-size: .8rem; }
+  .directory-row small { color: var(--muted); font: .56rem/1.4 var(--font-mono); }
+  .directory-row a { display: flex; justify-content: space-between; gap: .3rem; color: var(--signal); font: .6rem/1 var(--font-mono); }
+  .source-note { margin-block: 1rem 3rem; color: var(--muted); font-size: .7rem; }
+  .source-note a { color: var(--signal); text-decoration: underline; }
+  @media (max-width: 850px) { .directory-meta { grid-template-columns: 1fr 1fr; } .directory-controls { grid-template-columns: 1fr 12rem; } .directory-controls p { grid-column: 1 / -1; } }
+  @media (max-width: 560px) { .directory-meta, .directory-controls { grid-template-columns: 1fr; } .directory-controls p { grid-column: auto; } .directory-row { grid-template-columns: 1fr auto; } .directory-state { grid-column: 1 / -1; } }
+</style>

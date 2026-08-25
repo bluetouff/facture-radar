@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CompareTool from "../components/CompareTool.astro";
+---
+
+<BaseLayout
+  title="Comparer trois plateformes | Facture Radar"
+  description="Comparaison côte à côte de trois plateformes agréées avec niveau de preuve, prix, dépendances, API, export et inconnues."
+>
+  <section class="shell page-hero">
+    <span class="eyebrow">comparaison · trois dossiers maximum</span>
+    <h1>Comparer sans fabriquer un classement.</h1>
+    <p>Chaque ligne conserve son niveau de preuve. « Non documenté » signale une pièce manquante, jamais une non-conformité présumée.</p>
+  </section>
+  <section class="shell">
+    <CompareTool />
+  </section>
+</BaseLayout>
