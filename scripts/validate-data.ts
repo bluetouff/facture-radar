@@ -3,6 +3,7 @@ import corpusSelectionData from "../src/data/corpus-selection.json" with { type:
 import sourcesData from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-profiles.ts";
+import { directRoutingOptions, directRoutingSourceIds } from "../src/data/direct-routing-options.ts";
 import { INVOICE_RULESET_CHECKED_AT, invoiceVerifierSourceIds } from "../src/lib/invoice-verifier.ts";
 import { platformsSchema, sourcesSchema } from "../src/data/schema.ts";
 import { z } from "zod";
@@ -41,6 +42,16 @@ for (const sourceId of invoiceVerifierSourceIds) {
   if (source.accessedAt > INVOICE_RULESET_CHECKED_AT) {
     throw new Error(`La source ${sourceId} est postérieure aux règles du vérificateur de facture`);
   }
+  referencedSourceIds.add(sourceId);
+}
+
+for (const option of directRoutingOptions) {
+  if (!approvedByName.has(option.officialName)) {
+    throw new Error(`${option.name} est absent de la liste DGFiP approuvée`);
+  }
+}
+for (const sourceId of directRoutingSourceIds) {
+  if (!sourceIds.has(sourceId)) throw new Error(`Source du routage direct inconnue : ${sourceId}`);
   referencedSourceIds.add(sourceId);
 }
 

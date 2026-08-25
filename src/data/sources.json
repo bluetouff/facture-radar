@@ -462,5 +462,45 @@
     "url": "https://fnfe-mpe.org/factur-x/",
     "type": "documentation",
     "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "b2brouter-home-2026",
+    "title": "Plateforme agréée et portail de facturation électronique",
+    "publisher": "B2Brouter",
+    "url": "https://www.b2brouter.net/fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "b2brouter-free-2026",
+    "title": "Logiciel de facturation en ligne et import PDF ou XML",
+    "publisher": "B2Brouter",
+    "url": "https://www.b2brouter.net/fr/facturation-electronique-gratuite/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "b2brouter-facturx-validator-2026",
+    "title": "Validateur Factur-X en ligne",
+    "publisher": "B2Brouter",
+    "url": "https://www.b2brouter.net/fr/factur-x-validator/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "dext-add-documents-2026",
+    "title": "Comment ajouter des documents dans Dext",
+    "publisher": "Dext",
+    "url": "https://help.dext.com/fr/articles/747307-comment-ajouter-des-documents-dans-dext",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "dext-send-electronic-2026",
+    "title": "Comment envoyer des factures électroniques depuis Dext",
+    "publisher": "Dext",
+    "url": "https://help.dext.com/fr/articles/713039-comment-envoyer-des-factures-electroniques-depuis-dext",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
   }
 ]

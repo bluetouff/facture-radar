@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PlatformCard from "../components/PlatformCard.astro";
-import ToolJourney from "../components/ToolJourney.astro";
+import PracticalRouter from "../components/PracticalRouter.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import ProofOrbit from "../components/ProofOrbit.astro";
 import { platforms } from "../data/platforms";
@@ -18,13 +18,13 @@ import directory from "../data/official-directory.json";
     <div class="shell hero">
       <div class="hero-intro">
         <span class="eyebrow">facturation électronique · indépendants et entreprises</span>
-        <h1>Comprenez votre <strong>parcours facture.</strong></h1>
-        <p class="hero-copy">Voyez si votre outil est réellement prêt, quelle plateforme agréée il utilise, ce qu'il reste à faire et contrôlez une facture test sans l'envoyer.</p>
+        <h1>Partez de votre <strong>vraie question.</strong></h1>
+        <p class="hero-copy">Dites ce que vous voulez faire. PA Check cherche le chemin documenté, montre ce qui manque encore et vous donne le test concret à effectuer.</p>
       </div>
-      <div class="hero-verifier"><ToolJourney /></div>
+      <div class="hero-verifier"><PracticalRouter compact /></div>
       <div class="hero-support">
         <div class="hero-guide" aria-label="Les usages de PA Check">
-          <div><span><InterfaceIcon name="invoice" /></span><p><strong>Vous êtes déjà équipé</strong><small>Faites le point sur votre outil</small></p></div>
+          <div><span><InterfaceIcon name="invoice" /></span><p><strong>Vous avez déjà un fichier</strong><small>Trouvez qui peut le transmettre</small></p></div>
           <div><span><InterfaceIcon name="verdict" /></span><p><strong>Vous devez choisir</strong><small>Obtenez jusqu'à trois options</small></p></div>
           <div><span><InterfaceIcon name="invoice" /></span><p><strong>Vous avez une facture test</strong><small>Contrôlez son Factur-X localement</small></p></div>
         </div>

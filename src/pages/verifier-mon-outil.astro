@@ -1,31 +1,44 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PracticalRouter from "../components/PracticalRouter.astro";
 import ToolJourney from "../components/ToolJourney.astro";
 import { journeyProfiles } from "../data/journey-profiles";
 ---
 
 <BaseLayout
-  title="Comprendre mon parcours facture | PA Check"
-  description="Vérifiez votre outil, la plateforme agréée utilisée, votre échéance, les actions restantes et le coût minimum connu."
+  title="Obtenir une réponse pratique sur sa facture électronique | PA Check"
+  description="Partez d'un besoin concret et voyez quelles plateformes agréées documentent réellement le parcours, le canal, le prix et les points encore à tester."
 >
   <section class="shell page-hero verifier-hero">
-    <span class="eyebrow">vous utilisez déjà un logiciel</span>
-    <h1>Voyez où en est <strong>votre parcours facture.</strong></h1>
-    <p>Deux questions suffisent pour comprendre le circuit de vos factures, votre échéance et la prochaine action utile.</p>
+    <span class="eyebrow">une question concrète, une réponse exploitable</span>
+    <h1>Que voulez-vous <strong>faire aujourd'hui&nbsp;?</strong></h1>
+    <p>PA Check part de votre besoin réel. Il ne vous récite pas vos réponses&nbsp;: il identifie les options documentées, les informations encore absentes et le test qui tranche.</p>
   </section>
 
-  <section class="shell verifier-layout">
-    <ToolJourney />
-    <aside>
-      <p class="mono-label">ce que vous obtenez</p>
-      <h2>Une réponse directement utilisable</h2>
+  <section class="shell practical-layout">
+    <PracticalRouter />
+    <aside class="reading-key">
+      <p class="mono-label">comment lire la réponse</p>
+      <h2>Trois niveaux, pas de faux oui.</h2>
       <ol>
-        <li><strong>Votre circuit</strong><span>Outil, plateforme agréée, activation et flux couverts.</span></li>
-        <li><strong>Vos dates et votre budget</strong><span>Les échéances applicables et les montants publics connus.</span></li>
-        <li><strong>Vos prochaines étapes</strong><span>Des actions courtes adaptées à votre situation.</span></li>
+        <li><strong>Établi</strong><span>Une source publique couvre précisément le point.</span></li>
+        <li><strong>À tester</strong><span>Les briques sont documentées, pas leur enchaînement complet.</span></li>
+        <li><strong>Non publié</strong><span>PA Check ne remplit pas le vide à la place de l'éditeur.</span></li>
       </ol>
-      <p class="scope-note">Les {journeyProfiles.length} plateformes étudiées disposent maintenant d'un parcours complet, avec un traitement explicite des tarifs sur devis et des activations qui dépendent d'un projet d'intégration.</p>
+      <p class="scope-note">Le support du format, l'import du fichier et son émission réglementaire sont contrôlés séparément. C'est le détail qui évite les mauvaises surprises.</p>
     </aside>
+  </section>
+
+  <section class="shell section existing-tool" id="verifier-logiciel">
+    <header class="section-head">
+      <div>
+        <p class="mono-label">vous voulez garder votre logiciel</p>
+        <h2>Vérifiez le raccordement annoncé pour votre outil.</h2>
+      </div>
+      <p>Ce second parcours sert à retrouver la PA associée, les fonctions publiées et la manipulation à effectuer dans votre logiciel. Les informations que vous venez de saisir ne sont plus présentées comme une découverte.</p>
+    </header>
+    <ToolJourney />
+    <p class="covered-note">{journeyProfiles.length} logiciels ou plateformes disposent d'un parcours détaillé.</p>
   </section>
 
   <section class="shell section">
@@ -44,21 +57,24 @@ import { journeyProfiles } from "../data/journey-profiles";
   .verifier-hero { max-width: 72rem; }
   .verifier-hero h1 { max-width: 17ch; }
   .verifier-hero h1 strong { color: var(--signal); }
-  .verifier-layout { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 1.2rem; align-items: start; }
-  .verifier-layout aside { position: relative; overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal) 20%, var(--line)); border-radius: 1.2rem; padding: 1.1rem; background: linear-gradient(145deg, var(--signal-soft), #fff 42%); box-shadow: 0 .8rem 2.4rem rgba(41,57,86,.07); }
-  .verifier-layout aside::after { position: absolute; top: -4.5rem; right: -4rem; width: 9rem; height: 9rem; border: 1px solid rgba(64,91,216,.14); border-radius: 50%; box-shadow: 0 0 0 1.4rem rgba(64,91,216,.035); content: ""; }
-  .verifier-layout aside > * { position: relative; z-index: 1; }
-  .verifier-layout aside h2 { margin: .6rem 0 0; color: var(--bright); font-size: 1.3rem; letter-spacing: -.035em; }
-  .verifier-layout ol { display: grid; gap: .8rem; margin: 1.1rem 0 0; padding: 0; list-style: none; counter-reset: verdict; }
-  .verifier-layout li { display: grid; grid-template-columns: 2rem 1fr; gap: .15rem .6rem; border-radius: .72rem; padding: .58rem; background: rgba(255,255,255,.72); counter-increment: verdict; }
-  .verifier-layout li::before { display: grid; grid-row: 1 / 3; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: .5rem; background: var(--signal-soft); color: var(--accent); content: counter(verdict, decimal-leading-zero); font: 750 .6rem/1.4 var(--font-mono); }
-  .verifier-layout li strong { color: var(--paper); font-size: .78rem; }
-  .verifier-layout li span { color: var(--muted); font-size: .69rem; }
-  .scope-note { margin: 1.2rem 0 0; border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: .69rem; }
+  .practical-layout { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 1.2rem; align-items: start; }
+  .reading-key { position: sticky; top: 6rem; overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal) 20%, var(--line)); border-radius: 1.2rem; padding: 1.1rem; background: linear-gradient(145deg, var(--signal-soft), #fff 42%); box-shadow: 0 .8rem 2.4rem rgba(41,57,86,.07); }
+  .reading-key::after { position: absolute; top: -4.5rem; right: -4rem; width: 9rem; height: 9rem; border: 1px solid rgba(64,91,216,.14); border-radius: 50%; box-shadow: 0 0 0 1.4rem rgba(64,91,216,.035); content: ""; }
+  .reading-key > * { position: relative; z-index: 1; }
+  .reading-key h2 { margin: .6rem 0 0; color: var(--bright); font-size: 1.3rem; letter-spacing: -.035em; }
+  .reading-key ol { display: grid; gap: .8rem; margin: 1.1rem 0 0; padding: 0; list-style: none; counter-reset: verdict; }
+  .reading-key li { display: grid; grid-template-columns: 2rem 1fr; gap: .15rem .6rem; border-radius: .72rem; padding: .7rem; background: rgba(255,255,255,.8); counter-increment: verdict; }
+  .reading-key li::before { display: grid; grid-row: 1 / 3; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: .5rem; background: var(--signal-soft); color: var(--accent); content: counter(verdict, decimal-leading-zero); font: 750 .72rem/1.4 var(--font-mono); }
+  .reading-key li strong { color: var(--paper); font-size: .82rem; }
+  .reading-key li span { color: var(--muted); font-size: .76rem; }
+  .scope-note { margin: 1.2rem 0 0; border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: .76rem; }
+  .existing-tool { max-width: 72rem; }
+  .existing-tool .section-head { margin-bottom: 1.2rem; }
+  .covered-note { margin: .7rem 0 0; color: var(--muted); font-size: .76rem; }
   .after-check { display: grid; grid-template-columns: minmax(0, .8fr) minmax(16rem, 1fr) auto; gap: 2rem; align-items: center; border: 1px solid var(--line); border-radius: 1.1rem; padding: 1.4rem; background: rgba(255,255,255,.72); }
   .after-check h2 { max-width: 15ch; margin: .5rem 0 0; color: var(--bright); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: -.04em; }
   .after-check > p { color: var(--muted); }
   .after-check .button { margin: 0; white-space: nowrap; }
-  @media (max-width: 850px) { .verifier-layout, .after-check { grid-template-columns: 1fr; } .verifier-layout aside ol { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 620px) { .verifier-layout aside ol { grid-template-columns: 1fr; } }
+  @media (max-width: 850px) { .practical-layout, .after-check { grid-template-columns: 1fr; } .reading-key { position: static; } .reading-key ol { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 620px) { .reading-key ol { grid-template-columns: 1fr; } }
 </style>

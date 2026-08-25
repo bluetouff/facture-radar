@@ -202,11 +202,6 @@ export function buildInvoiceJourney(platforms: Platform[], input: JourneyInput):
     : missingCore.length > 0
       ? `Les informations publiques ne permettent pas encore de confirmer ${missingPhrases} pour toutes les entreprises.`
       : "La réception, l'émission et l'e-reporting sont documentés.";
-  const activationSummary = input.activation === "yes"
-    ? "Vous indiquez que la plateforme est active pour votre entreprise."
-    : input.activation === "no"
-      ? "L'activation pour votre entreprise reste à effectuer."
-      : "Son activation effective pour votre entreprise reste à vérifier.";
   const activationValue = input.activation === "yes"
     ? profile.activation.yesValue
     : input.activation === "no"
@@ -226,7 +221,7 @@ export function buildInvoiceJourney(platforms: Platform[], input: JourneyInput):
     activationQuestion: profile.activation.question,
     status,
     headline,
-    summary: `${coreSummary} ${activationSummary}`,
+    summary: coreSummary,
     nodes: [
       {
         label: "Votre outil",
