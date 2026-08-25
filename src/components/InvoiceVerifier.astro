@@ -297,7 +297,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
     if (!currentAnalysis) return;
     const analysis = currentAnalysis;
     const report = [
-      `PA Check — ${analysis.headline}`,
+      `PA Check : ${analysis.headline}`,
       analysis.summary,
       `Format : ${analysis.metadata.container === "pdf" ? "PDF Factur-X" : "XML CII"}`,
       `Profil : ${analysis.metadata.profile ?? "non trouvé"}`,
@@ -336,7 +336,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
   .drop-icon :global(svg) { width: 1.8rem; height: 1.8rem; }
   .drop-copy { display: grid; }
   .drop-copy strong { color: var(--bright); font-size: 1.05rem; }
-  .drop-copy small { margin-top: .22rem; color: var(--muted); font-size: .74rem; }
+  .drop-copy small { margin-top: .22rem; color: var(--muted); font-size: .8rem; }
   .drop-action { border-radius: .7rem; padding: .72rem .85rem; background: var(--signal); color: #fff; font-size: .7rem; font-weight: 730; }
   .privacy-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: .8rem; }
   .privacy-strip > span { display: flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .66rem; }
@@ -345,7 +345,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
   .verifier-progress { display: flex; gap: 1rem; align-items: center; min-height: 13rem; justify-content: center; padding: 2rem; }
   .verifier-progress > div { display: grid; }
   .verifier-progress strong { color: var(--bright); }
-  .verifier-progress small { color: var(--muted); font-size: .72rem; }
+  .verifier-progress small { color: var(--muted); font-size: .78rem; }
   .progress-orbit { width: 2.5rem; height: 2.5rem; border: 3px solid var(--signal-soft); border-top-color: var(--signal); border-radius: 50%; animation: spin .8s linear infinite; }
   .verifier-result { padding: clamp(1rem, 3.5vw, 2rem); }
   .result-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .9rem; align-items: center; }
@@ -377,13 +377,13 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
   .check-symbol { display: grid; place-items: center; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: var(--success-soft); color: var(--success); font-size: .65rem; font-weight: 800; }
   .check-list :global(li[data-status="warning"] .check-symbol) { background: var(--amber-soft); color: var(--amber); }
   .check-list :global(li[data-status="fail"] .check-symbol) { background: var(--danger-soft); color: var(--danger); }
-  .check-list :global(strong) { color: var(--bright); font-size: .71rem; }
+  .check-list :global(strong) { color: var(--bright); font-size: .78rem; }
   .check-list :global(small) { margin-top: .08rem; color: var(--muted); font-size: .66rem; }
   .invoice-actions { counter-reset: invoice-action; }
   .invoice-actions :global(li) { display: grid; grid-template-columns: auto 1fr; gap: .55rem; border-radius: .65rem; padding: .65rem; background: var(--surface); counter-increment: invoice-action; }
   .invoice-actions :global(li)::before { display: grid; place-items: center; width: 1.55rem; height: 1.55rem; border-radius: 50%; background: var(--bright); color: #fff; content: counter(invoice-action); font-size: .62rem; font-weight: 780; }
   .invoice-actions :global(li > span) { display: grid; }
-  .invoice-actions :global(strong) { color: var(--bright); font-size: .72rem; }
+  .invoice-actions :global(strong) { color: var(--bright); font-size: .78rem; }
   .invoice-actions :global(small) { margin-top: .12rem; color: var(--muted); font-size: .64rem; }
   .action-limit { margin: .65rem 0 0; color: var(--muted); font-size: .64rem; }
   .result-tools { display: flex; flex-wrap: wrap; gap: .55rem; align-items: center; margin-top: 1rem; }

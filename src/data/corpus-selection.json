@@ -112,24 +112,82 @@
       "reach": "Plus d'un milliard de flux annuels et deux millions d'entreprises connectées annoncés",
       "reachSourceIds": ["cegedim-annual-2026"],
       "reason": "Acteur historique des échanges B2B avec une forte volumétrie et une couverture internationale."
+    },
+    {
+      "slug": "axonaut",
+      "segment": "tpe-pme",
+      "reach": "189 000 utilisateurs annoncés par Axonaut",
+      "reachSourceIds": ["axonaut-home-2026"],
+      "reason": "Suite de gestion très visible auprès des petites entreprises, avec PA, API et portail comptable documentés."
+    },
+    {
+      "slug": "shine",
+      "segment": "tpe-pme",
+      "reach": "Offre gratuite utilisable avec ou sans compte professionnel",
+      "reachSourceIds": ["shine-pa-2026"],
+      "reason": "Cas d'usage déterminant pour les indépendants qui veulent une PA gratuite sans changer de banque."
+    },
+    {
+      "slug": "macompta",
+      "segment": "tpe-pme",
+      "reach": "PA gratuite, française, ouverte aux entreprises qui gardent leur outil actuel",
+      "reachSourceIds": ["macompta-pa-2026"],
+      "reason": "Offre autonome pertinente pour les petites structures, avec hébergement français et ISO 27001 documentés."
+    },
+    {
+      "slug": "odoo",
+      "segment": "cabinet-et-erp",
+      "reach": "15 millions d'utilisateurs annoncés par Odoo",
+      "reachSourceIds": ["odoo-invoicing-2026"],
+      "reason": "Écosystème ERP international majeur et application de facturation électronique gratuite."
+    },
+    {
+      "slug": "jefacture",
+      "segment": "cabinet-et-erp",
+      "reach": "Plus de 4 500 cabinets annoncés dans le guide de la plateforme",
+      "reachSourceIds": ["jefacture-cabinet-2026"],
+      "reason": "Écosystème de l'Ordre des experts-comptables, tarification par volume et documentation opérationnelle détaillée."
+    },
+    {
+      "slug": "fulll",
+      "segment": "cabinet-et-erp",
+      "reach": "1 400 cabinets et 200 000 entreprises annoncés par fulll",
+      "reachSourceIds": ["fulll-home-2026"],
+      "reason": "Parcours de transition distinctif permettant au cabinet de conserver temporairement son outil de production."
+    },
+    {
+      "slug": "kolecto",
+      "segment": "tpe-pme",
+      "reach": "Offre destinée aux créateurs, indépendants, TPE, PME et professions réglementées",
+      "reachSourceIds": ["kolecto-scale-2026"],
+      "reason": "Parcours très concret pour les petites entreprises, avec une contrainte de synchronisation bancaire explicitement documentée."
+    },
+    {
+      "slug": "yooz",
+      "segment": "eti-et-grands-comptes",
+      "reach": "400 000 sociétés et plus de 300 millions de factures traitées annoncées par Yooz",
+      "reachSourceIds": ["yooz-home-2026"],
+      "reason": "Acteur documenté de l'automatisation achats-ventes, avec API, sécurité et connecteurs ERP publiés."
+    },
+    {
+      "slug": "doxallia",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Capacité annoncée de 300 millions de factures par an",
+      "reachSourceIds": ["doxallia-scale-2026"],
+      "reason": "Hub souverain du groupe Crédit Agricole destiné aux grands volumes, éditeurs et opérateurs."
+    },
+    {
+      "slug": "seres",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Acteur de la dématérialisation des factures depuis 1994",
+      "reachSourceIds": ["seres-p2p-2026"],
+      "reason": "Couverture des flux ERP et EDI, des cycles achats et ventes et de l'archivage à valeur probatoire."
     }
   ],
   "replaced": [
     {
-      "slug": "axonaut",
-      "reason": "Informations utiles. Les acteurs retenus présentent une portée plus large auprès des cabinets."
-    },
-    {
       "slug": "dougs",
       "reason": "Offre bien identifiée dont la portée est plus étroite que les écosystèmes comptables retenus."
-    },
-    {
-      "slug": "macompta",
-      "reason": "Acteur pertinent dont l'offre couvre moins de situations dans la sélection actuelle."
-    },
-    {
-      "slug": "shine",
-      "reason": "Offre utile pour les TPE. Les acteurs déjà retenus couvrent le même besoin avec une portée plus large."
     }
   ]
 }

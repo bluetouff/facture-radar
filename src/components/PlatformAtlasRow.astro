@@ -1,0 +1,99 @@
+---
+import type { Platform } from "../data/types";
+import { sourceCount } from "../lib/evidence";
+import InterfaceIcon from "./InterfaceIcon.astro";
+
+interface Props {
+  platform: Platform;
+  index: number;
+}
+
+const { platform, index } = Astro.props;
+const targets = {
+  micro: "indépendants",
+  tpe: "TPE",
+  pme: "PME",
+  eti: "ETI",
+  ge: "grands comptes",
+} as const;
+
+const pricing = platform.pricing.value;
+const priceSignal = pricing?.kind === "free"
+  ? "Accès gratuit documenté"
+  : pricing?.kind === "included"
+    ? "PA incluse dans une offre"
+    : pricing?.monthlyFrom !== null && pricing?.monthlyFrom !== undefined
+      ? `Dès ${pricing.monthlyFrom} € HT / mois`
+      : pricing?.kind === "quote"
+        ? "Budget sur devis"
+        : "Budget à confirmer";
+
+const accessSignal = platform.bankAccountRequired.value === true
+  ? "Connexion bancaire requise"
+  : platform.bankAccountRequired.value === false
+    ? "Compte pro non requis"
+    : "Prérequis bancaire à confirmer";
+
+const workflowSignal = platform.publicApi.value?.available
+  ? "API publique documentée"
+  : platform.accountantAccess.value === true
+    ? "Accès comptable documenté"
+    : `${platform.importantUnknowns.length} points à confirmer`;
+---
+
+<article class={`atlas-entry tone-${index % 5}`}>
+  <a class="atlas-main" href={`/plateformes/${platform.slug}/`}>
+    <span class="atlas-index" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+    <div class="atlas-copy">
+      <div class="atlas-title">
+        <h3>{platform.displayName}</h3>
+        <span>Liste DGFiP</span>
+      </div>
+      <p>{platform.summary}</p>
+      <div class="atlas-audiences">
+        {platform.targets.map((target) => <span>{targets[target]}</span>)}
+      </div>
+    </div>
+    <div class="atlas-signals" aria-label="Repères de choix">
+      <span><InterfaceIcon name="check" />{priceSignal}</span>
+      <span class:list={{ warning: platform.bankAccountRequired.value === true }}><InterfaceIcon name="route" />{accessSignal}</span>
+      <span><InterfaceIcon name="layers" />{workflowSignal}</span>
+    </div>
+    <div class="atlas-open">
+      <span><strong>{sourceCount(platform)}</strong> sources</span>
+      <InterfaceIcon name="arrow" />
+    </div>
+  </a>
+</article>
+
+<style>
+  .atlas-entry { --entry-tone: #405bd8; position: relative; border-top: 1px solid var(--line); background: rgba(255,255,255,.46); }
+  .atlas-entry:last-child { border-bottom: 1px solid var(--line); }
+  .atlas-entry.tone-1 { --entry-tone: #7557d6; }
+  .atlas-entry.tone-2 { --entry-tone: #178b77; }
+  .atlas-entry.tone-3 { --entry-tone: #b15b40; }
+  .atlas-entry.tone-4 { --entry-tone: #2f6fa5; }
+  .atlas-entry::before { position: absolute; inset: 0 auto 0 0; width: 3px; scale: 1 0; transform-origin: center; background: var(--entry-tone); content: ""; transition: scale 180ms ease; }
+  .atlas-entry:hover::before { scale: 1; }
+  .atlas-main { display: grid; grid-template-columns: 3.4rem minmax(17rem,1.2fr) minmax(17rem,.85fr) 4rem; gap: 1.25rem; align-items: center; padding: 1.15rem 1rem 1.15rem 1.2rem; color: inherit; transition: background 180ms ease; }
+  .atlas-main:hover { background: #fff; color: inherit; }
+  .atlas-index { align-self: start; padding-top: .12rem; color: var(--entry-tone); font: 690 .75rem/1 var(--font-mono); letter-spacing: .06em; }
+  .atlas-copy { min-width: 0; }
+  .atlas-title { display: flex; flex-wrap: wrap; gap: .55rem; align-items: center; }
+  .atlas-title h3 { margin: 0; color: var(--bright); font-size: 1.1rem; font-weight: 530; letter-spacing: -.025em; }
+  .atlas-title > span { border: 1px solid color-mix(in srgb,var(--success) 25%,var(--line)); border-radius: 999px; padding: .2rem .42rem; background: var(--success-soft); color: var(--success); font-size: .75rem; font-weight: 680; }
+  .atlas-copy > p { max-width: 42rem; margin: .35rem 0 0; color: var(--muted); font-size: .84rem; line-height: 1.55; }
+  .atlas-audiences { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .55rem; }
+  .atlas-audiences span { color: var(--entry-tone); font-size: .75rem; font-weight: 670; }
+  .atlas-audiences span + span::before { margin-right: .35rem; color: var(--line-strong); content: "·"; }
+  .atlas-signals { display: grid; gap: .36rem; }
+  .atlas-signals span { display: flex; gap: .45rem; align-items: center; color: var(--paper); font-size: .76rem; font-weight: 590; }
+  .atlas-signals span.warning { color: var(--amber); }
+  .atlas-signals :global(svg) { flex: 0 0 auto; width: .92rem; height: .92rem; color: var(--entry-tone); }
+  .atlas-open { display: grid; justify-items: end; gap: .45rem; color: var(--entry-tone); }
+  .atlas-open span { color: var(--muted); font-size: .75rem; white-space: nowrap; }
+  .atlas-open strong { color: var(--bright); font-size: .8rem; }
+  .atlas-open :global(svg) { width: 1.05rem; height: 1.05rem; }
+  @media (max-width: 900px) { .atlas-main { grid-template-columns: 2.5rem minmax(0,1fr) auto; } .atlas-signals { grid-column: 2 / -1; grid-template-columns: repeat(3,minmax(0,1fr)); } }
+  @media (max-width: 620px) { .atlas-main { grid-template-columns: 2rem minmax(0,1fr); gap: .8rem; padding: 1rem .75rem; } .atlas-signals { grid-column: 2; grid-template-columns: 1fr; } .atlas-open { grid-column: 2; display: flex; justify-content: space-between; align-items: center; justify-items: initial; } .atlas-title h3 { font-size: 1.04rem; } .atlas-copy > p { font-size: .82rem; } }
+</style>

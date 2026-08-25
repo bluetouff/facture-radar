@@ -502,5 +502,221 @@
     "url": "https://help.dext.com/fr/articles/713039-comment-envoyer-des-factures-electroniques-depuis-dext",
     "type": "documentation",
     "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "axonaut-pricing-2026",
+    "title": "Tarifs Axonaut, facturation électronique incluse et sans engagement",
+    "publisher": "Axonaut",
+    "url": "https://axonaut.com/content/prix",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "axonaut-portal-2026",
+    "title": "Portail comptable Axonaut",
+    "publisher": "Axonaut",
+    "url": "https://axonaut.com/portail-comptable",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "axonaut-home-2026",
+    "title": "Logiciel de gestion et plateforme agréée Axonaut",
+    "publisher": "Axonaut",
+    "url": "https://axonaut.com/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "shine-pa-2026",
+    "title": "Facturation électronique gratuite avec ou sans compte professionnel",
+    "publisher": "Shine",
+    "url": "https://www.shine.fr/facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "shine-pricing-2026",
+    "title": "Tarifs de Shine Facture",
+    "publisher": "Shine",
+    "url": "https://www.shine.fr/tarifs-shine-facture/",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "shine-activation-2026",
+    "title": "Activer Shine comme plateforme agréée",
+    "publisher": "Shine Facture",
+    "url": "https://help.shine.fr/shine-facture/fr/articles/15271632-shine-facture-est-une-plateforme-agreee",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "macompta-pa-2026",
+    "title": "Inscription à la plateforme agréée macompta.fr",
+    "publisher": "macompta.fr",
+    "url": "https://subscribe.macompta.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "macompta-security-2026",
+    "title": "Certifications et habilitations de macompta.fr",
+    "publisher": "macompta.fr",
+    "url": "https://help.macompta.fr/fr/articles/124847-quelles-sont-les-certifications-et-habilitations-de-macompta-fr",
+    "type": "security",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "odoo-pa-2026",
+    "title": "Odoo officiellement plateforme agréée en France",
+    "publisher": "Odoo",
+    "url": "https://www.odoo.com/fr_FR/blog/actualites-dodoo-5/odoo-plateforme-agreee-pa-immatriculee-en-france-pour-la-facturation-electronique-2193",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "odoo-invoicing-2026",
+    "title": "Application de facturation et facturation électronique Odoo",
+    "publisher": "Odoo",
+    "url": "https://www.odoo.com/fr_FR/app/invoicing",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "jefacture-pricing-2026",
+    "title": "Tarifs et fonctions de jefacture.com",
+    "publisher": "jefacture.com",
+    "url": "https://support.jefacture.com/fr/articles/380881-decouvrir-les-tarifs-jefacture-com",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "jefacture-cabinet-2026",
+    "title": "Guide d'utilisation de l'espace Cabinet jefacture.com",
+    "publisher": "jefacture.com",
+    "url": "https://support.jefacture.com/fr/articles/742034-guide-d-utilisation-cabinet",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "jefacture-api-2026",
+    "title": "Autorisations des applications externes et API",
+    "publisher": "jefacture.com",
+    "url": "https://support.jefacture.com/fr/articles/676479-gerer-les-autorisations-d-applications-externes",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "fulll-pa-2026",
+    "title": "Conformité Flash et plateforme agréée fulll",
+    "publisher": "fulll",
+    "url": "https://www.fulll.fr/facturation-electronique/conformite-flash",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "fulll-home-2026",
+    "title": "Suite fulll pour les cabinets comptables",
+    "publisher": "fulll",
+    "url": "https://www.fulll.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "kolecto-pa-2026",
+    "title": "Plateforme agréée incluse dans les forfaits Kolecto",
+    "publisher": "Kolecto",
+    "url": "https://www.kolecto.fr/produit/facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "kolecto-activation-2026",
+    "title": "Enregistrement de Kolecto comme plateforme agréée",
+    "publisher": "Kolecto",
+    "url": "https://support.kolecto.fr/fr/articles/503058-plateforme-agreee-de-kolecto",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "kolecto-scale-2026",
+    "title": "Kolecto pour les créateurs, indépendants, TPE et PME",
+    "publisher": "Kolecto",
+    "url": "https://www.kolecto.fr/produit/facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "yooz-home-2026",
+    "title": "Automatisation des achats et ventes avec Yooz",
+    "publisher": "Yooz",
+    "url": "https://www.getyooz.com/fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "yooz-pricing-2026",
+    "title": "Tarifs Yooz Business Edition",
+    "publisher": "Yooz",
+    "url": "https://www.getyooz.com/fr/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "yooz-security-2026",
+    "title": "Cybersécurité et certification ISO 27001 de Yooz",
+    "publisher": "Yooz",
+    "url": "https://www.getyooz.com/fr/blog/cybersecurite-et-facturation-electronique",
+    "type": "security",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "yooz-pa-2026",
+    "title": "Rôle et couverture de la plateforme agréée Yooz",
+    "publisher": "Yooz",
+    "url": "https://www.getyooz.com/fr/plateforme-pdp",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "doxallia-pa-2026",
+    "title": "Invox-IA, plateforme agréée de Doxallia",
+    "publisher": "Doxallia",
+    "url": "https://invox-ia.doxallia.com/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "doxallia-registration-2026",
+    "title": "Immatriculation définitive d'Invox-IA par la DGFiP",
+    "publisher": "Doxallia",
+    "url": "https://www.doxallia.com/doxallia-obtient-limmatriculation-definitive-de-sa-plateforme-agreee-invox-ia-par-la-dgfip/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "doxallia-scale-2026",
+    "title": "Lancement d'Invox-IA et capacité annoncée",
+    "publisher": "Doxallia",
+    "url": "https://www.doxallia.com/doxallia-devoile-invox-ia-une-solution-intelligente-et-conforme-pour-reussir-la-facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "seres-pa-2026",
+    "title": "Plateforme e-Facture PA de Seres",
+    "publisher": "Seres",
+    "url": "https://seres.fr/fr/facture-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "seres-p2p-2026",
+    "title": "Traitement des factures fournisseurs avec e-Facture PA",
+    "publisher": "Seres",
+    "url": "https://seres.fr/fr/e-factures-fournisseurs/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
   }
 ]

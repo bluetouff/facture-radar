@@ -9,24 +9,38 @@ import { journeyProfiles } from "../data/journey-profiles";
   title="Obtenir une réponse pratique sur sa facture électronique | PA Check"
   description="Partez d'un besoin concret et voyez quelles plateformes agréées documentent réellement le parcours, le canal, le prix et les points encore à tester."
 >
-  <section class="shell page-hero verifier-hero">
-    <span class="eyebrow">une question concrète, une réponse exploitable</span>
-    <h1>Que voulez-vous <strong>faire aujourd'hui&nbsp;?</strong></h1>
-    <p>PA Check part de votre besoin réel. Il ne vous récite pas vos réponses&nbsp;: il identifie les options documentées, les informations encore absentes et le test qui tranche.</p>
+  <section class="decision-hero">
+    <div class="shell decision-hero-layout">
+      <div class="decision-copy">
+        <p class="decision-kicker"><span>01</span> question pratique</p>
+        <h1>Quel est votre point de départ&nbsp;?</h1>
+        <p>Choisissez votre situation. PA Check cherche la réponse publiée, montre ce qui manque et vous donne le contrôle utile à faire ensuite.</p>
+      </div>
+      <figure class="decision-figure" aria-label="Un parcours en trois étapes : votre situation, les informations publiées, puis l'action utile">
+        <svg viewBox="0 0 560 210" role="img" aria-hidden="true">
+          <path class="figure-path ghost" d="M54 111C124 37 200 34 270 100S417 177 510 82" />
+          <path class="figure-path" d="M54 111C124 37 200 34 270 100S417 177 510 82" />
+          <g class="figure-stop first"><circle cx="54" cy="111" r="26" /><path d="M44 111h20M54 101v20" /><text x="54" y="160">votre situation</text></g>
+          <g class="figure-stop second"><circle cx="270" cy="100" r="26" /><path d="m260 100 7 7 14-16" /><text x="270" y="149">information publiée</text></g>
+          <g class="figure-stop third"><circle cx="510" cy="82" r="26" /><path d="M500 88V76h12M508 72l8 4-8 4" /><text x="510" y="131">action utile</text></g>
+          <text class="figure-index" x="23" y="33">PA CHECK · PARCOURS 01</text>
+        </svg>
+        <figcaption>Une réponse courte, son niveau de certitude et le test qui permet d'avancer.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="shell practical-layout">
-    <PracticalRouter />
     <aside class="reading-key">
-      <p class="mono-label">comment lire la réponse</p>
-      <h2>Trois niveaux, pas de faux oui.</h2>
+      <div class="reading-intro"><p>Comment lire la réponse</p><h2>Trois niveaux de certitude.</h2></div>
       <ol>
         <li><strong>Établi</strong><span>Une source publique couvre précisément le point.</span></li>
         <li><strong>À tester</strong><span>Les briques sont documentées, pas leur enchaînement complet.</span></li>
-        <li><strong>Non publié</strong><span>PA Check ne remplit pas le vide à la place de l'éditeur.</span></li>
+        <li><strong>Non publié</strong><span>L'information reste à demander à l'éditeur.</span></li>
       </ol>
-      <p class="scope-note">Le support du format, l'import du fichier et son émission réglementaire sont contrôlés séparément. C'est le détail qui évite les mauvaises surprises.</p>
+      <p class="scope-note">Format, import et émission sont vérifiés séparément.</p>
     </aside>
+    <div class="router-slot"><PracticalRouter /></div>
   </section>
 
   <section class="shell section existing-tool" id="verifier-logiciel">
@@ -54,27 +68,45 @@ import { journeyProfiles } from "../data/journey-profiles";
 </BaseLayout>
 
 <style>
-  .verifier-hero { max-width: 72rem; }
-  .verifier-hero h1 { max-width: 17ch; }
-  .verifier-hero h1 strong { color: var(--signal); }
-  .practical-layout { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 1.2rem; align-items: start; }
-  .reading-key { position: sticky; top: 6rem; overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal) 20%, var(--line)); border-radius: 1.2rem; padding: 1.1rem; background: linear-gradient(145deg, var(--signal-soft), #fff 42%); box-shadow: 0 .8rem 2.4rem rgba(41,57,86,.07); }
-  .reading-key::after { position: absolute; top: -4.5rem; right: -4rem; width: 9rem; height: 9rem; border: 1px solid rgba(64,91,216,.14); border-radius: 50%; box-shadow: 0 0 0 1.4rem rgba(64,91,216,.035); content: ""; }
-  .reading-key > * { position: relative; z-index: 1; }
-  .reading-key h2 { margin: .6rem 0 0; color: var(--bright); font-size: 1.3rem; letter-spacing: -.035em; }
-  .reading-key ol { display: grid; gap: .8rem; margin: 1.1rem 0 0; padding: 0; list-style: none; counter-reset: verdict; }
-  .reading-key li { display: grid; grid-template-columns: 2rem 1fr; gap: .15rem .6rem; border-radius: .72rem; padding: .7rem; background: rgba(255,255,255,.8); counter-increment: verdict; }
-  .reading-key li::before { display: grid; grid-row: 1 / 3; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: .5rem; background: var(--signal-soft); color: var(--accent); content: counter(verdict, decimal-leading-zero); font: 750 .72rem/1.4 var(--font-mono); }
-  .reading-key li strong { color: var(--paper); font-size: .82rem; }
-  .reading-key li span { color: var(--muted); font-size: .76rem; }
-  .scope-note { margin: 1.2rem 0 0; border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: .76rem; }
+  .decision-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); padding-block: clamp(2rem,4vw,3.25rem) clamp(2.8rem,5vw,4rem); background: linear-gradient(112deg,rgba(255,255,255,.92),rgba(238,242,255,.64) 62%,rgba(233,247,241,.42)); }
+  .decision-hero::before { position: absolute; top: -11rem; right: -9rem; width: 28rem; height: 28rem; border: 1px solid rgba(64,91,216,.09); border-radius: 50%; box-shadow: 0 0 0 4rem rgba(64,91,216,.025),0 0 0 8rem rgba(22,128,101,.018); content: ""; }
+  .decision-hero-layout { position: relative; display: grid; grid-template-columns: minmax(0,.8fr) minmax(28rem,1.2fr); gap: clamp(2.5rem,7vw,6rem); align-items: center; }
+  .decision-kicker { display: flex; gap: .65rem; align-items: center; margin: 0; color: var(--signal); font: 680 .76rem/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; }
+  .decision-kicker span { display: grid; place-items: center; width: 2rem; height: 2rem; border: 1px solid color-mix(in srgb,var(--signal) 22%,var(--line)); border-radius: 50%; background: rgba(255,255,255,.78); }
+  .decision-copy h1 { max-width: 14ch; margin: .9rem 0 0; color: var(--bright); font-size: clamp(2.15rem,4vw,3.35rem); font-weight: 480; line-height: 1.04; letter-spacing: -.048em; }
+  .decision-copy > p:last-child { max-width: 42rem; margin: 1rem 0 0; color: var(--paper); font-size: 1rem; line-height: 1.65; }
+  .decision-figure { min-width: 0; margin: 0; border-left: 1px solid var(--line); padding-left: clamp(1.5rem,4vw,3rem); }
+  .decision-figure svg { width: 100%; height: auto; }
+  .figure-path { fill: none; stroke: var(--signal); stroke-width: 1.5; stroke-linecap: round; }
+  .figure-path.ghost { stroke: rgba(64,91,216,.08); stroke-width: 18; }
+  .figure-stop circle { fill: rgba(255,255,255,.92); stroke: var(--line-strong); }
+  .figure-stop path { fill: none; stroke: var(--bright); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .figure-stop.second circle { stroke: rgba(22,128,101,.42); }
+  .figure-stop.second path { stroke: var(--success); }
+  .figure-stop.third circle { stroke: rgba(117,87,214,.4); }
+  .figure-stop.third path { stroke: var(--accent); }
+  .figure-stop text { fill: var(--paper); font: 560 12px var(--font-sans); text-anchor: middle; }
+  .figure-index { fill: var(--muted); font: 600 12px var(--font-mono); letter-spacing: .06em; }
+  .decision-figure figcaption { margin-top: -.3rem; color: var(--muted); font-size: .78rem; text-align: right; }
+  .practical-layout { position: relative; z-index: 2; display: grid; gap: .8rem; max-width: 78rem; margin-top: -1.5rem; }
+  .router-slot { min-width: 0; }
+  .reading-key { display: grid; grid-template-columns: minmax(12rem,.75fr) minmax(0,2.2fr) auto; gap: 1.2rem; align-items: center; border: 1px solid var(--line); border-radius: 1rem; padding: .9rem 1rem; background: rgba(255,255,255,.96); box-shadow: 0 .8rem 2.4rem rgba(41,57,86,.07); }
+  .reading-intro p { margin: 0; color: var(--signal); font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+  .reading-key h2 { margin: .18rem 0 0; color: var(--bright); font-size: 1.02rem; font-weight: 520; letter-spacing: -.025em; }
+  .reading-key ol { display: grid; grid-template-columns: repeat(3,1fr); gap: .8rem; margin: 0; padding: 0; list-style: none; counter-reset: verdict; }
+  .reading-key li { display: grid; grid-template-columns: auto 1fr; gap: .1rem .55rem; min-width: 0; counter-increment: verdict; }
+  .reading-key li::before { display: grid; grid-row: 1 / 3; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--signal-soft); color: var(--accent); content: counter(verdict, decimal-leading-zero); font: 700 .75rem/1 var(--font-mono); }
+  .reading-key li strong { color: var(--paper); font-size: .8rem; }
+  .reading-key li span { color: var(--muted); font-size: .76rem; line-height: 1.4; }
+  .scope-note { max-width: 12rem; margin: 0; border-left: 1px solid var(--line); padding-left: 1rem; color: var(--muted); font-size: .76rem; }
   .existing-tool { max-width: 72rem; }
   .existing-tool .section-head { margin-bottom: 1.2rem; }
   .covered-note { margin: .7rem 0 0; color: var(--muted); font-size: .76rem; }
   .after-check { display: grid; grid-template-columns: minmax(0, .8fr) minmax(16rem, 1fr) auto; gap: 2rem; align-items: center; border: 1px solid var(--line); border-radius: 1.1rem; padding: 1.4rem; background: rgba(255,255,255,.72); }
-  .after-check h2 { max-width: 15ch; margin: .5rem 0 0; color: var(--bright); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: -.04em; }
+  .after-check h2 { max-width: 15ch; margin: .5rem 0 0; color: var(--bright); font-size: clamp(1.45rem, 2.6vw, 2rem); font-weight: 500; line-height: 1.08; letter-spacing: -.035em; }
   .after-check > p { color: var(--muted); }
   .after-check .button { margin: 0; white-space: nowrap; }
-  @media (max-width: 850px) { .practical-layout, .after-check { grid-template-columns: 1fr; } .reading-key { position: static; } .reading-key ol { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 620px) { .reading-key ol { grid-template-columns: 1fr; } }
+  @media (max-width: 950px) { .decision-hero-layout { grid-template-columns: 1fr; gap: 1.5rem; } .decision-copy h1 { max-width: 18ch; } .decision-figure { border-top: 1px solid var(--line); border-left: 0; padding: 1rem 0 0; } .reading-key { grid-template-columns: 1fr; } .scope-note { max-width: none; border-top: 1px solid var(--line); border-left: 0; padding: .7rem 0 0; } }
+  @media (max-width: 850px) { .after-check { grid-template-columns: 1fr; } .reading-key ol { grid-template-columns: repeat(3,1fr); } }
+  @media (max-width: 620px) { .decision-hero { padding-top: 1.6rem; } .decision-copy h1 { font-size: 2.25rem; } .decision-figure { display: none; } .reading-key { order: 2; } .reading-key ol { grid-template-columns: 1fr; } .practical-layout { margin-top: -1rem; } .router-slot { order: 1; } }
 </style>

@@ -5,8 +5,8 @@ import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-pr
 import { platforms } from "../src/data/platforms.ts";
 import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 
-test("les quinze plateformes étudiées ont un parcours détaillé", () => {
-  assert.equal(journeyProfiles.length, 15);
+test("les vingt-cinq plateformes étudiées ont un parcours détaillé", () => {
+  assert.equal(journeyProfiles.length, 25);
   assert.equal(findJourneyProfile("Tiime"), "tiime");
   assert.equal(findJourneyProfile("Sage50"), "sage-50");
   assert.equal(findJourneyProfile("Abby"), "abby");
@@ -22,6 +22,16 @@ test("les quinze plateformes étudiées ont un parcours détaillé", () => {
   assert.equal(findJourneyProfile("Generix"), "generix");
   assert.equal(findJourneyProfile("Esker"), "esker");
   assert.equal(findJourneyProfile("SY business"), "cegedim");
+  assert.equal(findJourneyProfile("Axonaut"), "axonaut");
+  assert.equal(findJourneyProfile("Shine Facture"), "shine");
+  assert.equal(findJourneyProfile("macompta.fr"), "macompta");
+  assert.equal(findJourneyProfile("Odoo Facturation"), "odoo");
+  assert.equal(findJourneyProfile("jefacture.com"), "jefacture");
+  assert.equal(findJourneyProfile("fulll"), "fulll");
+  assert.equal(findJourneyProfile("Kolecto"), "kolecto");
+  assert.equal(findJourneyProfile("Yooz"), "yooz");
+  assert.equal(findJourneyProfile("Invox-IA"), "doxallia");
+  assert.equal(findJourneyProfile("e-Facture PA"), "seres");
   assert.equal(findJourneyProfile("Sage"), null);
   assert.equal(findJourneyProfile("Tiime Expert"), null);
   assert.equal(findJourneyProfile("Sage 100"), null);

@@ -1,22 +1,160 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PlatformCard from "../../components/PlatformCard.astro";
+import InterfaceIcon from "../../components/InterfaceIcon.astro";
+import PlatformAtlasRow from "../../components/PlatformAtlasRow.astro";
 import { platforms } from "../../data/platforms";
+
+const sections = [
+  {
+    id: "quotidien",
+    index: "I",
+    title: "Gérer au quotidien",
+    intro: "Des outils accessibles aux indépendants et petites entreprises, avec une attention particulière au prix, au compte pro et au travail avec le comptable.",
+    slugs: ["abby", "tiime", "qonto", "indy", "sellsy", "axonaut", "shine", "macompta", "odoo", "kolecto"],
+  },
+  {
+    id: "cabinet",
+    index: "II",
+    title: "Travailler avec son cabinet",
+    intro: "Des plateformes reliées à la production comptable, aux mandats et au pilotage d'un portefeuille de dossiers.",
+    slugs: ["cegid", "sage", "pennylane", "myunisoft", "septeo", "jefacture", "fulll"],
+  },
+  {
+    id: "systeme-information",
+    index: "III",
+    title: "Raccorder un système d'information",
+    intro: "Des solutions pour API, ERP, EDI, fortes volumétries et projets multi-entités, où le devis et les tests comptent autant que la fiche produit.",
+    slugs: ["superpdp", "sap", "generix", "esker", "cegedim", "yooz", "doxallia", "seres"],
+  },
+] as const;
+
+const bySlug = new Map(platforms.map((platform) => [platform.slug, platform]));
+let dossierIndex = 0;
 ---
 
 <BaseLayout
   title={`${platforms.length} plateformes étudiées | PA Check`}
-  description="Prix, fonctions et conditions utiles pour quinze plateformes de facturation électronique destinées aux indépendants et aux entreprises."
+  description={`Un atlas documenté de ${platforms.length} plateformes agréées, organisé par usage pour choisir sans faux classement.`}
 >
-  <section class="shell page-hero">
-    <span class="eyebrow">{platforms.length} plateformes en détail</span>
-    <h1>Comparez les informations utiles avant de choisir.</h1>
-    <p>Prix, fonctions, conditions d'accès et de sortie&nbsp;: chaque fiche rassemble les informations disponibles et signale clairement les points qui restent à confirmer.</p>
-  </section>
-  <section class="shell">
-    <div class="notice">Notre sélection compte {platforms.length} plateformes. L'<a href="/annuaire/">annuaire officiel</a> permet de consulter l'ensemble de la liste publiée par la DGFiP.</div>
-    <div class="platform-grid section">
-      {platforms.map((platform, index) => <PlatformCard platform={platform} index={index} />)}
+  <section class="atlas-hero">
+    <div class="shell atlas-hero-layout">
+      <div class="atlas-hero-copy">
+        <span class="atlas-edition">édition 01 · 25 août 2026</span>
+        <p class="atlas-kicker">l'atlas PA Check</p>
+        <h1>Un atlas pour décider, <em>pas un podium.</em></h1>
+        <p>Commencez par votre façon de travailler. Chaque dossier rassemble ce qui est public, ce qui change réellement votre choix et ce que vous devrez encore demander.</p>
+        <div class="atlas-legend">
+          <span><i class="known"></i> information documentée</span>
+          <span><i class="open"></i> point à confirmer</span>
+          <span><i class="official"></i> statut DGFiP contrôlé</span>
+        </div>
+      </div>
+      <div class="atlas-visual" aria-hidden="true">
+        <span class="folio">PA</span>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="atlas-scale"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <strong>{platforms.length}</strong>
+        <small>dossiers reliés<br />à 90 sources</small>
+      </div>
     </div>
   </section>
+
+  <nav class="shell atlas-orientation" aria-label="Choisir une partie de l'atlas">
+    {sections.map((section) => (
+      <a href={`#${section.id}`}>
+        <span>{section.index}</span>
+        <p><strong>{section.title}</strong><small>{section.slugs.length} dossiers</small></p>
+        <InterfaceIcon name="arrow" />
+      </a>
+    ))}
+  </nav>
+
+  <div class="shell atlas-note">
+    <InterfaceIcon name="directory" />
+    <p><strong>Cette sélection n'est pas un classement.</strong> Elle documente 25 cas d'usage parmi les 148 plateformes approuvées de la liste DGFiP. <a href="/annuaire/">Voir l'annuaire complet</a>.</p>
+  </div>
+
+  <div class="shell atlas-sections">
+    {sections.map((section) => (
+      <section id={section.id} class="atlas-section">
+        <header>
+          <span>{section.index}</span>
+          <div><p>chapitre {section.index}</p><h2>{section.title}</h2></div>
+          <p>{section.intro}</p>
+        </header>
+        <div class="atlas-list">
+          {section.slugs.map((slug) => {
+            const platform = bySlug.get(slug);
+            if (!platform) return null;
+            const index = dossierIndex++;
+            return <PlatformAtlasRow platform={platform} index={index} />;
+          })}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <section class="shell atlas-afterword">
+    <div>
+      <p class="mono-label">une information manque ?</p>
+      <h2>Les fiches sont faites pour évoluer.</h2>
+      <p>Une plateforme peut transmettre une grille tarifaire, une documentation d'activation ou un certificat. La source est vérifiée avant toute modification.</p>
+    </div>
+    <a class="button" href="/contribuer/">Proposer une mise à jour <InterfaceIcon name="arrow" /></a>
+  </section>
 </BaseLayout>
+
+<style>
+  .atlas-hero { position: relative; overflow: hidden; padding-block: clamp(3.4rem,7vw,6rem); background: #101a2c; color: #fff; }
+  .atlas-hero::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(90deg,#000,transparent 66%); content: ""; }
+  .atlas-hero-layout { position: relative; display: grid; grid-template-columns: minmax(0,1fr) 21rem; gap: clamp(3rem,8vw,8rem); align-items: center; }
+  .atlas-edition { display: inline-block; color: rgba(255,255,255,.52); font: 610 .75rem/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+  .atlas-kicker { margin: 1.2rem 0 0; color: #76dcc8; font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .atlas-hero h1 { max-width: 16ch; margin: .8rem 0 0; color: #fff; font-size: clamp(2.3rem,4.7vw,3.7rem); font-weight: 480; line-height: 1.05; letter-spacing: -.05em; }
+  .atlas-hero h1 em { color: #aeb8ff; font-weight: 430; }
+  .atlas-hero-copy > p:last-of-type { max-width: 45rem; margin: 1.25rem 0 0; color: rgba(239,244,255,.7); font-size: 1rem; line-height: 1.72; }
+  .atlas-legend { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; margin-top: 1.5rem; }
+  .atlas-legend span { display: inline-flex; gap: .42rem; align-items: center; color: rgba(255,255,255,.68); font-size: .76rem; }
+  .atlas-legend i { width: .48rem; height: .48rem; border-radius: 50%; background: #76dcc8; box-shadow: 0 0 0 3px rgba(118,220,200,.1); }
+  .atlas-legend i.open { background: #e3a64e; box-shadow: 0 0 0 3px rgba(227,166,78,.1); }
+  .atlas-legend i.official { background: #8798f3; box-shadow: 0 0 0 3px rgba(135,152,243,.1); }
+  .atlas-visual { position: relative; display: grid; overflow: hidden; min-height: 20rem; place-items: center; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; background: radial-gradient(circle,rgba(116,137,242,.22),transparent 50%),rgba(255,255,255,.025); }
+  .atlas-visual .folio { position: absolute; top: 2rem; color: rgba(255,255,255,.16); font: 720 5.5rem/1 var(--font-mono); letter-spacing: -.12em; }
+  .atlas-visual strong { position: relative; z-index: 2; margin-top: 2rem; color: #fff; font-size: 4.4rem; font-weight: 520; line-height: 1; letter-spacing: -.08em; }
+  .atlas-visual small { position: absolute; bottom: 3rem; color: #8ee0cf; font: 650 .75rem/1.45 var(--font-mono); text-align: center; }
+  .orbit { position: absolute; border: 1px solid rgba(144,160,247,.23); border-radius: 50%; }
+  .orbit-one { width: 12rem; height: 12rem; }
+  .orbit-two { width: 16rem; height: 16rem; border-color: rgba(118,220,200,.16); }
+  .atlas-scale { position: absolute; inset: 50% auto auto 50%; display: flex; width: 17rem; justify-content: space-between; translate: -50% -50%; rotate: -32deg; }
+  .atlas-scale i { width: 1px; height: .7rem; background: rgba(255,255,255,.2); }
+  .atlas-orientation { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin-top: -1.5rem; }
+  .atlas-orientation a { display: grid; grid-template-columns: auto 1fr auto; gap: .75rem; align-items: center; border: 1px solid var(--line); border-radius: 1rem; padding: .9rem; background: rgba(255,255,255,.96); box-shadow: 0 .8rem 2.2rem rgba(27,40,72,.09); }
+  .atlas-orientation > a > span { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: .7rem; background: var(--signal-soft); color: var(--signal); font: 700 .75rem/1 var(--font-mono); }
+  .atlas-orientation p { display: grid; margin: 0; }
+  .atlas-orientation strong { color: var(--bright); font-size: .82rem; }
+  .atlas-orientation small { color: var(--muted); font-size: .76rem; }
+  .atlas-orientation :global(svg) { width: 1rem; height: 1rem; color: var(--signal); }
+  .atlas-note { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: center; margin-top: 2.4rem; border-bottom: 1px solid var(--line); padding: 0 .2rem 1.2rem; }
+  .atlas-note :global(svg) { width: 1.15rem; height: 1.15rem; color: var(--success); }
+  .atlas-note p { margin: 0; color: var(--muted); font-size: .8rem; }
+  .atlas-note strong { color: var(--bright); }
+  .atlas-note a { color: var(--signal); font-weight: 680; }
+  .atlas-sections { padding-block: 1rem 4rem; }
+  .atlas-section { scroll-margin-top: 7rem; padding-top: clamp(3rem,6vw,5rem); }
+  .atlas-section > header { display: grid; grid-template-columns: 3rem minmax(14rem,.75fr) minmax(18rem,1fr); gap: 1.3rem; align-items: end; margin-bottom: 1.4rem; }
+  .atlas-section > header > span { align-self: start; color: var(--signal); font: 720 .76rem/1 var(--font-mono); }
+  .atlas-section header div > p { margin: 0; color: var(--muted); font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .atlas-section h2 { margin: .35rem 0 0; color: var(--bright); font-size: clamp(1.55rem,3vw,2.3rem); font-weight: 540; letter-spacing: -.035em; }
+  .atlas-section > header > p { max-width: 43rem; margin: 0; color: var(--muted); font-size: .86rem; }
+  .atlas-list { overflow: hidden; border: 1px solid var(--line); border-radius: 1.1rem; background: rgba(255,255,255,.36); box-shadow: 0 1rem 3rem rgba(41,57,86,.045); }
+  .atlas-list :global(.atlas-entry:first-child) { border-top: 0; }
+  .atlas-list :global(.atlas-entry:last-child) { border-bottom: 0; }
+  .atlas-afterword { display: flex; justify-content: space-between; gap: 2rem; align-items: center; margin-bottom: 5rem; border: 1px solid color-mix(in srgb,var(--accent) 18%,var(--line)); border-radius: 1.3rem; padding: clamp(1.3rem,4vw,2.3rem); background: linear-gradient(120deg,#fff,color-mix(in srgb,var(--signal-soft) 60%,#fff)); }
+  .atlas-afterword h2 { margin: .65rem 0 0; color: var(--bright); font-size: 1.5rem; font-weight: 550; }
+  .atlas-afterword p:not(.mono-label) { max-width: 44rem; margin: .6rem 0 0; color: var(--muted); font-size: .86rem; }
+  .atlas-afterword .button { flex: 0 0 auto; gap: .5rem; }
+  .atlas-afterword .button :global(svg) { width: 1rem; height: 1rem; }
+  @media (max-width: 900px) { .atlas-hero-layout { grid-template-columns: 1fr; } .atlas-visual { display: none; } .atlas-orientation { grid-template-columns: 1fr; } .atlas-section > header { grid-template-columns: 2rem 1fr; } .atlas-section > header > p { grid-column: 2; } }
+  @media (max-width: 620px) { .atlas-hero { padding-top: 2.7rem; } .atlas-hero h1 { font-size: 2.35rem; } .atlas-orientation { margin-top: -1rem; } .atlas-afterword { display: grid; } .atlas-afterword .button { width: 100%; } }
+</style>

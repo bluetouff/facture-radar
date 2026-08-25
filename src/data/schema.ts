@@ -63,5 +63,5 @@ export const sourceSchema = z.object({
   accessedAt: z.iso.date(),
 });
 
-export const platformsSchema = z.array(platformSchema).length(15);
+export const platformsSchema = z.array(platformSchema).length(25);
 export const sourcesSchema = z.array(sourceSchema).min(12);
