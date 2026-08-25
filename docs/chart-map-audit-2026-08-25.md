@@ -2,7 +2,7 @@
 
 - Section : couverture documentaire des fonctions réglementaires
 - Question : quels acteurs disposent d'une preuve forte pour la réception, l'émission et l'e-reporting ?
-- Conclusion permise : quatorze acteurs ont trois fonctions documentées sur trois, MyUnisoft en a deux sur trois dans les sources retenues.
+- Conclusion permise : treize acteurs ont trois fonctions documentées sur trois ; MyUnisoft et Qonto en ont deux sur trois dans les sources retenues.
 - Famille : comparaison entre catégories
 - Type : barres horizontales, une série, quinze acteurs
 - Champs visibles : acteur, nombre de fonctions documentées

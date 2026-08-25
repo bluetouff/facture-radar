@@ -5,63 +5,63 @@ import { platforms } from "../data/platforms";
 
 <BaseLayout
   title="Méthodologie | PA Check"
-  description="Méthode publique du moteur de choix : périmètre, niveaux de preuve, règles d'exclusion, calcul des coûts et politique de correction."
+  description="Découvrez comment PA Check rassemble ses informations, prépare ses réponses et corrige ses fiches."
 >
   <section class="shell page-hero">
-    <span class="eyebrow">méthode publique · version 0.2</span>
-    <h1>Une recommandation doit pouvoir être contestée.</h1>
-    <p>Le corpus, les règles et les limites sont publiés pour qu'un opérateur, un cabinet ou un utilisateur puisse reproduire le raisonnement et signaler une erreur précise.</p>
+    <span class="eyebrow">comment ça marche · version 0.2</span>
+    <h1>Comment PA Check prépare ses réponses.</h1>
+    <p>Nous consultons les listes officielles, les tarifs, les contrats et la documentation des éditeurs. Cette page explique simplement ce que nous regardons et comment nous signaler une erreur.</p>
   </section>
   <section class="shell method-layout">
     <article class="prose">
-      <h2>Ce que le moteur vérifie</h2>
-      <p>PA Check compare des parcours complets : outil visible, plateforme agréée, dépendances commerciales, volume inclus, fonctions documentées et possibilité de sortie. Il ne juge ni la qualité générale d'une entreprise ni la sécurité réelle d'un système à partir de son site marketing.</p>
+      <h2>Les informations regardées</h2>
+      <p>Pour chaque plateforme, nous relevons son statut DGFiP, son prix public, le volume inclus, les fonctions de réception et d'émission, l'e-reporting, les accès pour le comptable, les connexions possibles, l'export des données, l'hébergement et les conditions d'engagement.</p>
+      <p>Les fiches décrivent les offres et les fonctions présentées dans les documents consultés. Elles ne constituent ni un audit technique de l'éditeur ni un conseil juridique personnalisé.</p>
 
-      <h2>Règles du vérificateur d'outil</h2>
-      <p>Le feu vert exige quatre éléments documentés : la présence de la plateforme dans la liste DGFiP, la réception, l'émission et l'e-reporting. Chaque oui doit être relié à une source et porter le niveau « officiel » ou « documenté ». Une déclaration éditeur non étayée, une source absente ou un raccordement dépendant de l'édition utilisée entraîne « à confirmer ».</p>
-      <p>Le verdict porte uniquement sur le parcours étudié. Il ne garantit ni l'activation du service chez le client, ni son tarif, ni sa conformité individuelle. Un outil absent du corpus n'est jamais présenté comme non conforme.</p>
+      <h2>Faire le point sur un outil</h2>
+      <p>La réponse « vous pouvez le garder » apparaît lorsque la plateforme figure dans la liste DGFiP et que la réception, l'émission et l'e-reporting sont indiqués comme disponibles dans des sources consultables.</p>
+      <p>Certaines marques proposent plusieurs éditions. Dans ce cas, PA Check vous invite à faire confirmer les services réellement inclus dans votre offre. Le prix et l'activation restent toujours à vérifier auprès de l'éditeur.</p>
 
-      <h2>Quatre niveaux de preuve</h2>
+      <h2>Comprendre les mentions</h2>
       <ul>
-        <li><strong>Officiel :</strong> information publiée par la DGFiP, l'AIFE ou un texte applicable.</li>
-        <li><strong>Documenté :</strong> tarif, contrat, documentation ou certificat public directement consultable.</li>
-        <li><strong>Déclaré :</strong> affirmation de l'opérateur sans pièce publique suffisante pour contrôler le périmètre.</li>
-        <li><strong>Non documenté :</strong> aucune preuve publique retenue à la date de vérification.</li>
+        <li><strong>Source officielle :</strong> information publiée par la DGFiP, l'AIFE ou un texte applicable.</li>
+        <li><strong>Information publiée :</strong> tarif, contrat, documentation ou certificat consultable en ligne.</li>
+        <li><strong>Déclaré par l'éditeur :</strong> information annoncée par l'entreprise, dont le détail reste à vérifier.</li>
+        <li><strong>À confirmer :</strong> information publique non trouvée à la date de mise à jour.</li>
       </ul>
-      <p>« Non documenté » ne signifie pas « faux » ni « non conforme ». Cela signifie que le moteur ne dispose pas de la pièce nécessaire pour utiliser le fait.</p>
+      <p>Une mention « à confirmer » vous indique simplement qu'il faut poser la question à l'éditeur avant de choisir.</p>
 
-      <h2>Règles du diagnostic</h2>
-      <p>Le diagnostic secondaire pose trois questions : taille de l'entreprise, volume mensuel et contrainte principale. Cette contrainte agit comme un filtre. Si sa valeur est négative ou inconnue, le parcours est écarté. La couverture documentaire départage ensuite les parcours restants sans afficher de score.</p>
-      <p>Trois résultats maximum sont affichés. Chaque résultat présente les raisons de compatibilité, les inconnues importantes et le coût annuel seulement lorsqu'un prix de départ reproductible est public.</p>
+      <h2>Trouver des plateformes en trois questions</h2>
+      <p>Vous indiquez la taille de votre entreprise, votre volume mensuel de factures et votre priorité. PA Check affiche jusqu'à trois plateformes qui correspondent à ces critères.</p>
+      <p>Lorsqu'une information indispensable à votre priorité reste inconnue, la plateforme apparaît dans la liste des autres options avec le point à confirmer. Les résultats ne sont pas sponsorisés.</p>
 
-      <h2>Calcul du coût</h2>
-      <p>La version initiale annualise le prix mensuel public du parcours étudié. Les promotions temporaires sont exclues. Lorsqu'un tarif varie selon les utilisateurs, le volume ou un devis, le coût est indiqué comme non calculable. Les futurs profils intégreront les frais de mise en service, dépassements, connecteurs, archivage et sortie uniquement lorsque ces montants sont publiés.</p>
+      <h2>Lire les prix</h2>
+      <p>Nous reprenons le prix mensuel public de l'offre étudiée et écartons les promotions temporaires. Si le tarif dépend du nombre d'utilisateurs, du volume ou d'un devis, la fiche indique qu'il reste à confirmer. Les frais de mise en service, de dépassement, de connecteur, d'archivage et de sortie sont ajoutés lorsqu'ils sont publiés.</p>
 
-      <h2>Pourquoi quinze fiches</h2>
-      <p>La liste officielle compte 148 plateformes approuvées au 19 août 2026. Elle ne contient pas les tarifs, intégrations ou clauses de sortie. Le diagnostic reste donc limité à {platforms.length} fiches enrichies. L'annuaire complet est consultable séparément et ne reçoit aucun attribut inventé.</p>
-      <p>Le corpus retient des acteurs de grande portée ou particulièrement bien documentés, puis équilibre trois usages : production comptable et ERP, TPE-PME, ETI et grands comptes. La portée provient de publications des acteurs ou de leurs rapports annuels. Lorsqu'elle n'est pas publiée, cette absence est indiquée et la sélection repose sur la précision de la documentation publique. Ces éléments servent à sélectionner le terrain d'étude, pas à établir un classement de qualité ni une part de marché.</p>
-      <p>La liste des quinze acteurs, la raison de chaque inclusion et les sources de portée sont conservées dans un fichier contrôlé par les tests. Toute substitution doit modifier ce fichier, la fiche concernée, les sources et le journal public dans le même changement.</p>
+      <h2>Les quinze plateformes étudiées</h2>
+      <p>La liste officielle comptait 148 plateformes approuvées au 19 août 2026. Elle donne leur statut, mais ne détaille pas leurs tarifs, leurs intégrations ou leurs conditions de sortie.</p>
+      <p>Nous avons commencé par {platforms.length} acteurs de grande portée ou disposant d'informations publiques particulièrement détaillées. La sélection couvre les besoins des indépendants, TPE, PME, ETI, grandes entreprises et cabinets comptables. L'<a href="/annuaire/">annuaire complet</a> reste disponible pour retrouver les autres plateformes.</p>
 
-      <h2>Corrections et droit de réponse</h2>
-      <p>Une correction doit identifier le champ contesté, fournir une URL publique ou une pièce publiable, préciser l'entité et le périmètre concernés, puis indiquer la date d'effet. La correction et sa source seront enregistrées dans le journal des changements. Aucune rémunération ne modifie les règles, le périmètre ou l'ordre des résultats.</p>
+      <h2>Signaler une erreur</h2>
+      <p>Indiquez l'information à corriger, l'offre concernée, une URL consultable et sa date d'effet. La correction sera vérifiée puis inscrite dans le journal des changements. Les éditeurs ne peuvent pas payer pour modifier l'ordre des résultats.</p>
 
-      <h2>Limites de la bêta</h2>
+      <h2>Ce que la bêta ne couvre pas encore</h2>
       <ul>
-        <li>Les profils contractuels et de réversibilité restent incomplets pour plusieurs acteurs.</li>
-        <li>Les certifications citées par les éditeurs ne valent pas vérification du certificat et de son périmètre.</li>
-        <li>Les chiffres de portée publiés par les acteurs ne constituent pas des parts de marché comparables.</li>
-        <li>Le moteur ne valide pas encore un fichier Factur-X, UBL ou CII.</li>
-        <li>Le moteur ne constitue ni un conseil juridique ni une garantie de conformité individuelle.</li>
+        <li>Les conditions de résiliation et d'export restent incomplètes pour plusieurs acteurs.</li>
+        <li>Les certificats de sécurité annoncés par les éditeurs n'ont pas tous pu être contrôlés dans leur intégralité.</li>
+        <li>Les chiffres d'utilisateurs publiés par les acteurs ne sont pas directement comparables.</li>
+        <li>PA Check ne valide pas encore vos fichiers Factur-X, UBL ou CII.</li>
+        <li>PA Check fournit des informations générales. Un professionnel du droit peut vous conseiller sur votre situation particulière.</li>
       </ul>
     </article>
     <aside>
-      <p class="mono-label">contrat éditorial</p>
+      <p class="mono-label">nos engagements</p>
       <dl>
-        <div><dt>Classement payé</dt><dd>Interdit</dd></div>
-        <div><dt>Données personnelles</dt><dd>Aucune collecte</dd></div>
-        <div><dt>Facture déposée</dt><dd>Jamais</dd></div>
-        <div><dt>Inconnue</dt><dd>Bloquante si impérative</dd></div>
-        <div><dt>Dernière revue</dt><dd>25 août 2026</dd></div>
+        <div><dt>Résultats sponsorisés</dt><dd>Aucun</dd></div>
+        <div><dt>Données personnelles</dt><dd>Non collectées</dd></div>
+        <div><dt>Facture à déposer</dt><dd>Non</dd></div>
+        <div><dt>Information manquante</dt><dd>Signalée</dd></div>
+        <div><dt>Dernière mise à jour</dt><dd>25 août 2026</dd></div>
       </dl>
       <a class="button secondary" href="/api/platforms.json">Télécharger les données</a>
     </aside>

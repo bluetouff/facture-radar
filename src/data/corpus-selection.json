@@ -1,11 +1,11 @@
 {
   "selectedAt": "2026-08-25",
-  "audience": "Cabinets d'expertise comptable français et leurs clients",
+  "audience": "Indépendants, entrepreneurs, entreprises, équipes administratives et cabinets comptables en France",
   "method": [
     "Présence dans la liste des plateformes approuvées publiée par la DGFiP",
     "Portée publiée ou documentation publique distinctive, reliée à une source primaire de l'acteur",
     "Documentation publique exploitable des fonctions de réception, d'émission et d'e-reporting",
-    "Couverture équilibrée des écosystèmes cabinets, TPE-PME et ETI-grands comptes"
+    "Couverture équilibrée des indépendants, TPE-PME, cabinets comptables, ETI et grandes entreprises"
   ],
   "selected": [
     {
@@ -13,7 +13,7 @@
       "segment": "cabinet-et-erp",
       "reach": "750 000 clients dans 130 pays selon Cegid",
       "reachSourceIds": ["cegid-about-2026"],
-      "reason": "Écosystème comptable et ERP très implanté, incluant des parcours Cegid et EBP."
+      "reason": "Écosystème comptable et ERP très implanté, incluant les offres Cegid et EBP."
     },
     {
       "slug": "sage",
@@ -55,14 +55,14 @@
       "segment": "cabinet-et-erp",
       "reach": "Plus de 1 200 cabinets et 100 000 sociétés annoncés par Septeo",
       "reachSourceIds": ["septeo-pa-2026"],
-      "reason": "Positionnement cabinet explicite, prix public et documentation de réversibilité."
+      "reason": "Positionnement auprès des cabinets, prix public et informations sur la récupération des données."
     },
     {
       "slug": "qonto",
       "segment": "tpe-pme",
       "reach": "Plus de 600 000 entreprises clientes annoncées en Europe",
       "reachSourceIds": ["qonto-about-2026"],
-      "reason": "Très large base TPE-PME et parcours de facturation autonome documenté sans compte bancaire obligatoire."
+      "reason": "Très large base TPE-PME et offre de facturation autonome avec compte bancaire facultatif."
     },
     {
       "slug": "indy",
@@ -76,7 +76,7 @@
       "segment": "tpe-pme",
       "reach": "Plus de 50 000 utilisateurs, 2 800 experts-comptables et 22 000 entreprises annoncés par Sellsy",
       "reachSourceIds": ["sellsy-accountants-2026"],
-      "reason": "Forte présence TPE-PME et cabinet, avec documentation des intégrations comptables, de l'accès expert et de la PA."
+      "reason": "Forte présence auprès des TPE-PME et des cabinets, avec des informations détaillées sur les intégrations, l'accès du comptable et la plateforme agréée."
     },
     {
       "slug": "superpdp",
@@ -117,19 +117,19 @@
   "replaced": [
     {
       "slug": "axonaut",
-      "reason": "Documentation utile, mais priorité inférieure aux acteurs retenus sur la portée et les parcours cabinets."
+      "reason": "Informations utiles. Les acteurs retenus présentent une portée plus large auprès des cabinets."
     },
     {
       "slug": "dougs",
-      "reason": "Offre bien identifiée, mais couverture plus étroite que les écosystèmes cabinets retenus."
+      "reason": "Offre bien identifiée dont la portée est plus étroite que les écosystèmes comptables retenus."
     },
     {
       "slug": "macompta",
-      "reason": "Acteur pertinent, mais moins structurant que les parcours retenus dans le corpus actuel."
+      "reason": "Acteur pertinent dont l'offre couvre moins de situations dans la sélection actuelle."
     },
     {
       "slug": "shine",
-      "reason": "Parcours TPE utile, mais redondant avec les acteurs de grande portée déjà retenus sur ce segment."
+      "reason": "Offre utile pour les TPE. Les acteurs déjà retenus couvrent le même besoin avec une portée plus large."
     }
   ]
 }

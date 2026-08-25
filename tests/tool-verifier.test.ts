@@ -4,9 +4,9 @@ import { platforms } from "../src/data/platforms.ts";
 import { findKnownTool, verifyKnownTool } from "../src/lib/tool-verifier.ts";
 
 test("un outil direct complètement documenté peut être conservé", () => {
-  const result = verifyKnownTool(platforms, "Qonto");
+  const result = verifyKnownTool(platforms, "Tiime");
   assert.equal(result.verdict, "keep");
-  assert.equal(result.platform?.slug, "qonto");
+  assert.equal(result.platform?.slug, "tiime");
   assert.equal(result.lines.length, 4);
   assert.ok(result.lines.every((line) => line.state === "yes"));
 });
@@ -37,7 +37,7 @@ test("un produit Sage ne peut pas hériter automatiquement du statut de la PA", 
   const result = verifyKnownTool(platforms, "Sage 50");
   assert.equal(result.verdict, "unconfirmed");
   assert.equal(result.platform?.slug, "sage");
-  assert.match(result.headline, /édition reste à confirmer/i);
+  assert.match(result.headline, /édition et l'activation restent à confirmer/i);
 });
 
 test("une fonction réglementaire non documentée bloque le feu vert", () => {

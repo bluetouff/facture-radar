@@ -34,7 +34,7 @@ function addUnknownOrBlock(
     blockers.push(label);
     return false;
   }
-  blockers.push(`${label} : preuve publique manquante`);
+  blockers.push(`${label} : information publique à confirmer`);
   unknowns.push(label);
   return false;
 }
@@ -47,23 +47,23 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
   let preferenceTotal = 0;
 
   if (!platform.targets.includes(input.size)) {
-    blockers.push("La taille d'entreprise n'appartient pas à la cible documentée");
+    blockers.push("Cette offre ne vise pas votre taille d'entreprise");
   } else {
-    reasons.push("Cible compatible avec la taille déclarée");
+    reasons.push("Adaptée à votre taille d'entreprise");
   }
 
   const pricing = trustedValue(platform.pricing);
   const capacityFits = freeCapacityFits(platform, input.monthlyInvoices);
   if (input.freeOnly) {
     if (!pricing || pricing.kind !== "free" || !pricing.freeFor.includes(input.size)) {
-      blockers.push("Aucun parcours gratuit documenté pour ce profil");
+      blockers.push("Aucune offre gratuite identifiée pour ce profil");
     } else if (capacityFits === false) {
-      blockers.push("Le volume dépasse le plafond gratuit documenté");
+      blockers.push("Le volume indiqué dépasse le plafond gratuit");
     } else if (capacityFits === null) {
-      blockers.push("Le plafond du parcours gratuit n'est pas documenté");
-      unknowns.push("Plafond du parcours gratuit");
+      blockers.push("Le plafond gratuit reste à confirmer");
+      unknowns.push("Plafond de l'offre gratuite");
     } else {
-      reasons.push("Parcours gratuit documenté pour ce profil et ce volume");
+      reasons.push("Offre gratuite adaptée au volume indiqué");
     }
   } else if (capacityFits === false) {
     unknowns.push("Tarif applicable au-delà du volume inclus");
@@ -71,36 +71,36 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
 
   if (input.noBankAccount) {
     const bankRequirement = trustedValue(platform.bankAccountRequired);
-    if (bankRequirement === false) reasons.push("Aucun compte bancaire requis dans le parcours documenté");
+    if (bankRequirement === false) reasons.push("Compte bancaire professionnel non obligatoire");
     else if (bankRequirement === true) blockers.push("Un compte bancaire est requis");
     else {
-      blockers.push("Absence de compte bancaire requis : preuve publique manquante");
-      unknowns.push("Compte bancaire requis ou non");
+      blockers.push("Compte bancaire facultatif : information publique à confirmer");
+      unknowns.push("Compte bancaire obligatoire ou facultatif");
     }
   }
 
   if (input.needsAccountantAccess) {
-    if (addUnknownOrBlock(platform.accountantAccess, "Accès expert-comptable", blockers, unknowns)) {
-      reasons.push("Accès expert-comptable documenté");
+    if (addUnknownOrBlock(platform.accountantAccess, "Accès pour votre comptable", blockers, unknowns)) {
+      reasons.push("Accès prévu pour votre comptable");
     }
   }
 
   if (input.needsApi) {
     const api = trustedValue(platform.publicApi);
     if (!api?.available) {
-      blockers.push(api === null ? "API publique : preuve publique manquante" : "API publique non disponible");
-      if (api === null) unknowns.push("API publique");
+      blockers.push(api === null ? "Disponibilité de l'API à confirmer" : "API non disponible");
+      if (api === null) unknowns.push("Disponibilité de l'API");
     } else if (input.freeOnly && api.includedInFree !== true) {
-      blockers.push("API incluse dans le parcours gratuit : non documenté");
-      unknowns.push("Coût d'accès à l'API");
+      blockers.push("Tarif de l'API à confirmer");
+      unknowns.push("Tarif de l'API");
     } else {
-      reasons.push("API publique documentée");
+      reasons.push("API disponible");
     }
   }
 
   if (input.needsInternationalReporting) {
     if (addUnknownOrBlock(platform.eReporting, "E-reporting B2C et international", blockers, unknowns)) {
-      reasons.push("E-reporting documenté");
+      reasons.push("E-reporting disponible pour le B2C et l'international");
     }
   }
 
@@ -108,19 +108,19 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
     preferenceTotal += 1;
     if (priority === "simplicity" && platform.targets.includes("micro") && pricing?.monthlyFrom === 0) {
       preferencePoints += 1;
-      reasons.push("Parcours de base gratuit et ciblé petites structures");
+      reasons.push("Offre gratuite conçue pour les petites structures");
     }
     if (priority === "ecosystem" && platform.ecosystem.length >= 3) {
       preferencePoints += 1;
-      reasons.push("Écosystème d'intégrations documenté");
+      reasons.push("Nombreuses intégrations disponibles");
     }
     if (priority === "documentation" && documentationCoverage(platform) >= 60) {
       preferencePoints += 1;
-      reasons.push("Couverture documentaire supérieure ou égale à 60 %");
+      reasons.push("Informations publiques suffisamment détaillées");
     }
     if (priority === "reversibility" && trustedValue(platform.exportDocumented) === true && trustedValue(platform.commitmentMonths) === 0) {
       preferencePoints += 1;
-      reasons.push("Export documenté et absence d'engagement dans le parcours étudié");
+      reasons.push("Export disponible et aucun engagement minimal indiqué");
     }
   }
 

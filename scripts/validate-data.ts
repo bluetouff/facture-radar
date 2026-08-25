@@ -2,6 +2,7 @@ import officialDirectory from "../src/data/official-directory.json" with { type:
 import corpusSelectionData from "../src/data/corpus-selection.json" with { type: "json" };
 import sourcesData from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
+import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-profiles.ts";
 import { platformsSchema, sourcesSchema } from "../src/data/schema.ts";
 import { z } from "zod";
 
@@ -93,6 +94,28 @@ for (const selected of checkedSelection.selected) {
 for (const slug of slugs) {
   if (!selectedSlugs.has(slug)) throw new Error(`La fiche ${slug} est absente de la méthode de sélection`);
 }
+
+const journeyIds = new Set<string>();
+const journeyAliases = new Set<string>();
+for (const profile of journeyProfiles) {
+  if (journeyIds.has(profile.id)) throw new Error(`Parcours dupliqué : ${profile.id}`);
+  journeyIds.add(profile.id);
+  if (!slugs.has(profile.platformSlug)) throw new Error(`Le parcours ${profile.id} référence une fiche absente : ${profile.platformSlug}`);
+  for (const alias of profile.aliases) {
+    const normalizedAlias = alias.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("fr").replace(/[^a-z0-9]+/g, " ").trim();
+    if (journeyAliases.has(normalizedAlias)) throw new Error(`Alias de parcours dupliqué : ${alias}`);
+    journeyAliases.add(normalizedAlias);
+  }
+  for (const sourceId of collectJourneySourceIds(profile)) {
+    if (!sourceIds.has(sourceId)) throw new Error(`Source de parcours inconnue ${sourceId} pour ${profile.id}`);
+    referencedSourceIds.add(sourceId);
+    const source = sourcesById.get(sourceId);
+    if (source && source.accessedAt > profile.checkedAt) {
+      throw new Error(`${profile.id} : ${sourceId} a été consultée après la date de contrôle du parcours`);
+    }
+  }
+}
+
 for (const source of checkedSources) {
   if (!referencedSourceIds.has(source.id)) throw new Error(`Source orpheline non liée au corpus : ${source.id}`);
 }

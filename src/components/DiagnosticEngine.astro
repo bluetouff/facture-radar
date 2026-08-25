@@ -1,7 +1,7 @@
 <form class="diagnostic" id="diagnostic-form">
   <div class="diagnostic-head">
-    <div><p class="mono-label">trois questions</p></div>
-    <p>Les réponses restent dans votre navigateur. Aucun SIREN, compte ou document n'est demandé.</p>
+    <div><p class="mono-label">votre situation</p></div>
+    <p>Vos réponses restent dans ce navigateur. Aucun SIREN, compte ou document n'est demandé.</p>
   </div>
 
   <div class="question-grid">
@@ -22,31 +22,31 @@
   </div>
 
   <fieldset>
-    <legend><span>03</span> La contrainte qui décide</legend>
+    <legend><span>03</span> Votre priorité</legend>
     <div class="constraint-grid">
-      <label><input type="radio" name="constraint" value="none" checked /> <span><strong>Aucune</strong><small>Je veux d'abord un parcours documenté</small></span></label>
-      <label><input type="radio" name="constraint" value="free" /> <span><strong>Gratuit</strong><small>Pour le volume indiqué</small></span></label>
-      <label><input type="radio" name="constraint" value="noBank" /> <span><strong>Sans compte bancaire</strong><small>Aucun compte pro imposé</small></span></label>
-      <label><input type="radio" name="constraint" value="accountant" /> <span><strong>Accès cabinet</strong><small>Collaboration documentée</small></span></label>
-      <label><input type="radio" name="constraint" value="api" /> <span><strong>API</strong><small>Pour un flux existant</small></span></label>
-      <label><input type="radio" name="constraint" value="reporting" /> <span><strong>B2C ou international</strong><small>E-reporting documenté</small></span></label>
+      <label><input type="radio" name="constraint" value="none" checked /> <span><strong>Voir les options</strong><small>Commencer par les offres les mieux renseignées</small></span></label>
+      <label><input type="radio" name="constraint" value="free" /> <span><strong>Une offre gratuite</strong><small>Pour le volume indiqué</small></span></label>
+      <label><input type="radio" name="constraint" value="noBank" /> <span><strong>Compte bancaire facultatif</strong><small>Je ne souhaite pas ouvrir un compte chez l'éditeur</small></span></label>
+      <label><input type="radio" name="constraint" value="accountant" /> <span><strong>Travail avec mon comptable</strong><small>Mon cabinet doit pouvoir accéder aux factures</small></span></label>
+      <label><input type="radio" name="constraint" value="api" /> <span><strong>Connexion à mes outils</strong><small>Une API est nécessaire</small></span></label>
+      <label><input type="radio" name="constraint" value="reporting" /> <span><strong>Particuliers ou international</strong><small>Je facture aussi hors du B2B français</small></span></label>
     </div>
   </fieldset>
 
   <div class="form-actions">
-    <button class="button" type="submit">Vérifier les parcours</button>
+    <button class="button" type="submit">Voir les plateformes</button>
     <button class="button secondary" type="reset">Effacer</button>
   </div>
 </form>
 
 <section class="results" id="diagnostic-results" aria-live="polite" hidden>
   <header>
-    <div><p class="mono-label">résultat explicable</p><h2 id="result-title"></h2></div>
+    <div><p class="mono-label">vos options</p><h2 id="result-title"></h2></div>
     <button type="button" class="share-button">Copier le lien</button>
   </header>
   <div id="eligible-results" class="result-grid"></div>
   <details class="excluded-results">
-    <summary>Voir les parcours écartés et les preuves manquantes</summary>
+    <summary>Voir les autres plateformes et les points à confirmer</summary>
     <div id="excluded-list"></div>
   </details>
 </section>
@@ -103,19 +103,19 @@
     article.className = "result-card";
     const top = document.createElement("div");
     top.className = "result-top";
-    top.append(text("span", `PARCOURS ${String(rank + 1).padStart(2, "0")}`, "rank"));
-    top.append(text("strong", "Contraintes satisfaites", "compatibility"));
+    top.append(text("span", `OPTION ${String(rank + 1).padStart(2, "0")}`, "rank"));
+    top.append(text("strong", "Correspond à vos critères", "compatibility"));
     article.append(top);
     article.append(text("h3", result.platform.displayName));
-    article.append(text("p", result.platform.pricing.value?.label || "Prix non documenté", "price"));
+    article.append(text("p", result.platform.pricing.value?.label || "Prix à confirmer", "price"));
 
-    const reasonTitle = text("h4", "Pourquoi il reste compatible");
+    const reasonTitle = text("h4", "Pourquoi cette option peut convenir");
     const reasons = document.createElement("ul");
     for (const reason of result.reasons.slice(0, 5)) reasons.append(text("li", reason));
     article.append(reasonTitle, reasons);
 
     if (result.platform.importantUnknowns.length) {
-      article.append(text("h4", "À vérifier avant de signer"));
+      article.append(text("h4", "Points à confirmer"));
       const unknowns = document.createElement("ul");
       unknowns.className = "unknown-list";
       for (const unknown of result.platform.importantUnknowns.slice(0, 4)) unknowns.append(text("li", unknown));
@@ -125,7 +125,7 @@
     const link = document.createElement("a");
     link.href = `/plateformes/${result.platform.slug}/`;
     link.className = "result-link";
-    link.textContent = "Ouvrir le dossier de preuve";
+    link.textContent = "Voir la fiche";
     article.append(link);
     return article;
   };
@@ -149,10 +149,10 @@
     const excluded = matches.filter((match) => !match.eligible);
     eligibleContainer.replaceChildren(...eligible.map(renderEligible));
     excludedContainer.replaceChildren(...excluded.map(renderExcluded));
-    if (eligible.length) resultTitle.textContent = `${eligible.length} parcours compatible${eligible.length > 1 ? "s" : ""}`;
+    if (eligible.length) resultTitle.textContent = `${eligible.length} plateforme${eligible.length > 1 ? "s" : ""} à regarder`;
     else {
-      resultTitle.textContent = "Aucun parcours ne satisfait toutes les preuves exigées";
-      eligibleContainer.append(text("p", "Relâchez un critère impératif ou consultez les exclusions. Le moteur refuse de transformer une inconnue en compatibilité supposée.", "no-result"));
+      resultTitle.textContent = "Aucune plateforme de notre sélection ne correspond à tous vos critères";
+      eligibleContainer.append(text("p", "Modifiez votre priorité ou consultez les points à confirmer.", "no-result"));
     }
     resultsSection.hidden = false;
     const params = inputToParams(input);

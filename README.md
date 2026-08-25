@@ -1,21 +1,22 @@
 # PA Check
 
-PA Check est un vérificateur public de parcours de facturation électronique conçu pour les cabinets comptables. À partir du nom de l'outil déjà utilisé par un client, il indique si le parcours peut être conservé, doit être confirmé ou nécessite une action, sans collecte de facture, création de compte ni classement sponsorisé.
+PA Check est un service public d'aide au choix pour la facturation électronique. Il s'adresse aux indépendants, entrepreneurs, dirigeants, équipes administratives et comptables qui doivent vérifier leur outil actuel ou choisir une plateforme agréée.
 
-L'URL publique prévue est `https://pa.l0g.fr`. Le moteur, le corpus et les URLs de données restent indépendants de la marque.
+L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte, sans dépôt de facture et sans classement sponsorisé.
 
-## Ce qui constitue le produit
+## Ce que propose le site
 
-- un vérificateur en une question, avec une réponse copiable pour le client et les preuves en second niveau ;
-- un diagnostic secondaire en trois questions, utilisé seulement lorsqu'il faut comparer des alternatives ;
-- 15 dossiers enrichis, chacun relié à des sources publiques et datées ;
-- une sélection explicite des acteurs selon leur portée documentée, la qualité des preuves publiques et la couverture des usages cabinets, TPE-PME et grands comptes ;
+- sept parcours détaillés pour Tiime, Sage 50, Abby, Indy, Pennylane, Qonto et SuperPDP, avec circuit, échéances, coût minimum connu, actions et sources consultables ;
+- une vérification courte pour les autres outils du corpus, sans transformer une information absente en verdict négatif ;
+- trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
+- 15 fiches détaillées, chacune reliée à des sources publiques et datées ;
+- une sélection explicite couvrant les indépendants, TPE, PME, cabinets comptables, ETI et grandes entreprises ;
 - l'annuaire officiel complet, soit 148 plateformes approuvées et 18 en attente dans le relevé DGFiP du 19 août 2026 ;
-- un comparateur factuel sans note globale ;
+- un comparateur point par point ;
 - deux exports JSON publics pour permettre la vérification et la réutilisation ;
 - une méthode, un schéma de données, des tests et un journal de changements publics.
 
-La différence recherchée n'est pas le nombre de logos. Elle repose sur une réponse immédiatement utilisable, alimentée par la provenance champ par champ, des règles fail closed et la maintenance du corpus dans le temps.
+PA Check vise une réponse immédiatement utile. Chaque information importante conserve sa source, sa date de mise à jour et un statut clair lorsque le détail reste à confirmer.
 
 ## Lancer le projet
 
@@ -35,22 +36,22 @@ npm test
 npm run data:refresh -- /chemin/liste-approuvees.xlsx /chemin/liste-attente.xlsx
 ```
 
-`npm run build` valide les données, vérifie les composants Astro, exécute les tests du moteur puis génère le site statique dans `dist/`.
+`npm run build` valide les données, vérifie les composants Astro, exécute les tests puis génère le site statique dans `dist/`.
 
-## Modèle de preuve
+## Statut des informations
 
 Chaque champ enrichi porte un statut :
 
 - `official` : DGFiP, AIFE ou texte applicable ;
 - `documented` : tarif, contrat, documentation ou certificat public ;
 - `declared` : affirmation de l'opérateur dont le périmètre ne peut pas être entièrement contrôlé ;
-- `non_documented` : preuve publique insuffisante à la date de revue.
+- `non_documented` : information publique à confirmer à la date de revue.
 
 Un critère impératif inconnu est bloquant. Un oui n'est utilisable que s'il porte le niveau `official` ou `documented` et au moins une source. `non_documented` ne signifie ni faux ni non conforme.
 
-Les données enrichies vivent dans `src/data/platforms.ts`. Les sources sont dans `src/data/sources.json`. La méthode de sélection et les preuves de portée sont dans `src/data/corpus-selection.json`. L'import de l'annuaire DGFiP conserve l'URL, la date de publication et le SHA-256 du fichier source dans `src/data/official-directory.json`.
+Les données enrichies vivent dans `src/data/platforms.ts`. Les sources sont dans `src/data/sources.json`. La méthode de sélection et les indicateurs de portée sont dans `src/data/corpus-selection.json`. L'import de l'annuaire DGFiP conserve l'URL, la date de publication et le SHA-256 du fichier source dans `src/data/official-directory.json`.
 
-Le validateur vérifie notamment que les quinze fiches correspondent exactement à la sélection, que chaque preuve référence une source existante, que les dates d'immatriculation concordent avec la liste DGFiP et qu'aucune fonction réglementaire positive ne repose sur une déclaration faible ou une source absente.
+Le validateur vérifie notamment que les quinze fiches correspondent exactement à la sélection, que chaque information référence une source existante, que les dates d'immatriculation concordent avec la liste DGFiP et qu'aucune fonction réglementaire positive ne repose sur une déclaration faible ou une source absente.
 
 ## Limites
 

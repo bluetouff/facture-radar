@@ -11,7 +11,7 @@ const base: DiagnosticInput = {
   noBankAccount: true,
   needsAccountantAccess: false,
   needsApi: false,
-  needsInternationalReporting: true,
+  needsInternationalReporting: false,
   priorities: ["simplicity", "documentation"],
 };
 
@@ -27,6 +27,14 @@ test("un indépendant obtient plusieurs parcours gratuits sans compte bancaire",
 test("une exigence API gratuite échoue lorsque l'inclusion gratuite n'est pas prouvée", () => {
   const eligible = runDiagnostic(platforms, { ...base, needsApi: true }).filter((result) => result.eligible);
   assert.equal(eligible.length, 0);
+});
+
+test("Qonto reste bloqué lorsque l'e-reporting généralisé est indispensable", () => {
+  const qonto = runDiagnostic(platforms, { ...base, needsInternationalReporting: true })
+    .find((result) => result.platform.slug === "qonto");
+  assert.ok(qonto);
+  assert.equal(qonto.eligible, false);
+  assert.ok(qonto.unknowns.includes("E-reporting B2C et international"));
 });
 
 test("une API documentée peut qualifier un parcours payant", () => {
@@ -48,7 +56,7 @@ test("les inconnues obligatoires bloquent au lieu d'être assimilées à un oui"
     .find((result) => result.platform.slug === "cegid");
   assert.ok(cegid);
   assert.equal(cegid.eligible, false);
-  assert.ok(cegid.blockers.some((blocker) => blocker.includes("preuve publique manquante")));
+  assert.ok(cegid.blockers.some((blocker) => blocker.includes("information publique à confirmer")));
 });
 
 test("une valeur déclarée sans preuve forte est traitée comme inconnue", () => {
@@ -59,5 +67,5 @@ test("une valeur déclarée sans preuve forte est traitée comme inconnue", () =
   const qonto = runDiagnostic(alteredPlatforms, base).find((result) => result.platform.slug === "qonto");
   assert.ok(qonto);
   assert.equal(qonto.eligible, false);
-  assert.ok(qonto.unknowns.includes("Compte bancaire requis ou non"));
+  assert.ok(qonto.unknowns.includes("Compte bancaire obligatoire ou facultatif"));
 });

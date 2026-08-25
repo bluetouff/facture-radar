@@ -7,7 +7,7 @@ Audience : responsables produit, cabinets d'expertise comptable et mainteneurs d
 
 Le corpus retient quinze acteurs approuvés par la DGFiP, choisis pour leur portée publiée ou une documentation publique distinctive, ainsi que pour leur utilité pour les cabinets. Six couvrent directement les écosystèmes cabinets et ERP, quatre les TPE-PME et cinq les ETI et grands comptes.
 
-Quatorze fiches disposent d'une preuve publique exploitable pour la réception, l'émission et l'e-reporting. MyUnisoft reste volontairement à confirmer sur l'e-reporting, car la source produit retenue documente l'émission et la réception sans expliciter cette fonction. Cette inconnue bloque le feu vert.
+Treize fiches disposent d'une preuve publique exploitable pour la réception, l'émission et l'e-reporting. MyUnisoft reste volontairement à confirmer sur l'e-reporting, car la source produit retenue documente l'émission et la réception sans expliciter cette fonction. Qonto reste également à confirmer : sa page commerciale annonce l'e-reporting, mais son aide officielle indique au 25 août 2026 un accès bêta limité à certaines organisations éligibles. Ces inconnues bloquent le feu vert.
 
 Deux défauts de décision ont été corrigés. Le moteur refusait déjà les valeurs nulles, mais acceptait encore une valeur vraie déclarative ou privée de source. Il pouvait aussi faire hériter un produit Cegid, Sage ou SAP du statut de la PA sans confirmer l'édition et l'activation. Les deux cas retournent désormais « à confirmer ».
 
@@ -22,7 +22,7 @@ Deux défauts de décision ont été corrigés. Le moteur refusait déjà les va
 | Abby | TPE-PME | Plus de 100 000 indépendants annoncés | Documenté | Documenté | Documenté | Accès cabinet, API PA, hébergement et réversibilité |
 | MyUnisoft | Cabinet et ERP | 1 300 cabinets et 255 000 dossiers annoncés | Documenté | Documenté | Non documenté | E-reporting, tarifs, formats et réversibilité |
 | Septeo Ingeneo | Cabinet et ERP | Plus de 1 200 cabinets et 100 000 sociétés annoncés | Documenté | Documenté | Documenté | Plafonds, certificat et contrat de réversibilité à contrôler |
-| Qonto | TPE-PME | Plus de 600 000 entreprises clientes annoncées en Europe | Documenté | Documenté | Documenté | API gratuite, export et hébergement de la PA |
+| Qonto | TPE-PME | Plus de 600 000 entreprises clientes annoncées en Europe | Documenté | Documenté | Non documenté | E-reporting encore limité à une bêta éligible, API gratuite, export et hébergement de la PA |
 | Indy | TPE-PME | Plus de 100 000 utilisateurs annoncés dès juillet 2024 | Documenté | Documenté | Documenté | Export, hébergement et accès cabinet tiers |
 | Sellsy | TPE-PME | Plus de 50 000 utilisateurs, 2 800 experts-comptables et 22 000 entreprises annoncés | Documenté | Documenté | Documenté | Volumes, activation par licence, certificat et sortie |
 | SuperPDP | ETI et grands comptes | Portée client non publiée; compte et API documentés jusqu'aux fortes volumétries | Documenté | Documenté | Documenté | Accès cabinet, engagement, certificat et sortie |

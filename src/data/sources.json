@@ -40,6 +40,14 @@
     "accessedAt": "2026-08-25"
   },
   {
+    "id": "abby-activation-2026",
+    "title": "Comment activer Abby comme plateforme agréée de facturation électronique ?",
+    "publisher": "Centre d'aide Abby",
+    "url": "https://aide.abby.fr/fr/articles/11823515-comment-activer-abby-comme-plateforme-agreee-de-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
     "id": "cegid-pa-2026",
     "title": "Comprendre la Plateforme Agréée Cegid",
     "publisher": "Cegid",
@@ -184,10 +192,34 @@
     "accessedAt": "2026-08-25"
   },
   {
+    "id": "qonto-flow-2026",
+    "title": "Comment fonctionne la facturation électronique ?",
+    "publisher": "Centre d'aide Qonto",
+    "url": "https://support-fr.qonto.com/hc/fr/articles/27885538176913-Comment-fonctionne-la-facturation-%C3%A9lectronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "qonto-ereporting-2026",
+    "title": "Comment activer et utiliser l'e-reporting avec Qonto ?",
+    "publisher": "Centre d'aide Qonto",
+    "url": "https://support-fr.qonto.com/hc/fr/articles/48509023125521-Comment-activer-et-utiliser-l-e-reporting-avec-Qonto",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
     "id": "indy-invoicing-2026",
     "title": "La facturation électronique avec Indy",
     "publisher": "Indy",
     "url": "https://www.indy.fr/facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "indy-activation-2026",
+    "title": "Comment activer la facturation électronique sur Indy ?",
+    "publisher": "Le wikicompta d'Indy",
+    "url": "https://wikicompta.indy.fr/fr/articles/11813517-comment-activer-la-facturation-electronique-sur-indy",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   },
@@ -261,6 +293,14 @@
     "publisher": "SuperPDP",
     "url": "https://www.superpdp.tech/tarifs/",
     "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "superpdp-production-2026",
+    "title": "SuperPDP ouvre son service en production",
+    "publisher": "SuperPDP",
+    "url": "https://www.superpdp.tech/actualites/2026-05-04-super-pdp-ouvre-son-service-en-production/",
+    "type": "documentation",
     "accessedAt": "2026-08-25"
   },
   {

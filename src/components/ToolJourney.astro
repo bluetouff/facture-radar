@@ -1,0 +1,577 @@
+---
+import { knownTools } from "../lib/tool-verifier";
+import { journeyProfiles } from "../data/journey-profiles";
+import InterfaceIcon from "./InterfaceIcon.astro";
+
+const suggestions = [...new Set(knownTools.flatMap((tool) => [tool.label, ...tool.aliases]))]
+  .sort((a, b) => a.localeCompare(b, "fr"));
+const quickTools = journeyProfiles.map((profile) => profile.toolLabel);
+---
+
+<div class="tool-verifier">
+  <header class="tool-card-head">
+    <span class="tool-card-icon"><InterfaceIcon name="invoice" /></span>
+    <span><small>Votre parcours facture</small><strong>Une réponse adaptée à votre outil</strong></span>
+    <b>100 % local</b>
+  </header>
+
+  <form class="tool-search" id="tool-verifier-form">
+    <span class="step-label">Commencez ici</span>
+    <label for="tool-name">Quel outil utilisez-vous aujourd'hui&nbsp;?</label>
+    <div class="tool-search-row">
+      <span class="search-icon"><InterfaceIcon name="search" /></span>
+      <input
+        id="tool-name"
+        name="tool"
+        type="text"
+        list="known-tools"
+        maxlength="80"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Tiime, Sage 50, Qonto, Sellsy…"
+        required
+      />
+      <button type="submit">Continuer <InterfaceIcon name="arrow" /></button>
+    </div>
+    <datalist id="known-tools">
+      {suggestions.map((suggestion) => <option value={suggestion} />)}
+    </datalist>
+    <div class="quick-tools" aria-label="Outils souvent recherchés">
+      <span>Parcours détaillés</span>
+      {quickTools.map((tool) => <button type="button" data-tool-example={tool}>{tool}</button>)}
+    </div>
+    <p class="privacy-line"><InterfaceIcon name="shield" /> Aucune facture ni donnée d'entreprise n'est demandée.</p>
+    <a class="choose-link" href="/diagnostic/">Je n'ai pas encore d'outil&nbsp;: trouver des plateformes adaptées <InterfaceIcon name="arrow" /></a>
+  </form>
+
+  <section class="journey-context" id="journey-context" hidden>
+    <div class="context-heading">
+      <span class="step-label">Deux questions</span>
+      <h2 id="journey-context-title" tabindex="-1">Deux précisions, puis votre parcours.</h2>
+      <p>Nous les utilisons uniquement pour afficher la bonne échéance et l'action utile.</p>
+    </div>
+    <form id="journey-context-form">
+      <fieldset>
+        <legend>Votre situation</legend>
+        <label class="choice-card">
+          <input type="radio" name="audience" value="micro" required />
+          <span><strong>Micro-entrepreneur</strong><small>Émission obligatoire en 2027</small></span>
+        </label>
+        <label class="choice-card">
+          <input type="radio" name="audience" value="tpe-pme" required />
+          <span><strong>TPE ou PME</strong><small>Émission obligatoire en 2027</small></span>
+        </label>
+        <label class="choice-card">
+          <input type="radio" name="audience" value="eti-ge" required />
+          <span><strong>ETI ou grande entreprise</strong><small>Émission obligatoire en 2026</small></span>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend id="activation-question">La plateforme agréée est-elle active pour votre entreprise&nbsp;?</legend>
+        <label class="choice-card compact"><input type="radio" name="activation" value="yes" required /><span><strong>Oui</strong></span></label>
+        <label class="choice-card compact"><input type="radio" name="activation" value="no" required /><span><strong>Non</strong></span></label>
+        <label class="choice-card compact"><input type="radio" name="activation" value="unknown" required /><span><strong>Je ne sais pas</strong></span></label>
+      </fieldset>
+      <button class="primary-action" type="submit">Voir mon parcours <InterfaceIcon name="arrow" /></button>
+    </form>
+    <p class="privacy-line"><InterfaceIcon name="shield" /> Vos réponses restent dans ce navigateur.</p>
+  </section>
+
+  <section class="journey-result" id="journey-result" aria-live="polite" hidden>
+    <div class="journey-verdict">
+      <span class="verdict-dot" aria-hidden="true"></span>
+      <span><small id="journey-status"></small><strong id="journey-tool"></strong></span>
+    </div>
+    <h2 id="journey-title"></h2>
+    <p class="journey-summary" id="journey-summary"></p>
+
+    <section class="result-block">
+      <div class="block-heading"><span>01</span><div><small>Votre circuit</small><h3>Ce qui se passe avec vos factures</h3></div></div>
+      <ol class="journey-rail" id="journey-rail"></ol>
+    </section>
+
+    <section class="result-grid">
+      <div class="result-block deadlines-block">
+        <div class="block-heading"><span>02</span><div><small>Votre calendrier</small><h3>Les dates qui vous concernent</h3></div></div>
+        <div class="deadline-list" id="journey-deadlines"></div>
+      </div>
+      <div class="result-block cost-block">
+        <div class="block-heading"><span>03</span><div><small>Budget visible</small><h3>Le coût minimum connu</h3></div></div>
+        <div class="cost-lead"><span>Surcoût mensuel PA</span><strong id="journey-pa-cost"></strong></div>
+        <p id="journey-cost-label"></p>
+        <div class="cost-horizons" id="journey-cost-horizons"></div>
+        <small class="cost-caveat" id="journey-cost-caveat"></small>
+      </div>
+    </section>
+
+    <section class="result-block action-block">
+      <div class="block-heading"><span>04</span><div><small>Votre prochaine étape</small><h3>Ce que vous pouvez faire maintenant</h3></div></div>
+      <ol class="action-list" id="journey-actions"></ol>
+    </section>
+
+    <div class="verdict-actions journey-actions-bar">
+      <button type="button" id="edit-journey">Modifier mes réponses</button>
+      <button type="button" id="copy-journey"><InterfaceIcon name="copy" /> Copier</button>
+      <button type="button" id="download-journey">Télécharger le récapitulatif</button>
+      <button type="button" id="save-journey">Garder sur cet appareil</button>
+      <a id="journey-profile-link" href="/diagnostic/">Voir la fiche complète</a>
+    </div>
+    <p class="local-status" id="local-status" aria-live="polite"></p>
+    <button class="clear-local" type="button" id="clear-journey" hidden>Effacer le parcours enregistré</button>
+    <details id="journey-sources-details">
+      <summary><InterfaceIcon name="proof" /> D'où viennent ces informations&nbsp;?</summary>
+      <ul id="journey-source-list"></ul>
+    </details>
+  </section>
+
+  <section class="tool-result" id="tool-verifier-result" aria-live="polite" hidden>
+    <div class="verdict-head">
+      <span class="verdict-symbol" aria-hidden="true">
+        <InterfaceIcon name="check" class="status-icon status-keep" />
+        <InterfaceIcon name="alert" class="status-icon status-act" />
+        <InterfaceIcon name="question" class="status-icon status-unconfirmed" />
+      </span>
+      <span class="verdict-meta"><span id="tool-verdict-label"></span><p id="tool-platform-name"></p></span>
+    </div>
+    <h2 id="tool-verdict-title"></h2>
+    <p class="verdict-explanation" id="tool-verdict-explanation"></p>
+    <div class="verdict-lines" id="tool-verdict-lines"></div>
+    <div class="next-action">
+      <InterfaceIcon name="action" />
+      <span><small>À faire maintenant</small><p id="tool-next-action"></p></span>
+    </div>
+    <p class="vertical-note">Le parcours détaillé est actuellement disponible pour {journeyProfiles.length} outils. Les autres conservent cette vérification essentielle pendant que leur parcours est documenté.</p>
+    <div class="verdict-actions">
+      <button type="button" id="copy-tool-answer"><InterfaceIcon name="copy" /> Copier le résumé</button>
+      <a id="tool-profile-link" href="/diagnostic/">Voir les plateformes étudiées</a>
+    </div>
+    <details id="tool-sources-details" hidden>
+      <summary><InterfaceIcon name="proof" /> D'où viennent ces informations&nbsp;?</summary>
+      <ul id="tool-source-list"></ul>
+    </details>
+  </section>
+</div>
+
+<script>
+  import { platforms } from "../data/platforms";
+  import sources from "../data/sources.json";
+  import { buildInvoiceJourney, findJourneyProfile, type ActivationAnswer, type InvoiceJourney, type JourneyAudience } from "../lib/journey";
+  import { verifyKnownTool } from "../lib/tool-verifier";
+
+  const STORAGE_KEY = "pa-check:journey:v2";
+  const form = document.querySelector<HTMLFormElement>("#tool-verifier-form");
+  const input = document.querySelector<HTMLInputElement>("#tool-name");
+  const context = document.querySelector<HTMLElement>("#journey-context");
+  const contextForm = document.querySelector<HTMLFormElement>("#journey-context-form");
+  const activationQuestion = document.querySelector<HTMLElement>("#activation-question");
+  const contextTitle = document.querySelector<HTMLElement>("#journey-context-title");
+  const journeyResult = document.querySelector<HTMLElement>("#journey-result");
+  const genericResult = document.querySelector<HTMLElement>("#tool-verifier-result");
+  const quickToolButtons = document.querySelectorAll<HTMLButtonElement>("[data-tool-example]");
+  const localStatus = document.querySelector<HTMLElement>("#local-status");
+  const clearButton = document.querySelector<HTMLButtonElement>("#clear-journey");
+  const homeHero = form?.closest<HTMLElement>(".hero");
+
+  const verdictLabels = { keep: "Fonctions disponibles", act: "Action nécessaire", unconfirmed: "Points à confirmer" } as const;
+  const journeyStatusLabels = { ready: "Prêt selon vos réponses", action: "Action nécessaire", confirm: "À vérifier" } as const;
+  let copyText = "";
+  let currentJourney: InvoiceJourney | null = null;
+  let currentInput: { tool: string; audience: JourneyAudience; activation: ActivationAnswer } | null = null;
+
+  const byId = <T extends HTMLElement>(id: string) => document.querySelector<T>(`#${id}`);
+  const element = (tag: string, value: string, className?: string) => {
+    const node = document.createElement(tag);
+    node.textContent = value;
+    if (className) node.className = className;
+    return node;
+  };
+  const formatDate = (value: string) => /^\d{4}-\d{2}-\d{2}$/.test(value) ? value.split("-").reverse().join("/") : value;
+  const formatEuro = (value: number) => new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(value);
+  const scrollTo = (node: HTMLElement) => node.scrollIntoView({
+    behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    block: "nearest",
+  });
+  const linkedSources = (sourceIds: Iterable<string>) => {
+    const selected = new Set(sourceIds);
+    return sources.filter((source) => selected.has(source.id));
+  };
+  const expandHomeJourney = (expanded: boolean) => homeHero?.classList.toggle("journey-expanded", expanded);
+  const renderSources = (list: HTMLElement, sourceIds: Iterable<string>) => {
+    list.replaceChildren(...linkedSources(sourceIds).map((source) => {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = source.url;
+      link.rel = "noopener";
+      link.textContent = `${source.title} · ${source.publisher}`;
+      item.append(link, element("small", `Consulté le ${formatDate(source.accessedAt)}`));
+      return item;
+    }));
+  };
+
+  const renderGeneric = () => {
+    if (!input || !genericResult || !context || !journeyResult) return;
+    const verification = verifyKnownTool(platforms, input.value);
+    const verdictLabel = byId<HTMLElement>("tool-verdict-label");
+    const platformName = byId<HTMLElement>("tool-platform-name");
+    const verdictTitle = byId<HTMLElement>("tool-verdict-title");
+    const verdictExplanation = byId<HTMLElement>("tool-verdict-explanation");
+    const verdictLines = byId<HTMLElement>("tool-verdict-lines");
+    const nextAction = byId<HTMLElement>("tool-next-action");
+    const profileLink = byId<HTMLAnchorElement>("tool-profile-link");
+    const sourceDetails = byId<HTMLDetailsElement>("tool-sources-details");
+    const sourceList = byId<HTMLElement>("tool-source-list");
+    if (!verdictLabel || !platformName || !verdictTitle || !verdictExplanation || !verdictLines || !nextAction || !profileLink || !sourceDetails || !sourceList) return;
+
+    genericResult.dataset.verdict = verification.verdict;
+    verdictLabel.textContent = verdictLabels[verification.verdict];
+    platformName.textContent = verification.tool?.label ?? "Outil absent de notre sélection actuelle";
+    verdictTitle.textContent = verification.headline;
+    verdictExplanation.textContent = verification.explanation;
+    nextAction.textContent = verification.action;
+    verdictLines.replaceChildren(...verification.lines.map((line) => {
+      const row = document.createElement("div");
+      row.dataset.state = line.state;
+      row.append(element("span", line.label), element("strong", line.value));
+      return row;
+    }));
+    profileLink.href = verification.platform ? `/plateformes/${verification.platform.slug}/` : "/diagnostic/";
+    profileLink.textContent = verification.platform ? "Voir la fiche complète" : "Voir les plateformes étudiées";
+
+    const sourceIds = verification.lines.flatMap((line) => line.evidence?.sourceIds ?? []);
+    renderSources(sourceList, sourceIds);
+    sourceDetails.hidden = sourceIds.length === 0;
+    const checkedAt = verification.lines.map((line) => line.evidence?.checkedAt).filter((date): date is string => Boolean(date)).sort().at(-1);
+    copyText = [
+      "PA Check · Point sur mon outil",
+      `Outil : ${verification.tool?.label ?? "absent de la sélection actuelle"}`,
+      `Conclusion : ${verdictLabels[verification.verdict]}`,
+      verification.explanation,
+      `Action : ${verification.action}`,
+      ...verification.lines.map((line) => `${line.label} : ${line.value}`),
+      checkedAt ? `Informations vérifiées le ${formatDate(checkedAt)}` : "",
+      ...linkedSources(sourceIds).map((source) => source.url),
+    ].filter(Boolean).join("\n");
+    context.hidden = true;
+    journeyResult.hidden = true;
+    genericResult.hidden = false;
+    expandHomeJourney(false);
+    scrollTo(genericResult);
+  };
+
+  const prepareJourney = () => {
+    if (!input || !context || !activationQuestion || !journeyResult || !genericResult) return;
+    const draft = buildInvoiceJourney(platforms, { tool: input.value, audience: "micro", activation: "unknown" });
+    if (!draft) return renderGeneric();
+    activationQuestion.textContent = draft.activationQuestion;
+    genericResult.hidden = true;
+    journeyResult.hidden = true;
+    context.hidden = false;
+    expandHomeJourney(false);
+    scrollTo(context);
+    contextTitle?.focus({ preventScroll: true });
+  };
+
+  const renderJourney = (journey: InvoiceJourney) => {
+    if (!journeyResult || !context || !genericResult) return;
+    const status = byId<HTMLElement>("journey-status");
+    const tool = byId<HTMLElement>("journey-tool");
+    const title = byId<HTMLElement>("journey-title");
+    const summary = byId<HTMLElement>("journey-summary");
+    const rail = byId<HTMLOListElement>("journey-rail");
+    const deadlines = byId<HTMLElement>("journey-deadlines");
+    const paCost = byId<HTMLElement>("journey-pa-cost");
+    const costLabel = byId<HTMLElement>("journey-cost-label");
+    const costHorizons = byId<HTMLElement>("journey-cost-horizons");
+    const costCaveat = byId<HTMLElement>("journey-cost-caveat");
+    const actions = byId<HTMLOListElement>("journey-actions");
+    const profileLink = byId<HTMLAnchorElement>("journey-profile-link");
+    const sourceList = byId<HTMLElement>("journey-source-list");
+    if (!status || !tool || !title || !summary || !rail || !deadlines || !paCost || !costLabel || !costHorizons || !costCaveat || !actions || !profileLink || !sourceList) return;
+
+    journeyResult.dataset.status = journey.status;
+    status.textContent = journeyStatusLabels[journey.status];
+    tool.textContent = journey.toolLabel;
+    title.textContent = journey.headline;
+    summary.textContent = journey.summary;
+    rail.replaceChildren(...journey.nodes.map((node, index) => {
+      const item = document.createElement("li");
+      item.dataset.state = node.state;
+      item.append(element("span", String(index + 1).padStart(2, "0"), "rail-index"), element("small", node.label), element("strong", node.value), element("p", node.detail));
+      return item;
+    }));
+    deadlines.replaceChildren(...journey.deadlines.map((deadline) => {
+      const card = document.createElement("div");
+      card.append(element("span", deadline.label), element("strong", deadline.date), element("p", deadline.detail));
+      return card;
+    }));
+    paCost.textContent = `${formatEuro(journey.cost.paMonthlySurcharge)} HT`;
+    costLabel.textContent = journey.cost.label;
+    costHorizons.replaceChildren(...journey.cost.horizons.map((horizon) => {
+      const card = document.createElement("div");
+      const amount = journey.cost.baseMonthlyFrom === 0 ? `${formatEuro(horizon.minimum)} HT` : `dès ${formatEuro(horizon.minimum)} HT`;
+      card.append(element("span", `${horizon.months} mois`), element("strong", amount));
+      return card;
+    }));
+    costCaveat.textContent = journey.cost.caveat;
+    actions.replaceChildren(...journey.actions.map((action) => {
+      const item = document.createElement("li");
+      item.append(element("strong", action.title), element("p", action.detail));
+      return item;
+    }));
+    profileLink.href = `/plateformes/${journey.platformSlug}/`;
+
+    const sourceIds = new Set([
+      ...journey.nodes.flatMap((node) => node.sourceIds),
+      ...journey.deadlines.flatMap((deadline) => deadline.sourceIds),
+      ...journey.cost.sourceIds,
+      ...journey.actions.flatMap((action) => action.sourceIds),
+    ]);
+    renderSources(sourceList, sourceIds);
+    const audience = currentInput?.audience === "eti-ge"
+      ? "ETI ou grande entreprise"
+      : currentInput?.audience === "tpe-pme"
+        ? "TPE ou PME"
+        : "Micro-entrepreneur";
+    copyText = [
+      "PA Check · Mon parcours facture",
+      `Outil : ${journey.toolLabel}`,
+      `Entreprise : ${audience}`,
+      `Situation : ${journeyStatusLabels[journey.status]}`,
+      journey.summary,
+      "", "Circuit",
+      ...journey.nodes.map((node) => `${node.label} : ${node.value}`),
+      "", "Échéances",
+      ...journey.deadlines.map((deadline) => `${deadline.label} : ${deadline.date}`),
+      "", `Surcoût PA : ${formatEuro(journey.cost.paMonthlySurcharge)} HT par mois`,
+      ...journey.cost.horizons.map((horizon) => `${horizon.months} mois : ${journey.cost.baseMonthlyFrom === 0 ? "" : "dès "}${formatEuro(horizon.minimum)} HT`),
+      journey.cost.caveat,
+      "", "Prochaines étapes",
+      ...journey.actions.map((action, index) => `${index + 1}. ${action.title} : ${action.detail}`),
+      "", ...linkedSources(sourceIds).map((source) => source.url),
+    ].join("\n");
+    genericResult.hidden = true;
+    context.hidden = true;
+    journeyResult.hidden = false;
+    expandHomeJourney(true);
+    scrollTo(journeyResult);
+  };
+
+  const startVerification = () => {
+    if (!input) return;
+    if (findJourneyProfile(input.value)) prepareJourney();
+    else renderGeneric();
+  };
+  form?.addEventListener("submit", (event) => { event.preventDefault(); startVerification(); });
+  quickToolButtons.forEach((button) => button.addEventListener("click", () => {
+    if (!input) return;
+    input.value = button.dataset.toolExample ?? "";
+    startVerification();
+  }));
+  contextForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!input || !contextForm) return;
+    const values = new FormData(contextForm);
+    const audience = values.get("audience");
+    const activation = values.get("activation");
+    if (audience !== "micro" && audience !== "tpe-pme" && audience !== "eti-ge") return;
+    if (activation !== "yes" && activation !== "no" && activation !== "unknown") return;
+    currentInput = { tool: input.value, audience, activation };
+    currentJourney = buildInvoiceJourney(platforms, currentInput);
+    if (currentJourney) renderJourney(currentJourney);
+  });
+  byId<HTMLButtonElement>("copy-tool-answer")?.addEventListener("click", async (event) => {
+    const button = event.currentTarget as HTMLButtonElement;
+    try { await navigator.clipboard.writeText(copyText); button.textContent = "Résumé copié"; }
+    catch { button.textContent = "Copie refusée par le navigateur"; }
+  });
+  byId<HTMLButtonElement>("copy-journey")?.addEventListener("click", async (event) => {
+    const button = event.currentTarget as HTMLButtonElement;
+    try { await navigator.clipboard.writeText(copyText); button.textContent = "Récapitulatif copié"; }
+    catch { button.textContent = "Copie refusée par le navigateur"; }
+  });
+  byId<HTMLButtonElement>("edit-journey")?.addEventListener("click", () => {
+    if (!context || !journeyResult) return;
+    journeyResult.hidden = true;
+    context.hidden = false;
+    expandHomeJourney(false);
+    scrollTo(context);
+    contextTitle?.focus({ preventScroll: true });
+  });
+  byId<HTMLButtonElement>("download-journey")?.addEventListener("click", () => {
+    if (!currentJourney) return;
+    const blob = new Blob([copyText], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `pa-check-parcours-${currentJourney.profileId}.txt`;
+    link.click();
+    URL.revokeObjectURL(url);
+  });
+  byId<HTMLButtonElement>("save-journey")?.addEventListener("click", () => {
+    if (!currentInput || !localStatus || !clearButton) return;
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 2, ...currentInput }));
+      localStatus.textContent = "Parcours enregistré uniquement sur cet appareil.";
+      clearButton.hidden = false;
+    } catch { localStatus.textContent = "Le navigateur n'autorise pas l'enregistrement local."; }
+  });
+  clearButton?.addEventListener("click", () => {
+    try { localStorage.removeItem(STORAGE_KEY); } catch { /* stockage indisponible */ }
+    if (localStatus) localStatus.textContent = "Parcours local effacé.";
+    clearButton.hidden = true;
+  });
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "null") as Record<string, unknown> | null;
+    const savedTool = typeof saved?.tool === "string" ? saved.tool : "";
+    const savedAudience = saved?.audience;
+    const savedActivation = saved?.activation;
+    if (saved?.version === 2 && findJourneyProfile(savedTool) && (savedAudience === "micro" || savedAudience === "tpe-pme" || savedAudience === "eti-ge") && (savedActivation === "yes" || savedActivation === "no" || savedActivation === "unknown")) {
+      if (input) input.value = savedTool;
+      currentInput = { tool: savedTool, audience: savedAudience, activation: savedActivation };
+      currentJourney = buildInvoiceJourney(platforms, currentInput);
+      if (currentJourney) renderJourney(currentJourney);
+      if (localStatus) localStatus.textContent = "Parcours repris depuis cet appareil.";
+      if (clearButton) clearButton.hidden = false;
+    }
+  } catch { /* stockage absent ou valeur illisible */ }
+</script>
+
+<style>
+  .tool-verifier { overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal) 20%, var(--line)); border-radius: 1.35rem; background: rgba(255,255,255,.94); box-shadow: 0 1.6rem 4.5rem rgba(41,57,86,.12); }
+  .tool-card-head { display: grid; grid-template-columns: auto 1fr auto; gap: .75rem; align-items: center; padding: .85rem 1rem; background: linear-gradient(135deg, var(--signal-soft), rgba(255,255,255,.72)); }
+  .tool-card-icon { display: grid; place-items: center; width: 2.35rem; height: 2.35rem; border-radius: .7rem; background: #fff; color: var(--signal); box-shadow: inset 0 0 0 1px var(--line); }
+  .tool-card-head > span:nth-child(2) { display: grid; }
+  .tool-card-head small, .tool-card-head b, .step-label { color: var(--signal); font-size: .56rem; font-weight: 740; letter-spacing: .055em; text-transform: uppercase; }
+  .tool-card-head strong { color: var(--bright); font-size: .72rem; font-weight: 660; }
+  .tool-card-head b { color: var(--muted); }
+  .tool-search, .journey-context, .tool-result, .journey-result { padding: clamp(1.2rem, 3vw, 1.7rem); }
+  .tool-search > label { display: block; margin: .45rem 0 .75rem; color: var(--bright); font-size: clamp(1.15rem, 2vw, 1.35rem); font-weight: 720; letter-spacing: -.025em; }
+  .tool-search-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .55rem; }
+  .search-icon { position: absolute; top: 50%; left: .9rem; z-index: 1; translate: 0 -50%; color: var(--muted); pointer-events: none; }
+  .tool-search input { min-width: 0; min-height: 3.45rem; border: 1px solid var(--line-strong); border-radius: .75rem; padding: .8rem 1rem .8rem 2.8rem; outline: 0; background: #fff; color: var(--bright); }
+  .tool-search input:focus { border-color: var(--signal); box-shadow: 0 0 0 3px color-mix(in srgb, var(--signal) 14%, transparent); }
+  .tool-search button, .primary-action, .verdict-actions button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 3.15rem; border: 1px solid var(--signal); border-radius: .75rem; padding: .75rem 1rem; background: var(--signal); color: #fff; cursor: pointer; font-size: .68rem; font-weight: 740; }
+  .tool-search button:hover, .primary-action:hover { background: #334cc8; }
+  .tool-search button :global(svg), .primary-action :global(svg), .verdict-actions :global(svg) { width: 1rem; height: 1rem; }
+  .quick-tools { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: .8rem; }
+  .quick-tools > span { margin-right: .15rem; color: var(--muted); font-size: .57rem; font-weight: 620; }
+  .quick-tools button { min-height: 1.9rem; border: 0; border-radius: 999px; padding: .4rem .62rem; background: var(--surface-2); color: var(--paper); font-size: .61rem; }
+  .quick-tools button:hover, .quick-tools button:focus-visible { background: var(--signal-soft); color: var(--signal); }
+  .privacy-line { display: flex; gap: .5rem; align-items: center; margin: .85rem 0 0; color: var(--muted); font-size: .69rem; }
+  .privacy-line :global(svg) { flex: 0 0 auto; width: 1rem; height: 1rem; color: var(--success); }
+  .choose-link { display: inline-flex; gap: .4rem; align-items: center; margin-top: .8rem; color: var(--signal); font-size: .68rem; font-weight: 680; }
+  .choose-link :global(svg) { width: .9rem; height: .9rem; }
+  .journey-context, .tool-result, .journey-result { border-top: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 93%, var(--signal-soft)); }
+  .context-heading h2 { margin: .45rem 0 .3rem; color: var(--bright); font-size: 1.35rem; letter-spacing: -.03em; }
+  .context-heading p { margin: 0; color: var(--muted); font-size: .76rem; }
+  #journey-context-form { display: grid; grid-template-columns: 1fr 1.1fr; gap: 1rem; margin-top: 1.1rem; }
+  fieldset { display: flex; flex-wrap: wrap; gap: .5rem; min-width: 0; margin: 0; border: 0; padding: 0; }
+  legend { width: 100%; margin-bottom: .35rem; color: var(--paper); font-size: .69rem; font-weight: 700; }
+  .choice-card { display: grid; flex: 1 1 10rem; grid-template-columns: auto 1fr; gap: .55rem; align-items: center; min-height: 3.3rem; border: 1px solid var(--line); border-radius: .75rem; padding: .65rem .75rem; background: #fff; cursor: pointer; }
+  .choice-card:has(input:checked) { border-color: var(--signal); background: var(--signal-soft); box-shadow: 0 0 0 2px color-mix(in srgb, var(--signal) 10%, transparent); }
+  .choice-card input { accent-color: var(--signal); }
+  .choice-card span { display: grid; }
+  .choice-card strong { color: var(--paper); font-size: .7rem; }
+  .choice-card small { color: var(--muted); font-size: .57rem; }
+  .choice-card.compact { flex-basis: 6rem; }
+  .primary-action { grid-column: 1 / -1; justify-self: start; }
+  .journey-verdict { display: flex; gap: .65rem; align-items: center; }
+  .verdict-dot { width: .8rem; height: .8rem; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 .35rem var(--amber-soft); }
+  .journey-result[data-status="ready"] .verdict-dot { background: var(--success); box-shadow: 0 0 0 .35rem color-mix(in srgb, var(--success) 15%, transparent); }
+  .journey-result[data-status="action"] .verdict-dot { background: var(--danger); box-shadow: 0 0 0 .35rem color-mix(in srgb, var(--danger) 13%, transparent); }
+  .journey-verdict > span:last-child { display: grid; }
+  .journey-verdict small { color: var(--muted); font-size: .57rem; font-weight: 740; letter-spacing: .04em; text-transform: uppercase; }
+  .journey-verdict strong { color: var(--bright); font-size: .75rem; }
+  .journey-result > h2, .tool-result > h2 { max-width: 26ch; margin: 1rem 0 .5rem; color: var(--bright); font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.08; letter-spacing: -.04em; }
+  .journey-summary, .verdict-explanation { max-width: 62ch; margin: 0; color: var(--paper); font-size: .85rem; }
+  .result-block { margin-top: 1rem; border: 1px solid var(--line); border-radius: 1rem; padding: 1rem; background: rgba(255,255,255,.82); }
+  .block-heading { display: flex; gap: .65rem; align-items: center; }
+  .block-heading > span { display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: .55rem; background: var(--signal-soft); color: var(--signal); font: 750 .56rem/1 var(--font-mono); }
+  .block-heading div { display: grid; }
+  .block-heading small { color: var(--signal); font-size: .53rem; font-weight: 740; letter-spacing: .04em; text-transform: uppercase; }
+  .block-heading h3 { margin: .12rem 0 0; color: var(--bright); font-size: .9rem; letter-spacing: -.02em; }
+  .journey-rail { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+  .journey-rail :global(li) { position: relative; min-width: 0; border-top: 2px solid var(--success); padding: .8rem .7rem .7rem; background: var(--surface); }
+  .journey-rail :global(li[data-state="confirm"]) { border-color: var(--amber); }
+  .journey-rail :global(li[data-state="action"]) { border-color: var(--danger); }
+  .journey-rail :global(li:not(:last-child))::after { position: absolute; top: -.3rem; right: -.72rem; z-index: 1; width: .55rem; height: .55rem; border-top: 2px solid var(--line-strong); border-right: 2px solid var(--line-strong); rotate: 45deg; content: ""; }
+  .journey-rail :global(.rail-index) { display: block; color: var(--muted); font: 700 .52rem/1 var(--font-mono); }
+  .journey-rail :global(small) { display: block; margin-top: .45rem; color: var(--muted); font-size: .53rem; }
+  .journey-rail :global(strong) { display: block; margin-top: .2rem; color: var(--bright); font-size: .69rem; overflow-wrap: anywhere; }
+  .journey-rail :global(p) { margin: .4rem 0 0; color: var(--muted); font-size: .59rem; }
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .deadline-list { display: grid; gap: .55rem; margin-top: .9rem; }
+  .deadline-list > :global(div) { display: grid; grid-template-columns: 1fr auto; gap: .2rem .6rem; border-bottom: 1px solid var(--line); padding: .55rem 0; }
+  .deadline-list :global(span) { color: var(--muted); font-size: .58rem; font-weight: 700; text-transform: uppercase; }
+  .deadline-list :global(strong) { color: var(--signal); font-size: .75rem; }
+  .deadline-list :global(p) { grid-column: 1 / -1; margin: .15rem 0 0; color: var(--muted); font-size: .61rem; }
+  .cost-lead { display: flex; justify-content: space-between; gap: 1rem; align-items: end; margin-top: .9rem; }
+  .cost-lead span { color: var(--muted); font-size: .61rem; }
+  .cost-lead strong { color: var(--success); font-size: 1.35rem; letter-spacing: -.04em; }
+  .cost-block > p { margin: .5rem 0 0; color: var(--paper); font-size: .65rem; }
+  .cost-horizons { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; margin-top: .75rem; }
+  .cost-horizons > :global(div) { display: grid; border-radius: .55rem; padding: .5rem; background: var(--surface); }
+  .cost-horizons :global(span) { color: var(--muted); font-size: .5rem; }
+  .cost-horizons :global(strong) { color: var(--bright); font-size: .62rem; }
+  .cost-caveat { display: block; margin-top: .65rem; color: var(--muted); font-size: .55rem; }
+  .action-list { display: grid; gap: .5rem; margin: .9rem 0 0; padding: 0; list-style: none; counter-reset: action; }
+  .action-list :global(li) { display: grid; grid-template-columns: 1.6rem 1fr; gap: .1rem .6rem; border-radius: .65rem; padding: .65rem; background: var(--surface); counter-increment: action; }
+  .action-list :global(li)::before { display: grid; grid-row: 1 / 3; place-items: center; width: 1.55rem; height: 1.55rem; border-radius: 50%; background: var(--bright); color: #fff; content: counter(action); font-size: .58rem; font-weight: 750; }
+  .action-list :global(strong) { color: var(--bright); font-size: .68rem; }
+  .action-list :global(p) { margin: 0; color: var(--muted); font-size: .62rem; }
+  .verdict-actions { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1rem; }
+  .verdict-actions button, .verdict-actions a { min-height: 2.65rem; }
+  .verdict-actions button { border-color: var(--line-strong); background: #fff; color: var(--bright); }
+  .verdict-actions a { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: .7rem; padding: .65rem .85rem; background: #fff; color: var(--paper); font-size: .64rem; font-weight: 700; }
+  .local-status { display: inline-block; margin: .65rem .5rem 0 0; color: var(--success); font-size: .6rem; }
+  .clear-local { border: 0; padding: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: .58rem; text-decoration: underline; }
+  .verdict-head { display: flex; gap: .75rem; align-items: center; }
+  .verdict-symbol { display: grid; flex: 0 0 auto; place-items: center; width: 2.8rem; height: 2.8rem; border-radius: .8rem; background: currentColor; }
+  .verdict-symbol :global(svg) { color: #fff; }
+  .verdict-symbol :global(.status-icon) { display: none; }
+  .tool-result[data-verdict="keep"] .verdict-symbol { color: var(--success); }
+  .tool-result[data-verdict="keep"] .verdict-symbol :global(.status-keep) { display: block; }
+  .tool-result[data-verdict="act"] .verdict-symbol { color: var(--danger); }
+  .tool-result[data-verdict="act"] .verdict-symbol :global(.status-act) { display: block; }
+  .tool-result[data-verdict="unconfirmed"] .verdict-symbol { color: var(--amber); }
+  .tool-result[data-verdict="unconfirmed"] .verdict-symbol :global(.status-unconfirmed) { display: block; }
+  .verdict-meta { display: grid; gap: .15rem; }
+  .verdict-meta > span { color: var(--bright); font-size: .6rem; font-weight: 740; letter-spacing: .04em; text-transform: uppercase; }
+  .verdict-meta p { margin: 0; color: var(--muted); font-size: .62rem; }
+  .verdict-lines { display: grid; grid-template-columns: repeat(2, 1fr); gap: .55rem; margin-top: 1.1rem; }
+  .verdict-lines > :global(div) { position: relative; border-radius: .7rem; padding: .75rem .75rem .75rem 1.55rem; background: #fff; box-shadow: inset 0 0 0 1px var(--line); }
+  .verdict-lines > :global(div)::before { position: absolute; top: .92rem; left: .72rem; width: .4rem; height: .4rem; border-radius: 50%; background: currentColor; content: ""; }
+  .verdict-lines :global(span) { display: block; color: var(--muted); font-size: .55rem; }
+  .verdict-lines :global(strong) { display: block; margin-top: .32rem; color: var(--paper); font-size: .72rem; }
+  .verdict-lines :global([data-state="yes"] strong) { color: var(--success); }
+  .verdict-lines :global([data-state="no"] strong) { color: var(--danger); }
+  .verdict-lines :global([data-state="unknown"] strong) { color: var(--amber); }
+  .next-action { display: grid; grid-template-columns: auto 1fr; gap: .8rem; margin-top: 1rem; border: 1px solid color-mix(in srgb, var(--amber) 22%, var(--line)); border-radius: .8rem; padding: .85rem 1rem; background: var(--amber-soft); color: var(--amber); }
+  .next-action small { color: var(--amber); font-size: .56rem; font-weight: 740; text-transform: uppercase; }
+  .next-action p { margin: .35rem 0 0; color: var(--paper); font-size: .82rem; }
+  .vertical-note { margin: .8rem 0 0; color: var(--muted); font-size: .62rem; }
+  details { margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .8rem; }
+  summary { color: var(--signal); cursor: pointer; font-size: .65rem; font-weight: 700; }
+  summary :global(svg) { display: inline-block; width: 1rem; height: 1rem; margin-right: .35rem; vertical-align: -.25rem; }
+  details ul { display: grid; gap: .6rem; margin: .8rem 0 0; padding: 0; list-style: none; }
+  details :global(li) { display: grid; }
+  details :global(a) { color: var(--paper); font-size: .69rem; text-decoration: underline; text-underline-offset: .18em; }
+  details :global(small) { color: var(--muted); font-size: .55rem; }
+  @media (max-width: 760px) {
+    #journey-context-form, .result-grid { grid-template-columns: 1fr; }
+    .journey-rail { grid-template-columns: repeat(2, 1fr); }
+    .journey-rail :global(li:nth-child(2))::after { display: none; }
+  }
+  @media (max-width: 620px) {
+    .tool-card-head { grid-template-columns: auto 1fr; }
+    .tool-card-head b { display: none; }
+    .tool-search-row { grid-template-columns: 1fr; }
+    .search-icon { top: 1.72rem; }
+    .quick-tools > span { flex-basis: 100%; }
+    .choice-card { flex-basis: 100%; }
+    .journey-rail, .verdict-lines { grid-template-columns: 1fr; }
+    .journey-rail :global(li:not(:last-child))::after { display: none; }
+    .verdict-actions { display: grid; }
+    .verdict-actions button, .verdict-actions a { width: 100%; justify-content: center; }
+  }
+</style>

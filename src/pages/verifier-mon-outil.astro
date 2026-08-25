@@ -1,41 +1,42 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ToolVerifier from "../components/ToolVerifier.astro";
+import ToolJourney from "../components/ToolJourney.astro";
 import { platforms } from "../data/platforms";
+import { journeyProfiles } from "../data/journey-profiles";
 ---
 
 <BaseLayout
-  title="Vérifier l'outil d'un client | PA Check"
-  description="Saisissez un logiciel de facturation et obtenez une réponse sourcée, compréhensible et directement transmissible au client."
+  title="Comprendre mon parcours facture | PA Check"
+  description="Vérifiez votre outil, la plateforme agréée utilisée, votre échéance, les actions restantes et le coût minimum connu."
 >
   <section class="shell page-hero verifier-hero">
-    <span class="eyebrow">pour les cabinets comptables</span>
-    <h1>Votre client peut-il <strong>garder son outil&nbsp;?</strong></h1>
-    <p>Choisissez son logiciel. Le verdict indique ce qui est établi, ce qui manque et le message à lui transmettre.</p>
+    <span class="eyebrow">vous utilisez déjà un logiciel</span>
+    <h1>Voyez où en est <strong>votre parcours facture.</strong></h1>
+    <p>Deux questions suffisent pour comprendre le circuit de vos factures, votre échéance et la prochaine action utile.</p>
   </section>
 
   <section class="shell verifier-layout">
-    <ToolVerifier />
+    <ToolJourney />
     <aside>
-      <p class="mono-label">lecture immédiate</p>
-      <h2>Trois réponses possibles</h2>
+      <p class="mono-label">ce que vous obtenez</p>
+      <h2>Une réponse directement utilisable</h2>
       <ol>
-        <li><strong>Vous pouvez rester</strong><span>Le noyau réglementaire est documenté.</span></li>
-        <li><strong>À confirmer</strong><span>Une preuve manque. Nous indiquons exactement laquelle.</span></li>
-        <li><strong>Action nécessaire</strong><span>Une fonction indispensable est explicitement absente.</span></li>
+        <li><strong>Votre circuit</strong><span>Outil, plateforme agréée, activation et flux couverts.</span></li>
+        <li><strong>Vos dates et votre budget</strong><span>Les échéances applicables et les montants publics connus.</span></li>
+        <li><strong>Vos prochaines étapes</strong><span>Des actions courtes adaptées à votre situation.</span></li>
       </ol>
-      <p class="scope-note">Le résultat porte sur {platforms.length} parcours documentés. Un outil absent n'est pas déclaré non conforme : il reste simplement impossible à confirmer avec notre corpus.</p>
+      <p class="scope-note">Le parcours complet couvre maintenant {journeyProfiles.length} outils. Les {platforms.length - journeyProfiles.length} autres fiches conservent une vérification plus courte pendant leur documentation détaillée.</p>
     </aside>
   </section>
 
   <section class="shell section">
     <div class="after-check">
       <div>
-        <p class="mono-label">si le client doit changer</p>
-        <h2>Le comparatif intervient seulement après.</h2>
+        <p class="mono-label">vous cherchez une autre solution</p>
+        <h2>Trouvez des plateformes adaptées à votre activité.</h2>
       </div>
-      <p>Le vérificateur commence par éviter les migrations inutiles. Si le parcours actuel ne peut pas être confirmé, le diagnostic compare trois solutions documentées au maximum.</p>
-      <a class="button secondary" href="/diagnostic/">Comparer les alternatives</a>
+      <p>Répondez à trois questions sur votre entreprise, votre volume de factures et votre priorité. Vous obtiendrez jusqu'à trois options à regarder de plus près.</p>
+      <a class="button secondary" href="/diagnostic/">Trouver des plateformes</a>
     </div>
   </section>
 </BaseLayout>

@@ -5,16 +5,16 @@ import { platforms } from "../../data/platforms";
 ---
 
 <BaseLayout
-  title={`${platforms.length} fiches de preuve | PA Check`}
-  description="Quinze plateformes agréées documentées en profondeur pour les indépendants, TPE, PME et organisations équipées d'un ERP."
+  title={`${platforms.length} plateformes étudiées | PA Check`}
+  description="Prix, fonctions et conditions utiles pour quinze plateformes de facturation électronique destinées aux indépendants et aux entreprises."
 >
   <section class="shell page-hero">
-    <span class="eyebrow">corpus enrichi · {platforms.length} acteurs</span>
-    <h1>Les dossiers utilisés par le moteur.</h1>
-    <p>Ces fiches ne reprennent pas un argumentaire commercial. Elles séparent le statut DGFiP, les documents publics, les déclarations éditeur et ce qui reste inconnu. Leur couverture varie, et cette variation est visible.</p>
+    <span class="eyebrow">{platforms.length} plateformes en détail</span>
+    <h1>Comparez les informations utiles avant de choisir.</h1>
+    <p>Prix, fonctions, conditions d'accès et de sortie&nbsp;: chaque fiche rassemble les informations disponibles et signale clairement les points qui restent à confirmer.</p>
   </section>
   <section class="shell">
-    <div class="notice"><strong>Périmètre honnête.</strong> Le diagnostic porte sur ces {platforms.length} solutions uniquement. L'<a href="/annuaire/">annuaire DGFiP</a> recense séparément 148 plateformes approuvées et 18 opérateurs en attente, sans enrichissement artificiel.</div>
+    <div class="notice">Notre sélection compte {platforms.length} plateformes. L'<a href="/annuaire/">annuaire officiel</a> permet de consulter l'ensemble de la liste publiée par la DGFiP.</div>
     <div class="platform-grid section">
       {platforms.map((platform, index) => <PlatformCard platform={platform} index={index} />)}
     </div>

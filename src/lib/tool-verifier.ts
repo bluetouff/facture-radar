@@ -37,7 +37,7 @@ export const knownTools: KnownTool[] = [
     aliases: ["Cegid Quadra", "Cegid Loop"],
     platformSlug: "cegid",
     relation: "connected",
-    relationNote: "Cegid opère une plateforme agréée, mais le produit, l'édition et l'activation utilisés par le client doivent être confirmés.",
+    relationNote: "Cegid opère une plateforme agréée. Le produit, l'édition et l'activation inclus dans votre offre doivent encore être confirmés.",
   },
   {
     id: "ebp",
@@ -45,7 +45,7 @@ export const knownTools: KnownTool[] = [
     aliases: ["EBP Comptabilité", "EBP Gestion Commerciale"],
     platformSlug: "cegid",
     relation: "connected",
-    relationNote: "L'intégration de l'environnement EBP à Cegid est documentée, mais l'édition et l'activation utilisées par le client doivent être confirmées.",
+    relationNote: "L'intégration de l'environnement EBP à Cegid est indiquée dans la documentation. L'édition et l'activation incluses dans votre offre doivent encore être confirmées.",
   },
   { id: "abby", label: "Abby", aliases: ["ABBY"], platformSlug: "abby", relation: "direct" },
   { id: "indy", label: "Indy", aliases: ["INDY"], platformSlug: "indy", relation: "direct" },
@@ -58,7 +58,7 @@ export const knownTools: KnownTool[] = [
     aliases: ["Sage Active", "Sage 50", "Sage 100", "Sage X3", "Sage Intacct", "Sage for Accountants"],
     platformSlug: "sage",
     relation: "connected",
-    relationNote: "Sage opère une plateforme agréée intégrée à plusieurs offres, mais l'édition et l'activation du service doivent être confirmées pour le client.",
+    relationNote: "Sage opère une plateforme agréée intégrée à plusieurs offres. L'édition et l'activation du service doivent être confirmées pour votre entreprise.",
   },
   { id: "tiime", label: "Tiime", aliases: ["Tiime Invoice", "Tiime Expert", "TIIME PDP"], platformSlug: "tiime", relation: "direct" },
   { id: "myunisoft", label: "MyUnisoft", aliases: ["MyU", "MY UNISOFT"], platformSlug: "myunisoft", relation: "direct" },
@@ -69,7 +69,7 @@ export const knownTools: KnownTool[] = [
     aliases: [],
     platformSlug: "septeo",
     relation: "connected",
-    relationNote: "Teogest est documenté dans l'écosystème Septeo, mais l'édition et l'activation de la plateforme agréée doivent être confirmées.",
+    relationNote: "Teogest figure dans l'écosystème Septeo. L'édition et l'activation de la plateforme agréée doivent encore être confirmées.",
   },
   { id: "sellsy", label: "Sellsy", aliases: ["TeamSystem Sellsy"], platformSlug: "sellsy", relation: "direct" },
   { id: "superpdp", label: "SuperPDP", aliases: ["SUPER PDP", "Super PDP"], platformSlug: "superpdp", relation: "direct" },
@@ -80,7 +80,7 @@ export const knownTools: KnownTool[] = [
     aliases: ["SAP S/4HANA", "SAP Business One", "SAP Business Network"],
     platformSlug: "sap",
     relation: "connected",
-    relationNote: "SAP opère une plateforme agréée, mais son activation et son intégration dépendent de l'environnement SAP du client.",
+    relationNote: "SAP opère une plateforme agréée. Son activation et son intégration dépendent de votre environnement SAP.",
   },
   { id: "generix", label: "Generix", aliases: ["GENERIX Group"], platformSlug: "generix", relation: "direct" },
   { id: "esker", label: "Esker", aliases: ["ESKER"], platformSlug: "esker", relation: "direct" },
@@ -107,7 +107,7 @@ function booleanLine(label: string, evidence: Evidence<boolean>): VerificationLi
   const state = evidenceState(evidence);
   return {
     label,
-    value: state === "yes" ? "Documenté" : state === "no" ? "Non couvert" : "À confirmer",
+    value: state === "yes" ? "Disponible" : state === "no" ? "Non couvert" : "À confirmer",
     state,
     evidence,
   };
@@ -124,9 +124,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
   if (!tool) {
     return {
       verdict: "unconfirmed",
-      headline: "Impossible à confirmer avec notre corpus",
-      explanation: "Cet outil ne fait pas encore partie des parcours documentés. Son absence ne signifie pas qu'il n'est pas conforme.",
-      action: "Demandez à l'éditeur le nom de la plateforme agréée utilisée, la date d'activation de la réception et le périmètre prévu pour l'émission et l'e-reporting.",
+      headline: "Nous n'avons pas encore étudié cet outil",
+      explanation: "Il n'apparaît pas dans notre sélection actuelle. Cela ne signifie pas qu'il n'est pas conforme.",
+      action: "Demandez à l'éditeur quelle plateforme agréée sera utilisée et quand la réception, l'émission et l'e-reporting seront activés.",
       tool: null,
       platform: null,
       lines: [],
@@ -137,9 +137,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
   if (!platform) {
     return {
       verdict: "unconfirmed",
-      headline: "Impossible à confirmer avec notre corpus",
-      explanation: "Le rattachement existe dans l'index, mais sa fiche de preuve est absente. Le vérificateur refuse de déduire un verdict.",
-      action: "Ne conseillez pas ce parcours avant d'avoir identifié et vérifié la plateforme agréée sous-jacente.",
+      headline: "Cette fiche est momentanément indisponible",
+      explanation: "Nous connaissons le lien avec une plateforme agréée, mais les informations utiles ne sont pas disponibles dans cette version du site.",
+      action: "Demandez à l'éditeur de confirmer la plateforme agréée utilisée et les services inclus dans votre offre.",
       tool,
       platform: null,
       lines: [],
@@ -166,9 +166,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
   if (tool.relation === "connected") {
     return {
       verdict: "unconfirmed",
-      headline: "Le raccordement est documenté, l'édition reste à confirmer",
-      explanation: tool.relationNote ?? "L'outil est relié à une plateforme agréée documentée, mais le périmètre exact utilisé par le client reste à confirmer.",
-      action: `Demandez à l'éditeur de confirmer par écrit que l'offre du client active bien ${platform.displayName} pour la réception, l'émission et l'e-reporting.`,
+      headline: "L'édition et l'activation restent à confirmer",
+      explanation: tool.relationNote ?? "Cet outil est relié à une plateforme agréée. Les services inclus dans votre offre restent à confirmer.",
+      action: `Demandez à l'éditeur de confirmer par écrit que votre offre active bien ${platform.displayName} pour la réception, l'émission et l'e-reporting.`,
       tool,
       platform,
       lines,
@@ -178,9 +178,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
   if (lines.some((line) => line.state === "no")) {
     return {
       verdict: "act",
-      headline: "Vous devez agir",
-      explanation: "Au moins une fonction réglementaire nécessaire est explicitement indiquée comme non couverte dans les sources retenues.",
-      action: "Faites corriger ou remplacer ce parcours avant l'échéance applicable au client.",
+      headline: "Une vérification est nécessaire avant l'échéance",
+      explanation: "Une fonction nécessaire est indiquée comme non couverte dans les informations consultées.",
+      action: "Contactez l'éditeur pour faire activer la fonction manquante ou choisir une autre plateforme avant votre échéance.",
       tool,
       platform,
       lines,
@@ -191,9 +191,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
     const missing = lines.filter((line) => line.state === "unknown").map((line) => line.label.toLocaleLowerCase("fr"));
     return {
       verdict: "unconfirmed",
-      headline: "Impossible de conseiller de rester sans confirmation",
-      explanation: `Le parcours est partiellement documenté, mais ${missing.join(" et ")} reste à confirmer publiquement.`,
-      action: `Obtenez une confirmation écrite sur ${missing.join(" et ")} avant de valider ce choix avec le client.`,
+      headline: "Quelques points restent à confirmer",
+      explanation: `Les informations disponibles ne permettent pas encore de confirmer ${missing.join(" et ")}.`,
+      action: `Demandez à l'éditeur une confirmation écrite sur ${missing.join(" et ")} avant de vous engager.`,
       tool,
       platform,
       lines,
@@ -202,9 +202,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
 
   return {
     verdict: "keep",
-    headline: "Vous pouvez conserver cet outil",
-    explanation: "La plateforme agréée, la réception, l'émission et l'e-reporting sont documentés dans le périmètre étudié.",
-    action: "Confirmez seulement l'activation du service et le tarif applicable au client. Les preuves retenues ne justifient pas un changement d'outil.",
+    headline: "Les fonctions essentielles sont documentées",
+    explanation: "La plateforme agréée associée prend en charge la réception, l'émission et l'e-reporting dans les informations publiques consultées.",
+    action: "Ouvrez votre offre pour contrôler que le service est actif et relever le tarif qui vous sera réellement appliqué.",
     tool,
     platform,
     lines,

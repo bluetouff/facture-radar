@@ -1,10 +1,10 @@
 import type { Evidence, EvidenceStatus, Platform } from "../data/types.ts";
 
 export const evidenceLabels: Record<EvidenceStatus, string> = {
-  official: "Officiel",
-  documented: "Documenté",
-  declared: "Déclaré",
-  non_documented: "Non documenté",
+  official: "Source officielle",
+  documented: "Information publiée",
+  declared: "Déclaré par l'éditeur",
+  non_documented: "À confirmer",
 };
 
 const criticalEvidenceKeys = [

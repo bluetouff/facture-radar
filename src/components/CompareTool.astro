@@ -41,10 +41,10 @@ import { platforms } from "../data/platforms";
   };
 
   const valueText = (value: unknown) => {
-    if (value === null) return "Non documenté";
+    if (value === null) return "À confirmer";
     if (typeof value === "boolean") return value ? "Oui" : "Non";
     if (typeof value === "string" || typeof value === "number") return String(value);
-    if (Array.isArray(value)) return value.length ? value.join(", ") : "Non documenté";
+    if (Array.isArray(value)) return value.length ? value.join(", ") : "À confirmer";
     if (typeof value === "object" && value) {
       if ("label" in value && typeof value.label === "string") return value.label;
       if ("available" in value) {
@@ -63,9 +63,9 @@ import { platforms } from "../data/platforms";
     ["Prix", (p: (typeof platforms)[number]) => p.pricing],
     ["Volume inclus", (p: (typeof platforms)[number]) => p.allowance],
     ["Compte bancaire requis", (p: (typeof platforms)[number]) => p.bankAccountRequired],
-    ["Accès expert-comptable", (p: (typeof platforms)[number]) => p.accountantAccess],
+    ["Accès pour le comptable", (p: (typeof platforms)[number]) => p.accountantAccess],
     ["API publique", (p: (typeof platforms)[number]) => p.publicApi],
-    ["Export documenté", (p: (typeof platforms)[number]) => p.exportDocumented],
+    ["Export des données", (p: (typeof platforms)[number]) => p.exportDocumented],
     ["Intégrations", (p: (typeof platforms)[number]) => p.integrations],
     ["Formats", (p: (typeof platforms)[number]) => p.formats],
     ["Hébergement", (p: (typeof platforms)[number]) => p.hostingCountries],
@@ -94,7 +94,7 @@ import { platforms } from "../data/platforms";
       status.textContent = "Choisissez au moins deux plateformes distinctes.";
       return;
     }
-    status.textContent = `${selected.length} plateformes comparées, sans note globale.`;
+    status.textContent = `${selected.length} plateformes affichées.`;
     output.hidden = false;
     head.replaceChildren(text("th", "Critère"), ...selected.map((platform) => text("th", platform.displayName)));
     const rows = fields.map(([label, getEvidence]) => {

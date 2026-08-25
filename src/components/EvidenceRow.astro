@@ -11,10 +11,17 @@ interface Props {
 const { label, evidence } = Astro.props;
 
 function displayValue(value: unknown): string {
-  if (value === null) return "Non documenté";
+  if (value === null) return "À confirmer";
+  if (label === "Statut DGFiP" && value === "registered") return "Plateforme agréée";
+  if (label === "Date d'immatriculation" && typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    return value.split("-").reverse().join("/");
+  }
+  if (label === "Engagement minimal" && typeof value === "number") {
+    return value === 0 ? "Aucun engagement minimal indiqué" : `${value} mois`;
+  }
   if (typeof value === "boolean") return value ? "Oui" : "Non";
   if (typeof value === "string" || typeof value === "number") return String(value);
-  if (Array.isArray(value)) return value.length ? value.join(", ") : "Aucun élément documenté";
+  if (Array.isArray(value)) return value.length ? value.join(", ") : "Aucune information publiée";
   if (typeof value === "object" && value) {
     if ("label" in value && typeof value.label === "string") return value.label;
     if ("available" in value) {
@@ -31,6 +38,7 @@ function displayValue(value: unknown): string {
 const linkedSources = evidence.sourceIds
   .map((id) => sources.find((source) => source.id === id))
   .filter((source) => source !== undefined);
+const checkedAtLabel = evidence.checkedAt.split("-").reverse().join("/");
 ---
 
 <div class="evidence-row">
@@ -42,8 +50,8 @@ const linkedSources = evidence.sourceIds
   <div class="evidence-sources">
     {linkedSources.length ? linkedSources.map((source) => (
       <a href={source.url} rel="noopener">{source.publisher}<span aria-hidden="true">↗</span></a>
-    )) : <span>Aucune pièce publique rattachée</span>}
-    <small>Vérifié le {evidence.checkedAt}</small>
+    )) : <span>Source publique non trouvée</span>}
+    <small>Mis à jour le {checkedAtLabel}</small>
   </div>
 </div>
 

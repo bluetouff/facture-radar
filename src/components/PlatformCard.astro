@@ -17,6 +17,7 @@ const pricingLabels = {
   quote: "sur devis",
 } as const;
 const pricingLabel = platform.pricing.value ? pricingLabels[platform.pricing.value.kind] : "prix à confirmer";
+const targetLabels = { micro: "indépendants", tpe: "TPE", pme: "PME", eti: "ETI", ge: "grandes entreprises" } as const;
 const initials = platform.displayName.replace(/[^\p{L}\p{N}]/gu, "").slice(0, 2).toLocaleUpperCase("fr");
 const proofSlots = Array.from({ length: 5 }, (_, slot) => slot < Math.min(sources, 5));
 ---
@@ -34,20 +35,20 @@ const proofSlots = Array.from({ length: 5 }, (_, slot) => slot < Math.min(source
   </div>
   <p class="card-summary">{platform.summary}</p>
   <div class="tag-row">
-    {platform.targets.map((target) => <span class="tag">{target}</span>)}
+    {platform.targets.map((target) => <span class="tag">{targetLabels[target]}</span>)}
     <span class="tag">{pricingLabel}</span>
   </div>
-  <div class="proof-density" aria-label={`${sources} sources liées`}>
+  <div class="proof-density" aria-label={`${sources} sources consultées`}>
     <div class="proof-bars" aria-hidden="true">
       {proofSlots.map((filled) => <span class:list={{ filled }}></span>)}
     </div>
-    <span><strong>{sources}</strong> sources liées</span>
+    <span><strong>{sources}</strong> sources consultées</span>
   </div>
   <div class="card-metrics">
-    <div><span>Dernière vérification</span><strong>{platform.officialStatus.checkedAt.split("-").reverse().join("/")}</strong></div>
-    <div><span>Positionnement</span><strong>{pricingLabel}</strong></div>
+    <div><span>Dernière mise à jour</span><strong>{platform.officialStatus.checkedAt.split("-").reverse().join("/")}</strong></div>
+    <div><span>Tarif</span><strong>{pricingLabel}</strong></div>
   </div>
   <a class="card-link" href={`/plateformes/${platform.slug}/`}>
-    <span>Ouvrir le dossier</span><span aria-hidden="true">↗</span>
+    <span>Voir la fiche</span><span aria-hidden="true">↗</span>
   </a>
 </article>

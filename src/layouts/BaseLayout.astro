@@ -14,11 +14,11 @@ interface Props {
 const { title, description, canonical = Astro.url.pathname } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
 const nav = [
-  { href: "/verifier-mon-outil/", label: "Vérifier un outil", shortLabel: "Vérifier", icon: "search" },
-  { href: "/diagnostic/", label: "Comparer si besoin", shortLabel: "Comparer", icon: "verdict" },
-  { href: "/plateformes/", label: `${platforms.length} fiches`, shortLabel: "Fiches", icon: "proof" },
-  { href: "/annuaire/", label: "Annuaire DGFiP", shortLabel: "Annuaire", icon: "check" },
-  { href: "/methodologie/", label: "Méthode", shortLabel: "Méthode", icon: "shield" },
+  { href: "/verifier-mon-outil/", label: "Mon outil actuel", shortLabel: "Mon outil", icon: "search" },
+  { href: "/diagnostic/", label: "Choisir une plateforme", shortLabel: "Choisir", icon: "verdict" },
+  { href: "/plateformes/", label: `${platforms.length} plateformes`, shortLabel: "Plateformes", icon: "proof" },
+  { href: "/annuaire/", label: "Annuaire officiel", shortLabel: "Annuaire", icon: "check" },
+  { href: "/methodologie/", label: "Comment ça marche", shortLabel: "Comprendre", icon: "shield" },
 ] as const;
 ---
 
@@ -49,7 +49,7 @@ const nav = [
       <div class="shell header-inner">
         <a class="brand" href="/" aria-label="PA Check, accueil">
           <span class="brand-mark"><InterfaceIcon name="invoice" /></span>
-          <span class="brand-copy"><strong>PA <span>Check</span></strong><small>Vérifier avant de changer</small></span>
+          <span class="brand-copy"><strong>PA <span>Check</span></strong><small>Choisir sa plateforme</small></span>
         </a>
         <nav class="main-nav" aria-label="Navigation principale">
           {nav.map(({ href, label, shortLabel, icon }) => (
@@ -59,7 +59,7 @@ const nav = [
             </a>
           ))}
         </nav>
-        <strong class="header-promise"><InterfaceIcon name="shield" /> Sources vérifiées</strong>
+        <strong class="header-promise"><InterfaceIcon name="shield" /> Informations sourcées</strong>
       </div>
     </header>
     <main id="contenu">
@@ -69,8 +69,8 @@ const nav = [
       <div class="shell footer-grid">
         <div>
           <p class="mono-label">PA Check</p>
-          <strong>Choisir une plateforme, preuves à l'appui.</strong>
-          <p>Calcul local, aucun compte, aucune facture déposée, aucun classement acheté.</p>
+          <strong>Choisir une plateforme adaptée à son activité.</strong>
+          <p>Vos réponses restent sur votre appareil. Aucun compte ni dépôt de facture.</p>
         </div>
         <nav aria-label="Pied de page">
           <a href="/methodologie/">Méthodologie</a>

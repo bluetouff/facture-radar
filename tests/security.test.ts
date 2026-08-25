@@ -21,3 +21,18 @@ test("le diagnostic partage ses critères dans le fragment, jamais dans la query
   assert.match(component, /`\$\{location\.pathname\}#\$\{params\.toString\(\)\}`/);
   assert.doesNotMatch(component, /location\.search/);
 });
+
+test("le parcours facture reste local et n'interprète jamais le contenu saisi", async () => {
+  const component = await readFile(new URL("../src/components/ToolJourney.astro", import.meta.url), "utf8");
+  assert.match(component, /localStorage\.setItem\(STORAGE_KEY/);
+  assert.match(component, /saved\?\.version === 2/);
+  assert.doesNotMatch(component, /\bfetch\s*\(/);
+  assert.doesNotMatch(component, /location\.search/);
+  assert.doesNotMatch(component, /\.innerHTML\s*=/);
+});
+
+test("le récapitulatif local ne demande aucun identifiant d'entreprise", async () => {
+  const component = await readFile(new URL("../src/components/ToolJourney.astro", import.meta.url), "utf8");
+  assert.doesNotMatch(component, /name=["'](?:siren|siret|email|telephone|phone)["']/i);
+  assert.match(component, /new Blob\(\[copyText\]/);
+});

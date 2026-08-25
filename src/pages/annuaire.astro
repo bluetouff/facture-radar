@@ -10,19 +10,17 @@ const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: no
 
 <BaseLayout
   title="Annuaire officiel des plateformes agréées | PA Check"
-  description="Snapshot vérifiable des listes DGFiP de plateformes agréées : 148 approuvées et 18 opérateurs encore en attente au 19 août 2026."
+  description="Consultez et recherchez les plateformes agréées publiées par la DGFiP, ainsi que les opérateurs encore en attente au 19 août 2026."
 >
   <section class="shell page-hero">
-    <span class="eyebrow">snapshot DGFiP · {directory.snapshotDate}</span>
-    <h1>L'annuaire officiel, séparé du diagnostic.</h1>
-    <p>Cette page reprend les deux fichiers DGFiP sans attribuer de fonctions commerciales non vérifiées. Seules les {platforms.length} fiches enrichies alimentent le moteur de choix.</p>
+    <span class="eyebrow">liste DGFiP · {directory.snapshotDate}</span>
+    <h1>Toutes les plateformes agréées par la DGFiP.</h1>
+    <p>Recherchez une plateforme dans la liste officielle. PA Check propose une fiche détaillée pour {platforms.length} d'entre elles.</p>
   </section>
   <section class="shell directory-section">
     <div class="directory-meta">
       <div><strong>{directory.approved.length}</strong><span>approuvées</span></div>
       <div><strong>{directory.pending.length}</strong><span>en attente</span></div>
-      <div class="hash"><span>SHA-256 liste approuvée</span><code>{directory.approvedSha256}</code></div>
-      <div class="hash"><span>SHA-256 liste en attente</span><code>{directory.pendingSha256}</code></div>
     </div>
     <div class="directory-controls">
       <label><span>Rechercher</span><input id="directory-search" type="search" placeholder="Nom, ville, pays" /></label>
@@ -45,6 +43,13 @@ const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: no
         </article>
       ))}
     </div>
+    <details class="integrity-details">
+      <summary>Vérifier l'origine des fichiers</summary>
+      <div class="hash-grid">
+        <div><span>SHA-256 liste approuvée</span><code>{directory.approvedSha256}</code></div>
+        <div><span>SHA-256 liste en attente</span><code>{directory.pendingSha256}</code></div>
+      </div>
+    </details>
     <p class="source-note">Source : <a href={directory.sourcePage}>DGFiP, liste des plateformes agréées</a>. Le libellé « en attente » désigne ici les opérateurs dont l'immatriculation définitive reste conditionnée à la réussite des tests d'interopérabilité, selon la page officielle.</p>
   </section>
   <script is:inline type="module" src="/directory.js"></script>
@@ -52,13 +57,18 @@ const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: no
 
 <style>
   .directory-section { display: grid; gap: 1rem; }
-  .directory-meta { display: grid; grid-template-columns: 9rem 9rem 1fr 1fr; gap: .75rem; }
+  .directory-meta { display: grid; max-width: 22rem; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
   .directory-meta > div { overflow: hidden; border: 1px solid var(--line); border-radius: .9rem; padding: 1rem; background: rgba(255,255,255,.8); box-shadow: 0 .4rem 1.3rem rgba(41,57,86,.04); }
   .directory-meta > div:first-child { border-color: color-mix(in srgb, var(--success) 22%, var(--line)); background: linear-gradient(145deg, var(--success-soft), #fff); }
   .directory-meta > div:nth-child(2) { border-color: color-mix(in srgb, var(--amber) 22%, var(--line)); background: linear-gradient(145deg, var(--amber-soft), #fff); }
   .directory-meta strong { display: block; color: var(--bright); font-size: 2rem; line-height: 1; }
   .directory-meta span { color: var(--muted); font: .57rem/1.4 var(--font-mono); text-transform: uppercase; }
-  .directory-meta code { display: block; overflow-wrap: anywhere; margin-top: .35rem; color: var(--signal); font: .53rem/1.45 var(--font-mono); }
+  .integrity-details { border: 1px solid var(--line); border-radius: .9rem; padding: .8rem 1rem; background: rgba(255,255,255,.66); }
+  .integrity-details summary { color: var(--muted); cursor: pointer; font-size: .66rem; font-weight: 680; }
+  .hash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: .8rem; }
+  .hash-grid > div { min-width: 0; border-radius: .65rem; padding: .7rem; background: var(--surface-2); }
+  .hash-grid span { color: var(--muted); font: .57rem/1.4 var(--font-mono); text-transform: uppercase; }
+  .hash-grid code { display: block; overflow-wrap: anywhere; margin-top: .35rem; color: var(--signal); font: .53rem/1.45 var(--font-mono); }
   .directory-controls { display: grid; grid-template-columns: 1fr 15rem auto; gap: 1rem; align-items: end; border: 1px solid color-mix(in srgb, var(--signal) 18%, var(--line)); border-radius: 1rem; padding: 1rem; background: linear-gradient(105deg, var(--signal-soft), #fff 50%); }
   .directory-controls label { display: grid; gap: .4rem; }
   .directory-controls label span { color: var(--muted); font: .58rem/1 var(--font-mono); text-transform: uppercase; }
@@ -78,5 +88,5 @@ const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: no
   .source-note { margin-block: 1rem 3rem; color: var(--muted); font-size: .7rem; }
   .source-note a { color: var(--signal); text-decoration: underline; }
   @media (max-width: 850px) { .directory-meta { grid-template-columns: 1fr 1fr; } .directory-controls { grid-template-columns: 1fr 12rem; } .directory-controls p { grid-column: 1 / -1; } }
-  @media (max-width: 560px) { .directory-meta, .directory-controls { grid-template-columns: 1fr; } .directory-controls p { grid-column: auto; } .directory-row { grid-template-columns: 1fr auto; } .directory-state { grid-column: 1 / -1; } }
+  @media (max-width: 560px) { .directory-meta, .directory-controls, .hash-grid { grid-template-columns: 1fr; } .directory-controls p { grid-column: auto; } .directory-row { grid-template-columns: 1fr auto; } .directory-state { grid-column: 1 / -1; } }
 </style>

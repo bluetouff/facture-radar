@@ -12,6 +12,8 @@ export function getStaticPaths() {
 
 const { platform } = Astro.props;
 const coverage = documentationCoverage(platform);
+const detailLevel = coverage >= 75 ? "Très détaillée" : coverage >= 50 ? "Bien renseignée" : "Partielle";
+const targetLabels = { micro: "indépendants", tpe: "TPE", pme: "PME", eti: "ETI", ge: "grandes entreprises" } as const;
 const platformIndex = Math.max(0, platforms.findIndex((candidate) => candidate.slug === platform.slug));
 const profileTone = `tone-${platformIndex % 6}`;
 const initials = platform.displayName
@@ -30,15 +32,15 @@ const linkedSources = sources.filter((source) => linkedSourceIds.has(source.id))
 const rows = [
   ["Statut DGFiP", platform.officialStatus],
   ["Date d'immatriculation", platform.registeredAt],
-  ["Prix du parcours étudié", platform.pricing],
+  ["Prix de l'offre étudiée", platform.pricing],
   ["Volume inclus", platform.allowance],
   ["Émission", platform.sendsInvoices],
   ["Réception", platform.receivesInvoices],
   ["E-reporting", platform.eReporting],
   ["Compte bancaire requis", platform.bankAccountRequired],
-  ["Accès expert-comptable", platform.accountantAccess],
+  ["Accès pour le comptable", platform.accountantAccess],
   ["API publique", platform.publicApi],
-  ["Export documenté", platform.exportDocumented],
+  ["Export des données", platform.exportDocumented],
   ["Intégrations", platform.integrations],
   ["Formats", platform.formats],
   ["Pays d'hébergement", platform.hostingCountries],
@@ -48,12 +50,12 @@ const rows = [
 ---
 
 <BaseLayout
-  title={`${platform.displayName} : dossier de preuve | PA Check`}
-  description={`Prix, fonctions, dépendances et inconnues documentées pour ${platform.displayName}, plateforme agréée de facturation électronique.`}
+  title={`${platform.displayName} : prix, fonctions et informations utiles | PA Check`}
+  description={`Prix, fonctions, conditions et points à confirmer pour ${platform.displayName}, plateforme agréée de facturation électronique.`}
 >
   <section class:list={["shell", "profile-hero", profileTone]}>
     <div class="profile-copy">
-      <a class="back-link" href="/plateformes/">← {platforms.length} fiches de preuve</a>
+      <a class="back-link" href="/plateformes/">← {platforms.length} plateformes étudiées</a>
       <div class="profile-heading">
         <div class="profile-monogram" aria-hidden="true"><span>{initials}</span></div>
         <div>
@@ -63,24 +65,24 @@ const rows = [
       </div>
       <span class="official-name">{platform.officialName}</span>
       <p>{platform.summary}</p>
-      <div class="tag-row">{platform.targets.map((target) => <span class="tag">{target}</span>)}</div>
+      <div class="tag-row">{platform.targets.map((target) => <span class="tag">{targetLabels[target]}</span>)}</div>
     </div>
     <div class="profile-stamp">
       <div class="stamp-head"><EvidenceBadge status="official" label="Liste DGFiP" /><span>Revue active</span></div>
-      <div class="coverage-ring" style={`--coverage: ${coverage * 3.6}deg`} aria-label={`${coverage} % de couverture documentaire`}>
-        <div><strong>{coverage}</strong><small>%</small></div>
+      <div class="coverage-ring" style={`--coverage: ${coverage * 3.6}deg`} aria-label={`${sourceCount(platform)} sources publiques consultées`}>
+        <div><strong>{sourceCount(platform)}</strong><small>sources</small></div>
       </div>
-      <span class="coverage-label">Couverture documentaire</span>
+      <span class="coverage-label">Informations publiques consultées</span>
       <div class="stamp-meta">
-        <span><strong>{sourceCount(platform)}</strong> pièces liées</span>
-        <span><strong>25.08.26</strong> dernière revue</span>
+        <span><strong>{detailLevel}</strong> niveau d'information</span>
+        <span><strong>25.08.26</strong> mise à jour</span>
       </div>
     </div>
   </section>
 
   <section class="shell profile-layout">
     <article>
-      <header class="matrix-head"><p class="mono-label">matrice de preuve</p><h2>Ce qui est établi, déclaré ou absent.</h2></header>
+      <header class="matrix-head"><p class="mono-label">en détail</p><h2>Prix, fonctions et conditions connues.</h2></header>
       <div class="evidence-matrix">
         {rows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
       </div>
@@ -88,12 +90,12 @@ const rows = [
     <aside>
       <section class="unknown-panel">
         <p class="mono-label">avant de signer</p>
-        <h2>Points encore ouverts</h2>
+        <h2>À vérifier avant de choisir</h2>
         <ul>{platform.importantUnknowns.map((unknown) => <li>{unknown}</li>)}</ul>
       </section>
       <section class="source-panel">
-        <p class="mono-label">pièces rattachées</p>
-        <ol>{linkedSources.map((source) => <li><a href={source.url} rel="noopener"><strong>{source.title}</strong><span>{source.publisher} · consulté le {source.accessedAt}</span></a></li>)}</ol>
+        <p class="mono-label">sources consultées</p>
+        <ol>{linkedSources.map((source) => <li><a href={source.url} rel="noopener"><strong>{source.title}</strong><span>{source.publisher} · consulté le {source.accessedAt.split("-").reverse().join("/")}</span></a></li>)}</ol>
       </section>
       <a class="button" href={`/comparer/?ids=${platform.slug}`}>Ajouter à une comparaison</a>
     </aside>

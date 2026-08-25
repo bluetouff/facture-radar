@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PlatformCard from "../components/PlatformCard.astro";
-import ToolVerifier from "../components/ToolVerifier.astro";
+import ToolJourney from "../components/ToolJourney.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import ProofOrbit from "../components/ProofOrbit.astro";
 import { platforms } from "../data/platforms";
@@ -10,35 +10,35 @@ import directory from "../data/official-directory.json";
 ---
 
 <BaseLayout
-  title="PA Check | Vérifier l'outil de facturation d'un client"
-  description="Une réponse sourcée et directement transmissible pour savoir si l'outil de facturation d'un client peut être conservé."
+  title="PA Check | Choisir sa plateforme de facturation électronique"
+  description="Un guide simple pour vérifier son outil actuel ou trouver une plateforme de facturation adaptée à son activité."
 >
   <section class="hero-stage">
     <ProofOrbit />
     <div class="shell hero">
       <div class="hero-intro">
-        <span class="eyebrow">facturation électronique · pour les cabinets</span>
-        <h1>Votre client peut-il <strong>garder son outil&nbsp;?</strong></h1>
-        <p class="hero-copy">Saisissez son logiciel. Vous obtenez une réponse sourcée et l'action exacte à lui transmettre.</p>
+        <span class="eyebrow">facturation électronique · indépendants et entreprises</span>
+        <h1>Comprenez votre <strong>parcours facture.</strong></h1>
+        <p class="hero-copy">Voyez si votre outil est réellement prêt, quelle plateforme agréée il utilise, ce qu'il reste à faire et combien cela peut coûter.</p>
       </div>
-      <div class="hero-verifier"><ToolVerifier /></div>
+      <div class="hero-verifier"><ToolJourney /></div>
       <div class="hero-support">
-        <div class="hero-guide" aria-label="Parcours du vérificateur">
-          <div><span><InterfaceIcon name="invoice" /></span><p><strong>Un outil</strong><small>Le logiciel déjà utilisé</small></p></div>
-          <div><span><InterfaceIcon name="verdict" /></span><p><strong>Un verdict</strong><small>Rester, confirmer ou agir</small></p></div>
-          <div><span><InterfaceIcon name="action" /></span><p><strong>Une action</strong><small>À transmettre au client</small></p></div>
+        <div class="hero-guide" aria-label="Les usages de PA Check">
+          <div><span><InterfaceIcon name="invoice" /></span><p><strong>Vous êtes déjà équipé</strong><small>Faites le point sur votre outil</small></p></div>
+          <div><span><InterfaceIcon name="verdict" /></span><p><strong>Vous devez choisir</strong><small>Obtenez jusqu'à trois options</small></p></div>
+          <div><span><InterfaceIcon name="action" /></span><p><strong>Vous voulez comparer</strong><small>Consultez prix et fonctions</small></p></div>
         </div>
-        <a class="quiet-link" href="/methodologie/">Voir comment les réponses sont vérifiées <InterfaceIcon name="arrow" /></a>
+        <a class="quiet-link" href="/methodologie/">Comprendre comment les informations sont mises à jour <InterfaceIcon name="arrow" /></a>
       </div>
     </div>
   </section>
 
-  <section class="shell stats-shell" aria-label="État du corpus">
+  <section class="shell stats-shell" aria-label="Les informations disponibles">
     <div class="stats-strip">
-      <div><strong>{platforms.length}</strong><span>outils vérifiables</span></div>
-      <div><strong>{sources.length}</strong><span>sources publiques liées</span></div>
-      <div><strong>0</strong><span>donnée client transmise</span></div>
-      <div><strong>{directory.approved.length}</strong><span>plateformes dans l'annuaire</span></div>
+      <div><strong>{platforms.length}</strong><span>plateformes étudiées en détail</span></div>
+      <div><strong>{sources.length}</strong><span>sources publiques consultables</span></div>
+      <div><strong>0</strong><span>donnée personnelle demandée</span></div>
+      <div><strong>{directory.approved.length}</strong><span>plateformes agréées recensées</span></div>
     </div>
   </section>
 
@@ -46,17 +46,17 @@ import directory from "../data/official-directory.json";
     <div class="shell">
       <header class="section-head">
         <div>
-          <p class="mono-label">périmètre honnête</p>
-          <h2>Quinze acteurs vérifiés en profondeur.</h2>
+          <p class="mono-label">notre sélection</p>
+          <h2>Quinze plateformes examinées en détail.</h2>
         </div>
-        <p>Nous préférons une réponse vérifiable sur quinze parcours à une recommandation approximative sur toute la liste officielle.</p>
+        <p>Prix, fonctions, intégrations et points à confirmer sont regroupés dans une fiche claire pour chaque plateforme.</p>
       </header>
       <div class="platform-grid">
         {platforms.slice(0, 6).map((platform, index) => <PlatformCard platform={platform} index={index} />)}
       </div>
       <div class="hero-actions">
-        <a class="button secondary" href="/plateformes/">Voir les {platforms.length} dossiers</a>
-        <a class="button secondary" href="/annuaire/">Parcourir la liste DGFiP</a>
+        <a class="button secondary" href="/plateformes/">Voir les {platforms.length} plateformes</a>
+        <a class="button secondary" href="/annuaire/">Consulter l'annuaire officiel</a>
       </div>
     </div>
   </section>
@@ -65,22 +65,22 @@ import directory from "../data/official-directory.json";
     <div class="shell">
       <header class="section-head">
         <div>
-          <p class="mono-label">réponse immédiate</p>
-          <h2>La complexité reste derrière l'écran.</h2>
+          <p class="mono-label">votre point de départ</p>
+          <h2>Commencez par votre situation.</h2>
         </div>
-        <p>Pas de note sur 100 et pas de pondération à régler. Une preuve absente donne « à confirmer », jamais un faux feu vert.</p>
+        <p>Quelques informations suffisent pour trouver la page ou l'outil qui vous sera réellement utile.</p>
       </header>
       <div class="method-steps">
-        <article><span>01</span><h3>Un nom</h3><p>Le logiciel ou la plateforme déjà utilisé par le client.</p></article>
-        <article><span>02</span><h3>Un verdict</h3><p>Rester, confirmer un point précis, ou agir.</p></article>
-        <article><span>03</span><h3>Une action</h3><p>La prochaine démarche, rédigée en langage client.</p></article>
-        <article><span>04</span><h3>Les preuves</h3><p>Les sources et leur date restent disponibles en second niveau.</p></article>
+        <article><span>01</span><h3>Votre outil actuel</h3><p>Recherchez son nom pour savoir où vous en êtes.</p></article>
+        <article><span>02</span><h3>Votre activité</h3><p>Indiquez votre taille et votre volume de factures.</p></article>
+        <article><span>03</span><h3>Votre priorité</h3><p>Gratuité, travail avec votre comptable, API ou international.</p></article>
+        <article><span>04</span><h3>Vos options</h3><p>Consultez les plateformes pertinentes et les points à confirmer.</p></article>
       </div>
     </div>
   </section>
 
   <section class="shell section">
-    <div class="notice"><strong>Point de départ éditorial.</strong> Ce projet prolonge l'enquête l0g <a href="https://l0g.fr/publications/grand-peage-facture/">Le grand péage de la facture</a>. Les constats de l'enquête deviennent ici des critères testables : coût réel, chaîne de données, réversibilité et continuité.</div>
+    <div class="notice"><strong>Pourquoi ce site existe.</strong> PA Check prolonge l'enquête l0g <a href="https://l0g.fr/publications/grand-peage-facture/">Le grand péage de la facture</a>. Il aide chacun à regarder les coûts, les fonctions utiles et les conditions de sortie avant de choisir.</div>
   </section>
 </BaseLayout>
 
@@ -95,6 +95,9 @@ import directory from "../data/official-directory.json";
   .hero-intro { grid-area: intro; }
   .hero-verifier { grid-area: verifier; align-self: center; position: relative; z-index: 2; }
   .hero-support { grid-area: support; }
+  .hero.journey-expanded { grid-template-columns: 1fr; grid-template-areas: "verifier"; padding-block: clamp(2rem, 4vw, 3.5rem); }
+  .hero.journey-expanded .hero-intro, .hero.journey-expanded .hero-support { display: none; }
+  .hero.journey-expanded .hero-verifier { width: 100%; }
   .hero-guide { display: grid; max-width: 35rem; gap: .55rem; }
   .hero-guide > div { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: center; border: 1px solid rgba(190,202,255,.16); border-radius: var(--radius-md); padding: .75rem .8rem; background: rgba(255,255,255,.055); backdrop-filter: blur(12px); }
   .hero-guide > div > span { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: .65rem; background: rgba(142,161,255,.14); color: #bdc7ff; }
