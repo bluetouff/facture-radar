@@ -6,8 +6,8 @@ L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte, sans 
 
 ## Ce que propose le site
 
-- sept parcours détaillés pour Tiime, Sage 50, Abby, Indy, Pennylane, Qonto et SuperPDP, avec circuit, échéances, coût minimum connu, actions et sources consultables ;
-- une vérification courte pour les autres outils du corpus, sans transformer une information absente en verdict négatif ;
+- quinze parcours détaillés, avec circuit, échéances, coût minimum connu, actions et sources consultables ;
+- un traitement distinct des offres sur devis, sans faux zéro ni projection lorsque le minimum public manque ;
 - trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
 - 15 fiches détaillées, chacune reliée à des sources publiques et datées ;
 - une sélection explicite couvrant les indépendants, TPE, PME, cabinets comptables, ETI et grandes entreprises ;

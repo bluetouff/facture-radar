@@ -5,7 +5,7 @@ import InterfaceIcon from "./InterfaceIcon.astro";
 
 const suggestions = [...new Set(knownTools.flatMap((tool) => [tool.label, ...tool.aliases]))]
   .sort((a, b) => a.localeCompare(b, "fr"));
-const quickTools = journeyProfiles.map((profile) => profile.toolLabel);
+const quickTools = journeyProfiles.slice(0, 7).map((profile) => profile.toolLabel);
 ---
 
 <div class="tool-verifier">
@@ -140,7 +140,7 @@ const quickTools = journeyProfiles.map((profile) => profile.toolLabel);
       <InterfaceIcon name="action" />
       <span><small>À faire maintenant</small><p id="tool-next-action"></p></span>
     </div>
-    <p class="vertical-note">Le parcours détaillé est actuellement disponible pour {journeyProfiles.length} outils. Les autres conservent cette vérification essentielle pendant que leur parcours est documenté.</p>
+    <p class="vertical-note">Les {journeyProfiles.length} plateformes étudiées disposent d'un parcours détaillé. Les autres logiciels conservent une vérification courte lorsqu'une édition ou un raccordement reste à confirmer.</p>
     <div class="verdict-actions">
       <button type="button" id="copy-tool-answer"><InterfaceIcon name="copy" /> Copier le résumé</button>
       <a id="tool-profile-link" href="/diagnostic/">Voir les plateformes étudiées</a>
@@ -304,14 +304,24 @@ const quickTools = journeyProfiles.map((profile) => profile.toolLabel);
       card.append(element("span", deadline.label), element("strong", deadline.date), element("p", deadline.detail));
       return card;
     }));
-    paCost.textContent = `${formatEuro(journey.cost.paMonthlySurcharge)} HT`;
+    paCost.textContent = journey.cost.paMonthlySurcharge === null
+      ? "À confirmer"
+      : `${formatEuro(journey.cost.paMonthlySurcharge)} HT`;
+    paCost.dataset.known = journey.cost.paMonthlySurcharge === null ? "false" : "true";
     costLabel.textContent = journey.cost.label;
-    costHorizons.replaceChildren(...journey.cost.horizons.map((horizon) => {
-      const card = document.createElement("div");
-      const amount = journey.cost.baseMonthlyFrom === 0 ? `${formatEuro(horizon.minimum)} HT` : `dès ${formatEuro(horizon.minimum)} HT`;
-      card.append(element("span", `${horizon.months} mois`), element("strong", amount));
-      return card;
-    }));
+    costHorizons.dataset.known = journey.cost.baseMonthlyFrom === null ? "false" : "true";
+    costHorizons.replaceChildren(...(journey.cost.horizons.length > 0
+      ? journey.cost.horizons.map((horizon) => {
+          const card = document.createElement("div");
+          const amount = journey.cost.baseMonthlyFrom === 0 ? `${formatEuro(horizon.minimum)} HT` : `dès ${formatEuro(horizon.minimum)} HT`;
+          card.append(element("span", `${horizon.months} mois`), element("strong", amount));
+          return card;
+        })
+      : [(() => {
+          const card = document.createElement("div");
+          card.append(element("span", "Projection 12, 24 et 36 mois"), element("strong", "Impossible sans minimum public"));
+          return card;
+        })()]));
     costCaveat.textContent = journey.cost.caveat;
     actions.replaceChildren(...journey.actions.map((action) => {
       const item = document.createElement("li");
@@ -342,8 +352,9 @@ const quickTools = journeyProfiles.map((profile) => profile.toolLabel);
       ...journey.nodes.map((node) => `${node.label} : ${node.value}`),
       "", "Échéances",
       ...journey.deadlines.map((deadline) => `${deadline.label} : ${deadline.date}`),
-      "", `Surcoût PA : ${formatEuro(journey.cost.paMonthlySurcharge)} HT par mois`,
+      "", `Surcoût PA : ${journey.cost.paMonthlySurcharge === null ? "à confirmer" : `${formatEuro(journey.cost.paMonthlySurcharge)} HT par mois`}`,
       ...journey.cost.horizons.map((horizon) => `${horizon.months} mois : ${journey.cost.baseMonthlyFrom === 0 ? "" : "dès "}${formatEuro(horizon.minimum)} HT`),
+      ...(journey.cost.baseMonthlyFrom === null ? ["Projection 12, 24 et 36 mois : impossible sans minimum public"] : []),
       journey.cost.caveat,
       "", "Prochaines étapes",
       ...journey.actions.map((action, index) => `${index + 1}. ${action.title} : ${action.detail}`),
@@ -508,8 +519,10 @@ const quickTools = journeyProfiles.map((profile) => profile.toolLabel);
   .cost-lead { display: flex; justify-content: space-between; gap: 1rem; align-items: end; margin-top: .9rem; }
   .cost-lead span { color: var(--muted); font-size: .61rem; }
   .cost-lead strong { color: var(--success); font-size: 1.35rem; letter-spacing: -.04em; }
+  .cost-lead strong[data-known="false"] { color: var(--amber); font-size: 1rem; letter-spacing: 0; }
   .cost-block > p { margin: .5rem 0 0; color: var(--paper); font-size: .65rem; }
   .cost-horizons { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; margin-top: .75rem; }
+  .cost-horizons[data-known="false"] { grid-template-columns: 1fr; }
   .cost-horizons > :global(div) { display: grid; border-radius: .55rem; padding: .5rem; background: var(--surface); }
   .cost-horizons :global(span) { color: var(--muted); font-size: .5rem; }
   .cost-horizons :global(strong) { color: var(--bright); font-size: .62rem; }

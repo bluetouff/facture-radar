@@ -64,6 +64,14 @@
     "accessedAt": "2026-08-25"
   },
   {
+    "id": "cegid-supervision-2026",
+    "title": "Console de supervision de la facturation électronique",
+    "publisher": "Cegid",
+    "url": "https://www.cegid.com/fr/wp-content/uploads/sites/7/2026/03/inforgaphie-cpa-tableaudesuivi.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
     "id": "sage-pa-2026",
     "title": "Sage Plateforme Agréée",
     "publisher": "Sage France",
@@ -272,6 +280,30 @@
     "accessedAt": "2026-08-25"
   },
   {
+    "id": "sellsy-activation-2026",
+    "title": "Compléter le mandat d'émission sur la plateforme Sellsy PA",
+    "publisher": "Centre d'aide Sellsy",
+    "url": "https://help.sellsy.com/fr/articles/12674710-completer-le-mandat-d-emission-sur-la-plateforme-sellsy-pa",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sellsy-reception-2026",
+    "title": "Sellsy PA de réception et vous",
+    "publisher": "Centre d'aide Sellsy",
+    "url": "https://help.sellsy.com/fr/articles/11829292-sellsy-pa-de-reception-et-vous",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sellsy-pilot-2026",
+    "title": "Finaliser une facture électronique dans Sellsy",
+    "publisher": "Centre d'aide Sellsy",
+    "url": "https://help.sellsy.com/fr/articles/15654295-finaliser-une-facture-electronique-dans-sellsy",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
     "id": "superpdp-home-2026",
     "title": "Plateforme agréée de facturation électronique",
     "publisher": "SuperPDP",
@@ -328,6 +360,22 @@
     "accessedAt": "2026-08-25"
   },
   {
+    "id": "generix-readiness-2026",
+    "title": "Calendrier de la facturation électronique 2026-2027 par taille d'entreprise",
+    "publisher": "Generix Group",
+    "url": "https://www.generixgroup.com/fr/blog/calendrier-facturation-electronique-2026-2027-par-taille",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "generix-onboarding-2026",
+    "title": "Onboarding Services",
+    "publisher": "Generix Group",
+    "url": "https://www.generixgroup.com/fr/edi-services-facturation-electronique/onboarding-services",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
     "id": "esker-demo-2026",
     "title": "Démonstration facturation électronique",
     "publisher": "Esker",
@@ -372,6 +420,22 @@
     "title": "Rapport annuel 2025",
     "publisher": "Cegedim",
     "url": "https://www.cegedim.fr/Docs_Communiques/RA_FR_2025.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "cegedim-sy-business-2026",
+    "title": "Facturation électronique avec SY business",
+    "publisher": "Cegedim Business Services",
+    "url": "https://www.cegedim-business-services.com/facture-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "cegedim-readiness-2026",
+    "title": "Réforme de la facturation électronique : ce qu'il faut savoir avant le 1er septembre 2026",
+    "publisher": "Cegedim Business Services",
+    "url": "https://www.cegedim-business-services.com/factures-achats/reforme-de-la-facturation-electronique-ce-que-vous-devez-savoir-avant-le-1er-septembre-2026/",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   }

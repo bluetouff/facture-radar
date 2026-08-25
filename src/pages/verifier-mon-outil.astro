@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ToolJourney from "../components/ToolJourney.astro";
-import { platforms } from "../data/platforms";
 import { journeyProfiles } from "../data/journey-profiles";
 ---
 
@@ -25,7 +24,7 @@ import { journeyProfiles } from "../data/journey-profiles";
         <li><strong>Vos dates et votre budget</strong><span>Les échéances applicables et les montants publics connus.</span></li>
         <li><strong>Vos prochaines étapes</strong><span>Des actions courtes adaptées à votre situation.</span></li>
       </ol>
-      <p class="scope-note">Le parcours complet couvre maintenant {journeyProfiles.length} outils. Les {platforms.length - journeyProfiles.length} autres fiches conservent une vérification plus courte pendant leur documentation détaillée.</p>
+      <p class="scope-note">Les {journeyProfiles.length} plateformes étudiées disposent maintenant d'un parcours complet, avec un traitement explicite des tarifs sur devis et des activations qui dépendent d'un projet d'intégration.</p>
     </aside>
   </section>
 

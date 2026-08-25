@@ -28,8 +28,8 @@ export interface JourneyDeadline {
 }
 
 export interface JourneyCost {
-  baseMonthlyFrom: number;
-  paMonthlySurcharge: number;
+  baseMonthlyFrom: number | null;
+  paMonthlySurcharge: number | null;
   horizons: Array<{ months: 12 | 24 | 36; minimum: number }>;
   label: string;
   caveat: string;
@@ -114,7 +114,8 @@ function activationState(answer: ActivationAnswer): JourneyNodeState {
   return "confirm";
 }
 
-function horizons(baseMonthlyFrom: number): JourneyCost["horizons"] {
+function horizons(baseMonthlyFrom: number | null): JourneyCost["horizons"] {
+  if (baseMonthlyFrom === null) return [];
   return ([12, 24, 36] as const).map((months) => ({ months, minimum: baseMonthlyFrom * months }));
 }
 

@@ -5,8 +5,8 @@ import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-pr
 import { platforms } from "../src/data/platforms.ts";
 import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 
-test("sept parcours détaillés correspondent exactement aux produits étudiés", () => {
-  assert.equal(journeyProfiles.length, 7);
+test("les quinze plateformes étudiées ont un parcours détaillé", () => {
+  assert.equal(journeyProfiles.length, 15);
   assert.equal(findJourneyProfile("Tiime"), "tiime");
   assert.equal(findJourneyProfile("Sage50"), "sage-50");
   assert.equal(findJourneyProfile("Abby"), "abby");
@@ -14,6 +14,14 @@ test("sept parcours détaillés correspondent exactement aux produits étudiés"
   assert.equal(findJourneyProfile("Pennylane"), "pennylane");
   assert.equal(findJourneyProfile("Qonto Facturation"), "qonto");
   assert.equal(findJourneyProfile("SUPER PDP"), "superpdp");
+  assert.equal(findJourneyProfile("Sellsy"), "sellsy");
+  assert.equal(findJourneyProfile("Ingeneo"), "septeo");
+  assert.equal(findJourneyProfile("Cegid"), "cegid");
+  assert.equal(findJourneyProfile("MyU"), "myunisoft");
+  assert.equal(findJourneyProfile("SAP PA"), "sap");
+  assert.equal(findJourneyProfile("Generix"), "generix");
+  assert.equal(findJourneyProfile("Esker"), "esker");
+  assert.equal(findJourneyProfile("SY business"), "cegedim");
   assert.equal(findJourneyProfile("Sage"), null);
   assert.equal(findJourneyProfile("Tiime Expert"), null);
   assert.equal(findJourneyProfile("Sage 100"), null);
@@ -85,10 +93,36 @@ test("le coût Sage 50 est présenté comme un minimum, pas comme un devis", () 
 
 test("un outil hors vertical conserve le vérificateur générique", () => {
   assert.equal(buildInvoiceJourney(platforms, {
-    tool: "Sellsy",
+    tool: "Teogest",
     audience: "micro",
     activation: "unknown",
   }), null);
+});
+
+test("une offre sur devis ne fabrique ni coût nul ni projection", () => {
+  const journey = buildInvoiceJourney(platforms, { tool: "SAP", audience: "eti-ge", activation: "yes" });
+  assert.ok(journey);
+  assert.equal(journey.cost.baseMonthlyFrom, null);
+  assert.equal(journey.cost.paMonthlySurcharge, null);
+  assert.deepEqual(journey.cost.horizons, []);
+  assert.match(journey.cost.caveat, /devis/i);
+});
+
+test("Sellsy distingue le prix d'appel par utilisateur du surcoût PA", () => {
+  const journey = buildInvoiceJourney(platforms, { tool: "Sellsy", audience: "tpe-pme", activation: "yes" });
+  assert.ok(journey);
+  assert.equal(journey.cost.baseMonthlyFrom, 49);
+  assert.equal(journey.cost.paMonthlySurcharge, 0);
+  assert.deepEqual(journey.cost.horizons.map((horizon) => horizon.minimum), [588, 1176, 1764]);
+  assert.match(journey.cost.caveat, /un seul utilisateur/i);
+});
+
+test("MyUnisoft ne devient pas prêt tant que l'e-reporting reste non documenté", () => {
+  const journey = buildInvoiceJourney(platforms, { tool: "MyUnisoft", audience: "tpe-pme", activation: "yes" });
+  assert.ok(journey);
+  assert.equal(journey.status, "confirm");
+  assert.match(journey.headline, /e-reporting/i);
+  assert.ok(journey.actions.some((action) => /e-reporting/i.test(action.title)));
 });
 
 test("Pennylane distingue le plan micro du prix d'appel des autres entreprises", () => {

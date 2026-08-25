@@ -97,14 +97,21 @@ for (const slug of slugs) {
 
 const journeyIds = new Set<string>();
 const journeyAliases = new Set<string>();
+const journeySlugs = new Set<string>();
 for (const profile of journeyProfiles) {
   if (journeyIds.has(profile.id)) throw new Error(`Parcours dupliqué : ${profile.id}`);
   journeyIds.add(profile.id);
   if (!slugs.has(profile.platformSlug)) throw new Error(`Le parcours ${profile.id} référence une fiche absente : ${profile.platformSlug}`);
+  if (journeySlugs.has(profile.platformSlug)) throw new Error(`Plusieurs parcours couvrent la même fiche : ${profile.platformSlug}`);
+  journeySlugs.add(profile.platformSlug);
   for (const alias of profile.aliases) {
     const normalizedAlias = alias.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("fr").replace(/[^a-z0-9]+/g, " ").trim();
     if (journeyAliases.has(normalizedAlias)) throw new Error(`Alias de parcours dupliqué : ${alias}`);
     journeyAliases.add(normalizedAlias);
+  }
+  for (const [audience, cost] of Object.entries(profile.costByAudience)) {
+    if (cost.baseMonthlyFrom !== null && cost.baseMonthlyFrom < 0) throw new Error(`${profile.id} : coût négatif pour ${audience}`);
+    if (cost.paMonthlySurcharge !== null && cost.paMonthlySurcharge < 0) throw new Error(`${profile.id} : surcoût PA négatif pour ${audience}`);
   }
   for (const sourceId of collectJourneySourceIds(profile)) {
     if (!sourceIds.has(sourceId)) throw new Error(`Source de parcours inconnue ${sourceId} pour ${profile.id}`);
@@ -114,6 +121,9 @@ for (const profile of journeyProfiles) {
       throw new Error(`${profile.id} : ${sourceId} a été consultée après la date de contrôle du parcours`);
     }
   }
+}
+if (journeySlugs.size !== checkedPlatforms.length) {
+  throw new Error(`Chaque fiche doit avoir un parcours détaillé : ${journeySlugs.size}/${checkedPlatforms.length}`);
 }
 
 for (const source of checkedSources) {
