@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://facture.l0g.fr/sitemap.xml
+Sitemap: https://pa.l0g.fr/sitemap.xml

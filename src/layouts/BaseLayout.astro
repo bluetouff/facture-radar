@@ -2,6 +2,8 @@
 import "@fontsource-variable/inter";
 import "@fontsource-variable/jetbrains-mono";
 import "../styles/global.css";
+import InterfaceIcon from "../components/InterfaceIcon.astro";
+import { platforms } from "../data/platforms";
 
 interface Props {
   title: string;
@@ -11,12 +13,12 @@ interface Props {
 
 const { title, description, canonical = Astro.url.pathname } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
-const nav: Array<[string, string]> = [
-  ["/diagnostic/", "Vérifier mon parcours"],
-  ["/plateformes/", "12 fiches de preuve"],
-  ["/comparer/", "Comparer"],
-  ["/annuaire/", "Annuaire DGFiP"],
-  ["/methodologie/", "Méthode"],
+const nav = [
+  { href: "/verifier-mon-outil/", label: "Vérifier un outil", shortLabel: "Vérifier" },
+  { href: "/diagnostic/", label: "Comparer si besoin", shortLabel: "Comparer" },
+  { href: "/plateformes/", label: `${platforms.length} fiches`, shortLabel: "Fiches" },
+  { href: "/annuaire/", label: "Annuaire DGFiP", shortLabel: "Annuaire" },
+  { href: "/methodologie/", label: "Méthode", shortLabel: "Méthode" },
 ];
 ---
 
@@ -28,7 +30,7 @@ const nav: Array<[string, string]> = [
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#0b1114" />
+    <meta name="theme-color" content="#18313a" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self'; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
@@ -43,20 +45,19 @@ const nav: Array<[string, string]> = [
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
-    <div class="signal-line" aria-hidden="true"></div>
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href="/" aria-label="Facture Radar, accueil">
-          <span class="brand-mark">FR<span>/</span>26</span>
-          <span class="brand-copy"><strong>Facture Radar</strong><small>vérificateur de parcours</small></span>
+        <a class="brand" href="/" aria-label="PA Check, accueil">
+          <span class="brand-mark"><InterfaceIcon name="invoice" /></span>
+          <span class="brand-copy"><strong>PA <span>/ CHECK</span></strong><small>vérificateur de parcours</small></span>
         </a>
-        <button class="theme-toggle" type="button" aria-label="Changer de thème" aria-pressed="false">
-          <span aria-hidden="true">◐</span>
-        </button>
+        <strong class="header-promise">Pour les cabinets comptables</strong>
       </div>
       <nav class="shell main-nav" aria-label="Navigation principale">
-        {nav.map(([href, label]) => (
-          <a href={href} aria-current={Astro.url.pathname.startsWith(href) ? "page" : undefined}>{label}</a>
+        {nav.map(({ href, label, shortLabel }) => (
+          <a href={href} aria-current={Astro.url.pathname.startsWith(href) ? "page" : undefined}>
+            <span class="nav-label">{label}</span><span class="nav-short">{shortLabel}</span>
+          </a>
         ))}
       </nav>
     </header>
@@ -66,7 +67,7 @@ const nav: Array<[string, string]> = [
     <footer class="site-footer">
       <div class="shell footer-grid">
         <div>
-          <p class="mono-label">facture//radar</p>
+          <p class="mono-label">pa//check</p>
           <strong>Choisir une plateforme, preuves à l'appui.</strong>
           <p>Calcul local, aucun compte, aucune facture déposée, aucun classement acheté.</p>
         </div>
@@ -80,6 +81,5 @@ const nav: Array<[string, string]> = [
       </div>
       <div class="shell footer-note">Données vérifiées le 25 août 2026 · liste DGFiP du 19 août 2026 · bêta publique</div>
     </footer>
-    <script is:inline type="module" src="/theme.js"></script>
   </body>
 </html>

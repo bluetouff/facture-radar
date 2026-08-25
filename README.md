@@ -1,19 +1,21 @@
-# Facture Radar
+# PA Check
 
-Facture Radar est un vérificateur public de parcours de facturation électronique. Il confronte les contraintes d'une entreprise aux preuves disponibles sur les plateformes agréées, sans collecte de facture, création de compte ni classement sponsorisé.
+PA Check est un vérificateur public de parcours de facturation électronique conçu pour les cabinets comptables. À partir du nom de l'outil déjà utilisé par un client, il indique si le parcours peut être conservé, doit être confirmé ou nécessite une action, sans collecte de facture, création de compte ni classement sponsorisé.
 
-Le nom est provisoire. Le moteur, le corpus et les URLs de données n'en dépendent pas.
+L'URL publique prévue est `https://pa.l0g.fr`. Le moteur, le corpus et les URLs de données restent indépendants de la marque.
 
 ## Ce qui constitue le produit
 
-- un diagnostic explicable qui refuse de convertir une information inconnue en compatibilité supposée ;
-- 12 dossiers enrichis, chacun relié à des sources publiques et datées ;
+- un vérificateur en une question, avec une réponse copiable pour le client et les preuves en second niveau ;
+- un diagnostic secondaire en trois questions, utilisé seulement lorsqu'il faut comparer des alternatives ;
+- 15 dossiers enrichis, chacun relié à des sources publiques et datées ;
+- une sélection explicite des acteurs selon leur portée documentée, la qualité des preuves publiques et la couverture des usages cabinets, TPE-PME et grands comptes ;
 - l'annuaire officiel complet, soit 148 plateformes approuvées et 18 en attente dans le relevé DGFiP du 19 août 2026 ;
 - un comparateur factuel sans note globale ;
 - deux exports JSON publics pour permettre la vérification et la réutilisation ;
 - une méthode, un schéma de données, des tests et un journal de changements publics.
 
-La différence recherchée n'est pas le nombre de logos. Elle repose sur la provenance champ par champ, les règles d'exclusion reproductibles, les inconnues visibles et la maintenance du corpus dans le temps.
+La différence recherchée n'est pas le nombre de logos. Elle repose sur une réponse immédiatement utilisable, alimentée par la provenance champ par champ, des règles fail closed et la maintenance du corpus dans le temps.
 
 ## Lancer le projet
 
@@ -44,9 +46,11 @@ Chaque champ enrichi porte un statut :
 - `declared` : affirmation de l'opérateur dont le périmètre ne peut pas être entièrement contrôlé ;
 - `non_documented` : preuve publique insuffisante à la date de revue.
 
-Un critère impératif inconnu est bloquant. `non_documented` ne signifie ni faux ni non conforme.
+Un critère impératif inconnu est bloquant. Un oui n'est utilisable que s'il porte le niveau `official` ou `documented` et au moins une source. `non_documented` ne signifie ni faux ni non conforme.
 
-Les données enrichies vivent dans `src/data/platforms.ts`. Les sources sont dans `src/data/sources.json`. L'import de l'annuaire DGFiP conserve l'URL, la date de publication et le SHA-256 du fichier source dans `src/data/official-directory.json`.
+Les données enrichies vivent dans `src/data/platforms.ts`. Les sources sont dans `src/data/sources.json`. La méthode de sélection et les preuves de portée sont dans `src/data/corpus-selection.json`. L'import de l'annuaire DGFiP conserve l'URL, la date de publication et le SHA-256 du fichier source dans `src/data/official-directory.json`.
+
+Le validateur vérifie notamment que les quinze fiches correspondent exactement à la sélection, que chaque preuve référence une source existante, que les dates d'immatriculation concordent avec la liste DGFiP et qu'aucune fonction réglementaire positive ne repose sur une déclaration faible ou une source absente.
 
 ## Limites
 

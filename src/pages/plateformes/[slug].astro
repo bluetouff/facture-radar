@@ -40,12 +40,12 @@ const rows = [
 ---
 
 <BaseLayout
-  title={`${platform.displayName} : dossier de preuve | Facture Radar`}
+  title={`${platform.displayName} : dossier de preuve | PA Check`}
   description={`Prix, fonctions, dépendances et inconnues documentées pour ${platform.displayName}, plateforme agréée de facturation électronique.`}
 >
   <section class="shell profile-hero">
     <div>
-      <a class="back-link" href="/plateformes/">← 12 fiches de preuve</a>
+      <a class="back-link" href="/plateformes/">← {platforms.length} fiches de preuve</a>
       <span class="eyebrow">dossier {platform.officialName}</span>
       <h1>{platform.displayName}</h1>
       <p>{platform.summary}</p>

@@ -1,0 +1,262 @@
+---
+import { knownTools } from "../lib/tool-verifier";
+import InterfaceIcon from "./InterfaceIcon.astro";
+
+const suggestions = [...new Set(knownTools.flatMap((tool) => [tool.label, ...tool.aliases]))]
+  .sort((a, b) => a.localeCompare(b, "fr"));
+const quickTools = ["Tiime", "Pennylane", "Sage", "Cegid", "Sellsy", "SuperPDP"];
+---
+
+<div class="tool-verifier">
+  <header class="tool-card-head">
+    <span class="tool-card-icon"><InterfaceIcon name="invoice" /></span>
+    <span><small>Vérification express</small><strong>Réponse fondée sur le corpus publié</strong></span>
+    <b>PA/01</b>
+  </header>
+  <form class="tool-search" id="tool-verifier-form">
+    <label for="tool-name">Quel outil utilise-t-il&nbsp;?</label>
+    <div class="tool-search-row">
+      <span class="search-icon"><InterfaceIcon name="search" /></span>
+      <input
+        id="tool-name"
+        name="tool"
+        type="text"
+        list="known-tools"
+        maxlength="80"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Tiime, Sage, Qonto, Sellsy…"
+        required
+      />
+      <button type="submit">Vérifier <InterfaceIcon name="arrow" /></button>
+    </div>
+    <datalist id="known-tools">
+      {suggestions.map((suggestion) => <option value={suggestion} />)}
+    </datalist>
+    <div class="quick-tools" aria-label="Outils fréquemment vérifiés">
+      <span>Accès rapide</span>
+      {quickTools.map((tool) => <button type="button" data-tool-example={tool}>{tool}</button>)}
+    </div>
+    <p class="privacy-line"><InterfaceIcon name="shield" /> Aucun compte, aucun document et aucune donnée envoyée.</p>
+  </form>
+
+  <section class="tool-result" id="tool-verifier-result" aria-live="polite" hidden>
+    <div class="verdict-head">
+      <span class="verdict-symbol" aria-hidden="true">
+        <InterfaceIcon name="check" class="status-icon status-keep" />
+        <InterfaceIcon name="alert" class="status-icon status-act" />
+        <InterfaceIcon name="question" class="status-icon status-unconfirmed" />
+      </span>
+      <span class="verdict-meta">
+        <span id="tool-verdict-label"></span>
+        <p id="tool-platform-name"></p>
+      </span>
+    </div>
+    <h2 id="tool-verdict-title"></h2>
+    <p class="verdict-explanation" id="tool-verdict-explanation"></p>
+
+    <div class="verdict-lines" id="tool-verdict-lines"></div>
+
+    <div class="next-action">
+      <InterfaceIcon name="action" />
+      <span><small>À faire maintenant</small><p id="tool-next-action"></p></span>
+    </div>
+
+    <div class="verdict-actions">
+      <button type="button" id="copy-client-answer" aria-live="polite"><InterfaceIcon name="copy" /> Copier pour le client</button>
+      <a id="tool-proof-link" href="/diagnostic/">Comparer si nécessaire <InterfaceIcon name="arrow" /></a>
+    </div>
+
+    <details id="tool-sources-details" hidden>
+      <summary><InterfaceIcon name="proof" /> Voir les preuves utilisées</summary>
+      <ul id="tool-source-list"></ul>
+    </details>
+  </section>
+</div>
+
+<script>
+  import { platforms } from "../data/platforms";
+  import sources from "../data/sources.json";
+  import { verifyKnownTool } from "../lib/tool-verifier";
+
+  const form = document.querySelector<HTMLFormElement>("#tool-verifier-form");
+  const input = document.querySelector<HTMLInputElement>("#tool-name");
+  const resultSection = document.querySelector<HTMLElement>("#tool-verifier-result");
+  const verdictLabel = document.querySelector<HTMLElement>("#tool-verdict-label");
+  const platformName = document.querySelector<HTMLElement>("#tool-platform-name");
+  const verdictTitle = document.querySelector<HTMLElement>("#tool-verdict-title");
+  const verdictExplanation = document.querySelector<HTMLElement>("#tool-verdict-explanation");
+  const verdictLines = document.querySelector<HTMLElement>("#tool-verdict-lines");
+  const nextAction = document.querySelector<HTMLElement>("#tool-next-action");
+  const copyButton = document.querySelector<HTMLButtonElement>("#copy-client-answer");
+  const quickToolButtons = document.querySelectorAll<HTMLButtonElement>("[data-tool-example]");
+  const proofLink = document.querySelector<HTMLAnchorElement>("#tool-proof-link");
+  const sourceDetails = document.querySelector<HTMLDetailsElement>("#tool-sources-details");
+  const sourceList = document.querySelector<HTMLElement>("#tool-source-list");
+
+  const verdictLabels = {
+    keep: "Vous pouvez rester",
+    act: "Action nécessaire",
+    unconfirmed: "À confirmer",
+  } as const;
+
+  let copyText = "";
+
+  const element = (tag: string, value: string, className?: string) => {
+    const node = document.createElement(tag);
+    node.textContent = value;
+    if (className) node.className = className;
+    return node;
+  };
+
+  const render = () => {
+    if (!input || !resultSection || !verdictLabel || !platformName || !verdictTitle || !verdictExplanation || !verdictLines || !nextAction || !proofLink || !sourceDetails || !sourceList) return;
+    const verification = verifyKnownTool(platforms, input.value);
+    resultSection.dataset.verdict = verification.verdict;
+    verdictLabel.textContent = verdictLabels[verification.verdict];
+    platformName.textContent = verification.tool?.label ?? `Outil absent des ${platforms.length} parcours documentés`;
+    verdictTitle.textContent = verification.headline;
+    verdictExplanation.textContent = verification.explanation;
+    nextAction.textContent = verification.action;
+
+    verdictLines.replaceChildren(...verification.lines.map((line) => {
+      const row = document.createElement("div");
+      row.dataset.state = line.state;
+      row.append(element("span", line.label), element("strong", line.value));
+      return row;
+    }));
+
+    proofLink.href = verification.platform ? `/plateformes/${verification.platform.slug}/` : "/diagnostic/";
+    proofLink.textContent = verification.platform ? "Ouvrir la fiche complète" : "Comparer les parcours documentés";
+
+    const sourceIds = new Set(verification.lines.flatMap((line) => line.evidence?.sourceIds ?? []));
+    const linkedSources = sources.filter((source) => sourceIds.has(source.id));
+    sourceList.replaceChildren(...linkedSources.map((source) => {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = source.url;
+      link.rel = "noopener";
+      link.textContent = `${source.title} · ${source.publisher}`;
+      item.append(link, element("small", `Consulté le ${source.accessedAt}`));
+      return item;
+    }));
+    sourceDetails.hidden = linkedSources.length === 0;
+
+    const checkedAt = verification.lines
+      .map((line) => line.evidence?.checkedAt)
+      .filter((date): date is string => Boolean(date))
+      .sort()
+      .at(-1);
+    copyText = [
+      "Facturation électronique : point sur l'outil du client",
+      `Outil : ${verification.tool?.label ?? "non documenté dans le corpus"}`,
+      `Verdict : ${verdictLabels[verification.verdict]}`,
+      verification.explanation,
+      `Action : ${verification.action}`,
+      ...verification.lines.map((line) => `${line.label} : ${line.value}`),
+      checkedAt ? `Preuves vérifiées le ${checkedAt}` : "",
+      ...linkedSources.map((source) => source.url),
+    ].filter(Boolean).join("\n");
+
+    resultSection.hidden = false;
+    resultSection.scrollIntoView({
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "nearest",
+    });
+  };
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    render();
+  });
+
+  quickToolButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!input) return;
+      input.value = button.dataset.toolExample ?? "";
+      render();
+    });
+  });
+
+  copyButton?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(copyText);
+      copyButton.textContent = "Réponse copiée";
+    } catch {
+      copyButton.textContent = "Copie refusée par le navigateur";
+    }
+  });
+</script>
+
+<style>
+  .tool-verifier { border: 1px solid var(--line-strong); background: var(--surface); box-shadow: 0 1.6rem 4.5rem var(--shadow); }
+  .tool-card-head { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; border-bottom: 1px solid var(--line); padding: .8rem 1rem; background: var(--surface-2); }
+  .tool-card-icon { display: grid; place-items: center; width: 2.35rem; height: 2.35rem; border: 1px solid var(--line-strong); color: var(--signal); }
+  .tool-card-head > span:nth-child(2) { display: grid; }
+  .tool-card-head small, .tool-card-head b { color: var(--accent); font: 750 .56rem/1.35 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+  .tool-card-head strong { color: var(--bright); font-size: .72rem; font-weight: 650; }
+  .tool-card-head b { color: var(--muted); }
+  .tool-search { padding: clamp(1.15rem, 3vw, 1.6rem); }
+  .tool-search > label { display: block; margin-bottom: .75rem; color: var(--bright); font-family: var(--font-serif); font-size: clamp(1.2rem, 2vw, 1.45rem); font-weight: 600; letter-spacing: -.018em; }
+  .tool-search-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; }
+  .search-icon { position: absolute; top: 50%; left: .85rem; z-index: 1; translate: 0 -50%; color: var(--muted); pointer-events: none; }
+  .tool-search input { min-width: 0; min-height: 3.45rem; border: 1px solid var(--line-strong); border-right: 0; border-radius: 0; padding: .8rem 1rem .8rem 2.8rem; outline: 0; background: #fff; color: var(--bright); }
+  .tool-search input:focus { border-color: var(--signal); box-shadow: inset 0 0 0 1px var(--signal); }
+  .tool-search button, .verdict-actions button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 3.45rem; border: 1px solid var(--navy); padding: .8rem 1rem; background: var(--navy); color: #fff; cursor: pointer; font: 750 .66rem/1 var(--font-mono); letter-spacing: .035em; text-transform: uppercase; }
+  .tool-search button :global(svg), .verdict-actions :global(svg) { width: 1rem; height: 1rem; }
+  .quick-tools { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: .7rem; }
+  .quick-tools > span { margin-right: .15rem; color: var(--muted); font: .56rem/1 var(--font-mono); text-transform: uppercase; }
+  .quick-tools button { min-height: 1.9rem; border: 1px solid var(--line); padding: .35rem .55rem; background: transparent; color: var(--paper); cursor: pointer; font: 650 .61rem/1 var(--font-sans); }
+  .quick-tools button:hover, .quick-tools button:focus-visible { border-color: var(--signal); color: var(--signal); }
+  .privacy-line { display: flex; gap: .5rem; align-items: center; margin: .8rem 0 0; color: var(--muted); font-size: .69rem; }
+  .privacy-line :global(svg) { flex: 0 0 auto; width: 1rem; height: 1rem; color: var(--signal); }
+  .tool-result { border-top: 1px solid var(--line); padding: clamp(1.15rem, 3vw, 1.6rem); }
+  .verdict-head { display: flex; gap: .75rem; align-items: center; }
+  .verdict-symbol { display: grid; flex: 0 0 auto; place-items: center; width: 2.8rem; height: 2.8rem; border: 1px solid currentColor; border-radius: 50%; }
+  .verdict-symbol :global(.status-icon) { display: none; }
+  .tool-result[data-verdict="keep"] .verdict-symbol { color: var(--signal); }
+  .tool-result[data-verdict="keep"] .verdict-symbol :global(.status-keep) { display: block; }
+  .tool-result[data-verdict="act"] .verdict-symbol { color: var(--danger); }
+  .tool-result[data-verdict="act"] .verdict-symbol :global(.status-act) { display: block; }
+  .tool-result[data-verdict="unconfirmed"] .verdict-symbol { color: var(--amber); }
+  .tool-result[data-verdict="unconfirmed"] .verdict-symbol :global(.status-unconfirmed) { display: block; }
+  .verdict-meta { display: grid; gap: .15rem; }
+  .verdict-meta > span { color: var(--bright); font: 750 .59rem/1.2 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+  .verdict-head p { margin: 0; color: var(--muted); font: .61rem/1.4 var(--font-mono); }
+  .tool-result h2 { max-width: 24ch; margin: 1rem 0 .55rem; color: var(--bright); font-family: var(--font-serif); font-size: clamp(1.55rem, 4vw, 2.1rem); font-weight: 600; line-height: 1.08; letter-spacing: -.025em; }
+  .verdict-explanation { margin: 0; color: var(--paper); font-size: .9rem; }
+  .verdict-lines { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 1.2rem; border: 1px solid var(--line); background: var(--line); }
+  .verdict-lines > :global(div) { position: relative; min-width: 0; padding: .75rem .75rem .75rem 1.55rem; background: var(--surface); }
+  .verdict-lines > :global(div)::before { position: absolute; top: .92rem; left: .72rem; width: .4rem; height: .4rem; border: 1px solid currentColor; border-radius: 50%; content: ""; }
+  .verdict-lines :global(span) { display: block; color: var(--muted); font: .54rem/1.3 var(--font-mono); text-transform: uppercase; }
+  .verdict-lines :global(strong) { display: block; overflow-wrap: anywhere; margin-top: .35rem; color: var(--paper); font-size: .72rem; }
+  .verdict-lines :global([data-state="yes"] strong) { color: var(--signal); }
+  .verdict-lines :global([data-state="no"] strong) { color: var(--danger); }
+  .verdict-lines :global([data-state="unknown"] strong) { color: var(--amber); }
+  .next-action { display: grid; grid-template-columns: auto 1fr; gap: .8rem; align-items: start; margin-top: 1rem; border: 1px solid color-mix(in srgb, var(--amber) 36%, var(--line)); padding: .85rem 1rem; background: color-mix(in srgb, var(--amber) 6%, var(--surface)); color: var(--amber); }
+  .next-action > :global(svg) { margin-top: .1rem; }
+  .next-action span { display: grid; }
+  .next-action small { color: var(--amber); font: 750 .56rem/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+  .next-action p { margin: .35rem 0 0; color: var(--paper); font-size: .82rem; }
+  .verdict-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+  .verdict-actions button, .verdict-actions a { min-height: 2.8rem; }
+  .verdict-actions button { border-color: var(--line-strong); background: transparent; color: var(--bright); }
+  .verdict-actions a { display: inline-flex; align-items: center; gap: .55rem; border: 1px solid var(--line-strong); padding: .7rem .9rem; color: var(--paper); font: 700 .62rem/1 var(--font-mono); }
+  details { margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .8rem; }
+  summary { color: var(--signal); cursor: pointer; font: 700 .64rem/1.4 var(--font-mono); }
+  summary :global(svg) { display: inline-block; width: 1rem; height: 1rem; margin-right: .35rem; vertical-align: -.25rem; }
+  details ul { display: grid; gap: .6rem; margin: .8rem 0 0; padding: 0; list-style: none; }
+  details :global(li) { display: grid; }
+  details :global(a) { color: var(--paper); font-size: .69rem; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--signal) 35%, transparent); text-underline-offset: .18em; }
+  details :global(small) { color: var(--muted); font: .54rem/1.4 var(--font-mono); }
+  @media (max-width: 620px) {
+    .tool-search-row { grid-template-columns: 1fr; gap: .55rem; }
+    .search-icon { top: 1.72rem; }
+    .tool-search input { border-right: 1px solid var(--line-strong); }
+    .quick-tools { gap: .35rem; }
+    .quick-tools > span { flex-basis: 100%; margin-bottom: .1rem; }
+    .verdict-lines { grid-template-columns: 1fr; }
+    .verdict-actions { display: grid; }
+    .verdict-actions button, .verdict-actions a { width: 100%; justify-content: center; }
+  }
+</style>

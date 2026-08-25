@@ -1,14 +1,20 @@
-import type { DiagnosticInput, MatchResult, Platform } from "../data/types.ts";
+import type { DiagnosticInput, Evidence, MatchResult, Platform } from "../data/types.ts";
 import { documentationCoverage } from "./evidence.ts";
 
+function trustedValue<T>(evidence: Evidence<T>): T | null {
+  if (evidence.value === null) return null;
+  if (evidence.sourceIds.length === 0) return null;
+  return evidence.status === "official" || evidence.status === "documented" ? evidence.value : null;
+}
+
 function annualCost(platform: Platform): number | null {
-  const pricing = platform.pricing.value;
+  const pricing = trustedValue(platform.pricing);
   if (!pricing || pricing.monthlyFrom === null) return null;
   return Math.round(pricing.monthlyFrom * 12 * 100) / 100;
 }
 
 function freeCapacityFits(platform: Platform, monthlyInvoices: number): boolean | null {
-  const allowance = platform.allowance.value;
+  const allowance = trustedValue(platform.allowance);
   if (!allowance) return null;
   if (allowance.unlimited) return true;
   if (allowance.monthlyInvoices !== null) return monthlyInvoices <= allowance.monthlyInvoices;
@@ -17,11 +23,12 @@ function freeCapacityFits(platform: Platform, monthlyInvoices: number): boolean 
 }
 
 function addUnknownOrBlock(
-  evidenceValue: boolean | null,
+  evidence: Evidence<boolean>,
   label: string,
   blockers: string[],
   unknowns: string[],
 ): boolean {
+  const evidenceValue = trustedValue(evidence);
   if (evidenceValue === true) return true;
   if (evidenceValue === false) {
     blockers.push(label);
@@ -45,7 +52,7 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
     reasons.push("Cible compatible avec la taille déclarée");
   }
 
-  const pricing = platform.pricing.value;
+  const pricing = trustedValue(platform.pricing);
   const capacityFits = freeCapacityFits(platform, input.monthlyInvoices);
   if (input.freeOnly) {
     if (!pricing || pricing.kind !== "free" || !pricing.freeFor.includes(input.size)) {
@@ -63,7 +70,7 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
   }
 
   if (input.noBankAccount) {
-    const bankRequirement = platform.bankAccountRequired.value;
+    const bankRequirement = trustedValue(platform.bankAccountRequired);
     if (bankRequirement === false) reasons.push("Aucun compte bancaire requis dans le parcours documenté");
     else if (bankRequirement === true) blockers.push("Un compte bancaire est requis");
     else {
@@ -73,13 +80,13 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
   }
 
   if (input.needsAccountantAccess) {
-    if (addUnknownOrBlock(platform.accountantAccess.value, "Accès expert-comptable", blockers, unknowns)) {
+    if (addUnknownOrBlock(platform.accountantAccess, "Accès expert-comptable", blockers, unknowns)) {
       reasons.push("Accès expert-comptable documenté");
     }
   }
 
   if (input.needsApi) {
-    const api = platform.publicApi.value;
+    const api = trustedValue(platform.publicApi);
     if (!api?.available) {
       blockers.push(api === null ? "API publique : preuve publique manquante" : "API publique non disponible");
       if (api === null) unknowns.push("API publique");
@@ -92,7 +99,7 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
   }
 
   if (input.needsInternationalReporting) {
-    if (addUnknownOrBlock(platform.eReporting.value, "E-reporting B2C et international", blockers, unknowns)) {
+    if (addUnknownOrBlock(platform.eReporting, "E-reporting B2C et international", blockers, unknowns)) {
       reasons.push("E-reporting documenté");
     }
   }
@@ -111,7 +118,7 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
       preferencePoints += 1;
       reasons.push("Couverture documentaire supérieure ou égale à 60 %");
     }
-    if (priority === "reversibility" && platform.exportDocumented.value === true && platform.commitmentMonths.value === 0) {
+    if (priority === "reversibility" && trustedValue(platform.exportDocumented) === true && trustedValue(platform.commitmentMonths) === 0) {
       preferencePoints += 1;
       reasons.push("Export documenté et absence d'engagement dans le parcours étudié");
     }

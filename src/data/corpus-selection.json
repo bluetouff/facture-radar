@@ -1,0 +1,135 @@
+{
+  "selectedAt": "2026-08-25",
+  "audience": "Cabinets d'expertise comptable français et leurs clients",
+  "method": [
+    "Présence dans la liste des plateformes approuvées publiée par la DGFiP",
+    "Portée publiée ou documentation publique distinctive, reliée à une source primaire de l'acteur",
+    "Documentation publique exploitable des fonctions de réception, d'émission et d'e-reporting",
+    "Couverture équilibrée des écosystèmes cabinets, TPE-PME et ETI-grands comptes"
+  ],
+  "selected": [
+    {
+      "slug": "cegid",
+      "segment": "cabinet-et-erp",
+      "reach": "750 000 clients dans 130 pays selon Cegid",
+      "reachSourceIds": ["cegid-about-2026"],
+      "reason": "Écosystème comptable et ERP très implanté, incluant des parcours Cegid et EBP."
+    },
+    {
+      "slug": "sage",
+      "segment": "cabinet-et-erp",
+      "reach": "Plus de deux millions de clients annoncés par Sage",
+      "reachSourceIds": ["sage-scale-2026"],
+      "reason": "Large parc de logiciels de gestion et documentation dédiée de la plateforme agréée."
+    },
+    {
+      "slug": "pennylane",
+      "segment": "cabinet-et-erp",
+      "reach": "Un million d'entreprises annoncé sur la page de facturation électronique",
+      "reachSourceIds": ["pennylane-main-2026"],
+      "reason": "Forte présence auprès des cabinets et des TPE-PME, avec documentation produit détaillée."
+    },
+    {
+      "slug": "tiime",
+      "segment": "cabinet-et-erp",
+      "reach": "Plus de 350 000 utilisateurs annoncés par Tiime",
+      "reachSourceIds": ["tiime-pa-2026"],
+      "reason": "Parcours cabinet et entrepreneur intégré, avec une offre gratuite et une documentation réglementaire riche."
+    },
+    {
+      "slug": "abby",
+      "segment": "tpe-pme",
+      "reach": "Plus de 100 000 indépendants annoncés par Abby",
+      "reachSourceIds": ["abby-home-2026"],
+      "reason": "Parcours gratuit très documenté pour les indépendants, avec émission, réception et e-reporting explicités."
+    },
+    {
+      "slug": "myunisoft",
+      "segment": "cabinet-et-erp",
+      "reach": "1 300 cabinets et 255 000 dossiers TPE-PME annoncés par MyUnisoft",
+      "reachSourceIds": ["myunisoft-home-2026", "myunisoft-press-2025"],
+      "reason": "Acteur conçu pour la production comptable et la gestion des mandats clients."
+    },
+    {
+      "slug": "septeo",
+      "segment": "cabinet-et-erp",
+      "reach": "Plus de 1 200 cabinets et 100 000 sociétés annoncés par Septeo",
+      "reachSourceIds": ["septeo-pa-2026"],
+      "reason": "Positionnement cabinet explicite, prix public et documentation de réversibilité."
+    },
+    {
+      "slug": "qonto",
+      "segment": "tpe-pme",
+      "reach": "Plus de 600 000 entreprises clientes annoncées en Europe",
+      "reachSourceIds": ["qonto-about-2026"],
+      "reason": "Très large base TPE-PME et parcours de facturation autonome documenté sans compte bancaire obligatoire."
+    },
+    {
+      "slug": "indy",
+      "segment": "tpe-pme",
+      "reach": "Plus de 100 000 utilisateurs annoncés dès juillet 2024",
+      "reachSourceIds": ["indy-scale-2024"],
+      "reason": "Acteur très visible auprès des indépendants, avec une offre de facturation gratuite documentée."
+    },
+    {
+      "slug": "sellsy",
+      "segment": "tpe-pme",
+      "reach": "Plus de 50 000 utilisateurs, 2 800 experts-comptables et 22 000 entreprises annoncés par Sellsy",
+      "reachSourceIds": ["sellsy-accountants-2026"],
+      "reason": "Forte présence TPE-PME et cabinet, avec documentation des intégrations comptables, de l'accès expert et de la PA."
+    },
+    {
+      "slug": "superpdp",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Portée client non publiée; compte et API documentés de 0 à plus de 100 000 factures mensuelles",
+      "reachSourceIds": ["superpdp-pricing-2026", "superpdp-features-2026"],
+      "reason": "Documentation publique particulièrement précise du compte, de l'API, des formats et de l'e-reporting."
+    },
+    {
+      "slug": "sap",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plus de 320 000 entreprises clientes annoncées dans plus de 180 pays",
+      "reachSourceIds": ["sap-scale-2026"],
+      "reason": "Écosystème ERP majeur et documentation officielle de la validation PA."
+    },
+    {
+      "slug": "generix",
+      "segment": "eti-et-grands-comptes",
+      "reach": "400 000 entreprises utilisatrices et 500 millions de factures annuelles annoncées",
+      "reachSourceIds": ["generix-pa-2026"],
+      "reason": "Spécialiste historique des flux EDI et e-invoicing à forte volumétrie."
+    },
+    {
+      "slug": "esker",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plus de 1 700 clients dans le monde documentés dans le rapport annuel 2023",
+      "reachSourceIds": ["esker-scale-2023"],
+      "reason": "Couverture des cycles clients et fournisseurs, formats et architecture publiquement documentés."
+    },
+    {
+      "slug": "cegedim",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plus d'un milliard de flux annuels et deux millions d'entreprises connectées annoncés",
+      "reachSourceIds": ["cegedim-annual-2026"],
+      "reason": "Acteur historique des échanges B2B avec une forte volumétrie et une couverture internationale."
+    }
+  ],
+  "replaced": [
+    {
+      "slug": "axonaut",
+      "reason": "Documentation utile, mais priorité inférieure aux acteurs retenus sur la portée et les parcours cabinets."
+    },
+    {
+      "slug": "dougs",
+      "reason": "Offre bien identifiée, mais couverture plus étroite que les écosystèmes cabinets retenus."
+    },
+    {
+      "slug": "macompta",
+      "reason": "Acteur pertinent, mais moins structurant que les parcours retenus dans le corpus actuel."
+    },
+    {
+      "slug": "shine",
+      "reason": "Parcours TPE utile, mais redondant avec les acteurs de grande portée déjà retenus sur ce segment."
+    }
+  ]
+}

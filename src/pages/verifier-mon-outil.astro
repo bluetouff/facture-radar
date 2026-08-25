@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ToolVerifier from "../components/ToolVerifier.astro";
+import { platforms } from "../data/platforms";
+---
+
+<BaseLayout
+  title="Vérifier l'outil d'un client | PA Check"
+  description="Saisissez un logiciel de facturation et obtenez une réponse sourcée, compréhensible et directement transmissible au client."
+>
+  <section class="shell page-hero verifier-hero">
+    <span class="eyebrow">pour les cabinets comptables</span>
+    <h1>Votre client peut-il <strong>garder son outil&nbsp;?</strong></h1>
+    <p>Choisissez son logiciel. Le verdict indique ce qui est établi, ce qui manque et le message à lui transmettre.</p>
+  </section>
+
+  <section class="shell verifier-layout">
+    <ToolVerifier />
+    <aside>
+      <p class="mono-label">lecture immédiate</p>
+      <h2>Trois réponses possibles</h2>
+      <ol>
+        <li><strong>Vous pouvez rester</strong><span>Le noyau réglementaire est documenté.</span></li>
+        <li><strong>À confirmer</strong><span>Une preuve manque. Nous indiquons exactement laquelle.</span></li>
+        <li><strong>Action nécessaire</strong><span>Une fonction indispensable est explicitement absente.</span></li>
+      </ol>
+      <p class="scope-note">Le résultat porte sur {platforms.length} parcours documentés. Un outil absent n'est pas déclaré non conforme : il reste simplement impossible à confirmer avec notre corpus.</p>
+    </aside>
+  </section>
+
+  <section class="shell section">
+    <div class="after-check">
+      <div>
+        <p class="mono-label">si le client doit changer</p>
+        <h2>Le comparatif intervient seulement après.</h2>
+      </div>
+      <p>Le vérificateur commence par éviter les migrations inutiles. Si le parcours actuel ne peut pas être confirmé, le diagnostic compare trois solutions documentées au maximum.</p>
+      <a class="button secondary" href="/diagnostic/">Comparer les alternatives</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .verifier-hero { max-width: 72rem; }
+  .verifier-hero h1 { max-width: 17ch; }
+  .verifier-hero h1 strong { color: var(--signal); }
+  .verifier-layout { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 1.2rem; align-items: start; }
+  .verifier-layout aside { border: 1px solid var(--line); padding: 1.1rem; background: var(--surface); }
+  .verifier-layout aside h2 { margin: .6rem 0 0; color: var(--bright); font-size: 1.3rem; letter-spacing: -.035em; }
+  .verifier-layout ol { display: grid; gap: .8rem; margin: 1.1rem 0 0; padding: 0; list-style: none; counter-reset: verdict; }
+  .verifier-layout li { display: grid; grid-template-columns: 1.6rem 1fr; gap: .15rem .6rem; counter-increment: verdict; }
+  .verifier-layout li::before { grid-row: 1 / 3; color: var(--accent); content: counter(verdict, decimal-leading-zero); font: 750 .65rem/1.4 var(--font-mono); }
+  .verifier-layout li strong { color: var(--paper); font-size: .78rem; }
+  .verifier-layout li span { color: var(--muted); font-size: .69rem; }
+  .scope-note { margin: 1.2rem 0 0; border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: .69rem; }
+  .after-check { display: grid; grid-template-columns: minmax(0, .8fr) minmax(16rem, 1fr) auto; gap: 2rem; align-items: center; border-top: 1px solid var(--line); padding-top: 2rem; }
+  .after-check h2 { max-width: 15ch; margin: .5rem 0 0; color: var(--bright); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: -.04em; }
+  .after-check > p { color: var(--muted); }
+  .after-check .button { margin: 0; white-space: nowrap; }
+  @media (max-width: 850px) { .verifier-layout, .after-check { grid-template-columns: 1fr; } .verifier-layout aside ol { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 620px) { .verifier-layout aside ol { grid-template-columns: 1fr; } }
+</style>

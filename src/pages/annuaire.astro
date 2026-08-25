@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import directory from "../data/official-directory.json";
+import { platforms } from "../data/platforms";
 import { normalizePublicHttpUrl } from "../lib/urls.ts";
 
 const approvedEntries = directory.approved.map((entry) => ({ ...entry, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) }));
@@ -8,13 +9,13 @@ const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: no
 ---
 
 <BaseLayout
-  title="Annuaire officiel des plateformes agréées | Facture Radar"
+  title="Annuaire officiel des plateformes agréées | PA Check"
   description="Snapshot vérifiable des listes DGFiP de plateformes agréées : 148 approuvées et 18 opérateurs encore en attente au 19 août 2026."
 >
   <section class="shell page-hero">
     <span class="eyebrow">snapshot DGFiP · {directory.snapshotDate}</span>
     <h1>L'annuaire officiel, séparé du diagnostic.</h1>
-    <p>Cette page reprend les deux fichiers DGFiP sans attribuer de fonctions commerciales non vérifiées. Seules les 12 fiches enrichies alimentent le moteur de choix.</p>
+    <p>Cette page reprend les deux fichiers DGFiP sans attribuer de fonctions commerciales non vérifiées. Seules les {platforms.length} fiches enrichies alimentent le moteur de choix.</p>
   </section>
   <section class="shell directory-section">
     <div class="directory-meta">

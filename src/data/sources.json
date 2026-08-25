@@ -16,6 +16,14 @@
     "accessedAt": "2026-08-25"
   },
   {
+    "id": "abby-home-2026",
+    "title": "Facturation et comptabilité pour les indépendants",
+    "publisher": "Abby",
+    "url": "https://abby.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
     "id": "abby-pricing-2026",
     "title": "Nos offres et abonnements",
     "publisher": "Abby",
@@ -32,22 +40,6 @@
     "accessedAt": "2026-08-25"
   },
   {
-    "id": "abby-guide-2026",
-    "title": "Guide de la facturation électronique 2026-2027",
-    "publisher": "Abby",
-    "url": "https://abby.fr/ressources/guide-de-la-facturation-electronique",
-    "type": "documentation",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "axonaut-pricing-2026",
-    "title": "Tarifs Axonaut",
-    "publisher": "Axonaut",
-    "url": "https://axonaut.com/content/prix",
-    "type": "pricing",
-    "accessedAt": "2026-08-25"
-  },
-  {
     "id": "cegid-pa-2026",
     "title": "Comprendre la Plateforme Agréée Cegid",
     "publisher": "Cegid",
@@ -56,43 +48,43 @@
     "accessedAt": "2026-08-25"
   },
   {
-    "id": "dougs-invoicing-2026",
-    "title": "Le logiciel de facturation électronique 100 % gratuit",
-    "publisher": "Dougs",
-    "url": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+    "id": "cegid-about-2026",
+    "title": "À propos de Cegid",
+    "publisher": "Cegid",
+    "url": "https://www.cegid.com/fr/a-propos/",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   },
   {
-    "id": "indy-invoicing-2026",
-    "title": "La facturation électronique avec Indy",
-    "publisher": "Indy",
-    "url": "https://www.indy.fr/facturation-electronique/",
+    "id": "sage-pa-2026",
+    "title": "Sage Plateforme Agréée",
+    "publisher": "Sage France",
+    "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/sage-plateforme-de-dematerialisation-partenaire/",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   },
   {
-    "id": "indy-billing-2026",
-    "title": "Le logiciel de facturation gratuit pensé pour les indépendants",
-    "publisher": "Indy",
-    "url": "https://www.indy.fr/facturation/",
+    "id": "sage-products-2026",
+    "title": "Logiciels conformes pour la facturation électronique",
+    "publisher": "Sage France",
+    "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/logiciels/",
     "type": "pricing",
     "accessedAt": "2026-08-25"
   },
   {
-    "id": "macompta-pa-2026",
-    "title": "Facturation électronique : Plateforme Agréée macompta.fr",
-    "publisher": "macompta.fr",
-    "url": "https://www.macompta.fr/facturation-electronique",
+    "id": "sage-scale-2026",
+    "title": "Sage, logiciels de gestion pour les petites et moyennes entreprises",
+    "publisher": "Sage",
+    "url": "https://www.sage.com/fr-fr/",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   },
   {
-    "id": "macompta-terms-2026",
-    "title": "Conditions générales de services",
-    "publisher": "macompta.fr",
-    "url": "https://www.macompta.fr/conditions-generales-de-services",
-    "type": "contract",
+    "id": "pennylane-main-2026",
+    "title": "Logiciel de facturation électronique",
+    "publisher": "Pennylane",
+    "url": "https://www.pennylane.com/fr/logiciel-facturation-electronique",
+    "type": "documentation",
     "accessedAt": "2026-08-25"
   },
   {
@@ -112,75 +104,11 @@
     "accessedAt": "2026-08-25"
   },
   {
-    "id": "qonto-invoicing-2026",
-    "title": "Outil de facturation électronique",
-    "publisher": "Qonto",
-    "url": "https://qonto.com/fr/invoicing/e-invoicing",
+    "id": "tiime-pa-2026",
+    "title": "Tiime, votre plateforme agréée",
+    "publisher": "Tiime",
+    "url": "https://www.tiime.fr/plateforme-dematerialisation-partenaire-pdp",
     "type": "documentation",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "qonto-billing-2026",
-    "title": "Gagnez du temps sur la gestion de vos factures",
-    "publisher": "Qonto",
-    "url": "https://qonto.com/fr/invoicing",
-    "type": "pricing",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "sage-pa-2026",
-    "title": "La facture électronique obligatoire en 2026",
-    "publisher": "Sage France",
-    "url": "https://www.sage.com/fr-fr/blog/facture-electronique-etre-accompagne/",
-    "type": "documentation",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "sage-products-2026",
-    "title": "Logiciels conformes pour la facturation électronique",
-    "publisher": "Sage France",
-    "url": "https://www.sage.com/fr-fr/dematerialisation/facture-electronique/logiciels/",
-    "type": "pricing",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "sage-terms-2026",
-    "title": "Conditions générales du service Plateforme Agréée Sage",
-    "publisher": "Sage France",
-    "url": "https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/terms_and_conditions/current/sage-plateforme-agree/conditions-generales-du-service-plateforme-agreee-de-sage.pdf",
-    "type": "contract",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "sellsy-pricing-2026",
-    "title": "Tarifs, plans et offres des abonnements Sellsy",
-    "publisher": "Sellsy",
-    "url": "https://go.sellsy.com/offres",
-    "type": "pricing",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "sellsy-pa-2026",
-    "title": "Sellsy devient Plateforme Agréée",
-    "publisher": "Sellsy",
-    "url": "https://go.sellsy.com/blog/sellsy-plateforme-agreee-facturation-electronique",
-    "type": "documentation",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "shine-pa-2026",
-    "title": "Shine, Plateforme Agréée de facturation électronique",
-    "publisher": "Shine",
-    "url": "https://help.shine.fr/fr/articles/11459160-shine-plateforme-agreee-de-facturation-electronique",
-    "type": "documentation",
-    "accessedAt": "2026-08-25"
-  },
-  {
-    "id": "shine-billing-2026",
-    "title": "Outil de devis et facturation en ligne",
-    "publisher": "Shine",
-    "url": "https://www.shine.fr/facturation/",
-    "type": "pricing",
     "accessedAt": "2026-08-25"
   },
   {
@@ -196,6 +124,214 @@
     "title": "Accès Tiime Expert pour l'expert-comptable",
     "publisher": "Tiime",
     "url": "https://www.tiime.fr/ec/invitation-client",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "tiime-subprocessors-2026",
+    "title": "Liste des sous-traitants",
+    "publisher": "Tiime",
+    "url": "https://www.tiime.fr/soustraitants",
+    "type": "security",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "myunisoft-home-2026",
+    "title": "Logiciel expert-comptable et gestion TPE-PME souverain",
+    "publisher": "MyUnisoft",
+    "url": "https://myu.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "myunisoft-press-2025",
+    "title": "Dossier de presse MyUnisoft",
+    "publisher": "MyUnisoft",
+    "url": "https://myunisoft.fr/wp-content/uploads/2025/06/dossier-de-presse-MyUnisoft.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "septeo-pa-2026",
+    "title": "Plateforme Agréée de facturation électronique",
+    "publisher": "Septeo Ingeneo",
+    "url": "https://www.ingeneo.septeo.com/plateforme-agreee-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "qonto-invoicing-2026",
+    "title": "Outil de facturation électronique",
+    "publisher": "Qonto",
+    "url": "https://qonto.com/fr/invoicing/e-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "qonto-billing-2026",
+    "title": "Gestion des devis et factures",
+    "publisher": "Qonto",
+    "url": "https://qonto.com/fr/invoicing",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "qonto-about-2026",
+    "title": "À propos de Qonto",
+    "publisher": "Qonto",
+    "url": "https://qonto.com/fr/about",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "indy-invoicing-2026",
+    "title": "La facturation électronique avec Indy",
+    "publisher": "Indy",
+    "url": "https://www.indy.fr/facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "indy-billing-2026",
+    "title": "Le logiciel de facturation pensé pour les indépendants",
+    "publisher": "Indy",
+    "url": "https://www.indy.fr/facturation/",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "indy-scale-2024",
+    "title": "Indy passe le cap des 100 000 utilisateurs",
+    "publisher": "Indy",
+    "url": "https://www.indy.fr/wp-content/uploads/2024-07-04-Indy-passe-les-100-000-utilisateurs.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sellsy-pa-2026",
+    "title": "Sellsy devient officiellement Plateforme Agréée",
+    "publisher": "Sellsy",
+    "url": "https://go.sellsy.com/blog/sellsy-plateforme-agreee-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sellsy-invoicing-2026",
+    "title": "Logiciel de facturation électronique",
+    "publisher": "Sellsy",
+    "url": "https://go.sellsy.com/logiciel-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sellsy-accountants-2026",
+    "title": "Sellsy pour les experts-comptables",
+    "publisher": "Sellsy",
+    "url": "https://go.sellsy.com/sellsy-experts-comptables",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sellsy-pricing-2026",
+    "title": "Offres et tarifs Sellsy",
+    "publisher": "Sellsy",
+    "url": "https://go.sellsy.com/offres",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "superpdp-home-2026",
+    "title": "Plateforme agréée de facturation électronique",
+    "publisher": "SuperPDP",
+    "url": "https://www.superpdp.tech/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "superpdp-features-2026",
+    "title": "Fonctionnalités de SuperPDP",
+    "publisher": "SuperPDP",
+    "url": "https://www.superpdp.tech/fonctionnalites/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "superpdp-pricing-2026",
+    "title": "Tarifs de SuperPDP",
+    "publisher": "SuperPDP",
+    "url": "https://www.superpdp.tech/tarifs/",
+    "type": "pricing",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sap-pa-2026",
+    "title": "SAP obtient la validation en tant que Plateforme Agréée",
+    "publisher": "SAP France",
+    "url": "https://news.sap.com/france/2026/02/facturation-electronique-2026-sap-franchit-une-etape-decisive-et-obtient-la-validation-en-tant-que-plateforme-agreee-pa/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "sap-scale-2026",
+    "title": "Témoignages clients SAP",
+    "publisher": "SAP France",
+    "url": "https://www.sap.com/france/about/customer-stories.html",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "generix-pa-2026",
+    "title": "Plateforme Agréée de dématérialisation des factures",
+    "publisher": "Generix Group",
+    "url": "https://www.generixgroup.com/fr/edi-services-facturation-electronique/pdp-dematerialisation-factures",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "esker-demo-2026",
+    "title": "Démonstration facturation électronique",
+    "publisher": "Esker",
+    "url": "https://content.esker.fr/demo-facturation-electronique.html",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "esker-architecture-2026",
+    "title": "Facturation électronique B2B, architecture et formats",
+    "publisher": "Esker",
+    "url": "https://cloud.esker.fr/fm/others/support-presentation-webconference-b2b-2024-esker-fidal-june-06042023.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "esker-security-2026",
+    "title": "Rapport annuel 2022, édition 2024",
+    "publisher": "Esker",
+    "url": "https://www.esker.fr/sites/default/files/content/annual_report_2022-fr-edit2024_2.pdf",
+    "type": "security",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "esker-scale-2023",
+    "title": "Rapport annuel 2023",
+    "publisher": "Esker",
+    "url": "https://www.esker.fr/sites/default/files/content/rapport_annuel-2023_1.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "cegedim-pa-2026",
+    "title": "Cegedim Business Services confirme son immatriculation définitive comme Plateforme Agréée",
+    "publisher": "Cegedim",
+    "url": "https://www.cegedim.fr/Communique/CegedimBusinessServices_Plateforme-Agreee_16122025.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "cegedim-annual-2026",
+    "title": "Rapport annuel 2025",
+    "publisher": "Cegedim",
+    "url": "https://www.cegedim.fr/Docs_Communiques/RA_FR_2025.pdf",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   }

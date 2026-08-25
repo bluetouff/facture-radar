@@ -1,20 +1,25 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { platforms } from "../data/platforms";
 ---
 
 <BaseLayout
-  title="Méthodologie | Facture Radar"
+  title="Méthodologie | PA Check"
   description="Méthode publique du moteur de choix : périmètre, niveaux de preuve, règles d'exclusion, calcul des coûts et politique de correction."
 >
   <section class="shell page-hero">
-    <span class="eyebrow">méthode publique · version 0.1</span>
+    <span class="eyebrow">méthode publique · version 0.2</span>
     <h1>Une recommandation doit pouvoir être contestée.</h1>
     <p>Le corpus, les règles et les limites sont publiés pour qu'un opérateur, un cabinet ou un utilisateur puisse reproduire le raisonnement et signaler une erreur précise.</p>
   </section>
   <section class="shell method-layout">
     <article class="prose">
       <h2>Ce que le moteur vérifie</h2>
-      <p>Facture Radar compare des parcours complets : outil visible, plateforme agréée, dépendances commerciales, volume inclus, fonctions documentées et possibilité de sortie. Il ne juge ni la qualité générale d'une entreprise ni la sécurité réelle d'un système à partir de son site marketing.</p>
+      <p>PA Check compare des parcours complets : outil visible, plateforme agréée, dépendances commerciales, volume inclus, fonctions documentées et possibilité de sortie. Il ne juge ni la qualité générale d'une entreprise ni la sécurité réelle d'un système à partir de son site marketing.</p>
+
+      <h2>Règles du vérificateur d'outil</h2>
+      <p>Le feu vert exige quatre éléments documentés : la présence de la plateforme dans la liste DGFiP, la réception, l'émission et l'e-reporting. Chaque oui doit être relié à une source et porter le niveau « officiel » ou « documenté ». Une déclaration éditeur non étayée, une source absente ou un raccordement dépendant de l'édition utilisée entraîne « à confirmer ».</p>
+      <p>Le verdict porte uniquement sur le parcours étudié. Il ne garantit ni l'activation du service chez le client, ni son tarif, ni sa conformité individuelle. Un outil absent du corpus n'est jamais présenté comme non conforme.</p>
 
       <h2>Quatre niveaux de preuve</h2>
       <ul>
@@ -26,14 +31,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <p>« Non documenté » ne signifie pas « faux » ni « non conforme ». Cela signifie que le moteur ne dispose pas de la pièce nécessaire pour utiliser le fait.</p>
 
       <h2>Règles du diagnostic</h2>
-      <p>Un critère impératif agit comme un filtre. Si sa valeur est négative ou inconnue, le parcours est écarté. Les préférences servent ensuite à ordonner les parcours restants. Le pourcentage affiché exprime la part des critères de votre requête satisfaits, pas une note générale de la plateforme.</p>
+      <p>Le diagnostic secondaire pose trois questions : taille de l'entreprise, volume mensuel et contrainte principale. Cette contrainte agit comme un filtre. Si sa valeur est négative ou inconnue, le parcours est écarté. La couverture documentaire départage ensuite les parcours restants sans afficher de score.</p>
       <p>Trois résultats maximum sont affichés. Chaque résultat présente les raisons de compatibilité, les inconnues importantes et le coût annuel seulement lorsqu'un prix de départ reproductible est public.</p>
 
       <h2>Calcul du coût</h2>
       <p>La version initiale annualise le prix mensuel public du parcours étudié. Les promotions temporaires sont exclues. Lorsqu'un tarif varie selon les utilisateurs, le volume ou un devis, le coût est indiqué comme non calculable. Les futurs profils intégreront les frais de mise en service, dépassements, connecteurs, archivage et sortie uniquement lorsque ces montants sont publiés.</p>
 
-      <h2>Pourquoi douze fiches</h2>
-      <p>La liste officielle compte 148 plateformes approuvées au 19 août 2026. Elle ne contient pas les tarifs, intégrations ou clauses de sortie. Le diagnostic reste donc limité à douze fiches enrichies. L'annuaire complet est consultable séparément et ne reçoit aucun attribut inventé.</p>
+      <h2>Pourquoi quinze fiches</h2>
+      <p>La liste officielle compte 148 plateformes approuvées au 19 août 2026. Elle ne contient pas les tarifs, intégrations ou clauses de sortie. Le diagnostic reste donc limité à {platforms.length} fiches enrichies. L'annuaire complet est consultable séparément et ne reçoit aucun attribut inventé.</p>
+      <p>Le corpus retient des acteurs de grande portée ou particulièrement bien documentés, puis équilibre trois usages : production comptable et ERP, TPE-PME, ETI et grands comptes. La portée provient de publications des acteurs ou de leurs rapports annuels. Lorsqu'elle n'est pas publiée, cette absence est indiquée et la sélection repose sur la précision de la documentation publique. Ces éléments servent à sélectionner le terrain d'étude, pas à établir un classement de qualité ni une part de marché.</p>
+      <p>La liste des quinze acteurs, la raison de chaque inclusion et les sources de portée sont conservées dans un fichier contrôlé par les tests. Toute substitution doit modifier ce fichier, la fiche concernée, les sources et le journal public dans le même changement.</p>
 
       <h2>Corrections et droit de réponse</h2>
       <p>Une correction doit identifier le champ contesté, fournir une URL publique ou une pièce publiable, préciser l'entité et le périmètre concernés, puis indiquer la date d'effet. La correction et sa source seront enregistrées dans le journal des changements. Aucune rémunération ne modifie les règles, le périmètre ou l'ordre des résultats.</p>
@@ -42,6 +49,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <ul>
         <li>Les profils contractuels et de réversibilité restent incomplets pour plusieurs acteurs.</li>
         <li>Les certifications citées par les éditeurs ne valent pas vérification du certificat et de son périmètre.</li>
+        <li>Les chiffres de portée publiés par les acteurs ne constituent pas des parts de marché comparables.</li>
         <li>Le moteur ne valide pas encore un fichier Factur-X, UBL ou CII.</li>
         <li>Le moteur ne constitue ni un conseil juridique ni une garantie de conformité individuelle.</li>
       </ul>

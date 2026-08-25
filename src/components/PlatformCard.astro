@@ -1,6 +1,6 @@
 ---
 import type { Platform } from "../data/types";
-import { documentationCoverage, sourceCount } from "../lib/evidence";
+import { sourceCount } from "../lib/evidence";
 import EvidenceBadge from "./EvidenceBadge.astro";
 
 interface Props {
@@ -9,8 +9,14 @@ interface Props {
 }
 
 const { platform, index } = Astro.props;
-const coverage = documentationCoverage(platform);
 const sources = sourceCount(platform);
+const pricingLabels = {
+  free: "gratuit",
+  paid: "payant",
+  included: "inclus",
+  quote: "sur devis",
+} as const;
+const pricingLabel = platform.pricing.value ? pricingLabels[platform.pricing.value.kind] : "prix à confirmer";
 ---
 
 <article class="platform-card">
@@ -22,10 +28,10 @@ const sources = sourceCount(platform);
   <p>{platform.summary}</p>
   <div class="tag-row">
     {platform.targets.map((target) => <span class="tag">{target}</span>)}
-    <span class="tag">{platform.pricing.value?.kind === "free" ? "socle gratuit" : platform.pricing.value?.kind}</span>
+    <span class="tag">{pricingLabel}</span>
   </div>
   <div class="card-metrics">
-    <div><span>Preuves couvertes</span><strong>{coverage} %</strong></div>
+    <div><span>Dernière vérification</span><strong>{platform.officialStatus.checkedAt.split("-").reverse().join("/")}</strong></div>
     <div><span>Sources liées</span><strong>{sources}</strong></div>
   </div>
   <a class="card-link" href={`/plateformes/${platform.slug}/`}>

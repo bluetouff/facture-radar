@@ -1,12 +1,12 @@
 <form class="diagnostic" id="diagnostic-form">
   <div class="diagnostic-head">
-    <div><span>01</span><p class="mono-label">profil</p></div>
+    <div><p class="mono-label">trois questions</p></div>
     <p>Les réponses restent dans votre navigateur. Aucun SIREN, compte ou document n'est demandé.</p>
   </div>
 
   <div class="question-grid">
     <label>
-      <span>Taille de l'entreprise</span>
+      <span><b>01</b> Taille de l'entreprise</span>
       <select name="size" required>
         <option value="micro">Micro-entreprise ou indépendant</option>
         <option value="tpe">TPE, 1 à 9 salariés</option>
@@ -16,29 +16,20 @@
       </select>
     </label>
     <label>
-      <span>Factures par mois, achats et ventes</span>
+      <span><b>02</b> Factures par mois, achats et ventes</span>
       <input name="monthlyInvoices" type="number" min="0" max="1000000" value="10" required />
     </label>
   </div>
 
   <fieldset>
-    <legend><span>02</span> Contraintes impératives</legend>
-    <div class="check-grid">
-      <label><input type="checkbox" name="freeOnly" /> <span><strong>Parcours gratuit</strong><small>Aucun abonnement obligatoire pour le volume indiqué</small></span></label>
-      <label><input type="checkbox" name="noBankAccount" /> <span><strong>Sans compte bancaire imposé</strong><small>La PA doit rester distincte d'un compte pro</small></span></label>
-      <label><input type="checkbox" name="needsAccountantAccess" /> <span><strong>Accès expert-comptable</strong><small>Accès ou collaboration directement documentée</small></span></label>
-      <label><input type="checkbox" name="needsApi" /> <span><strong>API publique</strong><small>Pour relier un outil ou un flux existant</small></span></label>
-      <label><input type="checkbox" name="needsInternationalReporting" /> <span><strong>B2C ou international</strong><small>E-reporting publiquement documenté</small></span></label>
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend><span>03</span> Préférences</legend>
-    <div class="check-grid compact">
-      <label><input type="checkbox" name="priority" value="simplicity" /> <span><strong>Simplicité</strong></span></label>
-      <label><input type="checkbox" name="priority" value="ecosystem" /> <span><strong>Écosystème</strong></span></label>
-      <label><input type="checkbox" name="priority" value="documentation" checked /> <span><strong>Documentation</strong></span></label>
-      <label><input type="checkbox" name="priority" value="reversibility" /> <span><strong>Réversibilité</strong></span></label>
+    <legend><span>03</span> La contrainte qui décide</legend>
+    <div class="constraint-grid">
+      <label><input type="radio" name="constraint" value="none" checked /> <span><strong>Aucune</strong><small>Je veux d'abord un parcours documenté</small></span></label>
+      <label><input type="radio" name="constraint" value="free" /> <span><strong>Gratuit</strong><small>Pour le volume indiqué</small></span></label>
+      <label><input type="radio" name="constraint" value="noBank" /> <span><strong>Sans compte bancaire</strong><small>Aucun compte pro imposé</small></span></label>
+      <label><input type="radio" name="constraint" value="accountant" /> <span><strong>Accès cabinet</strong><small>Collaboration documentée</small></span></label>
+      <label><input type="radio" name="constraint" value="api" /> <span><strong>API</strong><small>Pour un flux existant</small></span></label>
+      <label><input type="radio" name="constraint" value="reporting" /> <span><strong>B2C ou international</strong><small>E-reporting documenté</small></span></label>
     </div>
   </fieldset>
 
@@ -51,7 +42,7 @@
 <section class="results" id="diagnostic-results" aria-live="polite" hidden>
   <header>
     <div><p class="mono-label">résultat explicable</p><h2 id="result-title"></h2></div>
-    <button type="button" class="share-button">Copier le lien du diagnostic</button>
+    <button type="button" class="share-button">Copier le lien</button>
   </header>
   <div id="eligible-results" class="result-grid"></div>
   <details class="excluded-results">
@@ -84,25 +75,26 @@
     return {
       size: String(data.get("size")),
       monthlyInvoices: Number(data.get("monthlyInvoices")),
-      freeOnly: data.has("freeOnly"),
-      noBankAccount: data.has("noBankAccount"),
-      needsAccountantAccess: data.has("needsAccountantAccess"),
-      needsApi: data.has("needsApi"),
-      needsInternationalReporting: data.has("needsInternationalReporting"),
-      priorities: data.getAll("priority").map(String),
+      constraint: String(data.get("constraint") ?? "none"),
     };
   };
+
+  const toDiagnosticInput = (input: ReturnType<typeof getInput>) => ({
+    size: input.size,
+    monthlyInvoices: input.monthlyInvoices,
+    freeOnly: input.constraint === "free",
+    noBankAccount: input.constraint === "noBank",
+    needsAccountantAccess: input.constraint === "accountant",
+    needsApi: input.constraint === "api",
+    needsInternationalReporting: input.constraint === "reporting",
+    priorities: ["documentation"],
+  });
 
   const inputToParams = (input: ReturnType<typeof getInput>) => {
     const params = new URLSearchParams();
     params.set("size", input.size);
     params.set("volume", String(input.monthlyInvoices));
-    if (input.freeOnly) params.set("gratuit", "1");
-    if (input.noBankAccount) params.set("sans-banque", "1");
-    if (input.needsAccountantAccess) params.set("comptable", "1");
-    if (input.needsApi) params.set("api", "1");
-    if (input.needsInternationalReporting) params.set("reporting", "1");
-    for (const priority of input.priorities) params.append("priorite", priority);
+    params.set("contrainte", input.constraint);
     return params;
   };
 
@@ -112,7 +104,7 @@
     const top = document.createElement("div");
     top.className = "result-top";
     top.append(text("span", `PARCOURS ${String(rank + 1).padStart(2, "0")}`, "rank"));
-    top.append(text("strong", `${result.compatibility} % compatible`, "compatibility"));
+    top.append(text("strong", "Contraintes satisfaites", "compatibility"));
     article.append(top);
     article.append(text("h3", result.platform.displayName));
     article.append(text("p", result.platform.pricing.value?.label || "Prix non documenté", "price"));
@@ -143,7 +135,6 @@
     row.className = "excluded-row";
     const heading = document.createElement("div");
     heading.append(text("strong", result.platform.displayName));
-    heading.append(text("span", `${result.compatibility} %`));
     const list = document.createElement("ul");
     for (const blocker of result.blockers) list.append(text("li", blocker));
     row.append(heading, list);
@@ -153,7 +144,7 @@
   const render = () => {
     if (!form || !resultsSection || !eligibleContainer || !excludedContainer || !resultTitle) return;
     const input = getInput();
-    const matches = runDiagnostic(platforms, input as Parameters<typeof runDiagnostic>[1]);
+    const matches = runDiagnostic(platforms, toDiagnosticInput(input) as Parameters<typeof runDiagnostic>[1]);
     const eligible = matches.filter((match) => match.eligible).slice(0, 3);
     const excluded = matches.filter((match) => !match.eligible);
     eligibleContainer.replaceChildren(...eligible.map(renderEligible));
@@ -165,13 +156,13 @@
     }
     resultsSection.hidden = false;
     const params = inputToParams(input);
-    history.replaceState(null, "", `${location.pathname}?${params.toString()}`);
+    history.replaceState(null, "", `${location.pathname}#${params.toString()}`);
     resultsSection.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   };
 
   const loadParams = () => {
     if (!form) return false;
-    const params = new URLSearchParams(location.search);
+    const params = new URLSearchParams(location.hash.slice(1));
     if (!params.has("size")) return false;
     const setValue = (name: string, value: string | null) => {
       const input = form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | null;
@@ -179,13 +170,11 @@
     };
     setValue("size", params.get("size"));
     setValue("monthlyInvoices", params.get("volume"));
-    const booleanParams: Array<[string, string]> = [["freeOnly", "gratuit"], ["noBankAccount", "sans-banque"], ["needsAccountantAccess", "comptable"], ["needsApi", "api"], ["needsInternationalReporting", "reporting"]];
-    for (const [name, key] of booleanParams) {
-      const input = form.elements.namedItem(name) as HTMLInputElement | null;
-      if (input) input.checked = params.get(key) === "1";
-    }
-    const priorities = new Set(params.getAll("priorite"));
-    form.querySelectorAll<HTMLInputElement>('input[name="priority"]').forEach((input) => { input.checked = priorities.has(input.value); });
+    const requestedConstraint = params.get("contrainte") ?? "none";
+    const allowedConstraints = new Set(["none", "free", "noBank", "accountant", "api", "reporting"]);
+    const constraint = allowedConstraints.has(requestedConstraint) ? requestedConstraint : "none";
+    const constraintInput = form.querySelector<HTMLInputElement>(`input[name="constraint"][value="${constraint}"]`);
+    if (constraintInput) constraintInput.checked = true;
     return true;
   };
 
@@ -211,23 +200,23 @@
   .diagnostic { border: 1px solid var(--line); background: var(--surface); box-shadow: 0 24px 70px var(--shadow); }
   .diagnostic-head { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-bottom: 1px solid var(--line); padding: 1.2rem; }
   .diagnostic-head > div { display: flex; gap: 0.8rem; align-items: center; }
-  .diagnostic-head > div > span, legend span { color: var(--accent); font: 800 1.2rem/1 var(--font-mono); }
+  legend span { color: var(--accent); font: 800 1.2rem/1 var(--font-mono); }
   .diagnostic-head > p { margin: 0; color: var(--muted); font-size: 0.78rem; }
   .question-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1.2rem; }
   .question-grid label { display: grid; gap: 0.5rem; }
   .question-grid label > span { color: var(--paper); font-size: 0.78rem; font-weight: 650; }
+  .question-grid label > span b { margin-right: .45rem; color: var(--accent); font: 750 .65rem/1 var(--font-mono); }
   input[type="number"], select { width: 100%; min-height: 3rem; border: 1px solid var(--line); border-radius: 0; padding: 0.7rem 0.8rem; outline: 0; background: var(--surface-2); color: var(--bright); }
   input:focus, select:focus { border-color: var(--signal); box-shadow: 0 0 0 2px color-mix(in srgb, var(--signal) 18%, transparent); }
   fieldset { margin: 0; border: 0; border-top: 1px solid var(--line); padding: 1.2rem; }
   legend { padding: 0 0.7rem 0 0; color: var(--bright); font-weight: 750; }
-  .check-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.7rem; margin-top: 0.8rem; }
-  .check-grid.compact { grid-template-columns: repeat(4, 1fr); }
-  .check-grid label { display: flex; gap: 0.7rem; align-items: flex-start; border: 1px solid var(--line); padding: 0.8rem; cursor: pointer; }
-  .check-grid label:hover { border-color: var(--signal); }
-  .check-grid input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; accent-color: var(--signal); }
-  .check-grid span { display: grid; }
-  .check-grid strong { color: var(--paper); font-size: 0.78rem; }
-  .check-grid small { margin-top: 0.2rem; color: var(--muted); font-size: 0.66rem; }
+  .constraint-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 0.8rem; }
+  .constraint-grid label { display: flex; gap: 0.7rem; align-items: flex-start; border: 1px solid var(--line); padding: 0.8rem; cursor: pointer; }
+  .constraint-grid label:hover { border-color: var(--signal); }
+  .constraint-grid input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; accent-color: var(--signal); }
+  .constraint-grid span { display: grid; }
+  .constraint-grid strong { color: var(--paper); font-size: 0.78rem; }
+  .constraint-grid small { margin-top: 0.2rem; color: var(--muted); font-size: 0.66rem; }
   .form-actions { display: flex; gap: 0.7rem; border-top: 1px solid var(--line); padding: 1.2rem; }
   .form-actions button { cursor: pointer; }
   .results { scroll-margin-top: 1rem; margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 2rem; }
@@ -255,6 +244,6 @@
   .excluded-row span { color: var(--muted); font: 0.62rem/1.5 var(--font-mono); }
   .excluded-row ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.7rem; }
   .excluded-row li::marker { color: var(--accent); }
-  @media (max-width: 850px) { .result-grid { grid-template-columns: 1fr; } .check-grid.compact { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 620px) { .diagnostic-head, .question-grid, .check-grid, .check-grid.compact { grid-template-columns: 1fr; } .question-grid .wide { grid-column: auto; } .excluded-row { grid-template-columns: 1fr; } .results > header { align-items: start; flex-direction: column; } }
+  @media (max-width: 850px) { .result-grid { grid-template-columns: 1fr; } .constraint-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .diagnostic-head, .question-grid, .constraint-grid { grid-template-columns: 1fr; } .question-grid .wide { grid-column: auto; } .excluded-row { grid-template-columns: 1fr; } .results > header { align-items: start; flex-direction: column; } }
 </style>
