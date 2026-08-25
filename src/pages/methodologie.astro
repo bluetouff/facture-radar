@@ -8,7 +8,7 @@ import { platforms } from "../data/platforms";
   description="Découvrez comment PA Check rassemble ses informations, prépare ses réponses et corrige ses fiches."
 >
   <section class="shell page-hero">
-    <span class="eyebrow">comment ça marche · version 0.3</span>
+    <span class="eyebrow">comment ça marche · version 0.4</span>
     <h1>Comment PA Check prépare ses réponses.</h1>
     <p>Nous consultons les listes officielles, les tarifs, les contrats et la documentation des éditeurs. Cette page explique simplement ce que nous regardons et comment nous signaler une erreur.</p>
   </section>
@@ -43,6 +43,15 @@ import { platforms } from "../data/platforms";
       <p>Le fichier ne quitte pas le navigateur et n'est pas conservé. Les déclarations XML <code>DOCTYPE</code> et <code>ENTITY</code> sont refusées, la profondeur du document et sa taille sont limitées, et le PDF n'est pas rendu à l'écran. Le résultat est un prévol technique fondé sur les <a href="https://www.impots.gouv.fr/specifications-externes-b2b">spécifications externes de la DGFiP</a> et la <a href="https://fnfe-mpe.org/factur-x/">publication Factur-X du FNFE-MPE</a>, pas une certification juridique.</p>
       <p>Cette première version ne valide pas UBL, les signatures électroniques, l'authenticité de l'émetteur, l'archivage ou l'acceptation effective par une plateforme agréée. Un fichier lisible doit encore être testé dans le parcours réel de votre outil.</p>
 
+      <h2>Lire le Passeport et les routes du Lab</h2>
+      <p>Le Passeport rapproche le résultat du fichier et la documentation publique de six plateformes. Il examine toujours les quatre mêmes points : l'entrée du fichier, le format accepté, la transmission électronique et le sort du XML d'origine. Il ne calcule aucun score.</p>
+      <ul>
+        <li><strong>Documenté :</strong> la plateforme décrit publiquement ce point dans son site, son centre d'aide ou sa documentation technique.</li>
+        <li><strong>À contrôler :</strong> une partie du parcours est publiée, mais le comportement exact doit être vérifié avec un fichier test.</li>
+        <li><strong>Non publié :</strong> nous n'avons pas trouvé de réponse dans les sources retenues à la date indiquée.</li>
+      </ul>
+      <p>Un parcours documenté ne garantit pas que chaque fichier sera accepté. Le test indiqué dans la carte sert à contrôler le dernier mètre : reprise des lignes, conservation du profil Factur-X, absence de ressaisie et émission vers la plateforme du destinataire.</p>
+
       <h2>Les vingt-cinq plateformes étudiées</h2>
       <p>La liste officielle comptait 148 plateformes approuvées au 19 août 2026. Elle donne leur statut, mais ne détaille pas leurs tarifs, leurs intégrations ou leurs conditions de sortie.</p>
       <p>Nous avons commencé par {platforms.length} acteurs de grande portée ou disposant d'informations publiques particulièrement détaillées. La sélection couvre les besoins des indépendants, TPE, PME, ETI, grandes entreprises et cabinets comptables. L'<a href="/annuaire/">annuaire complet</a> reste disponible pour retrouver les autres plateformes.</p>
@@ -66,6 +75,7 @@ import { platforms } from "../data/platforms";
         <div><dt>Données personnelles</dt><dd>Non collectées</dd></div>
         <div><dt>Fichier envoyé</dt><dd>Jamais</dd></div>
         <div><dt>Contrôle Factur-X</dt><dd>Local</dd></div>
+        <div><dt>Score commercial</dt><dd>Aucun</dd></div>
         <div><dt>Information manquante</dt><dd>Signalée</dd></div>
         <div><dt>Dernière mise à jour</dt><dd>25 août 2026</dd></div>
       </dl>

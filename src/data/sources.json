@@ -48,6 +48,14 @@
     "accessedAt": "2026-08-25"
   },
   {
+    "id": "abby-import-history-2026",
+    "title": "Peut-on utiliser plusieurs logiciels de comptabilité avec Abby ?",
+    "publisher": "Centre d'aide Abby",
+    "url": "https://aide.abby.fr/fr/articles/15290086-peut-on-utiliser-plusieurs-logiciels-de-comptabilite-avec-abby",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
     "id": "cegid-pa-2026",
     "title": "Comprendre la Plateforme Agréée Cegid",
     "publisher": "Cegid",
@@ -116,6 +124,14 @@
     "title": "Comprendre les formats de la facturation électronique",
     "publisher": "Pennylane",
     "url": "https://help.pennylane.com/fr/articles/367168-comprendre-les-formats-de-la-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "pennylane-import-facturx-2026",
+    "title": "Importer des factures au format Factur-X",
+    "publisher": "Centre d'aide Pennylane",
+    "url": "https://help.pennylane.com/fr/articles/23554-importer-des-factures-au-format-factur-x",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   },
@@ -212,6 +228,14 @@
     "title": "Comment activer et utiliser l'e-reporting avec Qonto ?",
     "publisher": "Centre d'aide Qonto",
     "url": "https://support-fr.qonto.com/hc/fr/articles/48509023125521-Comment-activer-et-utiliser-l-e-reporting-avec-Qonto",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "qonto-import-electronic-2026",
+    "title": "Comment importer plusieurs factures à la fois ?",
+    "publisher": "Centre d'aide Qonto",
+    "url": "https://support-fr.qonto.com/hc/fr/articles/26478744461713-Comment-puis-je-importer-plusieurs-factures-%C3%A0-la-fois",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   },
@@ -484,6 +508,14 @@
     "title": "Validateur Factur-X en ligne",
     "publisher": "B2Brouter",
     "url": "https://www.b2brouter.net/fr/factur-x-validator/",
+    "type": "documentation",
+    "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "b2brouter-france-api-2026",
+    "title": "DGFiP e-Invoicing and e-Reporting",
+    "publisher": "Documentation B2Brouter",
+    "url": "https://docs.b2brouter.net/en/developers/guides-by-country/france/dgfip-e-invoicing-and-e-reporting/",
     "type": "documentation",
     "accessedAt": "2026-08-25"
   },

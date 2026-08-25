@@ -1,5 +1,6 @@
 ---
 import InterfaceIcon from "./InterfaceIcon.astro";
+import InvoicePassport from "./InvoicePassport.astro";
 import sources from "../data/sources.json";
 import { invoiceVerifierSourceIds } from "../lib/invoice-verifier.ts";
 
@@ -79,8 +80,10 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
       </section>
     </div>
 
+    <InvoicePassport />
+
     <div class="result-tools">
-      <button type="button" class="button" data-copy><InterfaceIcon name="copy" /> Copier le récapitulatif</button>
+      <button type="button" class="button" data-copy><InterfaceIcon name="copy" /> Copier pour mon support</button>
       <button type="button" class="button secondary" data-reset>Vérifier un autre fichier</button>
       <span data-copy-status aria-live="polite"></span>
     </div>
@@ -113,6 +116,10 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
   const resetButton = document.querySelector<HTMLButtonElement>("[data-reset]");
   const copyStatus = document.querySelector<HTMLElement>("[data-copy-status]");
   const ruleset = document.querySelector<HTMLElement>("[data-ruleset]");
+  const passport = document.querySelector<HTMLElement>("[data-invoice-passport]");
+  const passportButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-route-button]")];
+  const passportPanels = [...document.querySelectorAll<HTMLElement>("[data-route-panel]")];
+  const passportRouteIds = new Set(passportButtons.map((button) => button.dataset.routeButton));
   let currentAnalysis: InvoiceAnalysis | null = null;
 
   if (ruleset) ruleset.textContent = `Règles utilisées : ${INVOICE_RULESET_VERSION}, vérifiées le 25/08/2026.`;
@@ -120,6 +127,44 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
   function setText(selector: string, value: string): void {
     const element = document.querySelector<HTMLElement>(selector);
     if (element) element.textContent = value;
+  }
+
+  function setPassportText(selector: string, value: string): void {
+    const element = passport?.querySelector<HTMLElement>(selector);
+    if (element) element.textContent = value;
+  }
+
+  function selectPassportRoute(routeId: string | undefined, moveFocus = false): void {
+    if (!routeId || !passportRouteIds.has(routeId)) return;
+    for (const button of passportButtons) {
+      const selected = button.dataset.routeButton === routeId;
+      button.setAttribute("aria-selected", String(selected));
+      button.tabIndex = selected ? 0 : -1;
+      if (selected && moveFocus) button.focus();
+    }
+    for (const panel of passportPanels) panel.hidden = panel.dataset.routePanel !== routeId;
+  }
+
+  function updatePassport(analysis: InvoiceAnalysis): void {
+    if (!passport) return;
+    passport.dataset.analysisStatus = analysis.status;
+    setPassportText("[data-passport-container]", analysis.metadata.container === "pdf" ? "PDF/A-3 Factur-X" : "XML CII");
+    setPassportText("[data-passport-profile]", analysis.metadata.profile?.slice(0, 40) ?? "Non identifié");
+    if (analysis.status === "usable") {
+      setPassportText("[data-passport-kicker]", "Fichier exploitable");
+      setPassportText("[data-passport-title]", "Vous pouvez maintenant tester son passage.");
+      setPassportText("[data-passport-summary]", "Le contrôle de structure est terminé. Les cartes distinguent ce qui est publié de ce qui doit encore être vérifié dans la PA.");
+      return;
+    }
+    if (analysis.status === "action") {
+      setPassportText("[data-passport-kicker]", "Corrections nécessaires");
+      setPassportText("[data-passport-title]", "Corrigez le fichier avant de tester une route.");
+      setPassportText("[data-passport-summary]", "Les parcours restent consultables, mais un essai concluant exige d'abord une facture sans point bloquant dans le prévol.");
+      return;
+    }
+    setPassportText("[data-passport-kicker]", "Format non exploitable");
+    setPassportText("[data-passport-title]", "Aucune route ne peut encore être testée.");
+    setPassportText("[data-passport-summary]", "Revenez avec un PDF Factur-X ou un XML CII lisible. PA Check ne déduit pas une compatibilité à partir d'un PDF simple.");
   }
 
   function showInput(): void {
@@ -207,6 +252,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
     actions?.replaceChildren();
     analysis.checks.forEach(appendCheck);
     analysis.actions.slice(0, 3).forEach(appendAction);
+    updatePassport(analysis);
   }
 
   function unsupportedAnalysis(container: "pdf" | "xml", headline: string, summary: string): InvoiceAnalysis {
@@ -292,10 +338,28 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
     if (file) void analyzeFile(file);
   });
 
+  passportButtons.forEach((button, index) => {
+    button.addEventListener("click", () => selectPassportRoute(button.dataset.routeButton));
+    button.addEventListener("keydown", (event) => {
+      let nextIndex: number | null = null;
+      if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % passportButtons.length;
+      if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + passportButtons.length) % passportButtons.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = passportButtons.length - 1;
+      if (nextIndex === null) return;
+      event.preventDefault();
+      selectPassportRoute(passportButtons[nextIndex]?.dataset.routeButton, true);
+    });
+  });
+
   resetButton?.addEventListener("click", showInput);
   copyButton?.addEventListener("click", async () => {
     if (!currentAnalysis) return;
     const analysis = currentAnalysis;
+    const activeRoute = document.querySelector<HTMLElement>("[data-route-panel]:not([hidden])");
+    const routeName = activeRoute?.querySelector<HTMLElement>("[data-passport-route-name]")?.textContent?.trim();
+    const routeTest = activeRoute?.querySelector<HTMLElement>("[data-passport-route-test]")?.textContent?.trim();
+    const routeNext = activeRoute?.querySelector<HTMLElement>("[data-passport-route-next]")?.textContent?.trim();
     const report = [
       `PA Check : ${analysis.headline}`,
       analysis.summary,
@@ -305,12 +369,18 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
       "",
       "Actions :",
       ...analysis.actions.slice(0, 3).map((action, index) => `${index + 1}. ${action}`),
+      ...(routeName && routeTest && routeNext ? [
+        "",
+        `Route regardée : ${routeName}`,
+        `Test à effectuer : ${routeTest}`,
+        `Prochaine action : ${routeNext}`,
+      ] : []),
       "",
       `Règles : ${analysis.ruleVersion} · contrôle technique local, pas une certification juridique.`,
     ].join("\n");
     try {
       await navigator.clipboard.writeText(report);
-      if (copyStatus) copyStatus.textContent = "Récapitulatif copié.";
+      if (copyStatus) copyStatus.textContent = "Résultat copié pour votre support.";
     } catch {
       if (copyStatus) copyStatus.textContent = "La copie n'est pas disponible dans ce navigateur.";
     }

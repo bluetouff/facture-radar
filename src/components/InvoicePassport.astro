@@ -1,0 +1,250 @@
+---
+import InterfaceIcon from "./InterfaceIcon.astro";
+import sources from "../data/sources.json";
+import { PASSPORT_LAB_CHECKED_AT, PASSPORT_LAB_VERSION, passportRoutes } from "../data/passport-routes";
+
+const sourcesById = new Map(sources.map((source) => [source.id, source]));
+const stateLabels = {
+  documented: "Documenté",
+  confirm: "À contrôler",
+  not_published: "Non publié",
+} as const;
+
+const routeSources = (sourceIds: string[]) => [...new Set(sourceIds)]
+  .map((id) => sourcesById.get(id))
+  .filter((source) => source !== undefined);
+---
+
+<section class="passport" data-invoice-passport data-analysis-status="usable" aria-labelledby="passport-title">
+  <header class="passport-head">
+    <div class="passport-orbit" aria-hidden="true">
+      <span></span><i></i><b><InterfaceIcon name="route" /></b>
+    </div>
+    <div>
+      <p class="passport-kicker"><span>LAB</span> {PASSPORT_LAB_VERSION}</p>
+      <h3 id="passport-title">Le passeport de votre facture</h3>
+      <p>Une fois le fichier lisible, regardez où il peut entrer et le contrôle qui reste à faire avant de choisir.</p>
+    </div>
+    <div class="passport-date"><small>Données contrôlées</small><strong>{PASSPORT_LAB_CHECKED_AT.split("-").reverse().join("/")}</strong></div>
+  </header>
+
+  <div class="passport-readiness" data-passport-readiness>
+    <span class="readiness-icon"><InterfaceIcon name="check" /></span>
+    <div>
+      <small data-passport-kicker>Fichier exploitable</small>
+      <strong data-passport-title>Vous pouvez maintenant tester son passage.</strong>
+      <p data-passport-summary>Le contrôle de structure est terminé. Les cartes ci-dessous distinguent ce qui est publié de ce qui doit encore être vérifié dans la PA.</p>
+    </div>
+    <dl>
+      <div><dt>Conteneur</dt><dd data-passport-container>Factur-X</dd></div>
+      <div><dt>Profil</dt><dd data-passport-profile>Détecté après lecture</dd></div>
+    </dl>
+  </div>
+
+  <div class="route-picker">
+    <div class="route-picker-copy">
+      <p class="mono-label">choisissez une destination</p>
+      <h4>Où voulez-vous faire passer ce fichier&nbsp;?</h4>
+      <p>Un seul choix. PA Check affiche le parcours connu et le test qui évite de s’engager à l’aveugle.</p>
+    </div>
+    <div class="route-tabs" role="tablist" aria-label="Plateformes du laboratoire">
+      {passportRoutes.map((route, index) => (
+        <button
+          type="button"
+          role="tab"
+          id={`passport-tab-${route.slug}`}
+          aria-controls={`passport-panel-${route.slug}`}
+          aria-selected={index === 0 ? "true" : "false"}
+          tabindex={index === 0 ? 0 : -1}
+          data-route-button={route.slug}
+          data-route-state={route.routeState}
+        >
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <strong>{route.name}</strong>
+          <small>{route.channel}</small>
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="route-panels">
+    {passportRoutes.map((route, index) => {
+      const sourceIds = [
+        ...route.facts.flatMap((fact) => fact.sourceIds),
+        ...route.cost.sourceIds,
+      ];
+      const linkedSources = routeSources(sourceIds);
+      return (
+        <article
+          class="route-panel"
+          id={`passport-panel-${route.slug}`}
+          role="tabpanel"
+          aria-labelledby={`passport-tab-${route.slug}`}
+          data-route-panel={route.slug}
+          data-route-state={route.routeState}
+          hidden={index !== 0}
+        >
+          <header class="route-head">
+            <div>
+              <p><span class="route-state-dot"></span>{route.routeLabel}</p>
+              <h4 data-passport-route-name>{route.name}</h4>
+              <span>{route.channel}</span>
+            </div>
+            <p>{route.summary}</p>
+          </header>
+
+          <div class="route-line" aria-label={`Parcours documenté pour ${route.name}`}>
+            {route.facts.map((fact, factIndex) => (
+              <div class="route-fact" data-fact-state={fact.state}>
+                <span class="fact-node"><b>{String(factIndex + 1).padStart(2, "0")}</b></span>
+                <div>
+                  <small>{fact.label}</small>
+                  <strong>{fact.value}</strong>
+                  <p>{fact.detail}</p>
+                  <span class="fact-state">{stateLabels[fact.state]}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="route-decision">
+            <section class="route-cost">
+              <span><InterfaceIcon name="verdict" /></span>
+              <div><small>Coût public repéré</small><strong>{route.cost.value}</strong><p>{route.cost.detail}</p></div>
+            </section>
+            <section class="route-test">
+              <span><InterfaceIcon name="target" /></span>
+              <div><small>Le test qui tranche</small><strong data-passport-route-test>{route.decisiveTest}</strong></div>
+            </section>
+          </div>
+
+          <div class="route-next">
+            <span><InterfaceIcon name="action" /></span>
+            <div><small>Votre prochaine action</small><strong data-passport-route-next>{route.nextStep}</strong></div>
+            {route.profileHref && <a href={route.profileHref}>Voir la fiche <InterfaceIcon name="arrow" /></a>}
+          </div>
+
+          <details class="route-sources">
+            <summary>{linkedSources.length} source{linkedSources.length > 1 ? "s" : ""} utilisée{linkedSources.length > 1 ? "s" : ""} pour cette route</summary>
+            <ul>
+              {linkedSources.map((source) => (
+                <li><a href={source.url}>{source.title}</a><small>{source.publisher} · consultée le {source.accessedAt.split("-").reverse().join("/")}</small></li>
+              ))}
+            </ul>
+          </details>
+        </article>
+      );
+    })}
+  </div>
+
+  <footer class="passport-legend">
+    <span><i data-state="documented"></i><strong>Documenté</strong> par une source publique</span>
+    <span><i data-state="confirm"></i><strong>À contrôler</strong> dans le parcours réel</span>
+    <span><i data-state="not_published"></i><strong>Non publié</strong> par la plateforme</span>
+    <a href="/methodologie/">Méthode du Lab <InterfaceIcon name="arrow" /></a>
+  </footer>
+</section>
+
+<style>
+  .passport { --passport-blue: #5267dc; --passport-ink: #10203c; --passport-green: #15866c; --passport-amber: #b56b1b; position: relative; overflow: hidden; margin-top: 1.2rem; border: 1px solid color-mix(in srgb,var(--signal) 25%,var(--line)); border-radius: 1.3rem; background: #f8faff; box-shadow: 0 1.4rem 3.8rem rgba(24,39,74,.1); }
+  .passport::before { position: absolute; top: -12rem; right: -10rem; width: 28rem; height: 28rem; border: 1px solid rgba(109,126,225,.15); border-radius: 50%; box-shadow: 0 0 0 4rem rgba(109,126,225,.025),0 0 0 8rem rgba(24,134,108,.018); content: ""; pointer-events: none; }
+  .passport-head { position: relative; display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 1rem; align-items: center; padding: 1.25rem; background: linear-gradient(125deg,#0f1e38,#17294a 68%,#183b48); color: #fff; }
+  .passport-head > div:nth-child(2) { min-width: 0; }
+  .passport-head h3 { margin: .28rem 0 0; color: #fff; font-size: clamp(1.35rem,2.6vw,1.85rem); font-weight: 520; letter-spacing: -.035em; }
+  .passport-head > div:nth-child(2) > p:last-child { max-width: 52rem; margin: .35rem 0 0; color: rgba(238,243,255,.7); font-size: .86rem; }
+  .passport-kicker { display: flex; gap: .5rem; align-items: center; margin: 0; color: #aebaff; font: 680 .78rem/1 var(--font-mono); letter-spacing: .04em; }
+  .passport-kicker span { border-radius: .35rem; padding: .25rem .35rem; background: #7988ed; color: #fff; font-size: .7rem; }
+  .passport-orbit { position: relative; display: grid; place-items: center; width: 4.2rem; height: 4.2rem; }
+  .passport-orbit span,.passport-orbit i { position: absolute; border: 1px solid rgba(164,178,255,.36); border-radius: 50%; }
+  .passport-orbit span { inset: 0; }
+  .passport-orbit i { inset: .6rem; border-style: dashed; }
+  .passport-orbit b { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: .68rem; background: linear-gradient(145deg,#7c8cef,#56bda8); color: #fff; }
+  .passport-orbit :global(svg) { width: 1.05rem; height: 1.05rem; }
+  .passport-date { display: grid; min-width: 9.6rem; gap: .18rem; border: 1px solid rgba(255,255,255,.14); border-radius: .8rem; padding: .65rem .75rem; background: rgba(255,255,255,.055); }
+  .passport-date small { color: rgba(255,255,255,.55); font-size: .75rem; }
+  .passport-date strong { color: #fff; font: 650 .76rem/1.3 var(--font-mono); }
+  .passport-readiness { position: relative; display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: .9rem; align-items: center; margin: 1rem; border: 1px solid color-mix(in srgb,var(--success) 26%,var(--line)); border-radius: 1rem; padding: .95rem; background: linear-gradient(105deg,#f0fbf7,#fff 72%); }
+  .readiness-icon { display: grid; place-items: center; width: 2.7rem; height: 2.7rem; border-radius: .75rem; background: var(--success); color: #fff; }
+  .readiness-icon :global(svg) { width: 1.15rem; height: 1.15rem; }
+  .passport-readiness > div { min-width: 0; }
+  .passport-readiness small { color: var(--success); font-size: .76rem; font-weight: 760; letter-spacing: .045em; text-transform: uppercase; }
+  .passport-readiness strong { display: block; margin-top: .12rem; color: var(--bright); font-size: .94rem; font-weight: 620; }
+  .passport-readiness p { margin: .2rem 0 0; color: var(--muted); font-size: .79rem; }
+  .passport-readiness dl { display: grid; grid-template-columns: 1fr 1fr; min-width: 17rem; margin: 0; border-left: 1px solid var(--line); }
+  .passport-readiness dl div { display: grid; gap: .1rem; padding-inline: .8rem; }
+  .passport-readiness dt { color: var(--muted); font-size: .75rem; }
+  .passport-readiness dd { margin: 0; color: var(--bright); font-size: .78rem; font-weight: 680; }
+  .passport[data-analysis-status="action"] .passport-readiness { border-color: #e5bd8b; background: linear-gradient(105deg,#fff7ec,#fff 72%); }
+  .passport[data-analysis-status="action"] .readiness-icon { background: var(--passport-amber); }
+  .passport[data-analysis-status="action"] .passport-readiness small { color: var(--passport-amber); }
+  .passport[data-analysis-status="unsupported"] .passport-readiness { border-color: #e2a2a2; background: linear-gradient(105deg,#fff3f3,#fff 72%); }
+  .passport[data-analysis-status="unsupported"] .readiness-icon { background: #a64242; }
+  .passport[data-analysis-status="unsupported"] .passport-readiness small { color: #a64242; }
+  .route-picker { position: relative; display: grid; grid-template-columns: minmax(14rem,.58fr) minmax(0,1.42fr); gap: 1.2rem; align-items: end; padding: 1.25rem 1.25rem 0; }
+  .route-picker-copy h4 { margin: .45rem 0 0; color: var(--bright); font-size: 1.18rem; font-weight: 540; letter-spacing: -.025em; }
+  .route-picker-copy > p:last-child { margin: .35rem 0 0; color: var(--muted); font-size: .79rem; }
+  .route-tabs { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: .38rem; border-radius: .9rem; padding: .36rem; background: #e9edf6; }
+  .route-tabs button { position: relative; display: grid; min-width: 0; min-height: 4.5rem; gap: .12rem; align-content: center; border: 1px solid transparent; border-radius: .68rem; padding: .48rem .42rem; background: transparent; color: var(--muted); text-align: left; cursor: pointer; }
+  .route-tabs button:hover { background: rgba(255,255,255,.65); color: var(--bright); }
+  .route-tabs button[aria-selected="true"] { border-color: color-mix(in srgb,var(--passport-blue) 26%,var(--line)); background: #fff; color: var(--bright); box-shadow: 0 .45rem 1rem rgba(30,45,80,.09); }
+  .route-tabs button > span { color: var(--passport-blue); font: 680 .64rem/1 var(--font-mono); }
+  .route-tabs button strong { overflow: hidden; color: inherit; font-size: .78rem; font-weight: 680; text-overflow: ellipsis; white-space: nowrap; }
+  .route-tabs button small { overflow: hidden; color: var(--muted); font-size: .72rem; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
+  .route-tabs button::after { position: absolute; right: .45rem; top: .45rem; width: .42rem; height: .42rem; border-radius: 50%; background: #8590a4; content: ""; }
+  .route-tabs button[data-route-state="documented"]::after { background: var(--passport-green); box-shadow: 0 0 0 .18rem #dff4ed; }
+  .route-tabs button[data-route-state="constrained"]::after { background: var(--passport-amber); box-shadow: 0 0 0 .18rem #fff0d9; }
+  .route-panels { position: relative; padding: 1rem 1.25rem 1.25rem; }
+  .route-panel[hidden] { display: none !important; }
+  .route-panel { overflow: hidden; border: 1px solid var(--line); border-radius: 1.05rem; background: #fff; box-shadow: 0 .9rem 2.5rem rgba(34,49,83,.07); }
+  .route-head { display: grid; grid-template-columns: minmax(13rem,.55fr) minmax(0,1.45fr); gap: 1rem; align-items: center; border-bottom: 1px solid var(--line); padding: 1rem; background: linear-gradient(105deg,#fff,#f5f7fd); }
+  .route-head > div > p { display: flex; gap: .4rem; align-items: center; margin: 0; color: var(--passport-green); font-size: .74rem; font-weight: 760; letter-spacing: .04em; text-transform: uppercase; }
+  .route-state-dot { width: .48rem; height: .48rem; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 .2rem color-mix(in srgb,currentColor 14%,transparent); }
+  .route-panel[data-route-state="constrained"] .route-head > div > p { color: var(--passport-amber); }
+  .route-panel[data-route-state="unknown"] .route-head > div > p { color: #667187; }
+  .route-head h4 { margin: .2rem 0 0; color: var(--bright); font-size: 1.4rem; font-weight: 540; letter-spacing: -.035em; }
+  .route-head > div > span { color: var(--muted); font-size: .76rem; }
+  .route-head > p { margin: 0; color: var(--paper); font-size: .82rem; line-height: 1.55; }
+  .route-line { display: grid; grid-template-columns: repeat(4,1fr); padding: 1rem; }
+  .route-fact { position: relative; display: grid; grid-template-columns: auto 1fr; gap: .62rem; min-width: 0; padding-right: .8rem; }
+  .route-fact:not(:last-child)::after { position: absolute; left: 1.55rem; right: -.1rem; top: .83rem; height: 1px; background: linear-gradient(90deg,#6b7fe5,#d5dbea); content: ""; }
+  .fact-node { position: relative; z-index: 1; display: grid; place-items: center; width: 1.7rem; height: 1.7rem; border: 1px solid #8a99e6; border-radius: 50%; background: #f2f4ff; color: #5367d3; }
+  .fact-node b { font: 690 .56rem/1 var(--font-mono); }
+  .route-fact[data-fact-state="confirm"] .fact-node { border-color: #d39a59; background: #fff6e8; color: #a96015; }
+  .route-fact[data-fact-state="not_published"] .fact-node { border-color: #b8c0cd; background: #f2f4f7; color: #707a8d; }
+  .route-fact > div { position: relative; z-index: 1; min-width: 0; padding-top: .02rem; }
+  .route-fact small { display: block; color: var(--muted); font-size: .72rem; }
+  .route-fact strong { display: block; margin-top: .18rem; color: var(--bright); font-size: .81rem; font-weight: 680; line-height: 1.35; }
+  .route-fact p { margin: .35rem 0 0; color: var(--muted); font-size: .75rem; line-height: 1.48; }
+  .fact-state { display: inline-flex; margin-top: .48rem; border-radius: 999px; padding: .27rem .42rem; background: #eaf8f3; color: #14745f; font-size: .69rem; font-weight: 700; }
+  .route-fact[data-fact-state="confirm"] .fact-state { background: #fff1dd; color: #9c5915; }
+  .route-fact[data-fact-state="not_published"] .fact-state { background: #eff1f4; color: #657084; }
+  .route-decision { display: grid; grid-template-columns: .8fr 1.2fr; gap: .65rem; border-top: 1px solid var(--line); padding: .8rem 1rem; background: #fafbfe; }
+  .route-decision section { display: grid; grid-template-columns: auto 1fr; gap: .65rem; align-items: start; border: 1px solid var(--line); border-radius: .8rem; padding: .75rem; background: #fff; }
+  .route-decision section > span { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: .58rem; background: var(--signal-soft); color: var(--signal); }
+  .route-decision :global(svg) { width: .9rem; height: .9rem; }
+  .route-decision small,.route-next small { display: block; color: var(--muted); font-size: .71rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+  .route-decision strong { display: block; margin-top: .2rem; color: var(--bright); font-size: .79rem; font-weight: 650; line-height: 1.42; }
+  .route-decision p { margin: .25rem 0 0; color: var(--muted); font-size: .73rem; }
+  .route-next { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: .7rem; align-items: center; border-top: 1px solid color-mix(in srgb,var(--success) 22%,var(--line)); padding: .9rem 1rem; background: linear-gradient(90deg,#ebf8f4,#fff 68%); }
+  .route-next > span { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: .65rem; background: var(--success); color: #fff; }
+  .route-next > span :global(svg) { width: 1rem; height: 1rem; }
+  .route-next strong { display: block; margin-top: .15rem; color: var(--bright); font-size: .82rem; font-weight: 640; }
+  .route-next a { display: inline-flex; gap: .35rem; align-items: center; color: var(--signal); font-size: .75rem; font-weight: 710; white-space: nowrap; }
+  .route-next a :global(svg),.passport-legend a :global(svg) { width: .82rem; height: .82rem; }
+  .route-sources { border-top: 1px solid var(--line); padding: .68rem 1rem; background: #fff; }
+  .route-sources summary { color: var(--muted); font-size: .73rem; font-weight: 660; cursor: pointer; }
+  .route-sources ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .5rem; margin: .65rem 0 0; padding: 0; list-style: none; }
+  .route-sources li { display: grid; min-width: 0; }
+  .route-sources a { overflow: hidden; color: var(--paper); font-size: .74rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+  .route-sources small { color: var(--muted); font-size: .7rem; }
+  .passport-legend { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; border-top: 1px solid var(--line); padding: .8rem 1.25rem; background: #eef2f8; }
+  .passport-legend span { display: inline-flex; gap: .28rem; align-items: center; color: var(--muted); font-size: .72rem; }
+  .passport-legend strong { color: var(--paper); font-weight: 680; }
+  .passport-legend i { width: .46rem; height: .46rem; border-radius: 50%; background: var(--passport-green); }
+  .passport-legend i[data-state="confirm"] { background: var(--passport-amber); }
+  .passport-legend i[data-state="not_published"] { background: #7a8497; }
+  .passport-legend a { display: inline-flex; gap: .35rem; align-items: center; margin-left: auto; color: var(--signal); font-size: .73rem; font-weight: 700; }
+  @media (max-width: 980px) { .route-picker { grid-template-columns: 1fr; } .route-tabs { grid-template-columns: repeat(3,1fr); } .route-line { grid-template-columns: repeat(2,1fr); gap: 1rem .4rem; } .route-fact:nth-child(2)::after { display: none; } }
+  @media (max-width: 720px) { .passport-head { grid-template-columns: auto 1fr; } .passport-date { grid-column: 1/-1; grid-template-columns: 1fr auto; min-width: 0; } .passport-readiness { grid-template-columns: auto 1fr; } .passport-readiness dl { grid-column: 1/-1; min-width: 0; border-top: 1px solid var(--line); border-left: 0; padding-top: .7rem; } .route-head { grid-template-columns: 1fr; } .route-decision { grid-template-columns: 1fr; } }
+  @media (max-width: 540px) { .passport { border-radius: 1rem; } .passport-head,.route-picker,.route-panels { padding-inline: .8rem; } .route-tabs { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; } .route-tabs button { flex: 0 0 8.4rem; scroll-snap-align: start; } .route-line { grid-template-columns: 1fr; } .route-fact:not(:last-child)::after { left: .83rem; right: auto; top: 1.3rem; width: 1px; height: calc(100% + .35rem); background: linear-gradient(#6b7fe5,#d5dbea); } .route-next { grid-template-columns: auto 1fr; } .route-next a { grid-column: 2; } .route-sources ul { grid-template-columns: 1fr; } .passport-legend a { width: 100%; margin-left: 0; } }
+</style>

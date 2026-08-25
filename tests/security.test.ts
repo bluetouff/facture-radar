@@ -51,6 +51,30 @@ test("le vérificateur de facture traite le fichier localement sans injection HT
   assert.doesNotMatch(component, /\.innerHTML\s*=/);
 });
 
+test("le Passeport n'ajoute aucun champ libre, stockage ou appel réseau", async () => {
+  const component = await readFile(new URL("../src/components/InvoicePassport.astro", import.meta.url), "utf8");
+  const controller = await readFile(new URL("../src/components/InvoiceVerifier.astro", import.meta.url), "utf8");
+  assert.match(controller, /passportRouteIds\.has\(routeId\)/);
+  assert.match(controller, /textContent = value/);
+  assert.doesNotMatch(component, /<(?:form|input|textarea|select)\b/i);
+  assert.doesNotMatch(`${component}\n${controller}`, /\bfetch\s*\(/);
+  assert.doesNotMatch(`${component}\n${controller}`, /localStorage|sessionStorage|indexedDB/);
+  assert.doesNotMatch(`${component}\n${controller}`, /\.innerHTML\s*=/);
+  assert.doesNotMatch(`${component}\n${controller}`, /location\.(?:search|hash)/);
+});
+
+test("le Passeport n'affiche que le statut technique, le conteneur et le profil", async () => {
+  const component = await readFile(new URL("../src/components/InvoiceVerifier.astro", import.meta.url), "utf8");
+  const update = component.match(/function updatePassport\(analysis: InvoiceAnalysis\): void \{([\s\S]*?)\n\s*\}\n\n\s*function showInput/);
+  assert.ok(update);
+  const updateBody = update[1];
+  if (typeof updateBody !== "string") throw new Error("Contrôleur Passeport introuvable");
+  assert.match(updateBody, /analysis\.status/);
+  assert.match(updateBody, /analysis\.metadata\.profile/);
+  assert.match(updateBody, /analysis\.metadata\.container/);
+  assert.doesNotMatch(updateBody, /invoiceNumber|seller|buyer|grandTotal|currency|issueDate/);
+});
+
 test("l'extraction PDF désactive les fonctions de rendu inutiles et détruit le document après lecture", async () => {
   const module = await readFile(new URL("../src/lib/pdf-facturx.ts", import.meta.url), "utf8");
   assert.match(module, /disableFontFace: true/);

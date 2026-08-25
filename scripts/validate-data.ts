@@ -4,8 +4,9 @@ import sourcesData from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-profiles.ts";
 import { directRoutingOptions, directRoutingSourceIds } from "../src/data/direct-routing-options.ts";
+import { PASSPORT_LAB_CHECKED_AT, passportRoutes, passportRouteSourceIds } from "../src/data/passport-routes.ts";
 import { INVOICE_RULESET_CHECKED_AT, invoiceVerifierSourceIds } from "../src/lib/invoice-verifier.ts";
-import { platformsSchema, sourcesSchema } from "../src/data/schema.ts";
+import { passportRoutesSchema, platformsSchema, sourcesSchema } from "../src/data/schema.ts";
 import { z } from "zod";
 
 const corpusSelectionSchema = z.object({
@@ -28,6 +29,7 @@ const corpusSelectionSchema = z.object({
 const checkedPlatforms = platformsSchema.parse(platforms);
 const checkedSources = sourcesSchema.parse(sourcesData);
 const checkedSelection = corpusSelectionSchema.parse(corpusSelectionData);
+const checkedPassportRoutes = passportRoutesSchema.parse(passportRoutes);
 const sourceIds = new Set(checkedSources.map((source) => source.id));
 if (sourceIds.size !== checkedSources.length) throw new Error("Un identifiant de source est dupliqué");
 const sourcesById = new Map(checkedSources.map((source) => [source.id, source]));
@@ -52,6 +54,36 @@ for (const option of directRoutingOptions) {
 }
 for (const sourceId of directRoutingSourceIds) {
   if (!sourceIds.has(sourceId)) throw new Error(`Source du routage direct inconnue : ${sourceId}`);
+  referencedSourceIds.add(sourceId);
+}
+
+const passportSlugs = new Set<string>();
+for (const route of checkedPassportRoutes) {
+  if (passportSlugs.has(route.slug)) throw new Error(`Route Passeport dupliquée : ${route.slug}`);
+  passportSlugs.add(route.slug);
+  if (!approvedByName.has(route.officialName)) {
+    throw new Error(`${route.name} est absent de la liste DGFiP approuvée`);
+  }
+  if (route.checkedAt !== PASSPORT_LAB_CHECKED_AT) {
+    throw new Error(`${route.name} : date de contrôle incohérente avec la version du Lab`);
+  }
+  const factIds = new Set(route.facts.map((fact) => fact.id));
+  if (factIds.size !== route.facts.length) throw new Error(`${route.name} : fait Passeport dupliqué`);
+  for (const fact of route.facts) {
+    if (fact.state === "not_published" && fact.sourceIds.length !== 0) {
+      throw new Error(`${route.name} : une information non publiée ne doit pas citer une source trompeuse`);
+    }
+    if (fact.state !== "not_published" && fact.sourceIds.length === 0) {
+      throw new Error(`${route.name} : une affirmation documentée ou à confirmer doit citer sa source`);
+    }
+  }
+}
+for (const sourceId of passportRouteSourceIds) {
+  const source = sourcesById.get(sourceId);
+  if (!source) throw new Error(`Source du Passeport inconnue : ${sourceId}`);
+  if (source.accessedAt > PASSPORT_LAB_CHECKED_AT) {
+    throw new Error(`La source Passeport ${sourceId} est postérieure à la version du Lab`);
+  }
   referencedSourceIds.add(sourceId);
 }
 
@@ -116,6 +148,12 @@ for (const slug of slugs) {
   if (!selectedSlugs.has(slug)) throw new Error(`La fiche ${slug} est absente de la méthode de sélection`);
 }
 
+for (const route of checkedPassportRoutes) {
+  if (route.profileHref !== null && !slugs.has(route.slug)) {
+    throw new Error(`${route.name} : la fiche liée n'existe pas dans le corpus`);
+  }
+}
+
 const journeyIds = new Set<string>();
 const journeyAliases = new Set<string>();
 const journeySlugs = new Set<string>();
@@ -158,4 +196,4 @@ if (officialDirectory.pending.length !== 18) {
   throw new Error(`La liste en attente doit contenir 18 opérateurs, reçu ${officialDirectory.pending.length}`);
 }
 
-console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);
+console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${checkedPassportRoutes.length} routes Passeport, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);

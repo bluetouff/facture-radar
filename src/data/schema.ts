@@ -65,3 +65,32 @@ export const sourceSchema = z.object({
 
 export const platformsSchema = z.array(platformSchema).length(25);
 export const sourcesSchema = z.array(sourceSchema).min(12);
+
+const passportFactSchema = z.object({
+  id: z.enum(["entry", "format", "transmission", "integrity"]),
+  label: z.string().min(1).max(80),
+  value: z.string().min(1).max(120),
+  detail: z.string().min(1).max(420),
+  state: z.enum(["documented", "confirm", "not_published"]),
+  sourceIds: z.array(z.string().min(1)),
+}).strict();
+
+export const passportRoutesSchema = z.array(z.object({
+  slug: z.enum(["qonto", "pennylane", "b2brouter", "superpdp", "tiime", "abby"]),
+  name: z.string().min(1).max(80),
+  officialName: z.string().min(1).max(120),
+  routeState: z.enum(["documented", "constrained", "unknown"]),
+  routeLabel: z.string().min(1).max(120),
+  channel: z.string().min(1).max(120),
+  summary: z.string().min(1).max(420),
+  facts: z.array(passportFactSchema).length(4),
+  cost: z.object({
+    value: z.string().min(1).max(120),
+    detail: z.string().min(1).max(420),
+    sourceIds: z.array(z.string().min(1)).min(1),
+  }).strict(),
+  decisiveTest: z.string().min(1).max(420),
+  nextStep: z.string().min(1).max(420),
+  profileHref: z.string().regex(/^\/plateformes\/[a-z0-9-]+\/$/).nullable(),
+  checkedAt: z.iso.date(),
+}).strict()).length(6);
