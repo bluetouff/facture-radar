@@ -1,0 +1,74 @@
+---
+import InterfaceIcon from "./InterfaceIcon.astro";
+
+const useCases = [
+  { href: "/verifier-mon-outil/#verifier-logiciel", label: "Mon logiciel suffit-il ?", detail: "Vérifier ce que vous utilisez déjà", icon: "search", tone: "violet" },
+  { href: "/verifier-mon-outil/#facturx-direct", label: "Qui peut envoyer mon Factur-X ?", detail: "Trouver une PA avec dépôt direct", icon: "route", tone: "blue" },
+  { href: "/verifier-une-facture/", label: "Mon fichier est-il exploitable ?", detail: "Contrôler le PDF ou le XML localement", icon: "invoice", tone: "green" },
+  { href: "/diagnostic/", label: "Quelle PA regarder ?", detail: "Partir de votre activité et de votre volume", icon: "target", tone: "violet" },
+  { href: "/diagnostic/#contrainte=free", label: "Je cherche une offre gratuite", detail: "Voir les limites documentées", icon: "verdict", tone: "green" },
+  { href: "/diagnostic/#contrainte=accountant", label: "Mon comptable doit accéder", detail: "Repérer les offres qui le prévoient", icon: "directory", tone: "blue" },
+  { href: "/comparer/", label: "Je compare deux solutions", detail: "Lire les différences côte à côte", icon: "layers", tone: "violet" },
+] as const;
+
+const riskCases = [
+  { href: "https://l0g.fr/outils/cout-plateforme-facturation-electronique/", label: "Calculer le coût complet", icon: "verdict" },
+  { href: "https://l0g.fr/outils/qui-peut-voir-ma-facture/", label: "Voir qui accède aux données", icon: "shield" },
+  { href: "https://l0g.fr/outils/journal-incident-facture/", label: "Préparer une interruption", icon: "alert" },
+] as const;
+---
+
+<section class="usecase-navigator" aria-labelledby="usecase-title">
+  <header>
+    <div><small>Votre point de départ</small><h2 id="usecase-title">Qu’avez-vous besoin de résoudre ?</h2></div>
+    <span><i></i> 10 parcours utiles</span>
+  </header>
+  <div class="usecase-grid">
+    {useCases.map(({ href, label, detail, icon, tone }, index) => (
+      <a class={`usecase tone-${tone}`} href={href}>
+        <span class="case-number">{String(index + 1).padStart(2, "0")}</span>
+        <span class="case-icon"><InterfaceIcon name={icon} /></span>
+        <span class="case-copy"><strong>{label}</strong><small>{detail}</small></span>
+        <InterfaceIcon name="arrow" />
+      </a>
+    ))}
+  </div>
+  <div class="risk-cases">
+    <p>Anticiper</p>
+    <nav aria-label="Outils l0g complémentaires">
+      {riskCases.map(({ href, label, icon }) => <a href={href}><InterfaceIcon name={icon} /><span>{label}</span></a>)}
+    </nav>
+  </div>
+</section>
+
+<style>
+  .usecase-navigator { overflow: hidden; border: 1px solid rgba(187,199,255,.2); border-radius: 1.35rem; background: rgba(249,251,255,.97); color: var(--paper); box-shadow: 0 1.6rem 4rem rgba(2,8,25,.24); }
+  header { display: flex; justify-content: space-between; gap: 1rem; align-items: center; border-bottom: 1px solid var(--line); padding: 1rem 1.1rem; background: linear-gradient(115deg,#fff,var(--signal-soft)); }
+  header > div { min-width: 0; }
+  header small { color: var(--signal); font-size: .7rem; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
+  header h2 { margin: .12rem 0 0; color: var(--bright); font-size: 1.08rem; letter-spacing: -.025em; }
+  header > span { display: inline-flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .7rem; font-weight: 620; white-space: nowrap; }
+  header i { width: .5rem; height: .5rem; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 .2rem var(--success-soft); }
+  .usecase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; padding: .75rem; }
+  .usecase { --case-tone: var(--signal); --case-soft: var(--signal-soft); display: grid; min-width: 0; grid-template-columns: auto auto 1fr auto; gap: .55rem; align-items: center; border: 1px solid var(--line); border-radius: .78rem; padding: .62rem; background: #fff; color: var(--paper); transition: border-color 160ms ease,translate 160ms ease,box-shadow 160ms ease; }
+  .usecase.tone-violet { --case-tone: #7256d7; --case-soft: #f2efff; }
+  .usecase.tone-blue { --case-tone: #3574b4; --case-soft: #edf6ff; }
+  .usecase.tone-green { --case-tone: #168065; --case-soft: #eaf8f3; }
+  .usecase:hover { translate: 0 -2px; border-color: color-mix(in srgb,var(--case-tone) 35%,var(--line)); color: inherit; box-shadow: 0 .55rem 1.2rem rgba(41,57,86,.08); }
+  .case-number { color: var(--muted); font: 650 .5rem/1 var(--font-mono); }
+  .case-icon { display: grid; flex: 0 0 auto; place-items: center; width: 2rem; height: 2rem; border-radius: .6rem; background: var(--case-soft); color: var(--case-tone); }
+  .case-icon :global(svg) { width: .95rem; height: .95rem; }
+  .case-copy { display: grid; min-width: 0; }
+  .case-copy strong { color: var(--bright); font-size: .71rem; line-height: 1.3; }
+  .case-copy small { margin-top: .08rem; color: var(--muted); font-size: .68rem; line-height: 1.35; }
+  .usecase > :global(svg) { width: .85rem; height: .85rem; color: var(--case-tone); }
+  .risk-cases { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: center; border-top: 1px solid var(--line); padding: .72rem; background: var(--surface-2); }
+  .risk-cases > p { margin: 0; color: var(--muted); font-size: .6rem; font-weight: 740; letter-spacing: .06em; text-transform: uppercase; }
+  .risk-cases nav { display: grid; grid-template-columns: repeat(3,1fr); gap: .4rem; }
+  .risk-cases a { display: flex; min-width: 0; gap: .35rem; align-items: center; border-radius: .5rem; padding: .42rem; color: var(--paper); font-size: .66rem; font-weight: 630; }
+  .risk-cases a:hover { background: #fff; color: var(--signal); }
+  .risk-cases a :global(svg) { flex: 0 0 auto; width: .85rem; height: .85rem; color: var(--signal); }
+  @media (max-width: 1120px) { .usecase-grid { grid-template-columns: 1fr; } .risk-cases { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .usecase-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 620px) { header { align-items: flex-start; } header > span { display: none; } .usecase-grid { grid-template-columns: 1fr; } .risk-cases nav { grid-template-columns: 1fr; } .risk-cases a { padding: .55rem; background: #fff; } }
+</style>

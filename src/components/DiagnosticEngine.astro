@@ -163,7 +163,7 @@
   const loadParams = () => {
     if (!form) return false;
     const params = new URLSearchParams(location.hash.slice(1));
-    if (!params.has("size")) return false;
+    if (!["size", "volume", "contrainte"].some((key) => params.has(key))) return false;
     const setValue = (name: string, value: string | null) => {
       const input = form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | null;
       if (input && value !== null) input.value = value;
@@ -175,7 +175,7 @@
     const constraint = allowedConstraints.has(requestedConstraint) ? requestedConstraint : "none";
     const constraintInput = form.querySelector<HTMLInputElement>(`input[name="constraint"][value="${constraint}"]`);
     if (constraintInput) constraintInput.checked = true;
-    return true;
+    return params.has("size") && params.has("volume");
   };
 
   form?.addEventListener("submit", (event) => { event.preventDefault(); render(); });

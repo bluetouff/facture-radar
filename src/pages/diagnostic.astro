@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ChoiceMap from "../components/ChoiceMap.astro";
 import DiagnosticEngine from "../components/DiagnosticEngine.astro";
 ---
 
@@ -7,12 +8,22 @@ import DiagnosticEngine from "../components/DiagnosticEngine.astro";
   title="Trouver une plateforme adaptée | PA Check"
   description="Trois questions simples pour repérer jusqu'à trois plateformes adaptées à votre activité et à votre priorité."
 >
-  <section class="shell page-hero">
-    <span class="eyebrow">votre activité · vos priorités</span>
-    <h1>Trouvez des plateformes adaptées à votre activité.</h1>
-    <p>Indiquez votre taille, votre volume mensuel de factures et votre priorité. PA Check vous propose jusqu'à trois options à regarder de plus près.</p>
+  <section class="shell page-hero diagnostic-hero">
+    <div>
+      <span class="eyebrow">votre activité · vos priorités</span>
+      <h1>Trouvez des plateformes adaptées à votre activité.</h1>
+      <p>Indiquez votre taille, votre volume mensuel de factures et votre priorité. PA Check vous propose jusqu'à trois options à regarder de plus près.</p>
+    </div>
+    <ChoiceMap />
   </section>
   <section class="shell">
     <DiagnosticEngine />
   </section>
 </BaseLayout>
+
+<style>
+  .diagnostic-hero { display: grid; grid-template-columns: minmax(0, .95fr) minmax(440px, .85fr); gap: clamp(2.4rem, 6vw, 6rem); align-items: center; }
+  .diagnostic-hero h1 { max-width: 14ch; }
+  .diagnostic-hero > div > p { max-width: 42rem; margin: 1.25rem 0 0; color: var(--paper); font-size: clamp(.98rem, 1.8vw, 1.14rem); line-height: 1.7; }
+  @media (max-width: 900px) { .diagnostic-hero { grid-template-columns: 1fr; gap: 2rem; } .diagnostic-hero h1 { max-width: 18ch; } }
+</style>

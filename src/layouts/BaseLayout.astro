@@ -13,13 +13,20 @@ interface Props {
 
 const { title, description, canonical = Astro.url.pathname } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
-const nav = [
-  { href: "/verifier-mon-outil/", label: "Question pratique", shortLabel: "Besoin", icon: "action" },
-  { href: "/verifier-une-facture/", label: "Vérifier une facture", shortLabel: "Facture", icon: "invoice" },
-  { href: "/diagnostic/", label: "Choisir une plateforme", shortLabel: "Choisir", icon: "verdict" },
-  { href: "/plateformes/", label: `${platforms.length} plateformes`, shortLabel: "Plateformes", icon: "proof" },
-  { href: "/annuaire/", label: "Annuaire officiel", shortLabel: "Annuaire", icon: "check" },
+const primaryNav = [
+  { href: "/verifier-mon-outil/", label: "Poser une question", hint: "Un besoin précis", icon: "route", tone: "violet" },
+  { href: "/verifier-une-facture/", label: "Vérifier une facture", hint: "Factur-X et mentions", icon: "invoice", tone: "blue" },
+  { href: "/diagnostic/", label: "Choisir une plateforme", hint: "Trois réponses suffisent", icon: "target", tone: "green" },
 ] as const;
+const resourceNav = [
+  { href: "/plateformes/", label: `${platforms.length} plateformes étudiées`, hint: "Fiches détaillées et tarifs", icon: "layers" },
+  { href: "/annuaire/", label: "Annuaire officiel", hint: "La liste publique de la DGFiP", icon: "directory" },
+  { href: "/a-propos/", label: "Pourquoi PA Check ?", hint: "De l’enquête l0g à l’outil", icon: "route" },
+  { href: "/contribuer/", label: "Mettre à jour une fiche", hint: "Pour les plateformes agréées", icon: "action" },
+  { href: "/methodologie/", label: "Sources et méthode", hint: "Ce qui est vérifié, déclaré ou inconnu", icon: "shield" },
+] as const;
+const isCurrent = (href: string) => Astro.url.pathname.startsWith(href);
+const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
 ---
 
 <!doctype html>
@@ -46,21 +53,67 @@ const nav = [
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header">
-      <div class="shell header-inner">
+      <div class="header-shell header-inner">
         <a class="brand" href="/" aria-label="PA Check, accueil">
-          <span class="brand-mark"><InterfaceIcon name="invoice" /></span>
-          <span class="brand-copy"><strong>PA <span>Check</span></strong><small>Choisir et vérifier</small></span>
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 52 52" fill="none">
+              <path class="brand-p" d="M14 37V14.5h8.5c5 0 8 2.7 8 7s-3 7-8 7H14" />
+              <path class="brand-a" d="m27.5 37 7.5-22.5L42.5 37M30.6 27.8h8.8" />
+            </svg>
+          </span>
+          <span class="brand-copy"><strong><span>PA</span> Check</strong><small>Choisir et vérifier</small></span>
         </a>
-        <nav class="main-nav" aria-label="Navigation principale">
-          {nav.map(({ href, label, shortLabel, icon }) => (
-            <a href={href} aria-current={Astro.url.pathname.startsWith(href) ? "page" : undefined}>
-              <InterfaceIcon name={icon} />
-              <span class="nav-label">{label}</span><span class="nav-short">{shortLabel}</span>
+        <nav class="main-nav" aria-label="Actions principales">
+          {primaryNav.map(({ href, label, hint, icon, tone }) => (
+            <a class={`nav-action tone-${tone}`} href={href} aria-current={isCurrent(href) ? "page" : undefined}>
+              <span class="nav-icon"><InterfaceIcon name={icon} /></span>
+              <span class="nav-copy"><strong>{label}</strong><small>{hint}</small></span>
             </a>
           ))}
         </nav>
-        <strong class="header-promise"><InterfaceIcon name="shield" /> Informations sourcées</strong>
+        <div class="header-tools">
+          <details class="resource-menu">
+            <summary class:list={{ current: resourceIsCurrent }}>
+              <span class="summary-icon"><InterfaceIcon name="grid" /></span>
+              <span>Explorer</span>
+              <InterfaceIcon name="chevron" />
+            </summary>
+            <div class="resource-popover">
+              <p>Ressources</p>
+              <nav aria-label="Ressources">
+                {resourceNav.map(({ href, label, hint, icon }) => (
+                  <a href={href} aria-current={isCurrent(href) ? "page" : undefined}>
+                    <span><InterfaceIcon name={icon} /></span>
+                    <strong>{label}<small>{hint}</small></strong>
+                  </a>
+                ))}
+              </nav>
+              <div class="source-note"><InterfaceIcon name="shield" /><span><strong>Informations sourcées</strong><small>Mises à jour et limites affichées</small></span></div>
+            </div>
+          </details>
+          <details class="mobile-menu">
+            <summary><InterfaceIcon name="menu" /><span>Menu</span></summary>
+            <div class="mobile-popover">
+              <p>Que voulez-vous faire ?</p>
+              <nav aria-label="Menu principal mobile">
+                {primaryNav.map(({ href, label, hint, icon, tone }) => (
+                  <a class={`tone-${tone}`} href={href} aria-current={isCurrent(href) ? "page" : undefined}>
+                    <span class="nav-icon"><InterfaceIcon name={icon} /></span>
+                    <strong>{label}<small>{hint}</small></strong>
+                  </a>
+                ))}
+              </nav>
+              <p>Explorer</p>
+              <nav class="mobile-resources" aria-label="Ressources mobiles">
+                {resourceNav.map(({ href, label, icon }) => (
+                  <a href={href} aria-current={isCurrent(href) ? "page" : undefined}><InterfaceIcon name={icon} /><span>{label}</span></a>
+                ))}
+              </nav>
+            </div>
+          </details>
+        </div>
       </div>
+      <div class="header-signal" aria-hidden="true"><span></span><span></span><span></span></div>
     </header>
     <main id="contenu">
       <slot />
@@ -73,6 +126,8 @@ const nav = [
           <p>Vos réponses et vos fichiers restent sur votre appareil. Aucun compte nécessaire.</p>
         </div>
         <nav aria-label="Pied de page">
+          <a href="/a-propos/">Pourquoi PA Check ?</a>
+          <a href="/contribuer/">Mettre à jour une fiche</a>
           <a href="/methodologie/">Méthodologie</a>
           <a href="/changements/">Journal des changements</a>
           <a href="/api/platforms.json">API JSON</a>

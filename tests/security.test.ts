@@ -62,3 +62,16 @@ test("l'extraction PDF désactive les fonctions de rendu inutiles et détruit le
   assert.doesNotMatch(module, /\.getPage\s*\(/);
   assert.doesNotMatch(module, /\.render\s*\(/);
 });
+
+test("le formulaire PA prépare un message local sans endpoint ni publication automatique", async () => {
+  const page = await readFile(new URL("../src/pages/contribuer.astro", import.meta.url), "utf8");
+  const script = await readFile(new URL("../public/scripts/contribution-form.js", import.meta.url), "utf8");
+  assert.match(script, /const recipient = "olivier@l0g\.fr"/);
+  assert.match(script, /\["http:", "https:"\]\.includes/);
+  assert.match(script, /encodeURIComponent\(message\.body\)/);
+  assert.match(page, /Pas de publication automatique/);
+  assert.doesNotMatch(script, /\bfetch\s*\(/);
+  assert.doesNotMatch(script, /localStorage|sessionStorage/);
+  assert.doesNotMatch(script, /\.innerHTML\s*=/);
+  assert.doesNotMatch(page, /<form[^>]+action=/);
+});

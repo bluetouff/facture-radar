@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PlatformCard from "../components/PlatformCard.astro";
-import PracticalRouter from "../components/PracticalRouter.astro";
+import UseCaseNavigator from "../components/UseCaseNavigator.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import ProofOrbit from "../components/ProofOrbit.astro";
 import { platforms } from "../data/platforms";
@@ -19,14 +19,14 @@ import directory from "../data/official-directory.json";
       <div class="hero-intro">
         <span class="eyebrow">facturation électronique · indépendants et entreprises</span>
         <h1>Partez de votre <strong>vraie question.</strong></h1>
-        <p class="hero-copy">Dites ce que vous voulez faire. PA Check cherche le chemin documenté, montre ce qui manque encore et vous donne le test concret à effectuer.</p>
+        <p class="hero-copy">Choisissez la situation qui vous ressemble. PA Check vous mène vers une réponse, un contrôle ou une décision concrète.</p>
       </div>
-      <div class="hero-verifier"><PracticalRouter compact /></div>
+      <div class="hero-verifier"><UseCaseNavigator /></div>
       <div class="hero-support">
-        <div class="hero-guide" aria-label="Les usages de PA Check">
-          <div><span><InterfaceIcon name="invoice" /></span><p><strong>Vous avez déjà un fichier</strong><small>Trouvez qui peut le transmettre</small></p></div>
-          <div><span><InterfaceIcon name="verdict" /></span><p><strong>Vous devez choisir</strong><small>Obtenez jusqu'à trois options</small></p></div>
-          <div><span><InterfaceIcon name="invoice" /></span><p><strong>Vous avez une facture test</strong><small>Contrôlez son Factur-X localement</small></p></div>
+        <div class="hero-guide" aria-label="Les principes de PA Check">
+          <div><span><InterfaceIcon name="route" /></span><p><strong>Une entrée claire</strong><small>Pas de questionnaire inutile</small></p></div>
+          <div><span><InterfaceIcon name="shield" /></span><p><strong>Vos données restent ici</strong><small>Aucun compte nécessaire</small></p></div>
+          <div><span><InterfaceIcon name="check" /></span><p><strong>Une action suivante</strong><small>Y compris lorsqu’un point manque</small></p></div>
         </div>
         <a class="quiet-link" href="/methodologie/">Comprendre comment les informations sont mises à jour <InterfaceIcon name="arrow" /></a>
       </div>
@@ -39,6 +39,47 @@ import directory from "../data/official-directory.json";
       <div><strong>{sources.length}</strong><span>sources publiques consultables</span></div>
       <div><strong>0</strong><span>donnée personnelle demandée</span></div>
       <div><strong>{directory.approved.length}</strong><span>plateformes agréées recensées</span></div>
+    </div>
+  </section>
+
+  <section class="story-stage" aria-labelledby="story-title">
+    <div class="shell story-layout">
+      <div class="story-copy">
+        <p class="story-kicker">l’enquête fondatrice · l0g</p>
+        <span class="story-signature">ENQUÊTER <i></i> RENDRE UTILE</span>
+        <h2 id="story-title">Avant de choisir une plateforme, il fallait comprendre ce qui avait changé.</h2>
+        <p>Le portail public qui devait offrir un accès minimal a été retiré du dispositif. L’obligation est restée. Entre les entreprises et leurs clients s’installe désormais un marché de plateformes privées.</p>
+        <p>l0g a suivi cette nouvelle chaîne pendant cinq enquêtes : l’architecture publique, les acteurs qui feront réellement circuler les factures, le prix des offres gratuites, l’accès aux données et la continuité en cas d’incident.</p>
+        <blockquote>PA Check est né pour donner une suite pratique à ce travail : aider chacun à poser la bonne question, contrôler un fichier et choisir avec moins d’angles morts.</blockquote>
+        <div class="story-actions">
+          <a class="story-primary" href="https://l0g.fr/publications/grand-peage-facture/">Découvrir l’enquête complète <InterfaceIcon name="arrow" /></a>
+          <a href="/a-propos/">De l’enquête à PA Check</a>
+        </div>
+      </div>
+
+      <div class="story-chapters" aria-label="Les cinq volets du Grand péage de la facture">
+        <header><span>LE GRAND PÉAGE DE LA FACTURE</span><small>5 volets · 10 infographies · EPUB gratuit</small></header>
+        <nav>
+          <a class="chapter-aqua" href="https://l0g.fr/posts/le-grand-peage-de-la-facture-1-le-portail-ampute/">
+            <span>01</span><p><small>PORTAIL</small><strong>Le portail amputé</strong></p><InterfaceIcon name="arrow" />
+          </a>
+          <a class="chapter-blue" href="https://l0g.fr/posts/le-grand-peage-de-la-facture-2-147-plateformes-combien-de-tuyaux/">
+            <span>02</span><p><small>MARCHÉ</small><strong>148 plateformes, combien de tuyaux ?</strong></p><InterfaceIcon name="arrow" />
+          </a>
+          <a class="chapter-amber" href="https://l0g.fr/posts/le-grand-peage-de-la-facture-3-le-prix-du-gratuit/">
+            <span>03</span><p><small>PRIX</small><strong>Le prix du gratuit</strong></p><InterfaceIcon name="arrow" />
+          </a>
+          <a class="chapter-violet" href="https://l0g.fr/posts/le-grand-peage-de-la-facture-4-qui-lit-vos-factures/">
+            <span>04</span><p><small>DONNÉES</small><strong>Qui lit vos factures ?</strong></p><InterfaceIcon name="arrow" />
+          </a>
+          <a class="chapter-coral" href="https://l0g.fr/posts/le-grand-peage-de-la-facture-5-le-jour-ou-le-tuyau-casse/">
+            <span>05</span><p><small>INCIDENT</small><strong>Le jour où le tuyau casse</strong></p><InterfaceIcon name="arrow" />
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="shell story-bridge" aria-label="De l’enquête aux outils PA Check">
+      <span><b>01</b> Enquête l0g</span><i></i><span><b>02</b> Informations structurées</span><i></i><span><b>03</b> Décisions et vérifications</span>
     </div>
   </section>
 
@@ -82,6 +123,11 @@ import directory from "../data/official-directory.json";
         <a class="button secondary" href="/plateformes/">Voir les {platforms.length} plateformes</a>
         <a class="button secondary" href="/annuaire/">Consulter l'annuaire officiel</a>
       </div>
+      <a class="pa-contribution" href="/contribuer/">
+        <span><InterfaceIcon name="action" /></span>
+        <div><p class="mono-label">vous représentez une PA ?</p><h3>Apportez une information à votre fiche.</h3><small>Une source publique, un périmètre précis, puis une vérification indépendante avant mise à jour.</small></div>
+        <InterfaceIcon name="arrow" />
+      </a>
     </div>
   </section>
 
@@ -103,9 +149,6 @@ import directory from "../data/official-directory.json";
     </div>
   </section>
 
-  <section class="shell section">
-    <div class="notice"><strong>Pourquoi ce site existe.</strong> PA Check prolonge l'enquête l0g <a href="https://l0g.fr/publications/grand-peage-facture/">Le grand péage de la facture</a>. Il aide chacun à regarder les coûts, les fonctions utiles et les conditions de sortie avant de choisir.</div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -127,7 +170,7 @@ import directory from "../data/official-directory.json";
   .hero-guide > div > span { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: .65rem; background: rgba(142,161,255,.14); color: #bdc7ff; }
   .hero-guide p { display: grid; margin: 0; }
   .hero-guide strong { color: #fff; font-size: .78rem; }
-  .hero-guide small { color: rgba(237,242,255,.64); font-size: .64rem; font-weight: 560; }
+  .hero-guide small { color: rgba(237,242,255,.64); font-size: .69rem; font-weight: 560; }
   .quiet-link { display: inline-flex; gap: .55rem; align-items: center; margin-top: 1rem; color: #bdc7ff; font-size: .7rem; font-weight: 700; }
   .quiet-link :global(svg) { width: 1rem; height: 1rem; }
   .stats-shell { position: relative; z-index: 3; margin-top: -1.75rem; }
@@ -148,14 +191,57 @@ import directory from "../data/official-directory.json";
   .visual-chip { position: absolute; right: 1rem; bottom: 1rem; display: inline-flex; gap: .35rem; align-items: center; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: .4rem .6rem; background: rgba(255,255,255,.08); color: #a9f2dc; font-size: .64rem; font-weight: 710; }
   .visual-chip :global(svg) { width: .9rem; height: .9rem; }
   .invoice-callout-copy { position: relative; z-index: 1; }
-  .invoice-callout-copy h2 { max-width: 17ch; margin: .8rem 0 0; color: var(--bright); font-size: clamp(1.8rem, 3.7vw, 2.8rem); line-height: 1.08; letter-spacing: -.045em; }
+  .invoice-callout-copy h2 { max-width: 17ch; margin: .8rem 0 0; color: var(--bright); font-size: clamp(1.75rem, 3.4vw, 2.55rem); font-weight: 590; line-height: 1.12; letter-spacing: -.032em; }
   .invoice-callout-copy > p:not(.mono-label) { max-width: 42rem; color: var(--paper); font-size: .9rem; }
   .callout-points { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0 1.2rem; }
-  .callout-points span { display: inline-flex; gap: .35rem; align-items: center; border-radius: 999px; padding: .4rem .55rem; background: #fff; color: var(--paper); font-size: .66rem; font-weight: 650; box-shadow: inset 0 0 0 1px var(--line); }
+  .callout-points span { display: inline-flex; gap: .35rem; align-items: center; border-radius: 999px; padding: .4rem .55rem; background: #fff; color: var(--paper); font-size: .7rem; font-weight: 650; box-shadow: inset 0 0 0 1px var(--line); }
   .callout-points :global(svg), .invoice-callout .button :global(svg) { width: .9rem; height: .9rem; }
   .invoice-callout .button { gap: .5rem; }
   .quiet-section { border-block: 1px solid color-mix(in srgb, var(--signal) 12%, var(--line)); background: color-mix(in srgb, var(--signal-soft) 46%, transparent); }
+  .story-stage { position: relative; overflow: hidden; margin-top: clamp(3.5rem,7vw,6rem); padding-block: clamp(3.8rem,7vw,6.5rem) 1.2rem; background: #0c1727; color: #fff; }
+  .story-stage::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(138,158,194,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(138,158,194,.055) 1px,transparent 1px); background-size: 28px 28px; mask-image: linear-gradient(90deg,transparent,#000 48%,#000); content: ""; }
+  .story-stage::after { position: absolute; top: -13rem; right: -8rem; width: 36rem; height: 36rem; border: 1px solid rgba(121,139,245,.2); border-radius: 50%; box-shadow: 0 0 0 5rem rgba(121,139,245,.025),0 0 0 10rem rgba(103,217,195,.018); content: ""; }
+  .story-layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,.9fr) minmax(430px,1.1fr); gap: clamp(3rem,8vw,8rem); align-items: center; }
+  .story-kicker { display: inline-flex; margin: 0; border: 1px solid rgba(110,220,199,.3); border-radius: 999px; padding: .42rem .66rem; color: #77ddc9; font-size: .68rem; font-weight: 720; letter-spacing: .045em; text-transform: uppercase; }
+  .story-signature { display: flex; gap: .7rem; align-items: center; margin-top: 1.3rem; color: rgba(255,255,255,.43); font: 680 .61rem/1 var(--font-mono); letter-spacing: .05em; }
+  .story-signature i { width: 4rem; height: 1px; background: linear-gradient(90deg,#70dac5,#8b84f4); }
+  .story-copy h2 { max-width: 19ch; margin: 1rem 0 0; color: #fff; font-size: clamp(2rem,4vw,3.25rem); font-weight: 540; line-height: 1.09; letter-spacing: -.038em; }
+  .story-copy > p:not(.story-kicker) { max-width: 45rem; margin: 1.15rem 0 0; color: rgba(239,244,255,.7); font-size: .88rem; line-height: 1.72; }
+  .story-copy blockquote { margin: 1.5rem 0 0; border: 0; border-left: 2px solid #7b8ff1; padding: .15rem 0 .15rem 1rem; color: #fff; font-size: .9rem; font-weight: 620; line-height: 1.6; }
+  .story-copy blockquote::before { display: none; }
+  .story-actions { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; align-items: center; margin-top: 1.5rem; }
+  .story-actions a { color: #b9c5ff; font-size: .72rem; font-weight: 710; }
+  .story-actions .story-primary { display: inline-flex; gap: .5rem; align-items: center; border-radius: .7rem; padding: .72rem .85rem; background: #6f7fe4; color: #fff; }
+  .story-actions :global(svg) { width: .95rem; height: .95rem; }
+  .story-chapters { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 1.35rem; padding: 1rem; background: rgba(11,25,40,.76); box-shadow: 0 1.5rem 4rem rgba(0,0,0,.24); backdrop-filter: blur(10px); }
+  .story-chapters > header { display: flex; justify-content: space-between; gap: .7rem; border-bottom: 1px solid rgba(255,255,255,.1); padding: .2rem .25rem .9rem; color: #aeb9c9; font: 680 .58rem/1.4 var(--font-mono); }
+  .story-chapters > header span { color: #bbc4ff; }
+  .story-chapters nav { display: grid; gap: .48rem; margin-top: .8rem; }
+  .story-chapters nav a { --chapter-tone: #79dcc9; display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; border: 1px solid rgba(255,255,255,.08); border-radius: .8rem; padding: .7rem .75rem; background: rgba(255,255,255,.035); color: #fff; transition: translate 160ms ease,border-color 160ms ease,background 160ms ease; }
+  .story-chapters nav a:hover { translate: .2rem 0; border-color: color-mix(in srgb,var(--chapter-tone) 45%,transparent); background: rgba(255,255,255,.07); color: #fff; }
+  .story-chapters .chapter-blue { --chapter-tone: #7aa2f7; }
+  .story-chapters .chapter-amber { --chapter-tone: #e8ad49; }
+  .story-chapters .chapter-violet { --chapter-tone: #b997ff; }
+  .story-chapters .chapter-coral { --chapter-tone: #ff8c83; }
+  .story-chapters nav a > span { display: grid; place-items: center; width: 2.35rem; height: 2.35rem; border: 1px solid var(--chapter-tone); border-radius: .7rem; color: var(--chapter-tone); font: 730 .62rem/1 var(--font-mono); }
+  .story-chapters nav p { display: grid; gap: .05rem; margin: 0; }
+  .story-chapters nav small { color: var(--chapter-tone); font-size: .56rem; font-weight: 740; letter-spacing: .06em; }
+  .story-chapters nav strong { color: #fff; font-size: .77rem; }
+  .story-chapters nav :global(svg) { width: 1rem; height: 1rem; color: var(--chapter-tone); }
+  .story-bridge { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: .8rem; align-items: center; margin-top: clamp(2.7rem,5vw,4.5rem); border-top: 1px solid rgba(255,255,255,.1); padding-block: 1.1rem 0; }
+  .story-bridge span { display: flex; gap: .5rem; align-items: center; justify-content: center; color: rgba(255,255,255,.62); font-size: .7rem; font-weight: 660; }
+  .story-bridge b { color: #8f9cf2; font: 690 .57rem/1 var(--font-mono); }
+  .story-bridge i { width: 2.6rem; height: 1px; background: linear-gradient(90deg,#70dac5,#8b84f4); }
+  .pa-contribution { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; border: 1px solid color-mix(in srgb,var(--accent) 20%,var(--line)); border-radius: 1.15rem; padding: 1rem 1.15rem; background: linear-gradient(110deg,color-mix(in srgb,var(--accent) 8%,#fff),#fff 64%); transition: translate 160ms ease,box-shadow 160ms ease; }
+  .pa-contribution:hover { translate: 0 -2px; color: inherit; box-shadow: 0 .8rem 2rem rgba(41,57,86,.08); }
+  .pa-contribution > span { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: .85rem; background: linear-gradient(145deg,var(--accent),var(--signal)); color: #fff; }
+  .pa-contribution > span :global(svg) { width: 1.2rem; height: 1.2rem; }
+  .pa-contribution > div { min-width: 0; }
+  .pa-contribution h3 { margin: .35rem 0 .15rem; color: var(--bright); font-size: 1rem; font-weight: 620; }
+  .pa-contribution small { color: var(--muted); font-size: .72rem; }
+  .pa-contribution > :global(svg) { width: 1.15rem; height: 1.15rem; color: var(--signal); }
   @media (min-width: 901px) { .hero-guide { grid-template-columns: repeat(3, 1fr); } .hero-guide > div { grid-template-columns: 1fr; align-items: start; } }
+  @media (max-width: 900px) { .story-layout { grid-template-columns: 1fr; } }
   @media (max-width: 700px) { .invoice-callout { grid-template-columns: 1fr; } .invoice-visual { min-height: 15rem; } .invoice-sheet { scale: .88; } }
-  @media (max-width: 620px) { .hero-stage { border-radius: 0 0 1.5rem 1.5rem; } .stats-shell { margin-top: -1rem; } }
+  @media (max-width: 620px) { .hero-stage { border-radius: 0 0 1.5rem 1.5rem; } .stats-shell { margin-top: -1rem; } .story-stage { padding-top: 3rem; } .story-chapters > header { display: grid; } .story-bridge { grid-template-columns: 1fr; } .story-bridge i { width: 1px; height: .8rem; margin-inline: auto; } .pa-contribution { grid-template-columns: auto 1fr; } .pa-contribution > :global(svg) { display: none; } }
 </style>

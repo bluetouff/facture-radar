@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InterfaceIcon from "../components/InterfaceIcon.astro";
+import { platforms } from "../data/platforms";
+---
+
+<BaseLayout
+  title="Mettre à jour une fiche plateforme | PA Check"
+  description="Signalez une erreur ou transmettez des informations publiques et sourcées pour enrichir une fiche PA Check."
+>
+  <section class="shell page-hero contribution-hero">
+    <div>
+      <span class="eyebrow">plateformes agréées</span>
+      <h1>Votre fiche mérite d’être exacte.</h1>
+      <p>Vous représentez une plateforme ? Signalez une erreur, une nouvelle offre ou une fonction mieux documentée. Chaque information sera relue et rapprochée de sa source avant publication.</p>
+    </div>
+    <div class="review-route" aria-label="Parcours de validation d’une contribution">
+      <div><span><InterfaceIcon name="action" /></span><p><b>01</b><strong>Vous transmettez</strong><small>Une information et son lien public</small></p></div>
+      <i></i>
+      <div><span><InterfaceIcon name="search" /></span><p><b>02</b><strong>PA Check vérifie</strong><small>Portée, date et cohérence</small></p></div>
+      <i></i>
+      <div><span><InterfaceIcon name="check" /></span><p><b>03</b><strong>La fiche évolue</strong><small>Avec sa source et sa date</small></p></div>
+    </div>
+  </section>
+
+  <section class="shell contribution-layout">
+    <form class="contribution-form" id="contribution-form">
+      <header>
+        <div><p class="mono-label">proposer une mise à jour</p><h2>Les éléments à examiner</h2></div>
+        <span><InterfaceIcon name="shield" /> Aucun envoi automatique</span>
+      </header>
+
+      <div class="form-grid">
+        <label>
+          <span>Plateforme concernée</span>
+          <select name="platform" required>
+            <option value="">Choisir une plateforme</option>
+            {platforms.map((platform) => <option value={platform.displayName}>{platform.displayName}</option>)}
+            <option value="Autre plateforme agréée">Autre plateforme agréée</option>
+          </select>
+        </label>
+        <label>
+          <span>Votre lien avec cette plateforme</span>
+          <select name="relationship" required>
+            <option value="">Choisir</option>
+            <option>Équipe de la plateforme</option>
+            <option>Partenaire ou intégrateur</option>
+            <option>Client utilisateur</option>
+            <option>Autre</option>
+          </select>
+        </label>
+        <fieldset class="wide update-scope">
+          <legend>Que souhaitez-vous mettre à jour ?</legend>
+          <div>
+            <label><input type="checkbox" name="scope" value="Tarifs et limites" /><span>Tarifs et limites</span></label>
+            <label><input type="checkbox" name="scope" value="Formats et transmission" /><span>Formats et transmission</span></label>
+            <label><input type="checkbox" name="scope" value="Intégrations et API" /><span>Intégrations et API</span></label>
+            <label><input type="checkbox" name="scope" value="Sécurité et hébergement" /><span>Sécurité et hébergement</span></label>
+            <label><input type="checkbox" name="scope" value="Accès comptable et utilisateurs" /><span>Accès comptable et utilisateurs</span></label>
+            <label><input type="checkbox" name="scope" value="Autre information" /><span>Autre information</span></label>
+          </div>
+        </fieldset>
+        <label class="wide">
+          <span>Information à corriger ou à ajouter</span>
+          <textarea name="details" rows="7" maxlength="5000" required placeholder="Décrivez le point précis, le périmètre de l’offre et, si utile, la date d’entrée en vigueur."></textarea>
+          <small>5 000 caractères maximum. Évitez les documents confidentiels et les données de clients.</small>
+        </label>
+        <label class="wide">
+          <span>Liens publics permettant de vérifier l’information</span>
+          <textarea name="sources" rows="4" maxlength="2000" required placeholder="https://votre-site.fr/tarifs&#10;https://aide.votre-site.fr/factur-x"></textarea>
+          <small>Un lien HTTP ou HTTPS par ligne, huit liens maximum.</small>
+        </label>
+        <label>
+          <span>Votre nom</span>
+          <input name="contactName" type="text" maxlength="100" autocomplete="name" required />
+        </label>
+        <label>
+          <span>Votre adresse professionnelle</span>
+          <input name="contactEmail" type="email" maxlength="180" autocomplete="email" required />
+        </label>
+        <label class="wide consent"><input name="confirmation" type="checkbox" required /><span>Je confirme pouvoir transmettre ces informations et j’accepte d’être recontacté pour les vérifier.</span></label>
+      </div>
+
+      <div class="form-actions">
+        <button class="button" type="submit">Préparer mon message <InterfaceIcon name="arrow" /></button>
+        <button class="button secondary" id="copy-contribution" type="button">Copier le dossier</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <aside class="contribution-rules">
+      <p class="mono-label">ce qui aide vraiment</p>
+      <h2>Une source exploitable vaut mieux qu’une promesse.</h2>
+      <ul>
+        <li><InterfaceIcon name="check" /><span><strong>Une page publique datée</strong>Tarif, aide produit, documentation API ou politique de sécurité.</span></li>
+        <li><InterfaceIcon name="check" /><span><strong>Un périmètre précis</strong>Nom de l’offre, volume, type de client et date d’application.</span></li>
+        <li><InterfaceIcon name="alert" /><span><strong>Pas de publication automatique</strong>Une contribution peut être retenue, précisée ou refusée.</span></li>
+      </ul>
+      <div class="privacy-note"><InterfaceIcon name="shield" /><p><strong>Vos réponses restent dans cette page.</strong> Le bouton prépare un email dans votre logiciel de messagerie. Vous gardez la main sur son envoi.</p></div>
+    </aside>
+  </section>
+</BaseLayout>
+
+<script is:inline src="/scripts/contribution-form.js" defer></script>
+
+<style>
+  .contribution-hero { display: grid; grid-template-columns: minmax(0,1fr) minmax(410px,.95fr); gap: clamp(2.5rem,6vw,6rem); align-items: center; }
+  .contribution-hero > div:first-child > p { max-width: 44rem; margin: 1.25rem 0 0; color: var(--paper); font-size: clamp(.98rem,1.8vw,1.12rem); line-height: 1.7; }
+  .review-route { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: .55rem; align-items: center; border: 1px solid var(--line); border-radius: 1.2rem; padding: 1rem; background: rgba(255,255,255,.78); box-shadow: 0 1.2rem 3rem rgba(41,57,86,.08); }
+  .review-route > div { display: grid; justify-items: center; gap: .55rem; text-align: center; }
+  .review-route > div > span { display: grid; place-items: center; width: 2.55rem; height: 2.55rem; border-radius: .75rem; background: var(--signal-soft); color: var(--signal); }
+  .review-route > div:nth-of-type(2) > span { background: #eef7ff; color: var(--blue); }
+  .review-route > div:nth-of-type(3) > span { background: var(--success-soft); color: var(--success); }
+  .review-route svg { width: 1.12rem; height: 1.12rem; }
+  .review-route p { display: grid; gap: .1rem; margin: 0; }
+  .review-route b { color: var(--muted); font: 650 .6rem/1 var(--font-mono); }
+  .review-route strong { color: var(--bright); font-size: .73rem; }
+  .review-route small { color: var(--muted); font-size: .72rem; }
+  .review-route > i { width: 1.4rem; height: 1px; background: linear-gradient(90deg,var(--signal),var(--success)); }
+  .contribution-layout { display: grid; grid-template-columns: minmax(0,1fr) 20rem; gap: 1rem; align-items: start; }
+  .contribution-form { overflow: hidden; border: 1px solid color-mix(in srgb,var(--signal) 20%,var(--line)); border-radius: 1.35rem; background: rgba(255,255,255,.9); box-shadow: 0 1.3rem 3.8rem rgba(41,57,86,.08); }
+  .contribution-form > header { display: flex; justify-content: space-between; gap: 1rem; align-items: center; border-bottom: 1px solid var(--line); padding: 1.2rem; background: linear-gradient(110deg,var(--signal-soft),#fff 62%); }
+  .contribution-form h2 { margin: .45rem 0 0; color: var(--bright); font-size: 1.35rem; font-weight: 590; }
+  .contribution-form header > span { display: inline-flex; gap: .4rem; align-items: center; color: var(--success); font-size: .72rem; font-weight: 680; }
+  .contribution-form header > span :global(svg) { width: 1rem; height: 1rem; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1.2rem; }
+  .form-grid > label { display: grid; gap: .45rem; }
+  .form-grid .wide { grid-column: 1 / -1; }
+  .form-grid label > span, .update-scope legend { color: var(--bright); font-size: .76rem; font-weight: 670; }
+  .form-grid label > small { color: var(--muted); font-size: .7rem; }
+  .form-grid input[type="text"], .form-grid input[type="email"], .form-grid select, .form-grid textarea { width: 100%; border: 1px solid var(--line); border-radius: .72rem; padding: .72rem .8rem; outline: 0; background: var(--surface-2); color: var(--bright); }
+  .form-grid input, .form-grid select { min-height: 3.05rem; }
+  .form-grid textarea { resize: vertical; line-height: 1.55; }
+  .form-grid input:focus, .form-grid select:focus, .form-grid textarea:focus { border-color: var(--signal); box-shadow: 0 0 0 3px color-mix(in srgb,var(--signal) 14%,transparent); }
+  .update-scope { margin: 0; border: 0; padding: 0; }
+  .update-scope > div { display: grid; grid-template-columns: repeat(3,1fr); gap: .55rem; margin-top: .6rem; }
+  .update-scope label { display: flex; gap: .5rem; align-items: center; border: 1px solid var(--line); border-radius: .7rem; padding: .65rem; background: rgba(244,247,251,.72); cursor: pointer; }
+  .update-scope label:has(input:checked) { border-color: color-mix(in srgb,var(--signal) 42%,var(--line)); background: var(--signal-soft); }
+  .update-scope label span { color: var(--paper); font-size: .72rem; font-weight: 580; }
+  .update-scope input, .consent input { accent-color: var(--signal); }
+  .consent { display: flex !important; grid-template-columns: auto 1fr; gap: .6rem !important; align-items: flex-start; border-top: 1px solid var(--line); padding-top: .85rem; }
+  .consent input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; }
+  .consent span { color: var(--paper) !important; font-size: .72rem !important; font-weight: 550 !important; }
+  .contribution-form .form-actions { align-items: center; }
+  .contribution-form .button { gap: .45rem; cursor: pointer; }
+  .contribution-form .button :global(svg) { width: .95rem; height: .95rem; }
+  #form-status { flex: 1 1 100%; margin: 0; color: var(--paper); font-size: .72rem; }
+  .contribution-rules { border: 1px solid var(--line); border-radius: 1.2rem; padding: 1.1rem; background: rgba(255,255,255,.82); }
+  .contribution-rules h2 { margin: .7rem 0 0; color: var(--bright); font-size: 1.3rem; font-weight: 590; line-height: 1.19; letter-spacing: -.026em; }
+  .contribution-rules ul { display: grid; gap: .9rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
+  .contribution-rules li { display: grid; grid-template-columns: auto 1fr; gap: .65rem; color: var(--muted); font-size: .72rem; }
+  .contribution-rules li > :global(svg) { width: 1rem; height: 1rem; color: var(--success); }
+  .contribution-rules li:nth-child(3) > :global(svg) { color: var(--amber); }
+  .contribution-rules li span { display: grid; }
+  .contribution-rules li strong { color: var(--bright); font-size: .76rem; }
+  .privacy-note { display: grid; grid-template-columns: auto 1fr; gap: .65rem; margin-top: 1.2rem; border-radius: .8rem; padding: .8rem; background: var(--success-soft); color: var(--success); }
+  .privacy-note > :global(svg) { width: 1.1rem; height: 1.1rem; }
+  .privacy-note p { margin: 0; color: var(--paper); font-size: .7rem; }
+  .privacy-note strong { display: block; color: var(--bright); }
+  @media (max-width: 950px) { .contribution-hero, .contribution-layout { grid-template-columns: 1fr; } .contribution-rules { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; } .contribution-rules > ul { grid-column: 1 / -1; } }
+  @media (max-width: 650px) { .review-route { grid-template-columns: 1fr; } .review-route > i { width: 1px; height: .8rem; } .form-grid { grid-template-columns: 1fr; } .form-grid .wide { grid-column: auto; } .update-scope > div { grid-template-columns: 1fr; } .contribution-form > header, .contribution-form .form-actions { align-items: flex-start; flex-direction: column; } .contribution-rules { grid-template-columns: 1fr; } .contribution-rules > ul { grid-column: auto; } }
+</style>

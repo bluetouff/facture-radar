@@ -98,6 +98,7 @@ const rows = [
         <ol>{linkedSources.map((source) => <li><a href={source.url} rel="noopener"><strong>{source.title}</strong><span>{source.publisher} · consulté le {source.accessedAt.split("-").reverse().join("/")}</span></a></li>)}</ol>
       </section>
       <a class="button" href={`/comparer/?ids=${platform.slug}`}>Ajouter à une comparaison</a>
+      <a class="contribute-link" href={`/contribuer/?plateforme=${encodeURIComponent(platform.displayName)}`}><span><EvidenceBadge status="declared" label="Espace PA" /></span><strong>Vous représentez {platform.displayName} ?</strong><small>Signalez une erreur ou apportez une source.</small></a>
     </aside>
   </section>
 </BaseLayout>
@@ -147,6 +148,10 @@ const rows = [
   .source-panel a { display: grid; }
   .source-panel strong { color: var(--paper); font-size: .67rem; line-height: 1.4; }
   .source-panel span { margin-top: .25rem; color: var(--muted); font: .53rem/1.4 var(--font-mono); }
+  .contribute-link { display: grid; border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line)); border-radius: 1rem; padding: .9rem; background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 7%, #fff), #fff); }
+  .contribute-link > span { margin-bottom: .65rem; }
+  .contribute-link > strong { color: var(--bright); font-size: .72rem; }
+  .contribute-link > small { margin-top: .2rem; color: var(--muted); font-size: .64rem; }
   @media (max-width: 920px) { .profile-hero, .profile-layout { grid-template-columns: 1fr; } .profile-stamp { grid-template-columns: auto 1fr; justify-items: start; column-gap: 1.2rem; } .stamp-head { grid-column: 1 / -1; } .coverage-ring { grid-row: 2 / 4; } .coverage-label { align-self: end; } .stamp-meta { align-self: start; } .profile-layout aside { grid-template-columns: repeat(2, 1fr); } .profile-layout aside .button { grid-column: 1 / -1; } }
   @media (max-width: 620px) { .profile-hero { margin-top: .8rem; border-radius: 1.2rem; } .profile-heading { align-items: flex-start; } .profile-monogram { width: 3.6rem; height: 3.6rem; border-radius: 1rem; } .profile-stamp { grid-template-columns: 1fr; justify-items: center; } .stamp-head { grid-column: auto; } .coverage-ring { grid-row: auto; } .coverage-label { align-self: auto; } .stamp-meta { align-self: auto; } .profile-layout aside { grid-template-columns: 1fr; } .profile-layout aside .button { grid-column: auto; } }
 </style>
