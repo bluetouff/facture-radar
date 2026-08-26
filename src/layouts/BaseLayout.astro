@@ -24,6 +24,7 @@ const resourceNav = [
   { href: "/annuaire/", label: "Annuaire officiel", hint: "La liste publique de la DGFiP", icon: "directory" },
   { href: "/a-propos/", label: "Pourquoi PA Check ?", hint: "De l’enquête l0g à l’outil", icon: "route" },
   { href: "/contribuer/", label: "Mettre à jour une fiche", hint: "Pour les plateformes agréées", icon: "action" },
+  { href: "/agents/", label: "Accès pour les agents", hint: "MCP public et corpus complet", icon: "route" },
   { href: "/methodologie/", label: "Sources et méthode", hint: "Ce qui est vérifié, déclaré ou inconnu", icon: "shield" },
 ] as const;
 const isCurrent = (href: string) => Astro.url.pathname.startsWith(href);
@@ -136,6 +137,8 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
           <a href="/changements/">Journal des changements</a>
           <a href="/api/platforms.json">API JSON</a>
           <a href="/api/questions.json">API des questions</a>
+          <a href="/agents/">MCP pour les agents</a>
+          <a href="/api/corpus.json">Corpus JSON complet</a>
           <a href="https://l0g.fr/publications/grand-peage-facture/">Enquête l0g</a>
           <a href="https://github.com/bluetouff/facture-radar">Code source</a>
         </nav>

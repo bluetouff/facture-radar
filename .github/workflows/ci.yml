@@ -34,3 +34,6 @@ jobs:
 
       - name: Validate, test and build
         run: npm run build
+
+      - name: Smoke-test the public MCP contract
+        run: npm run mcp:smoke

@@ -2,7 +2,7 @@ import type { APIRoute } from "astro";
 import { platforms } from "../data/platforms";
 import { practicalQuestions } from "../data/practical-questions";
 
-const establishedPaths = ["/", "/verifier-mon-outil/", "/verifier-une-facture/", "/diagnostic/", "/plateformes/", "/comparer/", "/annuaire/", "/a-propos/", "/contribuer/", "/methodologie/", "/changements/", ...platforms.map((platform) => `/plateformes/${platform.slug}/`)];
+const establishedPaths = ["/", "/verifier-mon-outil/", "/verifier-une-facture/", "/diagnostic/", "/plateformes/", "/comparer/", "/annuaire/", "/a-propos/", "/contribuer/", "/agents/", "/methodologie/", "/changements/", ...platforms.map((platform) => `/plateformes/${platform.slug}/`)];
 const questionPaths = ["/questions/", ...practicalQuestions.map((question) => `/questions/${question.slug}/`)];
 
 export const GET: APIRoute = ({ site }) => {

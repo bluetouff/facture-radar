@@ -1,0 +1,183 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InterfaceIcon from "../components/InterfaceIcon.astro";
+import { MCP_ENDPOINT } from "../mcp/corpus.ts";
+
+const tools = [
+  { name: "answer_question", title: "Répondre à une question", detail: "La réponse utile, les options à regarder et les points à contrôler.", icon: "question" },
+  { name: "get_platform", title: "Lire une fiche", detail: "Prix, volume, fonctions, conditions et informations encore absentes.", icon: "layers" },
+  { name: "find_platforms", title: "Filtrer les options", detail: "Des critères explicites, sans classement sponsorisé ni faux oui.", icon: "target" },
+  { name: "search_official_directory", title: "Interroger l’annuaire", detail: "Le relevé DGFiP complet, avec les statuts approuvé ou en attente.", icon: "directory" },
+  { name: "get_corpus_status", title: "Contrôler la fraîcheur", detail: "Révision servie, dates et périmètre exact du corpus.", icon: "shield" },
+] as const;
+---
+
+<BaseLayout
+  title="PA Check pour les agents | MCP public"
+  description="Connectez un agent au corpus public de PA Check : questions pratiques, fiches de plateformes, annuaire DGFiP, parcours et sources."
+>
+  <section class="agent-hero">
+    <div class="shell agent-hero-grid">
+      <div class="agent-intro">
+        <span class="eyebrow">MCP public · lecture seule</span>
+        <h1>Les agents accèdent aux mêmes réponses que les humains.</h1>
+        <p>Un point d’entrée, cinq outils simples et tout le corpus public. L’agent peut répondre, retrouver une fiche ou vérifier l’annuaire sans inventer ce qui manque.</p>
+        <div class="endpoint-card">
+          <span><InterfaceIcon name="route" /> Endpoint Streamable HTTP</span>
+          <code>{MCP_ENDPOINT}</code>
+          <a href="/server.json">server.json <InterfaceIcon name="arrow" /></a>
+        </div>
+      </div>
+      <div class="agent-route" aria-label="Une question conduit à la même réponse publique sur le site et dans le MCP">
+        <header><span>PA CHECK · CORPUS</span><small>sans compte</small></header>
+        <div class="route-question"><i>01</i><span><small>question</small><strong>« Puis-je garder mon outil ? »</strong></span></div>
+        <div class="route-spine" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="route-result">
+          <article><i><InterfaceIcon name="verdict" /></i><small>réponse web</small><strong>Action directement utilisable</strong></article>
+          <article><i><InterfaceIcon name="route" /></i><small>réponse MCP</small><strong>Même corpus, mêmes limites</strong></article>
+        </div>
+        <footer><InterfaceIcon name="lock" /><span>Aucune facture ni donnée de compte acceptée</span></footer>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell agent-metrics" aria-label="Périmètre du MCP">
+    <div><strong>5</strong><span>outils ciblés</span></div>
+    <div><strong>7</strong><span>ressources complètes</span></div>
+    <div><strong>25</strong><span>fiches enrichies</span></div>
+    <div><strong>166</strong><span>entrées DGFiP</span></div>
+  </section>
+
+  <section class="shell agent-tools section" aria-labelledby="agent-tools-title">
+    <header>
+      <div><p class="mono-label">les outils</p><h2 id="agent-tools-title">Une intention par outil.</h2></div>
+      <p>Pas de boîte noire qui improvise une recommandation. Chaque appel lit des données déjà publiées et renvoie les documents associés.</p>
+    </header>
+    <div class="tool-ledger">
+      {tools.map((tool, index) => (
+        <article>
+          <span class="tool-index">0{index + 1}</span>
+          <i><InterfaceIcon name={tool.icon} /></i>
+          <div><code>{tool.name}</code><h3>{tool.title}</h3><p>{tool.detail}</p></div>
+          <span class="read-only"><InterfaceIcon name="lock" /> lecture seule</span>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="agent-resources">
+    <div class="shell resource-grid">
+      <div class="resource-copy">
+        <p class="mono-label">le corpus</p>
+        <h2>Complet, mais chargé à la demande.</h2>
+        <p>L’agent peut commencer par une réponse courte. Les listes complètes restent disponibles lorsqu’il doit auditer une réponse ou traiter un cas moins courant.</p>
+        <div class="resource-links">
+          <a href="/llms.txt">llms.txt <InterfaceIcon name="arrow" /></a>
+          <a href="/llms-full.txt">llms-full.txt <InterfaceIcon name="arrow" /></a>
+          <a href="/api/corpus.json">corpus.json <InterfaceIcon name="arrow" /></a>
+        </div>
+      </div>
+      <div class="resource-stack">
+        <article><b>01</b><span><strong>Questions pratiques</strong><small>10 réponses directement exploitables</small></span></article>
+        <article><b>02</b><span><strong>Plateformes enrichies</strong><small>25 fiches, tarifs et limites</small></span></article>
+        <article><b>03</b><span><strong>Annuaire officiel</strong><small>148 approuvées, 18 en attente</small></span></article>
+        <article><b>04</b><span><strong>Parcours et envoi</strong><small>Activation et fichiers déjà produits</small></span></article>
+        <article><b>05</b><span><strong>Sources publiques</strong><small>94 documents reliés aux réponses</small></span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell boundary-section section" aria-labelledby="boundary-title">
+    <div class="boundary-visual" aria-hidden="true">
+      <span class="boundary-orbit orbit-a"></span><span class="boundary-orbit orbit-b"></span>
+      <i><InterfaceIcon name="shield" /></i>
+      <strong>PUBLIC</strong><small>READ ONLY</small>
+    </div>
+    <div>
+      <p class="mono-label">limite claire</p>
+      <h2 id="boundary-title">Le serveur répond. Il ne collecte rien.</h2>
+      <ul>
+        <li><InterfaceIcon name="check" /><span><strong>Aucune écriture</strong> dans le corpus ou sur le site.</span></li>
+        <li><InterfaceIcon name="check" /><span><strong>Aucun appel sortant</strong> ni URL arbitraire fournie par le client.</span></li>
+        <li><InterfaceIcon name="check" /><span><strong>Aucune facture</strong>, aucun SIREN et aucun identifiant de compte.</span></li>
+        <li><InterfaceIcon name="check" /><span><strong>Entrées bornées</strong> et serveur lié uniquement à la boucle locale derrière Apache.</span></li>
+      </ul>
+      <p>Pour analyser un fichier, l’agent renvoie vers le <a href="/verifier-une-facture/">contrôle local dans le navigateur</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .agent-hero { border-bottom: 1px solid rgba(20,36,58,.08); padding-block: clamp(3rem,7vw,5.8rem); background: radial-gradient(circle at 72% 20%,rgba(100,128,255,.14),transparent 22rem),linear-gradient(140deg,#e1e8f2,#f1f4f8 52%,#dce6ee); }
+  .agent-hero-grid { display: grid; grid-template-columns: minmax(0,.92fr) minmax(390px,.78fr); gap: clamp(2.5rem,7vw,6rem); align-items: center; }
+  .agent-intro h1 { max-width: 17ch; margin: 1rem 0 0; color: var(--bright); font-size: clamp(2.1rem,4.2vw,3.35rem); font-weight: 485; line-height: 1.06; letter-spacing: -.045em; text-wrap: balance; }
+  .agent-intro > p { max-width: 42rem; margin: 1.3rem 0 0; color: var(--paper); font-size: 1.04rem; line-height: 1.7; }
+  .endpoint-card { display: grid; grid-template-columns: 1fr auto; gap: .65rem 1rem; align-items: center; max-width: 39rem; margin-top: 2rem; border: 1px solid rgba(255,255,255,.12); border-radius: 1rem; padding: .9rem 1rem; background: #13223a; color: #fff; box-shadow: 0 1rem 2.8rem rgba(27,42,70,.16); }
+  .endpoint-card > span { display: flex; gap: .45rem; align-items: center; color: #aebcff; font-size: .72rem; font-weight: 720; text-transform: uppercase; }
+  .endpoint-card > span :global(svg), .endpoint-card a :global(svg) { width: .9rem; height: .9rem; }
+  .endpoint-card code { grid-column: 1 / -1; overflow-wrap: anywhere; color: #fff; font: 610 .82rem/1.5 var(--font-mono); }
+  .endpoint-card a { grid-column: 2; grid-row: 1; display: flex; gap: .4rem; align-items: center; color: #6dd8c4; font-size: .68rem; font-weight: 700; }
+  .agent-route { overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 1.35rem; padding: 1rem; background: #13223a; color: #fff; box-shadow: 0 1.6rem 4rem rgba(20,36,58,.21); }
+  .agent-route header, .agent-route footer { display: flex; justify-content: space-between; gap: 1rem; align-items: center; color: #aebcff; font: 680 .62rem/1 var(--font-mono); letter-spacing: .05em; }
+  .agent-route header { border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: .85rem; }
+  .agent-route header small { color: #6dd8c4; }
+  .route-question { display: grid; grid-template-columns: auto 1fr; gap: .8rem; align-items: center; margin-top: 1rem; border: 1px solid rgba(255,255,255,.11); border-radius: .85rem; padding: .85rem; background: rgba(255,255,255,.04); }
+  .route-question i { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: .65rem; background: rgba(110,133,246,.14); color: #aebcff; font: 700 .62rem/1 var(--font-mono); font-style: normal; }
+  .route-question span { display: grid; }
+  .route-question small, .route-result small { color: rgba(255,255,255,.47); font-size: .62rem; text-transform: uppercase; }
+  .route-question strong { margin-top: .16rem; font-size: .82rem; font-weight: 610; }
+  .route-spine { position: relative; display: flex; justify-content: space-around; height: 3rem; }
+  .route-spine::before { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: linear-gradient(#7088f5,#62d4bd); content: ""; }
+  .route-spine span { position: relative; z-index: 1; align-self: center; width: .38rem; height: .38rem; border: 1px solid #13223a; border-radius: 50%; background: #7b8ff1; box-shadow: 0 0 0 3px rgba(123,143,241,.14); }
+  .route-spine span:first-child { margin-left: 42%; }.route-spine span:last-child { margin-right: 42%; background: #62d4bd; }
+  .route-result { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+  .route-result article { display: grid; grid-template-columns: auto 1fr; gap: .65rem; align-items: center; border: 1px solid rgba(255,255,255,.11); border-radius: .85rem; padding: .8rem; }
+  .route-result i { display: grid; grid-row: 1 / 3; place-items: center; width: 2rem; height: 2rem; border-radius: .6rem; background: rgba(103,216,194,.1); color: #67d8c2; }
+  .route-result i :global(svg) { width: 1rem; height: 1rem; }
+  .route-result strong { font-size: .72rem; font-weight: 600; }
+  .agent-route footer { justify-content: flex-start; margin-top: 1rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: .8rem; color: rgba(255,255,255,.55); }
+  .agent-route footer :global(svg) { width: .9rem; height: .9rem; color: #67d8c2; }
+  .agent-metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; overflow: hidden; translate: 0 -1.6rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); box-shadow: 0 .8rem 2.5rem rgba(41,57,86,.09); }
+  .agent-metrics div { padding: 1rem 1.2rem; background: rgba(249,251,253,.95); }
+  .agent-metrics strong { display: block; color: var(--bright); font-size: 1.45rem; font-weight: 560; }
+  .agent-metrics span { color: var(--muted); font-size: .78rem; }
+  .agent-tools > header { display: grid; grid-template-columns: 1fr .75fr; gap: 2rem; align-items: end; margin-bottom: 1.5rem; }
+  .agent-tools h2, .resource-copy h2, .boundary-section h2 { max-width: 20ch; margin: .8rem 0 0; color: var(--bright); font-size: clamp(1.75rem,3vw,2.4rem); font-weight: 500; line-height: 1.12; letter-spacing: -.035em; }
+  .agent-tools > header > p { margin: 0; color: var(--muted); }
+  .tool-ledger { border-top: 1px solid var(--line-strong); }
+  .tool-ledger article { display: grid; grid-template-columns: 2.4rem 2.7rem minmax(0,1fr) auto; gap: 1rem; align-items: center; border-bottom: 1px solid var(--line); padding: 1rem .4rem; }
+  .tool-index { color: var(--accent); font: 700 .64rem/1 var(--font-mono); }
+  .tool-ledger article > i { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: .72rem; background: var(--signal-soft); color: var(--signal); }
+  .tool-ledger article > i :global(svg) { width: 1.05rem; height: 1.05rem; }
+  .tool-ledger article > div { display: grid; grid-template-columns: minmax(12rem,.62fr) 1fr; gap: .25rem 1rem; align-items: baseline; }
+  .tool-ledger code { color: var(--signal); font-size: .7rem; }
+  .tool-ledger h3 { margin: 0; color: var(--bright); font-size: .94rem; font-weight: 610; }
+  .tool-ledger p { grid-column: 2; grid-row: 1 / 3; margin: 0; color: var(--muted); font-size: .82rem; }
+  .read-only { display: inline-flex; gap: .35rem; align-items: center; border-radius: 999px; padding: .3rem .48rem; background: var(--success-soft); color: var(--success); font-size: .64rem; font-weight: 700; text-transform: uppercase; }
+  .read-only :global(svg) { width: .75rem; height: .75rem; }
+  .agent-resources { padding-block: 4.5rem; background: linear-gradient(145deg,#14243a,#1b3150); color: #fff; }
+  .resource-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem,7vw,6rem); align-items: center; }
+  .resource-copy .mono-label { background: rgba(255,255,255,.09); color: #c9d3ff; }
+  .resource-copy h2 { color: #fff; }
+  .resource-copy > p:not(.mono-label) { color: rgba(255,255,255,.62); }
+  .resource-links { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.4rem; }
+  .resource-links a { display: flex; gap: .45rem; align-items: center; border: 1px solid rgba(255,255,255,.13); border-radius: .7rem; padding: .6rem .75rem; color: #8be1cf; font: 650 .68rem/1 var(--font-mono); }
+  .resource-links a :global(svg) { width: .8rem; height: .8rem; }
+  .resource-stack { position: relative; display: grid; gap: .55rem; }
+  .resource-stack::before { position: absolute; top: 10%; bottom: 10%; left: 1.7rem; width: 1px; background: linear-gradient(#7b8ff1,#67d8c2); content: ""; }
+  .resource-stack article { position: relative; display: grid; grid-template-columns: 3.4rem 1fr; gap: .8rem; align-items: center; border: 1px solid rgba(255,255,255,.1); border-radius: .85rem; padding: .75rem; background: rgba(255,255,255,.035); }
+  .resource-stack b { position: relative; z-index: 1; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: #1b3150; color: #aebcff; font: 700 .58rem/1 var(--font-mono); box-shadow: 0 0 0 1px #7088f5; }
+  .resource-stack span { display: grid; }.resource-stack strong { font-size: .84rem; }.resource-stack small { color: rgba(255,255,255,.58); font-size: .76rem; }
+  .boundary-section { display: grid; grid-template-columns: .55fr 1fr; gap: clamp(2rem,7vw,6rem); align-items: center; }
+  .boundary-visual { position: relative; display: grid; place-items: center; width: min(20rem,80vw); aspect-ratio: 1; margin-inline: auto; border-radius: 50%; background: radial-gradient(circle,rgba(255,255,255,.95) 0 38%,transparent 39%),radial-gradient(circle,rgba(64,91,216,.08),transparent 67%); }
+  .boundary-visual > i { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 1rem; background: var(--success); color: #fff; }
+  .boundary-visual > i :global(svg) { width: 1.3rem; height: 1.3rem; }
+  .boundary-visual > strong { margin-top: .4rem; color: var(--bright); font: 700 .72rem/1 var(--font-mono); }.boundary-visual > small { color: var(--success); font: 650 .55rem/1 var(--font-mono); }
+  .boundary-orbit { position: absolute; inset: 12%; border: 1px solid rgba(64,91,216,.22); border-radius: 50%; }.orbit-b { inset: 2%; border-style: dashed; border-color: rgba(117,87,214,.18); }
+  .boundary-section ul { display: grid; gap: .65rem; margin: 1.3rem 0; padding: 0; list-style: none; }
+  .boundary-section li { display: flex; gap: .7rem; align-items: flex-start; color: var(--paper); font-size: .82rem; }
+  .boundary-section li :global(svg) { flex: 0 0 auto; width: 1rem; height: 1rem; margin-top: .15rem; color: var(--success); }
+  .boundary-section > div:last-child > p:last-child { color: var(--muted); font-size: .8rem; }.boundary-section a { color: var(--signal); text-decoration: underline; text-underline-offset: .16em; }
+  @media (max-width: 900px) { .agent-hero-grid,.resource-grid,.boundary-section { grid-template-columns: 1fr; } .agent-tools > header { grid-template-columns: 1fr; } .tool-ledger article > div { grid-template-columns: 1fr; }.tool-ledger p { grid-column: 1; grid-row: auto; } }
+  @media (max-width: 620px) { .agent-metrics { grid-template-columns: 1fr 1fr; } .route-result { grid-template-columns: 1fr; } .tool-ledger article { grid-template-columns: 2rem 2.4rem 1fr; }.read-only { grid-column: 3; justify-self: start; }.endpoint-card { grid-template-columns: 1fr; }.endpoint-card a { grid-column: 1; grid-row: auto; }.resource-links { display: grid; } }
+</style>

@@ -1,0 +1,291 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+SITE_HOST="pa.l0g.fr"
+MCP_PORT="3747"
+MCP_ROOT="/opt/pa-check-mcp"
+RELEASES_ROOT="${MCP_ROOT}/releases"
+CURRENT="${MCP_ROOT}/current"
+SERVICE_FILE="/etc/systemd/system/pa-check-mcp.service"
+APACHE_SNIPPET="/etc/apache2/pa-check-mcp-location.conf"
+VHOST="${PA_CHECK_VHOST:-/etc/apache2/sites-available/pa.l0g.fr-le-ssl.conf}"
+BACKUPS_ROOT="/var/backups/pa-check-mcp"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+BUNDLE_DIR="${SCRIPT_DIR}/mcp"
+MANIFEST="${BUNDLE_DIR}/manifest.json"
+BUNDLE="${BUNDLE_DIR}/server.mjs"
+CHECKSUM="${BUNDLE_DIR}/server.mjs.sha256"
+STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
+
+if [[ "${EUID}" -ne 0 ]]; then
+  echo "Echec: ce script doit etre execute avec sudo." >&2
+  exit 1
+fi
+for dependency in apache2ctl curl python3 sha256sum systemctl; do
+  command -v "${dependency}" >/dev/null
+done
+test -x /usr/bin/node
+NODE_MAJOR="$(/usr/bin/node -p 'process.versions.node.split(".")[0]')"
+if [[ ! "${NODE_MAJOR}" =~ ^[0-9]+$ || "${NODE_MAJOR}" -lt 22 ]]; then
+  echo "Echec: Node.js 22 ou plus recent est requis pour le MCP." >&2
+  exit 1
+fi
+test -f "${MANIFEST}"
+test -f "${BUNDLE}"
+test -f "${CHECKSUM}"
+test -f "${VHOST}"
+
+EXPECTED_SHA="$(python3 - "${MANIFEST}" <<'PY'
+import json
+import re
+import sys
+with open(sys.argv[1], encoding="utf-8") as handle:
+    manifest = json.load(handle)
+revision = manifest.get("revision", "")
+if not re.fullmatch(r"[0-9a-f]{40}", revision):
+    raise SystemExit("Revision MCP invalide")
+if manifest.get("readOnly") is not True:
+    raise SystemExit("Le manifeste MCP ne declare pas le serveur en lecture seule")
+print(revision)
+PY
+)"
+TARGET="${RELEASES_ROOT}/${EXPECTED_SHA}"
+BACKUP_DIR="${BACKUPS_ROOT}/${STAMP}-before-${EXPECTED_SHA}"
+OLD_TARGET=""
+TARGET_CREATED=0
+SWAPPED=0
+SERVICE_WAS_ACTIVE=0
+SNIPPET_EXISTED=0
+SERVICE_EXISTED=0
+
+if [[ ! "${TARGET}" =~ ^/opt/pa-check-mcp/releases/[0-9a-f]{40}$ ]]; then
+  echo "Echec: cible MCP inattendue." >&2
+  exit 1
+fi
+if [[ "${VHOST}" != /etc/apache2/sites-available/* ]]; then
+  echo "Echec: le vhost doit se trouver dans sites-available." >&2
+  exit 1
+fi
+
+install -d -m 0750 -- "${BACKUPS_ROOT}" "${BACKUP_DIR}"
+cp -a -- "${VHOST}" "${BACKUP_DIR}/vhost.conf"
+if [[ -e "${APACHE_SNIPPET}" ]]; then
+  SNIPPET_EXISTED=1
+  cp -a -- "${APACHE_SNIPPET}" "${BACKUP_DIR}/apache-snippet.conf"
+fi
+if [[ -e "${SERVICE_FILE}" ]]; then
+  SERVICE_EXISTED=1
+  cp -a -- "${SERVICE_FILE}" "${BACKUP_DIR}/pa-check-mcp.service"
+fi
+if systemctl is-active --quiet pa-check-mcp.service 2>/dev/null; then
+  SERVICE_WAS_ACTIVE=1
+fi
+if [[ -L "${CURRENT}" ]]; then
+  OLD_TARGET="$(readlink -f -- "${CURRENT}")"
+  if [[ ! "${OLD_TARGET}" =~ ^${RELEASES_ROOT}/[0-9a-f]{40}$ ]]; then
+    echo "Echec: cible MCP courante inattendue." >&2
+    exit 1
+  fi
+  printf '%s\n' "${OLD_TARGET}" > "${BACKUP_DIR}/current-target.txt"
+elif [[ -e "${CURRENT}" ]]; then
+  echo "Echec: ${CURRENT} existe mais n'est pas un lien symbolique." >&2
+  exit 1
+fi
+
+rollback() {
+  local exit_code="$1"
+  set +e
+  trap - ERR INT TERM
+  if [[ "${SWAPPED}" -eq 1 ]]; then
+    if [[ -n "${OLD_TARGET}" && -d "${OLD_TARGET}" ]]; then
+      local rollback_link="${MCP_ROOT}/.current.rollback.${EXPECTED_SHA}.$$"
+      ln -s -- "${OLD_TARGET}" "${rollback_link}"
+      mv -Tf -- "${rollback_link}" "${CURRENT}"
+    else
+      rm -f -- "${CURRENT}"
+    fi
+  fi
+  if [[ "${SERVICE_EXISTED}" -eq 1 ]]; then
+    cp -a -- "${BACKUP_DIR}/pa-check-mcp.service" "${SERVICE_FILE}"
+  else
+    rm -f -- "${SERVICE_FILE}"
+  fi
+  if [[ "${SNIPPET_EXISTED}" -eq 1 ]]; then
+    cp -a -- "${BACKUP_DIR}/apache-snippet.conf" "${APACHE_SNIPPET}"
+  else
+    rm -f -- "${APACHE_SNIPPET}"
+  fi
+  cp -a -- "${BACKUP_DIR}/vhost.conf" "${VHOST}"
+  systemctl daemon-reload >/dev/null 2>&1
+  if [[ "${SERVICE_WAS_ACTIVE}" -eq 1 && -L "${CURRENT}" ]]; then
+    systemctl restart pa-check-mcp.service >/dev/null 2>&1
+  else
+    systemctl stop pa-check-mcp.service >/dev/null 2>&1
+  fi
+  apache2ctl configtest >/dev/null 2>&1 && systemctl reload apache2 >/dev/null 2>&1
+  if [[ "${TARGET_CREATED}" -eq 1 && -d "${TARGET}" ]]; then
+    rm -rf -- "${TARGET}"
+  fi
+  echo "Echec: restauration du MCP et du vhost precedents." >&2
+  echo "Sauvegarde et etat d'echec: ${BACKUP_DIR}" >&2
+  exit "${exit_code}"
+}
+trap 'rollback $?' ERR INT TERM
+
+(cd -- "${BUNDLE_DIR}" && sha256sum -c -- "$(basename -- "${CHECKSUM}")")
+python3 - "${BUNDLE}" <<'PY'
+import os
+import sys
+path = sys.argv[1]
+size = os.path.getsize(path)
+if size < 100_000 or size > 16 * 1024 * 1024:
+    raise SystemExit("Taille du bundle MCP inattendue")
+with open(path, "rb") as handle:
+    head = handle.read(64)
+if b"ELF" in head or b"#!/bin/sh" in head or b"#!/bin/bash" in head:
+    raise SystemExit("Type de bundle MCP inattendu")
+print(f"MCP_BUNDLE_OK bytes={size}")
+PY
+if [[ -e "${TARGET}" ]]; then
+  echo "Echec: la release MCP existe deja: ${TARGET}" >&2
+  false
+fi
+
+install -d -m 0755 -- "${MCP_ROOT}" "${RELEASES_ROOT}" "${TARGET}"
+TARGET_CREATED=1
+install -m 0555 -- "${BUNDLE}" "${TARGET}/server.mjs"
+install -m 0444 -- "${MANIFEST}" "${TARGET}/manifest.json"
+install -m 0444 -- "${CHECKSUM}" "${TARGET}/server.mjs.sha256"
+chown -R root:root -- "${TARGET}"
+
+cat > "${SERVICE_FILE}" <<EOF
+[Unit]
+Description=PA Check MCP public en lecture seule
+After=network.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=${CURRENT}
+ExecStart=/usr/bin/node ${CURRENT}/server.mjs
+Environment=NODE_ENV=production
+Environment=PA_CHECK_MCP_PORT=${MCP_PORT}
+Environment=PA_CHECK_REVISION=${EXPECTED_SHA}
+Environment=PA_CHECK_MCP_ALLOWED_HOSTS=127.0.0.1,localhost,pa.l0g.fr
+Environment=PA_CHECK_MCP_ALLOWED_ORIGINS=127.0.0.1,localhost,pa.l0g.fr
+Restart=on-failure
+RestartSec=3s
+TimeoutStartSec=20s
+TimeoutStopSec=10s
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectProc=invisible
+ProcSubset=pid
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+IPAddressDeny=any
+IPAddressAllow=localhost
+RestrictNamespaces=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+RestrictRealtime=yes
+SystemCallArchitectures=native
+CapabilityBoundingSet=
+AmbientCapabilities=
+UMask=0077
+LimitNOFILE=1024
+TasksMax=64
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target
+EOF
+chmod 0644 "${SERVICE_FILE}"
+chown root:root "${SERVICE_FILE}"
+
+cat > "${APACHE_SNIPPET}" <<EOF
+# PA_CHECK_MCP_MANAGED_BEGIN
+ProxyPass "/api/mcp" "http://127.0.0.1:${MCP_PORT}/api/mcp" connectiontimeout=2 timeout=20 retry=0
+ProxyPassReverse "/api/mcp" "http://127.0.0.1:${MCP_PORT}/api/mcp"
+<Location "/api/mcp">
+    LimitRequestBody 131072
+    RequestHeader unset X-Forwarded-For
+    RequestHeader unset X-Real-IP
+    RequestHeader set Host "127.0.0.1:${MCP_PORT}"
+    Header always set Cache-Control "no-store"
+    Header always set Content-Security-Policy "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+    Header always set Referrer-Policy "no-referrer"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always unset Access-Control-Allow-Origin
+</Location>
+# PA_CHECK_MCP_MANAGED_END
+EOF
+chmod 0644 "${APACHE_SNIPPET}"
+chown root:root "${APACHE_SNIPPET}"
+
+python3 - "${VHOST}" "${APACHE_SNIPPET}" <<'PY'
+import re
+import sys
+
+vhost_path, snippet_path = sys.argv[1:]
+with open(vhost_path, encoding="utf-8") as handle:
+    text = handle.read()
+if len(text) > 128 * 1024:
+    raise SystemExit("Vhost anormalement volumineux")
+if len(re.findall(r"<VirtualHost\b", text, re.I)) != 1 or len(re.findall(r"</VirtualHost>", text, re.I)) != 1:
+    raise SystemExit("Le vhost doit contenir exactement un bloc VirtualHost")
+if not re.search(r"^\s*ServerName\s+pa\.l0g\.fr\s*$", text, re.M | re.I):
+    raise SystemExit("ServerName pa.l0g.fr absent du vhost")
+include = f"    IncludeOptional {snippet_path}"
+if include in text:
+    raise SystemExit(0)
+if "/api/mcp" in text or "PA_CHECK_MCP_MANAGED" in text:
+    raise SystemExit("Une configuration MCP non geree existe deja dans le vhost")
+updated, count = re.subn(r"\n\s*</VirtualHost>\s*$", f"\n{include}\n</VirtualHost>\n", text, count=1, flags=re.I)
+if count != 1:
+    raise SystemExit("Impossible d'inserer l'include MCP")
+with open(vhost_path, "w", encoding="utf-8", newline="\n") as handle:
+    handle.write(updated)
+PY
+
+NEXT_LINK="${MCP_ROOT}/.current.${EXPECTED_SHA}.$$"
+ln -s -- "${TARGET}" "${NEXT_LINK}"
+mv -Tf -- "${NEXT_LINK}" "${CURRENT}"
+SWAPPED=1
+
+systemctl daemon-reload
+systemctl enable pa-check-mcp.service >/dev/null
+systemctl restart pa-check-mcp.service
+systemctl is-active --quiet pa-check-mcp.service
+
+LOCAL_HEALTH="$(curl --max-time 5 -fsS "http://127.0.0.1:${MCP_PORT}/healthz")"
+python3 -c 'import json,sys; data=json.load(sys.stdin); assert data["status"]=="ok"; assert data["revision"]["revision"]==sys.argv[1]; assert data["counts"]["enrichedPlatforms"]==25' "${EXPECTED_SHA}" <<<"${LOCAL_HEALTH}"
+
+apache2ctl configtest
+systemctl reload apache2
+systemctl is-active --quiet apache2
+
+MCP_RESPONSE="$(curl --max-time 10 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" \
+  -H 'Accept: application/json, text/event-stream' \
+  -H 'Content-Type: application/json' \
+  --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"pa-check-deploy-smoke","version":"0.1.0"}}}' \
+  "https://${SITE_HOST}/api/mcp")"
+python3 -c 'import json,sys; data=json.load(sys.stdin); assert data["jsonrpc"]=="2.0"; assert data["result"]["serverInfo"]["name"]=="io.github.bluetouff/pa-check"' <<<"${MCP_RESPONSE}"
+
+MCP_HEADERS="$(curl --max-time 10 -fsSI --resolve "${SITE_HOST}:443:127.0.0.1" "https://${SITE_HOST}/api/mcp")"
+grep -iq '^content-security-policy:.*default-src '\''none'\''' <<<"${MCP_HEADERS}"
+grep -iq '^cache-control:.*no-store' <<<"${MCP_HEADERS}"
+
+trap - ERR INT TERM
+echo "MCP_ACTIVATION_OK ${SITE_HOST} ${EXPECTED_SHA}"
+echo "MCP_ENDPOINT https://${SITE_HOST}/api/mcp"
+echo "BACKUP ${BACKUP_DIR}"

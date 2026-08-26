@@ -52,6 +52,10 @@ import { platforms } from "../data/platforms";
       </ul>
       <p>Un parcours documenté ne garantit pas que chaque fichier sera accepté. Le contrôle indiqué dans la carte porte sur les points à vérifier avec votre propre outil : reprise des lignes, conservation du profil Factur-X, absence de ressaisie et émission vers la plateforme du destinataire.</p>
 
+      <h2>Donner les mêmes réponses aux agents</h2>
+      <p>Le serveur MCP public lit exactement les questions, les fiches, l'annuaire, les parcours et les sources utilisés par le site. Il n'ajoute pas de réponse générée côté serveur et ne consulte pas Internet pendant un appel.</p>
+      <p>Un agent peut chercher une réponse, lire une fiche, appliquer les trois critères du diagnostic ou interroger l'annuaire officiel. Lorsqu'une information publique manque, le résultat conserve le point à confirmer. Le serveur n'accepte ni facture, ni SIREN, ni identifiant de compte.</p>
+
       <h2>Les vingt-cinq plateformes étudiées</h2>
       <p>La liste officielle comptait 148 plateformes approuvées au 19 août 2026. Elle donne leur statut, mais ne détaille pas leurs tarifs, leurs intégrations ou leurs conditions de sortie.</p>
       <p>Nous avons commencé par {platforms.length} acteurs de grande portée ou disposant d'informations publiques particulièrement détaillées. La sélection couvre les besoins des indépendants, TPE, PME, ETI, grandes entreprises et cabinets comptables. L'<a href="/annuaire/">annuaire complet</a> reste disponible pour retrouver les autres plateformes.</p>
@@ -76,11 +80,14 @@ import { platforms } from "../data/platforms";
         <div><dt>Fichier envoyé</dt><dd>Jamais</dd></div>
         <div><dt>Contrôle Factur-X</dt><dd>Local</dd></div>
         <div><dt>Score commercial</dt><dd>Aucun</dd></div>
+        <div><dt>Serveur MCP</dt><dd>Public, lecture seule</dd></div>
+        <div><dt>Donnée envoyée au MCP</dt><dd>Question et critères bornés</dd></div>
         <div><dt>Fonction sans source consultable</dt><dd>Signalée</dd></div>
         <div><dt>Information manquante</dt><dd>Signalée</dd></div>
         <div><dt>Dernière mise à jour</dt><dd>26 août 2026</dd></div>
       </dl>
       <a class="button secondary" href="/api/platforms.json">Télécharger les données</a>
+      <a class="button secondary" href="/agents/">Accès pour les agents</a>
     </aside>
   </section>
 </BaseLayout>
@@ -93,5 +100,6 @@ import { platforms } from "../data/platforms";
   aside dt { color: var(--muted); font: .64rem/1.4 var(--font-mono); text-transform: uppercase; }
   aside dd { margin: 0; color: var(--paper); font-size: .74rem; text-align: right; }
   aside .button { width: 100%; }
+  aside .button + .button { margin-top: .55rem; }
   @media (max-width: 800px) { .method-layout { grid-template-columns: 1fr; } aside { position: static; } }
 </style>

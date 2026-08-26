@@ -14,7 +14,8 @@ L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte et san
 - une sélection explicite couvrant les indépendants, TPE, PME, cabinets comptables, ETI et grandes entreprises ;
 - l'annuaire officiel complet, soit 148 plateformes approuvées et 18 en attente dans le relevé DGFiP du 19 août 2026 ;
 - un comparateur point par point ;
-- deux exports JSON publics pour permettre la vérification et la réutilisation ;
+- des exports JSON publics et un corpus consolidé pour permettre la vérification et la réutilisation ;
+- un serveur MCP public en lecture seule, pour donner les mêmes réponses aux agents sans compte ni clé d'API ;
 - une méthode, un schéma de données, des tests et un journal de changements publics.
 
 PA Check vise une réponse immédiatement utile. Chaque information importante conserve sa source, sa date de mise à jour et un statut clair lorsque le détail reste à confirmer.
@@ -34,10 +35,26 @@ Commandes utiles :
 ```bash
 npm run check
 npm test
+npm run mcp:build
+npm run mcp:smoke
 npm run data:refresh -- /chemin/liste-approuvees.xlsx /chemin/liste-attente.xlsx
 ```
 
-`npm run build` valide les données, vérifie les composants Astro, exécute les tests puis génère le site statique dans `dist/`.
+`npm run build` valide les données, vérifie les composants Astro, exécute les tests, génère le site statique dans `dist/` puis construit le serveur MCP autonome dans `dist-mcp/`.
+
+## Accès pour les agents
+
+Le point d'entrée public est `https://pa.l0g.fr/api/mcp`, en Streamable HTTP. Le serveur publie cinq outils :
+
+- `answer_question` pour partir d'une question en langage courant ;
+- `get_platform` pour lire une fiche enrichie ;
+- `find_platforms` pour appliquer les critères du diagnostic ;
+- `search_official_directory` pour interroger tout le relevé DGFiP ;
+- `get_corpus_status` pour contrôler la révision et les dates servies.
+
+Sept ressources couvrent les questions, les fiches, l'annuaire officiel, les parcours d'activation, les options d'envoi d'un fichier existant et l'index des sources. Le même contenu reste accessible sans client MCP via `/api/corpus.json`, `/llms.txt` et `/llms-full.txt`.
+
+Le serveur ne possède aucun outil d'écriture, n'appelle aucune URL fournie par le client et n'accepte aucun document. Il est lié à `127.0.0.1` derrière Apache. Les requêtes sont bornées et les critères sont validés par des schémas stricts.
 
 ## Statut des informations
 
@@ -56,7 +73,7 @@ Le validateur vérifie notamment que les vingt-cinq fiches correspondent exactem
 
 ## Vérificateur Factur-X
 
-Le composant `src/components/InvoiceVerifier.astro` lit le fichier uniquement côté navigateur. Les PDF sont inspectés avec PDF.js pour retrouver leur pièce jointe XML ; ils ne sont pas rendus. Le XML CII est analysé avec `fast-xml-parser`, sans entités, avec limites de taille et de profondeur. Le moteur pur et testable se trouve dans `src/lib/invoice-verifier.ts`.
+Le composant `src/components/InvoiceVerifier.astro` lit le fichier uniquement côté navigateur. Les PDF sont inspectés avec PDF.js pour retrouver leur pièce jointe XML ; ils ne sont pas rendus. Le XML CII est contrôlé avec `saxes` puis analysé avec `fast-xml-parser`, sans entités, avec limites de taille et de profondeur. Le moteur pur et testable se trouve dans `src/lib/invoice-verifier.ts`.
 
 Le résultat est un prévol technique. Il ne certifie pas la conformité juridique complète, l'authenticité, la signature, l'archivage, la transmission ou l'acceptation par une plateforme agréée.
 

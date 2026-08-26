@@ -7,7 +7,9 @@
     "dev": "astro dev",
     "check": "node --experimental-strip-types scripts/validate-data.ts && astro check",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "build": "npm run check && npm test && astro build",
+    "build": "npm run check && npm test && astro build && npm run mcp:build",
+    "mcp:build": "node scripts/build-mcp.mjs",
+    "mcp:smoke": "node scripts/smoke-mcp.mjs",
     "preview": "astro preview",
     "data:refresh": "node --experimental-strip-types scripts/import-official-lists.mjs"
   },
@@ -22,7 +24,11 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@modelcontextprotocol/client": "^2.0.0",
+    "@modelcontextprotocol/node": "^2.0.0",
+    "@modelcontextprotocol/server": "^2.0.0",
     "@types/node": "^24.3.0",
+    "esbuild": "^0.25.9",
     "exceljs": "^4.4.0",
     "typescript": "^5.9.2"
   },
