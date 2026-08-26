@@ -27,6 +27,34 @@ const resourceNav = [
   { href: "/agents/", label: "Accès pour les agents", hint: "MCP public et corpus complet", icon: "route" },
   { href: "/methodologie/", label: "Sources et méthode", hint: "Ce qui est vérifié, déclaré ou inconnu", icon: "shield" },
 ] as const;
+const footerGroups = [
+  {
+    label: "Utiliser",
+    links: [
+      { href: "/verifier-mon-outil/", label: "Vérifier mon outil" },
+      { href: "/verifier-une-facture/", label: "Contrôler une facture" },
+      { href: "/diagnostic/", label: "Choisir une plateforme" },
+    ],
+  },
+  {
+    label: "Comprendre",
+    links: [
+      { href: "/questions/", label: "Questions pratiques" },
+      { href: "/plateformes/", label: "Plateformes étudiées" },
+      { href: "/annuaire/", label: "Annuaire officiel" },
+      { href: "/a-propos/", label: "Pourquoi PA Check ?" },
+    ],
+  },
+  {
+    label: "Projet ouvert",
+    links: [
+      { href: "/contribuer/", label: "Mettre à jour une fiche" },
+      { href: "/methodologie/", label: "Sources et méthode" },
+      { href: "/changements/", label: "Journal des changements" },
+      { href: "/agents/", label: "MCP et corpus public" },
+    ],
+  },
+] as const;
 const isCurrent = (href: string) => Astro.url.pathname.startsWith(href);
 const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
 ---
@@ -123,27 +151,59 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
       <slot />
     </main>
     <footer class="site-footer">
-      <div class="shell footer-grid">
-        <div>
-          <p class="mono-label">PA Check</p>
-          <strong>Choisir sa plateforme et vérifier son outil actuel.</strong>
-          <p>Vos réponses et vos fichiers restent sur votre appareil. Aucun compte nécessaire.</p>
+      <div class="shell">
+        <a class="footer-investigation" href="https://l0g.fr/publications/grand-peage-facture/" aria-label="Lire l’enquête l0g : Le grand péage de la facture">
+          <div class="footer-investigation-copy">
+            <p class="footer-kicker"><span>l0g</span> L’enquête à l’origine de PA Check</p>
+            <h2>Le grand péage<br />de la facture</h2>
+            <p>Cinq volets pour comprendre ce que la réforme change concrètement : l’architecture, le marché, les prix, les données et la continuité.</p>
+            <strong>Lire l’enquête sur l0g.fr <InterfaceIcon name="arrow" /></strong>
+          </div>
+          <div class="footer-investigation-map" aria-hidden="true">
+            <span><b>01</b><small>Portail</small></span>
+            <span><b>02</b><small>Marché</small></span>
+            <span><b>03</b><small>Prix</small></span>
+            <span><b>04</b><small>Données</small></span>
+            <span><b>05</b><small>Incident</small></span>
+          </div>
+        </a>
+
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a class="footer-brand-lockup" href="/" aria-label="PA Check, accueil">
+              <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <circle class="brand-orbit" cx="24" cy="24" r="20" />
+                  <path class="brand-p" d="M15 34V14h7.2c4.7 0 7.4 2.5 7.4 6.5S26.9 27 22.2 27H15" />
+                  <path class="brand-a" d="m27.2 34 6.4-19.6L40 34M29.8 26.3h7.7" />
+                  <circle class="brand-dot" cx="39.5" cy="10.2" r="1.7" />
+                </svg>
+              </span>
+              <span><strong><b>PA</b> Check</strong><small>Choisir et vérifier</small></span>
+            </a>
+            <p>Une réponse claire à vos questions sur la facture électronique.</p>
+            <div class="footer-privacy"><InterfaceIcon name="lock" /><span>Vos choix restent dans ce navigateur.</span></div>
+          </div>
+
+          <nav class="footer-nav" aria-label="Pied de page">
+            {footerGroups.map((group) => (
+              <section>
+                <h2>{group.label}</h2>
+                {group.links.map((link) => <a href={link.href}>{link.label}</a>)}
+              </section>
+            ))}
+          </nav>
         </div>
-        <nav aria-label="Pied de page">
-          <a href="/questions/">Questions pratiques</a>
-          <a href="/a-propos/">Pourquoi PA Check ?</a>
-          <a href="/contribuer/">Mettre à jour une fiche</a>
-          <a href="/methodologie/">Méthodologie</a>
-          <a href="/changements/">Journal des changements</a>
-          <a href="/api/platforms.json">API JSON</a>
-          <a href="/api/questions.json">API des questions</a>
-          <a href="/agents/">MCP pour les agents</a>
-          <a href="/api/corpus.json">Corpus JSON complet</a>
-          <a href="https://l0g.fr/publications/grand-peage-facture/">Enquête l0g</a>
-          <a href="https://github.com/bluetouff/facture-radar">Code source</a>
-        </nav>
+
+        <div class="footer-note">
+          <p><span>Données vérifiées le 25 août 2026</span><span>Liste DGFiP du 19 août 2026</span><span>Bêta publique</span></p>
+          <nav aria-label="Informations légales et techniques">
+            <a href="https://l0g.fr/rgpd/">Mentions légales l0g</a>
+            <a href="https://github.com/bluetouff/facture-radar">Code source</a>
+            <a href="/api/corpus.json">Corpus JSON</a>
+          </nav>
+        </div>
       </div>
-      <div class="shell footer-note">Données vérifiées le 25 août 2026 · liste DGFiP du 19 août 2026 · bêta publique</div>
     </footer>
   </body>
 </html>

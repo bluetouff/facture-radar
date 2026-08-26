@@ -31,9 +31,9 @@ const spotlights = spotlightSlugs
         <div class="hero-guide" aria-label="Les principes de PA Check">
           <div><span><InterfaceIcon name="route" /></span><p><strong>Réponse immédiate</strong><small>Les détails viennent ensuite</small></p></div>
           <div><span><InterfaceIcon name="shield" /></span><p><strong>Aucun compte</strong><small>Vos fichiers restent sur l’appareil</small></p></div>
-          <div><span><InterfaceIcon name="check" /></span><p><strong>Informations vérifiables</strong><small>Sources et limites accessibles</small></p></div>
+          <div><span><InterfaceIcon name="check" /></span><p><strong>Réponses à jour</strong><small>La date et les liens restent accessibles</small></p></div>
         </div>
-        <a class="quiet-link" href="/methodologie/">Comprendre comment les informations sont mises à jour <InterfaceIcon name="arrow" /></a>
+        <a class="quiet-link" href="/methodologie/">Voir comment le site est mis à jour <InterfaceIcon name="arrow" /></a>
       </div>
     </div>
   </section>
@@ -84,7 +84,7 @@ const spotlights = spotlightSlugs
       </div>
     </div>
     <div class="shell story-bridge" aria-label="De l’enquête aux outils PA Check">
-      <span><b>01</b> Enquête l0g</span><i></i><span><b>02</b> Informations structurées</span><i></i><span><b>03</b> Décisions et vérifications</span>
+      <span><b>01</b> Enquête l0g</span><i></i><span><b>02</b> Informations utiles</span><i></i><span><b>03</b> Votre prochaine action</span>
     </div>
   </section>
 
@@ -93,9 +93,9 @@ const spotlights = spotlightSlugs
       <header class="section-head">
         <div>
           <p class="mono-label">notre sélection</p>
-          <h2>Quatre portes d'entrée dans un atlas de {platforms.length} dossiers.</h2>
+          <h2>Quatre situations pour commencer, {platforms.length} fiches pour aller plus loin.</h2>
         </div>
-        <p>Une offre gratuite sans compte pro, un écosystème cabinet, une plateforme d'automatisation et un hub grands volumes. Quatre situations pour comprendre comment lire les fiches.</p>
+        <p>Indépendant, cabinet, PME ou grands volumes : partez du cas qui vous ressemble, puis consultez toutes les plateformes.</p>
       </header>
       <div class="dossier-grid">
         {spotlights.map((platform, index) => <PlatformCard platform={platform} index={index} />)}
@@ -106,7 +106,7 @@ const spotlights = spotlightSlugs
       </div>
       <a class="pa-contribution" href="/contribuer/">
         <span><InterfaceIcon name="action" /></span>
-        <div><p class="mono-label">vous représentez une PA ?</p><h3>Apportez une information à votre fiche.</h3><small>Une source publique, un périmètre précis, puis une vérification indépendante avant mise à jour.</small></div>
+        <div><p class="mono-label">vous représentez une PA ?</p><h3>Aidez-nous à garder votre fiche exacte.</h3><small>Tarifs, formats, intégrations ou conditions d’accès : indiquez simplement ce qui a changé.</small></div>
         <InterfaceIcon name="arrow" />
       </a>
     </div>

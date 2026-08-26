@@ -38,7 +38,7 @@ import InterfaceIcon from "./InterfaceIcon.astro";
   header, footer { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
   header { border-bottom: 1px solid var(--line); padding: .15rem .15rem .85rem; }
   header > span { color: var(--bright); font-size: .78rem; font-weight: 740; }
-  header small { display: inline-flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .71rem; font-weight: 620; }
+  header small { display: inline-flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .75rem; font-weight: 620; }
   header i { width: .48rem; height: .48rem; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 .22rem var(--success-soft); }
   .choice-flow { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(125px,.85fr) minmax(70px,.55fr) minmax(155px,1fr); align-items: center; min-height: 14rem; padding: 1rem .1rem; }
   .choice-inputs { display: grid; gap: .55rem; }
@@ -49,7 +49,7 @@ import InterfaceIcon from "./InterfaceIcon.astro";
   .choice-inputs svg { width: 1rem; height: 1rem; }
   .choice-inputs p { display: grid; gap: .05rem; margin: 0; }
   .choice-inputs b { color: var(--muted); font: 650 .54rem/1 var(--font-mono); }
-  .choice-inputs strong { color: var(--bright); font-size: .73rem; }
+  .choice-inputs strong { color: var(--bright); font-size: .76rem; }
   .choice-router { position: relative; height: 13.1rem; }
   .choice-router > svg { width: 100%; height: 100%; overflow: visible; }
   .choice-router path { fill: none; stroke: color-mix(in srgb, var(--signal) 38%, var(--line)); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
@@ -62,13 +62,13 @@ import InterfaceIcon from "./InterfaceIcon.astro";
   .option-card.primary { border-color: color-mix(in srgb, var(--signal) 35%, var(--line)); background: linear-gradient(100deg, var(--signal-soft), #fff); box-shadow: 0 .5rem 1.3rem rgba(64,91,216,.09); }
   .option-card > span { color: var(--signal); font: 720 .58rem/1 var(--font-mono); }
   .option-card p { display: grid; gap: .27rem; margin: 0; }
-  .option-card b { color: var(--bright); font-size: .69rem; }
+  .option-card b { color: var(--bright); font-size: .75rem; }
   .option-card i { display: block; width: 82%; height: .24rem; border-radius: 1rem; background: var(--surface-3); }
   .option-card i + i { width: 56%; }
   .option-card > svg { width: .9rem; height: .9rem; color: var(--signal); }
-  footer { border-top: 1px solid var(--line); padding: .8rem .15rem .05rem; color: var(--muted); font-size: .69rem; font-weight: 570; }
+  footer { border-top: 1px solid var(--line); padding: .8rem .15rem .05rem; color: var(--muted); font-size: .75rem; font-weight: 570; }
   footer svg { flex: 0 0 auto; width: .95rem; height: .95rem; color: var(--success); }
   @media (max-width: 1000px) { .choice-flow { grid-template-columns: minmax(115px,.9fr) minmax(60px,.45fr) minmax(145px,1fr); } }
   @media (max-width: 760px) { .choice-map { margin-top: .5rem; } }
-  @media (max-width: 460px) { .choice-map { padding: .8rem; } .choice-flow { grid-template-columns: 1fr; gap: .7rem; min-height: 0; } .choice-inputs { grid-template-columns: repeat(3,1fr); } .choice-inputs > div { display: grid; justify-items: center; gap: .35rem; padding: .5rem .2rem; text-align: center; } .choice-inputs p { justify-items: center; } .choice-inputs strong { font-size: .67rem; } .choice-router { display: none; } .choice-output { grid-template-columns: repeat(3,1fr); } .choice-output > small { grid-column: 1 / -1; } .option-card { grid-template-columns: 1fr; justify-items: center; min-height: 3.2rem; padding: .45rem; text-align: center; } .option-card p { justify-items: center; } .option-card b { font-size: .62rem; } .option-card i { width: 80%; } .option-card > svg { display: none; } footer { justify-content: flex-start; } }
+  @media (max-width: 460px) { .choice-map { padding: .8rem; } .choice-flow { grid-template-columns: 1fr; gap: .7rem; min-height: 0; } .choice-inputs { grid-template-columns: repeat(3,1fr); } .choice-inputs > div { display: grid; justify-items: center; gap: .35rem; padding: .5rem .2rem; text-align: center; } .choice-inputs p { justify-items: center; } .choice-inputs strong { font-size: .72rem; } .choice-router { display: none; } .choice-output { grid-template-columns: repeat(3,1fr); } .choice-output > small { grid-column: 1 / -1; } .option-card { grid-template-columns: 1fr; justify-items: center; min-height: 3.2rem; padding: .45rem; text-align: center; } .option-card p { justify-items: center; } .option-card b { font-size: .7rem; } .option-card i { width: 80%; } .option-card > svg { display: none; } footer { justify-content: flex-start; } }
 </style>
