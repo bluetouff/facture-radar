@@ -115,7 +115,7 @@ img, svg { display: block; max-width: 100%; }
 .button.secondary { border-color: var(--line); background: rgba(255,255,255,.72); color: var(--bright); box-shadow: none; }
 .button.secondary:hover { border-color: color-mix(in srgb, var(--signal) 40%, var(--line)); background: var(--surface); color: var(--signal); }
 .hero-proof { position: relative; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1rem; background: rgba(255,255,255,.84); box-shadow: 0 1.4rem 4rem var(--shadow); }
-.hero-proof::before { position: absolute; top: .8rem; right: .8rem; border-radius: 999px; padding: .28rem .52rem; background: var(--signal-soft); color: var(--signal); content: "Dossier 25/148"; font-size: .75rem; font-weight: 720; }
+.hero-proof::before { position: absolute; top: .8rem; right: .8rem; border-radius: 999px; padding: .28rem .52rem; background: var(--signal-soft); color: var(--signal); content: "Dossier 50/148"; font-size: .75rem; font-weight: 720; }
 .proof-svg { width: 100%; height: auto; }
 
 .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; }
@@ -214,14 +214,17 @@ img, svg { display: block; max-width: 100%; }
 .footer-nav { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(1.5rem,4vw,3.5rem); }
 .footer-nav section { display: grid; align-content: start; gap: .62rem; }
 .footer-nav h2 { margin: 0 0 .35rem; color: #fff; font: 670 .76rem/1.2 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; }
-.footer-nav a { width: fit-content; color: rgba(255,255,255,.62); font-size: .82rem; }
+.footer-nav a { display: inline-flex; gap: .5rem; align-items: center; width: fit-content; color: rgba(255,255,255,.62); font-size: .82rem; }
+.footer-nav a svg { flex: 0 0 auto; width: .9rem; height: .9rem; opacity: .62; transition: opacity .16s ease, transform .16s ease; }
+.footer-nav a:hover svg { opacity: 1; transform: translateX(.08rem); }
 .footer-nav a:hover { color: #fff; }
 .footer-nav a:focus-visible, .footer-note a:focus-visible, .footer-brand-lockup:focus-visible { outline: 2px solid #8fa2ff; outline-offset: 3px; }
 .footer-note { display: flex; justify-content: space-between; gap: 1rem 2rem; align-items: center; border-top: 1px solid rgba(255,255,255,.1); padding-block: 1.15rem 1.35rem; color: rgba(255,255,255,.48); font-size: .78rem; }
 .footer-note p, .footer-note nav { display: flex; flex-wrap: wrap; gap: .45rem 1rem; align-items: center; margin: 0; }
 .footer-note p span:not(:last-child)::after { margin-left: 1rem; color: rgba(255,255,255,.22); content: "·"; }
 .footer-note nav { justify-content: flex-end; }
-.footer-note a { color: rgba(255,255,255,.62); }
+.footer-note a { display: inline-flex; gap: .38rem; align-items: center; color: rgba(255,255,255,.62); }
+.footer-note a svg { width: .82rem; height: .82rem; opacity: .58; }
 .footer-note a:hover { color: #fff; }
 
 .prose { max-width: 50rem; }

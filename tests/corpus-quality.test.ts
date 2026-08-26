@@ -4,11 +4,11 @@ import corpusSelection from "../src/data/corpus-selection.json" with { type: "js
 import sources from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 
-test("le corpus contient exactement les vingt-cinq acteurs sélectionnés", () => {
+test("le corpus contient exactement les cinquante acteurs sélectionnés", () => {
   const platformSlugs = platforms.map((platform) => platform.slug).sort();
   const selectedSlugs = corpusSelection.selected.map((platform) => platform.slug).sort();
   assert.deepEqual(platformSlugs, selectedSlugs);
-  assert.equal(new Set(selectedSlugs).size, 25);
+  assert.equal(new Set(selectedSlugs).size, 50);
 });
 
 test("chaque acteur dispose d'une preuve primaire de sélection", () => {

@@ -32,27 +32,27 @@ const footerGroups = [
   {
     label: "Utiliser",
     links: [
-      { href: "/verifier-mon-outil/", label: "Vérifier mon outil" },
-      { href: "/verifier-une-facture/", label: "Contrôler une facture" },
-      { href: "/diagnostic/", label: "Choisir une plateforme" },
+      { href: "/verifier-mon-outil/", label: "Vérifier mon outil", icon: "route" },
+      { href: "/verifier-une-facture/", label: "Contrôler une facture", icon: "invoice" },
+      { href: "/diagnostic/", label: "Choisir une plateforme", icon: "target" },
     ],
   },
   {
     label: "Comprendre",
     links: [
-      { href: "/questions/", label: "Questions pratiques" },
-      { href: "/plateformes/", label: "Plateformes étudiées" },
-      { href: "/annuaire/", label: "Annuaire officiel" },
-      { href: "/a-propos/", label: "Pourquoi PA Check ?" },
+      { href: "/questions/", label: "Questions pratiques", icon: "question" },
+      { href: "/plateformes/", label: "Plateformes étudiées", icon: "layers" },
+      { href: "/annuaire/", label: "Annuaire officiel", icon: "directory" },
+      { href: "/a-propos/", label: "Pourquoi PA Check ?", icon: "search" },
     ],
   },
   {
     label: "Projet ouvert",
     links: [
-      { href: "/contribuer/", label: "Mettre à jour une fiche" },
-      { href: "/methodologie/", label: "Sources et méthode" },
-      { href: "/changements/", label: "Journal des changements" },
-      { href: "/agents/", label: "MCP et corpus public" },
+      { href: "/contribuer/", label: "Mettre à jour une fiche", icon: "action" },
+      { href: "/methodologie/", label: "Sources et méthode", icon: "shield" },
+      { href: "/changements/", label: "Journal des changements", icon: "proof" },
+      { href: "/agents/", label: "MCP et corpus public", icon: "grid" },
     ],
   },
 ] as const;
@@ -190,18 +190,18 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
             {footerGroups.map((group) => (
               <section>
                 <h2>{group.label}</h2>
-                {group.links.map((link) => <a href={link.href}>{link.label}</a>)}
+                {group.links.map((link) => <a href={link.href}><InterfaceIcon name={link.icon} /><span>{link.label}</span></a>)}
               </section>
             ))}
           </nav>
         </div>
 
         <div class="footer-note">
-          <p><span>Données vérifiées le 25 août 2026</span><span>Liste DGFiP du 19 août 2026</span><span>Bêta publique</span></p>
+          <p><span>Données vérifiées le 26 août 2026</span><span>Liste DGFiP du 19 août 2026</span><span>Bêta publique</span></p>
           <nav aria-label="Informations légales et techniques">
-            <a href="https://l0g.fr/rgpd/">Mentions légales l0g</a>
-            <a href="https://github.com/bluetouff/facture-radar">Code source</a>
-            <a href="/api/corpus.json">Corpus JSON</a>
+            <a href="https://l0g.fr/rgpd/"><InterfaceIcon name="shield" /><span>Mentions légales l0g</span></a>
+            <a href="https://github.com/bluetouff/facture-radar"><InterfaceIcon name="grid" /><span>Code source</span></a>
+            <a href="/api/corpus.json"><InterfaceIcon name="download" /><span>Corpus JSON</span></a>
           </nav>
         </div>
       </div>

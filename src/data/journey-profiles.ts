@@ -1,3 +1,5 @@
+import { expandedJourneyProfiles } from "./journey-profiles-expanded.ts";
+
 export type JourneyAudience = "micro" | "tpe-pme" | "eti-ge";
 export type JourneyProfileId =
   | "tiime"
@@ -24,7 +26,32 @@ export type JourneyProfileId =
   | "kolecto"
   | "yooz"
   | "doxallia"
-  | "seres";
+  | "seres"
+  | "b2brouter"
+  | "dext"
+  | "dougs"
+  | "billit"
+  | "ipaidthat"
+  | "agicap"
+  | "spendesk"
+  | "lucca"
+  | "n2f"
+  | "flowie"
+  | "axelor"
+  | "a-cube"
+  | "invopop"
+  | "storecove"
+  | "pagero"
+  | "basware"
+  | "avalara"
+  | "comarch"
+  | "edicom"
+  | "opentext"
+  | "docuware"
+  | "tessi"
+  | "esalink"
+  | "itesoft"
+  | "chaintrust";
 
 export interface JourneyActionDefinition {
   title: string;
@@ -860,6 +887,7 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
     )),
     afterActivationActions: [testReceipt("Seres e-Facture PA")],
   },
+  ...expandedJourneyProfiles,
 ];
 
 export function collectJourneySourceIds(profile: JourneyProfileDefinition): string[] {

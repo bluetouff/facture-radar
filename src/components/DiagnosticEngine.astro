@@ -210,7 +210,7 @@
       resultContext.textContent = `Pour ${sizeLabel}, ${input.monthlyInvoices.toLocaleString("fr-FR")} facture${input.monthlyInvoices > 1 ? "s" : ""} par mois et votre priorité « ${priorityLabel} ». Voici trois options à regarder d'abord, puis les ${remaining.length} autres plateformes étudiées.`;
     }
     else {
-      resultTitle.textContent = "Aucune des 25 fiches ne confirme ce critère";
+      resultTitle.textContent = "Aucune des 50 fiches ne confirme ce critère";
       resultContext.textContent = `Pour ${sizeLabel}, le critère « ${priorityLabel} » comporte un blocage ou une information manquante dans chaque fiche étudiée.`;
       eligibleContainer.append(text("p", "Essayez une autre priorité ou consultez les informations manquantes ci-dessous.", "no-result"));
     }

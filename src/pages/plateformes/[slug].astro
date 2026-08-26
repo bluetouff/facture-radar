@@ -63,6 +63,7 @@ const accountantValue = platform.accountantAccess.value === true
   : platform.accountantAccess.value === false
     ? "Accès non prévu"
     : "À confirmer";
+const reviewedAt = platform.officialStatus.checkedAt.split("-").reverse().map((part, index) => index === 2 ? part.slice(-2) : part).join(".");
 ---
 
 <BaseLayout
@@ -76,7 +77,7 @@ const accountantValue = platform.accountantAccess.value === true
         <div class="profile-reference">
           <span>dossier {String(platformIndex + 1).padStart(2, "0")} / {platforms.length}</span>
           <i></i>
-          <span>revu le 25.08.26</span>
+          <span>revu le {reviewedAt}</span>
         </div>
         <h1>{platform.displayName}</h1>
         <span class="official-name">Nom dans la liste DGFiP : {platform.officialName}</span>

@@ -2,6 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import { practicalQuestions } from "../data/practical-questions";
+import { platforms } from "../data/platforms";
+import sources from "../data/sources.json";
+import officialDirectory from "../data/official-directory.json";
 import { MCP_ENDPOINT } from "../mcp/corpus.ts";
 
 const tools = [
@@ -45,8 +48,8 @@ const tools = [
   <section class="shell agent-metrics" aria-label="Périmètre du MCP">
     <div><strong>5</strong><span>outils ciblés</span></div>
     <div><strong>7</strong><span>ressources complètes</span></div>
-    <div><strong>25</strong><span>fiches enrichies</span></div>
-    <div><strong>166</strong><span>entrées DGFiP</span></div>
+    <div><strong>{platforms.length}</strong><span>fiches enrichies</span></div>
+    <div><strong>{officialDirectory.approved.length + officialDirectory.pending.length}</strong><span>entrées DGFiP</span></div>
   </section>
 
   <section class="shell agent-tools section" aria-labelledby="agent-tools-title">
@@ -80,10 +83,10 @@ const tools = [
       </div>
       <div class="resource-stack">
         <article><b>01</b><span><strong>Questions pratiques</strong><small>{practicalQuestions.length} réponses directement exploitables</small></span></article>
-        <article><b>02</b><span><strong>Plateformes enrichies</strong><small>25 fiches, tarifs et limites</small></span></article>
-        <article><b>03</b><span><strong>Annuaire officiel</strong><small>148 approuvées, 18 en attente</small></span></article>
+        <article><b>02</b><span><strong>Plateformes enrichies</strong><small>{platforms.length} fiches, tarifs et limites</small></span></article>
+        <article><b>03</b><span><strong>Annuaire officiel</strong><small>{officialDirectory.approved.length} approuvées, {officialDirectory.pending.length} en attente</small></span></article>
         <article><b>04</b><span><strong>Parcours et envoi</strong><small>Activation et fichiers déjà produits</small></span></article>
-        <article><b>05</b><span><strong>Sources publiques</strong><small>94 documents reliés aux réponses</small></span></article>
+        <article><b>05</b><span><strong>Sources publiques</strong><small>{sources.length} documents reliés aux réponses</small></span></article>
       </div>
     </div>
   </section>

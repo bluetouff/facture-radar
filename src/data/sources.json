@@ -750,5 +750,389 @@
     "url": "https://seres.fr/fr/e-factures-fournisseurs/",
     "type": "documentation",
     "accessedAt": "2026-08-25"
+  },
+  {
+    "id": "b2brouter-pricing-2026",
+    "title": "Tarifs et couverture France de B2BRouter",
+    "publisher": "B2BRouter",
+    "url": "https://www.b2brouter.net/fr/tarifs/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "b2brouter-api-2026",
+    "title": "API de facturation électronique B2BRouter",
+    "publisher": "B2BRouter",
+    "url": "https://www.b2brouter.net/fr/api-facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "dext-pa-2026",
+    "title": "Plateforme agréée et facturation électronique Dext",
+    "publisher": "Dext",
+    "url": "https://dext.com/fr/cabinet/produits/logiciel-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "dext-pricing-2026",
+    "title": "Tarifs Dext pour les TPE et PME",
+    "publisher": "Dext",
+    "url": "https://dext.com/fr/tarifs/entreprise-tpe-pme",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "dougs-free-2026",
+    "title": "Logiciel de facturation électronique gratuit Dougs",
+    "publisher": "Dougs",
+    "url": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "billit-pricing-2026",
+    "title": "Plans tarifaires Billit",
+    "publisher": "Billit",
+    "url": "https://www.billit.eu/fr-be/tarifs/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "billit-france-api-2026",
+    "title": "Envoi d'une facture de vente en France",
+    "publisher": "Billit",
+    "url": "https://docs.billit.be/docs/send-sales-invoice-france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ipaidthat-pricing-2026",
+    "title": "Tarifs et volumes iPaidThat",
+    "publisher": "iPaidThat",
+    "url": "https://app.ipaidthat.io/fr/tarifs/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ipaidthat-pa-2026",
+    "title": "Facturation électronique par iPaidThat",
+    "publisher": "iPaidThat",
+    "url": "https://app.ipaidthat.io/fr/facturation-electronique-pdp/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ipaidthat-accountants-2026",
+    "title": "Offre iPaidThat pour les experts-comptables",
+    "publisher": "iPaidThat",
+    "url": "https://app.ipaidthat.io/fr/experts-comptables/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "agicap-pa-2026",
+    "title": "Plateforme agréée de facturation électronique Agicap",
+    "publisher": "Agicap",
+    "url": "https://agicap.com/fr/fonctionnalites/plateforme-agreee-facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "agicap-api-2026",
+    "title": "Documentation de l'API e-invoicing Agicap",
+    "publisher": "Agicap",
+    "url": "https://api.agicap.com/guides/einvoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "agicap-pricing-2026",
+    "title": "Tarification et engagement Agicap",
+    "publisher": "Agicap",
+    "url": "https://agicap.com/fr/tarifs/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "spendesk-pa-2026",
+    "title": "Facturation électronique intégrée aux dépenses Spendesk",
+    "publisher": "Spendesk",
+    "url": "https://www.spendesk.com/fr/e-invoicing-landing-page/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "lucca-invoices-2026",
+    "title": "Gestion des factures fournisseurs Lucca",
+    "publisher": "Lucca",
+    "url": "https://www.lucca.fr/finance/achats/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "lucca-pricing-2026",
+    "title": "Tarifs des solutions Lucca",
+    "publisher": "Lucca",
+    "url": "https://www.lucca.fr/tarifs/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "lucca-activation-2026",
+    "title": "S'inscrire sur la plateforme agréée Lucca",
+    "publisher": "Lucca",
+    "url": "https://support.luccasoftware.com/s/article/S-inscrire-sur-la-plateforme-agr%C3%A9%C3%A9e-Lucca",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "n2f-pa-2026",
+    "title": "Plateforme agréée N2F",
+    "publisher": "N2F",
+    "url": "https://www.n2f.com/fr/logiciel-factures-fournisseurs/plateforme-agreee-facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "flowie-france-2026",
+    "title": "Couverture de la réforme française par Flowie",
+    "publisher": "Flowie",
+    "url": "https://get-flowie.com/e-invoicing/france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "flowie-sales-2026",
+    "title": "Cycle Order-to-Cash Flowie",
+    "publisher": "Flowie",
+    "url": "https://get-flowie.com/fr/plateforme/order-to-cash",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "flowie-smb-2026",
+    "title": "Offre Flowie pour les PME",
+    "publisher": "Flowie",
+    "url": "https://www.get-flowie.com/lp-fr/fr-lp-finance-smb",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "axelor-pa-2026",
+    "title": "Facturation électronique intégrée à Axelor",
+    "publisher": "Axelor",
+    "url": "https://axelor.com/fr/logiciel-facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "acube-france-api-2026",
+    "title": "Introduction à l'API France A-Cube",
+    "publisher": "A-Cube",
+    "url": "https://docs.acubeapi.com/documentation/gov-fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "acube-formats-2026",
+    "title": "Formats et transmission France A-Cube",
+    "publisher": "A-Cube",
+    "url": "https://docs.acubeapi.com/documentation/gov-fr/invoices/formats",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "invopop-pricing-2026",
+    "title": "Tarification de l'API Invopop",
+    "publisher": "Invopop",
+    "url": "https://www.invopop.com/pricing",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "invopop-france-2026",
+    "title": "Application France de la plateforme Invopop",
+    "publisher": "Invopop",
+    "url": "https://docs.invopop.com/apps/france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "storecove-france-2026",
+    "title": "Conformité France Storecove",
+    "publisher": "Storecove",
+    "url": "https://www.storecove.com/fr/fr/conformite/france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "storecove-api-2026",
+    "title": "API mondiale de facturation électronique Storecove",
+    "publisher": "Storecove",
+    "url": "https://www.storecove.com/fr/fr/solutions/api-de-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "pagero-france-2026",
+    "title": "Facturation électronique française ONESOURCE Pagero",
+    "publisher": "Thomson Reuters",
+    "url": "https://europe.thomsonreuters.com/fr/service-conformite/solutions/mandat-de-facturation-electronique-france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "pagero-connectivity-2026",
+    "title": "Connectivité des systèmes Pagero",
+    "publisher": "Thomson Reuters",
+    "url": "https://europe.thomsonreuters.com/fr/reseau-pagero/connectivite-des-systemes",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "basware-france-2026",
+    "title": "Pourquoi choisir Basware comme plateforme agréée",
+    "publisher": "Basware",
+    "url": "https://www.basware.com/fr/conformite/facturation-electronique-obligatoire-en-france/pourquoi-basware",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "basware-mandate-2026",
+    "title": "Mandat français de facturation électronique Basware",
+    "publisher": "Basware",
+    "url": "https://www.basware.com/en/compliance/e-invoicing-mandate-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "avalara-france-api-2026",
+    "title": "Guide d'implémentation B2B France Avalara",
+    "publisher": "Avalara",
+    "url": "https://knowledge.avalara.com/bundle/vxj7477686203108_vxj7477686203108/page/mvv4582230894564.html",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "avalara-france-formats-2026",
+    "title": "Formats du mandat France Avalara",
+    "publisher": "Avalara",
+    "url": "https://knowledge.avalara.com/bundle/etf1716299629790_etf1716299629790/page/eep8841262115317.html",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "comarch-france-2026",
+    "title": "Plateforme agréée Comarch en France",
+    "publisher": "Comarch",
+    "url": "https://www.comarch.fr/solutions-it/plateforme-echange-et-de-gestion-des-documents/facturation-electronique/facturation-electronique-b2b-obligatoire-en-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "comarch-registration-2026",
+    "title": "Accréditation de Comarch comme plateforme agréée",
+    "publisher": "Comarch",
+    "url": "https://www.comarch.com/trade-and-services/data-management/news/comarch-is-now-an-accredited-certified-platform-pa-in-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "edicom-platform-2026",
+    "title": "Plateforme globale EDICOM",
+    "publisher": "EDICOM",
+    "url": "https://edicomgroup.com/fr/edicom-global-platform",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "edicom-france-2026",
+    "title": "Facturation électronique et e-reporting en France",
+    "publisher": "EDICOM",
+    "url": "https://edicomgroup.com/electronic-invoicing/france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "opentext-france-2026",
+    "title": "Mandat français de facturation électronique OpenText",
+    "publisher": "OpenText",
+    "url": "https://blogs.opentext.com/e-invoicing-mandates-and-updates-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "docuware-invoices-2026",
+    "title": "Factures électroniques avec DocuWare",
+    "publisher": "DocuWare",
+    "url": "https://start.docuware.com/fr/factures-electroniques-avec-docuware",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "docuware-pa-2026",
+    "title": "Plateforme agréée DocuWare",
+    "publisher": "DocuWare",
+    "url": "https://start.docuware.com/fr/plateforme-agreee",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tessi-platform-2026",
+    "title": "Digital Invoice by Tessi",
+    "publisher": "Tessi",
+    "url": "https://www.tessi.eu/fr/digital-invoice-by-tessi/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tessi-compliance-2026",
+    "title": "Conformité de Digital Invoice by Tessi",
+    "publisher": "Tessi",
+    "url": "https://www.tessi.eu/fr/digital-invoice-by-tessi/gestion-de-la-conformite/",
+    "type": "security",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "esalink-pa-2026",
+    "title": "Plateforme agréée Hubtimize d'EsaLink",
+    "publisher": "EsaLink",
+    "url": "https://www.esalink.com/pdp/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "esalink-platform-2026",
+    "title": "Plateforme EDI Hubtimize EsaLink",
+    "publisher": "EsaLink",
+    "url": "https://www.esalink.com/index/",
+    "type": "security",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "itesoft-invoices-2026",
+    "title": "Dématérialisation des factures ITESOFT",
+    "publisher": "ITESOFT",
+    "url": "https://www.itesoft.com/fr/besoins/dematerialisation-factures/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "chaintrust-pa-2026",
+    "title": "Plateforme agréée Chaintrust",
+    "publisher": "Chaintrust",
+    "url": "https://www.chaintrust.io/plateforme-agreee-chaintrust/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "chaintrust-pricing-2026",
+    "title": "Tarifs et conditions Chaintrust",
+    "publisher": "Chaintrust",
+    "url": "https://www.chaintrust.io/tarif/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
   }
 ]

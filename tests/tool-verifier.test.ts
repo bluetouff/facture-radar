@@ -42,7 +42,7 @@ test("un produit Sage ne peut pas hériter automatiquement du statut de la PA", 
   assert.match(result.headline, /vérifiez votre offre avant de garder Sage/i);
 });
 
-test("les vingt-cinq parcours donnent une première réponse sans formulaire supplémentaire", () => {
+test("les cinquante parcours donnent une première réponse sans formulaire supplémentaire", () => {
   for (const profile of journeyProfiles) {
     const result = verifyKnownTool(platforms, profile.toolLabel);
     assert.ok(result.tool, `${profile.toolLabel} doit être reconnu`);

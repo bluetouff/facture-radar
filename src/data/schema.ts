@@ -63,7 +63,7 @@ export const sourceSchema = z.object({
   accessedAt: z.iso.date(),
 });
 
-export const platformsSchema = z.array(platformSchema).length(25);
+export const platformsSchema = z.array(platformSchema).length(50);
 export const sourcesSchema = z.array(sourceSchema).min(12);
 
 const passportFactSchema = z.object({

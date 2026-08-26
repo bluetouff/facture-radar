@@ -1,4 +1,5 @@
 import type { Evidence, Platform } from "./types.ts";
+import { expandedPlatforms } from "./platforms-expanded.ts";
 
 const checkedAt = "2026-08-25";
 
@@ -643,5 +644,6 @@ export const platforms: Platform[] = [
     iso27001: unknown("Les pages indiquent des certifications indépendantes sans rattacher un certificat ISO 27001 précis à la plateforme."),
     commitmentMonths: unknown("La durée dépend du contrat et du projet d'intégration."),
     importantUnknowns: ["Tarifs et volumes", "API publique", "Conditions de sortie", "Certificat ISO 27001 applicable"]
-  }
+  },
+  ...expandedPlatforms,
 ];

@@ -20,7 +20,7 @@ const corpusSelectionSchema = z.object({
     reach: z.string().min(1),
     reachSourceIds: z.array(z.string().min(1)).min(1),
     reason: z.string().min(1),
-  })).length(25),
+  })).length(50),
   replaced: z.array(z.object({
     slug: z.string().regex(/^[a-z0-9-]+$/),
     reason: z.string().min(1),

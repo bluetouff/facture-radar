@@ -1,5 +1,5 @@
 {
-  "selectedAt": "2026-08-25",
+  "selectedAt": "2026-08-26",
   "audience": "Indépendants, entrepreneurs, entreprises, équipes administratives et cabinets comptables en France",
   "method": [
     "Présence dans la liste des plateformes approuvées publiée par la DGFiP",
@@ -182,12 +182,182 @@
       "reach": "Acteur de la dématérialisation des factures depuis 1994",
       "reachSourceIds": ["seres-p2p-2026"],
       "reason": "Couverture des flux ERP et EDI, des cycles achats et ventes et de l'archivage à valeur probatoire."
-    }
-  ],
-  "replaced": [
+    },
+    {
+      "slug": "b2brouter",
+      "segment": "tpe-pme",
+      "reach": "Offre gratuite, API et couverture Peppol documentées",
+      "reachSourceIds": ["b2brouter-pricing-2026", "b2brouter-api-2026"],
+      "reason": "Cas concret d'une PA utilisable directement ou par API, avec une limite gratuite publique."
+    },
+    {
+      "slug": "dext",
+      "segment": "cabinet-et-erp",
+      "reach": "Offre gratuite et parcours cabinet documentés",
+      "reachSourceIds": ["dext-pa-2026", "dext-pricing-2026"],
+      "reason": "Acteur de la collecte comptable qui publie le mandat cabinet, les formats et un prix exploitable."
+    },
     {
       "slug": "dougs",
-      "reason": "Offre bien identifiée dont la portée est plus étroite que les écosystèmes comptables retenus."
+      "segment": "tpe-pme",
+      "reach": "49 000 entrepreneurs annoncés par Dougs",
+      "reachSourceIds": ["dougs-free-2026"],
+      "reason": "Offre gratuite sans limite annoncée pour les indépendants et petites entreprises."
+    },
+    {
+      "slug": "billit",
+      "segment": "tpe-pme",
+      "reach": "Envoi gratuit et intégration France par API documentée",
+      "reachSourceIds": ["billit-pricing-2026", "billit-france-api-2026"],
+      "reason": "Alternative Peppol avec tarification publique et différenciation nette entre plan gratuit et complet."
+    },
+    {
+      "slug": "ipaidthat",
+      "segment": "cabinet-et-erp",
+      "reach": "Plus de 5 000 utilisateurs et 200 partenaires annoncés",
+      "reachSourceIds": ["ipaidthat-pa-2026"],
+      "reason": "Pré-comptabilité et trésorerie avec prix, volumes, API et intégrations comptables publiés."
+    },
+    {
+      "slug": "agicap",
+      "segment": "eti-et-grands-comptes",
+      "reach": "8 000 clients dans 12 pays annoncés par Agicap",
+      "reachSourceIds": ["agicap-pa-2026"],
+      "reason": "Plateforme liée au pilotage de trésorerie, avec une API France détaillée et ses limites actuelles."
+    },
+    {
+      "slug": "spendesk",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réception et rapprochement des dépenses documentés",
+      "reachSourceIds": ["spendesk-pa-2026"],
+      "reason": "Cas d'usage important pour les équipes finance qui cherchent d'abord à traiter les factures fournisseurs."
+    },
+    {
+      "slug": "lucca",
+      "segment": "cabinet-et-erp",
+      "reach": "PA incluse dans plusieurs abonnements Lucca",
+      "reachSourceIds": ["lucca-activation-2026"],
+      "reason": "Parcours d'inscription détaillé, prix à la consommation et intégration aux dépenses."
+    },
+    {
+      "slug": "n2f",
+      "segment": "tpe-pme",
+      "reach": "Couverture fournisseurs, émission et archivage documentée",
+      "reachSourceIds": ["n2f-pa-2026"],
+      "reason": "Acteur connu des frais professionnels qui publie formats, statuts et contraintes de son émission par API."
+    },
+    {
+      "slug": "flowie",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plus de 30 connecteurs ERP annoncés",
+      "reachSourceIds": ["flowie-france-2026"],
+      "reason": "Couverture achats et ventes, API, EDI, Peppol et documentation France dense."
+    },
+    {
+      "slug": "axelor",
+      "segment": "cabinet-et-erp",
+      "reach": "Plateforme agréée intégrée à un ERP open source",
+      "reachSourceIds": ["axelor-pa-2026"],
+      "reason": "Cas distinctif d'une PA intégrée au cycle complet d'un ERP ouvert."
+    },
+    {
+      "slug": "a-cube",
+      "segment": "cabinet-et-erp",
+      "reach": "API France et bac à sable public documentés",
+      "reachSourceIds": ["acube-france-api-2026"],
+      "reason": "Option destinée aux éditeurs, avec documentation des webhooks et limites de format visibles."
+    },
+    {
+      "slug": "invopop",
+      "segment": "cabinet-et-erp",
+      "reach": "Tarification publique à la consommation pour une API internationale",
+      "reachSourceIds": ["invopop-pricing-2026"],
+      "reason": "API documentée avec environnement gratuit et état d'avancement France explicite."
+    },
+    {
+      "slug": "storecove",
+      "segment": "cabinet-et-erp",
+      "reach": "Une API annoncée pour plus de 30 cadres nationaux",
+      "reachSourceIds": ["storecove-france-2026", "storecove-api-2026"],
+      "reason": "Alternative mondiale pour éditeurs et ERP cherchant une connexion unique."
+    },
+    {
+      "slug": "pagero",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Couverture de conformité annoncée dans plus de 80 pays",
+      "reachSourceIds": ["pagero-france-2026"],
+      "reason": "Réseau mondial Thomson Reuters destiné aux ERP et aux grands groupes."
+    },
+    {
+      "slug": "basware",
+      "segment": "eti-et-grands-comptes",
+      "reach": "170 millions de factures traitées par an annoncées",
+      "reachSourceIds": ["basware-france-2026"],
+      "reason": "Acteur historique de l'automatisation fournisseurs et des réseaux internationaux."
+    },
+    {
+      "slug": "avalara",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Documentation technique détaillée du mandat français",
+      "reachSourceIds": ["avalara-france-api-2026", "avalara-france-formats-2026"],
+      "reason": "Spécialiste de la conformité fiscale internationale avec formats et API précisément publiés."
+    },
+    {
+      "slug": "comarch",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réseau international et intégrations ERP documentés",
+      "reachSourceIds": ["comarch-france-2026"],
+      "reason": "Couverture EDI et ERP adaptée aux grands groupes internationaux."
+    },
+    {
+      "slug": "edicom",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plus de 500 millions de transactions gérées, annoncées par EDICOM",
+      "reachSourceIds": ["edicom-platform-2026"],
+      "reason": "Plateforme EDI et fiscale mondiale avec infrastructure et formats France publiés."
+    },
+    {
+      "slug": "opentext",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réseau B2B mondial OpenText Trading Grid",
+      "reachSourceIds": ["opentext-france-2026"],
+      "reason": "Acteur majeur des échanges B2B pour connecter les grands systèmes clients et fournisseurs."
+    },
+    {
+      "slug": "docuware",
+      "segment": "eti-et-grands-comptes",
+      "reach": "GED et plateforme agréée intégrées",
+      "reachSourceIds": ["docuware-invoices-2026"],
+      "reason": "Cas d'usage où la conformité s'insère dans les workflows documentaires existants."
+    },
+    {
+      "slug": "tessi",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Solution destinée aux ETI et grandes entreprises à fortes volumétries",
+      "reachSourceIds": ["tessi-platform-2026"],
+      "reason": "Couverture P2P, O2C, archivage et sécurité pour les grands volumes."
+    },
+    {
+      "slug": "esalink",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme EDI intégrable aux systèmes existants",
+      "reachSourceIds": ["esalink-pa-2026"],
+      "reason": "Spécialiste EDI avec transformation de formats et supervision des flux."
+    },
+    {
+      "slug": "itesoft",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plus de 250 connecteurs ERP annoncés par ITESOFT",
+      "reachSourceIds": ["itesoft-invoices-2026"],
+      "reason": "Automatisation fournisseurs et clients avec portail, formats étendus et contrôles anti-fraude."
+    },
+    {
+      "slug": "chaintrust",
+      "segment": "cabinet-et-erp",
+      "reach": "Plus de 1 000 cabinets annoncés par Chaintrust",
+      "reachSourceIds": ["chaintrust-pa-2026"],
+      "reason": "Plateforme de Visma France pensée pour le multi-dossiers et les logiciels de production comptable."
     }
-  ]
+  ],
+  "replaced": []
 }
