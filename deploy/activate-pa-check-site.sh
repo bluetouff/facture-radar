@@ -106,6 +106,7 @@ required = {
     "agents/index.html",
     "api/corpus.json",
     "api/platforms.json",
+    "api/questions.json",
     "llms.txt",
     "llms-full.txt",
     "server.json",
@@ -185,7 +186,7 @@ with open(sys.argv[1], encoding="utf-8") as handle:
 counts = corpus["manifest"]["counts"]
 if counts.get("enrichedPlatforms") != 25:
     raise SystemExit("Nombre de fiches enrichies inattendu")
-if counts.get("questions") != 10:
+if counts.get("questions") != 15:
     raise SystemExit("Nombre de questions inattendu")
 if counts.get("sources") != 94:
     raise SystemExit("Nombre de sources inattendu")
@@ -224,7 +225,19 @@ if [[ "${LIVE_SHA}" != "${EXPECTED_SHA}" ]]; then
 fi
 curl --max-time 10 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" "https://${SITE_HOST}/agents/" >/dev/null
 LIVE_CORPUS="$(curl --max-time 10 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" "https://${SITE_HOST}/api/corpus.json")"
-python3 -c 'import json,sys; data=json.load(sys.stdin); data["manifest"]["counts"].get("enrichedPlatforms")==25 or sys.exit("Nombre de fiches live inattendu")' <<<"${LIVE_CORPUS}"
+python3 -c '
+import json
+import sys
+
+data = json.load(sys.stdin)
+counts = data["manifest"]["counts"]
+if counts.get("enrichedPlatforms") != 25:
+    raise SystemExit("Nombre de fiches live inattendu")
+if counts.get("questions") != 15:
+    raise SystemExit("Nombre de questions live inattendu")
+if counts.get("sources") != 94:
+    raise SystemExit("Nombre de sources live inattendu")
+' <<<"${LIVE_CORPUS}"
 
 trap - ERR INT TERM
 echo "ACTIVATION_OK ${SITE_HOST} ${EXPECTED_SHA}"
