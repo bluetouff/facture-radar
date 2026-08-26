@@ -149,7 +149,7 @@
     price.append(text("small", "Budget publié"), text("strong", result.platform.pricing.value?.label || "Tarif public non trouvé"));
     article.append(price);
 
-    const reasonTitle = text("h4", "Pourquoi elle ressort");
+    const reasonTitle = text("h4", "Ce qui correspond à votre besoin");
     const reasons = document.createElement("ul");
     const usefulReasons = result.reasons.filter((reason) => reason !== "Informations publiques suffisamment détaillées");
     for (const reason of usefulReasons.slice(0, 3)) reasons.append(text("li", reason));
@@ -206,8 +206,8 @@
     const sizeLabel = sizeLabels[input.size] ?? "votre entreprise";
     const priorityLabel = priorityLabels[input.constraint] ?? "critère choisi";
     if (eligibleCount) {
-      resultTitle.textContent = `${eligibleCount} plateforme${eligibleCount > 1 ? "s" : ""} à examiner pour ${sizeLabel}`;
-      resultContext.textContent = `${input.monthlyInvoices.toLocaleString("fr-FR")} facture${input.monthlyInvoices > 1 ? "s" : ""} par mois · priorité : ${priorityLabel}. Les trois fiches les mieux renseignées sont affichées en premier.`;
+      resultTitle.textContent = `${eligibleCount} option${eligibleCount > 1 ? "s" : ""} correspondent à votre situation`;
+      resultContext.textContent = `Pour ${sizeLabel}, ${input.monthlyInvoices.toLocaleString("fr-FR")} facture${input.monthlyInvoices > 1 ? "s" : ""} par mois et votre priorité « ${priorityLabel} ». Voici trois options à regarder d'abord, puis les ${remaining.length} autres plateformes étudiées.`;
     }
     else {
       resultTitle.textContent = "Aucune des 25 fiches ne confirme ce critère";
@@ -217,7 +217,7 @@
     if (otherResults && otherResultsSummary) {
       otherResults.hidden = remaining.length === 0;
       otherResultsSummary.textContent = additionalEligibleCount
-        ? `Voir les ${remaining.length} autres plateformes étudiées, dont ${additionalEligibleCount} correspondent aussi`
+        ? `Voir les ${remaining.length} autres plateformes, dont ${additionalEligibleCount} correspondent aussi`
         : `Voir les ${remaining.length} autres plateformes étudiées`;
     }
     resultsSection.hidden = false;

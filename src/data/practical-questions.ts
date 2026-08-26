@@ -71,7 +71,7 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
       "Aucun OCR ni aucune ressaisie des lignes ne sont imposés.",
       "Le tarif correspondant à votre volume est communiqué.",
     ],
-    nextAction: { label: "Voir le parcours Factur-X complet", href: "/verifier-mon-outil/#facturx-direct" },
+    nextAction: { label: "Contrôler mon fichier sur cet appareil", href: "/verifier-une-facture/" },
     sourceIds: ["dgfip-list-2026-08-19"],
     tone: "blue",
     icon: "invoice",

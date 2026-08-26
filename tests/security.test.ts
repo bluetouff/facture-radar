@@ -31,6 +31,17 @@ test("le parcours facture reste local et n'interprète jamais le contenu saisi",
   assert.doesNotMatch(component, /\.innerHTML\s*=/);
 });
 
+test("la recherche d'accueil reste locale et construit ses résultats sans HTML injecté", async () => {
+  const component = await readFile(new URL("../src/components/UseCaseNavigator.astro", import.meta.url), "utf8");
+  assert.match(component, /textContent = entry\.label/);
+  assert.match(component, /maxlength="120"/);
+  assert.doesNotMatch(component, /<form[^>]*answer-finder/i);
+  assert.doesNotMatch(component, /\bfetch\s*\(/);
+  assert.doesNotMatch(component, /localStorage|sessionStorage|indexedDB/);
+  assert.doesNotMatch(component, /\.innerHTML\s*=/);
+  assert.doesNotMatch(component, /location\.search/);
+});
+
 test("le parcours ne fabrique plus de récapitulatif inutile ni d'identifiant d'entreprise", async () => {
   const component = await readFile(new URL("../src/components/ToolJourney.astro", import.meta.url), "utf8");
   assert.doesNotMatch(component, /name=["'](?:siren|siret|email|telephone|phone)["']/i);

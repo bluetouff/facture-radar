@@ -404,6 +404,11 @@ const quickTools = journeyProfiles.slice(0, 7).map((profile) => profile.toolLabe
     scrollTo(context);
     contextTitle?.focus({ preventScroll: true });
   });
+  const requestedTool = new URLSearchParams(location.hash.slice(1)).get("outil")?.trim();
+  if (input && requestedTool && requestedTool.length <= 80) {
+    input.value = requestedTool;
+    startVerification();
+  }
 </script>
 
 <style>

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PracticalRouter from "../components/PracticalRouter.astro";
+import InterfaceIcon from "../components/InterfaceIcon.astro";
 import ToolJourney from "../components/ToolJourney.astro";
 import { journeyProfiles } from "../data/journey-profiles";
 ---
@@ -12,89 +12,72 @@ import { journeyProfiles } from "../data/journey-profiles";
   <section class="decision-hero">
     <div class="shell decision-hero-layout">
       <div class="decision-copy">
-        <p class="decision-kicker"><span>01</span> question pratique</p>
-        <h1>Quel est votre point de départ&nbsp;?</h1>
-        <p>Entrez le nom de votre outil. La réponse utile arrive avant les détails&nbsp;: le garder, le compléter ou en changer.</p>
+        <p class="decision-kicker"><span>01</span> une question suffit</p>
+        <h1>Pouvez-vous garder votre outil&nbsp;?</h1>
+        <p>Entrez son nom. Vous saurez tout de suite ce qui est déjà couvert et ce qu'il reste à faire.</p>
       </div>
-      <figure class="decision-figure" aria-label="Un parcours en trois étapes : votre situation, les informations publiées, puis l'action utile">
-        <svg viewBox="0 0 560 210" role="img" aria-hidden="true">
-          <path class="figure-path ghost" d="M54 111C124 37 200 34 270 100S417 177 510 82" />
-          <path class="figure-path" d="M54 111C124 37 200 34 270 100S417 177 510 82" />
-          <g class="figure-stop first"><circle cx="54" cy="111" r="26" /><path d="M44 111h20M54 101v20" /><text x="54" y="160">votre situation</text></g>
-          <g class="figure-stop second"><circle cx="270" cy="100" r="26" /><path d="m260 100 7 7 14-16" /><text x="270" y="149">information publiée</text></g>
-          <g class="figure-stop third"><circle cx="510" cy="82" r="26" /><path d="M500 88V76h12M508 72l8 4-8 4" /><text x="510" y="131">action utile</text></g>
-          <text class="figure-index" x="23" y="33">PA CHECK · PARCOURS 01</text>
-        </svg>
-        <figcaption>Une réponse courte d’abord. Le calendrier, le coût et les sources restent disponibles ensuite.</figcaption>
-      </figure>
+      <div class="decision-promise" aria-label="Ce que donne ce parcours">
+        <span><b>01</b><strong>Une conclusion claire</strong><small>Garder, compléter ou changer</small></span>
+        <i></i>
+        <span><b>02</b><strong>La prochaine action</strong><small>Sans formulaire préalable</small></span>
+      </div>
     </div>
   </section>
 
   <section class="shell section existing-tool" id="verifier-logiciel">
-    <header class="section-head">
-      <div>
-        <p class="mono-label">une seule question pour commencer</p>
-        <h2>Pouvez-vous garder votre outil&nbsp;?</h2>
-      </div>
-      <p>Indiquez simplement son nom. PA Check affiche la conclusion et la prochaine action. Les questions sur votre entreprise ne viennent que si vous demandez le calendrier et le coût.</p>
-    </header>
     <ToolJourney />
     <p class="covered-note">{journeyProfiles.length} logiciels ou plateformes disposent d'un parcours détaillé.</p>
   </section>
 
-  <section class="shell section direct-route">
-    <header class="section-head">
-      <div>
-        <p class="mono-label">vous avez déjà un Factur-X</p>
-        <h2>Où envoyer directement votre fichier&nbsp;?</h2>
-      </div>
-      <p>Cette réponse séparée sert aux utilisateurs dont le logiciel produit déjà le bon fichier et qui cherchent seulement une plateforme pour l’acheminer.</p>
+  <section class="shell section next-needs" aria-labelledby="next-needs-title">
+    <header>
+      <p class="mono-label">un autre besoin&nbsp;?</p>
+      <h2 id="next-needs-title">Passez directement à la bonne réponse.</h2>
     </header>
-    <PracticalRouter />
-  </section>
-
-  <section class="shell section">
-    <div class="after-check">
-      <div>
-        <p class="mono-label">vous cherchez une autre solution</p>
-        <h2>Trouvez des plateformes adaptées à votre activité.</h2>
-      </div>
-      <p>Répondez à trois questions sur votre entreprise, votre volume de factures et votre priorité. Les fiches les mieux renseignées apparaissent en premier et toutes les autres restent accessibles.</p>
-      <a class="button secondary" href="/diagnostic/">Trouver des plateformes</a>
+    <div class="next-needs-grid">
+      <a href="/questions/envoyer-factur-x-sans-solution-compatible/">
+        <span><InterfaceIcon name="invoice" /></span>
+        <p><small>Votre fichier est déjà prêt</small><strong>Où envoyer un Factur-X sans intermédiaire&nbsp;?</strong></p>
+        <InterfaceIcon name="arrow" />
+      </a>
+      <a href="/diagnostic/">
+        <span><InterfaceIcon name="target" /></span>
+        <p><small>Vous cherchez une solution</small><strong>Quelles plateformes regarder pour votre activité&nbsp;?</strong></p>
+        <InterfaceIcon name="arrow" />
+      </a>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .decision-hero { position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,.08); padding-block: clamp(2rem,4vw,3.25rem) clamp(2.8rem,5vw,4rem); background: radial-gradient(circle at 80% 15%,rgba(64,91,216,.24),transparent 24rem),radial-gradient(circle at 12% 100%,rgba(22,128,101,.11),transparent 24rem),#111d32; }
+  .decision-hero { position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,.08); padding-block: clamp(1.6rem,3vw,2.5rem); background: radial-gradient(circle at 80% 15%,rgba(64,91,216,.24),transparent 24rem),radial-gradient(circle at 12% 100%,rgba(22,128,101,.11),transparent 24rem),#111d32; }
   .decision-hero::before { position: absolute; top: -11rem; right: -9rem; width: 28rem; height: 28rem; border: 1px solid rgba(155,171,250,.2); border-radius: 50%; box-shadow: 0 0 0 4rem rgba(64,91,216,.045),0 0 0 8rem rgba(22,128,101,.025); content: ""; }
-  .decision-hero-layout { position: relative; display: grid; grid-template-columns: minmax(0,.8fr) minmax(28rem,1.2fr); gap: clamp(2.5rem,7vw,6rem); align-items: center; }
+  .decision-hero-layout { position: relative; display: grid; grid-template-columns: minmax(0,1fr) minmax(25rem,.8fr); gap: clamp(2rem,6vw,5rem); align-items: center; }
   .decision-kicker { display: flex; gap: .65rem; align-items: center; margin: 0; color: #aebaff; font: 680 .76rem/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; }
   .decision-kicker span { display: grid; place-items: center; width: 2rem; height: 2rem; border: 1px solid rgba(173,186,255,.28); border-radius: 50%; background: rgba(255,255,255,.06); }
-  .decision-copy h1 { max-width: 14ch; margin: .9rem 0 0; color: #f7f9ff; font-size: clamp(2.15rem,4vw,3.35rem); font-weight: 480; line-height: 1.04; letter-spacing: -.048em; }
+  .decision-copy h1 { max-width: 18ch; margin: .75rem 0 0; color: #f7f9ff; font-size: clamp(1.9rem,3.4vw,2.8rem); font-weight: 460; line-height: 1.06; letter-spacing: -.044em; }
   .decision-copy > p:last-child { max-width: 42rem; margin: 1rem 0 0; color: rgba(235,240,250,.72); font-size: 1rem; line-height: 1.65; }
-  .decision-figure { min-width: 0; margin: 0; border-left: 1px solid rgba(255,255,255,.11); padding-left: clamp(1.5rem,4vw,3rem); }
-  .decision-figure svg { width: 100%; height: auto; }
-  .figure-path { fill: none; stroke: var(--signal); stroke-width: 1.5; stroke-linecap: round; }
-  .figure-path.ghost { stroke: rgba(135,154,245,.14); stroke-width: 18; }
-  .figure-stop circle { fill: #182742; stroke: rgba(208,217,246,.28); }
-  .figure-stop path { fill: none; stroke: #e8eefb; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .figure-stop.second circle { stroke: rgba(22,128,101,.42); }
-  .figure-stop.second path { stroke: var(--success); }
-  .figure-stop.third circle { stroke: rgba(117,87,214,.4); }
-  .figure-stop.third path { stroke: var(--accent); }
-  .figure-stop text { fill: rgba(235,240,250,.7); font: 560 12px var(--font-sans); text-anchor: middle; }
-  .figure-index { fill: rgba(205,214,238,.55); font: 600 12px var(--font-mono); letter-spacing: .06em; }
-  .decision-figure figcaption { margin-top: -.3rem; color: rgba(222,230,248,.58); font-size: .78rem; text-align: right; }
+  .decision-promise { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; border: 1px solid rgba(255,255,255,.12); border-radius: 1rem; padding: 1rem; background: rgba(255,255,255,.045); }
+  .decision-promise > span { display: grid; }
+  .decision-promise b { color: #9eadff; font: 680 .67rem/1 var(--font-mono); }
+  .decision-promise strong { margin-top: .4rem; color: #f5f8ff; font-size: .84rem; font-weight: 620; }
+  .decision-promise small { margin-top: .18rem; color: rgba(235,240,250,.6); font-size: .74rem; }
+  .decision-promise i { width: 2rem; height: 1px; background: linear-gradient(90deg,#9eadff,#73d8c0); }
   .existing-tool { max-width: 72rem; scroll-margin-top: 5.5rem; }
-  .existing-tool .section-head { margin-bottom: 1.2rem; }
-  .direct-route { max-width: 78rem; }
+  .existing-tool.section { padding-top: clamp(2rem,4vw,3rem); }
   .covered-note { margin: .7rem 0 0; color: var(--muted); font-size: .76rem; }
-  .after-check { display: grid; grid-template-columns: minmax(0, .8fr) minmax(16rem, 1fr) auto; gap: 2rem; align-items: center; border: 1px solid var(--line); border-radius: 1.1rem; padding: 1.4rem; background: rgba(255,255,255,.72); }
-  .after-check h2 { max-width: 15ch; margin: .5rem 0 0; color: var(--bright); font-size: clamp(1.45rem, 2.6vw, 2rem); font-weight: 500; line-height: 1.08; letter-spacing: -.035em; }
-  .after-check > p { color: var(--muted); }
-  .after-check .button { margin: 0; white-space: nowrap; }
-  @media (max-width: 950px) { .decision-hero-layout { grid-template-columns: 1fr; gap: 1.5rem; } .decision-copy h1 { max-width: 18ch; } .decision-figure { border-top: 1px solid var(--line); border-left: 0; padding: 1rem 0 0; } }
-  @media (max-width: 850px) { .after-check { grid-template-columns: 1fr; } }
-  @media (max-width: 620px) { .decision-hero { padding-top: 1.6rem; } .decision-copy h1 { font-size: 2.25rem; } .decision-figure, .direct-route > .section-head { display: none; } }
+  .next-needs { padding-top: 1rem; }
+  .next-needs > header h2 { margin: .45rem 0 0; color: var(--bright); font-size: clamp(1.35rem,2.5vw,1.8rem); font-weight: 490; letter-spacing: -.035em; }
+  .next-needs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: 1rem; }
+  .next-needs-grid > a { display: grid; grid-template-columns: auto 1fr auto; gap: .85rem; align-items: center; border: 1px solid var(--line); border-radius: 1rem; padding: 1rem; background: rgba(255,255,255,.78); color: var(--paper); box-shadow: 0 .6rem 1.8rem rgba(41,57,86,.05); }
+  .next-needs-grid > a:hover { border-color: color-mix(in srgb,var(--signal) 35%,var(--line)); color: var(--paper); }
+  .next-needs-grid > a > span { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: .75rem; background: var(--signal-soft); color: var(--signal); }
+  .next-needs-grid > a > span :global(svg), .next-needs-grid > a > :global(svg) { width: 1rem; height: 1rem; }
+  .next-needs-grid p { display: grid; margin: 0; }
+  .next-needs-grid small { color: var(--muted); font-size: .72rem; }
+  .next-needs-grid strong { margin-top: .15rem; color: var(--bright); font-size: .84rem; font-weight: 640; }
+  .next-needs-grid > a > :global(svg) { color: var(--signal); }
+  @media (max-width: 950px) { .decision-hero-layout { grid-template-columns: 1fr; gap: 1.25rem; } .decision-copy h1 { max-width: 18ch; } }
+  @media (max-width: 700px) { .next-needs-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .decision-promise { display: none; } .decision-copy h1 { font-size: 2.05rem; } .existing-tool.section { padding-top: 1.2rem; } }
 </style>

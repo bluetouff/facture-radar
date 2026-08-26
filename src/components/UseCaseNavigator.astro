@@ -10,9 +10,36 @@ const useCases = [
 
 <section class="usecase-navigator" aria-labelledby="usecase-title">
   <header>
-    <div><small>Choisissez votre situation</small><h2 id="usecase-title">Quelle question vous amène&nbsp;?</h2></div>
-    <span><i></i> 3 réponses sans compte</span>
+    <div><small>Décrivez simplement votre besoin</small><h2 id="usecase-title">Quelle question vous amène&nbsp;?</h2></div>
+    <span><i></i> réponse locale, sans compte</span>
   </header>
+  <div class="answer-finder" id="answer-finder" role="search">
+    <label for="answer-query">Écrivez quelques mots ou le nom de votre outil</label>
+    <div class="answer-search-row">
+      <span class="answer-search-icon"><InterfaceIcon name="search" /></span>
+      <input
+        id="answer-query"
+        name="question"
+        type="search"
+        maxlength="120"
+        autocomplete="off"
+        spellcheck="false"
+        aria-controls="answer-suggestions"
+        aria-expanded="false"
+        placeholder="Ex. Factur-X sans intermédiaire, Tiime, offre gratuite…"
+      />
+      <button type="button" id="answer-submit">Trouver la réponse <InterfaceIcon name="arrow" /></button>
+    </div>
+    <div class="answer-examples" aria-label="Exemples de recherches">
+      <span>Essayez</span>
+      <button type="button" data-answer-example="factur-x sans intermédiaire">Factur-X déjà prêt</button>
+      <button type="button" data-answer-example="garder mon logiciel">Garder mon outil</button>
+      <button type="button" data-answer-example="gratuite sans compte bancaire">Gratuite sans compte bancaire</button>
+    </div>
+    <div class="answer-suggestions" id="answer-suggestions" role="listbox" aria-label="Réponses proposées" hidden></div>
+    <p class="answer-empty" id="answer-empty" hidden>Cette formulation ne correspond pas encore à une réponse directe. Consultez les questions pratiques ou utilisez l'un des trois parcours ci-dessous.</p>
+  </div>
+  <p class="shortcut-label">Ou choisissez votre situation</p>
   <div class="usecase-grid">
     {useCases.map(({ href, label, detail, icon, tone }, index) => (
       <a class={`usecase tone-${tone}`} href={href}>
@@ -26,6 +53,102 @@ const useCases = [
   <a class="question-library-link" href="/questions/"><span>Voir les 10 questions pratiques</span><InterfaceIcon name="arrow" /></a>
 </section>
 
+<script>
+  import { findAnswers, type FinderEntry } from "../lib/answer-finder";
+
+  const input = document.querySelector<HTMLInputElement>("#answer-query");
+  const submit = document.querySelector<HTMLButtonElement>("#answer-submit");
+  const suggestions = document.querySelector<HTMLElement>("#answer-suggestions");
+  const empty = document.querySelector<HTMLElement>("#answer-empty");
+  const exampleButtons = document.querySelectorAll<HTMLButtonElement>("[data-answer-example]");
+  let visibleEntries: FinderEntry[] = [];
+
+  const closeSuggestions = () => {
+    if (!suggestions || !input) return;
+    suggestions.hidden = true;
+    input.setAttribute("aria-expanded", "false");
+  };
+
+  const render = () => {
+    if (!input || !suggestions || !empty) return;
+    suggestions.replaceChildren();
+    empty.hidden = true;
+    if (input.value.trim().length < 2) {
+      visibleEntries = [];
+      closeSuggestions();
+      return;
+    }
+    visibleEntries = findAnswers(input.value);
+    if (!visibleEntries.length) {
+      closeSuggestions();
+      empty.hidden = false;
+      return;
+    }
+    suggestions.replaceChildren(...visibleEntries.map((entry, index) => {
+      const link = document.createElement("a");
+      link.href = entry.href;
+      link.setAttribute("role", "option");
+      link.dataset.index = String(index);
+      const copy = document.createElement("span");
+      const kind = document.createElement("small");
+      const label = document.createElement("strong");
+      const detail = document.createElement("p");
+      kind.textContent = entry.kind;
+      label.textContent = entry.label;
+      detail.textContent = entry.detail;
+      copy.append(kind, label, detail);
+      const arrow = document.createElement("b");
+      arrow.setAttribute("aria-hidden", "true");
+      arrow.textContent = "→";
+      link.append(copy, arrow);
+      return link;
+    }));
+    suggestions.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+  };
+
+  input?.addEventListener("input", render);
+  input?.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeSuggestions();
+    if (event.key === "Enter") {
+      event.preventDefault();
+      if (visibleEntries[0]) location.assign(visibleEntries[0].href);
+      else render();
+    }
+    if (event.key === "ArrowDown" && !suggestions?.hidden) {
+      event.preventDefault();
+      suggestions?.querySelector<HTMLAnchorElement>("a")?.focus();
+    }
+  });
+  suggestions?.addEventListener("keydown", (event) => {
+    const links = [...suggestions.querySelectorAll<HTMLAnchorElement>("a")];
+    const current = links.indexOf(document.activeElement as HTMLAnchorElement);
+    if (event.key === "ArrowDown" && current < links.length - 1) {
+      event.preventDefault();
+      links[current + 1]?.focus();
+    }
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      if (current <= 0) input?.focus();
+      else links[current - 1]?.focus();
+    }
+    if (event.key === "Escape") {
+      closeSuggestions();
+      input?.focus();
+    }
+  });
+  submit?.addEventListener("click", () => {
+    if (visibleEntries[0]) location.assign(visibleEntries[0].href);
+    else render();
+  });
+  exampleButtons.forEach((button) => button.addEventListener("click", () => {
+    if (!input) return;
+    input.value = button.dataset.answerExample ?? "";
+    input.focus();
+    render();
+  }));
+</script>
+
 <style>
   .usecase-navigator { overflow: hidden; border: 1px solid rgba(187,199,255,.2); border-radius: 1.35rem; background: rgba(249,251,255,.97); color: var(--paper); box-shadow: 0 1.6rem 4rem rgba(2,8,25,.24); }
   header { display: flex; justify-content: space-between; gap: 1rem; align-items: center; border-bottom: 1px solid var(--line); padding: 1rem 1.1rem; background: linear-gradient(115deg,#fff,var(--signal-soft)); }
@@ -34,6 +157,31 @@ const useCases = [
   header h2 { margin: .12rem 0 0; color: var(--bright); font-size: 1.08rem; letter-spacing: -.025em; }
   header > span { display: inline-flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .76rem; font-weight: 620; white-space: nowrap; }
   header i { width: .5rem; height: .5rem; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 .2rem var(--success-soft); }
+  .answer-finder { position: relative; border-bottom: 1px solid var(--line); padding: .95rem 1rem 1rem; background: #fff; }
+  .answer-finder > label { display: block; margin-bottom: .5rem; color: var(--paper); font-size: .78rem; font-weight: 680; }
+  .answer-search-row { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; overflow: hidden; border: 1px solid color-mix(in srgb,var(--signal) 42%,var(--line)); border-radius: .85rem; background: var(--surface-2); box-shadow: 0 0 0 3px color-mix(in srgb,var(--signal) 5%,transparent); }
+  .answer-search-row:focus-within { border-color: var(--signal); box-shadow: 0 0 0 3px color-mix(in srgb,var(--signal) 14%,transparent); }
+  .answer-search-icon { display: grid; place-items: center; width: 2.8rem; color: var(--signal); }
+  .answer-search-icon :global(svg) { width: 1rem; height: 1rem; }
+  .answer-search-row input { min-width: 0; min-height: 3rem; border: 0; outline: 0; background: transparent; color: var(--bright); font: 560 .87rem/1.3 var(--font-sans); }
+  .answer-search-row input::placeholder { color: color-mix(in srgb,var(--muted) 82%,transparent); }
+  .answer-search-row button { display: inline-flex; gap: .45rem; align-items: center; min-height: 2.45rem; margin-right: .3rem; border: 0; border-radius: .65rem; padding: .65rem .8rem; background: var(--signal); color: #fff; cursor: pointer; font: 680 .75rem/1 var(--font-sans); }
+  .answer-search-row button :global(svg) { width: .85rem; }
+  .answer-examples { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; margin-top: .55rem; }
+  .answer-examples span { color: var(--muted); font-size: .7rem; }
+  .answer-examples button { border: 0; border-radius: 999px; padding: .28rem .48rem; background: var(--surface-2); color: var(--signal); cursor: pointer; font: 630 .68rem/1 var(--font-sans); }
+  .answer-examples button:hover { background: var(--signal-soft); }
+  .answer-suggestions { position: relative; z-index: 8; overflow: hidden; margin-top: .65rem; border: 1px solid var(--line); border-radius: .9rem; background: #fff; box-shadow: 0 .8rem 2rem rgba(17,29,50,.12); }
+  .answer-suggestions :global(a) { display: grid; grid-template-columns: 1fr auto; gap: .8rem; align-items: center; border-top: 1px solid var(--line); padding: .72rem .8rem; color: var(--paper); }
+  .answer-suggestions :global(a:first-child) { border-top: 0; }
+  .answer-suggestions :global(a:hover), .answer-suggestions :global(a:focus) { outline: 0; background: var(--signal-soft); color: var(--paper); }
+  .answer-suggestions :global(a > span) { display: grid; min-width: 0; }
+  .answer-suggestions :global(small) { display: block; color: var(--signal); font: 680 .64rem/1 var(--font-mono); text-transform: uppercase; }
+  .answer-suggestions :global(strong) { display: block; margin-top: .18rem; color: var(--bright); font-size: .82rem; }
+  .answer-suggestions :global(p) { overflow: hidden; margin: .12rem 0 0; color: var(--muted); font-size: .72rem; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
+  .answer-suggestions :global(b) { color: var(--signal); font-size: 1rem; }
+  .answer-empty { margin: .65rem 0 0; border-left: 2px solid var(--amber); padding-left: .65rem; color: var(--muted); font-size: .74rem; line-height: 1.5; }
+  .shortcut-label { margin: .75rem .9rem 0; color: var(--muted); font-size: .7rem; font-weight: 680; text-transform: uppercase; letter-spacing: .04em; }
   .usecase-grid { display: grid; gap: .55rem; padding: .75rem; }
   .usecase { --case-tone: var(--signal); --case-soft: var(--signal-soft); display: grid; min-width: 0; grid-template-columns: auto auto 1fr auto; gap: .75rem; align-items: center; border: 1px solid var(--line); border-radius: .9rem; padding: .85rem; background: #fff; color: var(--paper); transition: border-color 160ms ease,translate 160ms ease,box-shadow 160ms ease; }
   .usecase.tone-violet { --case-tone: #7256d7; --case-soft: #f2efff; }
@@ -49,5 +197,5 @@ const useCases = [
   .usecase > :global(svg) { width: .85rem; height: .85rem; color: var(--case-tone); }
   .question-library-link { display: flex; justify-content: space-between; gap: 1rem; align-items: center; border-top: 1px solid var(--line); padding: .8rem 1rem; background: var(--surface-2); color: var(--signal); font-size: .76rem; font-weight: 710; }
   .question-library-link :global(svg) { width: .85rem; }
-  @media (max-width: 620px) { header { align-items: flex-start; } header > span { display: none; } }
+  @media (max-width: 620px) { header { align-items: flex-start; } header > span { display: none; } .answer-search-row { grid-template-columns: auto minmax(0,1fr); } .answer-search-row button { grid-column: 1 / -1; justify-content: center; width: calc(100% - .6rem); margin: .3rem; } .answer-examples { display: none; } .answer-suggestions :global(p) { white-space: normal; } }
 </style>
