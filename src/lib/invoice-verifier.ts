@@ -132,7 +132,8 @@ function vatIdentifier(party: unknown): string | null {
 function profileLabel(guideline: string | null): string | null {
   if (!guideline) return null;
   const normalized = guideline.toLowerCase();
-  if (!normalized.includes("factur-x.eu")) return null;
+  if (normalized === "urn:cen.eu:en16931:2017") return "EN 16931";
+  if (!normalized.includes("factur-x.eu") && !normalized.includes("zugferd.de")) return null;
   if (normalized.includes("extended")) return "EXTENDED";
   if (normalized.includes("en16931")) return "EN 16931";
   if (normalized.includes("basicwl")) return "BASIC WL";

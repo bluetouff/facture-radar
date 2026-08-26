@@ -53,9 +53,9 @@ import { platforms } from "../data/platforms";
       <p>Un parcours documenté ne garantit pas que chaque fichier sera accepté. Le test indiqué dans la carte sert à contrôler le dernier mètre : reprise des lignes, conservation du profil Factur-X, absence de ressaisie et émission vers la plateforme du destinataire.</p>
 
       <h2>Comprendre PA Check Lab</h2>
-      <p>Le <a href="/lab/">Lab</a> publie trois documents synthétiques, leur version et leur empreinte SHA-256. Ils couvrent une prestation simple, deux taux de TVA et un avoir. Ils utilisent des identifiants fictifs et doivent uniquement être rejoués dans un bac à sable ou un compte de démonstration.</p>
-      <p>Chaque plateforme passe le même protocole : import du fichier, lecture des données, conservation du XML, émission dans le circuit PA et retour du statut. Les résultats distinguent quatre états : testé, échec, partiellement testé et non testé.</p>
-      <p>Une documentation éditeur peut préparer le test mais ne produit jamais un résultat observé. Le sceau « Testé par PA Check » exige les trois cas, les cinq étapes, une date, un environnement identifié et des preuves techniques pour chaque étape. Une réponse de la plateforme est publiée séparément et ne modifie jamais automatiquement la conclusion.</p>
+      <p>Le <a href="/lab/">Lab</a> utilise trois factures fictives : une prestation simple, une facture avec deux taux de TVA et un avoir. Elles sont réservées aux espaces de démonstration. Chacun peut les télécharger.</p>
+      <p>Nous vérifions que la plateforme accepte le fichier, reprend correctement ses données, peut l’envoyer dans son circuit de test et affiche clairement son état. Le visiteur voit d’abord l’une de ces réponses : oui dans notre test, non dans notre test, oui avec une limite ou pas encore vérifié.</p>
+      <p>Une plateforme peut fournir l’accès nécessaire et répondre à nos observations. PA Check réalise l’essai et publie la date, la limite éventuelle et sa conclusion.</p>
 
       <h2>Les vingt-cinq plateformes étudiées</h2>
       <p>La liste officielle comptait 148 plateformes approuvées au 19 août 2026. Elle donne leur statut, mais ne détaille pas leurs tarifs, leurs intégrations ou leurs conditions de sortie.</p>
@@ -81,9 +81,9 @@ import { platforms } from "../data/platforms";
         <div><dt>Fichier envoyé</dt><dd>Jamais</dd></div>
         <div><dt>Contrôle Factur-X</dt><dd>Local</dd></div>
         <div><dt>Score commercial</dt><dd>Aucun</dd></div>
-        <div><dt>Résultat Lab déduit</dt><dd>Jamais</dd></div>
+        <div><dt>Réponse positive sans essai</dt><dd>Jamais</dd></div>
         <div><dt>Information manquante</dt><dd>Signalée</dd></div>
-        <div><dt>Dernière mise à jour</dt><dd>25 août 2026</dd></div>
+        <div><dt>Dernière mise à jour</dt><dd>26 août 2026</dd></div>
       </dl>
       <a class="button secondary" href="/api/platforms.json">Télécharger les données</a>
     </aside>

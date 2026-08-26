@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
+import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { lab, qualifiesForLabSeal } from "../src/data/lab.ts";
 import { labSchema } from "../src/data/schema.ts";
 import { analyzeFacturXXml } from "../src/lib/invoice-verifier.ts";
@@ -24,6 +25,47 @@ test("chaque fixture publique correspond à son empreinte et à son résultat an
     assert.equal(analysis.metadata.lineCount, testCase.expected.lineCount);
     assert.equal(analysis.metadata.grandTotal, testCase.expected.grandTotal);
     assert.equal(analysis.metadata.currency, testCase.expected.currency);
+  }
+});
+
+test("le PDF Factur-X public contient le XML attendu et reste lisible localement", async () => {
+  const testCase = lab.cases[0];
+  assert.ok("facturXHref" in testCase);
+  const pdf = await readFile(new URL(`../public${testCase.facturXHref}`, import.meta.url));
+  assert.equal(pdf.byteLength, testCase.facturXBytes);
+  assert.equal(createHash("sha256").update(pdf).digest("hex"), testCase.facturXSha256);
+
+  const loadingTask = getDocument({
+    data: new Uint8Array(pdf),
+    disableFontFace: true,
+    useSystemFonts: false,
+    useWasm: false,
+    enableXfa: false,
+    stopAtErrors: true,
+    verbosity: 0,
+  });
+  try {
+    const document = await loadingTask.promise;
+    const attachments = await document.getAttachments();
+    assert.ok(attachments instanceof Map);
+    assert.equal(attachments.get("factur-x.xml")?.filename, "factur-x.xml");
+    const embedded = await document.getAttachmentContent("factur-x.xml");
+    assert.ok(embedded instanceof Uint8Array);
+    assert.equal(createHash("sha256").update(embedded).digest("hex"), testCase.sha256);
+    const analysis = analyzeFacturXXml(new TextDecoder().decode(embedded), "pdf");
+    assert.equal(analysis.status, "usable");
+    assert.equal(analysis.metadata.profile, "EN 16931");
+    assert.equal(analysis.metadata.invoiceNumber, testCase.expected.invoiceNumber);
+    const page = await document.getPage(1);
+    const visible = (await page.getTextContent()).items
+      .map((item) => "str" in item ? item.str : "")
+      .join(" ");
+    assert.match(visible, /ATELIER TEST PA CHECK/);
+    assert.match(visible, /ENTREPRISE DEMO HORIZON/);
+    assert.match(visible, /LAB-FX-EN16931-001/);
+    assert.match(visible, /120,00 EUR/);
+  } finally {
+    await loadingTask.destroy();
   }
 });
 

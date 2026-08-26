@@ -111,6 +111,10 @@ export const labSchema = z.object({
     fileVersion: z.string().regex(/^\d+\.\d+\.\d+$/),
     sha256: z.string().regex(/^[a-f0-9]{64}$/),
     bytes: z.number().int().positive(),
+    facturXHref: z.string().regex(/^\/lab\/fixtures\/[a-z0-9-]+\.pdf$/).optional(),
+    facturXSha256: z.string().regex(/^[a-f0-9]{64}$/).optional(),
+    facturXBytes: z.number().int().positive().optional(),
+    facturXValidation: z.literal("passed").optional(),
     documentTypeCode: z.enum(["380", "381"]),
     expected: z.object({
       invoiceNumber: z.string().min(1).max(80),

@@ -114,15 +114,15 @@ const spotlights = spotlightSlugs
 
   <section class="shell lab-callout" aria-labelledby="lab-callout-title">
     <div class="lab-callout-copy">
-      <p class="mono-label">PA Check Lab · protocole public</p>
-      <h2 id="lab-callout-title">La documentation dit ce qui est prévu. Le Lab montrera ce qui passe vraiment.</h2>
-      <p>Trois factures synthétiques, cinq étapes identiques et une règle simple : tant que PA Check ne l’a pas observé de bout en bout, le résultat reste « non testé ».</p>
-      <a href="/lab/">Voir les cas et l’état des tests <InterfaceIcon name="arrow" /></a>
+      <p class="mono-label">PA Check Lab · tests en conditions réelles</p>
+      <h2 id="lab-callout-title">Est-ce que votre facture passe vraiment&nbsp;?</h2>
+      <p>Nous essayons les mêmes trois factures chez chaque plateforme. La réponse tient en une phrase, avec la limite éventuelle et l’action utile.</p>
+      <a href="/lab/">Voir les réponses actuelles <InterfaceIcon name="arrow" /></a>
     </div>
     <div class="lab-callout-visual" aria-hidden="true">
       <div class="lab-files"><span><b>01</b><i></i><i></i></span><span><b>02</b><i></i><i></i></span><span><b>03</b><i></i><i></i></span></div>
-      <div class="lab-sequence"><span>IMPORT</span><i></i><span>LECTURE</span><i></i><span>INTÉGRITÉ</span><i></i><span>ÉMISSION</span><i></i><span>STATUT</span></div>
-      <strong><InterfaceIcon name="lock" /> 0 résultat déduit</strong>
+      <div class="lab-sequence"><span>DÉPOSÉ</span><i></i><span>LU</span><i></i><span>ENVOYÉ</span></div>
+      <strong><InterfaceIcon name="lab" /> Premier essai en préparation</strong>
     </div>
   </section>
 
@@ -229,7 +229,7 @@ const spotlights = spotlightSlugs
   .lab-files > span:nth-child(3) { height: 4.65rem; color: #e5b366; }
   .lab-files b { font: 690 .68rem/1 var(--font-mono); }
   .lab-files i { height: .25rem; border-radius: 999px; background: currentColor; opacity: .22; }
-  .lab-sequence { display: grid; grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr auto; gap: .35rem; align-items: center; margin-top: 1rem; color: rgba(255,255,255,.42); font: 630 .68rem/1 var(--font-mono); }
+  .lab-sequence { display: grid; grid-template-columns: auto 1fr auto 1fr auto; gap: .35rem; align-items: center; margin-top: 1rem; color: rgba(255,255,255,.42); font: 630 .68rem/1 var(--font-mono); }
   .lab-sequence i { height: 1px; background: rgba(126,224,201,.24); }
   .lab-callout-visual > strong { position: absolute; top: .8rem; right: .8rem; display: inline-flex; gap: .38rem; align-items: center; border: 1px solid rgba(229,179,102,.25); border-radius: 999px; padding: .38rem .55rem; color: #e7bd79; font-size: .68rem; font-weight: 670; }
   .lab-callout-visual > strong :global(svg) { width: .82rem; height: .82rem; }
@@ -280,6 +280,6 @@ const spotlights = spotlightSlugs
   @media (min-width: 901px) { .hero-guide { grid-template-columns: repeat(3, 1fr); } .hero-guide > div { grid-template-columns: 1fr; align-items: start; } }
   @media (max-width: 900px) { .story-layout { grid-template-columns: 1fr; } }
   @media (max-width: 820px) { .lab-callout { grid-template-columns: 1fr; } }
-  @media (max-width: 700px) { .invoice-callout { grid-template-columns: 1fr; } .invoice-visual { min-height: 15rem; } .invoice-sheet { scale: .88; } .lab-sequence { overflow-x: auto; grid-template-columns: repeat(9,max-content); padding-bottom: .35rem; } }
+  @media (max-width: 700px) { .invoice-callout { grid-template-columns: 1fr; } .invoice-visual { min-height: 15rem; } .invoice-sheet { scale: .88; } .lab-sequence { overflow-x: auto; grid-template-columns: repeat(5,max-content); padding-bottom: .35rem; } }
   @media (max-width: 620px) { .hero-stage { border-radius: 0 0 1.5rem 1.5rem; } .stats-shell { margin-top: -1rem; } .story-stage { padding-top: 3rem; } .story-chapters > header { display: grid; } .story-bridge { grid-template-columns: 1fr; } .story-bridge i { width: 1px; height: .8rem; margin-inline: auto; } .pa-contribution { grid-template-columns: auto 1fr; } .pa-contribution > :global(svg) { display: none; } .dossier-grid { grid-template-columns: 1fr; } }
 </style>

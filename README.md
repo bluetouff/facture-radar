@@ -8,7 +8,7 @@ L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte et san
 
 - vingt-cinq parcours détaillés, avec circuit, échéances, coût minimum connu, actions et sources consultables ;
 - un prévol local des PDF Factur-X et XML CII, avec contrôles structurés et trois actions maximum ;
-- un Lab reproductible avec trois factures synthétiques, cinq étapes communes et une séparation stricte entre documentation et résultats observés ;
+- un Lab qui répond simplement si le parcours fonctionne, avec trois factures synthétiques identiques pour chaque plateforme ;
 - un traitement distinct des offres sur devis, sans faux zéro ni projection lorsque le minimum public manque ;
 - trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
 - 25 fiches détaillées, chacune reliée à des sources publiques et datées ;
@@ -35,6 +35,7 @@ Commandes utiles :
 ```bash
 npm run check
 npm test
+npm run lab:b2brouter
 npm run data:refresh -- /chemin/liste-approuvees.xlsx /chemin/liste-attente.xlsx
 ```
 
@@ -63,9 +64,30 @@ Le résultat est un prévol technique. Il ne certifie pas la conformité juridiq
 
 ## PA Check Lab
 
-Le contrat du Lab vit dans `src/data/lab.ts`. Les trois jeux de test publics sont dans `public/lab/fixtures/`. Le validateur recalcule leur SHA-256 et leur taille, exécute le prévol local et interdit qu'une plateforme non testée porte une observation ou un sceau.
+Le contrat du Lab vit dans `src/data/lab.ts`. Les trois jeux de test publics sont dans `public/lab/fixtures/`. Le premier cas comprend un PDF Factur-X EN16931 avec son XML embarqué ; les deux autres restent des XML CII ciblés. Le validateur recalcule leur SHA-256 et leur taille, exécute le prévol local et interdit qu'une plateforme non testée porte une observation ou un résultat positif.
 
-Le sceau « Testé par PA Check » exige les trois cas et les cinq étapes entièrement observés, avec une date, un environnement identifié et une preuve pour chaque étape. Les fichiers utilisent exclusivement des identifiants fictifs et ne doivent jamais être envoyés dans un circuit de production.
+Le PDF synthétique est reproductible avec deux dépendances Python isolées :
+
+```bash
+python3 -m pip install -r scripts/requirements-facturx.txt
+python3 scripts/build-facturx-fixture.py \
+  --xml public/lab/fixtures/service-simple-en16931-v2.xml \
+  --output public/lab/fixtures/service-simple-facturx-en16931-v2.pdf
+```
+
+Après régénération, la taille et l'empreinte affichées par le script doivent être reportées dans `src/data/lab.ts`. La validation normative indépendante se fait avec Mustangproject 2.24.0 ou plus récent, compatible Factur-X 1.09 :
+
+```bash
+java -jar "$MUSTANG_CLI_JAR" --action validate \
+  --source public/lab/fixtures/service-simple-facturx-en16931-v2.pdf \
+  --no-notices --disable-file-logging
+```
+
+Le rapport attendu doit indiquer à la fois `PDF:valid`, `XML:valid` et une liste d'erreurs vide. Le JAR reste un outil local et n'est ni distribué dans le dépôt, ni utilisé par le site public.
+
+La commande `npm run lab:b2brouter` vérifie uniquement les fichiers locaux et n'effectue aucun appel réseau. L'import dans la sandbox exige l'option `-- --execute-import` ainsi que `B2BROUTER_SANDBOX_API_KEY` et `B2BROUTER_SANDBOX_ACCOUNT_ID` dans l'environnement local. La clé est refusée si elle ne commence pas par `test_`. Elle ne doit être passée ni en argument, ni dans un fichier suivi par Git, ni dans une sortie de commande partagée.
+
+La première campagne n'importe qu'un seul fichier : le cas Factur-X « Prestation simple ». Le runner agit sans redirection, sans nouvel essai automatique et avec `send_after_import=false`. Il ne contient aucune route d'envoi. Les deux autres cas restent locaux jusqu'à validation de cette première étape. Tous les fichiers utilisent exclusivement des identifiants fictifs et ne doivent jamais être envoyés dans un circuit de production.
 
 ## Limites
 

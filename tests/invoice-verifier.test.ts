@@ -70,6 +70,12 @@ test("un Factur-X CII cohérent produit un prévol exploitable", () => {
   assert.ok(analysis.actions.length <= 3);
 });
 
+test("l’identifiant officiel du profil EN16931 est reconnu", () => {
+  const analysis = analyzeFacturXXml(validInvoice().replace("urn:factur-x.eu:1p0:en16931", "urn:cen.eu:en16931:2017"));
+  assert.equal(analysis.status, "usable");
+  assert.equal(analysis.metadata.profile, "EN 16931");
+});
+
 test("les données manquantes et un total incohérent deviennent des actions prioritaires", () => {
   const analysis = analyzeFacturXXml(validInvoice({ grandTotal: "121.00", buyerId: "", buyerVat: "" }));
   assert.equal(analysis.status, "action");

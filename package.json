@@ -9,7 +9,8 @@
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "build": "npm run check && npm test && astro build",
     "preview": "astro preview",
-    "data:refresh": "node --experimental-strip-types scripts/import-official-lists.mjs"
+    "data:refresh": "node --experimental-strip-types scripts/import-official-lists.mjs",
+    "lab:b2brouter": "node --experimental-strip-types scripts/run-b2brouter-lab.ts"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",

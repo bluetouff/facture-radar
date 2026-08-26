@@ -104,13 +104,29 @@ test("le formulaire PA prépare un message local sans endpoint ni publication au
 test("le Lab n'ajoute aucun dépôt de fichier, champ libre ou publication automatique", async () => {
   const page = await readFile(new URL("../src/pages/lab.astro", import.meta.url), "utf8");
   const contract = await readFile(new URL("../src/data/lab.ts", import.meta.url), "utf8");
-  assert.match(page, /Aucun résultat ne sera déduit de la documentation seule/);
-  assert.match(page, /Aucune contribution ne modifie automatiquement cette page/);
+  assert.match(page, /Pas encore vérifié/);
+  assert.match(page, /PA Check conduit le test et publie le résultat obtenu/);
   assert.doesNotMatch(page, /<(?:form|input|textarea|select)\b/i);
   assert.doesNotMatch(`${page}\n${contract}`, /\bfetch\s*\(/);
   assert.doesNotMatch(`${page}\n${contract}`, /localStorage|sessionStorage|indexedDB/);
   assert.doesNotMatch(`${page}\n${contract}`, /\.innerHTML\s*=/);
   assert.doesNotMatch(`${page}\n${contract}`, /location\.(?:search|hash)/);
+});
+
+test("le runner B2Brouter reste local, sans secret public ni route d’envoi", async () => {
+  const runner = await readFile(new URL("../scripts/run-b2brouter-lab.ts", import.meta.url), "utf8");
+  const client = await readFile(new URL("../src/lib/b2brouter-lab.ts", import.meta.url), "utf8");
+  const publicPage = await readFile(new URL("../src/pages/lab.astro", import.meta.url), "utf8");
+  const homePage = await readFile(new URL("../src/pages/index.astro", import.meta.url), "utf8");
+
+  assert.match(runner, /process\.env/);
+  assert.match(client, /apiKey\.startsWith\("test_"\)/);
+  assert.match(client, /redirect: "error"/);
+  assert.match(client, /send_after_import", "false"/);
+  assert.match(runner, /new SandboxRequestBudget\(1\)/);
+  assert.match(runner, /fixture\.id === "service-simple"/);
+  assert.doesNotMatch(`${runner}\n${client}`, /send_invoice|send_after_import", "true"/);
+  assert.doesNotMatch(`${publicPage}\n${homePage}`, /b2brouter-lab|B2BROUTER_SANDBOX_API_KEY|B2BROUTER_SANDBOX_ACCOUNT_ID|X-B2B-API-Key/);
 });
 
 test("les jeux du Lab sont locaux, synthétiques et réservés au test", async () => {

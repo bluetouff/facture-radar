@@ -6,297 +6,283 @@ import sourcesData from "../data/sources.json";
 
 const sources = new Map(sourcesData.map((source) => [source.id, source]));
 const statusLabels = {
-  tested: "Testé",
-  failed: "Échec",
-  partial: "Partiellement testé",
-  not_tested: "Non testé",
+  tested: "Oui, dans notre test",
+  failed: "Non, dans notre test",
+  partial: "Oui, avec une limite",
+  not_tested: "Pas encore vérifié",
 } as const;
+const statusIcons = {
+  tested: "check",
+  failed: "alert",
+  partial: "check",
+  not_tested: "question",
+} as const;
+const displayedPlatforms = [...lab.platforms].sort((left, right) => Number(right.slug === "b2brouter") - Number(left.slug === "b2brouter"));
 ---
 
 <BaseLayout
-  title="PA Check Lab | Tests publics des plateformes agréées"
-  description="Trois factures synthétiques, un protocole public et des résultats observés pour vérifier concrètement le parcours des plateformes agréées."
+  title="PA Check Lab | Est-ce que votre facture passe vraiment ?"
+  description="PA Check essaie les mêmes factures auprès des plateformes et publie une réponse courte, la limite rencontrée et l’action utile."
 >
   <section class="lab-hero">
     <div class="shell lab-hero-grid">
       <div class="lab-hero-copy">
-        <span class="lab-label"><InterfaceIcon name="lab" /> PA Check Lab · protocole public {lab.version}</span>
-        <h1>Trois fichiers. Le même test. <strong>Des réponses comparables.</strong></h1>
-        <p>Les pages produit disent ce qu’une plateforme prévoit. Le Lab montre ce que PA Check a réellement pu observer, étape après étape, avec des documents synthétiques que chacun peut télécharger.</p>
-        <div class="lab-hero-actions">
-          <a class="button lab-button" href="#kit">Télécharger le kit <InterfaceIcon name="download" /></a>
-          <a href="#resultats">Voir l’état des tests</a>
-        </div>
+        <span class="lab-label"><InterfaceIcon name="lab" /> Tests en conditions réelles</span>
+        <h1>Votre facture <span>passe-t-elle</span> <em>vraiment&nbsp;?</em></h1>
+        <p>Nous essayons les mêmes factures chez chaque plateforme. Vous obtenez une réponse courte, la limite rencontrée et ce qu’il faut faire ensuite.</p>
+        <a class="button lab-button" href="#resultats">Voir les réponses actuelles <InterfaceIcon name="arrow" /></a>
       </div>
-      <div class="lab-console" aria-label="État actuel du Lab">
-        <header><span>RUN / {lab.version}</span><small>25.08.2026</small></header>
-        <div class="console-gauge" aria-hidden="true">
-          <span>OBSERVÉ</span>
-          <strong>0<small>/3</small></strong>
-          <i></i>
+
+      <aside class="current-test" aria-label="Premier test en préparation">
+        <div class="test-illustration" aria-hidden="true">
+          <div class="mini-file"><span>PDF</span><i></i><i></i><strong>€</strong></div>
+          <div class="test-path"><i></i><i></i><i></i></div>
+          <div class="arrival"><InterfaceIcon name="check" /></div>
         </div>
-        <dl>
-          <div><dt>Cas publics</dt><dd>{lab.cases.length}</dd></div>
-          <div><dt>Étapes identiques</dt><dd>{lab.protocol.length}</dd></div>
-          <div><dt>Sceau accordé</dt><dd>0</dd></div>
-        </dl>
-        <p><InterfaceIcon name="lock" /> Aucun résultat ne sera déduit de la documentation seule.</p>
-      </div>
-    </div>
-    <div class="lab-ruler" aria-hidden="true"><span>01</span><i></i><span>02</span><i></i><span>03</span><i></i><span>04</span><i></i><span>05</span></div>
-  </section>
-
-  <section class="shell lab-intro" aria-labelledby="lab-intro-title">
-    <div>
-      <p class="mono-label">le contrat public</p>
-      <h2 id="lab-intro-title">On ne confond plus une fonction annoncée avec un parcours qui marche.</h2>
-    </div>
-    <p>Chaque plateforme reçoit les mêmes fichiers et passe les mêmes cinq contrôles. Une source éditeur reste une déclaration documentée. Un résultat du Lab exige une exécution observable. Cette différence est visible partout, sans score ni podium.</p>
-  </section>
-
-  <section class="shell kit-section" id="kit" aria-labelledby="kit-title">
-    <header class="lab-section-head">
-      <div><p class="mono-label">kit reproductible</p><h2 id="kit-title">Trois situations qui révèlent les vrais écarts.</h2></div>
-      <p>Les fichiers ne contiennent aucune entreprise réelle. Le SHA-256 permet de vérifier que le document rejoué est exactement celui publié ici.</p>
-    </header>
-    <div class="fixture-grid">
-      {lab.cases.map((testCase, index) => (
-        <article class={`fixture-card fixture-${index + 1}`}>
-          <div class="fixture-topline"><span>0{index + 1}</span><b>PRÉVOL PA CHECK RÉUSSI</b></div>
-          <div class="fixture-icon" aria-hidden="true">
-            <span>XML</span><i></i><i></i><i></i><strong>{testCase.documentTypeCode}</strong>
-          </div>
-          <h3>{testCase.title}</h3>
-          <p>{testCase.purpose}</p>
-          <dl class="fixture-facts">
-            <div><dt>Lignes</dt><dd>{testCase.expected.lineCount}</dd></div>
-            <div><dt>TVA</dt><dd>{testCase.expected.vatRates.map((rate) => `${rate} %`).join(" + ")}</dd></div>
-            <div><dt>Total</dt><dd>{testCase.expected.grandTotal} €</dd></div>
-          </dl>
-          <details>
-            <summary>Version et empreinte</summary>
-            <p>Version {testCase.fileVersion} · {testCase.bytes.toLocaleString("fr-FR")} octets</p>
-            <code>{testCase.sha256}</code>
-          </details>
-          <a class="fixture-download" href={testCase.fileHref} download><InterfaceIcon name="download" /> Télécharger ce cas</a>
-        </article>
-      ))}
-    </div>
-    <div class="sandbox-warning">
-      <InterfaceIcon name="alert" />
-      <p><strong>Uniquement dans un bac à sable ou un compte de démonstration.</strong> Ces fichiers emploient des identifiants volontairement fictifs. Le prévol PA Check contrôle leur lecture locale, pas leur conformité normative complète et encore moins leur validité fiscale.</p>
+        <p>Premier essai en préparation</p>
+        <h2>B2Brouter</h2>
+        <strong>Pas encore vérifié</strong>
+        <span>Nous commençons par vérifier que les trois fichiers sont bien importés et correctement lus.</span>
+      </aside>
     </div>
   </section>
 
-  <section class="protocol-stage" aria-labelledby="protocol-title">
-    <div class="shell">
-      <header class="lab-section-head protocol-head">
-        <div><p class="mono-label">protocole commun</p><h2 id="protocol-title">Cinq moments où une promesse peut se casser.</h2></div>
-        <p>Le résultat conserve la date, l’environnement et une preuve technique. Une étape non observable reste non testée.</p>
+  <main>
+    <section class="shell results-section" id="resultats" aria-labelledby="results-title">
+      <header class="section-head">
+        <div>
+          <p class="section-kicker">Les réponses actuelles</p>
+          <h2 id="results-title">Est-ce que ça marche&nbsp;?</h2>
+        </div>
+        <p>Dès qu’un essai complet est terminé, la réponse apparaît ici avec la date et l’éventuelle limite à connaître.</p>
       </header>
-      <ol class="protocol-list">
-        {lab.protocol.map((step) => (
-          <li>
-            <span>0{step.number}</span>
-            <div><small>{step.label}</small><h3>{step.question}</h3><p>{step.successDefinition}</p></div>
-          </li>
-        ))}
-      </ol>
-    </div>
-  </section>
 
-  <section class="shell results-section" id="resultats" aria-labelledby="results-title">
-    <header class="lab-section-head">
-      <div><p class="mono-label">première campagne</p><h2 id="results-title">Trois plateformes prêtes à passer sur le banc.</h2></div>
-      <p>Qonto, Pennylane et B2Brouter sont documentées sur les points utiles. Cela ne suffit pas à les déclarer testées, et c’est précisément ce que la matrice rend visible.</p>
-    </header>
-
-    <div class="result-legend" aria-label="Légende des résultats">
-      <span class="state-tested">Testé</span><span class="state-failed">Échec</span><span class="state-partial">Partiellement testé</span><span class="state-not-tested">Non testé</span>
-    </div>
-
-    <div class="platform-results">
-      {lab.platforms.map((platform, platformIndex) => (
-        <article class="platform-run">
-          <header>
-            <span class="platform-index">P{platformIndex + 1}</span>
-            <div><p>PLATEFORME AGRÉÉE</p><h3>{platform.name}</h3></div>
-            <strong class={`result-state state-${platform.status.replace("_", "-")}`}>{statusLabels[platform.status]}</strong>
-          </header>
-          <p class="platform-summary">{platform.summary}</p>
-          <div class="case-strip" aria-label={`Résultats des trois cas pour ${platform.name}`}>
-            {platform.caseResults.map((result, index) => (
-              <div title={result.note}><span>C0{index + 1}</span><i></i><b>{statusLabels[result.status]}</b></div>
-            ))}
-          </div>
-          <ol class="step-strip" aria-label={`Résultats des cinq étapes pour ${platform.name}`}>
-            {platform.observations.map((observation, index) => (
-              <li class={`state-${observation.status.replace("_", "-")}`}><span>0{index + 1}</span><small>{lab.protocol[index]?.label}</small></li>
-            ))}
-          </ol>
-          <div class="run-footer">
-            <div>
-              <span>DOCUMENTATION CONSULTÉE</span>
-              <p>{platform.sourceIds.map((sourceId, index) => {
-                const source = sources.get(sourceId);
-                return source ? <><a href={source.url} rel="noopener">{source.publisher}</a>{index < platform.sourceIds.length - 1 ? " · " : ""}</> : null;
-              })}</p>
+      <div class="platform-results">
+        {displayedPlatforms.map((platform) => (
+          <article class:list={["platform-result", { featured: platform.slug === "b2brouter" }]}>
+            {platform.slug === "b2brouter" && <span class="campaign-tag">Premier essai en préparation</span>}
+            <header>
+              <div class="platform-monogram" aria-hidden="true">{platform.name.slice(0, 2).toUpperCase()}</div>
+              <div><p>Plateforme agréée</p><h3>{platform.name}</h3></div>
+            </header>
+            <div class={`answer answer-${platform.status.replace("_", "-")}`}>
+              <InterfaceIcon name={statusIcons[platform.status]} />
+              <strong>{statusLabels[platform.status]}</strong>
             </div>
-            <p><strong>Pour avancer</strong>{platform.nextAction}</p>
+            <p class="platform-summary">{platform.summary}</p>
+            <div class="next-action">
+              <span>Prochaine étape</span>
+              <p>{platform.nextAction}</p>
+            </div>
+            <details>
+              <summary>Ce que la plateforme publie</summary>
+              <div class="source-list">
+                {platform.sourceIds.map((sourceId) => {
+                  const source = sources.get(sourceId);
+                  return source ? <a href={source.url} rel="noopener">{source.title} <InterfaceIcon name="arrow" /></a> : null;
+                })}
+              </div>
+            </details>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="test-kit" id="kit" aria-labelledby="kit-title">
+      <div class="shell">
+        <header class="section-head kit-head">
+          <div>
+            <p class="section-kicker">Ce que nous essayons</p>
+            <h2 id="kit-title">Trois factures, trois difficultés fréquentes.</h2>
           </div>
-        </article>
-      ))}
-    </div>
-  </section>
+          <p>Ce sont des fichiers fictifs et téléchargeables. Chaque plateforme reçoit exactement les mêmes.</p>
+        </header>
 
-  <section class="shell seal-section" aria-labelledby="seal-title">
-    <div class="seal-mark locked" aria-hidden="true"><InterfaceIcon name="lock" /><span>PA</span><strong>CHECK</strong><small>TESTÉ</small></div>
-    <div>
-      <p class="mono-label">sceau sous conditions</p>
-      <h2 id="seal-title">« Testé par PA Check » ne s’achète pas.</h2>
-      <p>Le sceau reste verrouillé tant que les trois cas et les cinq étapes n’ont pas été observés de bout en bout par PA Check. Une plateforme peut apporter un accès, une documentation ou une réponse contradictoire. Elle ne choisit ni le statut ni la conclusion.</p>
-      <a class="button secondary" href="/contribuer/">Proposer un accès de test ou une réponse <InterfaceIcon name="arrow" /></a>
-    </div>
-    <aside>
-      <span><InterfaceIcon name="shield" /> Règle de publication</span>
-      <p>Les réponses des plateformes sont relues et rapprochées des traces du test. Aucune contribution ne modifie automatiquement cette page.</p>
-    </aside>
-  </section>
+        <div class="fixture-grid">
+          {lab.cases.map((testCase, index) => (
+            <article class={`fixture-card fixture-${index + 1}`}>
+              <header>
+                <span>0{index + 1}</span>
+                <div class="file-symbol" aria-hidden="true"><i></i><i></i><b>{testCase.documentTypeCode}</b></div>
+              </header>
+              <p class="file-kind">{"facturXHref" in testCase ? "Facture Factur-X de test" : "Facture XML de test"}</p>
+              <h3>{testCase.title}</h3>
+              <p>{testCase.purpose}</p>
+              <dl>
+                <div><dt>Lignes</dt><dd>{testCase.expected.lineCount}</dd></div>
+                <div><dt>TVA</dt><dd>{testCase.expected.vatRates.map((rate) => `${rate} %`).join(" + ")}</dd></div>
+                <div><dt>Total</dt><dd>{testCase.expected.grandTotal} €</dd></div>
+              </dl>
+              <div class="fixture-downloads">
+                {"facturXHref" in testCase && testCase.facturXHref && (
+                  <a class="primary-download" href={testCase.facturXHref} download><InterfaceIcon name="download" /> Télécharger le Factur-X</a>
+                )}
+                <a href={testCase.fileHref} download><InterfaceIcon name="download" /> {"facturXHref" in testCase ? "XML seul" : "Télécharger"}</a>
+              </div>
+              <details>
+                <summary>Détails du fichier</summary>
+                {"facturXBytes" in testCase && testCase.facturXBytes
+                  ? <p>Version {testCase.fileVersion} · PDF {Math.round(testCase.facturXBytes / 1024)} Ko · XML {Math.round(testCase.bytes / 1024)} Ko</p>
+                  : <p>Version {testCase.fileVersion} · {Math.round(testCase.bytes / 1024)} Ko</p>}
+              </details>
+            </article>
+          ))}
+        </div>
 
-  <section class="shell lab-sources">
-    <p><strong>Cadre du kit.</strong> La structure de prévol s’appuie sur les spécifications françaises V3.2 et la documentation Factur-X consultées le 25 août 2026.</p>
-    <div>{lab.sourceIds.map((sourceId) => {
-      const source = sources.get(sourceId);
-      return source ? <a href={source.url} rel="noopener"><InterfaceIcon name="proof" /> {source.title}</a> : null;
-    })}</div>
-  </section>
+        <div class="fixture-note"><InterfaceIcon name="alert" /><p>Ces factures utilisent des identifiants fictifs. Elles sont réservées aux espaces de démonstration et ne doivent jamais être envoyées à une vraie entreprise.</p></div>
+      </div>
+    </section>
+
+    <section class="shell simple-method" aria-labelledby="method-title">
+      <details>
+        <summary id="method-title"><span><InterfaceIcon name="route" /> Comment se déroule un essai&nbsp;?</span><InterfaceIcon name="chevron" /></summary>
+        <ol>
+          <li><span>1</span><div><h3>Nous déposons les fichiers</h3><p>La plateforme doit les accepter sans ressaisie.</p></div></li>
+          <li><span>2</span><div><h3>Nous relisons le résultat</h3><p>Lignes, TVA, total et type de document doivent rester corrects.</p></div></li>
+          <li><span>3</span><div><h3>Nous suivons l’envoi</h3><p>Le document doit partir dans le circuit de test et son état doit revenir clairement.</p></div></li>
+        </ol>
+        <p class="method-limit">Un import réussi ne suffit pas à conclure que tout le parcours fonctionne. La réponse ne change qu’une fois l’essai terminé.</p>
+      </details>
+    </section>
+
+    <section class="shell contribute-card">
+      <div class="contribute-art" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <InterfaceIcon name="lab" />
+      </div>
+      <div>
+        <p class="section-kicker">Accélérer un test</p>
+        <h2>Vous représentez une plateforme&nbsp;?</h2>
+        <p>Vous pouvez nous ouvrir un espace de démonstration ou compléter les informations disponibles. PA Check conduit le test et publie le résultat obtenu.</p>
+      </div>
+      <a class="button secondary" href="/contribuer/">Nous contacter <InterfaceIcon name="arrow" /></a>
+    </section>
+
+    <section class="shell lab-sources">
+      <p>Les fichiers sont construits à partir des spécifications françaises V3.2 et de la documentation Factur-X consultées le 25 août 2026.</p>
+      <div>{lab.sourceIds.map((sourceId) => {
+        const source = sources.get(sourceId);
+        return source ? <a href={source.url} rel="noopener">{source.title}</a> : null;
+      })}</div>
+    </section>
+  </main>
 </BaseLayout>
 
 <style>
-  .lab-hero { position: relative; overflow: hidden; background: #0a1523; color: #fff; }
-  .lab-hero::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(139,214,199,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(139,214,199,.065) 1px,transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(90deg,#000,transparent 74%); content: ""; }
-  .lab-hero::after { position: absolute; top: -16rem; right: -9rem; width: 37rem; height: 37rem; border: 1px solid rgba(113,227,200,.2); border-radius: 50%; box-shadow: 0 0 0 5rem rgba(113,227,200,.025),0 0 0 10rem rgba(119,132,239,.018); content: ""; }
-  .lab-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1.08fr) minmax(330px,.72fr); gap: clamp(3rem,9vw,9rem); align-items: center; padding-block: clamp(3.7rem,8vw,7rem); }
-  .lab-label { display: inline-flex; gap: .48rem; align-items: center; border: 1px solid rgba(112,222,199,.28); border-radius: 999px; padding: .43rem .68rem; color: #7fe0ca; font: 680 .75rem/1 var(--font-mono); text-transform: uppercase; }
-  .lab-label :global(svg) { width: 1rem; height: 1rem; }
-  .lab-hero h1 { max-width: 17ch; margin: 1.35rem 0 0; color: #f7fbff; font-size: clamp(2.15rem,5vw,4.3rem); font-weight: 430; line-height: 1.02; letter-spacing: -.048em; }
-  .lab-hero h1 strong { color: #7fe0ca; font-weight: 480; }
-  .lab-hero-copy > p { max-width: 47rem; margin: 1.35rem 0 0; color: rgba(233,241,249,.73); font-size: clamp(.94rem,1.6vw,1.08rem); line-height: 1.72; }
-  .lab-hero-actions { display: flex; flex-wrap: wrap; gap: 1.1rem; align-items: center; margin-top: 1.5rem; }
-  .lab-hero-actions > a:not(.button) { color: #b7c4d2; font-size: .78rem; font-weight: 680; }
-  .lab-button { gap: .45rem; background: #78d9c3; color: #102139; }
+  .lab-hero { position: relative; overflow: hidden; background: #0d1b2b; color: #fff; }
+  .lab-hero::before { position: absolute; inset: 0; background: radial-gradient(circle at 78% 28%,rgba(98,219,190,.12),transparent 24%),radial-gradient(circle at 8% 95%,rgba(101,122,226,.13),transparent 30%); content: ""; }
+  .lab-hero::after { position: absolute; top: -8rem; right: -5rem; width: 35rem; height: 35rem; border: 1px solid rgba(126,222,202,.13); border-radius: 48% 52% 43% 57%; transform: rotate(24deg); content: ""; }
+  .lab-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1.05fr) minmax(320px,.66fr); gap: clamp(3rem,9vw,8rem); align-items: center; padding-block: clamp(4rem,8vw,6.6rem); }
+  .lab-label { display: inline-flex; gap: .5rem; align-items: center; color: #8bdfcc; font-size: .79rem; font-weight: 690; letter-spacing: .025em; }
+  .lab-label :global(svg) { width: 1.1rem; height: 1.1rem; }
+  .lab-hero h1 { max-width: 14ch; margin: 1.15rem 0 0; color: #f8fbff; font-size: clamp(2.4rem,5.2vw,4.6rem); font-weight: 390; line-height: 1.02; letter-spacing: -.052em; }
+  .lab-hero h1 span { white-space: nowrap; }
+  .lab-hero h1 em { color: #7edbc6; font-style: normal; font-weight: 410; }
+  .lab-hero-copy > p { max-width: 42rem; margin: 1.35rem 0 0; color: #bdc9d4; font-size: clamp(1rem,1.7vw,1.12rem); line-height: 1.7; }
+  .lab-button { gap: .5rem; margin-top: 1.6rem; background: #7edbc6; color: #102139; }
   .lab-button:hover { color: #102139; }
   .lab-button :global(svg) { width: .95rem; height: .95rem; }
-  .lab-console { position: relative; overflow: hidden; border: 1px solid rgba(159,205,208,.2); border-radius: 1.2rem; padding: 1rem; background: rgba(7,22,35,.78); box-shadow: 0 2rem 5rem rgba(0,0,0,.28); backdrop-filter: blur(10px); }
-  .lab-console::after { position: absolute; right: -4rem; bottom: -5rem; width: 13rem; height: 13rem; border: 1px solid rgba(121,225,202,.18); border-radius: 50%; box-shadow: 0 0 0 2rem rgba(121,225,202,.025),0 0 0 4rem rgba(121,225,202,.018); content: ""; }
-  .lab-console > header { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.1); padding: .15rem .15rem .85rem; color: #75dcc5; font: 650 .75rem/1 var(--font-mono); }
-  .lab-console > header small { color: rgba(255,255,255,.4); font-size: inherit; }
-  .console-gauge { position: relative; z-index: 1; display: grid; justify-items: center; margin: 1.6rem auto; }
-  .console-gauge > span { color: rgba(255,255,255,.42); font: 640 .75rem/1 var(--font-mono); letter-spacing: .08em; }
-  .console-gauge strong { margin-top: .45rem; color: #fff; font-size: 3.5rem; font-weight: 410; line-height: 1; }
-  .console-gauge strong small { color: rgba(255,255,255,.35); font-size: .95rem; }
-  .console-gauge i { width: 70%; height: 2px; margin-top: .8rem; background: linear-gradient(90deg,#72dfc6 0 0,rgba(255,255,255,.1) 0); }
-  .lab-console dl { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3,1fr); margin: 0; border-block: 1px solid rgba(255,255,255,.09); padding-block: .8rem; }
-  .lab-console dl div { display: grid; gap: .3rem; border-left: 1px solid rgba(255,255,255,.08); padding-inline: .65rem; }
-  .lab-console dl div:first-child { border-left: 0; }
-  .lab-console dt { color: rgba(255,255,255,.43); font-size: .75rem; }
-  .lab-console dd { margin: 0; color: #fff; font: 670 .86rem/1 var(--font-mono); }
-  .lab-console > p { position: relative; z-index: 1; display: flex; gap: .45rem; align-items: center; margin: .8rem 0 0; color: #9eafbe; font-size: .75rem; }
-  .lab-console > p :global(svg) { width: .95rem; height: .95rem; color: #e2ad55; }
-  .lab-ruler { position: relative; z-index: 1; display: grid; grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr auto; gap: .8rem; align-items: center; width: min(1180px,calc(100% - 2.5rem)); margin-inline: auto; border-top: 1px solid rgba(255,255,255,.08); padding-block: .7rem; color: rgba(255,255,255,.28); font: .75rem/1 var(--font-mono); }
-  .lab-ruler i { height: 1px; background: rgba(255,255,255,.08); }
-  .lab-intro { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,.74fr); gap: clamp(2rem,8vw,7rem); align-items: end; padding-block: clamp(3.5rem,7vw,6rem); }
-  .lab-intro h2, .lab-section-head h2, .seal-section h2 { max-width: 22ch; margin: .75rem 0 0; color: var(--bright); font-size: clamp(1.7rem,3.2vw,2.55rem); font-weight: 470; line-height: 1.12; letter-spacing: -.036em; }
-  .lab-intro > p, .lab-section-head > p { margin: 0; color: var(--paper); font-size: .86rem; line-height: 1.72; }
-  .kit-section { scroll-margin-top: 7rem; }
-  .lab-section-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,.68fr); gap: 2rem; align-items: end; margin-bottom: 1.5rem; }
+  .current-test { position: relative; overflow: hidden; border: 1px solid rgba(170,211,210,.22); border-radius: 1.4rem; padding: 1.3rem; background: rgba(8,25,40,.8); box-shadow: 0 2.2rem 5rem rgba(0,0,0,.23); }
+  .test-illustration { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; min-height: 7rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,.1); padding: .45rem .35rem 1.3rem; }
+  .mini-file { position: relative; display: grid; width: 4.4rem; height: 5.5rem; align-content: start; gap: .5rem; border: 1px solid rgba(127,224,202,.35); border-radius: .6rem; padding: .75rem; background: rgba(127,224,202,.06); transform: rotate(-3deg); }
+  .mini-file span { color: #7edbc6; font: 700 .7rem/1 var(--font-mono); }
+  .mini-file i { height: .25rem; border-radius: 1rem; background: rgba(255,255,255,.16); }
+  .mini-file strong { position: absolute; right: -.55rem; bottom: .55rem; display: grid; width: 1.8rem; height: 1.8rem; place-items: center; border-radius: .5rem; background: #6176df; color: #fff; font-size: .78rem; }
+  .test-path { display: grid; grid-template-columns: 1fr auto auto; gap: .5rem; align-items: center; }
+  .test-path i:first-child { height: 1px; background: linear-gradient(90deg,#6579de,#78d8c3); }
+  .test-path i:not(:first-child) { width: .42rem; height: .42rem; border-radius: 50%; background: #7edbc6; box-shadow: 0 0 0 .3rem rgba(126,219,198,.08); }
+  .arrival { display: grid; width: 3rem; height: 3rem; place-items: center; border: 1px solid rgba(126,219,198,.35); border-radius: 50%; color: #7edbc6; }
+  .arrival :global(svg) { width: 1.25rem; height: 1.25rem; }
+  .current-test > p { margin: 0; color: #8293a5; font-size: .76rem; font-weight: 680; text-transform: uppercase; }
+  .current-test h2 { margin: .45rem 0 .75rem; color: #f5f9fc; font-size: 1.45rem; font-weight: 480; }
+  .current-test > strong { display: inline-flex; border-radius: 999px; padding: .42rem .65rem; background: #28374a; color: #d4dde5; font-size: .78rem; }
+  .current-test > span { display: block; margin-top: .9rem; color: #9faebe; font-size: .82rem; line-height: 1.55; }
+  .results-section { scroll-margin-top: 7rem; padding-block: clamp(4.5rem,8vw,7rem); }
+  .section-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(280px,.65fr); gap: 2.5rem; align-items: end; margin-bottom: 1.6rem; }
+  .section-kicker { margin: 0; color: var(--signal); font-size: .76rem; font-weight: 720; letter-spacing: .045em; text-transform: uppercase; }
+  .section-head h2, .contribute-card h2 { max-width: 21ch; margin: .65rem 0 0; color: var(--bright); font-size: clamp(1.85rem,3.4vw,2.75rem); font-weight: 430; line-height: 1.12; letter-spacing: -.04em; }
+  .section-head > p { margin: 0; color: var(--paper); font-size: .88rem; line-height: 1.7; }
+  .platform-results { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .85rem; }
+  .platform-result { position: relative; display: flex; min-width: 0; flex-direction: column; border: 1px solid var(--line); border-radius: 1.15rem; padding: 1rem; background: #fff; box-shadow: 0 1.2rem 3rem rgba(30,49,77,.06); }
+  .platform-result.featured { border-color: #9bd8cb; background: linear-gradient(145deg,#fff 55%,#f0fbf8); box-shadow: 0 1.4rem 3.5rem rgba(24,119,98,.09); }
+  .campaign-tag { align-self: flex-start; margin: -.25rem 0 .9rem; border-radius: 999px; padding: .36rem .55rem; background: #e8f8f4; color: #177862; font-size: .7rem; font-weight: 720; }
+  .platform-result > header { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: center; }
+  .platform-monogram { display: grid; width: 2.7rem; height: 2.7rem; place-items: center; border-radius: .75rem; background: #152943; color: #91decf; font: 680 .7rem/1 var(--font-mono); }
+  .platform-result header p { margin: 0; color: var(--muted); font-size: .7rem; }
+  .platform-result h3 { margin: .22rem 0 0; color: var(--bright); font-size: 1.15rem; font-weight: 530; }
+  .answer { display: flex; gap: .55rem; align-items: center; margin-top: 1.25rem; border-radius: .8rem; padding: .8rem; background: #f1f4f7; color: #697789; }
+  .answer :global(svg) { width: 1.2rem; height: 1.2rem; }
+  .answer strong { font-size: .95rem; font-weight: 650; }
+  .answer-tested { background: #e8f7f3; color: #14725e; }
+  .answer-failed { background: #fff0f0; color: #a43841; }
+  .answer-partial { background: #fff6e9; color: #98601e; }
+  .platform-summary { min-height: 4rem; margin: .95rem 0 0; color: var(--paper); font-size: .82rem; line-height: 1.6; }
+  .next-action { margin-top: auto; border-top: 1px solid var(--line); padding-top: .9rem; }
+  .next-action span { color: var(--muted); font-size: .7rem; font-weight: 710; text-transform: uppercase; }
+  .next-action p { margin: .35rem 0 0; color: var(--bright); font-size: .78rem; line-height: 1.55; }
+  .platform-result details { margin-top: .8rem; }
+  .platform-result summary, .fixture-card summary { color: var(--signal); cursor: pointer; font-size: .75rem; font-weight: 680; }
+  .source-list { display: grid; gap: .45rem; margin-top: .65rem; }
+  .source-list a { display: flex; gap: .35rem; justify-content: space-between; color: var(--paper); font-size: .72rem; line-height: 1.4; }
+  .source-list a :global(svg) { width: .85rem; min-width: .85rem; height: .85rem; }
+  .test-kit { padding-block: clamp(4rem,8vw,6.5rem); background: #f0f5f4; }
+  .kit-head h2 { max-width: 24ch; }
   .fixture-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .85rem; }
-  .fixture-card { --case-tone: #516adb; position: relative; overflow: hidden; border: 1px solid color-mix(in srgb,var(--case-tone) 22%,var(--line)); border-radius: 1.15rem; padding: 1rem; background: linear-gradient(155deg,#fff 0 72%,color-mix(in srgb,var(--case-tone) 6%,#fff)); box-shadow: 0 1.2rem 3rem rgba(32,50,79,.065); }
-  .fixture-2 { --case-tone: #158f78; }
-  .fixture-3 { --case-tone: #b06a23; }
-  .fixture-topline { display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
-  .fixture-topline span { color: var(--case-tone); font: 720 .75rem/1 var(--font-mono); }
-  .fixture-topline b { color: var(--success); font: 680 .72rem/1.2 var(--font-mono); }
-  .fixture-icon { position: relative; display: grid; width: 5rem; height: 6.2rem; align-content: start; gap: .42rem; margin-top: 1.4rem; border: 1px solid color-mix(in srgb,var(--case-tone) 24%,var(--line)); border-radius: .45rem; padding: .8rem; background: color-mix(in srgb,var(--case-tone) 5%,#fff); box-shadow: .55rem .55rem 0 color-mix(in srgb,var(--case-tone) 8%,transparent); }
-  .fixture-icon span { color: var(--case-tone); font: 720 .72rem/1 var(--font-mono); }
-  .fixture-icon i { height: .28rem; border-radius: 999px; background: color-mix(in srgb,var(--case-tone) 13%,var(--line)); }
-  .fixture-icon i:nth-of-type(2) { width: 70%; }
-  .fixture-icon strong { position: absolute; right: -.55rem; bottom: .6rem; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: .55rem; background: var(--case-tone); color: #fff; font: 690 .72rem/1 var(--font-mono); }
-  .fixture-card h3 { margin: 1.35rem 0 0; color: var(--bright); font-size: 1.15rem; font-weight: 540; }
-  .fixture-card > p { min-height: 4.25rem; margin: .55rem 0 0; color: var(--paper); font-size: .78rem; line-height: 1.62; }
-  .fixture-facts { display: grid; grid-template-columns: repeat(3,1fr); margin: 1rem 0 0; border-block: 1px solid var(--line); padding-block: .75rem; }
-  .fixture-facts div { display: grid; gap: .24rem; border-left: 1px solid var(--line); padding-inline: .55rem; }
-  .fixture-facts div:first-child { border-left: 0; padding-left: 0; }
-  .fixture-facts dt { color: var(--muted); font-size: .75rem; }
-  .fixture-facts dd { margin: 0; color: var(--bright); font-size: .76rem; font-weight: 680; }
-  .fixture-card details { margin-top: .8rem; }
-  .fixture-card summary { color: var(--paper); cursor: pointer; font-size: .72rem; font-weight: 650; }
-  .fixture-card details p { margin: .55rem 0 .3rem; color: var(--muted); font-size: .75rem; }
-  .fixture-card code { display: block; overflow-wrap: anywhere; color: var(--muted); font-size: .72rem; line-height: 1.45; }
-  .fixture-download { display: inline-flex; gap: .4rem; align-items: center; margin-top: 1rem; color: var(--case-tone); font-size: .74rem; font-weight: 720; }
-  .fixture-download :global(svg) { width: .9rem; height: .9rem; }
-  .sandbox-warning { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: start; margin-top: .85rem; border: 1px solid #e7d1ad; border-radius: .85rem; padding: .85rem 1rem; background: #fff9ef; }
-  .sandbox-warning :global(svg) { width: 1rem; height: 1rem; color: #a7651e; }
-  .sandbox-warning p { margin: 0; color: #6e5a42; font-size: .74rem; line-height: 1.55; }
-  .sandbox-warning strong { color: #4e3a25; }
-  .protocol-stage { margin-top: clamp(4rem,8vw,7rem); padding-block: clamp(3.2rem,7vw,5.5rem); background: #eef4f3; }
-  .protocol-list { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: steps; }
-  .protocol-list li { position: relative; min-width: 0; border-top: 2px solid #6acdb8; padding: 1.1rem .9rem 0 0; }
-  .protocol-list li::after { position: absolute; top: -.35rem; right: .7rem; width: .6rem; height: .6rem; border: 2px solid #eef4f3; border-radius: 50%; background: #6acdb8; content: ""; }
-  .protocol-list li:last-child::after { right: 0; }
-  .protocol-list li > span { color: #27917b; font: 690 .75rem/1 var(--font-mono); }
-  .protocol-list small { display: block; margin-top: .8rem; color: #177562; font-size: .75rem; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
-  .protocol-list h3 { min-height: 4.5rem; margin: .4rem 0 0; color: var(--bright); font-size: .87rem; font-weight: 590; line-height: 1.35; }
-  .protocol-list p { margin: .65rem 0 0; color: var(--muted); font-size: .71rem; line-height: 1.56; }
-  .results-section { scroll-margin-top: 7rem; padding-top: clamp(4rem,8vw,7rem); }
-  .result-legend { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1rem; }
-  .result-legend span, .result-state { border: 1px solid currentColor; border-radius: 999px; padding: .35rem .55rem; font-size: .75rem; font-weight: 700; }
-  .state-tested { color: #167c67; }
-  .state-failed { color: #ad3f46; }
-  .state-partial { color: #a3651f; }
-  .state-not-tested { color: #6f7b8b; }
-  .platform-results { display: grid; gap: .85rem; }
-  .platform-run { overflow: hidden; border: 1px solid var(--line); border-radius: 1.1rem; background: #fff; box-shadow: 0 1rem 2.6rem rgba(32,50,79,.055); }
-  .platform-run > header { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; border-bottom: 1px solid var(--line); padding: .9rem 1rem; background: linear-gradient(90deg,#f8fafc,#fff); }
-  .platform-index { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: .75rem; background: #172945; color: #8ee1cf; font: 680 .75rem/1 var(--font-mono); }
-  .platform-run header p { margin: 0; color: var(--muted); font: 660 .75rem/1 var(--font-mono); }
-  .platform-run h3 { margin: .3rem 0 0; color: var(--bright); font-size: 1.08rem; font-weight: 550; }
-  .platform-summary { margin: 0; padding: .85rem 1rem; color: var(--paper); font-size: .77rem; }
-  .case-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: .5rem; padding-inline: 1rem; }
-  .case-strip div { display: grid; grid-template-columns: auto 1fr auto; gap: .45rem; align-items: center; border: 1px solid var(--line); border-radius: .65rem; padding: .55rem .65rem; background: var(--surface-2); }
-  .case-strip span { color: var(--muted); font: 680 .75rem/1 var(--font-mono); }
-  .case-strip i { height: 1px; background: var(--line); }
-  .case-strip b { color: #758092; font-size: .75rem; }
-  .step-strip { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; margin: 1rem; padding: 0; list-style: none; }
-  .step-strip li { position: relative; display: grid; justify-items: center; gap: .45rem; border-top: 2px solid #d9dee6; padding-top: .65rem; color: #738093; }
-  .step-strip li::before { position: absolute; top: -.35rem; width: .55rem; height: .55rem; border: 2px solid #fff; border-radius: 50%; background: #bac3cf; content: ""; }
-  .step-strip span { font: 650 .75rem/1 var(--font-mono); }
-  .step-strip small { font-size: .75rem; }
-  .run-footer { display: grid; grid-template-columns: .75fr 1.25fr; gap: 1rem; border-top: 1px solid var(--line); padding: .85rem 1rem; }
-  .run-footer > div > span { color: var(--muted); font: 650 .75rem/1 var(--font-mono); }
-  .run-footer p { margin: .35rem 0 0; color: var(--muted); font-size: .69rem; line-height: 1.5; }
-  .run-footer p strong { display: block; margin-bottom: .2rem; color: var(--bright); }
-  .run-footer a { color: var(--signal); font-weight: 680; }
-  .seal-section { display: grid; grid-template-columns: auto minmax(0,1fr) minmax(260px,.55fr); gap: clamp(1.5rem,5vw,4rem); align-items: center; margin-block: clamp(4rem,8vw,7rem); border: 1px solid #cfd7e4; border-radius: 1.25rem; padding: clamp(1.25rem,4vw,2.2rem); background: linear-gradient(120deg,#fff,#f5f8fb); }
-  .seal-mark { display: grid; place-items: center; width: 9.5rem; height: 9.5rem; border: 1px solid #aeb8c7; border-radius: 50%; color: #7b8797; box-shadow: inset 0 0 0 .4rem #fff,inset 0 0 0 .45rem #cbd2dc; }
-  .seal-mark :global(svg) { width: 1.1rem; height: 1.1rem; }
-  .seal-mark span { margin-top: -.9rem; font: 540 1.8rem/1 var(--font-mono); }
-  .seal-mark strong { margin-top: -1rem; font: 760 .75rem/1 var(--font-mono); letter-spacing: .13em; }
-  .seal-mark small { margin-top: -1.1rem; font: 680 .72rem/1 var(--font-mono); letter-spacing: .1em; }
-  .seal-section h2 { font-size: clamp(1.55rem,2.7vw,2.15rem); }
-  .seal-section > div:nth-child(2) > p:not(.mono-label) { color: var(--paper); font-size: .79rem; line-height: 1.65; }
-  .seal-section .button { gap: .45rem; margin-top: .5rem; }
-  .seal-section .button :global(svg) { width: .9rem; height: .9rem; }
-  .seal-section aside { border-left: 1px solid var(--line); padding-left: 1.2rem; }
-  .seal-section aside span { display: inline-flex; gap: .4rem; align-items: center; color: var(--success); font-size: .7rem; font-weight: 700; }
-  .seal-section aside :global(svg) { width: 1rem; height: 1rem; }
-  .seal-section aside p { color: var(--muted); font-size: .72rem; line-height: 1.55; }
-  .lab-sources { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: start; margin-bottom: clamp(4rem,7vw,6rem); border-top: 1px solid var(--line); padding-top: 1.2rem; }
+  .fixture-card { --tone: #5e71d7; position: relative; overflow: hidden; border: 1px solid color-mix(in srgb,var(--tone) 22%,var(--line)); border-radius: 1.15rem; padding: 1rem; background: #fff; box-shadow: 0 1rem 2.5rem rgba(32,50,79,.05); }
+  .fixture-2 { --tone: #188b74; }
+  .fixture-3 { --tone: #aa6724; }
+  .fixture-card > header { display: flex; justify-content: space-between; align-items: start; }
+  .fixture-card > header > span { color: var(--tone); font: 700 .76rem/1 var(--font-mono); }
+  .file-symbol { position: relative; display: grid; width: 3.4rem; height: 4.2rem; align-content: center; gap: .38rem; border: 1px solid color-mix(in srgb,var(--tone) 30%,#fff); border-radius: .45rem; padding: .65rem; background: color-mix(in srgb,var(--tone) 7%,#fff); transform: rotate(3deg); }
+  .file-symbol i { height: .22rem; border-radius: 1rem; background: color-mix(in srgb,var(--tone) 20%,#fff); }
+  .file-symbol i:nth-child(2) { width: 65%; }
+  .file-symbol b { position: absolute; right: -.4rem; bottom: .35rem; display: grid; width: 1.55rem; height: 1.55rem; place-items: center; border-radius: .42rem; background: var(--tone); color: #fff; font: 690 .62rem/1 var(--font-mono); }
+  .file-kind { margin: .4rem 0 0; color: var(--tone); font-size: .68rem; font-weight: 710; text-transform: uppercase; }
+  .fixture-card h3 { margin: .45rem 0 0; color: var(--bright); font-size: 1.2rem; font-weight: 520; }
+  .fixture-card > p:not(.file-kind) { min-height: 4.3rem; margin: .55rem 0 0; color: var(--paper); font-size: .79rem; line-height: 1.62; }
+  .fixture-card dl { display: grid; grid-template-columns: repeat(3,1fr); margin: 1rem 0 0; border-block: 1px solid var(--line); padding-block: .7rem; }
+  .fixture-card dl div { display: grid; gap: .2rem; border-left: 1px solid var(--line); padding-inline: .55rem; }
+  .fixture-card dl div:first-child { border-left: 0; padding-left: 0; }
+  .fixture-card dt { color: var(--muted); font-size: .69rem; }
+  .fixture-card dd { margin: 0; color: var(--bright); font-size: .76rem; font-weight: 680; }
+  .fixture-downloads { display: flex; flex-wrap: wrap; gap: .45rem .8rem; align-items: center; margin-top: .9rem; }
+  .fixture-downloads a { display: inline-flex; gap: .4rem; align-items: center; color: var(--tone); font-size: .76rem; font-weight: 720; }
+  .fixture-downloads a.primary-download { border-radius: .65rem; padding: .55rem .7rem; background: color-mix(in srgb,var(--tone) 10%,#fff); }
+  .fixture-downloads a :global(svg) { width: .9rem; height: .9rem; }
+  .fixture-card details { margin-top: .75rem; }
+  .fixture-card details p { margin: .55rem 0 .3rem; color: var(--muted); font-size: .7rem; }
+  .fixture-card code { display: block; overflow-wrap: anywhere; color: var(--muted); font-size: .66rem; line-height: 1.45; }
+  .fixture-note { display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: start; margin-top: .9rem; border: 1px solid #e2ceb0; border-radius: .8rem; padding: .85rem; background: #fffaf1; color: #795d38; }
+  .fixture-note :global(svg) { width: 1rem; height: 1rem; }
+  .fixture-note p { margin: 0; font-size: .76rem; line-height: 1.55; }
+  .simple-method { margin-block: clamp(4rem,8vw,6rem); }
+  .simple-method > details { overflow: hidden; border: 1px solid var(--line); border-radius: 1.15rem; background: #fff; box-shadow: 0 1rem 2.6rem rgba(32,50,79,.045); }
+  .simple-method summary { display: flex; justify-content: space-between; align-items: center; padding: 1.15rem 1.25rem; color: var(--bright); cursor: pointer; font-size: 1rem; font-weight: 580; }
+  .simple-method summary span { display: inline-flex; gap: .6rem; align-items: center; }
+  .simple-method summary :global(svg) { width: 1.1rem; height: 1.1rem; color: var(--signal); }
+  .simple-method details[open] summary > :global(svg) { transform: rotate(180deg); }
+  .simple-method ol { display: grid; grid-template-columns: repeat(3,1fr); gap: .8rem; margin: 0; border-top: 1px solid var(--line); padding: 1rem; list-style: none; }
+  .simple-method li { display: grid; grid-template-columns: auto 1fr; gap: .65rem; border-radius: .85rem; padding: .8rem; background: var(--surface-2); }
+  .simple-method li > span { display: grid; width: 1.7rem; height: 1.7rem; place-items: center; border-radius: 50%; background: #172a44; color: #91decf; font: 680 .67rem/1 var(--font-mono); }
+  .simple-method h3 { margin: 0; color: var(--bright); font-size: .86rem; font-weight: 560; }
+  .simple-method li p { margin: .35rem 0 0; color: var(--muted); font-size: .74rem; line-height: 1.5; }
+  .method-limit { margin: 0 1rem 1rem; color: var(--paper); font-size: .76rem; line-height: 1.55; }
+  .contribute-card { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: clamp(1.2rem,4vw,2.5rem); align-items: center; margin-bottom: clamp(4rem,7vw,6rem); border: 1px solid #bcd8d1; border-radius: 1.25rem; padding: clamp(1.2rem,4vw,2rem); background: linear-gradient(120deg,#f4fbf9,#fff); }
+  .contribute-art { position: relative; display: grid; width: 6.5rem; height: 6.5rem; place-items: center; border: 1px solid #b9dcd4; border-radius: 50%; color: #16866f; }
+  .contribute-art span { position: absolute; border: 1px solid #d1e9e3; border-radius: 50%; }
+  .contribute-art span:nth-child(1) { width: 4.8rem; height: 4.8rem; }
+  .contribute-art span:nth-child(2) { width: 3.2rem; height: 3.2rem; }
+  .contribute-art span:nth-child(3) { width: .55rem; height: .55rem; background: #667ce0; transform: translate(2.25rem,-1.2rem); }
+  .contribute-art :global(svg) { width: 1.35rem; height: 1.35rem; }
+  .contribute-card h2 { font-size: clamp(1.55rem,2.7vw,2.1rem); }
+  .contribute-card > div:nth-child(2) > p:last-child { max-width: 44rem; margin: .7rem 0 0; color: var(--paper); font-size: .82rem; line-height: 1.62; }
+  .contribute-card .button { gap: .45rem; white-space: nowrap; }
+  .contribute-card .button :global(svg) { width: .9rem; height: .9rem; }
+  .lab-sources { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; margin-bottom: clamp(4rem,7vw,6rem); border-top: 1px solid var(--line); padding-top: 1rem; }
   .lab-sources p { margin: 0; color: var(--muted); font-size: .7rem; line-height: 1.55; }
-  .lab-sources div { display: grid; gap: .45rem; }
-  .lab-sources a { display: grid; grid-template-columns: auto 1fr; gap: .4rem; color: var(--paper); font-size: .69rem; }
-  .lab-sources a :global(svg) { width: .9rem; height: .9rem; color: var(--signal); }
-  @media (max-width: 960px) { .fixture-grid { grid-template-columns: 1fr 1fr; } .fixture-card:last-child { grid-column: 1 / -1; } .protocol-list { grid-template-columns: 1fr; gap: .75rem; } .protocol-list li { display: grid; grid-template-columns: auto 1fr; gap: .8rem; border-top: 0; border-left: 2px solid #6acdb8; padding: 0 0 1rem 1rem; } .protocol-list li::after { top: 0; right: auto; left: -.4rem; } .protocol-list h3 { min-height: 0; } .protocol-list small { margin-top: 0; } .seal-section { grid-template-columns: auto 1fr; } .seal-section aside { grid-column: 1 / -1; border-top: 1px solid var(--line); border-left: 0; padding: 1rem 0 0; } }
-  @media (max-width: 760px) { .lab-hero-grid, .lab-intro, .lab-section-head, .lab-sources { grid-template-columns: 1fr; } .lab-hero-grid { gap: 2rem; } .fixture-grid { grid-template-columns: 1fr; } .fixture-card:last-child { grid-column: auto; } .case-strip { grid-template-columns: 1fr; } .step-strip { overflow-x: auto; grid-template-columns: repeat(5,minmax(6.5rem,1fr)); padding-top: .2rem; } .run-footer { grid-template-columns: 1fr; } }
-  @media (max-width: 560px) { .lab-hero h1 { font-size: 2.35rem; } .lab-console dl { grid-template-columns: 1fr; } .lab-console dl div { grid-template-columns: 1fr auto; border-top: 1px solid rgba(255,255,255,.08); border-left: 0; padding-block: .55rem; } .lab-console dl div:first-child { border-top: 0; } .lab-ruler { display: none; } .platform-run > header { grid-template-columns: auto 1fr; } .result-state { grid-column: 1 / -1; justify-self: start; } .seal-section { grid-template-columns: 1fr; } .seal-mark { width: 8rem; height: 8rem; } }
+  .lab-sources div { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
+  .lab-sources a { color: var(--paper); font-size: .7rem; text-decoration: underline; text-underline-offset: .2rem; }
+  @media (max-width: 940px) { .platform-results, .fixture-grid { grid-template-columns: 1fr 1fr; } .platform-result:last-child, .fixture-card:last-child { grid-column: 1 / -1; } .contribute-card { grid-template-columns: auto 1fr; } .contribute-card > a { grid-column: 2; justify-self: start; } }
+  @media (max-width: 760px) { .lab-hero-grid, .section-head, .lab-sources { grid-template-columns: 1fr; } .lab-hero-grid { gap: 2rem; } .platform-results, .fixture-grid, .simple-method ol { grid-template-columns: 1fr; } .platform-result:last-child, .fixture-card:last-child { grid-column: auto; } .platform-summary, .fixture-card > p:not(.file-kind) { min-height: 0; } }
+  @media (max-width: 560px) { .lab-hero h1 { font-size: 2.45rem; } .current-test { padding: 1rem; } .test-illustration { gap: .65rem; } .contribute-card { grid-template-columns: 1fr; } .contribute-art { width: 5.5rem; height: 5.5rem; } .contribute-card > a { grid-column: auto; } }
 </style>

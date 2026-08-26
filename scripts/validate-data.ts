@@ -130,6 +130,24 @@ for (const testCase of checkedLab.cases) {
     || analysis.metadata.currency !== testCase.expected.currency) {
     throw new Error(`${testCase.title} : résultat de prévol différent du contrat public`);
   }
+  const facturXFields = [testCase.facturXHref, testCase.facturXSha256, testCase.facturXBytes, testCase.facturXValidation];
+  if (facturXFields.some((value) => value !== undefined) && facturXFields.some((value) => value === undefined)) {
+    throw new Error(`${testCase.title} : le fichier Factur-X et ses contrôles doivent être déclarés ensemble`);
+  }
+  if (testCase.facturXHref && testCase.facturXSha256 && testCase.facturXBytes) {
+    const facturX = readFileSync(new URL(`../public${testCase.facturXHref}`, import.meta.url));
+    if (facturX.byteLength !== testCase.facturXBytes
+      || createHash("sha256").update(facturX).digest("hex") !== testCase.facturXSha256) {
+      throw new Error(`${testCase.title} : le PDF Factur-X ne correspond plus à la version publiée`);
+    }
+    const pdfStructure = facturX.toString("latin1");
+    if (!pdfStructure.startsWith("%PDF-1.7")
+      || !pdfStructure.includes('pdfaid:part="3"')
+      || !pdfStructure.includes("/AFRelationship /Alternative")
+      || !pdfStructure.includes("factur-x.xml")) {
+      throw new Error(`${testCase.title} : structure PDF/A-3 Factur-X incomplète`);
+    }
+  }
 }
 
 for (const platform of checkedLab.platforms) {
