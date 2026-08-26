@@ -19,6 +19,7 @@ const primaryNav = [
   { href: "/diagnostic/", label: "Choisir une plateforme", hint: "3 questions, toutes les options", icon: "target", tone: "green" },
 ] as const;
 const resourceNav = [
+  { href: "/questions/", label: "10 questions pratiques", hint: "Des réponses directement utilisables", icon: "question" },
   { href: "/plateformes/", label: `${platforms.length} plateformes étudiées`, hint: "Fiches détaillées et tarifs", icon: "layers" },
   { href: "/annuaire/", label: "Annuaire officiel", hint: "La liste publique de la DGFiP", icon: "directory" },
   { href: "/a-propos/", label: "Pourquoi PA Check ?", hint: "De l’enquête l0g à l’outil", icon: "route" },
@@ -37,7 +38,7 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#f4f7fb" />
+    <meta name="theme-color" content="#e7edf5" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' data:; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
@@ -128,11 +129,13 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
           <p>Vos réponses et vos fichiers restent sur votre appareil. Aucun compte nécessaire.</p>
         </div>
         <nav aria-label="Pied de page">
+          <a href="/questions/">Questions pratiques</a>
           <a href="/a-propos/">Pourquoi PA Check ?</a>
           <a href="/contribuer/">Mettre à jour une fiche</a>
           <a href="/methodologie/">Méthodologie</a>
           <a href="/changements/">Journal des changements</a>
           <a href="/api/platforms.json">API JSON</a>
+          <a href="/api/questions.json">API des questions</a>
           <a href="https://l0g.fr/publications/grand-peage-facture/">Enquête l0g</a>
           <a href="https://github.com/bluetouff/facture-radar">Code source</a>
         </nav>

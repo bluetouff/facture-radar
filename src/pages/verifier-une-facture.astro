@@ -8,16 +8,18 @@ import InterfaceIcon from "../components/InterfaceIcon.astro";
   title="Vérifier si une facture Factur-X est prête | PA Check"
   description="Contrôlez une facture Factur-X sur votre appareil, voyez les corrections utiles puis les plateformes qui publient une option d'envoi compatible."
 >
-  <section class="shell page-hero invoice-hero">
-    <div>
-      <span class="eyebrow">votre fichier reste sur cet appareil</span>
-      <h1>Votre facture est-elle prête à partir&nbsp;?</h1>
-      <p>Ajoutez un PDF Factur-X ou un XML. PA Check vous indique ce qui fonctionne, ce qu'il faut corriger et les plateformes qui publient une option d'envoi compatible.</p>
-    </div>
-    <div class="hero-seal" aria-label="Contrôle effectué localement">
-      <span><InterfaceIcon name="shield" /></span>
-      <strong>Local</strong>
-      <small>aucun transfert</small>
+  <section class="invoice-stage">
+    <div class="shell page-hero invoice-hero">
+      <div>
+        <span class="eyebrow">votre fichier reste sur cet appareil</span>
+        <h1>Votre facture est-elle prête à partir&nbsp;?</h1>
+        <p>Ajoutez un PDF Factur-X ou un XML. PA Check vous indique ce qui fonctionne, ce qu'il faut corriger et les plateformes qui publient une option d'envoi compatible.</p>
+      </div>
+      <div class="hero-seal" aria-label="Contrôle effectué localement">
+        <span><InterfaceIcon name="shield" /></span>
+        <strong>Local</strong>
+        <small>aucun transfert</small>
+      </div>
     </div>
   </section>
 
@@ -45,16 +47,21 @@ import InterfaceIcon from "../components/InterfaceIcon.astro";
 </BaseLayout>
 
 <style>
-  .invoice-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; }
+  .invoice-stage { position: relative; overflow: hidden; background: radial-gradient(circle at 82% 15%,rgba(53,116,180,.24),transparent 22rem),radial-gradient(circle at 15% 100%,rgba(117,87,214,.13),transparent 25rem),#111d32; }
+  .invoice-stage::before { position: absolute; inset: 0; background-image: radial-gradient(circle,rgba(202,214,255,.12) 1px,transparent 1.2px); background-size: 26px 26px; mask-image: linear-gradient(90deg,#000,transparent 58%); content: ""; }
+  .invoice-hero { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; padding-block: clamp(2.8rem,5vw,4.6rem); }
   .invoice-hero h1 { max-width: 21ch; }
-  .hero-seal { position: relative; display: grid; place-items: center; width: 10rem; height: 10rem; border: 1px solid color-mix(in srgb, var(--signal) 24%, var(--line)); border-radius: 50%; background: radial-gradient(circle, #fff 52%, var(--signal-soft) 53%); color: var(--signal); box-shadow: 0 1rem 3rem rgba(64,91,216,.12), inset 0 0 0 .7rem rgba(255,255,255,.72); }
+  .invoice-hero h1 { color: #f7f9ff; }
+  .invoice-hero > div > p { color: rgba(235,240,250,.72); }
+  .invoice-hero .eyebrow { border-color: rgba(174,186,255,.3); background: rgba(255,255,255,.07); color: #bdc7ff; }
+  .hero-seal { position: relative; display: grid; place-items: center; width: 10rem; height: 10rem; border: 1px solid rgba(177,191,255,.28); border-radius: 50%; background: radial-gradient(circle,rgba(255,255,255,.96) 52%,rgba(132,151,240,.16) 53%); color: var(--signal); box-shadow: 0 1rem 3rem rgba(0,0,0,.22),inset 0 0 0 .7rem rgba(255,255,255,.08); }
   .hero-seal::before, .hero-seal::after { position: absolute; border: 1px solid color-mix(in srgb, var(--signal) 18%, transparent); border-radius: 50%; content: ""; }
   .hero-seal::before { inset: -.55rem; }
   .hero-seal::after { inset: .75rem; border-style: dashed; }
   .hero-seal span { color: var(--success); }
   .hero-seal strong { margin-top: -.65rem; color: var(--bright); font-size: 1.2rem; }
   .hero-seal small { margin-top: -1.1rem; color: var(--muted); font-size: .66rem; }
-  .verifier-section { padding-bottom: clamp(2.5rem, 6vw, 5rem); }
+  .verifier-section { position: relative; z-index: 2; margin-top: -1.4rem; padding-bottom: clamp(2.5rem, 6vw, 5rem); }
   .invoice-explainer { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; padding-bottom: clamp(3.5rem, 7vw, 6rem); }
   .invoice-explainer article { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; padding: 1.1rem; background: rgba(255,255,255,.72); }
   .invoice-explainer article > span { color: var(--signal); font: 730 .66rem/1 var(--font-mono); }

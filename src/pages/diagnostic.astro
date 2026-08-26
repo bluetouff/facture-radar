@@ -8,22 +8,29 @@ import DiagnosticEngine from "../components/DiagnosticEngine.astro";
   title="Trouver une plateforme adaptée | PA Check"
   description="Trois questions simples pour repérer les plateformes adaptées à votre activité, votre volume de factures et votre priorité."
 >
-  <section class="shell page-hero diagnostic-hero">
-    <div>
-      <span class="eyebrow">3 questions · toutes les options accessibles</span>
-      <h1>Quelle plateforme répond à votre besoin&nbsp;?</h1>
-      <p>Indiquez votre taille, votre volume mensuel de factures et votre priorité. PA Check met en avant les fiches les mieux renseignées sans masquer les autres résultats.</p>
+  <section class="diagnostic-stage">
+    <div class="shell page-hero diagnostic-hero">
+      <div>
+        <span class="eyebrow">3 questions · toutes les options accessibles</span>
+        <h1>Quelle plateforme répond à votre besoin&nbsp;?</h1>
+        <p>Indiquez votre taille, votre volume mensuel de factures et votre priorité. PA Check met en avant les fiches les mieux renseignées sans masquer les autres résultats.</p>
+      </div>
+      <div class="choice-map-visual"><ChoiceMap /></div>
     </div>
-    <div class="choice-map-visual"><ChoiceMap /></div>
   </section>
-  <section class="shell">
+  <section class="shell diagnostic-workspace">
     <DiagnosticEngine />
   </section>
 </BaseLayout>
 
 <style>
-  .diagnostic-hero { display: grid; grid-template-columns: minmax(0, .95fr) minmax(440px, .85fr); gap: clamp(2.4rem, 6vw, 6rem); align-items: center; }
+  .diagnostic-stage { position: relative; overflow: hidden; background: radial-gradient(circle at 84% 16%,rgba(64,91,216,.25),transparent 22rem),radial-gradient(circle at 14% 100%,rgba(33,147,119,.11),transparent 22rem),#111d32; }
+  .diagnostic-stage::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size: 30px 30px; mask-image: linear-gradient(90deg,#000,transparent 62%); content: ""; }
+  .diagnostic-hero { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, .95fr) minmax(440px, .85fr); gap: clamp(2.4rem, 6vw, 6rem); align-items: center; padding-block: clamp(2.8rem,5vw,4.6rem); }
   .diagnostic-hero h1 { max-width: 14ch; }
-  .diagnostic-hero > div > p { max-width: 42rem; margin: 1.25rem 0 0; color: var(--paper); font-size: clamp(.98rem, 1.8vw, 1.14rem); line-height: 1.7; }
+  .diagnostic-hero > div > h1 { color: #f7f9ff; }
+  .diagnostic-hero > div > p { max-width: 42rem; margin: 1.25rem 0 0; color: rgba(235,240,250,.72); font-size: clamp(.98rem, 1.8vw, 1.14rem); line-height: 1.7; }
+  .diagnostic-hero .eyebrow { border-color: rgba(174,186,255,.3); background: rgba(255,255,255,.07); color: #bdc7ff; }
+  .diagnostic-workspace { position: relative; z-index: 2; margin-top: -1.4rem; }
   @media (max-width: 900px) { .diagnostic-hero { grid-template-columns: 1fr; gap: 1rem; } .diagnostic-hero h1 { max-width: 18ch; } .choice-map-visual { display: none; } }
 </style>

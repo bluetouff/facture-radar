@@ -1,8 +1,8 @@
 :root {
-  --ink: #f4f7fb;
-  --surface: #ffffff;
-  --surface-2: #edf2f8;
-  --surface-3: #e4eaf3;
+  --ink: #e7edf5;
+  --surface: #f9fbfd;
+  --surface-2: #dfe7f1;
+  --surface-3: #d4deea;
   --paper: #415168;
   --bright: #14243a;
   --muted: #6a788c;
@@ -30,7 +30,7 @@
 
 * { box-sizing: border-box; }
 html { color-scheme: light; scroll-behavior: smooth; background: var(--ink); }
-body { margin: 0; min-width: 320px; background: radial-gradient(circle at 8% 0%, rgba(64, 91, 216, .08), transparent 26rem), radial-gradient(circle at 92% 20rem, rgba(117, 87, 214, .055), transparent 24rem), var(--ink); color: var(--paper); font-family: var(--font-sans); line-height: 1.55; }
+body { margin: 0; min-width: 320px; background: radial-gradient(circle at 8% 0%, rgba(64, 91, 216, .1), transparent 26rem), radial-gradient(circle at 92% 20rem, rgba(117, 87, 214, .075), transparent 24rem), var(--ink); color: var(--paper); font-family: var(--font-sans); line-height: 1.55; }
 h1, h2, h3 { font-optical-sizing: auto; font-weight: 520; }
 a { color: inherit; text-decoration: none; }
 a:hover { color: var(--signal); }

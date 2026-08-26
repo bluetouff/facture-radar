@@ -1,5 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
-import { SyntaxValidator } from "fast-xml-validator";
+import { SaxesParser } from "saxes";
 
 export const INVOICE_RULESET_VERSION = "FE-FR 3.2 · Factur-X CII D22B (prévol)";
 export const INVOICE_RULESET_CHECKED_AT = "2026-08-25";
@@ -188,21 +188,16 @@ export function analyzeFacturXXml(xml: string, container: InvoiceContainer = "xm
   }
 
   try {
-    SyntaxValidator.validate(xml, {
-      allowBooleanAttributes: false,
-      multipleRoots: false,
-      invalidCharSequence: { comment: true, tagValue: true, attrLt: true },
-    });
-  } catch (error) {
-    const line = error && typeof error === "object" && "line" in error && typeof error.line === "number" ? error.line : null;
-    return unsupported(container, "Le XML est illisible", "La structure XML doit être corrigée avant tout contrôle métier.", `Le document XML est mal formé${line ? ` près de la ligne ${line}` : ""}.`);
+    new SaxesParser({ xmlns: true }).write(xml).close();
+  } catch {
+    return unsupported(container, "Le XML est illisible", "La structure XML doit être corrigée avant tout contrôle métier.", "Le document XML est mal formé ou dépasse les limites acceptées.");
   }
 
   let parsed: unknown;
   try {
     parsed = parser.parse(xml);
   } catch {
-    return unsupported(container, "Le XML n'a pas pu être analysé", "Le parseur local a arrêté le contrôle.", "La profondeur ou la structure du document dépasse les limites acceptées.");
+    return unsupported(container, "Le XML est illisible", "La structure XML doit être corrigée avant tout contrôle métier.", "Le document XML est mal formé ou dépasse les limites acceptées.");
   }
 
   const root = at(parsed, "CrossIndustryInvoice");

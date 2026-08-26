@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import InterfaceIcon from "../../components/InterfaceIcon.astro";
+import { practicalQuestions } from "../../data/practical-questions";
+
+const leadQuestions = practicalQuestions.slice(0, 3);
+---
+
+<BaseLayout
+  title="Questions pratiques sur la facturation électronique | PA Check"
+  description="Dix réponses directes pour garder son logiciel, choisir une plateforme, envoyer un Factur-X, évaluer le prix ou préparer un changement."
+>
+  <section class="questions-cover">
+    <div class="shell questions-cover-layout">
+      <div class="questions-intro">
+        <a class="back-home" href="/"><InterfaceIcon name="arrow" /> Accueil</a>
+        <p class="questions-kicker">10 situations concrètes · réponses publiques</p>
+        <h1>Votre question, puis la réponse utile.</h1>
+        <p>Choisissez la situation qui ressemble à la vôtre. Chaque page commence par une conclusion courte, puis présente les options et les points à contrôler.</p>
+        <div class="cover-actions">
+          <a href="#toutes-les-questions">Voir les dix questions <InterfaceIcon name="arrow" /></a>
+          <span><InterfaceIcon name="shield" /> Aucun compte demandé</span>
+        </div>
+      </div>
+
+      <aside class="question-console" aria-label="Trois questions fréquentes">
+        <header><span>POINTS DE DÉPART</span><small>mise à jour 25.08.26</small></header>
+        <ol>
+          {leadQuestions.map((question, index) => (
+            <li>
+              <a href={`/questions/${question.slug}/`}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p><small>{question.category}</small><strong>{question.shortLabel}</strong></p>
+                <InterfaceIcon name="arrow" />
+              </a>
+            </li>
+          ))}
+        </ol>
+        <footer><i></i><span>Réponse courte</span><i></i><span>Options</span><i></i><span>Action</span></footer>
+      </aside>
+    </div>
+  </section>
+
+  <section class="shell questions-directory" id="toutes-les-questions">
+    <header class="directory-head">
+      <div><p class="mono-label">questions pratiques</p><h2>Commencez par ce que vous cherchez à faire.</h2></div>
+      <p>Les réponses utilisent le corpus public de PA Check. Les liens vers les documents consultés restent disponibles sur chaque page.</p>
+    </header>
+
+    <div class="question-grid">
+      {practicalQuestions.map((question, index) => (
+        <a class:list={["question-card", `tone-${question.tone}`]} href={`/questions/${question.slug}/`}>
+          <span class="card-index">{String(index + 1).padStart(2, "0")}</span>
+          <span class="card-icon"><InterfaceIcon name={question.icon} /></span>
+          <p>{question.category}</p>
+          <h2>{question.shortLabel}</h2>
+          <small>{question.shortAnswer}</small>
+          <span class="card-action">Lire la réponse <InterfaceIcon name="arrow" /></span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="shell questions-bridge">
+    <div><p class="mono-label">besoin plus précis</p><h2>Votre cas dépend de votre activité ou de votre volume&nbsp;?</h2></div>
+    <p>Le diagnostic utilise trois informations et conserve toutes les options compatibles. Vous pouvez aussi entrer directement le nom de votre outil actuel.</p>
+    <div><a class="button" href="/diagnostic/">Choisir une plateforme</a><a class="button secondary" href="/verifier-mon-outil/">Vérifier mon outil</a></div>
+  </section>
+</BaseLayout>
+
+<style>
+  .questions-cover { position: relative; overflow: hidden; background: #111d32; }
+  .questions-cover::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px); background-size: 28px 28px; mask-image: linear-gradient(90deg,#000,transparent 72%); content: ""; }
+  .questions-cover::after { position: absolute; top: -15rem; right: -7rem; width: 34rem; height: 34rem; border: 1px solid rgba(107,126,230,.22); border-radius: 50%; box-shadow: 0 0 0 4rem rgba(107,126,230,.04),0 0 0 8rem rgba(74,185,156,.025); content: ""; }
+  .questions-cover-layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) 25rem; gap: clamp(3rem,8vw,7rem); align-items: center; padding-block: clamp(3.2rem,7vw,6rem); }
+  .back-home { display: inline-flex; gap: .45rem; align-items: center; color: rgba(226,233,247,.62); font-size: .78rem; }
+  .back-home :global(svg) { width: .85rem; rotate: 180deg; }
+  .questions-kicker { margin: 2rem 0 0; color: #9eafff; font: 680 .76rem/1 var(--font-mono); letter-spacing: .055em; text-transform: uppercase; }
+  .questions-intro h1 { max-width: 13ch; margin: .85rem 0 0; color: #fff; font-size: clamp(2.3rem,4.8vw,3.7rem); font-weight: 470; line-height: 1.04; letter-spacing: -.052em; text-wrap: balance; }
+  .questions-intro > p:last-of-type { max-width: 44rem; margin: 1.2rem 0 0; color: rgba(236,241,252,.72); font-size: 1rem; line-height: 1.72; }
+  .cover-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin-top: 1.6rem; }
+  .cover-actions a { display: inline-flex; gap: .55rem; align-items: center; border-radius: .75rem; padding: .75rem .9rem; background: #fff; color: var(--bright); font-size: .78rem; font-weight: 720; }
+  .cover-actions a :global(svg),.cover-actions span :global(svg) { width: .9rem; height: .9rem; }
+  .cover-actions span { display: inline-flex; gap: .45rem; align-items: center; color: rgba(229,235,249,.65); font-size: .76rem; }
+  .question-console { overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 1.15rem; background: rgba(255,255,255,.97); box-shadow: 0 1.8rem 5rem rgba(0,0,0,.24); }
+  .question-console header { display: flex; justify-content: space-between; gap: .7rem; border-bottom: 1px solid var(--line); padding: .9rem 1rem; color: var(--muted); font: 660 .65rem/1 var(--font-mono); letter-spacing: .05em; }
+  .question-console ol { margin: 0; padding: .3rem .8rem; list-style: none; }
+  .question-console li + li { border-top: 1px solid var(--line); }
+  .question-console a { display: grid; grid-template-columns: auto 1fr auto; gap: .75rem; align-items: center; padding: 1rem .25rem; }
+  .question-console a > span { color: var(--signal); font: 690 .7rem/1 var(--font-mono); }
+  .question-console p { display: grid; margin: 0; }
+  .question-console small { color: var(--muted); font-size: .76rem; }
+  .question-console strong { margin-top: .15rem; color: var(--bright); font-size: .84rem; font-weight: 650; }
+  .question-console a > :global(svg) { width: .86rem; color: var(--signal); }
+  .question-console footer { display: flex; gap: .45rem; align-items: center; border-top: 1px solid var(--line); padding: .8rem 1rem; background: var(--surface-2); color: var(--muted); font-size: .68rem; }
+  .question-console footer i { width: .42rem; height: .42rem; border-radius: 50%; background: var(--signal); }
+  .question-console footer i:nth-of-type(2) { background: var(--accent); }
+  .question-console footer i:nth-of-type(3) { background: var(--success); }
+  .questions-directory { padding-top: clamp(3rem,7vw,5.5rem); scroll-margin-top: 5rem; }
+  .directory-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(18rem,.65fr); gap: 2rem; align-items: end; margin-bottom: 2rem; }
+  .directory-head h2 { max-width: 17ch; margin: .75rem 0 0; color: var(--bright); font-size: clamp(1.7rem,3vw,2.4rem); font-weight: 490; line-height: 1.12; letter-spacing: -.04em; }
+  .directory-head > p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.65; }
+  .question-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .85rem; }
+  .question-card { --tone: var(--signal); --soft: var(--signal-soft); position: relative; display: grid; min-height: 17rem; grid-template-columns: auto 1fr; grid-template-rows: auto auto auto 1fr auto; column-gap: .9rem; overflow: hidden; border: 1px solid color-mix(in srgb,var(--tone) 18%,var(--line)); border-radius: 1.15rem; padding: 1.15rem; background: linear-gradient(140deg,color-mix(in srgb,var(--tone) 6%,#fff),#fff 55%); box-shadow: 0 .5rem 1.8rem rgba(41,57,86,.05); transition: translate 160ms ease,border-color 160ms ease,box-shadow 160ms ease; }
+  .question-card::after { position: absolute; top: -6rem; right: -5rem; width: 12rem; height: 12rem; border: 1px solid color-mix(in srgb,var(--tone) 18%,transparent); border-radius: 50%; box-shadow: 0 0 0 1.7rem color-mix(in srgb,var(--tone) 4%,transparent); content: ""; }
+  .question-card.tone-violet { --tone: #7557d6; --soft: #f1edff; }
+  .question-card.tone-blue { --tone: #3473ad; --soft: #edf6ff; }
+  .question-card.tone-green { --tone: #168065; --soft: #e9f7f1; }
+  .question-card.tone-amber { --tone: #a75d12; --soft: #fff5e8; }
+  .question-card.tone-coral { --tone: #ad5a4b; --soft: #fff1ee; }
+  .question-card:hover { translate: 0 -3px; border-color: color-mix(in srgb,var(--tone) 35%,var(--line)); color: inherit; box-shadow: 0 1.1rem 2.8rem rgba(41,57,86,.11); }
+  .card-index { position: relative; z-index: 1; grid-column: 1; color: var(--tone); font: 700 .72rem/1 var(--font-mono); }
+  .card-icon { position: relative; z-index: 1; display: grid; grid-column: 2; justify-self: end; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: .72rem; background: var(--soft); color: var(--tone); }
+  .card-icon :global(svg) { width: 1.05rem; }
+  .question-card > p,.question-card > h2,.question-card > small,.card-action { position: relative; z-index: 1; grid-column: 1 / -1; }
+  .question-card > p { margin: 1.2rem 0 0; color: var(--tone); font-size: .76rem; font-weight: 730; text-transform: uppercase; }
+  .question-card > h2 { max-width: 25ch; margin: .35rem 0 0; color: var(--bright); font-size: 1.28rem; font-weight: 510; line-height: 1.25; letter-spacing: -.028em; }
+  .question-card > small { margin-top: .65rem; color: var(--muted); font-size: .8rem; line-height: 1.55; }
+  .card-action { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .75rem; color: var(--tone); font-size: .76rem; font-weight: 700; }
+  .card-action :global(svg) { width: .85rem; }
+  .questions-bridge { display: grid; grid-template-columns: minmax(0,.8fr) minmax(18rem,1fr) auto; gap: 1.5rem; align-items: center; margin-top: 3.5rem; border: 1px solid var(--line); border-radius: 1.2rem; padding: 1.3rem; background: rgba(255,255,255,.8); }
+  .questions-bridge h2 { max-width: 20ch; margin: .55rem 0 0; color: var(--bright); font-size: 1.35rem; font-weight: 500; line-height: 1.2; }
+  .questions-bridge > p { margin: 0; color: var(--muted); font-size: .82rem; }
+  .questions-bridge > div:last-child { display: flex; gap: .55rem; }
+  @media (max-width: 900px) { .questions-cover-layout { grid-template-columns: 1fr; gap: 2rem; } .question-console { max-width: 34rem; } .questions-bridge { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) { .directory-head,.question-grid { grid-template-columns: 1fr; } .question-card { min-height: 15rem; } }
+  @media (max-width: 520px) { .questions-intro h1 { font-size: 2.3rem; } .question-console footer { flex-wrap: wrap; } .questions-bridge > div:last-child { display: grid; } }
+</style>

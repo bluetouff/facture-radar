@@ -7,11 +7,21 @@ import ProofOrbit from "../components/ProofOrbit.astro";
 import { platforms } from "../data/platforms";
 import sources from "../data/sources.json";
 import directory from "../data/official-directory.json";
+import { practicalQuestions } from "../data/practical-questions";
 
 const spotlightSlugs = ["shine", "jefacture", "yooz", "doxallia"];
 const spotlights = spotlightSlugs
   .map((slug) => platforms.find((platform) => platform.slug === slug))
   .filter((platform) => platform !== undefined);
+const homeQuestionSlugs = [
+  "envoyer-factur-x-sans-solution-compatible",
+  "garder-son-logiciel-de-facturation",
+  "plateforme-gratuite-sans-compte-bancaire",
+  "plateforme-pour-micro-entrepreneur",
+];
+const homeQuestions = homeQuestionSlugs
+  .map((slug) => practicalQuestions.find((question) => question.slug === slug))
+  .filter((question) => question !== undefined);
 ---
 
 <BaseLayout
@@ -44,6 +54,24 @@ const spotlights = spotlightSlugs
       <div><strong>{sources.length}</strong><span>sources publiques consultables</span></div>
       <div><strong>0</strong><span>donnée personnelle demandée</span></div>
       <div><strong>{directory.approved.length}</strong><span>plateformes agréées recensées</span></div>
+    </div>
+  </section>
+
+  <section class="home-questions-stage" aria-labelledby="home-questions-title">
+    <div class="shell home-questions-layout">
+      <header>
+        <div><p class="questions-kicker">réponses prêtes à lire</p><h2 id="home-questions-title">Partez directement de votre question.</h2></div>
+        <div><p>Dix situations concrètes, chacune avec une conclusion courte, les options à regarder et l'action suivante.</p><a href="/questions/">Voir toutes les questions <InterfaceIcon name="arrow" /></a></div>
+      </header>
+      <div class="home-question-grid">
+        {homeQuestions.map((question, index) => (
+          <a href={`/questions/${question.slug}/`}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <p><small>{question.category}</small><strong>{question.shortLabel}</strong></p>
+            <InterfaceIcon name={question.icon} />
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -197,6 +225,21 @@ const spotlights = spotlightSlugs
   .quiet-link :global(svg) { width: 1rem; height: 1rem; }
   .stats-shell { position: relative; z-index: 3; margin-top: -1.75rem; }
   .stats-shell .stats-strip > div { background: rgba(255,255,255,.94); box-shadow: 0 .8rem 2.2rem rgba(27,40,72,.09); backdrop-filter: blur(12px); }
+  .home-questions-stage { margin-top: clamp(2.5rem,6vw,4.5rem); padding-block: clamp(2.5rem,5vw,4rem); background: #17243a; }
+  .home-questions-layout > header { display: grid; grid-template-columns: minmax(0,1fr) minmax(18rem,.72fr); gap: 2rem; align-items: end; }
+  .questions-kicker { margin: 0; color: #9fafff; font: 680 .72rem/1 var(--font-mono); letter-spacing: .055em; text-transform: uppercase; }
+  .home-questions-layout h2 { max-width: 17ch; margin: .75rem 0 0; color: #f8faff; font-size: clamp(1.7rem,3.2vw,2.45rem); font-weight: 480; line-height: 1.12; letter-spacing: -.04em; }
+  .home-questions-layout > header > div:last-child > p { margin: 0; color: rgba(235,240,250,.64); font-size: .85rem; line-height: 1.65; }
+  .home-questions-layout > header a { display: inline-flex; gap: .45rem; align-items: center; margin-top: .8rem; color: #acb9ff; font-size: .76rem; font-weight: 700; }
+  .home-questions-layout > header a :global(svg) { width: .85rem; }
+  .home-question-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: .65rem; margin-top: 1.7rem; }
+  .home-question-grid a { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; border: 1px solid rgba(198,209,245,.13); border-radius: .9rem; padding: .9rem; background: rgba(255,255,255,.055); color: rgba(240,244,253,.78); transition: background 160ms ease,border-color 160ms ease,translate 160ms ease; }
+  .home-question-grid a:hover { translate: 0 -2px; border-color: rgba(172,187,255,.3); background: rgba(255,255,255,.085); color: #fff; }
+  .home-question-grid a > span { color: #9fafff; font: 690 .67rem/1 var(--font-mono); }
+  .home-question-grid p { display: grid; margin: 0; }
+  .home-question-grid small { color: rgba(222,229,247,.48); font-size: .69rem; }
+  .home-question-grid strong { margin-top: .12rem; color: #f5f7fd; font-size: .82rem; font-weight: 610; }
+  .home-question-grid a > :global(svg) { width: 1rem; color: #9fafff; }
   .invoice-callout { position: relative; display: grid; grid-template-columns: minmax(15rem, .72fr) minmax(0, 1.28fr); gap: clamp(2rem, 7vw, 5rem); align-items: center; overflow: hidden; margin-top: clamp(3rem, 7vw, 5.5rem); border: 1px solid color-mix(in srgb, var(--signal) 18%, var(--line)); border-radius: 1.5rem; padding: clamp(1.4rem, 5vw, 3rem); background: linear-gradient(135deg, #fff, color-mix(in srgb, var(--signal-soft) 76%, #fff)); box-shadow: 0 1.2rem 3.5rem rgba(41,57,86,.08); }
   .invoice-callout::before { position: absolute; top: -9rem; right: -5rem; width: 22rem; height: 22rem; border: 1px solid rgba(64,91,216,.12); border-radius: 50%; box-shadow: 0 0 0 2.5rem rgba(64,91,216,.035), 0 0 0 5rem rgba(117,87,214,.025); content: ""; }
   .invoice-visual { position: relative; display: grid; place-items: center; min-height: 18rem; border-radius: 1.15rem; background: radial-gradient(circle at 50% 50%, rgba(64,91,216,.18), transparent 9rem), #15233f; }
@@ -280,9 +323,9 @@ const spotlights = spotlightSlugs
   .pa-contribution > :global(svg) { width: 1.15rem; height: 1.15rem; color: var(--signal); }
   .dossier-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
   @media (min-width: 901px) { .hero-guide { grid-template-columns: repeat(3, 1fr); } .hero-guide > div { grid-template-columns: 1fr; align-items: start; } }
-  @media (max-width: 900px) { .story-layout { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .story-layout { grid-template-columns: 1fr; } .home-questions-layout > header { grid-template-columns: 1fr; } }
   @media (max-width: 820px) { .decision-callout { grid-template-columns: 1fr; } }
-  @media (max-width: 700px) { .invoice-callout { grid-template-columns: 1fr; } .invoice-visual { min-height: 15rem; } .invoice-sheet { scale: .88; } }
+  @media (max-width: 700px) { .invoice-callout { grid-template-columns: 1fr; } .invoice-visual { min-height: 15rem; } .invoice-sheet { scale: .88; } .home-question-grid { grid-template-columns: 1fr; } }
   @media (max-width: 520px) { .decision-outcomes { grid-template-columns: 1fr; padding-top: 2.5rem; } .decision-outcomes > span { min-height: 0; } }
   @media (max-width: 620px) { .hero-stage { border-radius: 0 0 1.5rem 1.5rem; } .stats-shell { margin-top: -1rem; } .story-stage { padding-top: 3rem; } .story-chapters > header { display: grid; } .story-bridge { grid-template-columns: 1fr; } .story-bridge i { width: 1px; height: .8rem; margin-inline: auto; } .pa-contribution { grid-template-columns: auto 1fr; } .pa-contribution > :global(svg) { display: none; } .dossier-grid { grid-template-columns: 1fr; } }
 </style>

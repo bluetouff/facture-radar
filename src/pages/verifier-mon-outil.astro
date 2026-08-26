@@ -66,26 +66,26 @@ import { journeyProfiles } from "../data/journey-profiles";
 </BaseLayout>
 
 <style>
-  .decision-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); padding-block: clamp(2rem,4vw,3.25rem) clamp(2.8rem,5vw,4rem); background: linear-gradient(112deg,rgba(255,255,255,.92),rgba(238,242,255,.64) 62%,rgba(233,247,241,.42)); }
-  .decision-hero::before { position: absolute; top: -11rem; right: -9rem; width: 28rem; height: 28rem; border: 1px solid rgba(64,91,216,.09); border-radius: 50%; box-shadow: 0 0 0 4rem rgba(64,91,216,.025),0 0 0 8rem rgba(22,128,101,.018); content: ""; }
+  .decision-hero { position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,.08); padding-block: clamp(2rem,4vw,3.25rem) clamp(2.8rem,5vw,4rem); background: radial-gradient(circle at 80% 15%,rgba(64,91,216,.24),transparent 24rem),radial-gradient(circle at 12% 100%,rgba(22,128,101,.11),transparent 24rem),#111d32; }
+  .decision-hero::before { position: absolute; top: -11rem; right: -9rem; width: 28rem; height: 28rem; border: 1px solid rgba(155,171,250,.2); border-radius: 50%; box-shadow: 0 0 0 4rem rgba(64,91,216,.045),0 0 0 8rem rgba(22,128,101,.025); content: ""; }
   .decision-hero-layout { position: relative; display: grid; grid-template-columns: minmax(0,.8fr) minmax(28rem,1.2fr); gap: clamp(2.5rem,7vw,6rem); align-items: center; }
-  .decision-kicker { display: flex; gap: .65rem; align-items: center; margin: 0; color: var(--signal); font: 680 .76rem/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; }
-  .decision-kicker span { display: grid; place-items: center; width: 2rem; height: 2rem; border: 1px solid color-mix(in srgb,var(--signal) 22%,var(--line)); border-radius: 50%; background: rgba(255,255,255,.78); }
-  .decision-copy h1 { max-width: 14ch; margin: .9rem 0 0; color: var(--bright); font-size: clamp(2.15rem,4vw,3.35rem); font-weight: 480; line-height: 1.04; letter-spacing: -.048em; }
-  .decision-copy > p:last-child { max-width: 42rem; margin: 1rem 0 0; color: var(--paper); font-size: 1rem; line-height: 1.65; }
-  .decision-figure { min-width: 0; margin: 0; border-left: 1px solid var(--line); padding-left: clamp(1.5rem,4vw,3rem); }
+  .decision-kicker { display: flex; gap: .65rem; align-items: center; margin: 0; color: #aebaff; font: 680 .76rem/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; }
+  .decision-kicker span { display: grid; place-items: center; width: 2rem; height: 2rem; border: 1px solid rgba(173,186,255,.28); border-radius: 50%; background: rgba(255,255,255,.06); }
+  .decision-copy h1 { max-width: 14ch; margin: .9rem 0 0; color: #f7f9ff; font-size: clamp(2.15rem,4vw,3.35rem); font-weight: 480; line-height: 1.04; letter-spacing: -.048em; }
+  .decision-copy > p:last-child { max-width: 42rem; margin: 1rem 0 0; color: rgba(235,240,250,.72); font-size: 1rem; line-height: 1.65; }
+  .decision-figure { min-width: 0; margin: 0; border-left: 1px solid rgba(255,255,255,.11); padding-left: clamp(1.5rem,4vw,3rem); }
   .decision-figure svg { width: 100%; height: auto; }
   .figure-path { fill: none; stroke: var(--signal); stroke-width: 1.5; stroke-linecap: round; }
-  .figure-path.ghost { stroke: rgba(64,91,216,.08); stroke-width: 18; }
-  .figure-stop circle { fill: rgba(255,255,255,.92); stroke: var(--line-strong); }
-  .figure-stop path { fill: none; stroke: var(--bright); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .figure-path.ghost { stroke: rgba(135,154,245,.14); stroke-width: 18; }
+  .figure-stop circle { fill: #182742; stroke: rgba(208,217,246,.28); }
+  .figure-stop path { fill: none; stroke: #e8eefb; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
   .figure-stop.second circle { stroke: rgba(22,128,101,.42); }
   .figure-stop.second path { stroke: var(--success); }
   .figure-stop.third circle { stroke: rgba(117,87,214,.4); }
   .figure-stop.third path { stroke: var(--accent); }
-  .figure-stop text { fill: var(--paper); font: 560 12px var(--font-sans); text-anchor: middle; }
-  .figure-index { fill: var(--muted); font: 600 12px var(--font-mono); letter-spacing: .06em; }
-  .decision-figure figcaption { margin-top: -.3rem; color: var(--muted); font-size: .78rem; text-align: right; }
+  .figure-stop text { fill: rgba(235,240,250,.7); font: 560 12px var(--font-sans); text-anchor: middle; }
+  .figure-index { fill: rgba(205,214,238,.55); font: 600 12px var(--font-mono); letter-spacing: .06em; }
+  .decision-figure figcaption { margin-top: -.3rem; color: rgba(222,230,248,.58); font-size: .78rem; text-align: right; }
   .existing-tool { max-width: 72rem; scroll-margin-top: 5.5rem; }
   .existing-tool .section-head { margin-bottom: 1.2rem; }
   .direct-route { max-width: 78rem; }

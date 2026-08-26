@@ -4,6 +4,7 @@ import sourcesData from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-profiles.ts";
 import { directRoutingOptions, directRoutingSourceIds } from "../src/data/direct-routing-options.ts";
+import { practicalQuestions, practicalQuestionSourceIds } from "../src/data/practical-questions.ts";
 import { PASSPORT_CHECKED_AT, passportRoutes, passportRouteSourceIds } from "../src/data/passport-routes.ts";
 import { INVOICE_RULESET_CHECKED_AT, invoiceVerifierSourceIds } from "../src/lib/invoice-verifier.ts";
 import { passportRoutesSchema, platformsSchema, sourcesSchema } from "../src/data/schema.ts";
@@ -183,6 +184,39 @@ for (const profile of journeyProfiles) {
 }
 if (journeySlugs.size !== checkedPlatforms.length) {
   throw new Error(`Chaque fiche doit avoir un parcours détaillé : ${journeySlugs.size}/${checkedPlatforms.length}`);
+}
+
+if (practicalQuestions.length !== 10) {
+  throw new Error(`La bibliothèque doit contenir exactement 10 questions : ${practicalQuestions.length}`);
+}
+const questionSlugs = new Set<string>();
+for (const question of practicalQuestions) {
+  if (questionSlugs.has(question.slug)) throw new Error(`Question pratique dupliquée : ${question.slug}`);
+  questionSlugs.add(question.slug);
+  if (!question.nextAction.href.startsWith("/")) throw new Error(`${question.slug} : la prochaine action doit rester interne`);
+  if (question.recommendations.length < 3) throw new Error(`${question.slug} : au moins trois éléments doivent rendre la réponse exploitable`);
+  if (question.checks.length !== 4) throw new Error(`${question.slug} : quatre contrôles sont attendus`);
+  for (const recommendation of question.recommendations) {
+    if (recommendation.platformSlug !== null && !slugs.has(recommendation.platformSlug)) {
+      throw new Error(`${question.slug} : fiche inconnue ${recommendation.platformSlug}`);
+    }
+    if (recommendation.href !== null && !recommendation.href.startsWith("/")) {
+      throw new Error(`${question.slug} : lien de recommandation externe inattendu`);
+    }
+  }
+}
+for (const sourceId of practicalQuestionSourceIds) {
+  const source = sourcesById.get(sourceId);
+  if (!source) throw new Error(`Source de question pratique inconnue : ${sourceId}`);
+  const latestQuestionDate = practicalQuestions
+    .filter((question) => question.sourceIds.some((candidate) => candidate === sourceId) || question.recommendations.some((recommendation) => recommendation.sourceIds.some((candidate) => candidate === sourceId)))
+    .map((question) => question.checkedAt)
+    .sort()
+    .at(-1);
+  if (latestQuestionDate && source.accessedAt > latestQuestionDate) {
+    throw new Error(`La source ${sourceId} est postérieure à la question pratique associée`);
+  }
+  referencedSourceIds.add(sourceId);
 }
 
 for (const source of checkedSources) {
