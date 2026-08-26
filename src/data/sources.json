@@ -520,22 +520,6 @@
     "accessedAt": "2026-08-25"
   },
   {
-    "id": "b2brouter-sandbox-2026",
-    "title": "Environnement de test B2Brouter",
-    "publisher": "Documentation B2Brouter",
-    "url": "https://docs.b2brouter.net/en/developers/testing/sandbox/",
-    "type": "documentation",
-    "accessedAt": "2026-08-26"
-  },
-  {
-    "id": "b2brouter-api-import-2026",
-    "title": "Importer et envoyer une facture avec l’API B2Brouter",
-    "publisher": "Documentation B2Brouter",
-    "url": "https://docs.b2brouter.net/en/developers/common-use-cases/send-invoices-end-to-end/",
-    "type": "documentation",
-    "accessedAt": "2026-08-26"
-  },
-  {
     "id": "dext-add-documents-2026",
     "title": "Comment ajouter des documents dans Dext",
     "publisher": "Dext",

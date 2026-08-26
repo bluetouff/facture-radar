@@ -2,7 +2,6 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { isPublicHttpUrl, normalizePublicHttpUrl } from "../src/lib/urls.ts";
-import { lab } from "../src/data/lab.ts";
 
 test("les liens publics acceptent uniquement HTTP et HTTPS", () => {
   assert.equal(isPublicHttpUrl("https://www.impots.gouv.fr/"), true);
@@ -101,40 +100,13 @@ test("le formulaire PA prépare un message local sans endpoint ni publication au
   assert.doesNotMatch(page, /<form[^>]+action=/);
 });
 
-test("le Lab n'ajoute aucun dépôt de fichier, champ libre ou publication automatique", async () => {
-  const page = await readFile(new URL("../src/pages/lab.astro", import.meta.url), "utf8");
-  const contract = await readFile(new URL("../src/data/lab.ts", import.meta.url), "utf8");
-  assert.match(page, /Pas encore vérifié/);
-  assert.match(page, /PA Check conduit le test et publie le résultat obtenu/);
-  assert.doesNotMatch(page, /<(?:form|input|textarea|select)\b/i);
-  assert.doesNotMatch(`${page}\n${contract}`, /\bfetch\s*\(/);
-  assert.doesNotMatch(`${page}\n${contract}`, /localStorage|sessionStorage|indexedDB/);
-  assert.doesNotMatch(`${page}\n${contract}`, /\.innerHTML\s*=/);
-  assert.doesNotMatch(`${page}\n${contract}`, /location\.(?:search|hash)/);
-});
 
-test("le runner B2Brouter reste local, sans secret public ni route d’envoi", async () => {
-  const runner = await readFile(new URL("../scripts/run-b2brouter-lab.ts", import.meta.url), "utf8");
-  const client = await readFile(new URL("../src/lib/b2brouter-lab.ts", import.meta.url), "utf8");
-  const publicPage = await readFile(new URL("../src/pages/lab.astro", import.meta.url), "utf8");
-  const homePage = await readFile(new URL("../src/pages/index.astro", import.meta.url), "utf8");
-
-  assert.match(runner, /process\.env/);
-  assert.match(client, /apiKey\.startsWith\("test_"\)/);
-  assert.match(client, /redirect: "error"/);
-  assert.match(client, /send_after_import", "false"/);
-  assert.match(runner, /new SandboxRequestBudget\(1\)/);
-  assert.match(runner, /fixture\.id === "service-simple"/);
-  assert.doesNotMatch(`${runner}\n${client}`, /send_invoice|send_after_import", "true"/);
-  assert.doesNotMatch(`${publicPage}\n${homePage}`, /b2brouter-lab|B2BROUTER_SANDBOX_API_KEY|B2BROUTER_SANDBOX_ACCOUNT_ID|X-B2B-API-Key/);
-});
-
-test("les jeux du Lab sont locaux, synthétiques et réservés au test", async () => {
-  for (const testCase of lab.cases) {
-    assert.match(testCase.fileHref, /^\/lab\/fixtures\/[a-z0-9-]+\.xml$/);
-    const fixture = await readFile(new URL(`../public${testCase.fileHref}`, import.meta.url), "utf8");
-    assert.match(fixture, /Données entièrement fictives/);
-    assert.match(fixture, /environnement de test/);
-    assert.doesNotMatch(fixture, /bluetouff|l0g\.fr|olivier@/i);
-  }
+test("aucune dépendance de sandbox PA n'est exposée dans le produit", async () => {
+  const publicSurfaces = await Promise.all([
+    "../src/pages/index.astro",
+    "../src/pages/verifier-mon-outil.astro",
+    "../src/components/ToolJourney.astro",
+    "../src/layouts/BaseLayout.astro",
+  ].map((path) => readFile(new URL(path, import.meta.url), "utf8")));
+  assert.doesNotMatch(publicSurfaces.join("\n"), /sandbox|B2BROUTER_SANDBOX|X-B2B-API-Key|\/lab\//i);
 });

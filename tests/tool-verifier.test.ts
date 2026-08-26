@@ -1,12 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { platforms } from "../src/data/platforms.ts";
+import { journeyProfiles } from "../src/data/journey-profiles.ts";
 import { findKnownTool, verifyKnownTool } from "../src/lib/tool-verifier.ts";
 
 test("un outil direct complètement documenté peut être conservé", () => {
   const result = verifyKnownTool(platforms, "Tiime");
   assert.equal(result.verdict, "keep");
   assert.equal(result.platform?.slug, "tiime");
+  assert.equal(result.headline, "Vous pouvez garder Tiime");
   assert.equal(result.lines.length, 4);
   assert.ok(result.lines.every((line) => line.state === "yes"));
 });
@@ -37,7 +39,16 @@ test("un produit Sage ne peut pas hériter automatiquement du statut de la PA", 
   const result = verifyKnownTool(platforms, "Sage 50");
   assert.equal(result.verdict, "unconfirmed");
   assert.equal(result.platform?.slug, "sage");
-  assert.match(result.headline, /édition et l'activation restent à confirmer/i);
+  assert.match(result.headline, /vérifiez votre offre avant de garder Sage/i);
+});
+
+test("les vingt-cinq parcours donnent une première réponse sans formulaire supplémentaire", () => {
+  for (const profile of journeyProfiles) {
+    const result = verifyKnownTool(platforms, profile.toolLabel);
+    assert.ok(result.tool, `${profile.toolLabel} doit être reconnu`);
+    assert.ok(result.platform, `${profile.toolLabel} doit retrouver sa fiche`);
+    assert.ok(["keep", "act", "unconfirmed"].includes(result.verdict));
+  }
 });
 
 test("une fonction réglementaire non documentée bloque le feu vert", () => {
@@ -50,7 +61,7 @@ test("un outil absent n'est jamais déclaré non conforme", () => {
   const result = verifyKnownTool(platforms, "Outil inconnu");
   assert.equal(result.verdict, "unconfirmed");
   assert.equal(result.platform, null);
-  assert.match(result.explanation, /ne signifie pas qu'il n'est pas conforme/i);
+  assert.match(result.explanation, /ne signifie pas qu'il faut en changer/i);
 });
 
 test("une valeur qui contient seulement le nom d'un outil n'est pas acceptée", () => {
@@ -88,10 +99,10 @@ test("une valeur positive sans source ne suffit jamais à produire du vert", () 
   assert.ok(result.lines.some((line) => line.label === "Émission" && line.state === "unknown"));
 });
 
-test("un acteur sorti du corpus redevient une inconnue, jamais une non-conformité", () => {
-  const result = verifyKnownTool(platforms, "Axonaut");
+test("un outil hors corpus reste une inconnue, jamais une non-conformité", () => {
+  const result = verifyKnownTool(platforms, "Outil hors corpus");
   assert.equal(result.verdict, "unconfirmed");
   assert.equal(result.platform, null);
   assert.equal(result.tool, null);
-  assert.match(result.explanation, /ne signifie pas qu'il n'est pas conforme/i);
+  assert.match(result.explanation, /ne signifie pas qu'il faut en changer/i);
 });

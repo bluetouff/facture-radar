@@ -23,12 +23,6 @@ import { platforms } from "../data/platforms";
     </div>
   </section>
 
-  <section class="shell lab-response-note" aria-labelledby="lab-response-title">
-    <span><InterfaceIcon name="lab" /></span>
-    <div><p class="mono-label">participer aux tests du Lab</p><h2 id="lab-response-title">Ouvrez-nous un espace de démonstration.</h2><p>Nous y essaierons les trois mêmes factures que chez les autres plateformes. Vous pourrez expliquer une limite ou corriger une information, puis PA Check publiera le résultat obtenu.</p></div>
-    <a href="/lab/">Voir les tests <InterfaceIcon name="arrow" /></a>
-  </section>
-
   <section class="shell contribution-layout">
     <form class="contribution-form" id="contribution-form">
       <header>
@@ -110,13 +104,6 @@ import { platforms } from "../data/platforms";
 <script is:inline src="/scripts/contribution-form.js" defer></script>
 
 <style>
-  .lab-response-note { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; margin-bottom: 1rem; border: 1px solid rgba(38,139,117,.2); border-radius: 1.1rem; padding: 1rem; background: linear-gradient(105deg,#edf8f5,#fff 62%); }
-  .lab-response-note > span { display: grid; place-items: center; width: 3.2rem; height: 3.2rem; border-radius: .85rem; background: #17304a; color: #7de0ca; }
-  .lab-response-note > span :global(svg) { width: 1.25rem; height: 1.25rem; }
-  .lab-response-note h2 { margin: .35rem 0 .15rem; color: var(--bright); font-size: 1.05rem; font-weight: 540; }
-  .lab-response-note p:not(.mono-label) { max-width: 52rem; margin: 0; color: var(--paper); font-size: .76rem; line-height: 1.55; }
-  .lab-response-note > a { display: inline-flex; gap: .4rem; align-items: center; color: var(--success); font-size: .74rem; font-weight: 720; white-space: nowrap; }
-  .lab-response-note > a :global(svg) { width: .9rem; height: .9rem; }
   .contribution-hero { display: grid; grid-template-columns: minmax(0,1fr) minmax(410px,.95fr); gap: clamp(2.5rem,6vw,6rem); align-items: center; }
   .contribution-hero > div:first-child > p { max-width: 44rem; margin: 1.25rem 0 0; color: var(--paper); font-size: clamp(.98rem,1.8vw,1.12rem); line-height: 1.7; }
   .review-route { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: .55rem; align-items: center; border: 1px solid var(--line); border-radius: 1.2rem; padding: 1rem; background: rgba(255,255,255,.78); box-shadow: 0 1.2rem 3rem rgba(41,57,86,.08); }

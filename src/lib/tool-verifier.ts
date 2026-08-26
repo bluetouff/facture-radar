@@ -1,4 +1,5 @@
 import type { Evidence, Platform } from "../data/types.ts";
+import { journeyProfiles } from "../data/journey-profiles.ts";
 
 export type ToolVerdict = "keep" | "act" | "unconfirmed";
 export type ToolRelation = "direct" | "connected";
@@ -29,7 +30,7 @@ export interface ToolVerification {
   lines: VerificationLine[];
 }
 
-export const knownTools: KnownTool[] = [
+const declaredTools: KnownTool[] = [
   { id: "cegid-pa", label: "Plateforme Agréée Cegid", aliases: ["Cegid PA"], platformSlug: "cegid", relation: "direct" },
   {
     id: "cegid",
@@ -87,6 +88,20 @@ export const knownTools: KnownTool[] = [
   { id: "cegedim", label: "Cegedim SY business", aliases: ["Cegedim", "SY business", "CEGEDIM"], platformSlug: "cegedim", relation: "direct" },
 ];
 
+const declaredIds = new Set(declaredTools.map((tool) => tool.id));
+export const knownTools: KnownTool[] = [
+  ...declaredTools,
+  ...journeyProfiles
+    .filter((profile) => !declaredIds.has(profile.id))
+    .map((profile) => ({
+      id: profile.id,
+      label: profile.toolLabel,
+      aliases: [...profile.aliases],
+      platformSlug: profile.platformSlug,
+      relation: "direct" as const,
+    })),
+];
+
 function normalize(value: string): string {
   return value
     .normalize("NFKD")
@@ -124,9 +139,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
   if (!tool) {
     return {
       verdict: "unconfirmed",
-      headline: "Nous n'avons pas encore étudié cet outil",
-      explanation: "Il n'apparaît pas dans notre sélection actuelle. Cela ne signifie pas qu'il n'est pas conforme.",
-      action: "Demandez à l'éditeur quelle plateforme agréée sera utilisée et quand la réception, l'émission et l'e-reporting seront activés.",
+      headline: "Nous ne pouvons pas encore trancher pour cet outil",
+      explanation: "Il n'apparaît pas encore dans les outils étudiés. Cela ne signifie pas qu'il faut en changer.",
+      action: "Demandez simplement à l'éditeur le nom de la plateforme agréée associée et les fonctions incluses dans votre offre.",
       tool: null,
       platform: null,
       lines: [],
@@ -137,8 +152,8 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
   if (!platform) {
     return {
       verdict: "unconfirmed",
-      headline: "Cette fiche est momentanément indisponible",
-      explanation: "Nous connaissons le lien avec une plateforme agréée, mais les informations utiles ne sont pas disponibles dans cette version du site.",
+      headline: "Il manque les informations utiles pour décider",
+      explanation: "Le lien avec une plateforme agréée est connu, mais son périmètre n'est pas encore assez détaillé ici.",
       action: "Demandez à l'éditeur de confirmer la plateforme agréée utilisée et les services inclus dans votre offre.",
       tool,
       platform: null,
@@ -166,7 +181,7 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
   if (tool.relation === "connected") {
     return {
       verdict: "unconfirmed",
-      headline: "L'édition et l'activation restent à confirmer",
+      headline: `Vérifiez votre offre avant de garder ${tool.label}`,
       explanation: tool.relationNote ?? "Cet outil est relié à une plateforme agréée. Les services inclus dans votre offre restent à confirmer.",
       action: `Demandez à l'éditeur de confirmer par écrit que votre offre active bien ${platform.displayName} pour la réception, l'émission et l'e-reporting.`,
       tool,
@@ -178,9 +193,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
   if (lines.some((line) => line.state === "no")) {
     return {
       verdict: "act",
-      headline: "Une vérification est nécessaire avant l'échéance",
-      explanation: "Une fonction nécessaire est indiquée comme non couverte dans les informations consultées.",
-      action: "Contactez l'éditeur pour faire activer la fonction manquante ou choisir une autre plateforme avant votre échéance.",
+      headline: `Une autre solution est nécessaire pour ${tool.label}`,
+      explanation: "Une fonction obligatoire est indiquée comme absente dans les informations consultées.",
+      action: "Demandez si cette fonction peut être ajoutée à votre offre. Sinon, choisissez une plateforme qui la couvre avant votre échéance.",
       tool,
       platform,
       lines,
@@ -191,9 +206,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
     const missing = lines.filter((line) => line.state === "unknown").map((line) => line.label.toLocaleLowerCase("fr"));
     return {
       verdict: "unconfirmed",
-      headline: "Quelques points restent à confirmer",
+      headline: `Il reste un point à compléter pour ${tool.label}`,
       explanation: `Les informations disponibles ne permettent pas encore de confirmer ${missing.join(" et ")}.`,
-      action: `Demandez à l'éditeur une confirmation écrite sur ${missing.join(" et ")} avant de vous engager.`,
+      action: `Demandez à l'éditeur si ${missing.join(" et ")} est bien inclus dans votre offre.`,
       tool,
       platform,
       lines,
@@ -202,9 +217,9 @@ export function verifyKnownTool(platforms: Platform[], query: string): ToolVerif
 
   return {
     verdict: "keep",
-    headline: "Les fonctions essentielles sont documentées",
-    explanation: "La plateforme agréée associée prend en charge la réception, l'émission et l'e-reporting dans les informations publiques consultées.",
-    action: "Ouvrez votre offre pour contrôler que le service est actif et relever le tarif qui vous sera réellement appliqué.",
+    headline: `Vous pouvez garder ${tool.label}`,
+    explanation: "La réception, l'émission et l'e-reporting sont indiqués comme disponibles pour la plateforme associée.",
+    action: "Vérifiez maintenant que la plateforme est activée pour votre entreprise et regardez le tarif réellement appliqué à votre offre.",
     tool,
     platform,
     lines,

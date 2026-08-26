@@ -14,19 +14,6 @@ Les propriétés suivantes doivent rester vraies :
 - les données publiques générées conservent leur provenance et passent la validation du schéma ;
 - les valeurs inconnues ne sont pas traitées comme des preuves positives pour un critère impératif.
 
-## Runner local du Lab
-
-Le runner B2Brouter est un outil opérateur distinct du site public. Il accepte uniquement les trois fichiers synthétiques du Lab et une clé de sandbox dont le préfixe est `test_`.
-
-Les propriétés suivantes doivent rester vraies :
-
-- la clé et l'identifiant du compte viennent exclusivement de l'environnement local ;
-- aucune clé ne figure dans un argument, un fichier suivi par Git, une URL, une sortie ou une erreur ;
-- l'hôte est fixé à `https://api.b2brouter.net` et les redirections sont refusées ;
-- la première campagne est limitée à une requête sur le seul cas Factur-X, sans nouvel essai automatique ;
-- chaque import force `send_after_import=false` et aucune route d'envoi n'est implémentée ;
-- le runner n'est importé par aucune page ou composant public.
-
 ## Signaler une vulnérabilité
 
 Ne publiez pas de détail exploitable dans une issue publique. Utilisez la fonction privée « Report a vulnerability » de GitHub lorsque les avis de sécurité du dépôt seront activés. À défaut, contactez le mainteneur depuis son profil GitHub en indiquant l'impact, le chemin de reproduction minimal et la version concernée.

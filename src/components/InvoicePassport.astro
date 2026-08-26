@@ -1,7 +1,7 @@
 ---
 import InterfaceIcon from "./InterfaceIcon.astro";
 import sources from "../data/sources.json";
-import { PASSPORT_LAB_CHECKED_AT, PASSPORT_LAB_VERSION, passportRoutes } from "../data/passport-routes";
+import { PASSPORT_CHECKED_AT, PASSPORT_VERSION, passportRoutes } from "../data/passport-routes";
 
 const sourcesById = new Map(sources.map((source) => [source.id, source]));
 const stateLabels = {
@@ -21,11 +21,11 @@ const routeSources = (sourceIds: string[]) => [...new Set(sourceIds)]
       <span></span><i></i><b><InterfaceIcon name="route" /></b>
     </div>
     <div>
-      <p class="passport-kicker"><span>LAB</span> {PASSPORT_LAB_VERSION}</p>
+      <p class="passport-kicker"><span>PARCOURS</span> {PASSPORT_VERSION}</p>
       <h3 id="passport-title">Le passeport de votre facture</h3>
       <p>Une fois le fichier lisible, regardez où il peut entrer et le contrôle qui reste à faire avant de choisir.</p>
     </div>
-    <div class="passport-date"><small>Données contrôlées</small><strong>{PASSPORT_LAB_CHECKED_AT.split("-").reverse().join("/")}</strong></div>
+    <div class="passport-date"><small>Données contrôlées</small><strong>{PASSPORT_CHECKED_AT.split("-").reverse().join("/")}</strong></div>
   </header>
 
   <div class="passport-readiness" data-passport-readiness>
@@ -47,7 +47,7 @@ const routeSources = (sourceIds: string[]) => [...new Set(sourceIds)]
       <h4>Où voulez-vous faire passer ce fichier&nbsp;?</h4>
       <p>Un seul choix. PA Check affiche le parcours connu et le test qui évite de s’engager à l’aveugle.</p>
     </div>
-    <div class="route-tabs" role="tablist" aria-label="Plateformes du laboratoire">
+    <div class="route-tabs" role="tablist" aria-label="Plateformes documentées">
       {passportRoutes.map((route, index) => (
         <button
           type="button"
@@ -141,7 +141,7 @@ const routeSources = (sourceIds: string[]) => [...new Set(sourceIds)]
     <span><i data-state="documented"></i><strong>Documenté</strong> par une source publique</span>
     <span><i data-state="confirm"></i><strong>À contrôler</strong> dans le parcours réel</span>
     <span><i data-state="not_published"></i><strong>Non publié</strong> par la plateforme</span>
-    <a href="/methodologie/">Méthode du Lab <InterfaceIcon name="arrow" /></a>
+    <a href="/methodologie/">Comment lire ces parcours <InterfaceIcon name="arrow" /></a>
   </footer>
 </section>
 

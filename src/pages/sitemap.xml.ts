@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { platforms } from "../data/platforms";
 
-const paths = ["/", "/verifier-mon-outil/", "/verifier-une-facture/", "/diagnostic/", "/lab/", "/plateformes/", "/comparer/", "/annuaire/", "/a-propos/", "/contribuer/", "/methodologie/", "/changements/", ...platforms.map((platform) => `/plateformes/${platform.slug}/`)];
+const paths = ["/", "/verifier-mon-outil/", "/verifier-une-facture/", "/diagnostic/", "/plateformes/", "/comparer/", "/annuaire/", "/a-propos/", "/contribuer/", "/methodologie/", "/changements/", ...platforms.map((platform) => `/plateformes/${platform.slug}/`)];
 
 export const GET: APIRoute = ({ site }) => {
   const base = site ?? new URL("https://pa.l0g.fr");

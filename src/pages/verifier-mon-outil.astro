@@ -6,15 +6,15 @@ import { journeyProfiles } from "../data/journey-profiles";
 ---
 
 <BaseLayout
-  title="Obtenir une réponse pratique sur sa facture électronique | PA Check"
-  description="Partez d'un besoin concret et voyez quelles plateformes agréées documentent réellement le parcours, le canal, le prix et les points encore à tester."
+  title="Puis-je garder mon logiciel de facturation ? | PA Check"
+  description="Entrez le nom de votre outil et obtenez une réponse immédiate : le garder, le compléter ou prévoir une autre solution."
 >
   <section class="decision-hero">
     <div class="shell decision-hero-layout">
       <div class="decision-copy">
         <p class="decision-kicker"><span>01</span> question pratique</p>
         <h1>Quel est votre point de départ&nbsp;?</h1>
-        <p>Choisissez votre situation. PA Check cherche la réponse publiée, montre ce qui manque et vous donne le contrôle utile à faire ensuite.</p>
+        <p>Entrez le nom de votre outil. La réponse utile arrive avant les détails&nbsp;: le garder, le compléter ou en changer.</p>
       </div>
       <figure class="decision-figure" aria-label="Un parcours en trois étapes : votre situation, les informations publiées, puis l'action utile">
         <svg viewBox="0 0 560 210" role="img" aria-hidden="true">
@@ -25,34 +25,32 @@ import { journeyProfiles } from "../data/journey-profiles";
           <g class="figure-stop third"><circle cx="510" cy="82" r="26" /><path d="M500 88V76h12M508 72l8 4-8 4" /><text x="510" y="131">action utile</text></g>
           <text class="figure-index" x="23" y="33">PA CHECK · PARCOURS 01</text>
         </svg>
-        <figcaption>Une réponse courte, son niveau de certitude et le test qui permet d'avancer.</figcaption>
+        <figcaption>Une réponse courte d’abord. Le calendrier, le coût et les sources restent disponibles ensuite.</figcaption>
       </figure>
     </div>
-  </section>
-
-  <section class="shell practical-layout">
-    <aside class="reading-key">
-      <div class="reading-intro"><p>Comment lire la réponse</p><h2>Trois niveaux de certitude.</h2></div>
-      <ol>
-        <li><strong>Établi</strong><span>Une source publique couvre précisément le point.</span></li>
-        <li><strong>À tester</strong><span>Les briques sont documentées, pas leur enchaînement complet.</span></li>
-        <li><strong>Non publié</strong><span>L'information reste à demander à l'éditeur.</span></li>
-      </ol>
-      <p class="scope-note">Format, import et émission sont vérifiés séparément.</p>
-    </aside>
-    <div class="router-slot"><PracticalRouter /></div>
   </section>
 
   <section class="shell section existing-tool" id="verifier-logiciel">
     <header class="section-head">
       <div>
-        <p class="mono-label">vous voulez garder votre logiciel</p>
-        <h2>Vérifiez le raccordement annoncé pour votre outil.</h2>
+        <p class="mono-label">une seule question pour commencer</p>
+        <h2>Pouvez-vous garder votre outil&nbsp;?</h2>
       </div>
-      <p>Ce second parcours sert à retrouver la PA associée, les fonctions publiées et la manipulation à effectuer dans votre logiciel. Les informations que vous venez de saisir ne sont plus présentées comme une découverte.</p>
+      <p>Indiquez simplement son nom. PA Check affiche la conclusion et la prochaine action. Les questions sur votre entreprise ne viennent que si vous demandez le calendrier et le coût.</p>
     </header>
     <ToolJourney />
     <p class="covered-note">{journeyProfiles.length} logiciels ou plateformes disposent d'un parcours détaillé.</p>
+  </section>
+
+  <section class="shell section direct-route">
+    <header class="section-head">
+      <div>
+        <p class="mono-label">vous avez déjà un Factur-X</p>
+        <h2>Qui peut prendre directement votre fichier&nbsp;?</h2>
+      </div>
+      <p>Cette réponse séparée sert aux utilisateurs dont le logiciel produit déjà le bon fichier et qui cherchent seulement une plateforme pour l’acheminer.</p>
+    </header>
+    <PracticalRouter />
   </section>
 
   <section class="shell section">
@@ -88,25 +86,15 @@ import { journeyProfiles } from "../data/journey-profiles";
   .figure-stop text { fill: var(--paper); font: 560 12px var(--font-sans); text-anchor: middle; }
   .figure-index { fill: var(--muted); font: 600 12px var(--font-mono); letter-spacing: .06em; }
   .decision-figure figcaption { margin-top: -.3rem; color: var(--muted); font-size: .78rem; text-align: right; }
-  .practical-layout { position: relative; z-index: 2; display: grid; gap: .8rem; max-width: 78rem; margin-top: -1.5rem; }
-  .router-slot { min-width: 0; }
-  .reading-key { display: grid; grid-template-columns: minmax(12rem,.75fr) minmax(0,2.2fr) auto; gap: 1.2rem; align-items: center; border: 1px solid var(--line); border-radius: 1rem; padding: .9rem 1rem; background: rgba(255,255,255,.96); box-shadow: 0 .8rem 2.4rem rgba(41,57,86,.07); }
-  .reading-intro p { margin: 0; color: var(--signal); font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
-  .reading-key h2 { margin: .18rem 0 0; color: var(--bright); font-size: 1.02rem; font-weight: 520; letter-spacing: -.025em; }
-  .reading-key ol { display: grid; grid-template-columns: repeat(3,1fr); gap: .8rem; margin: 0; padding: 0; list-style: none; counter-reset: verdict; }
-  .reading-key li { display: grid; grid-template-columns: auto 1fr; gap: .1rem .55rem; min-width: 0; counter-increment: verdict; }
-  .reading-key li::before { display: grid; grid-row: 1 / 3; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--signal-soft); color: var(--accent); content: counter(verdict, decimal-leading-zero); font: 700 .75rem/1 var(--font-mono); }
-  .reading-key li strong { color: var(--paper); font-size: .8rem; }
-  .reading-key li span { color: var(--muted); font-size: .76rem; line-height: 1.4; }
-  .scope-note { max-width: 12rem; margin: 0; border-left: 1px solid var(--line); padding-left: 1rem; color: var(--muted); font-size: .76rem; }
   .existing-tool { max-width: 72rem; }
   .existing-tool .section-head { margin-bottom: 1.2rem; }
+  .direct-route { max-width: 78rem; }
   .covered-note { margin: .7rem 0 0; color: var(--muted); font-size: .76rem; }
   .after-check { display: grid; grid-template-columns: minmax(0, .8fr) minmax(16rem, 1fr) auto; gap: 2rem; align-items: center; border: 1px solid var(--line); border-radius: 1.1rem; padding: 1.4rem; background: rgba(255,255,255,.72); }
   .after-check h2 { max-width: 15ch; margin: .5rem 0 0; color: var(--bright); font-size: clamp(1.45rem, 2.6vw, 2rem); font-weight: 500; line-height: 1.08; letter-spacing: -.035em; }
   .after-check > p { color: var(--muted); }
   .after-check .button { margin: 0; white-space: nowrap; }
-  @media (max-width: 950px) { .decision-hero-layout { grid-template-columns: 1fr; gap: 1.5rem; } .decision-copy h1 { max-width: 18ch; } .decision-figure { border-top: 1px solid var(--line); border-left: 0; padding: 1rem 0 0; } .reading-key { grid-template-columns: 1fr; } .scope-note { max-width: none; border-top: 1px solid var(--line); border-left: 0; padding: .7rem 0 0; } }
-  @media (max-width: 850px) { .after-check { grid-template-columns: 1fr; } .reading-key ol { grid-template-columns: repeat(3,1fr); } }
-  @media (max-width: 620px) { .decision-hero { padding-top: 1.6rem; } .decision-copy h1 { font-size: 2.25rem; } .decision-figure { display: none; } .reading-key { order: 2; } .reading-key ol { grid-template-columns: 1fr; } .practical-layout { margin-top: -1rem; } .router-slot { order: 1; } }
+  @media (max-width: 950px) { .decision-hero-layout { grid-template-columns: 1fr; gap: 1.5rem; } .decision-copy h1 { max-width: 18ch; } .decision-figure { border-top: 1px solid var(--line); border-left: 0; padding: 1rem 0 0; } }
+  @media (max-width: 850px) { .after-check { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .decision-hero { padding-top: 1.6rem; } .decision-copy h1 { font-size: 2.25rem; } .decision-figure { display: none; } }
 </style>

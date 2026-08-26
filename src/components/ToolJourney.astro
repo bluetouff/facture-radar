@@ -31,7 +31,7 @@ const quickTools = journeyProfiles.slice(0, 7).map((profile) => profile.toolLabe
         placeholder="Tiime, Sage 50, Qonto, Sellsy…"
         required
       />
-      <button type="submit">Continuer <InterfaceIcon name="arrow" /></button>
+      <button type="submit">Obtenir ma réponse <InterfaceIcon name="arrow" /></button>
     </div>
     <datalist id="known-tools">
       {suggestions.map((suggestion) => <option value={suggestion} />)}
@@ -138,6 +138,7 @@ const quickTools = journeyProfiles.slice(0, 7).map((profile) => profile.toolLabe
     </div>
     <p class="vertical-note">Les {journeyProfiles.length} plateformes étudiées disposent d'un parcours détaillé. Les autres logiciels conservent une vérification courte lorsqu'une édition ou un raccordement reste à confirmer.</p>
     <div class="verdict-actions">
+      <button type="button" id="refine-journey" hidden>Voir mon calendrier et mon coût</button>
       <button type="button" id="copy-tool-answer"><InterfaceIcon name="copy" /> Copier le résumé</button>
       <a id="tool-profile-link" href="/diagnostic/">Voir les plateformes étudiées</a>
     </div>
@@ -163,9 +164,10 @@ const quickTools = journeyProfiles.slice(0, 7).map((profile) => profile.toolLabe
   const journeyResult = document.querySelector<HTMLElement>("#journey-result");
   const genericResult = document.querySelector<HTMLElement>("#tool-verifier-result");
   const quickToolButtons = document.querySelectorAll<HTMLButtonElement>("[data-tool-example]");
+  const refineJourney = document.querySelector<HTMLButtonElement>("#refine-journey");
   const homeHero = form?.closest<HTMLElement>(".hero");
 
-  const verdictLabels = { keep: "Fonctions disponibles", act: "Action nécessaire", unconfirmed: "Points à confirmer" } as const;
+  const verdictLabels = { keep: "Garder", act: "Changer", unconfirmed: "Compléter" } as const;
   const journeyStatusLabels = { ready: "Prêt selon vos réponses", action: "Action nécessaire", confirm: "À vérifier" } as const;
   let copyText = "";
   let currentInput: { tool: string; audience: JourneyAudience; activation: ActivationAnswer } | null = null;
@@ -228,6 +230,7 @@ const quickTools = journeyProfiles.slice(0, 7).map((profile) => profile.toolLabe
     }));
     profileLink.href = verification.platform ? `/plateformes/${verification.platform.slug}/` : "/diagnostic/";
     profileLink.textContent = verification.platform ? "Voir la fiche complète" : "Voir les plateformes étudiées";
+    if (refineJourney) refineJourney.hidden = findJourneyProfile(input.value) === null;
 
     const sourceIds = verification.lines.flatMap((line) => line.evidence?.sourceIds ?? []);
     renderSources(sourceList, sourceIds);
@@ -362,10 +365,10 @@ const quickTools = journeyProfiles.slice(0, 7).map((profile) => profile.toolLabe
 
   const startVerification = () => {
     if (!input) return;
-    if (findJourneyProfile(input.value)) prepareJourney();
-    else renderGeneric();
+    renderGeneric();
   };
   form?.addEventListener("submit", (event) => { event.preventDefault(); startVerification(); });
+  refineJourney?.addEventListener("click", prepareJourney);
   quickToolButtons.forEach((button) => button.addEventListener("click", () => {
     if (!input) return;
     input.value = button.dataset.toolExample ?? "";
@@ -404,6 +407,7 @@ const quickTools = journeyProfiles.slice(0, 7).map((profile) => profile.toolLabe
 </script>
 
 <style>
+  .tool-verifier [hidden] { display: none !important; }
   .tool-verifier { overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal) 20%, var(--line)); border-radius: 1.35rem; background: rgba(255,255,255,.94); box-shadow: 0 1.6rem 4.5rem rgba(41,57,86,.12); }
   .tool-card-head { display: grid; grid-template-columns: auto 1fr auto; gap: .75rem; align-items: center; padding: .85rem 1rem; background: linear-gradient(135deg, var(--signal-soft), rgba(255,255,255,.72)); }
   .tool-card-icon { display: grid; place-items: center; width: 2.35rem; height: 2.35rem; border-radius: .7rem; background: #fff; color: var(--signal); box-shadow: inset 0 0 0 1px var(--line); }

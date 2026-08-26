@@ -30,8 +30,8 @@ export interface PassportRoute {
   checkedAt: string;
 }
 
-export const PASSPORT_LAB_VERSION = "PA Check Lab 0.1";
-export const PASSPORT_LAB_CHECKED_AT = "2026-08-25";
+export const PASSPORT_VERSION = "Passeport 0.1";
+export const PASSPORT_CHECKED_AT = "2026-08-25";
 
 export const passportRoutes: PassportRoute[] = [
   {
@@ -84,7 +84,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Importer ce même fichier, contrôler les lignes et totaux repris, puis vérifier que Qonto le conserve comme Factur-X avant l'envoi.",
     nextStep: "Ouvrez Factures clients dans Qonto et utilisez l'import de facture électronique.",
     profileHref: "/plateformes/qonto/",
-    checkedAt: PASSPORT_LAB_CHECKED_AT,
+    checkedAt: PASSPORT_CHECKED_AT,
   },
   {
     slug: "pennylane",
@@ -136,7 +136,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Faire importer ce fichier par l'API, puis comparer le PDF, le profil, les lignes, les totaux et l'identifiant de facture avant émission.",
     nextStep: "Si vous avez le plan Essentiel, demandez un import test via l'API e-invoice avant de modifier votre chaîne actuelle.",
     profileHref: "/plateformes/pennylane/",
-    checkedAt: PASSPORT_LAB_CHECKED_AT,
+    checkedAt: PASSPORT_CHECKED_AT,
   },
   {
     slug: "b2brouter",
@@ -188,7 +188,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Déposer ce fichier dans le portail gratuit et vérifier qu'il reste identifié comme Factur-X avec ses données structurées, sans recréation.",
     nextStep: "Créez un compte de test et importez une seule facture non sensible avant de retenir cette route.",
     profileHref: null,
-    checkedAt: PASSPORT_LAB_CHECKED_AT,
+    checkedAt: PASSPORT_CHECKED_AT,
   },
   {
     slug: "superpdp",
@@ -240,7 +240,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Demander si le compte accepte un PDF/A-3 Factur-X EN 16931 tiers et s'il transmet son XML sans le reconstruire.",
     nextStep: "Posez cette question précise à SuperPDP avant de déplacer votre facturation.",
     profileHref: "/plateformes/superpdp/",
-    checkedAt: PASSPORT_LAB_CHECKED_AT,
+    checkedAt: PASSPORT_CHECKED_AT,
   },
   {
     slug: "tiime",
@@ -292,7 +292,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Demander à Tiime si une facture de vente Factur-X créée ailleurs peut être déposée puis émise sans ressaisie.",
     nextStep: "Si vous souhaitez garder votre outil actuel, faites confirmer l'import d'un Factur-X tiers avant d'activer Tiime comme PA.",
     profileHref: "/plateformes/tiime/",
-    checkedAt: PASSPORT_LAB_CHECKED_AT,
+    checkedAt: PASSPORT_CHECKED_AT,
   },
   {
     slug: "abby",
@@ -344,7 +344,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Demander si Abby accepte une facture de vente Factur-X finalisée ailleurs et la transmet sans la recréer.",
     nextStep: "Si votre facture vient d'un autre outil, obtenez une réponse écrite d'Abby avant toute bascule.",
     profileHref: "/plateformes/abby/",
-    checkedAt: PASSPORT_LAB_CHECKED_AT,
+    checkedAt: PASSPORT_CHECKED_AT,
   },
 ];
 

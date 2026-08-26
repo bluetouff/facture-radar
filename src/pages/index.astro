@@ -112,17 +112,20 @@ const spotlights = spotlightSlugs
     </div>
   </section>
 
-  <section class="shell lab-callout" aria-labelledby="lab-callout-title">
-    <div class="lab-callout-copy">
-      <p class="mono-label">PA Check Lab · tests en conditions réelles</p>
-      <h2 id="lab-callout-title">Est-ce que votre facture passe vraiment&nbsp;?</h2>
-      <p>Nous essayons les mêmes trois factures chez chaque plateforme. La réponse tient en une phrase, avec la limite éventuelle et l’action utile.</p>
-      <a href="/lab/">Voir les réponses actuelles <InterfaceIcon name="arrow" /></a>
+  <section class="shell decision-callout" aria-labelledby="decision-callout-title">
+    <div class="decision-callout-copy">
+      <p class="mono-label">une question · une réponse utile</p>
+      <h2 id="decision-callout-title">Pouvez-vous garder votre outil actuel&nbsp;?</h2>
+      <p>Entrez son nom. PA Check vous indique immédiatement si vous pouvez le garder, ce qu’il faut compléter ou pourquoi une autre solution devient nécessaire.</p>
+      <a href="/verifier-mon-outil/#verifier-logiciel">Vérifier mon outil <InterfaceIcon name="arrow" /></a>
     </div>
-    <div class="lab-callout-visual" aria-hidden="true">
-      <div class="lab-files"><span><b>01</b><i></i><i></i></span><span><b>02</b><i></i><i></i></span><span><b>03</b><i></i><i></i></span></div>
-      <div class="lab-sequence"><span>DÉPOSÉ</span><i></i><span>LU</span><i></i><span>ENVOYÉ</span></div>
-      <strong><InterfaceIcon name="lab" /> Premier essai en préparation</strong>
+    <div class="decision-callout-visual" aria-hidden="true">
+      <div class="decision-outcomes">
+        <span class="outcome-keep"><b>01</b><strong>GARDER</strong><small>Le nécessaire est couvert</small></span>
+        <span class="outcome-complete"><b>02</b><strong>COMPLÉTER</strong><small>Un point reste à régler</small></span>
+        <span class="outcome-change"><b>03</b><strong>CHANGER</strong><small>Une fonction manque</small></span>
+      </div>
+      <strong><InterfaceIcon name="route" /> Réponse immédiate, détails ensuite</strong>
     </div>
   </section>
 
@@ -216,23 +219,22 @@ const spotlights = spotlightSlugs
   .callout-points span { display: inline-flex; gap: .35rem; align-items: center; border-radius: 999px; padding: .4rem .55rem; background: #fff; color: var(--paper); font-size: .76rem; font-weight: 650; box-shadow: inset 0 0 0 1px var(--line); }
   .callout-points :global(svg), .invoice-callout .button :global(svg) { width: .9rem; height: .9rem; }
   .invoice-callout .button { gap: .5rem; }
-  .lab-callout { display: grid; grid-template-columns: minmax(0,.92fr) minmax(390px,1.08fr); gap: clamp(2rem,6vw,5rem); align-items: center; overflow: hidden; margin-top: 1rem; border-radius: 1.4rem; padding: clamp(1.5rem,4vw,2.7rem); background: #0d1a2a; color: #fff; box-shadow: 0 1.5rem 3.8rem rgba(26,42,67,.13); }
-  .lab-callout-copy h2 { max-width: 23ch; margin: .75rem 0 0; color: #f7fbff; font-size: clamp(1.55rem,2.8vw,2.15rem); font-weight: 460; line-height: 1.14; letter-spacing: -.033em; }
-  .lab-callout-copy > p:not(.mono-label) { max-width: 42rem; color: rgba(234,241,249,.7); font-size: .85rem; line-height: 1.68; }
-  .lab-callout-copy .mono-label { color: #7dddc7; }
-  .lab-callout-copy > a { display: inline-flex; gap: .5rem; align-items: center; margin-top: .55rem; color: #8ee4d0; font-size: .78rem; font-weight: 710; }
-  .lab-callout-copy > a :global(svg) { width: .95rem; height: .95rem; }
-  .lab-callout-visual { position: relative; min-width: 0; border: 1px solid rgba(255,255,255,.12); border-radius: 1rem; padding: 1rem; background: rgba(255,255,255,.035); }
-  .lab-files { display: flex; gap: .7rem; align-items: flex-end; }
-  .lab-files > span { display: grid; width: 4rem; height: 5rem; align-content: start; gap: .55rem; border: 1px solid rgba(126,224,201,.22); border-radius: .4rem; padding: .65rem; background: rgba(255,255,255,.055); color: #81deca; }
-  .lab-files > span:nth-child(2) { height: 5.7rem; color: #9aa8ff; }
-  .lab-files > span:nth-child(3) { height: 4.65rem; color: #e5b366; }
-  .lab-files b { font: 690 .68rem/1 var(--font-mono); }
-  .lab-files i { height: .25rem; border-radius: 999px; background: currentColor; opacity: .22; }
-  .lab-sequence { display: grid; grid-template-columns: auto 1fr auto 1fr auto; gap: .35rem; align-items: center; margin-top: 1rem; color: rgba(255,255,255,.42); font: 630 .68rem/1 var(--font-mono); }
-  .lab-sequence i { height: 1px; background: rgba(126,224,201,.24); }
-  .lab-callout-visual > strong { position: absolute; top: .8rem; right: .8rem; display: inline-flex; gap: .38rem; align-items: center; border: 1px solid rgba(229,179,102,.25); border-radius: 999px; padding: .38rem .55rem; color: #e7bd79; font-size: .68rem; font-weight: 670; }
-  .lab-callout-visual > strong :global(svg) { width: .82rem; height: .82rem; }
+  .decision-callout { display: grid; grid-template-columns: minmax(0,.92fr) minmax(390px,1.08fr); gap: clamp(2rem,6vw,5rem); align-items: center; overflow: hidden; margin-top: 1rem; border-radius: 1.4rem; padding: clamp(1.5rem,4vw,2.7rem); background: #0d1a2a; color: #fff; box-shadow: 0 1.5rem 3.8rem rgba(26,42,67,.13); }
+  .decision-callout-copy h2 { max-width: 23ch; margin: .75rem 0 0; color: #f7fbff; font-size: clamp(1.55rem,2.8vw,2.15rem); font-weight: 460; line-height: 1.14; letter-spacing: -.033em; }
+  .decision-callout-copy > p:not(.mono-label) { max-width: 42rem; color: rgba(234,241,249,.7); font-size: .85rem; line-height: 1.68; }
+  .decision-callout-copy .mono-label { color: #7dddc7; }
+  .decision-callout-copy > a { display: inline-flex; gap: .5rem; align-items: center; margin-top: .55rem; color: #8ee4d0; font-size: .78rem; font-weight: 710; }
+  .decision-callout-copy > a :global(svg) { width: .95rem; height: .95rem; }
+  .decision-callout-visual { position: relative; min-width: 0; border: 1px solid rgba(255,255,255,.12); border-radius: 1rem; padding: 1rem; background: rgba(255,255,255,.035); }
+  .decision-outcomes { display: grid; grid-template-columns: repeat(3,1fr); gap: .65rem; padding-top: 2rem; }
+  .decision-outcomes > span { display: grid; min-height: 6.6rem; align-content: start; gap: .45rem; border: 1px solid rgba(126,224,201,.22); border-radius: .75rem; padding: .75rem; background: rgba(255,255,255,.055); color: #81deca; }
+  .decision-outcomes .outcome-complete { border-color: rgba(154,168,255,.24); color: #aab5ff; }
+  .decision-outcomes .outcome-change { border-color: rgba(229,179,102,.27); color: #e5b366; }
+  .decision-outcomes b { font: 690 .65rem/1 var(--font-mono); opacity: .72; }
+  .decision-outcomes strong { font-size: .72rem; letter-spacing: .06em; }
+  .decision-outcomes small { color: rgba(255,255,255,.56); font-size: .72rem; line-height: 1.4; }
+  .decision-callout-visual > strong { position: absolute; top: .8rem; right: .8rem; display: inline-flex; gap: .38rem; align-items: center; border: 1px solid rgba(126,224,201,.22); border-radius: 999px; padding: .38rem .55rem; color: #8ee4d0; font-size: .68rem; font-weight: 670; }
+  .decision-callout-visual > strong :global(svg) { width: .82rem; height: .82rem; }
   .quiet-section { border-block: 1px solid color-mix(in srgb, var(--signal) 12%, var(--line)); background: color-mix(in srgb, var(--signal-soft) 46%, transparent); }
   .story-stage { position: relative; overflow: hidden; margin-top: clamp(3.5rem,7vw,6rem); padding-block: clamp(3.8rem,7vw,6.5rem) 1.2rem; background: #0c1727; color: #fff; }
   .story-stage::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(138,158,194,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(138,158,194,.055) 1px,transparent 1px); background-size: 28px 28px; mask-image: linear-gradient(90deg,transparent,#000 48%,#000); content: ""; }
@@ -279,7 +281,8 @@ const spotlights = spotlightSlugs
   .dossier-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
   @media (min-width: 901px) { .hero-guide { grid-template-columns: repeat(3, 1fr); } .hero-guide > div { grid-template-columns: 1fr; align-items: start; } }
   @media (max-width: 900px) { .story-layout { grid-template-columns: 1fr; } }
-  @media (max-width: 820px) { .lab-callout { grid-template-columns: 1fr; } }
-  @media (max-width: 700px) { .invoice-callout { grid-template-columns: 1fr; } .invoice-visual { min-height: 15rem; } .invoice-sheet { scale: .88; } .lab-sequence { overflow-x: auto; grid-template-columns: repeat(5,max-content); padding-bottom: .35rem; } }
+  @media (max-width: 820px) { .decision-callout { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) { .invoice-callout { grid-template-columns: 1fr; } .invoice-visual { min-height: 15rem; } .invoice-sheet { scale: .88; } }
+  @media (max-width: 520px) { .decision-outcomes { grid-template-columns: 1fr; padding-top: 2.5rem; } .decision-outcomes > span { min-height: 0; } }
   @media (max-width: 620px) { .hero-stage { border-radius: 0 0 1.5rem 1.5rem; } .stats-shell { margin-top: -1rem; } .story-stage { padding-top: 3rem; } .story-chapters > header { display: grid; } .story-bridge { grid-template-columns: 1fr; } .story-bridge i { width: 1px; height: .8rem; margin-inline: auto; } .pa-contribution { grid-template-columns: auto 1fr; } .pa-contribution > :global(svg) { display: none; } .dossier-grid { grid-template-columns: 1fr; } }
 </style>
