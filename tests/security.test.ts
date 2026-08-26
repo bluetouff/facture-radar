@@ -121,3 +121,9 @@ test("aucune dépendance de sandbox PA n'est exposée dans le produit", async ()
   ].map((path) => readFile(new URL(path, import.meta.url), "utf8")));
   assert.doesNotMatch(publicSurfaces.join("\n"), /sandbox|B2BROUTER_SANDBOX|X-B2B-API-Key|\/lab\//i);
 });
+
+test("le soutien passe par la page publique de l0g", async () => {
+  const layout = await readFile(new URL("../src/layouts/BaseLayout.astro", import.meta.url), "utf8");
+  assert.match(layout, /class="footer-support" href="https:\/\/l0g\.fr\/soutenir\/"/);
+  assert.doesNotMatch(layout, /(?:donate|buy)\.stripe\.com/);
+});

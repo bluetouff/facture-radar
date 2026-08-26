@@ -18,6 +18,7 @@ type IconName =
   | "grid"
   | "download"
   | "lock"
+  | "support"
   | "menu"
   | "chevron";
 
@@ -133,6 +134,9 @@ const { name, class: className } = Astro.props;
       <rect x="5" y="10" width="14" height="10" rx="2" />
       <path d="M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10M12 14v2" />
     </>
+  )}
+  {name === "support" && (
+    <path d="M20.3 5.7a4.7 4.7 0 0 0-6.7 0L12 7.3l-1.6-1.6a4.7 4.7 0 0 0-6.7 6.7L12 20l8.3-7.6a4.7 4.7 0 0 0 0-6.7Z" />
   )}
   {name === "menu" && <path d="M4 7h16M4 12h16M4 17h16" />}
   {name === "chevron" && <path d="m8 10 4 4 4-4" />}
