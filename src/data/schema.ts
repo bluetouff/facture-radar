@@ -36,7 +36,7 @@ export const platformSchema = z.object({
   targets: z.array(companySize).min(1),
   ecosystem: z.array(z.string()),
   officialStatus: evidence(z.literal("registered")),
-  registeredAt: evidence(z.iso.date()),
+  registeredAt: evidence(z.union([z.iso.date(), z.literal("à venir")])),
   pricing: evidence(pricing),
   allowance: evidence(allowance),
   sendsInvoices: evidence(z.boolean()),
@@ -63,7 +63,7 @@ export const sourceSchema = z.object({
   accessedAt: z.iso.date(),
 });
 
-export const platformsSchema = z.array(platformSchema).length(50);
+export const platformsSchema = z.array(platformSchema).length(148);
 export const sourcesSchema = z.array(sourceSchema).min(12);
 
 const passportFactSchema = z.object({

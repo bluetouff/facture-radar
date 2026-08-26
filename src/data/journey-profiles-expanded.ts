@@ -2,7 +2,7 @@ import type { JourneyCostDefinition, JourneyProfileDefinition } from "./journey-
 
 const checkedAt = "2026-08-26";
 
-interface JourneyInput {
+export interface JourneyInput {
   id: JourneyProfileDefinition["id"];
   aliases: readonly string[];
   platformSlug: string;
@@ -27,7 +27,7 @@ const allAudiences = (cost: JourneyCostDefinition) => ({
   "eti-ge": cost,
 });
 
-const free = (label: string, caveat: string, sourceIds: readonly string[]): JourneyCostDefinition => ({
+export const free = (label: string, caveat: string, sourceIds: readonly string[]): JourneyCostDefinition => ({
   baseMonthlyFrom: 0,
   paMonthlySurcharge: 0,
   label,
@@ -35,7 +35,7 @@ const free = (label: string, caveat: string, sourceIds: readonly string[]): Jour
   sourceIds,
 });
 
-const paid = (amount: number, label: string, caveat: string, sourceIds: readonly string[]): JourneyCostDefinition => ({
+export const paid = (amount: number, label: string, caveat: string, sourceIds: readonly string[]): JourneyCostDefinition => ({
   baseMonthlyFrom: amount,
   paMonthlySurcharge: null,
   label,
@@ -43,7 +43,7 @@ const paid = (amount: number, label: string, caveat: string, sourceIds: readonly
   sourceIds,
 });
 
-const quote = (sourceIds: readonly string[], caveat = "Demandez un chiffrage écrit avec les volumes, l'intégration, l'engagement et la restitution des données."): JourneyCostDefinition => ({
+export const quote = (sourceIds: readonly string[], caveat = "Demandez un chiffrage écrit avec les volumes, l'intégration, l'engagement et la restitution des données."): JourneyCostDefinition => ({
   baseMonthlyFrom: null,
   paMonthlySurcharge: null,
   label: "Prix public non trouvé : devis nécessaire.",
@@ -51,7 +51,7 @@ const quote = (sourceIds: readonly string[], caveat = "Demandez un chiffrage éc
   sourceIds,
 });
 
-function journey(input: JourneyInput): JourneyProfileDefinition {
+export function journey(input: JourneyInput): JourneyProfileDefinition {
   const activation = input.activation ?? {
     question: `Votre entreprise est-elle déjà rattachée à ${input.toolLabel} comme plateforme agréée ?`,
     todo: `Le parcours public de rattachement n'est pas détaillé. Vérifiez le SIREN concerné et demandez à ${input.toolLabel} la confirmation écrite de l'inscription dans l'annuaire.`,
@@ -68,7 +68,7 @@ function journey(input: JourneyInput): JourneyProfileDefinition {
     toolDetail: input.toolDetail,
     checkedAt,
     toolSourceIds: input.sourceIds,
-    contextSourceIds: [],
+    contextSourceIds: input.sourceIds,
     activation: {
       label: "Rattachement",
       question: activation.question,

@@ -1,5 +1,7 @@
 import type { Evidence, Platform } from "./types.ts";
 import { expandedPlatforms } from "./platforms-expanded.ts";
+import { secondWavePlatforms } from "./platforms-expanded-second-wave.ts";
+import { thirdWavePlatforms } from "./platforms-expanded-third-wave.ts";
 
 const checkedAt = "2026-08-25";
 
@@ -646,4 +648,6 @@ export const platforms: Platform[] = [
     importantUnknowns: ["Tarifs et volumes", "API publique", "Conditions de sortie", "Certificat ISO 27001 applicable"]
   },
   ...expandedPlatforms,
+  ...secondWavePlatforms,
+  ...thirdWavePlatforms,
 ];

@@ -5,8 +5,8 @@ import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-pr
 import { platforms } from "../src/data/platforms.ts";
 import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 
-test("les cinquante plateformes étudiées ont un parcours détaillé", () => {
-  assert.equal(journeyProfiles.length, 50);
+test("les 148 plateformes étudiées ont un parcours détaillé", () => {
+  assert.equal(journeyProfiles.length, 148);
   assert.equal(findJourneyProfile("Tiime"), "tiime");
   assert.equal(findJourneyProfile("Sage50"), "sage-50");
   assert.equal(findJourneyProfile("Abby"), "abby");
@@ -121,6 +121,15 @@ test("une offre sur devis ne fabrique ni coût nul ni projection", () => {
   assert.equal(journey.cost.paMonthlySurcharge, null);
   assert.deepEqual(journey.cost.horizons, []);
   assert.match(journey.cost.caveat, /devis/i);
+});
+
+test("une PA incluse dans un abonnement inconnu ne fabrique pas un coût total nul", () => {
+  const journey = buildInvoiceJourney(platforms, { tool: "DigiPA", audience: "micro", activation: "yes" });
+  assert.ok(journey);
+  assert.equal(journey.cost.baseMonthlyFrom, null);
+  assert.equal(journey.cost.paMonthlySurcharge, 0);
+  assert.deepEqual(journey.cost.horizons, []);
+  assert.match(journey.cost.caveat, /prix de l'abonnement/i);
 });
 
 test("Sellsy distingue le prix d'appel par utilisateur du surcoût PA", () => {

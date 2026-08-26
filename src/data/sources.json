@@ -1134,5 +1134,997 @@
     "url": "https://www.chaintrust.io/tarif/",
     "type": "pricing",
     "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "agena-pa-2026",
+    "title": "Plateforme agréée A3 E-Invoicing",
+    "publisher": "AGENA3000",
+    "url": "https://www.agena3000.com/fr/nos-solutions/a3-e-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "arteva-efacture-2026",
+    "title": "Plateforme de facturation électronique Orchestrade",
+    "publisher": "Artéva",
+    "url": "https://www.arteva.fr/orchestrade/facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "arteva-api-2026",
+    "title": "Connecteur API Orchestrade",
+    "publisher": "Artéva",
+    "url": "https://www.arteva.fr/orchestrade/edi/connecteur-api/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "axway-einvoicing-2026",
+    "title": "Axway eInvoicing pour la France",
+    "publisher": "Axway",
+    "url": "https://www.axway.com/fr/produits/b2b-integration/einvoice",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "azopio-pa-2026",
+    "title": "Plateforme agréée Azopio",
+    "publisher": "Azopio",
+    "url": "https://www.azopio.com/fr/facture-electronique-plateforme-agreee-pdp/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "azopio-pricing-2026",
+    "title": "Tarification des abonnements Azopio",
+    "publisher": "Azopio",
+    "url": "https://www.azopio.com/fr/tarification/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "b4value-platform-2026",
+    "title": "Sending and receiving invoices and credit notes",
+    "publisher": "b4value.net",
+    "url": "https://www.b4value.net/en",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "b4value-pricing-2026",
+    "title": "Package S et grille de services b4value.net",
+    "publisher": "b4value.net",
+    "url": "https://www.b4value.net/en/?catid=2&id=307&view=article",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "cecurity-pa-2026",
+    "title": "Plateforme agréée eFacture",
+    "publisher": "Cecurity.com",
+    "url": "https://www.cecurity.com/plateforme-dematerialisation-partenaire/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "cecurity-api-2026",
+    "title": "API publiques Cecurity.com",
+    "publisher": "Cecurity.com",
+    "url": "https://www.cecurity.com/api-publiques/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "cecurity-facturx-2026",
+    "title": "Adoption du format Factur-X par eFacture",
+    "publisher": "Cecurity.com",
+    "url": "https://www.cecurity.com/cecurity-com-adopte-le-format-factur-x-pour-sa-plateforme-saas-de-dematerialisation-des-factures/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "cleartax-france-2026",
+    "title": "Plateforme agréée ClearTax pour la France",
+    "publisher": "ClearTax",
+    "url": "https://www.cleartax.com/fr",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "cleartax-requirements-2026",
+    "title": "Technical requirements for e-invoicing in France",
+    "publisher": "ClearTax",
+    "url": "https://www.cleartax.com/fr/en/technical-requirements-e-invoicing-france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "digital-technologies-pa-2026",
+    "title": "Digital Technologies devient plateforme agréée en France",
+    "publisher": "Digital Technologies",
+    "url": "https://digtechs.com/digital-technologies-devient-officiellement-une-platforme-agreee-en-france/?lang=fr",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "docoon-pa-2026",
+    "title": "Plateforme agréée Docoon Invoice",
+    "publisher": "Docoon",
+    "url": "https://docoon.com/plateforme-agreee/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "docprocess-pa-2026",
+    "title": "Offre PA DocProcess",
+    "publisher": "DocProcess",
+    "url": "https://doc-process.com/wp-content/uploads/2023/12/FR-Offre-PDP-DocProcess-.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ecosio-einvoicing-2026",
+    "title": "Solutions de facturation électronique ecosio",
+    "publisher": "ecosio",
+    "url": "https://ecosio.com/fr/la-facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ecosio-connectors-2026",
+    "title": "Compliance connectors ecosio",
+    "publisher": "ecosio",
+    "url": "https://connect.ecosio.com/docs/e-invoicing-connectors",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "edics-platform-2026",
+    "title": "Plateforme documentaire EDiCSpro",
+    "publisher": "EDiCS",
+    "url": "https://edics.fr/notre-plateforme/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "edt-eima-2026",
+    "title": "Plateforme de facturation électronique EIMA",
+    "publisher": "EDT",
+    "url": "https://www.group-edt.fr/nos-solutions/e-invoice-eima/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "eezi-platform-2026",
+    "title": "Global E-Invoicing and e-VAT Compliance Platform",
+    "publisher": "eezi",
+    "url": "https://eezi.io/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "eezi-france-api-2026",
+    "title": "France e-Invoicing invoice data model",
+    "publisher": "eezi",
+    "url": "https://docs.eezi.io/docs/data-model-invoice-france-ubl",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "effinum-platform-2026",
+    "title": "Plateforme Effinum",
+    "publisher": "Effinum",
+    "url": "https://effinum.fr/plateforme/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "euro-information-pa-2026",
+    "title": "HBS e-factures du Crédit Mutuel et du CIC",
+    "publisher": "Euro-Information",
+    "url": "https://cdnwmii.e-i.com/SITW/wm/global/1.0.0/corporate/communiques/facturation-electronique-entreprises/12_02_2025_CP_CM_CIC_Facturation-electronique-entreprises.pdf",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "fiducial-pricing-2026",
+    "title": "Tarifs de Facilia et de la plateforme FIDUCIAL Cloud",
+    "publisher": "FIDUCIAL",
+    "url": "https://www.fiducial.fr/facilia/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "fonoa-einvoicing-2026",
+    "title": "Global E-Invoicing and Real-Time Tax Reporting API",
+    "publisher": "Fonoa",
+    "url": "https://www.fonoa.com/platform/e-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "gep-einvoicing-2026",
+    "title": "GEP E-Invoice Automation",
+    "publisher": "GEP",
+    "url": "https://www.gep.com/software/e-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "sigma-lixa-2026",
+    "title": "Plateforme agréée Lixa",
+    "publisher": "Groupe Sigma",
+    "url": "https://www.sigma.fr/services-solutions/edition-integration/gestion-entreprise/erp-lixa/lixa-pdp/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "gurusoft-france-2026",
+    "title": "Solutions GuruSoft pour la France",
+    "publisher": "GuruSoft",
+    "url": "https://guru-soft.com/fr/france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "gurusoft-sap-2026",
+    "title": "Intégration GuruSoft pour SAP Business One",
+    "publisher": "GuruSoft",
+    "url": "https://guru-soft.com/fr/france/integration-sap-business-one/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "icd-dematrust-2026",
+    "title": "DEMATRUST Light pour TPE et PME",
+    "publisher": "ICD International",
+    "url": "https://www.icdint.fr/dematrust-light",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "iedi-france-2026",
+    "title": "Préparation à la facturation électronique française",
+    "publisher": "iEDI",
+    "url": "https://iedi.com/facturation-electronique-france-2026",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "indicom-services-2026",
+    "title": "Services de facturation électronique Indicom",
+    "publisher": "Indicom",
+    "url": "https://indicom.eu/fr/nos-services/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "indicom-france-pa-2026",
+    "title": "Agrément définitif d'Indicom en France",
+    "publisher": "Indicom",
+    "url": "https://indicom.eu/fr/senza-categoria-fr/indicom-a-ete-definitivement-agree-en-tant-que-pa-plateforme-agreee-pour-la-facturation-electronique-en-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "infologic-pa-2026",
+    "title": "Plateforme agréée Copilote",
+    "publisher": "Infologic",
+    "url": "https://www.infologic-copilote.fr/infos-erp-copilote/pdp-copilote/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "intesa-einvoicing-2026",
+    "title": "Electronic invoicing for companies",
+    "publisher": "Intesa",
+    "url": "https://www.intesa.it/en/what-we-do/electronic-invoicing/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "intesa-france-pa-2026",
+    "title": "Intesa becomes an accredited platform in France",
+    "publisher": "Intesa",
+    "url": "https://www.intesa.it/en/in-te-s-a-s-p-a-becomes-an-accredited-platform-plateforme-agreee-for-the-exchange-of-electronic-invoices-in-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "iopole-api-2026",
+    "title": "API et bac à sable Iopole",
+    "publisher": "Iopole",
+    "url": "https://www.iopole.com/en/developpeurs",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "iopole-pricing-2026",
+    "title": "Plans et volumes Iopole",
+    "publisher": "Iopole",
+    "url": "https://www.iopole.com/en/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "legalinvoice-api-2026",
+    "title": "LegalInvoice Developers Portal",
+    "publisher": "Tinexta InfoCert",
+    "url": "https://developers.infocert.digital/legalinvoice/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "legalinvoice-france-pa-2026",
+    "title": "LegalInvoice accredited as a platform in France",
+    "publisher": "Tinexta InfoCert",
+    "url": "https://infocert.digital/news-event/legalinvoice-accredited-as-plateforme-agreee-in-france-strengthening-its-international-e-invoicing-leadership/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "logilec-edi-2026",
+    "title": "Hub EDI de LOGILEC",
+    "publisher": "LOGILEC",
+    "url": "https://www.logilec.leclerc/dematerialisation/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "marosa-france-2026",
+    "title": "Modules de facturation électronique pour la France",
+    "publisher": "Marosa",
+    "url": "https://marosavat.com/product/ctc-e-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "marosa-api-2026",
+    "title": "VATify e-Invoicing and VAT Compliance API",
+    "publisher": "Marosa",
+    "url": "https://developers.marosavat.com/docs/what-is-the-vatify-api",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "medius-france-2026",
+    "title": "Plateforme agréée Medius pour la France",
+    "publisher": "Medius",
+    "url": "https://www.medius.com/fr/presentation-des-solutions/ap-automation/conformite/obligation-pdp/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "medius-integrations-2026",
+    "title": "Intégrations ERP et API REST Medius",
+    "publisher": "Medius",
+    "url": "https://www.medius.com/fr/presentation-des-solutions/integrations/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "nttdata-einvoicing-2026",
+    "title": "Plateforme de facturation électronique NTT DATA",
+    "publisher": "NTT DATA Business Solutions",
+    "url": "https://fr.nttdata-solutions.com/e-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "openbee-pa-2026",
+    "title": "Plateforme agréée Open Bee",
+    "publisher": "Open Bee",
+    "url": "https://www.openbee.com/plateforme-dematerialisation-partenaire/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "paragon-ipp-2026",
+    "title": "Invoice Paragon Platform",
+    "publisher": "Paragon",
+    "url": "https://www.paragon.world/fr/solutions/plateforme-agreee-ipp",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "pitneybowes-pa-2026",
+    "title": "Offres Pitney Bowes Invoice Services",
+    "publisher": "Pitney Bowes",
+    "url": "https://www.pitneybowes.com/fr/transformation-digitale/facturation-electronique/plateforme-agreee.html",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "qweeby-pa-2026",
+    "title": "Plateforme agréée Qweeby",
+    "publisher": "Qweeby",
+    "url": "https://www.qweeby.fr/plateforme-agreee",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "seeburger-hub-2026",
+    "title": "SEEBURGER E-Invoicing Hub",
+    "publisher": "SEEBURGER",
+    "url": "https://www.seeburger.com/fr/solution-brief/seeburger-e-invoicing-hub",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "seqino-api-2026",
+    "title": "API de facturation électronique SEQINO",
+    "publisher": "SEQINO",
+    "url": "https://seqino.com/api-pdp-marque-blanche-grise-facture-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "seqino-docs-2026",
+    "title": "Introduction à l'API PA SEQINO",
+    "publisher": "SEQINO",
+    "url": "https://help.api-pdp.seqino.com/fr/articles/362018-introduction",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "serensia-pa-2026",
+    "title": "Plateforme agréée Serensia",
+    "publisher": "Serensia",
+    "url": "https://serensia.com/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "sovos-france-2026",
+    "title": "Facturation électronique en France",
+    "publisher": "Sovos",
+    "url": "https://sovos.com/fr/tva/regles-fiscales/facturation-electronique-en-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "sovos-api-france-2026",
+    "title": "Send invoices through the Sovos France API",
+    "publisher": "Sovos",
+    "url": "https://docs.sovos.com/en/indirect-tax/indirect-tax-products/einvoicing/compliance-network/country-setup-guides/france/send-invoices",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "sps-einvoicing-2026",
+    "title": "Solution E-Invoicing SPS Commerce",
+    "publisher": "SPS Commerce",
+    "url": "https://www.spscommerce.com/fr/produits/e-invoicing/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "symtrax-france-2026",
+    "title": "Compleo Invoice Platform pour la France",
+    "publisher": "Symtrax",
+    "url": "https://www.symtrax.com/fr/solutions/facturation-electronique-b2b-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "taxera-platform-2026",
+    "title": "Global Tax Compliance Platform",
+    "publisher": "Taxera Technologies",
+    "url": "https://taxera.tech/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tenor-pa-2026",
+    "title": "Plateforme agréée eDemat",
+    "publisher": "Tenor",
+    "url": "https://tenorsolutions.com/solutions/plateforme-pdp/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tesisquare-france-2026",
+    "title": "TESI Electronic Invoicing en France",
+    "publisher": "TESISQUARE",
+    "url": "https://www.tesisquare.com/fr/electronic-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tradeshift-france-2026",
+    "title": "Plateforme agréée Tradeshift France",
+    "publisher": "Tradeshift",
+    "url": "https://tradeshift.com/fr/pdp-facturation-electronique-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tradeshift-api-2026",
+    "title": "Babelway REST API",
+    "publisher": "Tradeshift",
+    "url": "https://default.support.tradeshift.com/knowledgebase/article/360016875260",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "transalis-einvoicing-2026",
+    "title": "Global eInvoicing network",
+    "publisher": "Transalis",
+    "url": "https://www.transalis.com/einvoicing",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tungsten-platform-2026",
+    "title": "Tungsten e-Invoice Connect",
+    "publisher": "Tungsten Automation",
+    "url": "https://www.tungstenautomation.fr/products/e-invoice-connect",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tungsten-france-2026",
+    "title": "France e-Invoicing compliance updates",
+    "publisher": "Tungsten Automation",
+    "url": "https://www.tungstenautomation.com/products/invoiceagility/invoicing-compliance/country-updates/country/france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tx2-pa-2026",
+    "title": "Plateforme agréée TX2 Concept",
+    "publisher": "TX2 Concept",
+    "url": "https://www.tx2.fr/solutions/facture-electronique/plateforme-dematerialisation-partenaire/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "voxel-france-2026",
+    "title": "Plateforme agréée Voxel pour la France",
+    "publisher": "Voxel",
+    "url": "https://www.voxelgroup.net/fr/plateforme-agreee/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "accenture-ecomply-2026",
+    "title": "eComply & Verify",
+    "publisher": "Accenture",
+    "url": "https://www.accenture.com/us-en/products/ecomply-verify",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ademico-france-2026",
+    "title": "France e-invoicing and Peppol",
+    "publisher": "Ademico Software",
+    "url": "https://ademico-software.com/peppol/france-e-invoicing/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ags-widofact-2026",
+    "title": "Plateforme PA e-facturation WiDOFACT",
+    "publisher": "AGS Records Management",
+    "url": "https://www.ags-recordsmanagement.com/fr/reforme-facturation-electronique/plateforme-pa-e-facturation/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "arratech-france-2026",
+    "title": "E-invoicing in France",
+    "publisher": "Arratech",
+    "url": "https://www.arratech.com/e-invoicing-in-france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "arratech-api-2026",
+    "title": "Arratech Connect capability brief",
+    "publisher": "Arratech",
+    "url": "https://docs.arratech.com/h/arratech-connect-capability-brief",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "aruba-onesuite-2026",
+    "title": "OneSuite : fonctionnalités et tarifs",
+    "publisher": "Aruba",
+    "url": "https://www.arubaonesuite.fr/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "atgp-beefact-2026",
+    "title": "BEE.FACT et la facture électronique",
+    "publisher": "ATGP",
+    "url": "https://www.atgp.net/nos-solutions/facture-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "bc-easinvoice-2026",
+    "title": "eas'Invoice",
+    "publisher": "BC Solutions",
+    "url": "https://bcsolutions.fr/easinvoice/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "cbs-eworld-2026",
+    "title": "e-world.cloud",
+    "publisher": "CBS Corporate Business Solutions",
+    "url": "https://www.cbs-consulting.com/en/expertise/e-invoice-world-cloud/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "cegi-pa-2026",
+    "title": "Immatriculation de la plateforme agréée Cegi",
+    "publisher": "Cegi",
+    "url": "https://www.cegi.fr/facture-electronique-groupe-cegi-obtient-limmatriculation-de-sa-plateforme-agreee/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "cyclope-pa-2026",
+    "title": "Plateforme agréée Cyclope",
+    "publisher": "Cyclope",
+    "url": "https://cyclope.digital/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "darva-ofeli-2026",
+    "title": "Immatriculation définitive de la plateforme Ofeli",
+    "publisher": "DARVA",
+    "url": "https://www.darva.com/fr/actualites/immatriculation-definitive-pour-ofeli-plateforme-agreee/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "digipharmacie-pa-2026",
+    "title": "DigiPA : la facturation électronique en officine",
+    "publisher": "Digipharmacie",
+    "url": "https://digipharmacie.fr/digipa-la-facturation-electronique-en-officine-en-clair",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "digipharmacie-cgv-2026",
+    "title": "Conditions générales de vente - Option DigiPA",
+    "publisher": "Digipharmacie",
+    "url": "https://digipharmacie.fr/conditions-generales-de-vente",
+    "type": "contract",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "docnova-france-2026",
+    "title": "Logiciel de facturation électronique en France",
+    "publisher": "Docnova",
+    "url": "https://docnova.ai/fr/logiciel-de-facturation-electronique-en-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "docnova-pricing-2026",
+    "title": "Tarifs Docnova",
+    "publisher": "Docnova",
+    "url": "https://docnova.ai/fr/prix/",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "freedz-pa-2026",
+    "title": "Plateforme de dématérialisation Freedz",
+    "publisher": "Freedz",
+    "url": "https://freedz.io/plateforme-dematerialisation-partenaire/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "dokapi-france-2026",
+    "title": "Dokapi France",
+    "publisher": "Dokapi",
+    "url": "https://www.dokapi.io/fr-be/dokapi-france",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "edieyes-invoices-2026",
+    "title": "Solutions factures EdiEyes",
+    "publisher": "EdiEyes Vision Care",
+    "url": "https://www.edieyes.fr/solutions-factures/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "enerj-home-2026",
+    "title": "Solutions de dématérialisation ENERJ",
+    "publisher": "ENERJ",
+    "url": "https://www.enerj.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "entropics-zenonline-2026",
+    "title": "ZenOnline",
+    "publisher": "Entropics",
+    "url": "https://entropics.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "facnote-pa-2026",
+    "title": "Facnote PDP",
+    "publisher": "Groupe Facnote",
+    "url": "https://groupefacnote.com/facnote-pdp-2/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "gestav-pa-2026",
+    "title": "Facturation électronique Gestav",
+    "publisher": "Gestav",
+    "url": "https://gestav.com/facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "gestav-pricing-2026",
+    "title": "Tarifs de facturation électronique Gestav",
+    "publisher": "Gestav",
+    "url": "https://gestav.com/facturation-electronique/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "iaf-pa-2026",
+    "title": "Facturation électronique IAF",
+    "publisher": "IAF",
+    "url": "https://www.iaf.fr/facturation-electronique.html",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "iga-home-2026",
+    "title": "Solutions IGA Assurance",
+    "publisher": "IGA Assurance",
+    "url": "https://www.iga-assurance.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "klekoon-pa-2026",
+    "title": "Facturation électronique Klekoon",
+    "publisher": "Klekoon",
+    "url": "https://www.klekoon.com/facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "village-connecte-pa-2026",
+    "title": "La plateforme agréée LVC",
+    "publisher": "Le Village Connecté",
+    "url": "https://village-connecte.fr/la-plateforme-agreee-lvc/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "lundi-matin-chorus-2026",
+    "title": "Module Chorus Pro",
+    "publisher": "Lundi Matin",
+    "url": "https://www.lundimatin.fr/module/chorus-pro",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "myfiteco-pa-2026",
+    "title": "Facturation électronique MyFiteco",
+    "publisher": "Fiteco",
+    "url": "https://www.fiteco.com/facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "mykinexo-pa-2026",
+    "title": "MyKinexo rejoint la liste des plateformes",
+    "publisher": "Kinexo",
+    "url": "https://www.kinexo.fr/facture-electronique-mykinexo-rejoint-la-liste-officielle-des-pdp-immatriculees/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "mysupply-france-2026",
+    "title": "E-invoicing in France",
+    "publisher": "MySupply",
+    "url": "https://mysupply.dk/en/e-invoicing-in-france/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "neotimo-home-2026",
+    "title": "Plateforme agréée Neotimo",
+    "publisher": "Neotimo",
+    "url": "https://neotimo.com/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "neotimo-pricing-2026",
+    "title": "Tarifs Neotimo",
+    "publisher": "Neotimo",
+    "url": "https://neotimo.com/pricing",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "neotimo-developers-2026",
+    "title": "API Neotimo pour développeurs",
+    "publisher": "Neotimo",
+    "url": "https://neotimo.com/developers",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "officein-home-2026",
+    "title": "OfficeIn pour les pharmacies",
+    "publisher": "OfficeIn",
+    "url": "https://officein.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "oneup-invoicing-2026",
+    "title": "Logiciel de facturation OneUp",
+    "publisher": "OneUp",
+    "url": "https://smallbusiness.oneup.com/fr/logiciel-facturation",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "oneup-pricing-2026",
+    "title": "Tarifs OneUp",
+    "publisher": "OneUp",
+    "url": "https://smallbusiness.oneup.com/fr/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "payflows-athena-2026",
+    "title": "Athena AP Automation",
+    "publisher": "Payflows",
+    "url": "https://payflows.io/athena/ap-automation",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "scribee-pa-2026",
+    "title": "Plateforme agréée Scribee",
+    "publisher": "Scribee",
+    "url": "https://www.scribee.tech/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "sni-france-2026",
+    "title": "France B2B e-invoicing",
+    "publisher": "SNI Technology",
+    "url": "https://snitechnology.net/fr/france-la-facturation-%C3%A9lectronique-b2b/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "solo-facturation-2026",
+    "title": "Facturation et tarifs Solo",
+    "publisher": "Solo",
+    "url": "https://www.solo.fr/facturation",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "srci-pa-2026",
+    "title": "SRCI plateforme agréée",
+    "publisher": "SRCI",
+    "url": "https://solutions.srci.fr/srci-pa-facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "srci-ixfacture-2026",
+    "title": "iXFacture",
+    "publisher": "SRCI",
+    "url": "https://solutions.srci.fr/facture-electronique-operateur-dematerialisation/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "treso2-invoices-2026",
+    "title": "Facture électronique Treso2",
+    "publisher": "Treso2",
+    "url": "https://www.treso2.com/solutions/fonctionnalites/facture-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "treso2-pricing-2026",
+    "title": "Tarifs Treso2",
+    "publisher": "Treso2",
+    "url": "https://www.treso2.com/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ventya-invoices-2026",
+    "title": "Facture électronique Ventya",
+    "publisher": "Ventya",
+    "url": "https://www.ventya.fr/facture-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "veryswing-pa-2026",
+    "title": "Veryswing certifié plateforme agréée",
+    "publisher": "Veryswing",
+    "url": "https://veryswing.com/veryswing-certifie-plateforme-agreee-facturation-electronique.html",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "veryswing-pricing-2026",
+    "title": "Tarifs Veryswing",
+    "publisher": "Veryswing",
+    "url": "https://veryswing.com/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "vosfactures-pa-2026",
+    "title": "Plateforme agréée VosFactures",
+    "publisher": "VosFactures",
+    "url": "https://vosfactures.fr/pa",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "vosfactures-pricing-2026",
+    "title": "Tarifs VosFactures",
+    "publisher": "VosFactures",
+    "url": "https://vosfactures.fr/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "weinvoice-pa-2026",
+    "title": "WeInvoice",
+    "publisher": "WeProc",
+    "url": "https://weinvoice.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "wisetech-compliance-2026",
+    "title": "CargoWise Geo Compliance",
+    "publisher": "WiseTech Global",
+    "url": "https://www.wisetechglobal.com/product/geo-compliance",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "xelya-pa-2026",
+    "title": "Plateforme agréée Xelya",
+    "publisher": "Xelya",
+    "url": "https://www.xelya.com/plateforme-agreee-facturation-electronique/",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "ytems-pa-2026",
+    "title": "Facturation électronique et plateforme Ytems",
+    "publisher": "Ytems",
+    "url": "https://com.ytems.app/expert-comptable/facturation-electronique-pdp",
+    "type": "documentation",
+    "accessedAt": "2026-08-26"
   }
 ]

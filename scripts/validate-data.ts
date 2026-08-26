@@ -20,7 +20,7 @@ const corpusSelectionSchema = z.object({
     reach: z.string().min(1),
     reachSourceIds: z.array(z.string().min(1)).min(1),
     reason: z.string().min(1),
-  })).length(50),
+  })).length(148),
   replaced: z.array(z.object({
     slug: z.string().regex(/^[a-z0-9-]+$/),
     reason: z.string().min(1),
@@ -35,6 +35,7 @@ const sourceIds = new Set(checkedSources.map((source) => source.id));
 if (sourceIds.size !== checkedSources.length) throw new Error("Un identifiant de source est dupliqué");
 const sourcesById = new Map(checkedSources.map((source) => [source.id, source]));
 const slugs = new Set<string>();
+const officialNames = new Set<string>();
 const approvedByName = new Map(officialDirectory.approved.map((entry) => [entry.name, entry]));
 const referencedSourceIds = new Set(["aife-calendar-2026"]);
 const coreFields = ["sendsInvoices", "receivesInvoices", "eReporting"] as const;
@@ -91,6 +92,8 @@ for (const sourceId of passportRouteSourceIds) {
 for (const platform of checkedPlatforms) {
   if (slugs.has(platform.slug)) throw new Error(`Slug dupliqué : ${platform.slug}`);
   slugs.add(platform.slug);
+  if (officialNames.has(platform.officialName)) throw new Error(`Entrée DGFiP enrichie plusieurs fois : ${platform.officialName}`);
+  officialNames.add(platform.officialName);
   const officialEntry = approvedByName.get(platform.officialName);
   if (!officialEntry) {
     throw new Error(`${platform.displayName} absent de la liste DGFiP approuvée : ${platform.officialName}`);
@@ -133,6 +136,9 @@ for (const platform of checkedPlatforms) {
       }
     }
   }
+}
+for (const entry of officialDirectory.approved) {
+  if (!officialNames.has(entry.name)) throw new Error(`Plateforme approuvée sans fiche enrichie : ${entry.name}`);
 }
 
 const selectedSlugs = new Set<string>();

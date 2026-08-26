@@ -359,7 +359,7 @@ if ! LOCAL_HEALTH="$(curl --max-time 5 -fsS "http://127.0.0.1:${MCP_PORT}/health
   echo "Echec: le controle de sante MCP local a echoue." >&2
   rollback 1
 fi
-python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("status")=="ok" or sys.exit("Sante MCP invalide"); data.get("revision",{}).get("revision")==sys.argv[1] or sys.exit("Revision MCP live inattendue"); data.get("counts",{}).get("enrichedPlatforms")==50 or sys.exit("Corpus MCP live inattendu")' "${EXPECTED_SHA}" <<<"${LOCAL_HEALTH}"
+python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("status")=="ok" or sys.exit("Sante MCP invalide"); data.get("revision",{}).get("revision")==sys.argv[1] or sys.exit("Revision MCP live inattendue"); data.get("counts",{}).get("enrichedPlatforms")==148 or sys.exit("Corpus MCP live inattendu")' "${EXPECTED_SHA}" <<<"${LOCAL_HEALTH}"
 
 apache2ctl configtest
 systemctl reload apache2

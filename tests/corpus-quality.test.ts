@@ -2,13 +2,21 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import corpusSelection from "../src/data/corpus-selection.json" with { type: "json" };
 import sources from "../src/data/sources.json" with { type: "json" };
+import officialDirectory from "../src/data/official-directory.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 
-test("le corpus contient exactement les cinquante acteurs sélectionnés", () => {
+test("le corpus contient exactement les 148 acteurs approuvés", () => {
   const platformSlugs = platforms.map((platform) => platform.slug).sort();
   const selectedSlugs = corpusSelection.selected.map((platform) => platform.slug).sort();
   assert.deepEqual(platformSlugs, selectedSlugs);
-  assert.equal(new Set(selectedSlugs).size, 50);
+  assert.equal(new Set(selectedSlugs).size, 148);
+});
+
+test("les noms enrichis couvrent exactement la liste DGFiP sans doublon", () => {
+  const enrichedNames = platforms.map((platform) => platform.officialName).sort();
+  const approvedNames = officialDirectory.approved.map((entry) => entry.name).sort();
+  assert.deepEqual(enrichedNames, approvedNames);
+  assert.equal(new Set(enrichedNames).size, 148);
 });
 
 test("chaque acteur dispose d'une preuve primaire de sélection", () => {

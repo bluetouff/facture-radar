@@ -44,7 +44,7 @@ test("à critères égaux les fiches les mieux renseignées sont présentées en
     noBankAccount: false,
     priorities: ["documentation"],
   }).filter((result) => result.eligible);
-  assert.deepEqual(results.slice(0, 3).map((result) => result.platform.slug), ["tiime", "pennylane", "abby"]);
+  assert.deepEqual(results.slice(0, 3).map((result) => result.platform.slug), ["tiime", "pennylane", "neotimo"]);
 });
 
 test("une exigence API gratuite échoue lorsque l'inclusion gratuite n'est pas prouvée", () => {

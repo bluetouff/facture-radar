@@ -6,11 +6,11 @@ L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte et san
 
 ## Ce que propose le site
 
-- cinquante parcours détaillés, avec circuit, échéances, coût minimum connu, actions et sources consultables ;
+- 148 parcours détaillés, avec circuit, échéances, coût minimum connu, actions et sources consultables ;
 - un prévol local des PDF Factur-X et XML CII, avec contrôles structurés et trois actions maximum ;
 - un traitement distinct des offres sur devis, sans faux zéro ni projection lorsque le minimum public manque ;
 - trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
-- 50 fiches détaillées, chacune reliée à des sources publiques et datées ;
+- 148 fiches détaillées, chacune reliée à des sources publiques et datées ;
 - une sélection explicite couvrant les indépendants, TPE, PME, cabinets comptables, ETI et grandes entreprises ;
 - l'annuaire officiel complet, soit 148 plateformes approuvées et 18 en attente dans le relevé DGFiP du 19 août 2026 ;
 - un comparateur point par point ;
@@ -69,7 +69,7 @@ Un critère impératif inconnu est bloquant. Un oui n'est utilisable que s'il po
 
 Les données enrichies vivent dans `src/data/platforms.ts`. Les sources sont dans `src/data/sources.json`. La méthode de sélection et les indicateurs de portée sont dans `src/data/corpus-selection.json`. L'import de l'annuaire DGFiP conserve l'URL, la date de publication et le SHA-256 du fichier source dans `src/data/official-directory.json`.
 
-Le validateur vérifie notamment que les cinquante fiches correspondent exactement à la sélection, que chaque information référence une source existante, que les dates d'immatriculation concordent avec la liste DGFiP et qu'aucune fonction réglementaire positive ne repose sur une déclaration faible ou une source absente.
+Le validateur vérifie notamment que les 148 fiches correspondent exactement à la sélection, que chaque information référence une source existante, que les dates d'immatriculation concordent avec la liste DGFiP et qu'aucune fonction réglementaire positive ne repose sur une déclaration faible ou une source absente.
 
 ## Vérificateur Factur-X
 

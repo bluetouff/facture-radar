@@ -357,6 +357,692 @@
       "reach": "Plus de 1 000 cabinets annoncés par Chaintrust",
       "reachSourceIds": ["chaintrust-pa-2026"],
       "reason": "Plateforme de Visma France pensée pour le multi-dossiers et les logiciels de production comptable."
+    },
+    {
+      "slug": "agena3000",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Suite A3 E-Invoicing documentée pour les flux clients et fournisseurs",
+      "reachSourceIds": ["agena-pa-2026"],
+      "reason": "Spécialiste EDI français avec OCR, archivage et couverture des flux réglementaires."
+    },
+    {
+      "slug": "arteva",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme B2B et API documentées par Artéva",
+      "reachSourceIds": ["arteva-efacture-2026", "arteva-api-2026"],
+      "reason": "Intégration EDI et API adaptée aux systèmes existants."
+    },
+    {
+      "slug": "axway",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Service mondial de conformité et d'intégration B2B",
+      "reachSourceIds": ["axway-einvoicing-2026"],
+      "reason": "Acteur international documentant les formats français et les environnements complexes."
+    },
+    {
+      "slug": "azopio",
+      "segment": "tpe-pme",
+      "reach": "Quatre offres publiques de 30 à 750 documents mensuels",
+      "reachSourceIds": ["azopio-pricing-2026"],
+      "reason": "Pré-comptabilité accessible avec volumes, API et fonctions réglementaires publiés."
+    },
+    {
+      "slug": "b4value",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réseau TRAFFIQX, API et accès Peppol documentés",
+      "reachSourceIds": ["b4value-platform-2026", "b4value-pricing-2026"],
+      "reason": "Couverture internationale, nombreux protocoles et structure tarifaire publique."
+    },
+    {
+      "slug": "cecurity",
+      "segment": "cabinet-et-erp",
+      "reach": "API et chaîne Factur-X documentées pour éditeurs et intégrateurs",
+      "reachSourceIds": ["cecurity-api-2026", "cecurity-facturx-2026"],
+      "reason": "Infrastructure française de confiance numérique et d'archivage."
+    },
+    {
+      "slug": "cleartax",
+      "segment": "eti-et-grands-comptes",
+      "reach": "API unifiée de conformité fiscale internationale",
+      "reachSourceIds": ["cleartax-france-2026"],
+      "reason": "Documentation France détaillée et intégration ERP ou caisse."
+    },
+    {
+      "slug": "digital-technologies",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Offre mondiale de conformité du groupe Namirial",
+      "reachSourceIds": ["digital-technologies-pa-2026"],
+      "reason": "Acteur international couvrant facturation et e-reporting."
+    },
+    {
+      "slug": "docoon",
+      "segment": "cabinet-et-erp",
+      "reach": "Infrastructure directe, marque blanche et marque grise",
+      "reachSourceIds": ["docoon-pa-2026"],
+      "reason": "API française conçue pour les éditeurs, intégrateurs et opérateurs."
+    },
+    {
+      "slug": "docprocess",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Couverture publique des cycles clients et fournisseurs",
+      "reachSourceIds": ["docprocess-pa-2026"],
+      "reason": "Large jeu de formats et connexion aux ERP et portails."
+    },
+    {
+      "slug": "ecosio",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Point d'accès Peppol et services API ou SFTP documentés",
+      "reachSourceIds": ["ecosio-einvoicing-2026", "ecosio-connectors-2026"],
+      "reason": "Service managé d'intégration EDI pour entreprises internationales."
+    },
+    {
+      "slug": "edics",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Hub multicanal avec EDI, API et clause de réversibilité annoncée",
+      "reachSourceIds": ["edics-platform-2026"],
+      "reason": "Documentation publique rare sur la récupération des documents."
+    },
+    {
+      "slug": "edt",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme EDI modulaire pour flux importants et filiales",
+      "reachSourceIds": ["edt-eima-2026"],
+      "reason": "Formats et intégrations ERP publiquement détaillés."
+    },
+    {
+      "slug": "eezi",
+      "segment": "eti-et-grands-comptes",
+      "reach": "API et modèle UBL documentés pour la France",
+      "reachSourceIds": ["eezi-platform-2026", "eezi-france-api-2026"],
+      "reason": "Spécialiste international de la TVA avec documentation technique."
+    },
+    {
+      "slug": "effinum",
+      "segment": "cabinet-et-erp",
+      "reach": "Offre issue de l'EDI et de l'écosystème Cerfrance",
+      "reachSourceIds": ["effinum-platform-2026"],
+      "reason": "Couverture distinctive des cabinets et entreprises agricoles."
+    },
+    {
+      "slug": "euro-information",
+      "segment": "tpe-pme",
+      "reach": "Parcours intégré à la banque en ligne Crédit Mutuel et CIC",
+      "reachSourceIds": ["euro-information-pa-2026"],
+      "reason": "Cas d'usage bancaire très concret pour les petites entreprises."
+    },
+    {
+      "slug": "fiducial-cloud",
+      "segment": "tpe-pme",
+      "reach": "Trois prix publics à partir de 4,90 euros HT par mois",
+      "reachSourceIds": ["fiducial-pricing-2026"],
+      "reason": "Offre TPE avec tarifs, absence d'engagement et accès comptable documentés."
+    },
+    {
+      "slug": "fonoa",
+      "segment": "eti-et-grands-comptes",
+      "reach": "API mondiale d'e-invoicing et de reporting fiscal",
+      "reachSourceIds": ["fonoa-einvoicing-2026"],
+      "reason": "Infrastructure internationale conçue pour les intégrations logicielles."
+    },
+    {
+      "slug": "gep",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Suite achats mondiale et formats France documentés",
+      "reachSourceIds": ["gep-einvoicing-2026"],
+      "reason": "Couverture procure-to-pay et intégrations pour grands groupes."
+    },
+    {
+      "slug": "groupe-sigma",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Hub Lixa annoncé compatible avec tout ERP",
+      "reachSourceIds": ["sigma-lixa-2026"],
+      "reason": "Opérateur français documentant émission, réception et e-reporting."
+    },
+    {
+      "slug": "gurusoft",
+      "segment": "cabinet-et-erp",
+      "reach": "Add-on de facturation électronique intégré à SAP",
+      "reachSourceIds": ["gurusoft-france-2026", "gurusoft-sap-2026"],
+      "reason": "Cas SAP spécialisé et documenté pour les organisations internationales."
+    },
+    {
+      "slug": "icd",
+      "segment": "tpe-pme",
+      "reach": "Tarif publié à partir de 45 euros HT par mois",
+      "reachSourceIds": ["icd-dematrust-2026"],
+      "reason": "Offre française avec formats, archivage et prix d'entrée publics."
+    },
+    {
+      "slug": "iedi",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Projet d'intégration EDI documenté par l'acteur",
+      "reachSourceIds": ["iedi-france-2026"],
+      "reason": "Acteur approuvé dont le faible niveau d'information publique doit rester visible."
+    },
+    {
+      "slug": "indicom",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Services XML, EDI et ERP documentés",
+      "reachSourceIds": ["indicom-services-2026", "indicom-france-pa-2026"],
+      "reason": "Spécialiste international des échanges structurés et de la conformité."
+    },
+    {
+      "slug": "infologic",
+      "segment": "cabinet-et-erp",
+      "reach": "Plateforme intégrée à l'ERP Copilote",
+      "reachSourceIds": ["infologic-pa-2026"],
+      "reason": "Couverture métier distinctive pour l'agroalimentaire et les ERP Infologic."
+    },
+    {
+      "slug": "intesa",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Opérateur européen d'EDI et de conformité",
+      "reachSourceIds": ["intesa-einvoicing-2026", "intesa-france-pa-2026"],
+      "reason": "Couverture internationale et intégration aux systèmes existants."
+    },
+    {
+      "slug": "iopole",
+      "segment": "cabinet-et-erp",
+      "reach": "API, bac à sable et paliers de volume publics",
+      "reachSourceIds": ["iopole-api-2026", "iopole-pricing-2026"],
+      "reason": "Infrastructure française pensée pour les éditeurs, avec une contradiction tarifaire conservée comme point à vérifier."
+    },
+    {
+      "slug": "legalinvoice",
+      "segment": "eti-et-grands-comptes",
+      "reach": "API, signature et archivage du groupe Tinexta",
+      "reachSourceIds": ["legalinvoice-api-2026", "legalinvoice-france-pa-2026"],
+      "reason": "Chaîne de confiance numérique européenne et intégration ERP."
+    },
+    {
+      "slug": "logilec",
+      "segment": "eti-et-grands-comptes",
+      "reach": "44 millions de factures traitées annoncées par Logilec",
+      "reachSourceIds": ["logilec-edi-2026"],
+      "reason": "Acteur à forte volumétrie dans l'écosystème E.Leclerc et l'EDI."
+    },
+    {
+      "slug": "marosa",
+      "segment": "eti-et-grands-comptes",
+      "reach": "API France, Peppol et exports documentés",
+      "reachSourceIds": ["marosa-france-2026", "marosa-api-2026"],
+      "reason": "Spécialiste européen de la TVA avec documentation technique exploitable."
+    },
+    {
+      "slug": "medius",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Suite achats et finance intégrable aux ERP",
+      "reachSourceIds": ["medius-france-2026", "medius-integrations-2026"],
+      "reason": "Automatisation fournisseurs et connectivité iPaaS pour ETI et grands groupes."
+    },
+    {
+      "slug": "ntt-data",
+      "segment": "cabinet-et-erp",
+      "reach": "Service cloud de facturation pour environnements SAP",
+      "reachSourceIds": ["nttdata-einvoicing-2026"],
+      "reason": "Intégrateur mondial pertinent pour les organisations déjà équipées de SAP."
+    },
+    {
+      "slug": "open-bee",
+      "segment": "tpe-pme",
+      "reach": "Offres de GED et plateforme agréée avec connecteurs publiés",
+      "reachSourceIds": ["openbee-pa-2026"],
+      "reason": "Couverture TPE-PME avec formats, API et exports différenciés selon l'offre."
+    },
+    {
+      "slug": "paragon",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme d'intégration et d'archivage documentaire",
+      "reachSourceIds": ["paragon-ipp-2026"],
+      "reason": "Acteur approuvé dont les fonctions réglementaires publiques restent à clarifier."
+    },
+    {
+      "slug": "pitney-bowes",
+      "segment": "tpe-pme",
+      "reach": "Offres publiques à 15 et 40 euros HT par mois",
+      "reachSourceIds": ["pitneybowes-pa-2026"],
+      "reason": "Prix, volumes et distinction réception ou émission publiquement documentés."
+    },
+    {
+      "slug": "qweeby",
+      "segment": "tpe-pme",
+      "reach": "Plateforme française connectée à Peppol et aux ERP",
+      "reachSourceIds": ["qweeby-pa-2026"],
+      "reason": "Parcours de facturation structuré destiné aux PME et ETI."
+    },
+    {
+      "slug": "seeburger",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Hub international SAP, EDI et Peppol",
+      "reachSourceIds": ["seeburger-hub-2026"],
+      "reason": "Couverture mondiale et intégrations B2B pour environnements complexes."
+    },
+    {
+      "slug": "seqino",
+      "segment": "cabinet-et-erp",
+      "reach": "API, SDK et offres en marque blanche ou grise",
+      "reachSourceIds": ["seqino-api-2026", "seqino-docs-2026"],
+      "reason": "Infrastructure pour éditeurs et intégrateurs avec documentation technique."
+    },
+    {
+      "slug": "serensia",
+      "segment": "cabinet-et-erp",
+      "reach": "Offre de Quadient intégrable aux ERP et en marque blanche",
+      "reachSourceIds": ["serensia-pa-2026"],
+      "reason": "Acteur français de gestion documentaire et de communications clients."
+    },
+    {
+      "slug": "sovos",
+      "segment": "eti-et-grands-comptes",
+      "reach": "API France et réseau mondial de conformité fiscale",
+      "reachSourceIds": ["sovos-france-2026", "sovos-api-france-2026"],
+      "reason": "Documentation France précise et couverture internationale."
+    },
+    {
+      "slug": "sps-commerce",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réseau EDI mondial spécialisé dans le retail",
+      "reachSourceIds": ["sps-einvoicing-2026"],
+      "reason": "Couverture distinctive des chaînes d'approvisionnement et des fournisseurs."
+    },
+    {
+      "slug": "symtrax",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme hybride, API et accès Peppol documentés",
+      "reachSourceIds": ["symtrax-france-2026"],
+      "reason": "Nombreux formats et connecteurs ERP publiés."
+    },
+    {
+      "slug": "taxera",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Carte mondiale des obligations numériques",
+      "reachSourceIds": ["taxera-platform-2026"],
+      "reason": "Acteur approuvé dont le détail de l'offre France doit rester explicitement à confirmer."
+    },
+    {
+      "slug": "tenor",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme française EDI et ERP couvrant les flux réglementaires",
+      "reachSourceIds": ["tenor-pa-2026"],
+      "reason": "Documentation France précise sur les formats et l'intégration."
+    },
+    {
+      "slug": "tesisquare",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme iPaaS internationale pour échanges B2B",
+      "reachSourceIds": ["tesisquare-france-2026"],
+      "reason": "Intégration multicanal et formats français pour grands groupes."
+    },
+    {
+      "slug": "tradeshift",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réseau mondial, API REST et connecteurs ERP documentés",
+      "reachSourceIds": ["tradeshift-france-2026", "tradeshift-api-2026"],
+      "reason": "Documentation très complète des flux France et des intégrations."
+    },
+    {
+      "slug": "transalis",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réseau EDI et point d'accès Peppol international",
+      "reachSourceIds": ["transalis-einvoicing-2026"],
+      "reason": "Automatisation fournisseurs et clients pour entreprises internationales."
+    },
+    {
+      "slug": "tungsten",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réseau cloud de facturation et portail fournisseurs",
+      "reachSourceIds": ["tungsten-platform-2026", "tungsten-france-2026"],
+      "reason": "Acteur mondial documentant les formats France et les intégrations."
+    },
+    {
+      "slug": "tx2",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme française EDI pour retail, industrie et logistique",
+      "reachSourceIds": ["tx2-pa-2026"],
+      "reason": "Couverture métier distinctive et fonctions réglementaires documentées."
+    },
+    {
+      "slug": "voxel",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Réseau Bavel spécialisé dans le voyage et l'hôtellerie",
+      "reachSourceIds": ["voxel-france-2026"],
+      "reason": "Couverture verticale rare pour les factures et paiements B2B du tourisme."
+    },
+    {
+      "slug": "accenture",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Service mondial relié aux ERP par une API unique",
+      "reachSourceIds": ["accenture-ecomply-2026"],
+      "reason": "Couverture internationale, e-reporting et intégration aux grands systèmes."
+    },
+    {
+      "slug": "ademico",
+      "segment": "cabinet-et-erp",
+      "reach": "API, webhooks, portail et documentation France détaillée",
+      "reachSourceIds": ["ademico-france-2026"],
+      "reason": "Documentation technique exploitable pour éditeurs et intégrateurs."
+    },
+    {
+      "slug": "ags-records",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Facturation, e-reporting et archivage dans WiDOFACT",
+      "reachSourceIds": ["ags-widofact-2026"],
+      "reason": "Offre documentaire complète adossée à un spécialiste de l'archivage."
+    },
+    {
+      "slug": "arratech",
+      "segment": "cabinet-et-erp",
+      "reach": "API européenne, webhooks et déploiements multi-pays",
+      "reachSourceIds": ["arratech-france-2026", "arratech-api-2026"],
+      "reason": "Approche API-first et documentation technique publique."
+    },
+    {
+      "slug": "aruba",
+      "segment": "tpe-pme",
+      "reach": "Offre annuelle publique pour indépendants et petites entreprises",
+      "reachSourceIds": ["aruba-onesuite-2026"],
+      "reason": "Prix public et outil de facturation simple, avec limites réglementaires explicitement signalées."
+    },
+    {
+      "slug": "atgp",
+      "segment": "eti-et-grands-comptes",
+      "reach": "BEE.FACT relie les flux réglementaires aux ERP et à l'EDI",
+      "reachSourceIds": ["atgp-beefact-2026"],
+      "reason": "Couverture des trois fonctions et intégration aux systèmes existants."
+    },
+    {
+      "slug": "bc-solutions",
+      "segment": "cabinet-et-erp",
+      "reach": "Formats socles, API AFNOR, Peppol et Chorus Pro",
+      "reachSourceIds": ["bc-easinvoice-2026"],
+      "reason": "Documentation France précise sur les formats et l'interopérabilité."
+    },
+    {
+      "slug": "cbs",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Service international de conformité pour SAP et S/4HANA",
+      "reachSourceIds": ["cbs-eworld-2026"],
+      "reason": "Acteur SAP approuvé dont le périmètre France doit rester à confirmer."
+    },
+    {
+      "slug": "cegi-alfa",
+      "segment": "cabinet-et-erp",
+      "reach": "Intégration aux logiciels Cegi de santé et de travail temporaire",
+      "reachSourceIds": ["cegi-pa-2026"],
+      "reason": "Couverture verticale distinctive avec prudence sur les fonctions non publiées."
+    },
+    {
+      "slug": "cyclope",
+      "segment": "tpe-pme",
+      "reach": "Émission, réception et connexions API ou ERP annoncées",
+      "reachSourceIds": ["cyclope-pa-2026"],
+      "reason": "Parcours simple pour entreprises, avec date officielle encore indiquée à venir."
+    },
+    {
+      "slug": "darva",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme Ofeli spécialisée dans l'assurance",
+      "reachSourceIds": ["darva-ofeli-2026"],
+      "reason": "Infrastructure métier rare et couverture réglementaire publiée."
+    },
+    {
+      "slug": "digipharmacie",
+      "segment": "tpe-pme",
+      "reach": "Réception incluse dans les abonnements de pharmacies",
+      "reachSourceIds": ["digipharmacie-pa-2026", "digipharmacie-cgv-2026"],
+      "reason": "Parcours vertical très concret, prix additionnel nul et activation documentée."
+    },
+    {
+      "slug": "docnova",
+      "segment": "cabinet-et-erp",
+      "reach": "Portail et API avec cinq factures gratuites par mois",
+      "reachSourceIds": ["docnova-france-2026", "docnova-pricing-2026"],
+      "reason": "Offre d'entrée publique et intégration européenne."
+    },
+    {
+      "slug": "freedz",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme spécialisée dans l'immobilier et la construction",
+      "reachSourceIds": ["freedz-pa-2026"],
+      "reason": "Couverture métier, ERP sectoriels et archivage documentés."
+    },
+    {
+      "slug": "dokapi",
+      "segment": "cabinet-et-erp",
+      "reach": "API France couvrant factures, e-reporting et cycle de vie",
+      "reachSourceIds": ["dokapi-france-2026"],
+      "reason": "Documentation technique claire pour les intégrations."
+    },
+    {
+      "slug": "ecosio-intercom",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Entité ecosio InterCom pour EDI, API et Peppol",
+      "reachSourceIds": ["ecosio-einvoicing-2026", "ecosio-connectors-2026"],
+      "reason": "Entrée officielle distincte et couverture internationale documentée."
+    },
+    {
+      "slug": "edicom-group",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Entité EDICOM Group pour EDI et conformité mondiale",
+      "reachSourceIds": ["edicom-platform-2026", "edicom-france-2026"],
+      "reason": "Deuxième entrée officielle EDICOM, distinguée dans le corpus."
+    },
+    {
+      "slug": "edieyes",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Dématérialisation spécialisée dans la santé et l'optique",
+      "reachSourceIds": ["edieyes-invoices-2026"],
+      "reason": "Couverture verticale rare malgré un périmètre réglementaire public incomplet."
+    },
+    {
+      "slug": "enerj",
+      "segment": "eti-et-grands-comptes",
+      "reach": "GED, dématérialisation et archivage français",
+      "reachSourceIds": ["enerj-home-2026"],
+      "reason": "Acteur approuvé conservé avec toutes les inconnues produit visibles."
+    },
+    {
+      "slug": "entropics",
+      "segment": "eti-et-grands-comptes",
+      "reach": "ZenOnline couvre les flux de factures entrants et sortants",
+      "reachSourceIds": ["entropics-zenonline-2026"],
+      "reason": "Intégration GED et ERP documentée."
+    },
+    {
+      "slug": "esi",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Présence dans la liste DGFiP approuvée",
+      "reachSourceIds": ["dgfip-list-2026-08-19"],
+      "reason": "Exhaustivité officielle, sans fabriquer une offre produit absente des sources publiques."
+    },
+    {
+      "slug": "facnote",
+      "segment": "cabinet-et-erp",
+      "reach": "Plateforme reliée à l'ERP CSMART",
+      "reachSourceIds": ["facnote-pa-2026"],
+      "reason": "Couverture d'émission et de réception pour un écosystème métier."
+    },
+    {
+      "slug": "gestav",
+      "segment": "tpe-pme",
+      "reach": "Tarifs publics dès 24,90 euros TTC par an",
+      "reachSourceIds": ["gestav-pa-2026", "gestav-pricing-2026"],
+      "reason": "Grille publique détaillée, utile aux petites structures."
+    },
+    {
+      "slug": "iaf",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Émission, réception, Peppol et hébergement français annoncés",
+      "reachSourceIds": ["iaf-pa-2026"],
+      "reason": "Plateforme d'intégration française pour les organisations équipées d'un ERP."
+    },
+    {
+      "slug": "iga-assurance",
+      "segment": "cabinet-et-erp",
+      "reach": "Écosystème logiciel Veos pour l'assurance",
+      "reachSourceIds": ["iga-home-2026"],
+      "reason": "Couverture sectorielle, avec périmètre PA volontairement non extrapolé."
+    },
+    {
+      "slug": "klekoon",
+      "segment": "tpe-pme",
+      "reach": "Facturation, formats socles, Peppol et archivage",
+      "reachSourceIds": ["klekoon-pa-2026"],
+      "reason": "Documentation France directement exploitable."
+    },
+    {
+      "slug": "kolecto-pdp",
+      "segment": "tpe-pme",
+      "reach": "Deuxième entrée Kolecto avec mandat et vérification bancaire documentés",
+      "reachSourceIds": ["kolecto-pa-2026", "kolecto-activation-2026"],
+      "reason": "Entrée officielle distincte et parcours d'activation précis."
+    },
+    {
+      "slug": "village-connecte",
+      "segment": "cabinet-et-erp",
+      "reach": "Plateforme intégrée à MEG, i-Suite Expert et Winpilot",
+      "reachSourceIds": ["village-connecte-pa-2026"],
+      "reason": "Parcours cabinet-client et fonctions réglementaires publiées."
+    },
+    {
+      "slug": "lundi-matin",
+      "segment": "cabinet-et-erp",
+      "reach": "Écosystème ERP Lundi Matin et module Chorus Pro",
+      "reachSourceIds": ["lundi-matin-chorus-2026"],
+      "reason": "Entrée officielle conservée sans confondre le connecteur B2G et la future PA B2B."
+    },
+    {
+      "slug": "my-fiteco",
+      "segment": "cabinet-et-erp",
+      "reach": "Facturation intégrée à l'accompagnement Fiteco",
+      "reachSourceIds": ["myfiteco-pa-2026"],
+      "reason": "Parcours concret pour les clients d'un cabinet national."
+    },
+    {
+      "slug": "mykinexo",
+      "segment": "cabinet-et-erp",
+      "reach": "Plateforme destinée aux cabinets et à leurs clients",
+      "reachSourceIds": ["mykinexo-pa-2026"],
+      "reason": "Intégration aux outils de cabinet et portail client."
+    },
+    {
+      "slug": "mysupply",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Documentation France pour factures, e-reporting et formats socles",
+      "reachSourceIds": ["mysupply-france-2026"],
+      "reason": "Couverture européenne et intégration EDI."
+    },
+    {
+      "slug": "neotimo",
+      "segment": "cabinet-et-erp",
+      "reach": "Plateforme gratuite et illimitée avec API publique",
+      "reachSourceIds": ["neotimo-home-2026", "neotimo-pricing-2026", "neotimo-developers-2026"],
+      "reason": "Proposition très différenciante, tarifs et documentation technique publics."
+    },
+    {
+      "slug": "officein",
+      "segment": "tpe-pme",
+      "reach": "Contrôle de factures et remises pour les pharmacies",
+      "reachSourceIds": ["officein-home-2026"],
+      "reason": "Couverture verticale utile, avec fonctions PA laissées à confirmer."
+    },
+    {
+      "slug": "one-up",
+      "segment": "tpe-pme",
+      "reach": "Logiciel de facturation et comptabilité dès 9 euros par mois",
+      "reachSourceIds": ["oneup-invoicing-2026", "oneup-pricing-2026"],
+      "reason": "Prix et API publics, mais périmètre réglementaire France non extrapolé."
+    },
+    {
+      "slug": "payflows",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Automatisation des comptes fournisseurs reliée aux ERP",
+      "reachSourceIds": ["payflows-athena-2026"],
+      "reason": "Couverture finance distinctive avec limites PA clairement signalées."
+    },
+    {
+      "slug": "scribee",
+      "segment": "cabinet-et-erp",
+      "reach": "Plateforme pour entreprises et cabinets connectable aux outils existants",
+      "reachSourceIds": ["scribee-pa-2026"],
+      "reason": "Trois fonctions, formats et accès cabinet publiés."
+    },
+    {
+      "slug": "sni",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Acteur international de conformité et d'e-invoicing",
+      "reachSourceIds": ["sni-france-2026"],
+      "reason": "Présence internationale, avec calendrier public obsolète explicitement signalé."
+    },
+    {
+      "slug": "solo",
+      "segment": "tpe-pme",
+      "reach": "Réception gratuite et émission illimitée à partir de 12 euros HT",
+      "reachSourceIds": ["solo-facturation-2026"],
+      "reason": "Parcours simple et tarifs très lisibles pour auto-entrepreneurs."
+    },
+    {
+      "slug": "srci",
+      "segment": "eti-et-grands-comptes",
+      "reach": "iXFacture couvre les trois fonctions, les formats et l'API",
+      "reachSourceIds": ["srci-pa-2026", "srci-ixfacture-2026"],
+      "reason": "Documentation France complète et hébergement français annoncé."
+    },
+    {
+      "slug": "treso2",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Tarif public à partir de 79 euros HT plus coût par facture",
+      "reachSourceIds": ["treso2-invoices-2026", "treso2-pricing-2026"],
+      "reason": "Trois fonctions, API, ERP et coût public."
+    },
+    {
+      "slug": "ventya",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Plateforme française EDI, e-invoicing et e-reporting",
+      "reachSourceIds": ["ventya-invoices-2026"],
+      "reason": "Couverture des flux réglementaires, avec date officielle future signalée."
+    },
+    {
+      "slug": "veryswing",
+      "segment": "cabinet-et-erp",
+      "reach": "PA intégrée sans double abonnement aux ERP Veryswing",
+      "reachSourceIds": ["veryswing-pa-2026", "veryswing-pricing-2026"],
+      "reason": "Parcours métier et prix par collaborateur publiés."
+    },
+    {
+      "slug": "vosfactures",
+      "segment": "tpe-pme",
+      "reach": "Formule gratuite puis documents illimités dès 5 euros HT",
+      "reachSourceIds": ["vosfactures-pa-2026", "vosfactures-pricing-2026"],
+      "reason": "Tarifs, volumes, accès comptable et formats publiés."
+    },
+    {
+      "slug": "weproc",
+      "segment": "cabinet-et-erp",
+      "reach": "Quinze documents gratuits par mois et API publique",
+      "reachSourceIds": ["weinvoice-pa-2026"],
+      "reason": "Offre d'entrée, formats et documentation technique exploitables."
+    },
+    {
+      "slug": "wisetech",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Conformité mondiale intégrée à CargoWise",
+      "reachSourceIds": ["wisetech-compliance-2026"],
+      "reason": "Couverture logistique distinctive avec périmètre France laissé à confirmer."
+    },
+    {
+      "slug": "xelya",
+      "segment": "cabinet-et-erp",
+      "reach": "PA intégrée à Ximi, Diapaz et Themisia",
+      "reachSourceIds": ["xelya-pa-2026"],
+      "reason": "Permet aux utilisateurs de conserver leur outil métier."
+    },
+    {
+      "slug": "ytems",
+      "segment": "cabinet-et-erp",
+      "reach": "Portail de suivi pour plus de 200 cabinets annoncé par Ytems",
+      "reachSourceIds": ["ytems-pa-2026"],
+      "reason": "Parcours d'inscription multi-clients pour cabinets, avec limites publiques visibles."
     }
   ],
   "replaced": []

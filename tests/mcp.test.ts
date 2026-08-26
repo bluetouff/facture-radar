@@ -78,13 +78,13 @@ test("le manifeste et les ressources couvrent tout le corpus public", () => {
   const manifest = corpusManifest(revision);
   assert.deepEqual(manifest.counts, {
     questions: 15,
-    enrichedPlatforms: 50,
+    enrichedPlatforms: 148,
     approvedPlatforms: 148,
     pendingPlatforms: 18,
-    journeys: 50,
+    journeys: 148,
     invoiceRoutes: 6,
     directRoutingOptions: 3,
-    sources: 142,
+    sources: 266,
   });
   const directory = getResourceByUri("pacheck://corpus/official-directory", revision) as { approved: unknown[]; pending: unknown[] };
   assert.equal(directory.approved.length, 148);

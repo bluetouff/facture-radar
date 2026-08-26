@@ -10,7 +10,7 @@ const official = <T>(value: T, note?: string): Evidence<T> => ({
   note,
 });
 
-const documented = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> => ({
+export const documented = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> => ({
   value,
   status: "documented",
   sourceIds,
@@ -18,7 +18,7 @@ const documented = <T>(value: T, sourceIds: string[], note?: string): Evidence<T
   note,
 });
 
-const declared = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> => ({
+export const declared = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> => ({
   value,
   status: "declared",
   sourceIds,
@@ -26,7 +26,7 @@ const declared = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> 
   note,
 });
 
-const unknown = <T>(note: string): Evidence<T> => ({
+export const unknown = <T>(note: string): Evidence<T> => ({
   value: null,
   status: "non_documented",
   sourceIds: [],
@@ -34,7 +34,7 @@ const unknown = <T>(note: string): Evidence<T> => ({
   note,
 });
 
-type ExpansionDefinition = Pick<Platform,
+export type ExpansionDefinition = Pick<Platform,
   "slug" | "displayName" | "officialName" | "summary" | "targets" | "ecosystem" | "importantUnknowns"
 > & {
   registeredAt: string;
@@ -54,7 +54,7 @@ type ExpansionDefinition = Pick<Platform,
   commitmentMonths?: Evidence<number>;
 };
 
-function expand(definition: ExpansionDefinition): Platform {
+export function expand(definition: ExpansionDefinition): Platform {
   return {
     slug: definition.slug,
     displayName: definition.displayName,
@@ -82,7 +82,7 @@ function expand(definition: ExpansionDefinition): Platform {
   };
 }
 
-const quote = (label = "Tarification publique non identifiée, devis nécessaire"): Evidence<Pricing> => unknown(label);
+export const quote = (label = "Tarification publique non identifiée, devis nécessaire"): Evidence<Pricing> => unknown(label);
 
 export const expandedPlatforms: Platform[] = [
   expand({

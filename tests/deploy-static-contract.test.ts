@@ -17,7 +17,7 @@ test("le smoke live vérifie les trois dimensions stables du corpus", () => {
   assert.ok(smokeStart > 0 && smokeEnd > smokeStart);
 
   const liveSmoke = activationScript.slice(smokeStart, smokeEnd);
-  assert.match(liveSmoke, /counts\.get\("enrichedPlatforms"\) != 50/);
+  assert.match(liveSmoke, /counts\.get\("enrichedPlatforms"\) != 148/);
   assert.match(liveSmoke, /counts\.get\("questions"\) != 15/);
-  assert.match(liveSmoke, /counts\.get\("sources"\) != 142/);
+  assert.match(liveSmoke, /counts\.get\("sources"\) != 266/);
 });

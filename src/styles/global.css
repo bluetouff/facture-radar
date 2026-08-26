@@ -115,7 +115,7 @@ img, svg { display: block; max-width: 100%; }
 .button.secondary { border-color: var(--line); background: rgba(255,255,255,.72); color: var(--bright); box-shadow: none; }
 .button.secondary:hover { border-color: color-mix(in srgb, var(--signal) 40%, var(--line)); background: var(--surface); color: var(--signal); }
 .hero-proof { position: relative; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1rem; background: rgba(255,255,255,.84); box-shadow: 0 1.4rem 4rem var(--shadow); }
-.hero-proof::before { position: absolute; top: .8rem; right: .8rem; border-radius: 999px; padding: .28rem .52rem; background: var(--signal-soft); color: var(--signal); content: "Dossier 50/148"; font-size: .75rem; font-weight: 720; }
+.hero-proof::before { position: absolute; top: .8rem; right: .8rem; border-radius: 999px; padding: .28rem .52rem; background: var(--signal-soft); color: var(--signal); content: "Dossier 148/148"; font-size: .75rem; font-weight: 720; }
 .proof-svg { width: 100%; height: auto; }
 
 .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; }

@@ -61,7 +61,7 @@ async function inspectClient(versionNegotiation) {
     assert.match(answer.content[0]?.type === "text" ? answer.content[0].text : "", /B2Brouter/);
 
     const status = await client.callTool({ name: "get_corpus_status", arguments: {} });
-    assert.equal(status.structuredContent?.counts?.enrichedPlatforms, 50);
+    assert.equal(status.structuredContent?.counts?.enrichedPlatforms, 148);
     assert.equal(status.structuredContent?.counts?.approvedPlatforms, 148);
   } finally {
     await client.close();
@@ -76,7 +76,7 @@ try {
 
   const health = await fetch(new URL("/healthz", endpoint));
   assert.equal(health.status, 200);
-  assert.equal((await health.json()).counts.sources, 142);
+  assert.equal((await health.json()).counts.sources, 266);
 
   const missing = await fetch(new URL("/not-found", endpoint));
   assert.equal(missing.status, 404);
