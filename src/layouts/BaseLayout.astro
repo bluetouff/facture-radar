@@ -15,8 +15,8 @@ const { title, description, canonical = Astro.url.pathname } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
 const primaryNav = [
   { href: "/verifier-mon-outil/", label: "Vérifier mon outil", hint: "Garder, compléter ou changer", icon: "route", tone: "violet" },
-  { href: "/verifier-une-facture/", label: "Vérifier une facture", hint: "Factur-X et mentions", icon: "invoice", tone: "blue" },
-  { href: "/diagnostic/", label: "Choisir une plateforme", hint: "Trois réponses suffisent", icon: "target", tone: "green" },
+  { href: "/verifier-une-facture/", label: "Vérifier une facture", hint: "Factur-X ou XML, contrôle local", icon: "invoice", tone: "blue" },
+  { href: "/diagnostic/", label: "Choisir une plateforme", hint: "3 questions, toutes les options", icon: "target", tone: "green" },
 ] as const;
 const resourceNav = [
   { href: "/plateformes/", label: `${platforms.length} plateformes étudiées`, hint: "Fiches détaillées et tarifs", icon: "layers" },

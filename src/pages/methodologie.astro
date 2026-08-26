@@ -40,11 +40,11 @@ import { platforms } from "../data/platforms";
 
       <h2>Vérifier une facture test</h2>
       <p>Le vérificateur lit localement un PDF Factur-X ou un XML CII. Il recherche le profil, le numéro, la date, les parties, la devise, les lignes, la ventilation de TVA et les totaux structurés. Il contrôle aussi que la base de TVA et le montant de TVA correspondent au total TTC, avec une tolérance d'arrondi de deux centimes.</p>
-      <p>Le fichier ne quitte pas le navigateur et n'est pas conservé. Les déclarations XML <code>DOCTYPE</code> et <code>ENTITY</code> sont refusées, la profondeur du document et sa taille sont limitées, et le PDF n'est pas rendu à l'écran. Le résultat est un prévol technique fondé sur les <a href="https://www.impots.gouv.fr/specifications-externes-b2b">spécifications externes de la DGFiP</a> et la <a href="https://fnfe-mpe.org/factur-x/">publication Factur-X du FNFE-MPE</a>, pas une certification juridique.</p>
+      <p>Le fichier ne quitte pas le navigateur et n'est pas conservé. Les déclarations XML <code>DOCTYPE</code> et <code>ENTITY</code> sont refusées, la profondeur du document et sa taille sont limitées, et le PDF n'est pas rendu à l'écran. Le contrôle de structure repose sur les <a href="https://www.impots.gouv.fr/specifications-externes-b2b">spécifications externes de la DGFiP</a> et la <a href="https://fnfe-mpe.org/factur-x/">publication Factur-X du FNFE-MPE</a>. Il ne remplace pas une certification juridique.</p>
       <p>Cette première version ne valide pas UBL, les signatures électroniques, l'authenticité de l'émetteur, l'archivage ou l'acceptation effective par une plateforme agréée. Un fichier lisible doit encore être accepté par le parcours réel de votre outil.</p>
 
-      <h2>Lire le Passeport et ses routes documentées</h2>
-      <p>Le Passeport rapproche le résultat du fichier et la documentation publique de six plateformes. Il examine toujours les quatre mêmes points : l'entrée du fichier, le format accepté, la transmission électronique et le sort du XML d'origine. Il ne calcule aucun score.</p>
+      <h2>Comprendre les options d'envoi</h2>
+      <p>Après le contrôle du fichier, PA Check rapproche le résultat de la documentation publique de six plateformes. Les mêmes quatre points sont examinés : l'entrée du fichier, le format accepté, la transmission électronique et le sort du XML d'origine. Aucun score n'est calculé.</p>
       <ul>
         <li><strong>Documenté :</strong> la plateforme décrit publiquement ce point dans son site, son centre d'aide ou sa documentation technique.</li>
         <li><strong>À contrôler :</strong> une partie du parcours est publiée, mais le comportement exact doit être vérifié avec un fichier test.</li>

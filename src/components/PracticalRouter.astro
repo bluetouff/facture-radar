@@ -11,9 +11,9 @@ const { compact = false } = Astro.props;
 const answer = buildDirectFacturXAnswer();
 const sourcesById = new Map(sources.map((source) => [source.id, source]));
 const stateLabels = {
-  documented: "Établi",
-  confirm: "À tester",
-  unknown: "Non publié",
+  documented: "Publié",
+  confirm: "À vérifier",
+  unknown: "Information absente",
 } as const;
 ---
 
@@ -22,9 +22,9 @@ const stateLabels = {
     <div class="router-mark"><InterfaceIcon name="action" /></div>
     <div>
       <small>Question pratique</small>
-      <h2 id="practical-router-title">Votre fichier est prêt. Qui peut réellement le prendre&nbsp;?</h2>
+      <h2 id="practical-router-title">Votre fichier est prêt. Où pouvez-vous l'envoyer&nbsp;?</h2>
     </div>
-    <span class="freshness">Vérifié le 25 août 2026</span>
+    <span class="freshness">Mis à jour le 25 août 2026</span>
   </header>
 
   <nav class="need-switch" aria-label="Choisir son point de départ">
@@ -35,14 +35,6 @@ const stateLabels = {
 
   <blockquote>{answer.question}</blockquote>
 
-  <div class="route-map" aria-label="Circuit recherché : fichier Factur-X, dépôt direct sur le portail d'une PA, puis transmission au client">
-    <div><span>01</span><strong>Votre Factur-X</strong><small>PDF/A-3 + XML EN16931</small></div>
-    <i aria-hidden="true"></i>
-    <div><span>02</span><strong>Portail de la PA</strong><small>Dépôt direct, sans intermédiaire</small></div>
-    <i aria-hidden="true"></i>
-    <div><span>03</span><strong>PA du client</strong><small>Routage et statuts</small></div>
-  </div>
-
   <section class="direct-answer">
     <span class="answer-icon"><InterfaceIcon name="check" /></span>
     <div>
@@ -51,6 +43,14 @@ const stateLabels = {
       <p>{answer.explanation}</p>
     </div>
   </section>
+
+  <div class="route-map" aria-label="Circuit recherché : fichier Factur-X, dépôt direct sur le portail d'une PA, puis transmission au client">
+    <div><span>01</span><strong>Votre Factur-X</strong><small>PDF/A-3 + XML EN16931</small></div>
+    <i aria-hidden="true"></i>
+    <div><span>02</span><strong>Portail de la PA</strong><small>Dépôt direct, sans intermédiaire</small></div>
+    <i aria-hidden="true"></i>
+    <div><span>03</span><strong>PA du client</strong><small>Routage et statuts</small></div>
+  </div>
 
   {compact ? (
     <div class="compact-proof">
@@ -61,15 +61,18 @@ const stateLabels = {
     </div>
   ) : (
     <>
-      <form class="volume-picker" id="direct-volume-form">
-        <fieldset>
-          <legend>Votre volume sert uniquement à afficher le bon tarif</legend>
-          <label><input type="radio" name="volume" value="up-to-24" /> <span>24 factures/an ou moins</span></label>
-          <label><input type="radio" name="volume" value="25-to-1000" /> <span>25 à 1 000/mois</span></label>
-          <label><input type="radio" name="volume" value="over-1000" /> <span>Plus de 1 000/mois</span></label>
-          <label><input type="radio" name="volume" value="unknown" checked /> <span>Je ne sais pas</span></label>
-        </fieldset>
-      </form>
+      <details class="volume-refinement">
+        <summary>Ajuster les tarifs à mon volume de factures</summary>
+        <form class="volume-picker" id="direct-volume-form">
+          <fieldset>
+            <legend>Votre volume sert uniquement à afficher le bon tarif</legend>
+            <label><input type="radio" name="volume" value="up-to-24" /> <span>24 factures/an ou moins</span></label>
+            <label><input type="radio" name="volume" value="25-to-1000" /> <span>25 à 1 000/mois</span></label>
+            <label><input type="radio" name="volume" value="over-1000" /> <span>Plus de 1 000/mois</span></label>
+            <label><input type="radio" name="volume" value="unknown" checked /> <span>Je ne sais pas</span></label>
+          </fieldset>
+        </form>
+      </details>
 
       <div class="route-options" id="direct-route-options">
         {answer.options.map((option, index) => (
@@ -77,7 +80,7 @@ const stateLabels = {
             <header>
               <span class="option-index">0{index + 1}</span>
               <div><small>{option.statusLabel}</small><h3>{option.name}</h3></div>
-              <span class:list={["option-state", { leading: index === 0 }]}>{index === 0 ? "À tester d'abord" : "Alternative"}</span>
+              <span class:list={["option-state", { leading: index === 0 }]}>{index === 0 ? "À examiner en premier" : "Alternative"}</span>
             </header>
             <p class="option-summary">{option.summary}</p>
             <dl>
@@ -92,8 +95,8 @@ const stateLabels = {
                 <dd class="route-price">{option.price}</dd>
               </div>
             </dl>
-            <div class="unknown-box"><strong>Le point qui manque</strong><p>{option.decisiveUnknown}</p></div>
-            <div class="test-box"><span><InterfaceIcon name="action" /></span><div><strong>Test utile</strong><p>{option.nextStep}</p></div></div>
+            <div class="unknown-box"><strong>Information encore absente</strong><p>{option.decisiveUnknown}</p></div>
+            <div class="test-box"><span><InterfaceIcon name="action" /></span><div><strong>Prochaine action</strong><p>{option.nextStep}</p></div></div>
             <div class="option-links">
               {option.profileHref && <a href={option.profileHref}>Voir la fiche PA Check</a>}
               <details>
@@ -165,7 +168,7 @@ const stateLabels = {
 )}
 
 <style>
-  .practical-router { overflow: hidden; border: 1px solid color-mix(in srgb, var(--signal) 20%, var(--line)); border-radius: 1.35rem; background: rgba(255,255,255,.96); box-shadow: 0 1.2rem 3.8rem rgba(31,46,77,.11); }
+  .practical-router { overflow: hidden; scroll-margin-top: 5.5rem; border: 1px solid color-mix(in srgb, var(--signal) 20%, var(--line)); border-radius: 1.35rem; background: rgba(255,255,255,.96); box-shadow: 0 1.2rem 3.8rem rgba(31,46,77,.11); }
   .router-head { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; padding: 1.15rem 1.2rem; background: linear-gradient(120deg, #14243a, #1d3155); }
   .router-mark { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 1px solid rgba(255,255,255,.16); border-radius: .8rem; background: rgba(255,255,255,.08); color: #aebcff; }
   .router-head > div:nth-child(2) { min-width: 0; }
@@ -178,7 +181,7 @@ const stateLabels = {
   .need-switch :global(svg) { flex: 0 0 auto; width: 1rem; height: 1rem; }
   blockquote { position: relative; margin: 0; border-bottom: 1px solid var(--line); padding: 1.1rem 1.2rem 1.1rem 2.4rem; color: var(--bright); font-size: .95rem; font-weight: 650; line-height: 1.5; }
   blockquote::before { position: absolute; top: .9rem; left: 1.05rem; color: var(--signal); content: "“"; font-size: 2rem; line-height: 1; }
-  .route-map { display: grid; grid-template-columns: 1fr 2.4rem 1fr 2.4rem 1fr; align-items: center; padding: 1rem 1.2rem; background: linear-gradient(90deg, #f7f9fc, #fff); }
+  .route-map { display: grid; grid-template-columns: 1fr 2.4rem 1fr 2.4rem 1fr; align-items: center; margin-top: -.2rem; padding: 0 1.2rem 1rem; background: linear-gradient(90deg, #f7f9fc, #fff); }
   .route-map > div { min-width: 0; border: 1px solid var(--line); border-radius: .75rem; padding: .7rem; background: #fff; }
   .route-map span { color: var(--signal); font: 750 .78rem/1 var(--font-mono); }
   .route-map strong, .route-map small { display: block; }
@@ -191,7 +194,9 @@ const stateLabels = {
   .direct-answer small { color: var(--success); font-size: .78rem; font-weight: 760; letter-spacing: .04em; text-transform: uppercase; }
   .direct-answer h3 { margin: .12rem 0 0; color: var(--bright); font-size: 1.13rem; letter-spacing: -.025em; }
   .direct-answer p { max-width: 72ch; margin: .45rem 0 0; color: var(--paper); font-size: .85rem; }
-  .volume-picker { margin: 0 1.2rem 1rem; }
+  .volume-refinement { overflow: hidden; margin: 0 1.2rem 1rem; border: 1px solid var(--line); border-radius: .8rem; background: #fff; }
+  .volume-refinement > summary { padding: .75rem .85rem; color: var(--paper); cursor: pointer; font-size: .78rem; font-weight: 690; }
+  .volume-picker { margin: 0; border-top: 1px solid var(--line); padding: .85rem; background: var(--surface-2); }
   .volume-picker fieldset { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; border: 0; padding: 0; }
   .volume-picker legend { width: 100%; margin-bottom: .35rem; color: var(--bright); font-size: .78rem; font-weight: 710; }
   .volume-picker label { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: .48rem .65rem; background: #fff; color: var(--paper); cursor: pointer; font-size: .76rem; }
@@ -257,7 +262,7 @@ const stateLabels = {
   @media (max-width: 720px) {
     .router-head { grid-template-columns: auto 1fr; }
     .freshness { grid-column: 2; justify-self: start; }
-    .need-switch { grid-template-columns: 1fr; }
+    .need-switch { display: none; }
     .route-map { grid-template-columns: 1fr; gap: .45rem; }
     .route-map i { width: 1px; height: 1rem; margin-inline: 1.5rem; }
     .route-map i::after { margin: .55rem 0 0 -.2rem; rotate: 135deg; }
@@ -267,7 +272,7 @@ const stateLabels = {
   @media (max-width: 520px) {
     .router-head, .route-map, .decision-tools { padding-inline: .8rem; }
     blockquote { padding-right: .8rem; }
-    .direct-answer, .volume-picker { margin-inline: .8rem; }
+    .direct-answer, .volume-refinement { margin-inline: .8rem; }
     .route-options, .compact-proof { padding-inline: .8rem; }
     .route-option > header { grid-template-columns: auto 1fr; }
     .option-state { grid-column: 2; justify-self: start; }

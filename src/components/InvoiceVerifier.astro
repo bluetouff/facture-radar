@@ -16,7 +16,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
     <span class="verifier-mark"><InterfaceIcon name="invoice" /></span>
     <div>
       <p class="mono-label">contrôle local</p>
-      <h2 id="invoice-verifier-title">Déposez une facture test.</h2>
+      <h2 id="invoice-verifier-title">Ajoutez le fichier à contrôler</h2>
       <p>PDF Factur-X ou XML CII, 10 Mo maximum. Le fichier reste sur cet appareil.</p>
     </div>
     <span class="local-badge"><InterfaceIcon name="shield" /> Aucun envoi</span>
@@ -55,7 +55,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
       <span class="file-chip" data-file-name></span>
     </header>
 
-    <div class="scope-note"><InterfaceIcon name="shield" /><p><strong>Ce résultat est un prévol technique.</strong> Il ne certifie ni l'authenticité, ni la conformité juridique complète, ni l'acceptation par une plateforme agréée.</p></div>
+    <div class="scope-note"><InterfaceIcon name="shield" /><p><strong>Ce contrôle porte sur la structure du fichier.</strong> Il ne confirme ni son authenticité, ni toute sa conformité juridique, ni son acceptation finale par une plateforme.</p></div>
 
     <dl class="invoice-metadata" aria-label="Informations lues dans la facture">
       <div><dt>Format</dt><dd data-meta="format">-</dd></div>
@@ -92,7 +92,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
   <footer class="verifier-foot">
     <details>
       <summary>Règles, sources et limites du contrôle</summary>
-      <p>Lecture de la structure CII d'un Factur-X selon les spécifications françaises externes. Cette version ne contrôle pas UBL, les signatures, l'archivage ou la transmission réelle.</p>
+      <p>Lecture de la structure CII d'un Factur-X selon les spécifications françaises externes. Cette version ne contrôle pas UBL, les signatures, l'archivage ou l'acceptation finale par une plateforme.</p>
       <ul>
         {verifierSources.map((source) => <li><a href={source.url}>{source.title}</a><small>{source.publisher} · consultée le {source.accessedAt.split("-").reverse().join("/")}</small></li>)}
       </ul>
@@ -152,18 +152,18 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
     setPassportText("[data-passport-profile]", analysis.metadata.profile?.slice(0, 40) ?? "Non identifié");
     if (analysis.status === "usable") {
       setPassportText("[data-passport-kicker]", "Fichier exploitable");
-      setPassportText("[data-passport-title]", "Vous pouvez maintenant tester son passage.");
-      setPassportText("[data-passport-summary]", "Le contrôle de structure est terminé. Les cartes distinguent ce qui est publié de ce qui doit encore être vérifié dans la PA.");
+      setPassportText("[data-passport-title]", "Le fichier est prêt pour un essai d'envoi.");
+      setPassportText("[data-passport-summary]", "Sa structure est lisible. Choisissez une plateforme pour voir l'option publiée et le point qui reste à vérifier.");
       return;
     }
     if (analysis.status === "action") {
       setPassportText("[data-passport-kicker]", "Corrections nécessaires");
-      setPassportText("[data-passport-title]", "Corrigez le fichier avant de tester une route.");
-      setPassportText("[data-passport-summary]", "Les parcours restent consultables, mais un essai concluant exige d'abord une facture sans point bloquant dans le prévol.");
+      setPassportText("[data-passport-title]", "Corrigez le fichier avant de l'envoyer.");
+      setPassportText("[data-passport-summary]", "Les options d'envoi restent consultables, mais les points bloquants indiqués plus haut doivent être corrigés en premier.");
       return;
     }
     setPassportText("[data-passport-kicker]", "Format non exploitable");
-    setPassportText("[data-passport-title]", "Aucune route ne peut encore être testée.");
+    setPassportText("[data-passport-title]", "Ce fichier ne peut pas encore être testé.");
     setPassportText("[data-passport-summary]", "Revenez avec un PDF Factur-X ou un XML CII lisible. PA Check ne déduit pas une compatibilité à partir d'un PDF simple.");
   }
 
@@ -371,12 +371,12 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
       ...analysis.actions.slice(0, 3).map((action, index) => `${index + 1}. ${action}`),
       ...(routeName && routeTest && routeNext ? [
         "",
-        `Route regardée : ${routeName}`,
-        `Test à effectuer : ${routeTest}`,
+        `Plateforme regardée : ${routeName}`,
+        `Point à vérifier : ${routeTest}`,
         `Prochaine action : ${routeNext}`,
       ] : []),
       "",
-      `Règles : ${analysis.ruleVersion} · contrôle technique local, pas une certification juridique.`,
+      `Règles : ${analysis.ruleVersion} · contrôle local de la structure, pas une certification juridique.`,
     ].join("\n");
     try {
       await navigator.clipboard.writeText(report);
@@ -394,8 +394,8 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
   .verifier-mark { display: grid; place-items: center; width: 3.15rem; height: 3.15rem; border-radius: .9rem; background: linear-gradient(145deg, var(--signal), var(--accent)); color: #fff; box-shadow: 0 .7rem 1.5rem rgba(64,91,216,.2); }
   .verifier-mark :global(svg) { width: 1.55rem; height: 1.55rem; }
   .verifier-head h2 { margin: .35rem 0 0; color: var(--bright); font-size: clamp(1.25rem, 2.6vw, 1.65rem); line-height: 1.1; letter-spacing: -.035em; }
-  .verifier-head p:last-child { margin: .35rem 0 0; color: var(--muted); font-size: .78rem; }
-  .local-badge { display: inline-flex; gap: .4rem; align-items: center; border: 1px solid color-mix(in srgb, var(--success) 24%, var(--line)); border-radius: 999px; padding: .48rem .65rem; background: #fff; color: var(--success); font-size: .68rem; font-weight: 720; white-space: nowrap; }
+  .verifier-head p:last-child { margin: .35rem 0 0; color: var(--muted); font-size: .84rem; }
+  .local-badge { display: inline-flex; gap: .4rem; align-items: center; border: 1px solid color-mix(in srgb, var(--success) 24%, var(--line)); border-radius: 999px; padding: .48rem .65rem; background: #fff; color: var(--success); font-size: .76rem; font-weight: 720; white-space: nowrap; }
   .local-badge :global(svg) { width: .95rem; height: .95rem; }
   .verifier-input { padding: clamp(1rem, 3.5vw, 2rem); }
   .file-input { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
@@ -407,67 +407,67 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
   .drop-copy { display: grid; }
   .drop-copy strong { color: var(--bright); font-size: 1.05rem; }
   .drop-copy small { margin-top: .22rem; color: var(--muted); font-size: .8rem; }
-  .drop-action { border-radius: .7rem; padding: .72rem .85rem; background: var(--signal); color: #fff; font-size: .7rem; font-weight: 730; }
+  .drop-action { border-radius: .7rem; padding: .72rem .85rem; background: var(--signal); color: #fff; font-size: .78rem; font-weight: 730; }
   .privacy-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: .8rem; }
-  .privacy-strip > span { display: flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .66rem; }
+  .privacy-strip > span { display: flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .76rem; }
   .privacy-strip strong { color: var(--paper); }
   .privacy-strip :global(svg) { flex: 0 0 auto; width: .9rem; height: .9rem; color: var(--success); }
   .verifier-progress { display: flex; gap: 1rem; align-items: center; min-height: 13rem; justify-content: center; padding: 2rem; }
   .verifier-progress > div { display: grid; }
   .verifier-progress strong { color: var(--bright); }
-  .verifier-progress small { color: var(--muted); font-size: .78rem; }
+  .verifier-progress small { color: var(--muted); font-size: .82rem; }
   .progress-orbit { width: 2.5rem; height: 2.5rem; border: 3px solid var(--signal-soft); border-top-color: var(--signal); border-radius: 50%; animation: spin .8s linear infinite; }
   .verifier-result { padding: clamp(1rem, 3.5vw, 2rem); }
   .result-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .9rem; align-items: center; }
   .result-symbol { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: .85rem; background: var(--success); color: #fff; }
   .verifier-result[data-status="action"] .result-symbol { background: var(--danger); }
   .verifier-result[data-status="unsupported"] .result-symbol { background: var(--amber); }
-  .result-kicker { margin: 0; color: var(--success); font-size: .66rem; font-weight: 760; letter-spacing: .045em; text-transform: uppercase; }
+  .result-kicker { margin: 0; color: var(--success); font-size: .72rem; font-weight: 760; letter-spacing: .045em; text-transform: uppercase; }
   .verifier-result[data-status="action"] .result-kicker { color: var(--danger); }
   .verifier-result[data-status="unsupported"] .result-kicker { color: var(--amber); }
   .result-head h3 { margin: .18rem 0 0; color: var(--bright); font-size: clamp(1.35rem, 3vw, 1.85rem); line-height: 1.1; letter-spacing: -.035em; }
-  .result-head p:last-child { margin: .35rem 0 0; color: var(--muted); font-size: .78rem; }
-  .file-chip { overflow: hidden; max-width: 13rem; border-radius: 999px; padding: .42rem .6rem; background: var(--surface-2); color: var(--muted); font: .61rem/1.2 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
+  .result-head p:last-child { margin: .35rem 0 0; color: var(--muted); font-size: .84rem; }
+  .file-chip { overflow: hidden; max-width: 13rem; border-radius: 999px; padding: .42rem .6rem; background: var(--surface-2); color: var(--muted); font: .72rem/1.2 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
   .scope-note { display: flex; gap: .65rem; align-items: flex-start; margin-top: 1rem; border: 1px solid color-mix(in srgb, var(--amber) 18%, var(--line)); border-radius: .75rem; padding: .75rem .85rem; background: var(--amber-soft); }
   .scope-note :global(svg) { flex: 0 0 auto; width: 1rem; height: 1rem; margin-top: .12rem; color: var(--amber); }
-  .scope-note p { margin: 0; color: var(--paper); font-size: .7rem; }
+  .scope-note p { margin: 0; color: var(--paper); font-size: .8rem; }
   .invoice-metadata { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; margin: 1rem 0 0; }
   .invoice-metadata > div { min-width: 0; border: 1px solid var(--line); border-radius: .7rem; padding: .7rem; background: var(--surface); }
-  .invoice-metadata dt { color: var(--muted); font-size: .62rem; font-weight: 680; text-transform: uppercase; }
-  .invoice-metadata dd { overflow: hidden; margin: .25rem 0 0; color: var(--bright); font-size: .76rem; font-weight: 710; overflow-wrap: anywhere; }
+  .invoice-metadata dt { color: var(--muted); font-size: .72rem; font-weight: 680; text-transform: uppercase; }
+  .invoice-metadata dd { overflow: hidden; margin: .25rem 0 0; color: var(--bright); font-size: .82rem; font-weight: 710; overflow-wrap: anywhere; }
   .result-columns { display: grid; grid-template-columns: 1.18fr .82fr; gap: .8rem; margin-top: .8rem; }
   .check-panel, .action-panel { border: 1px solid var(--line); border-radius: .9rem; padding: 1rem; background: rgba(255,255,255,.82); }
   .panel-heading { display: flex; gap: .6rem; align-items: center; }
-  .panel-heading > span { display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: .55rem; background: var(--signal-soft); color: var(--signal); font: 740 .62rem/1 var(--font-mono); }
-  .panel-heading small { display: block; color: var(--signal); font-size: .62rem; font-weight: 730; letter-spacing: .04em; text-transform: uppercase; }
-  .panel-heading h4 { margin: .1rem 0 0; color: var(--bright); font-size: .9rem; }
+  .panel-heading > span { display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: .55rem; background: var(--signal-soft); color: var(--signal); font: 740 .7rem/1 var(--font-mono); }
+  .panel-heading small { display: block; color: var(--signal); font-size: .72rem; font-weight: 730; letter-spacing: .04em; text-transform: uppercase; }
+  .panel-heading h4 { margin: .1rem 0 0; color: var(--bright); font-size: .95rem; }
   .check-list, .invoice-actions { display: grid; gap: .42rem; margin: .85rem 0 0; padding: 0; list-style: none; }
   .check-list :global(li) { display: grid; grid-template-columns: auto 1fr; gap: .55rem; align-items: start; border-radius: .62rem; padding: .55rem; background: var(--surface); }
   .check-list :global(li > span:last-child) { display: grid; }
-  .check-symbol { display: grid; place-items: center; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: var(--success-soft); color: var(--success); font-size: .65rem; font-weight: 800; }
+  .check-symbol { display: grid; place-items: center; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: var(--success-soft); color: var(--success); font-size: .7rem; font-weight: 800; }
   .check-list :global(li[data-status="warning"] .check-symbol) { background: var(--amber-soft); color: var(--amber); }
   .check-list :global(li[data-status="fail"] .check-symbol) { background: var(--danger-soft); color: var(--danger); }
-  .check-list :global(strong) { color: var(--bright); font-size: .78rem; }
-  .check-list :global(small) { margin-top: .08rem; color: var(--muted); font-size: .66rem; }
+  .check-list :global(strong) { color: var(--bright); font-size: .82rem; }
+  .check-list :global(small) { margin-top: .08rem; color: var(--muted); font-size: .75rem; }
   .invoice-actions { counter-reset: invoice-action; }
   .invoice-actions :global(li) { display: grid; grid-template-columns: auto 1fr; gap: .55rem; border-radius: .65rem; padding: .65rem; background: var(--surface); counter-increment: invoice-action; }
-  .invoice-actions :global(li)::before { display: grid; place-items: center; width: 1.55rem; height: 1.55rem; border-radius: 50%; background: var(--bright); color: #fff; content: counter(invoice-action); font-size: .62rem; font-weight: 780; }
+  .invoice-actions :global(li)::before { display: grid; place-items: center; width: 1.55rem; height: 1.55rem; border-radius: 50%; background: var(--bright); color: #fff; content: counter(invoice-action); font-size: .7rem; font-weight: 780; }
   .invoice-actions :global(li > span) { display: grid; }
-  .invoice-actions :global(strong) { color: var(--bright); font-size: .78rem; }
-  .invoice-actions :global(small) { margin-top: .12rem; color: var(--muted); font-size: .64rem; }
-  .action-limit { margin: .65rem 0 0; color: var(--muted); font-size: .64rem; }
+  .invoice-actions :global(strong) { color: var(--bright); font-size: .82rem; }
+  .invoice-actions :global(small) { margin-top: .12rem; color: var(--muted); font-size: .75rem; }
+  .action-limit { margin: .65rem 0 0; color: var(--muted); font-size: .75rem; }
   .result-tools { display: flex; flex-wrap: wrap; gap: .55rem; align-items: center; margin-top: 1rem; }
   .result-tools .button { min-height: 2.7rem; cursor: pointer; }
   .result-tools :global(svg) { width: 1rem; height: 1rem; margin-right: .35rem; }
-  .result-tools > span { color: var(--success); font-size: .66rem; }
+  .result-tools > span { color: var(--success); font-size: .75rem; }
   .verifier-foot { border-top: 1px solid var(--line); padding: .85rem 1rem; background: color-mix(in srgb, var(--surface-2) 60%, #fff); }
   .verifier-foot details { margin: 0; border: 0; padding: 0; }
-  .verifier-foot summary { color: var(--signal); cursor: pointer; font-size: .68rem; font-weight: 710; }
-  .verifier-foot p { max-width: 70rem; color: var(--muted); font-size: .67rem; }
+  .verifier-foot summary { color: var(--signal); cursor: pointer; font-size: .76rem; font-weight: 710; }
+  .verifier-foot p { max-width: 70rem; color: var(--muted); font-size: .75rem; }
   .verifier-foot ul { display: grid; gap: .4rem; margin: .7rem 0 0; padding: 0; list-style: none; }
   .verifier-foot li { display: grid; }
-  .verifier-foot a { color: var(--paper); font-size: .68rem; text-decoration: underline; text-underline-offset: .16em; }
-  .verifier-foot li small, .ruleset { color: var(--muted); font-size: .62rem; }
+  .verifier-foot a { color: var(--paper); font-size: .76rem; text-decoration: underline; text-underline-offset: .16em; }
+  .verifier-foot li small, .ruleset { color: var(--muted); font-size: .72rem; }
   @keyframes spin { to { rotate: 360deg; } }
   @media (max-width: 760px) {
     .verifier-head, .result-head { grid-template-columns: auto 1fr; }

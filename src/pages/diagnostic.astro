@@ -6,15 +6,15 @@ import DiagnosticEngine from "../components/DiagnosticEngine.astro";
 
 <BaseLayout
   title="Trouver une plateforme adaptée | PA Check"
-  description="Trois questions simples pour repérer jusqu'à trois plateformes adaptées à votre activité et à votre priorité."
+  description="Trois questions simples pour repérer les plateformes adaptées à votre activité, votre volume de factures et votre priorité."
 >
   <section class="shell page-hero diagnostic-hero">
     <div>
-      <span class="eyebrow">votre activité · vos priorités</span>
-      <h1>Trouvez des plateformes adaptées à votre activité.</h1>
-      <p>Indiquez votre taille, votre volume mensuel de factures et votre priorité. PA Check vous propose jusqu'à trois options à regarder de plus près.</p>
+      <span class="eyebrow">3 questions · toutes les options accessibles</span>
+      <h1>Quelle plateforme répond à votre besoin&nbsp;?</h1>
+      <p>Indiquez votre taille, votre volume mensuel de factures et votre priorité. PA Check met en avant les fiches les mieux renseignées sans masquer les autres résultats.</p>
     </div>
-    <ChoiceMap />
+    <div class="choice-map-visual"><ChoiceMap /></div>
   </section>
   <section class="shell">
     <DiagnosticEngine />
@@ -25,5 +25,5 @@ import DiagnosticEngine from "../components/DiagnosticEngine.astro";
   .diagnostic-hero { display: grid; grid-template-columns: minmax(0, .95fr) minmax(440px, .85fr); gap: clamp(2.4rem, 6vw, 6rem); align-items: center; }
   .diagnostic-hero h1 { max-width: 14ch; }
   .diagnostic-hero > div > p { max-width: 42rem; margin: 1.25rem 0 0; color: var(--paper); font-size: clamp(.98rem, 1.8vw, 1.14rem); line-height: 1.7; }
-  @media (max-width: 900px) { .diagnostic-hero { grid-template-columns: 1fr; gap: 2rem; } .diagnostic-hero h1 { max-width: 18ch; } }
+  @media (max-width: 900px) { .diagnostic-hero { grid-template-columns: 1fr; gap: 1rem; } .diagnostic-hero h1 { max-width: 18ch; } .choice-map-visual { display: none; } }
 </style>

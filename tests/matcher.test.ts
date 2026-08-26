@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { platforms } from "../src/data/platforms.ts";
-import { runDiagnostic } from "../src/lib/matcher.ts";
+import { partitionDiagnosticResults, runDiagnostic } from "../src/lib/matcher.ts";
 import type { DiagnosticInput } from "../src/data/types.ts";
 
 const base: DiagnosticInput = {
@@ -22,6 +22,29 @@ test("un indépendant obtient plusieurs parcours gratuits sans compte bancaire",
   assert.ok(eligible.some((result) => result.platform.slug === "indy"));
   assert.ok(eligible.some((result) => result.platform.slug === "tiime"));
   assert.ok(eligible.some((result) => result.platform.slug === "abby"));
+});
+
+test("le parcours garde toutes les options compatibles après les trois fiches mises en avant", () => {
+  const results = runDiagnostic(platforms, {
+    ...base,
+    freeOnly: false,
+    noBankAccount: false,
+    priorities: ["simplicity", "documentation"],
+  });
+  const partition = partitionDiagnosticResults(results);
+  assert.equal(partition.featured.length, 3);
+  assert.equal(partition.featured.length + partition.remaining.length, results.length);
+  assert.ok(partition.remaining.some((result) => result.eligible));
+});
+
+test("à critères égaux les fiches les mieux renseignées sont présentées en premier", () => {
+  const results = runDiagnostic(platforms, {
+    ...base,
+    freeOnly: true,
+    noBankAccount: false,
+    priorities: ["documentation"],
+  }).filter((result) => result.eligible);
+  assert.deepEqual(results.slice(0, 3).map((result) => result.platform.slug), ["tiime", "pennylane", "abby"]);
 });
 
 test("une exigence API gratuite échoue lorsque l'inclusion gratuite n'est pas prouvée", () => {

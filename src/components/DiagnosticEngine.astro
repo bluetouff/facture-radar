@@ -1,6 +1,6 @@
 <form class="diagnostic" id="diagnostic-form">
   <div class="diagnostic-head">
-    <div><p class="mono-label">votre situation</p></div>
+    <div><p class="mono-label">3 questions · moins d’une minute</p></div>
     <p>Vos réponses restent dans ce navigateur. Aucun SIREN, compte ou document n'est demandé.</p>
   </div>
 
@@ -8,8 +8,8 @@
     <label>
       <span><b>01</b> Taille de l'entreprise</span>
       <select name="size" required>
-        <option value="micro">Micro-entreprise ou indépendant</option>
-        <option value="tpe">TPE, 1 à 9 salariés</option>
+        <option value="micro">Micro-entreprise (auto-entrepreneur)</option>
+        <option value="tpe">Indépendant hors régime micro ou TPE</option>
         <option value="pme">PME, 10 à 249 salariés</option>
         <option value="eti">ETI</option>
         <option value="ge">Grande entreprise</option>
@@ -24,8 +24,7 @@
   <fieldset>
     <legend><span>03</span> Votre priorité</legend>
     <div class="constraint-grid">
-      <label><input type="radio" name="constraint" value="none" checked /> <span><strong>Voir les options</strong><small>Commencer par les offres les mieux renseignées</small></span></label>
-      <label><input type="radio" name="constraint" value="free" /> <span><strong>Une offre gratuite</strong><small>Pour le volume indiqué</small></span></label>
+      <label><input type="radio" name="constraint" value="free" required /> <span><strong>Une offre gratuite</strong><small>Pour le volume indiqué</small></span></label>
       <label><input type="radio" name="constraint" value="noBank" /> <span><strong>Compte bancaire facultatif</strong><small>Je ne souhaite pas ouvrir un compte chez l'éditeur</small></span></label>
       <label><input type="radio" name="constraint" value="accountant" /> <span><strong>Travail avec mon comptable</strong><small>Mon cabinet doit pouvoir accéder aux factures</small></span></label>
       <label><input type="radio" name="constraint" value="api" /> <span><strong>Connexion à mes outils</strong><small>Une API est nécessaire</small></span></label>
@@ -34,33 +33,36 @@
   </fieldset>
 
   <div class="form-actions">
-    <button class="button" type="submit">Voir les plateformes</button>
+    <button class="button" type="submit">Voir les plateformes adaptées</button>
     <button class="button secondary" type="reset">Effacer</button>
   </div>
 </form>
 
 <section class="results" id="diagnostic-results" aria-live="polite" hidden>
   <header>
-    <div><p class="mono-label">vos options</p><h2 id="result-title"></h2></div>
+    <div><p class="mono-label">votre réponse</p><h2 id="result-title"></h2><p id="result-context"></p></div>
     <button type="button" class="share-button">Copier le lien</button>
   </header>
   <div id="eligible-results" class="result-grid"></div>
-  <details class="excluded-results">
-    <summary>Voir les autres plateformes et les points à confirmer</summary>
+  <details class="excluded-results" data-other-results>
+    <summary>Voir toutes les autres plateformes étudiées</summary>
     <div id="excluded-list"></div>
   </details>
 </section>
 
 <script>
   import { platforms } from "../data/platforms";
-  import { runDiagnostic } from "../lib/matcher";
+  import { partitionDiagnosticResults, runDiagnostic } from "../lib/matcher";
 
   const form = document.querySelector<HTMLFormElement>("#diagnostic-form");
   const resultsSection = document.querySelector<HTMLElement>("#diagnostic-results");
   const eligibleContainer = document.querySelector<HTMLElement>("#eligible-results");
   const excludedContainer = document.querySelector<HTMLElement>("#excluded-list");
   const resultTitle = document.querySelector<HTMLElement>("#result-title");
+  const resultContext = document.querySelector<HTMLElement>("#result-context");
   const shareButton = document.querySelector<HTMLButtonElement>(".share-button");
+  const otherResults = document.querySelector<HTMLDetailsElement>("[data-other-results]");
+  const otherResultsSummary = otherResults?.querySelector<HTMLElement>("summary");
 
   const text = (tag: string, value: string, className?: string) => {
     const element = document.createElement(tag);
@@ -74,8 +76,8 @@
     const data = new FormData(form);
     return {
       size: String(data.get("size")),
-      monthlyInvoices: Number(data.get("monthlyInvoices")),
-      constraint: String(data.get("constraint") ?? "none"),
+      monthlyInvoices: Math.min(1_000_000, Math.max(0, Number(data.get("monthlyInvoices")) || 0)),
+      constraint: String(data.get("constraint") ?? ""),
     };
   };
 
@@ -87,7 +89,9 @@
     needsAccountantAccess: input.constraint === "accountant",
     needsApi: input.constraint === "api",
     needsInternationalReporting: input.constraint === "reporting",
-    priorities: ["documentation"],
+    priorities: input.constraint === "accountant" || input.constraint === "api"
+        ? ["ecosystem", "documentation"]
+        : ["documentation"],
   });
 
   const inputToParams = (input: ReturnType<typeof getInput>) => {
@@ -98,27 +102,68 @@
     return params;
   };
 
-  const renderEligible = (result: ReturnType<typeof runDiagnostic>[number], rank: number) => {
+  const fitLabels: Record<string, string> = {
+    free: "Offre gratuite pour le volume indiqué",
+    noBank: "Compte bancaire non obligatoire",
+    accountant: "Accès comptable documenté",
+    api: "API documentée",
+    reporting: "E-reporting documenté",
+  };
+
+  const sizeLabels: Record<string, string> = {
+    micro: "une micro-entreprise",
+    tpe: "un indépendant hors régime micro ou une TPE",
+    pme: "une PME",
+    eti: "une ETI",
+    ge: "une grande entreprise",
+  };
+
+  const priorityLabels: Record<string, string> = {
+    free: "offre gratuite",
+    noBank: "sans compte bancaire imposé",
+    accountant: "accès pour votre comptable",
+    api: "connexion à vos outils",
+    reporting: "B2C ou international",
+  };
+
+  const unknownPatterns: Record<string, RegExp> = {
+    free: /tarif|prix|coût|plafond|volume|factur|engagement/i,
+    noBank: /banqu|compte/i,
+    accountant: /comptabl|cabinet|accès/i,
+    api: /api|intégr|connect/i,
+    reporting: /report|international|b2c|particulier/i,
+  };
+
+  const renderEligible = (result: ReturnType<typeof runDiagnostic>[number], rank: number, constraint: string) => {
     const article = document.createElement("article");
     article.className = "result-card";
     const top = document.createElement("div");
     top.className = "result-top";
     top.append(text("span", `OPTION ${String(rank + 1).padStart(2, "0")}`, "rank"));
-    top.append(text("strong", "Correspond à vos critères", "compatibility"));
+    top.append(text("strong", fitLabels[constraint] ?? "Critère documenté", "compatibility"));
     article.append(top);
     article.append(text("h3", result.platform.displayName));
-    article.append(text("p", result.platform.pricing.value?.label || "Prix à confirmer", "price"));
+    article.append(text("p", result.platform.summary, "result-summary"));
+    const price = document.createElement("div");
+    price.className = "price";
+    price.append(text("small", "Budget publié"), text("strong", result.platform.pricing.value?.label || "Tarif public non trouvé"));
+    article.append(price);
 
-    const reasonTitle = text("h4", "Pourquoi cette option peut convenir");
+    const reasonTitle = text("h4", "Pourquoi elle ressort");
     const reasons = document.createElement("ul");
-    for (const reason of result.reasons.slice(0, 5)) reasons.append(text("li", reason));
+    const usefulReasons = result.reasons.filter((reason) => reason !== "Informations publiques suffisamment détaillées");
+    for (const reason of usefulReasons.slice(0, 3)) reasons.append(text("li", reason));
     article.append(reasonTitle, reasons);
 
-    if (result.platform.importantUnknowns.length) {
-      article.append(text("h4", "Points à confirmer"));
+    const unknownPattern = unknownPatterns[constraint];
+    const relevantUnknowns = unknownPattern
+      ? result.platform.importantUnknowns.filter((unknown) => unknownPattern.test(unknown))
+      : [];
+    if (relevantUnknowns.length) {
+      article.append(text("h4", "À vérifier avant de choisir"));
       const unknowns = document.createElement("ul");
       unknowns.className = "unknown-list";
-      for (const unknown of result.platform.importantUnknowns.slice(0, 4)) unknowns.append(text("li", unknown));
+      for (const unknown of relevantUnknowns.slice(0, 2)) unknowns.append(text("li", unknown));
       article.append(unknowns);
     }
 
@@ -135,24 +180,45 @@
     row.className = "excluded-row";
     const heading = document.createElement("div");
     heading.append(text("strong", result.platform.displayName));
+    heading.append(text("span", result.eligible ? "CORRESPOND AUSSI" : "CRITÈRE NON CONFIRMÉ"));
     const list = document.createElement("ul");
-    for (const blocker of result.blockers) list.append(text("li", blocker));
+    const details = result.eligible
+      ? result.reasons.filter((reason) => reason !== "Informations publiques suffisamment détaillées")
+      : result.blockers;
+    for (const detail of details.slice(0, 2)) list.append(text("li", detail));
+    const link = document.createElement("a");
+    link.href = `/plateformes/${result.platform.slug}/`;
+    link.className = "excluded-link";
+    link.textContent = "Voir la fiche";
+    heading.append(link);
     row.append(heading, list);
     return row;
   };
 
   const render = () => {
-    if (!form || !resultsSection || !eligibleContainer || !excludedContainer || !resultTitle) return;
+    if (!form || !resultsSection || !eligibleContainer || !excludedContainer || !resultTitle || !resultContext) return;
     const input = getInput();
     const matches = runDiagnostic(platforms, toDiagnosticInput(input) as Parameters<typeof runDiagnostic>[1]);
-    const eligible = matches.filter((match) => match.eligible).slice(0, 3);
-    const excluded = matches.filter((match) => !match.eligible);
-    eligibleContainer.replaceChildren(...eligible.map(renderEligible));
-    excludedContainer.replaceChildren(...excluded.map(renderExcluded));
-    if (eligible.length) resultTitle.textContent = `${eligible.length} plateforme${eligible.length > 1 ? "s" : ""} à regarder`;
+    const { eligibleCount, featured, remaining } = partitionDiagnosticResults(matches);
+    const additionalEligibleCount = remaining.filter((result) => result.eligible).length;
+    eligibleContainer.replaceChildren(...featured.map((result, rank) => renderEligible(result, rank, input.constraint)));
+    excludedContainer.replaceChildren(...remaining.map(renderExcluded));
+    const sizeLabel = sizeLabels[input.size] ?? "votre entreprise";
+    const priorityLabel = priorityLabels[input.constraint] ?? "critère choisi";
+    if (eligibleCount) {
+      resultTitle.textContent = `${eligibleCount} plateforme${eligibleCount > 1 ? "s" : ""} à examiner pour ${sizeLabel}`;
+      resultContext.textContent = `${input.monthlyInvoices.toLocaleString("fr-FR")} facture${input.monthlyInvoices > 1 ? "s" : ""} par mois · priorité : ${priorityLabel}. Les trois fiches les mieux renseignées sont affichées en premier.`;
+    }
     else {
-      resultTitle.textContent = "Aucune plateforme de notre sélection ne correspond à tous vos critères";
-      eligibleContainer.append(text("p", "Modifiez votre priorité ou consultez les points à confirmer.", "no-result"));
+      resultTitle.textContent = "Aucune des 25 fiches ne confirme ce critère";
+      resultContext.textContent = `Pour ${sizeLabel}, le critère « ${priorityLabel} » comporte un blocage ou une information manquante dans chaque fiche étudiée.`;
+      eligibleContainer.append(text("p", "Essayez une autre priorité ou consultez les informations manquantes ci-dessous.", "no-result"));
+    }
+    if (otherResults && otherResultsSummary) {
+      otherResults.hidden = remaining.length === 0;
+      otherResultsSummary.textContent = additionalEligibleCount
+        ? `Voir les ${remaining.length} autres plateformes étudiées, dont ${additionalEligibleCount} correspondent aussi`
+        : `Voir les ${remaining.length} autres plateformes étudiées`;
     }
     resultsSection.hidden = false;
     const params = inputToParams(input);
@@ -170,9 +236,9 @@
     };
     setValue("size", params.get("size"));
     setValue("monthlyInvoices", params.get("volume"));
-    const requestedConstraint = params.get("contrainte") ?? "none";
-    const allowedConstraints = new Set(["none", "free", "noBank", "accountant", "api", "reporting"]);
-    const constraint = allowedConstraints.has(requestedConstraint) ? requestedConstraint : "none";
+    const requestedConstraint = params.get("contrainte") ?? "free";
+    const allowedConstraints = new Set(["free", "noBank", "accountant", "api", "reporting"]);
+    const constraint = allowedConstraints.has(requestedConstraint) ? requestedConstraint : "free";
     const constraintInput = form.querySelector<HTMLInputElement>(`input[name="constraint"][value="${constraint}"]`);
     if (constraintInput) constraintInput.checked = true;
     return params.has("size") && params.has("volume");
@@ -202,10 +268,10 @@
   .diagnostic-head::after { position: absolute; top: -5rem; right: 8%; width: 9rem; height: 9rem; border: 1px solid rgba(64,91,216,.13); border-radius: 50%; box-shadow: 0 0 0 1.5rem rgba(64,91,216,.035), 0 0 0 3rem rgba(117,87,214,.025); content: ""; }
   .diagnostic-head > div { display: flex; gap: 0.8rem; align-items: center; }
   legend span { color: var(--accent); font: 800 1.2rem/1 var(--font-mono); }
-  .diagnostic-head > p { position: relative; z-index: 1; margin: 0; color: var(--muted); font-size: 0.78rem; }
+  .diagnostic-head > p { position: relative; z-index: 1; margin: 0; color: var(--muted); font-size: 0.85rem; }
   .question-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1.3rem; }
   .question-grid label { display: grid; gap: 0.5rem; }
-  .question-grid label > span { color: var(--paper); font-size: 0.78rem; font-weight: 650; }
+  .question-grid label > span { color: var(--paper); font-size: 0.85rem; font-weight: 650; }
   .question-grid label > span b { margin-right: .45rem; color: var(--accent); font: 750 .65rem/1 var(--font-mono); }
   input[type="number"], select { width: 100%; min-height: 3.2rem; border: 1px solid var(--line); border-radius: .75rem; padding: 0.7rem 0.8rem; outline: 0; background: var(--surface-2); color: var(--bright); }
   input:focus, select:focus { border-color: var(--signal); box-shadow: 0 0 0 2px color-mix(in srgb, var(--signal) 18%, transparent); }
@@ -217,38 +283,43 @@
   .constraint-grid label:has(input:checked) { border-color: color-mix(in srgb, var(--signal) 52%, var(--line)); background: var(--signal-soft); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--signal) 8%, transparent), 0 .45rem 1.1rem rgba(64,91,216,.08); }
   .constraint-grid input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; accent-color: var(--signal); }
   .constraint-grid span { display: grid; }
-  .constraint-grid strong { color: var(--bright); font-size: 0.78rem; }
-  .constraint-grid small { margin-top: 0.2rem; color: var(--muted); font-size: 0.66rem; }
+  .constraint-grid strong { color: var(--bright); font-size: 0.85rem; }
+  .constraint-grid small { margin-top: 0.2rem; color: var(--muted); font-size: 0.75rem; }
   .form-actions { display: flex; gap: 0.7rem; border-top: 1px solid var(--line); padding: 1.2rem 1.3rem; background: rgba(237,242,248,.55); }
   .form-actions button { cursor: pointer; }
   .results { scroll-margin-top: 1rem; margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 2rem; }
   .results > header { display: flex; justify-content: space-between; align-items: end; gap: 1rem; }
   .results h2 { margin: 0.55rem 0 0; color: var(--bright); font-size: clamp(1.6rem, 4vw, 2.5rem); letter-spacing: -0.045em; }
-  .share-button { border: 1px solid var(--line); border-radius: .65rem; padding: 0.7rem 0.85rem; background: var(--surface); color: var(--signal); cursor: pointer; font: 650 0.64rem/1 var(--font-sans); }
+  #result-context { max-width: 48rem; margin: .55rem 0 0; color: var(--muted); font-size: .9rem; }
+  .share-button { border: 1px solid var(--line); border-radius: .65rem; padding: 0.7rem 0.85rem; background: var(--surface); color: var(--signal); cursor: pointer; font: 650 0.75rem/1 var(--font-sans); }
   .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.3rem; }
-  .result-card { position: relative; display: flex; overflow: hidden; min-width: 0; min-height: 23rem; flex-direction: column; border: 1px solid color-mix(in srgb, var(--signal) 18%, var(--line)); border-radius: 1.15rem; padding: 1.1rem; background: linear-gradient(145deg, var(--signal-soft), #fff 35%, #fff); box-shadow: 0 .7rem 2rem rgba(41,57,86,.06); }
+  .result-card { position: relative; display: flex; overflow: hidden; min-width: 0; min-height: 20rem; flex-direction: column; border: 1px solid color-mix(in srgb, var(--signal) 18%, var(--line)); border-radius: 1.15rem; padding: 1.1rem; background: linear-gradient(145deg, var(--signal-soft), #fff 35%, #fff); box-shadow: 0 .7rem 2rem rgba(41,57,86,.06); }
   .result-card::after { position: absolute; top: -4rem; right: -4rem; width: 9rem; height: 9rem; border: 1px solid rgba(64,91,216,.14); border-radius: 50%; box-shadow: 0 0 0 1.3rem rgba(64,91,216,.035); content: ""; }
   .result-card > * { position: relative; z-index: 1; }
   .result-top { display: flex; justify-content: space-between; gap: 0.5rem; }
-  .rank { color: var(--accent); font: 730 0.6rem/1 var(--font-sans); letter-spacing: .04em; }
-  .compatibility { border-radius: 999px; padding: .3rem .45rem; background: var(--success-soft); color: var(--success); font: 680 0.58rem/1 var(--font-sans); }
+  .rank { color: var(--accent); font: 730 0.68rem/1 var(--font-sans); letter-spacing: .04em; }
+  .compatibility { border-radius: 999px; padding: .3rem .45rem; background: var(--success-soft); color: var(--success); font: 680 0.7rem/1 var(--font-sans); }
   .result-card h3 { margin: 1rem 0 0; color: var(--bright); font-size: 1.4rem; }
-  .result-card .price { min-height: 3.8rem; color: var(--muted); font-size: 0.76rem; }
-  .result-card h4 { margin: 1rem 0 0.45rem; color: var(--paper); font-size: 0.72rem; }
-  .result-card ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.7rem; }
+  .result-summary { min-height: 4.8rem; color: var(--muted); font-size: .84rem; }
+  .result-card .price { display: grid; gap: .25rem; min-height: 4.5rem; border-block: 1px solid var(--line); padding-block: .75rem; }
+  .result-card .price small { color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+  .result-card .price strong { color: var(--paper); font-size: .84rem; line-height: 1.45; }
+  .result-card h4 { margin: 1rem 0 0.45rem; color: var(--paper); font-size: 0.8rem; }
+  .result-card ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.78rem; }
   .result-card li + li { margin-top: 0.35rem; }
   .unknown-list li::marker { color: var(--amber); }
-  .result-link { display: flex; justify-content: space-between; margin-top: auto; border-radius: .7rem; padding: .75rem; background: var(--signal-soft); color: var(--signal); font-size: .65rem; font-weight: 720; }
+  .result-link { display: flex; justify-content: space-between; margin-top: auto; border-radius: .7rem; padding: .75rem; background: var(--signal-soft); color: var(--signal); font-size: .75rem; font-weight: 720; }
   .result-link::after { content: "→"; }
   .no-result { grid-column: 1 / -1; border-left: 3px solid var(--amber); padding: 1rem; background: var(--surface); color: var(--paper); }
   .excluded-results { overflow: hidden; margin-top: 1rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
-  .excluded-results summary { padding: 1rem; color: var(--paper); cursor: pointer; font-size: .72rem; font-weight: 670; }
+  .excluded-results summary { padding: 1rem; color: var(--paper); cursor: pointer; font-size: .8rem; font-weight: 670; }
   .excluded-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding: 0.8rem 1rem; }
-  .excluded-row > div { display: flex; justify-content: space-between; gap: 0.6rem; }
+  .excluded-row > div { display: grid; justify-items: start; gap: 0.35rem; }
   .excluded-row strong { color: var(--bright); }
-  .excluded-row span { color: var(--muted); font: 0.62rem/1.5 var(--font-mono); }
-  .excluded-row ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.7rem; }
+  .excluded-row span { color: var(--muted); font: 0.7rem/1.5 var(--font-mono); }
+  .excluded-link { color: var(--signal); font-size: .76rem; font-weight: 700; }
+  .excluded-row ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.78rem; }
   .excluded-row li::marker { color: var(--accent); }
-  @media (max-width: 850px) { .result-grid { grid-template-columns: 1fr; } .constraint-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 850px) { .result-grid { grid-template-columns: 1fr; } .result-summary, .result-card .price { min-height: 0; } .constraint-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 620px) { .diagnostic-head, .question-grid, .constraint-grid { grid-template-columns: 1fr; } .question-grid .wide { grid-column: auto; } .excluded-row { grid-template-columns: 1fr; } .results > header { align-items: start; flex-direction: column; } }
 </style>

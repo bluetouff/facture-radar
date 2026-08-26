@@ -106,7 +106,7 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
 
   for (const priority of input.priorities) {
     preferenceTotal += 1;
-    if (priority === "simplicity" && platform.targets.includes("micro") && pricing?.monthlyFrom === 0) {
+    if (priority === "simplicity" && pricing?.monthlyFrom === 0 && pricing.freeFor.includes(input.size)) {
       preferencePoints += 1;
       reasons.push("Offre gratuite conçue pour les petites structures");
     }
@@ -147,6 +147,21 @@ export function runDiagnostic(platforms: Platform[], input: DiagnosticInput): Ma
     .sort((a, b) => {
       if (a.eligible !== b.eligible) return a.eligible ? -1 : 1;
       if (b.compatibility !== a.compatibility) return b.compatibility - a.compatibility;
+      const coverageDifference = documentationCoverage(b.platform) - documentationCoverage(a.platform);
+      if (coverageDifference !== 0) return coverageDifference;
       return a.platform.displayName.localeCompare(b.platform.displayName, "fr");
     });
+}
+
+export function partitionDiagnosticResults(results: MatchResult[], featuredLimit = 3): {
+  eligibleCount: number;
+  featured: MatchResult[];
+  remaining: MatchResult[];
+} {
+  const eligible = results.filter((result) => result.eligible);
+  return {
+    eligibleCount: eligible.length,
+    featured: eligible.slice(0, featuredLimit),
+    remaining: [...eligible.slice(featuredLimit), ...results.filter((result) => !result.eligible)],
+  };
 }

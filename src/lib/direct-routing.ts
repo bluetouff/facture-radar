@@ -13,8 +13,8 @@ export interface DirectRoutingAnswer {
 export function buildDirectFacturXAnswer(volume: DirectRoutingVolume = "unknown"): DirectRoutingAnswer {
   return {
     question: "J'ai déjà un PDF/A-3 Factur-X profil EN16931. Quelle PA peut l'envoyer directement, sans passer par une Solution Compatible ?",
-    headline: "Commencez par B2Brouter, puis testez le dernier mètre.",
-    explanation: "B2Brouter est la piste publique la plus complète pour ce besoin : PA directe, portail web, import PDF ou XML et émission électronique. Un point décisif reste à contrôler avant de s'engager : la conservation du XML EN16931 d'un Factur-X créé par un autre logiciel, sans ressaisie.",
+    headline: "B2Brouter est la piste la mieux documentée pour ce besoin.",
+    explanation: "Ses pages publiques confirment un accès direct, l'import de PDF ou XML et l'envoi électronique. Elles ne précisent pas si le XML EN16931 d'un Factur-X créé ailleurs est conservé sans ressaisie. Faites confirmer ce point avant de vous engager.",
     options: directRoutingOptions.map((option) => ({ ...option, price: option.priceByVolume[volume] })),
     vendorQuestion: "Votre portail accepte-t-il l'import manuel d'un PDF/A-3 Factur-X profil EN16931 généré par un logiciel tiers, puis son émission réglementaire sans Solution Compatible, sans OCR et sans ressaisie des lignes ? Si oui, quel écran utiliser et quel tarif s'applique ?",
   };

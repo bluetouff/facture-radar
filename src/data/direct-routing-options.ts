@@ -65,7 +65,7 @@ export const directRoutingOptions: DirectRoutingOption[] = [
     },
     priceSourceIds: ["b2brouter-home-2026"],
     decisiveUnknown: "La documentation ne dit pas explicitement si l'import d'un PDF/A-3 Factur-X tiers conserve son XML EN16931 jusqu'à l'émission, sans ressaisie.",
-    nextStep: "Importez un fichier test déjà validé, puis vérifiez que l'écran d'envoi reprend ses lignes sans les ressaisir et que le fichier reste identifié comme Factur-X.",
+    nextStep: "Demandez à B2Brouter de confirmer par écrit que le portail conserve le XML EN16931 du fichier sans ressaisie.",
     profileHref: null,
   },
   {

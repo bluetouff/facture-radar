@@ -46,7 +46,7 @@ import { journeyProfiles } from "../data/journey-profiles";
     <header class="section-head">
       <div>
         <p class="mono-label">vous avez déjà un Factur-X</p>
-        <h2>Qui peut prendre directement votre fichier&nbsp;?</h2>
+        <h2>Où envoyer directement votre fichier&nbsp;?</h2>
       </div>
       <p>Cette réponse séparée sert aux utilisateurs dont le logiciel produit déjà le bon fichier et qui cherchent seulement une plateforme pour l’acheminer.</p>
     </header>
@@ -59,7 +59,7 @@ import { journeyProfiles } from "../data/journey-profiles";
         <p class="mono-label">vous cherchez une autre solution</p>
         <h2>Trouvez des plateformes adaptées à votre activité.</h2>
       </div>
-      <p>Répondez à trois questions sur votre entreprise, votre volume de factures et votre priorité. Vous obtiendrez jusqu'à trois options à regarder de plus près.</p>
+      <p>Répondez à trois questions sur votre entreprise, votre volume de factures et votre priorité. Les fiches les mieux renseignées apparaissent en premier et toutes les autres restent accessibles.</p>
       <a class="button secondary" href="/diagnostic/">Trouver des plateformes</a>
     </div>
   </section>
@@ -86,7 +86,7 @@ import { journeyProfiles } from "../data/journey-profiles";
   .figure-stop text { fill: var(--paper); font: 560 12px var(--font-sans); text-anchor: middle; }
   .figure-index { fill: var(--muted); font: 600 12px var(--font-mono); letter-spacing: .06em; }
   .decision-figure figcaption { margin-top: -.3rem; color: var(--muted); font-size: .78rem; text-align: right; }
-  .existing-tool { max-width: 72rem; }
+  .existing-tool { max-width: 72rem; scroll-margin-top: 5.5rem; }
   .existing-tool .section-head { margin-bottom: 1.2rem; }
   .direct-route { max-width: 78rem; }
   .covered-note { margin: .7rem 0 0; color: var(--muted); font-size: .76rem; }
@@ -96,5 +96,5 @@ import { journeyProfiles } from "../data/journey-profiles";
   .after-check .button { margin: 0; white-space: nowrap; }
   @media (max-width: 950px) { .decision-hero-layout { grid-template-columns: 1fr; gap: 1.5rem; } .decision-copy h1 { max-width: 18ch; } .decision-figure { border-top: 1px solid var(--line); border-left: 0; padding: 1rem 0 0; } }
   @media (max-width: 850px) { .after-check { grid-template-columns: 1fr; } }
-  @media (max-width: 620px) { .decision-hero { padding-top: 1.6rem; } .decision-copy h1 { font-size: 2.25rem; } .decision-figure { display: none; } }
+  @media (max-width: 620px) { .decision-hero { padding-top: 1.6rem; } .decision-copy h1 { font-size: 2.25rem; } .decision-figure, .direct-route > .section-head { display: none; } }
 </style>
