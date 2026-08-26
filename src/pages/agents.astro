@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
+import { practicalQuestions } from "../data/practical-questions";
 import { MCP_ENDPOINT } from "../mcp/corpus.ts";
 
 const tools = [
@@ -78,7 +79,7 @@ const tools = [
         </div>
       </div>
       <div class="resource-stack">
-        <article><b>01</b><span><strong>Questions pratiques</strong><small>10 réponses directement exploitables</small></span></article>
+        <article><b>01</b><span><strong>Questions pratiques</strong><small>{practicalQuestions.length} réponses directement exploitables</small></span></article>
         <article><b>02</b><span><strong>Plateformes enrichies</strong><small>25 fiches, tarifs et limites</small></span></article>
         <article><b>03</b><span><strong>Annuaire officiel</strong><small>148 approuvées, 18 en attente</small></span></article>
         <article><b>04</b><span><strong>Parcours et envoi</strong><small>Activation et fichiers déjà produits</small></span></article>

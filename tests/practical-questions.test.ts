@@ -4,9 +4,9 @@ import sources from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 import { practicalQuestions, practicalQuestionSourceIds } from "../src/data/practical-questions.ts";
 
-test("la bibliothèque publie exactement dix questions à URL stable", () => {
-  assert.equal(practicalQuestions.length, 10);
-  assert.equal(new Set(practicalQuestions.map((question) => question.slug)).size, 10);
+test("la bibliothèque publie exactement quinze questions à URL stable", () => {
+  assert.equal(practicalQuestions.length, 15);
+  assert.equal(new Set(practicalQuestions.map((question) => question.slug)).size, 15);
   for (const question of practicalQuestions) {
     assert.match(question.slug, /^[a-z0-9-]+$/);
     assert.ok(question.shortAnswer.length >= 30);

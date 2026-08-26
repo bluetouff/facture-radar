@@ -186,8 +186,8 @@ if (journeySlugs.size !== checkedPlatforms.length) {
   throw new Error(`Chaque fiche doit avoir un parcours détaillé : ${journeySlugs.size}/${checkedPlatforms.length}`);
 }
 
-if (practicalQuestions.length !== 10) {
-  throw new Error(`La bibliothèque doit contenir exactement 10 questions : ${practicalQuestions.length}`);
+if (practicalQuestions.length !== 15) {
+  throw new Error(`La bibliothèque doit contenir exactement 15 questions : ${practicalQuestions.length}`);
 }
 const questionSlugs = new Set<string>();
 for (const question of practicalQuestions) {

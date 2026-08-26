@@ -5,6 +5,7 @@ import { journeyProfiles } from "../data/journey-profiles.ts";
 import { passportRoutes } from "../data/passport-routes.ts";
 import { platforms } from "../data/platforms.ts";
 import {
+  practicalQuestionKeywords,
   practicalQuestions,
   QUESTIONS_CHECKED_AT,
   type PracticalQuestion,
@@ -23,6 +24,7 @@ const sourceRecords = sources as SourceRecord[];
 const sourcesById = new Map(sourceRecords.map((source) => [source.id, source]));
 const platformsBySlug = new Map(platforms.map((platform) => [platform.slug, platform]));
 const questionsBySlug = new Map(practicalQuestions.map((question) => [question.slug, question]));
+const journeyAliases = journeyProfiles.flatMap((profile) => [profile.toolLabel, ...profile.aliases]).join(" ");
 const SEARCH_STOP_WORDS = new Set([
   "a", "au", "aux", "avec", "ce", "ces", "comment", "dans", "de", "des", "du", "elle", "en",
   "est", "et", "faire", "il", "je", "la", "le", "les", "ma", "mes", "mon", "ne", "ou", "par",
@@ -189,6 +191,8 @@ export function answerQuestion(query: string, limit = 5) {
         { value: question.description, weight: 3 },
         { value: question.shortAnswer, weight: 2 },
         { value: question.answerDetail, weight: 1 },
+        { value: practicalQuestionKeywords[question.slug] ?? "", weight: 5 },
+        ...(question.slug === "garder-son-logiciel-de-facturation" ? [{ value: journeyAliases, weight: 6 }] : []),
         ...question.recommendations.map((item) => ({ value: `${item.label} ${item.detail}`, weight: 2 })),
       ]),
     }))
@@ -208,7 +212,7 @@ export function answerQuestion(query: string, limit = 5) {
     })),
     fallback: ranked.length === 0
       ? {
-          message: "Aucune réponse assez proche n'est publiée dans les dix questions actuelles.",
+          message: `Aucune réponse assez proche n'est publiée dans les ${practicalQuestions.length} questions actuelles.`,
           availableQuestions: practicalQuestions.map((question) => ({ slug: question.slug, title: question.title })),
         }
       : null,

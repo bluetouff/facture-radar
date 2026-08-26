@@ -4,6 +4,7 @@ import "@fontsource-variable/jetbrains-mono";
 import "../styles/global.css";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import { platforms } from "../data/platforms";
+import { practicalQuestions } from "../data/practical-questions";
 
 interface Props {
   title: string;
@@ -19,7 +20,7 @@ const primaryNav = [
   { href: "/diagnostic/", label: "Choisir une plateforme", hint: "3 questions, toutes les options", icon: "target", tone: "green" },
 ] as const;
 const resourceNav = [
-  { href: "/questions/", label: "10 questions pratiques", hint: "Des réponses directement utilisables", icon: "question" },
+  { href: "/questions/", label: `${practicalQuestions.length} questions pratiques`, hint: "Des réponses directement utilisables", icon: "question" },
   { href: "/plateformes/", label: `${platforms.length} plateformes étudiées`, hint: "Fiches détaillées et tarifs", icon: "layers" },
   { href: "/annuaire/", label: "Annuaire officiel", hint: "La liste publique de la DGFiP", icon: "directory" },
   { href: "/a-propos/", label: "Pourquoi PA Check ?", hint: "De l’enquête l0g à l’outil", icon: "route" },

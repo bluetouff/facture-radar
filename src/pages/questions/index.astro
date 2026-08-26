@@ -1,30 +1,32 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import InterfaceIcon from "../../components/InterfaceIcon.astro";
-import { practicalQuestions } from "../../data/practical-questions";
+import { practicalQuestions, QUESTIONS_CHECKED_AT } from "../../data/practical-questions";
 
 const leadQuestions = practicalQuestions.slice(0, 3);
+const questionCountLabel = practicalQuestions.length === 15 ? "quinze" : String(practicalQuestions.length);
+const checkedAtLabel = QUESTIONS_CHECKED_AT.split("-").reverse().join(".");
 ---
 
 <BaseLayout
   title="Questions pratiques sur la facturation électronique | PA Check"
-  description="Dix réponses directes pour garder son logiciel, choisir une plateforme, envoyer un Factur-X, évaluer le prix ou préparer un changement."
+  description={`${practicalQuestions.length} réponses directes pour garder son logiciel, comprendre ses échéances, choisir une plateforme ou contrôler un Factur-X.`}
 >
   <section class="questions-cover">
     <div class="shell questions-cover-layout">
       <div class="questions-intro">
         <a class="back-home" href="/"><InterfaceIcon name="arrow" /> Accueil</a>
-        <p class="questions-kicker">10 situations concrètes · réponses publiques</p>
+        <p class="questions-kicker">{practicalQuestions.length} situations concrètes · réponses publiques</p>
         <h1>Votre question, puis la réponse utile.</h1>
         <p>Choisissez la situation qui ressemble à la vôtre. Chaque page commence par une conclusion courte, puis présente les options et les points à contrôler.</p>
         <div class="cover-actions">
-          <a href="#toutes-les-questions">Voir les dix questions <InterfaceIcon name="arrow" /></a>
+          <a href="#toutes-les-questions">Voir les {questionCountLabel} questions <InterfaceIcon name="arrow" /></a>
           <span><InterfaceIcon name="shield" /> Aucun compte demandé</span>
         </div>
       </div>
 
       <aside class="question-console" aria-label="Trois questions fréquentes">
-        <header><span>POINTS DE DÉPART</span><small>mise à jour 25.08.26</small></header>
+        <header><span>POINTS DE DÉPART</span><small>mise à jour {checkedAtLabel}</small></header>
         <ol>
           {leadQuestions.map((question, index) => (
             <li>

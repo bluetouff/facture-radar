@@ -23,11 +23,23 @@ test("le MCP répond à la question Factur-X avec la réponse publiée", () => {
   assert.ok(result.answer?.recommendations.every((recommendation) => recommendation.sources.length > 0));
 });
 
+test("le MCP et le site couvrent les questions de lancement", () => {
+  const expected = new Map([
+    ["Quand dois-je être prêt ?", "calendrier-facturation-electronique-2026-2027"],
+    ["Comment savoir si une plateforme est agréée ?", "verifier-plateforme-agreee-dgfip"],
+    ["Un PDF envoyé par email suffit-il ?", "pdf-email-facture-electronique"],
+    ["Comment vérifier un Factur-X avant envoi ?", "verifier-factur-x-avant-envoi"],
+    ["Quelle différence entre facture électronique et e-reporting ?", "difference-facture-electronique-e-reporting"],
+    ["J'utilise Qonto, dois-je changer ?", "garder-son-logiciel-de-facturation"],
+  ]);
+  for (const [query, slug] of expected) assert.equal(answerQuestion(query, 3).answer?.slug, slug, query);
+});
+
 test("une question absente reste absente", () => {
   const result = answerQuestion("culture hydroponique martienne", 3);
   assert.equal(result.found, false);
   assert.equal(result.answer, null);
-  assert.equal(result.fallback?.availableQuestions.length, 10);
+  assert.equal(result.fallback?.availableQuestions.length, 15);
 });
 
 test("une fiche ne transforme pas une inconnue en réponse positive", () => {
@@ -65,7 +77,7 @@ test("l'annuaire MCP distingue approuvé et en attente sans exposer les contacts
 test("le manifeste et les ressources couvrent tout le corpus public", () => {
   const manifest = corpusManifest(revision);
   assert.deepEqual(manifest.counts, {
-    questions: 10,
+    questions: 15,
     enrichedPlatforms: 25,
     approvedPlatforms: 148,
     pendingPlatforms: 18,

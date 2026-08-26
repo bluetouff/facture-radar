@@ -1,5 +1,6 @@
 ---
 import InterfaceIcon from "./InterfaceIcon.astro";
+import { practicalQuestions } from "../data/practical-questions";
 
 const useCases = [
   { href: "/verifier-mon-outil/#verifier-logiciel", label: "Puis-je garder mon outil actuel ?", detail: "Entrez son nom et obtenez la prochaine action", icon: "search", tone: "violet" },
@@ -31,10 +32,13 @@ const useCases = [
       <button type="button" id="answer-submit">Trouver la réponse <InterfaceIcon name="arrow" /></button>
     </div>
     <div class="answer-examples" aria-label="Exemples de recherches">
-      <span>Essayez</span>
+      <span>Réponses rapides</span>
+      <button type="button" data-answer-example="quand dois-je être prêt">Mes échéances</button>
+      <button type="button" data-answer-example="plateforme vraiment agréée">Vérifier un agrément</button>
       <button type="button" data-answer-example="factur-x sans intermédiaire">Factur-X déjà prêt</button>
       <button type="button" data-answer-example="garder mon logiciel">Garder mon outil</button>
-      <button type="button" data-answer-example="gratuite sans compte bancaire">Gratuite sans compte bancaire</button>
+      <button type="button" data-answer-example="pdf envoyé par email">PDF par email</button>
+      <button type="button" data-answer-example="facture électronique e-reporting">Comprendre l'e-reporting</button>
     </div>
     <div class="answer-suggestions" id="answer-suggestions" role="listbox" aria-label="Réponses proposées" hidden></div>
     <p class="answer-empty" id="answer-empty" hidden>Cette formulation ne correspond pas encore à une réponse directe. Consultez les questions pratiques ou utilisez l'un des trois parcours ci-dessous.</p>
@@ -50,7 +54,7 @@ const useCases = [
       </a>
     ))}
   </div>
-  <a class="question-library-link" href="/questions/"><span>Voir les 10 questions pratiques</span><InterfaceIcon name="arrow" /></a>
+  <a class="question-library-link" href="/questions/"><span>Voir les {practicalQuestions.length} questions pratiques</span><InterfaceIcon name="arrow" /></a>
 </section>
 
 <script>
@@ -197,5 +201,5 @@ const useCases = [
   .usecase > :global(svg) { width: .85rem; height: .85rem; color: var(--case-tone); }
   .question-library-link { display: flex; justify-content: space-between; gap: 1rem; align-items: center; border-top: 1px solid var(--line); padding: .8rem 1rem; background: var(--surface-2); color: var(--signal); font-size: .76rem; font-weight: 710; }
   .question-library-link :global(svg) { width: .85rem; }
-  @media (max-width: 620px) { header { align-items: flex-start; } header > span { display: none; } .answer-search-row { grid-template-columns: auto minmax(0,1fr); } .answer-search-row button { grid-column: 1 / -1; justify-content: center; width: calc(100% - .6rem); margin: .3rem; } .answer-examples { display: none; } .answer-suggestions :global(p) { white-space: normal; } }
+  @media (max-width: 620px) { header { align-items: flex-start; } header > span { display: none; } .answer-search-row { grid-template-columns: auto minmax(0,1fr); } .answer-search-row button { grid-column: 1 / -1; justify-content: center; width: calc(100% - .6rem); margin: .3rem; } .answer-examples span { flex-basis: 100%; } .answer-examples button { padding: .36rem .52rem; font-size: .72rem; } .answer-suggestions :global(p) { white-space: normal; } }
 </style>
