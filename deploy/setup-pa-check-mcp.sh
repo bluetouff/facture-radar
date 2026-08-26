@@ -79,6 +79,9 @@ PY
 )"
 TARGET="${RELEASES_ROOT}/${EXPECTED_SHA}"
 BACKUP_DIR="${BACKUPS_ROOT}/${STAMP}-before-${EXPECTED_SHA}"
+SMOKE_DIR="${BACKUP_DIR}/smoke"
+MCP_BODY_FILE="${SMOKE_DIR}/body"
+MCP_HEADERS_FILE="${SMOKE_DIR}/headers"
 OLD_TARGET=""
 TARGET_CREATED=0
 SWAPPED=0
@@ -95,6 +98,10 @@ if [[ "${VHOST}" != /etc/apache2/sites-available/* ]]; then
   echo "Echec: le vhost doit se trouver dans sites-available." >&2
   exit 1
 fi
+if [[ "${SMOKE_DIR}" != "${BACKUP_DIR}/smoke" || "${MCP_BODY_FILE}" != "${SMOKE_DIR}/body" || "${MCP_HEADERS_FILE}" != "${SMOKE_DIR}/headers" ]]; then
+  echo "Echec: chemins temporaires de smoke test inattendus." >&2
+  exit 1
+fi
 
 exec 9> /run/lock/pa-check-mcp-deploy.lock
 if ! flock -n 9; then
@@ -103,6 +110,7 @@ if ! flock -n 9; then
 fi
 
 install -d -m 0750 -- "${BACKUPS_ROOT}" "${BACKUP_DIR}"
+install -d -m 0700 -- "${SMOKE_DIR}"
 cp -a -- "${VHOST}" "${BACKUP_DIR}/vhost.conf"
 if [[ -e "${APACHE_SNIPPET}" ]]; then
   SNIPPET_EXISTED=1
@@ -169,6 +177,8 @@ rollback() {
   if [[ "${TARGET_CREATED}" -eq 1 && -d "${TARGET}" ]]; then
     rm -rf -- "${TARGET}"
   fi
+  rm -f -- "${MCP_BODY_FILE}" "${MCP_HEADERS_FILE}"
+  rmdir -- "${SMOKE_DIR}" 2>/dev/null || true
   echo "Echec: restauration du MCP et du vhost precedents." >&2
   echo "Sauvegarde et etat d'echec: ${BACKUP_DIR}" >&2
   exit "${exit_code}"
@@ -355,22 +365,61 @@ apache2ctl configtest
 systemctl reload apache2
 systemctl is-active --quiet apache2
 
-if ! MCP_RESPONSE="$(curl --max-time 10 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" \
+if ! curl --max-time 10 --max-filesize 262144 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" \
   -H 'Accept: application/json, text/event-stream' \
   -H 'Content-Type: application/json' \
   --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"pa-check-deploy-smoke","version":"0.1.0"}}}' \
-  "https://${SITE_HOST}/api/mcp")"; then
+  --dump-header "${MCP_HEADERS_FILE}" \
+  --output "${MCP_BODY_FILE}" \
+  "https://${SITE_HOST}/api/mcp"; then
   echo "Echec: le smoke test MCP HTTPS a echoue." >&2
   rollback 1
 fi
-python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("jsonrpc")=="2.0" or sys.exit("Reponse JSON-RPC invalide"); data.get("result",{}).get("serverInfo",{}).get("name")=="io.github.bluetouff/pa-check" or sys.exit("Identite MCP live inattendue")' <<<"${MCP_RESPONSE}"
+python3 - "${MCP_BODY_FILE}" <<'PY'
+import json
+import pathlib
+import sys
 
-if ! MCP_HEADERS="$(curl --max-time 10 -fsSI --resolve "${SITE_HOST}:443:127.0.0.1" "https://${SITE_HOST}/api/mcp")"; then
-  echo "Echec: le controle des en-tetes MCP a echoue." >&2
-  rollback 1
-fi
-grep -iq '^content-security-policy:.*default-src '\''none'\''' <<<"${MCP_HEADERS}"
-grep -iq '^cache-control:.*no-store' <<<"${MCP_HEADERS}"
+body_path = pathlib.Path(sys.argv[1])
+if body_path.stat().st_size > 262_144:
+    raise SystemExit("Reponse MCP anormalement volumineuse")
+raw = body_path.read_text(encoding="utf-8").strip()
+if not raw:
+    raise SystemExit("Reponse MCP vide")
+
+messages = []
+try:
+    messages.append(json.loads(raw))
+except json.JSONDecodeError:
+    for line in raw.splitlines():
+        if not line.startswith("data:"):
+            continue
+        payload = line[5:].lstrip()
+        if not payload or payload == "[DONE]":
+            continue
+        try:
+            messages.append(json.loads(payload))
+        except json.JSONDecodeError:
+            raise SystemExit("Trame SSE MCP invalide") from None
+
+response = next(
+    (
+        message
+        for message in messages
+        if isinstance(message, dict) and message.get("jsonrpc") == "2.0" and message.get("id") == 1
+    ),
+    None,
+)
+if response is None:
+    raise SystemExit("Reponse JSON-RPC MCP absente")
+if response.get("result", {}).get("serverInfo", {}).get("name") != "io.github.bluetouff/pa-check":
+    raise SystemExit("Identite MCP live inattendue")
+print("MCP_HTTPS_SMOKE_OK")
+PY
+grep -iq '^content-security-policy:.*default-src '\''none'\''' "${MCP_HEADERS_FILE}"
+grep -iq '^cache-control:.*no-store' "${MCP_HEADERS_FILE}"
+rm -f -- "${MCP_BODY_FILE}" "${MCP_HEADERS_FILE}"
+rmdir -- "${SMOKE_DIR}"
 
 trap - ERR INT TERM
 echo "MCP_ACTIVATION_OK ${SITE_HOST} ${EXPECTED_SHA}"
