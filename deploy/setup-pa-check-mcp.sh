@@ -8,7 +8,7 @@ RELEASES_ROOT="${MCP_ROOT}/releases"
 CURRENT="${MCP_ROOT}/current"
 SERVICE_FILE="/etc/systemd/system/pa-check-mcp.service"
 APACHE_SNIPPET="/etc/apache2/pa-check-mcp-location.conf"
-VHOST="${PA_CHECK_VHOST:-/etc/apache2/sites-available/pa.l0g.fr-le-ssl.conf}"
+VHOST="/etc/apache2/sites-available/pa.l0g.fr.conf"
 BACKUPS_ROOT="/var/backups/pa-check-mcp"
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 BUNDLE_DIR="${SCRIPT_DIR}/mcp"
@@ -21,7 +21,7 @@ if [[ "${EUID}" -ne 0 ]]; then
   echo "Echec: ce script doit etre execute avec sudo." >&2
   exit 1
 fi
-for dependency in apache2ctl curl python3 sha256sum systemctl; do
+for dependency in apache2ctl curl flock grep python3 sha256sum systemctl; do
   command -v "${dependency}" >/dev/null
 done
 test -x /usr/bin/node
@@ -34,18 +34,46 @@ test -f "${MANIFEST}"
 test -f "${BUNDLE}"
 test -f "${CHECKSUM}"
 test -f "${VHOST}"
+APACHE_MODULES="$(apache2ctl -M 2>/dev/null)"
+for required_module in headers_module proxy_module proxy_http_module; do
+  if ! grep -Fq " ${required_module} " <<<"${APACHE_MODULES}"; then
+    echo "Echec: module Apache requis absent: ${required_module}" >&2
+    exit 1
+  fi
+done
 
-EXPECTED_SHA="$(python3 - "${MANIFEST}" <<'PY'
+EXPECTED_SHA="$(python3 - "${MANIFEST}" "${BUNDLE}" "${CHECKSUM}" <<'PY'
+import hashlib
 import json
+import os
 import re
 import sys
-with open(sys.argv[1], encoding="utf-8") as handle:
+manifest_path, bundle_path, checksum_path = sys.argv[1:]
+with open(manifest_path, encoding="utf-8") as handle:
     manifest = json.load(handle)
 revision = manifest.get("revision", "")
 if not re.fullmatch(r"[0-9a-f]{40}", revision):
     raise SystemExit("Revision MCP invalide")
 if manifest.get("readOnly") is not True:
     raise SystemExit("Le manifeste MCP ne declare pas le serveur en lecture seule")
+with open(checksum_path, encoding="ascii") as handle:
+    checksum_lines = handle.read().splitlines()
+if len(checksum_lines) != 1:
+    raise SystemExit("Checksum MCP invalide")
+checksum_match = re.fullmatch(r"([0-9a-f]{64})  server\.mjs", checksum_lines[0])
+if checksum_match is None:
+    raise SystemExit("Checksum MCP invalide")
+digest = hashlib.sha256()
+with open(bundle_path, "rb") as handle:
+    for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+        digest.update(chunk)
+bundle_sha256 = digest.hexdigest()
+if bundle_sha256 != checksum_match.group(1) or bundle_sha256 != manifest.get("sha256"):
+    raise SystemExit("Empreinte du bundle MCP incoherente")
+if manifest.get("bytes") != os.path.getsize(bundle_path):
+    raise SystemExit("Taille du bundle MCP incoherente")
+if manifest.get("endpoint") != "https://pa.l0g.fr/api/mcp" or manifest.get("bind") != "127.0.0.1" or manifest.get("port") != 3747:
+    raise SystemExit("Parametres publics du manifeste MCP inattendus")
 print(revision)
 PY
 )"
@@ -55,6 +83,7 @@ OLD_TARGET=""
 TARGET_CREATED=0
 SWAPPED=0
 SERVICE_WAS_ACTIVE=0
+SERVICE_WAS_ENABLED=0
 SNIPPET_EXISTED=0
 SERVICE_EXISTED=0
 
@@ -64,6 +93,12 @@ if [[ ! "${TARGET}" =~ ^/opt/pa-check-mcp/releases/[0-9a-f]{40}$ ]]; then
 fi
 if [[ "${VHOST}" != /etc/apache2/sites-available/* ]]; then
   echo "Echec: le vhost doit se trouver dans sites-available." >&2
+  exit 1
+fi
+
+exec 9> /run/lock/pa-check-mcp-deploy.lock
+if ! flock -n 9; then
+  echo "Echec: un autre deploiement MCP PA Check est en cours." >&2
   exit 1
 fi
 
@@ -79,6 +114,9 @@ if [[ -e "${SERVICE_FILE}" ]]; then
 fi
 if systemctl is-active --quiet pa-check-mcp.service 2>/dev/null; then
   SERVICE_WAS_ACTIVE=1
+fi
+if systemctl is-enabled --quiet pa-check-mcp.service 2>/dev/null; then
+  SERVICE_WAS_ENABLED=1
 fi
 if [[ -L "${CURRENT}" ]]; then
   OLD_TARGET="$(readlink -f -- "${CURRENT}")"
@@ -117,6 +155,11 @@ rollback() {
   fi
   cp -a -- "${BACKUP_DIR}/vhost.conf" "${VHOST}"
   systemctl daemon-reload >/dev/null 2>&1
+  if [[ "${SERVICE_WAS_ENABLED}" -eq 1 ]]; then
+    systemctl enable pa-check-mcp.service >/dev/null 2>&1
+  else
+    systemctl disable pa-check-mcp.service >/dev/null 2>&1
+  fi
   if [[ "${SERVICE_WAS_ACTIVE}" -eq 1 && -L "${CURRENT}" ]]; then
     systemctl restart pa-check-mcp.service >/dev/null 2>&1
   else
@@ -241,18 +284,37 @@ with open(vhost_path, encoding="utf-8") as handle:
     text = handle.read()
 if len(text) > 128 * 1024:
     raise SystemExit("Vhost anormalement volumineux")
-if len(re.findall(r"<VirtualHost\b", text, re.I)) != 1 or len(re.findall(r"</VirtualHost>", text, re.I)) != 1:
-    raise SystemExit("Le vhost doit contenir exactement un bloc VirtualHost")
-if not re.search(r"^\s*ServerName\s+pa\.l0g\.fr\s*$", text, re.M | re.I):
-    raise SystemExit("ServerName pa.l0g.fr absent du vhost")
+
+block_pattern = re.compile(r"<VirtualHost\b[^>]*>.*?</VirtualHost>", re.I | re.S)
+blocks = list(block_pattern.finditer(text))
+https_blocks = []
+for match in blocks:
+    block = match.group(0)
+    opening = block.split(">", 1)[0]
+    if ":443" not in opening:
+        continue
+    if re.search(r"^\s*ServerName\s+pa\.l0g\.fr\s*$", block, re.M | re.I):
+        https_blocks.append(match)
+if len(https_blocks) != 1:
+    raise SystemExit("Le vhost doit contenir exactement un bloc HTTPS pour pa.l0g.fr")
+
 include = f"    IncludeOptional {snippet_path}"
-if include in text:
+selected = https_blocks[0]
+selected_text = selected.group(0)
+if include in selected_text:
     raise SystemExit(0)
 if "/api/mcp" in text or "PA_CHECK_MCP_MANAGED" in text:
     raise SystemExit("Une configuration MCP non geree existe deja dans le vhost")
-updated, count = re.subn(r"\n\s*</VirtualHost>\s*$", f"\n{include}\n</VirtualHost>\n", text, count=1, flags=re.I)
+updated_block, count = re.subn(
+    r"\n\s*</VirtualHost>\s*$",
+    f"\n{include}\n</VirtualHost>",
+    selected_text,
+    count=1,
+    flags=re.I,
+)
 if count != 1:
-    raise SystemExit("Impossible d'inserer l'include MCP")
+    raise SystemExit("Impossible d'inserer l'include MCP dans le vhost HTTPS")
+updated = text[: selected.start()] + updated_block + text[selected.end() :]
 with open(vhost_path, "w", encoding="utf-8", newline="\n") as handle:
     handle.write(updated)
 PY
@@ -268,7 +330,7 @@ systemctl restart pa-check-mcp.service
 systemctl is-active --quiet pa-check-mcp.service
 
 LOCAL_HEALTH="$(curl --max-time 5 -fsS "http://127.0.0.1:${MCP_PORT}/healthz")"
-python3 -c 'import json,sys; data=json.load(sys.stdin); assert data["status"]=="ok"; assert data["revision"]["revision"]==sys.argv[1]; assert data["counts"]["enrichedPlatforms"]==25' "${EXPECTED_SHA}" <<<"${LOCAL_HEALTH}"
+python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("status")=="ok" or sys.exit("Sante MCP invalide"); data.get("revision",{}).get("revision")==sys.argv[1] or sys.exit("Revision MCP live inattendue"); data.get("counts",{}).get("enrichedPlatforms")==25 or sys.exit("Corpus MCP live inattendu")' "${EXPECTED_SHA}" <<<"${LOCAL_HEALTH}"
 
 apache2ctl configtest
 systemctl reload apache2
@@ -279,7 +341,7 @@ MCP_RESPONSE="$(curl --max-time 10 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" \
   -H 'Content-Type: application/json' \
   --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"pa-check-deploy-smoke","version":"0.1.0"}}}' \
   "https://${SITE_HOST}/api/mcp")"
-python3 -c 'import json,sys; data=json.load(sys.stdin); assert data["jsonrpc"]=="2.0"; assert data["result"]["serverInfo"]["name"]=="io.github.bluetouff/pa-check"' <<<"${MCP_RESPONSE}"
+python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("jsonrpc")=="2.0" or sys.exit("Reponse JSON-RPC invalide"); data.get("result",{}).get("serverInfo",{}).get("name")=="io.github.bluetouff/pa-check" or sys.exit("Identite MCP live inattendue")' <<<"${MCP_RESPONSE}"
 
 MCP_HEADERS="$(curl --max-time 10 -fsSI --resolve "${SITE_HOST}:443:127.0.0.1" "https://${SITE_HOST}/api/mcp")"
 grep -iq '^content-security-policy:.*default-src '\''none'\''' <<<"${MCP_HEADERS}"

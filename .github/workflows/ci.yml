@@ -32,6 +32,9 @@ jobs:
       - name: Audit dependencies
         run: npm audit --audit-level=moderate
 
+      - name: Validate deployment scripts
+        run: bash -n deploy/activate-pa-check-site.sh deploy/setup-pa-check-mcp.sh
+
       - name: Validate, test and build
         run: npm run build
 
