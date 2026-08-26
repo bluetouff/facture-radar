@@ -94,3 +94,62 @@ export const passportRoutesSchema = z.array(z.object({
   profileHref: z.string().regex(/^\/plateformes\/[a-z0-9-]+\/$/).nullable(),
   checkedAt: z.iso.date(),
 }).strict()).length(6);
+
+const labCaseId = z.enum(["service-simple", "multi-tva", "avoir"]);
+const labStepId = z.enum(["import", "lecture", "integrite", "emission", "statut"]);
+const labResultStatus = z.enum(["tested", "failed", "partial", "not_tested"]);
+
+export const labSchema = z.object({
+  version: z.string().regex(/^\d+\.\d+\.\d+$/),
+  checkedAt: z.iso.date(),
+  sourceIds: z.array(z.string().min(1)).min(1),
+  cases: z.array(z.object({
+    id: labCaseId,
+    title: z.string().min(1).max(90),
+    purpose: z.string().min(1).max(280),
+    fileHref: z.string().regex(/^\/lab\/fixtures\/[a-z0-9-]+\.xml$/),
+    fileVersion: z.string().regex(/^\d+\.\d+\.\d+$/),
+    sha256: z.string().regex(/^[a-f0-9]{64}$/),
+    bytes: z.number().int().positive(),
+    documentTypeCode: z.enum(["380", "381"]),
+    expected: z.object({
+      invoiceNumber: z.string().min(1).max(80),
+      lineCount: z.number().int().positive(),
+      vatRates: z.array(z.number().nonnegative()).min(1),
+      grandTotal: z.number().positive(),
+      currency: z.literal("EUR"),
+    }).strict(),
+    preflightStatus: z.literal("passed"),
+    limitations: z.array(z.string().min(1).max(240)).min(1),
+  }).strict()).length(3),
+  protocol: z.array(z.object({
+    id: labStepId,
+    number: z.number().int().min(1).max(5),
+    label: z.string().min(1).max(80),
+    question: z.string().min(1).max(220),
+    successDefinition: z.string().min(1).max(280),
+  }).strict()).length(5),
+  platforms: z.array(z.object({
+    slug: z.enum(["qonto", "pennylane", "b2brouter"]),
+    name: z.string().min(1).max(80),
+    officialName: z.string().min(1).max(120),
+    status: labResultStatus,
+    evidenceLevel: z.enum(["observed", "documentation_only"]),
+    summary: z.string().min(1).max(320),
+    sourceIds: z.array(z.string().min(1)).min(1),
+    testedAt: z.iso.datetime().nullable(),
+    environment: z.string().min(1).max(120).nullable(),
+    caseResults: z.array(z.object({
+      caseId: labCaseId,
+      status: labResultStatus,
+      note: z.string().min(1).max(180),
+    }).strict()).length(3),
+    observations: z.array(z.object({
+      stepId: labStepId,
+      status: labResultStatus,
+      evidenceIds: z.array(z.string().min(1)),
+    }).strict()).length(5),
+    sealAwarded: z.boolean(),
+    nextAction: z.string().min(1).max(280),
+  }).strict()).length(3),
+}).strict();

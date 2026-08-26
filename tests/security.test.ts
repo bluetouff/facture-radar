@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { isPublicHttpUrl, normalizePublicHttpUrl } from "../src/lib/urls.ts";
+import { lab } from "../src/data/lab.ts";
 
 test("les liens publics acceptent uniquement HTTP et HTTPS", () => {
   assert.equal(isPublicHttpUrl("https://www.impots.gouv.fr/"), true);
@@ -98,4 +99,26 @@ test("le formulaire PA prépare un message local sans endpoint ni publication au
   assert.doesNotMatch(script, /localStorage|sessionStorage/);
   assert.doesNotMatch(script, /\.innerHTML\s*=/);
   assert.doesNotMatch(page, /<form[^>]+action=/);
+});
+
+test("le Lab n'ajoute aucun dépôt de fichier, champ libre ou publication automatique", async () => {
+  const page = await readFile(new URL("../src/pages/lab.astro", import.meta.url), "utf8");
+  const contract = await readFile(new URL("../src/data/lab.ts", import.meta.url), "utf8");
+  assert.match(page, /Aucun résultat ne sera déduit de la documentation seule/);
+  assert.match(page, /Aucune contribution ne modifie automatiquement cette page/);
+  assert.doesNotMatch(page, /<(?:form|input|textarea|select)\b/i);
+  assert.doesNotMatch(`${page}\n${contract}`, /\bfetch\s*\(/);
+  assert.doesNotMatch(`${page}\n${contract}`, /localStorage|sessionStorage|indexedDB/);
+  assert.doesNotMatch(`${page}\n${contract}`, /\.innerHTML\s*=/);
+  assert.doesNotMatch(`${page}\n${contract}`, /location\.(?:search|hash)/);
+});
+
+test("les jeux du Lab sont locaux, synthétiques et réservés au test", async () => {
+  for (const testCase of lab.cases) {
+    assert.match(testCase.fileHref, /^\/lab\/fixtures\/[a-z0-9-]+\.xml$/);
+    const fixture = await readFile(new URL(`../public${testCase.fileHref}`, import.meta.url), "utf8");
+    assert.match(fixture, /Données entièrement fictives/);
+    assert.match(fixture, /environnement de test/);
+    assert.doesNotMatch(fixture, /bluetouff|l0g\.fr|olivier@/i);
+  }
 });

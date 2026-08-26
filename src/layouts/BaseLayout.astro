@@ -19,6 +19,7 @@ const primaryNav = [
   { href: "/diagnostic/", label: "Choisir une plateforme", hint: "Trois réponses suffisent", icon: "target", tone: "green" },
 ] as const;
 const resourceNav = [
+  { href: "/lab/", label: "PA Check Lab", hint: "Tests publics et cas reproductibles", icon: "lab" },
   { href: "/plateformes/", label: `${platforms.length} plateformes étudiées`, hint: "Fiches détaillées et tarifs", icon: "layers" },
   { href: "/annuaire/", label: "Annuaire officiel", hint: "La liste publique de la DGFiP", icon: "directory" },
   { href: "/a-propos/", label: "Pourquoi PA Check ?", hint: "De l’enquête l0g à l’outil", icon: "route" },
@@ -128,6 +129,7 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
           <p>Vos réponses et vos fichiers restent sur votre appareil. Aucun compte nécessaire.</p>
         </div>
         <nav aria-label="Pied de page">
+          <a href="/lab/">PA Check Lab</a>
           <a href="/a-propos/">Pourquoi PA Check ?</a>
           <a href="/contribuer/">Mettre à jour une fiche</a>
           <a href="/methodologie/">Méthodologie</a>

@@ -8,6 +8,7 @@ L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte et san
 
 - vingt-cinq parcours détaillés, avec circuit, échéances, coût minimum connu, actions et sources consultables ;
 - un prévol local des PDF Factur-X et XML CII, avec contrôles structurés et trois actions maximum ;
+- un Lab reproductible avec trois factures synthétiques, cinq étapes communes et une séparation stricte entre documentation et résultats observés ;
 - un traitement distinct des offres sur devis, sans faux zéro ni projection lorsque le minimum public manque ;
 - trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
 - 25 fiches détaillées, chacune reliée à des sources publiques et datées ;
@@ -59,6 +60,12 @@ Le validateur vérifie notamment que les vingt-cinq fiches correspondent exactem
 Le composant `src/components/InvoiceVerifier.astro` lit le fichier uniquement côté navigateur. Les PDF sont inspectés avec PDF.js pour retrouver leur pièce jointe XML ; ils ne sont pas rendus. Le XML CII est analysé avec `fast-xml-parser`, sans entités, avec limites de taille et de profondeur. Le moteur pur et testable se trouve dans `src/lib/invoice-verifier.ts`.
 
 Le résultat est un prévol technique. Il ne certifie pas la conformité juridique complète, l'authenticité, la signature, l'archivage, la transmission ou l'acceptation par une plateforme agréée.
+
+## PA Check Lab
+
+Le contrat du Lab vit dans `src/data/lab.ts`. Les trois jeux de test publics sont dans `public/lab/fixtures/`. Le validateur recalcule leur SHA-256 et leur taille, exécute le prévol local et interdit qu'une plateforme non testée porte une observation ou un sceau.
+
+Le sceau « Testé par PA Check » exige les trois cas et les cinq étapes entièrement observés, avec une date, un environnement identifié et une preuve pour chaque étape. Les fichiers utilisent exclusivement des identifiants fictifs et ne doivent jamais être envoyés dans un circuit de production.
 
 ## Limites
 

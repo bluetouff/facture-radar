@@ -1,0 +1,302 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InterfaceIcon from "../components/InterfaceIcon.astro";
+import { lab } from "../data/lab";
+import sourcesData from "../data/sources.json";
+
+const sources = new Map(sourcesData.map((source) => [source.id, source]));
+const statusLabels = {
+  tested: "Testé",
+  failed: "Échec",
+  partial: "Partiellement testé",
+  not_tested: "Non testé",
+} as const;
+---
+
+<BaseLayout
+  title="PA Check Lab | Tests publics des plateformes agréées"
+  description="Trois factures synthétiques, un protocole public et des résultats observés pour vérifier concrètement le parcours des plateformes agréées."
+>
+  <section class="lab-hero">
+    <div class="shell lab-hero-grid">
+      <div class="lab-hero-copy">
+        <span class="lab-label"><InterfaceIcon name="lab" /> PA Check Lab · protocole public {lab.version}</span>
+        <h1>Trois fichiers. Le même test. <strong>Des réponses comparables.</strong></h1>
+        <p>Les pages produit disent ce qu’une plateforme prévoit. Le Lab montre ce que PA Check a réellement pu observer, étape après étape, avec des documents synthétiques que chacun peut télécharger.</p>
+        <div class="lab-hero-actions">
+          <a class="button lab-button" href="#kit">Télécharger le kit <InterfaceIcon name="download" /></a>
+          <a href="#resultats">Voir l’état des tests</a>
+        </div>
+      </div>
+      <div class="lab-console" aria-label="État actuel du Lab">
+        <header><span>RUN / {lab.version}</span><small>25.08.2026</small></header>
+        <div class="console-gauge" aria-hidden="true">
+          <span>OBSERVÉ</span>
+          <strong>0<small>/3</small></strong>
+          <i></i>
+        </div>
+        <dl>
+          <div><dt>Cas publics</dt><dd>{lab.cases.length}</dd></div>
+          <div><dt>Étapes identiques</dt><dd>{lab.protocol.length}</dd></div>
+          <div><dt>Sceau accordé</dt><dd>0</dd></div>
+        </dl>
+        <p><InterfaceIcon name="lock" /> Aucun résultat ne sera déduit de la documentation seule.</p>
+      </div>
+    </div>
+    <div class="lab-ruler" aria-hidden="true"><span>01</span><i></i><span>02</span><i></i><span>03</span><i></i><span>04</span><i></i><span>05</span></div>
+  </section>
+
+  <section class="shell lab-intro" aria-labelledby="lab-intro-title">
+    <div>
+      <p class="mono-label">le contrat public</p>
+      <h2 id="lab-intro-title">On ne confond plus une fonction annoncée avec un parcours qui marche.</h2>
+    </div>
+    <p>Chaque plateforme reçoit les mêmes fichiers et passe les mêmes cinq contrôles. Une source éditeur reste une déclaration documentée. Un résultat du Lab exige une exécution observable. Cette différence est visible partout, sans score ni podium.</p>
+  </section>
+
+  <section class="shell kit-section" id="kit" aria-labelledby="kit-title">
+    <header class="lab-section-head">
+      <div><p class="mono-label">kit reproductible</p><h2 id="kit-title">Trois situations qui révèlent les vrais écarts.</h2></div>
+      <p>Les fichiers ne contiennent aucune entreprise réelle. Le SHA-256 permet de vérifier que le document rejoué est exactement celui publié ici.</p>
+    </header>
+    <div class="fixture-grid">
+      {lab.cases.map((testCase, index) => (
+        <article class={`fixture-card fixture-${index + 1}`}>
+          <div class="fixture-topline"><span>0{index + 1}</span><b>PRÉVOL PA CHECK RÉUSSI</b></div>
+          <div class="fixture-icon" aria-hidden="true">
+            <span>XML</span><i></i><i></i><i></i><strong>{testCase.documentTypeCode}</strong>
+          </div>
+          <h3>{testCase.title}</h3>
+          <p>{testCase.purpose}</p>
+          <dl class="fixture-facts">
+            <div><dt>Lignes</dt><dd>{testCase.expected.lineCount}</dd></div>
+            <div><dt>TVA</dt><dd>{testCase.expected.vatRates.map((rate) => `${rate} %`).join(" + ")}</dd></div>
+            <div><dt>Total</dt><dd>{testCase.expected.grandTotal} €</dd></div>
+          </dl>
+          <details>
+            <summary>Version et empreinte</summary>
+            <p>Version {testCase.fileVersion} · {testCase.bytes.toLocaleString("fr-FR")} octets</p>
+            <code>{testCase.sha256}</code>
+          </details>
+          <a class="fixture-download" href={testCase.fileHref} download><InterfaceIcon name="download" /> Télécharger ce cas</a>
+        </article>
+      ))}
+    </div>
+    <div class="sandbox-warning">
+      <InterfaceIcon name="alert" />
+      <p><strong>Uniquement dans un bac à sable ou un compte de démonstration.</strong> Ces fichiers emploient des identifiants volontairement fictifs. Le prévol PA Check contrôle leur lecture locale, pas leur conformité normative complète et encore moins leur validité fiscale.</p>
+    </div>
+  </section>
+
+  <section class="protocol-stage" aria-labelledby="protocol-title">
+    <div class="shell">
+      <header class="lab-section-head protocol-head">
+        <div><p class="mono-label">protocole commun</p><h2 id="protocol-title">Cinq moments où une promesse peut se casser.</h2></div>
+        <p>Le résultat conserve la date, l’environnement et une preuve technique. Une étape non observable reste non testée.</p>
+      </header>
+      <ol class="protocol-list">
+        {lab.protocol.map((step) => (
+          <li>
+            <span>0{step.number}</span>
+            <div><small>{step.label}</small><h3>{step.question}</h3><p>{step.successDefinition}</p></div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="shell results-section" id="resultats" aria-labelledby="results-title">
+    <header class="lab-section-head">
+      <div><p class="mono-label">première campagne</p><h2 id="results-title">Trois plateformes prêtes à passer sur le banc.</h2></div>
+      <p>Qonto, Pennylane et B2Brouter sont documentées sur les points utiles. Cela ne suffit pas à les déclarer testées, et c’est précisément ce que la matrice rend visible.</p>
+    </header>
+
+    <div class="result-legend" aria-label="Légende des résultats">
+      <span class="state-tested">Testé</span><span class="state-failed">Échec</span><span class="state-partial">Partiellement testé</span><span class="state-not-tested">Non testé</span>
+    </div>
+
+    <div class="platform-results">
+      {lab.platforms.map((platform, platformIndex) => (
+        <article class="platform-run">
+          <header>
+            <span class="platform-index">P{platformIndex + 1}</span>
+            <div><p>PLATEFORME AGRÉÉE</p><h3>{platform.name}</h3></div>
+            <strong class={`result-state state-${platform.status.replace("_", "-")}`}>{statusLabels[platform.status]}</strong>
+          </header>
+          <p class="platform-summary">{platform.summary}</p>
+          <div class="case-strip" aria-label={`Résultats des trois cas pour ${platform.name}`}>
+            {platform.caseResults.map((result, index) => (
+              <div title={result.note}><span>C0{index + 1}</span><i></i><b>{statusLabels[result.status]}</b></div>
+            ))}
+          </div>
+          <ol class="step-strip" aria-label={`Résultats des cinq étapes pour ${platform.name}`}>
+            {platform.observations.map((observation, index) => (
+              <li class={`state-${observation.status.replace("_", "-")}`}><span>0{index + 1}</span><small>{lab.protocol[index]?.label}</small></li>
+            ))}
+          </ol>
+          <div class="run-footer">
+            <div>
+              <span>DOCUMENTATION CONSULTÉE</span>
+              <p>{platform.sourceIds.map((sourceId, index) => {
+                const source = sources.get(sourceId);
+                return source ? <><a href={source.url} rel="noopener">{source.publisher}</a>{index < platform.sourceIds.length - 1 ? " · " : ""}</> : null;
+              })}</p>
+            </div>
+            <p><strong>Pour avancer</strong>{platform.nextAction}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="shell seal-section" aria-labelledby="seal-title">
+    <div class="seal-mark locked" aria-hidden="true"><InterfaceIcon name="lock" /><span>PA</span><strong>CHECK</strong><small>TESTÉ</small></div>
+    <div>
+      <p class="mono-label">sceau sous conditions</p>
+      <h2 id="seal-title">« Testé par PA Check » ne s’achète pas.</h2>
+      <p>Le sceau reste verrouillé tant que les trois cas et les cinq étapes n’ont pas été observés de bout en bout par PA Check. Une plateforme peut apporter un accès, une documentation ou une réponse contradictoire. Elle ne choisit ni le statut ni la conclusion.</p>
+      <a class="button secondary" href="/contribuer/">Proposer un accès de test ou une réponse <InterfaceIcon name="arrow" /></a>
+    </div>
+    <aside>
+      <span><InterfaceIcon name="shield" /> Règle de publication</span>
+      <p>Les réponses des plateformes sont relues et rapprochées des traces du test. Aucune contribution ne modifie automatiquement cette page.</p>
+    </aside>
+  </section>
+
+  <section class="shell lab-sources">
+    <p><strong>Cadre du kit.</strong> La structure de prévol s’appuie sur les spécifications françaises V3.2 et la documentation Factur-X consultées le 25 août 2026.</p>
+    <div>{lab.sourceIds.map((sourceId) => {
+      const source = sources.get(sourceId);
+      return source ? <a href={source.url} rel="noopener"><InterfaceIcon name="proof" /> {source.title}</a> : null;
+    })}</div>
+  </section>
+</BaseLayout>
+
+<style>
+  .lab-hero { position: relative; overflow: hidden; background: #0a1523; color: #fff; }
+  .lab-hero::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(139,214,199,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(139,214,199,.065) 1px,transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(90deg,#000,transparent 74%); content: ""; }
+  .lab-hero::after { position: absolute; top: -16rem; right: -9rem; width: 37rem; height: 37rem; border: 1px solid rgba(113,227,200,.2); border-radius: 50%; box-shadow: 0 0 0 5rem rgba(113,227,200,.025),0 0 0 10rem rgba(119,132,239,.018); content: ""; }
+  .lab-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1.08fr) minmax(330px,.72fr); gap: clamp(3rem,9vw,9rem); align-items: center; padding-block: clamp(3.7rem,8vw,7rem); }
+  .lab-label { display: inline-flex; gap: .48rem; align-items: center; border: 1px solid rgba(112,222,199,.28); border-radius: 999px; padding: .43rem .68rem; color: #7fe0ca; font: 680 .75rem/1 var(--font-mono); text-transform: uppercase; }
+  .lab-label :global(svg) { width: 1rem; height: 1rem; }
+  .lab-hero h1 { max-width: 17ch; margin: 1.35rem 0 0; color: #f7fbff; font-size: clamp(2.15rem,5vw,4.3rem); font-weight: 430; line-height: 1.02; letter-spacing: -.048em; }
+  .lab-hero h1 strong { color: #7fe0ca; font-weight: 480; }
+  .lab-hero-copy > p { max-width: 47rem; margin: 1.35rem 0 0; color: rgba(233,241,249,.73); font-size: clamp(.94rem,1.6vw,1.08rem); line-height: 1.72; }
+  .lab-hero-actions { display: flex; flex-wrap: wrap; gap: 1.1rem; align-items: center; margin-top: 1.5rem; }
+  .lab-hero-actions > a:not(.button) { color: #b7c4d2; font-size: .78rem; font-weight: 680; }
+  .lab-button { gap: .45rem; background: #78d9c3; color: #102139; }
+  .lab-button:hover { color: #102139; }
+  .lab-button :global(svg) { width: .95rem; height: .95rem; }
+  .lab-console { position: relative; overflow: hidden; border: 1px solid rgba(159,205,208,.2); border-radius: 1.2rem; padding: 1rem; background: rgba(7,22,35,.78); box-shadow: 0 2rem 5rem rgba(0,0,0,.28); backdrop-filter: blur(10px); }
+  .lab-console::after { position: absolute; right: -4rem; bottom: -5rem; width: 13rem; height: 13rem; border: 1px solid rgba(121,225,202,.18); border-radius: 50%; box-shadow: 0 0 0 2rem rgba(121,225,202,.025),0 0 0 4rem rgba(121,225,202,.018); content: ""; }
+  .lab-console > header { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.1); padding: .15rem .15rem .85rem; color: #75dcc5; font: 650 .75rem/1 var(--font-mono); }
+  .lab-console > header small { color: rgba(255,255,255,.4); font-size: inherit; }
+  .console-gauge { position: relative; z-index: 1; display: grid; justify-items: center; margin: 1.6rem auto; }
+  .console-gauge > span { color: rgba(255,255,255,.42); font: 640 .75rem/1 var(--font-mono); letter-spacing: .08em; }
+  .console-gauge strong { margin-top: .45rem; color: #fff; font-size: 3.5rem; font-weight: 410; line-height: 1; }
+  .console-gauge strong small { color: rgba(255,255,255,.35); font-size: .95rem; }
+  .console-gauge i { width: 70%; height: 2px; margin-top: .8rem; background: linear-gradient(90deg,#72dfc6 0 0,rgba(255,255,255,.1) 0); }
+  .lab-console dl { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3,1fr); margin: 0; border-block: 1px solid rgba(255,255,255,.09); padding-block: .8rem; }
+  .lab-console dl div { display: grid; gap: .3rem; border-left: 1px solid rgba(255,255,255,.08); padding-inline: .65rem; }
+  .lab-console dl div:first-child { border-left: 0; }
+  .lab-console dt { color: rgba(255,255,255,.43); font-size: .75rem; }
+  .lab-console dd { margin: 0; color: #fff; font: 670 .86rem/1 var(--font-mono); }
+  .lab-console > p { position: relative; z-index: 1; display: flex; gap: .45rem; align-items: center; margin: .8rem 0 0; color: #9eafbe; font-size: .75rem; }
+  .lab-console > p :global(svg) { width: .95rem; height: .95rem; color: #e2ad55; }
+  .lab-ruler { position: relative; z-index: 1; display: grid; grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr auto; gap: .8rem; align-items: center; width: min(1180px,calc(100% - 2.5rem)); margin-inline: auto; border-top: 1px solid rgba(255,255,255,.08); padding-block: .7rem; color: rgba(255,255,255,.28); font: .75rem/1 var(--font-mono); }
+  .lab-ruler i { height: 1px; background: rgba(255,255,255,.08); }
+  .lab-intro { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,.74fr); gap: clamp(2rem,8vw,7rem); align-items: end; padding-block: clamp(3.5rem,7vw,6rem); }
+  .lab-intro h2, .lab-section-head h2, .seal-section h2 { max-width: 22ch; margin: .75rem 0 0; color: var(--bright); font-size: clamp(1.7rem,3.2vw,2.55rem); font-weight: 470; line-height: 1.12; letter-spacing: -.036em; }
+  .lab-intro > p, .lab-section-head > p { margin: 0; color: var(--paper); font-size: .86rem; line-height: 1.72; }
+  .kit-section { scroll-margin-top: 7rem; }
+  .lab-section-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,.68fr); gap: 2rem; align-items: end; margin-bottom: 1.5rem; }
+  .fixture-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .85rem; }
+  .fixture-card { --case-tone: #516adb; position: relative; overflow: hidden; border: 1px solid color-mix(in srgb,var(--case-tone) 22%,var(--line)); border-radius: 1.15rem; padding: 1rem; background: linear-gradient(155deg,#fff 0 72%,color-mix(in srgb,var(--case-tone) 6%,#fff)); box-shadow: 0 1.2rem 3rem rgba(32,50,79,.065); }
+  .fixture-2 { --case-tone: #158f78; }
+  .fixture-3 { --case-tone: #b06a23; }
+  .fixture-topline { display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  .fixture-topline span { color: var(--case-tone); font: 720 .75rem/1 var(--font-mono); }
+  .fixture-topline b { color: var(--success); font: 680 .72rem/1.2 var(--font-mono); }
+  .fixture-icon { position: relative; display: grid; width: 5rem; height: 6.2rem; align-content: start; gap: .42rem; margin-top: 1.4rem; border: 1px solid color-mix(in srgb,var(--case-tone) 24%,var(--line)); border-radius: .45rem; padding: .8rem; background: color-mix(in srgb,var(--case-tone) 5%,#fff); box-shadow: .55rem .55rem 0 color-mix(in srgb,var(--case-tone) 8%,transparent); }
+  .fixture-icon span { color: var(--case-tone); font: 720 .72rem/1 var(--font-mono); }
+  .fixture-icon i { height: .28rem; border-radius: 999px; background: color-mix(in srgb,var(--case-tone) 13%,var(--line)); }
+  .fixture-icon i:nth-of-type(2) { width: 70%; }
+  .fixture-icon strong { position: absolute; right: -.55rem; bottom: .6rem; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: .55rem; background: var(--case-tone); color: #fff; font: 690 .72rem/1 var(--font-mono); }
+  .fixture-card h3 { margin: 1.35rem 0 0; color: var(--bright); font-size: 1.15rem; font-weight: 540; }
+  .fixture-card > p { min-height: 4.25rem; margin: .55rem 0 0; color: var(--paper); font-size: .78rem; line-height: 1.62; }
+  .fixture-facts { display: grid; grid-template-columns: repeat(3,1fr); margin: 1rem 0 0; border-block: 1px solid var(--line); padding-block: .75rem; }
+  .fixture-facts div { display: grid; gap: .24rem; border-left: 1px solid var(--line); padding-inline: .55rem; }
+  .fixture-facts div:first-child { border-left: 0; padding-left: 0; }
+  .fixture-facts dt { color: var(--muted); font-size: .75rem; }
+  .fixture-facts dd { margin: 0; color: var(--bright); font-size: .76rem; font-weight: 680; }
+  .fixture-card details { margin-top: .8rem; }
+  .fixture-card summary { color: var(--paper); cursor: pointer; font-size: .72rem; font-weight: 650; }
+  .fixture-card details p { margin: .55rem 0 .3rem; color: var(--muted); font-size: .75rem; }
+  .fixture-card code { display: block; overflow-wrap: anywhere; color: var(--muted); font-size: .72rem; line-height: 1.45; }
+  .fixture-download { display: inline-flex; gap: .4rem; align-items: center; margin-top: 1rem; color: var(--case-tone); font-size: .74rem; font-weight: 720; }
+  .fixture-download :global(svg) { width: .9rem; height: .9rem; }
+  .sandbox-warning { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: start; margin-top: .85rem; border: 1px solid #e7d1ad; border-radius: .85rem; padding: .85rem 1rem; background: #fff9ef; }
+  .sandbox-warning :global(svg) { width: 1rem; height: 1rem; color: #a7651e; }
+  .sandbox-warning p { margin: 0; color: #6e5a42; font-size: .74rem; line-height: 1.55; }
+  .sandbox-warning strong { color: #4e3a25; }
+  .protocol-stage { margin-top: clamp(4rem,8vw,7rem); padding-block: clamp(3.2rem,7vw,5.5rem); background: #eef4f3; }
+  .protocol-list { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: steps; }
+  .protocol-list li { position: relative; min-width: 0; border-top: 2px solid #6acdb8; padding: 1.1rem .9rem 0 0; }
+  .protocol-list li::after { position: absolute; top: -.35rem; right: .7rem; width: .6rem; height: .6rem; border: 2px solid #eef4f3; border-radius: 50%; background: #6acdb8; content: ""; }
+  .protocol-list li:last-child::after { right: 0; }
+  .protocol-list li > span { color: #27917b; font: 690 .75rem/1 var(--font-mono); }
+  .protocol-list small { display: block; margin-top: .8rem; color: #177562; font-size: .75rem; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
+  .protocol-list h3 { min-height: 4.5rem; margin: .4rem 0 0; color: var(--bright); font-size: .87rem; font-weight: 590; line-height: 1.35; }
+  .protocol-list p { margin: .65rem 0 0; color: var(--muted); font-size: .71rem; line-height: 1.56; }
+  .results-section { scroll-margin-top: 7rem; padding-top: clamp(4rem,8vw,7rem); }
+  .result-legend { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1rem; }
+  .result-legend span, .result-state { border: 1px solid currentColor; border-radius: 999px; padding: .35rem .55rem; font-size: .75rem; font-weight: 700; }
+  .state-tested { color: #167c67; }
+  .state-failed { color: #ad3f46; }
+  .state-partial { color: #a3651f; }
+  .state-not-tested { color: #6f7b8b; }
+  .platform-results { display: grid; gap: .85rem; }
+  .platform-run { overflow: hidden; border: 1px solid var(--line); border-radius: 1.1rem; background: #fff; box-shadow: 0 1rem 2.6rem rgba(32,50,79,.055); }
+  .platform-run > header { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; border-bottom: 1px solid var(--line); padding: .9rem 1rem; background: linear-gradient(90deg,#f8fafc,#fff); }
+  .platform-index { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: .75rem; background: #172945; color: #8ee1cf; font: 680 .75rem/1 var(--font-mono); }
+  .platform-run header p { margin: 0; color: var(--muted); font: 660 .75rem/1 var(--font-mono); }
+  .platform-run h3 { margin: .3rem 0 0; color: var(--bright); font-size: 1.08rem; font-weight: 550; }
+  .platform-summary { margin: 0; padding: .85rem 1rem; color: var(--paper); font-size: .77rem; }
+  .case-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: .5rem; padding-inline: 1rem; }
+  .case-strip div { display: grid; grid-template-columns: auto 1fr auto; gap: .45rem; align-items: center; border: 1px solid var(--line); border-radius: .65rem; padding: .55rem .65rem; background: var(--surface-2); }
+  .case-strip span { color: var(--muted); font: 680 .75rem/1 var(--font-mono); }
+  .case-strip i { height: 1px; background: var(--line); }
+  .case-strip b { color: #758092; font-size: .75rem; }
+  .step-strip { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; margin: 1rem; padding: 0; list-style: none; }
+  .step-strip li { position: relative; display: grid; justify-items: center; gap: .45rem; border-top: 2px solid #d9dee6; padding-top: .65rem; color: #738093; }
+  .step-strip li::before { position: absolute; top: -.35rem; width: .55rem; height: .55rem; border: 2px solid #fff; border-radius: 50%; background: #bac3cf; content: ""; }
+  .step-strip span { font: 650 .75rem/1 var(--font-mono); }
+  .step-strip small { font-size: .75rem; }
+  .run-footer { display: grid; grid-template-columns: .75fr 1.25fr; gap: 1rem; border-top: 1px solid var(--line); padding: .85rem 1rem; }
+  .run-footer > div > span { color: var(--muted); font: 650 .75rem/1 var(--font-mono); }
+  .run-footer p { margin: .35rem 0 0; color: var(--muted); font-size: .69rem; line-height: 1.5; }
+  .run-footer p strong { display: block; margin-bottom: .2rem; color: var(--bright); }
+  .run-footer a { color: var(--signal); font-weight: 680; }
+  .seal-section { display: grid; grid-template-columns: auto minmax(0,1fr) minmax(260px,.55fr); gap: clamp(1.5rem,5vw,4rem); align-items: center; margin-block: clamp(4rem,8vw,7rem); border: 1px solid #cfd7e4; border-radius: 1.25rem; padding: clamp(1.25rem,4vw,2.2rem); background: linear-gradient(120deg,#fff,#f5f8fb); }
+  .seal-mark { display: grid; place-items: center; width: 9.5rem; height: 9.5rem; border: 1px solid #aeb8c7; border-radius: 50%; color: #7b8797; box-shadow: inset 0 0 0 .4rem #fff,inset 0 0 0 .45rem #cbd2dc; }
+  .seal-mark :global(svg) { width: 1.1rem; height: 1.1rem; }
+  .seal-mark span { margin-top: -.9rem; font: 540 1.8rem/1 var(--font-mono); }
+  .seal-mark strong { margin-top: -1rem; font: 760 .75rem/1 var(--font-mono); letter-spacing: .13em; }
+  .seal-mark small { margin-top: -1.1rem; font: 680 .72rem/1 var(--font-mono); letter-spacing: .1em; }
+  .seal-section h2 { font-size: clamp(1.55rem,2.7vw,2.15rem); }
+  .seal-section > div:nth-child(2) > p:not(.mono-label) { color: var(--paper); font-size: .79rem; line-height: 1.65; }
+  .seal-section .button { gap: .45rem; margin-top: .5rem; }
+  .seal-section .button :global(svg) { width: .9rem; height: .9rem; }
+  .seal-section aside { border-left: 1px solid var(--line); padding-left: 1.2rem; }
+  .seal-section aside span { display: inline-flex; gap: .4rem; align-items: center; color: var(--success); font-size: .7rem; font-weight: 700; }
+  .seal-section aside :global(svg) { width: 1rem; height: 1rem; }
+  .seal-section aside p { color: var(--muted); font-size: .72rem; line-height: 1.55; }
+  .lab-sources { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: start; margin-bottom: clamp(4rem,7vw,6rem); border-top: 1px solid var(--line); padding-top: 1.2rem; }
+  .lab-sources p { margin: 0; color: var(--muted); font-size: .7rem; line-height: 1.55; }
+  .lab-sources div { display: grid; gap: .45rem; }
+  .lab-sources a { display: grid; grid-template-columns: auto 1fr; gap: .4rem; color: var(--paper); font-size: .69rem; }
+  .lab-sources a :global(svg) { width: .9rem; height: .9rem; color: var(--signal); }
+  @media (max-width: 960px) { .fixture-grid { grid-template-columns: 1fr 1fr; } .fixture-card:last-child { grid-column: 1 / -1; } .protocol-list { grid-template-columns: 1fr; gap: .75rem; } .protocol-list li { display: grid; grid-template-columns: auto 1fr; gap: .8rem; border-top: 0; border-left: 2px solid #6acdb8; padding: 0 0 1rem 1rem; } .protocol-list li::after { top: 0; right: auto; left: -.4rem; } .protocol-list h3 { min-height: 0; } .protocol-list small { margin-top: 0; } .seal-section { grid-template-columns: auto 1fr; } .seal-section aside { grid-column: 1 / -1; border-top: 1px solid var(--line); border-left: 0; padding: 1rem 0 0; } }
+  @media (max-width: 760px) { .lab-hero-grid, .lab-intro, .lab-section-head, .lab-sources { grid-template-columns: 1fr; } .lab-hero-grid { gap: 2rem; } .fixture-grid { grid-template-columns: 1fr; } .fixture-card:last-child { grid-column: auto; } .case-strip { grid-template-columns: 1fr; } .step-strip { overflow-x: auto; grid-template-columns: repeat(5,minmax(6.5rem,1fr)); padding-top: .2rem; } .run-footer { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .lab-hero h1 { font-size: 2.35rem; } .lab-console dl { grid-template-columns: 1fr; } .lab-console dl div { grid-template-columns: 1fr auto; border-top: 1px solid rgba(255,255,255,.08); border-left: 0; padding-block: .55rem; } .lab-console dl div:first-child { border-top: 0; } .lab-ruler { display: none; } .platform-run > header { grid-template-columns: auto 1fr; } .result-state { grid-column: 1 / -1; justify-self: start; } .seal-section { grid-template-columns: 1fr; } .seal-mark { width: 8rem; height: 8rem; } }
+</style>

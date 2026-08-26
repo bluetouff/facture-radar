@@ -5,8 +5,12 @@ import { platforms } from "../src/data/platforms.ts";
 import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-profiles.ts";
 import { directRoutingOptions, directRoutingSourceIds } from "../src/data/direct-routing-options.ts";
 import { PASSPORT_LAB_CHECKED_AT, passportRoutes, passportRouteSourceIds } from "../src/data/passport-routes.ts";
+import { lab, qualifiesForLabSeal } from "../src/data/lab.ts";
 import { INVOICE_RULESET_CHECKED_AT, invoiceVerifierSourceIds } from "../src/lib/invoice-verifier.ts";
-import { passportRoutesSchema, platformsSchema, sourcesSchema } from "../src/data/schema.ts";
+import { analyzeFacturXXml } from "../src/lib/invoice-verifier.ts";
+import { labSchema, passportRoutesSchema, platformsSchema, sourcesSchema } from "../src/data/schema.ts";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 import { z } from "zod";
 
 const corpusSelectionSchema = z.object({
@@ -30,6 +34,7 @@ const checkedPlatforms = platformsSchema.parse(platforms);
 const checkedSources = sourcesSchema.parse(sourcesData);
 const checkedSelection = corpusSelectionSchema.parse(corpusSelectionData);
 const checkedPassportRoutes = passportRoutesSchema.parse(passportRoutes);
+const checkedLab = labSchema.parse(lab);
 const sourceIds = new Set(checkedSources.map((source) => source.id));
 if (sourceIds.size !== checkedSources.length) throw new Error("Un identifiant de source est dupliqué");
 const sourcesById = new Map(checkedSources.map((source) => [source.id, source]));
@@ -85,6 +90,70 @@ for (const sourceId of passportRouteSourceIds) {
     throw new Error(`La source Passeport ${sourceId} est postérieure à la version du Lab`);
   }
   referencedSourceIds.add(sourceId);
+}
+
+const expectedLabCaseIds = ["service-simple", "multi-tva", "avoir"];
+const expectedLabStepIds = ["import", "lecture", "integrite", "emission", "statut"];
+const expectedLabPlatformSlugs = ["qonto", "pennylane", "b2brouter"];
+if (checkedLab.cases.map(({ id }) => id).join(",") !== expectedLabCaseIds.join(",")) {
+  throw new Error("Le kit Lab doit conserver ses trois cas dans l’ordre public annoncé");
+}
+if (checkedLab.protocol.map(({ id }) => id).join(",") !== expectedLabStepIds.join(",")) {
+  throw new Error("Le protocole Lab doit conserver ses cinq étapes dans l’ordre public annoncé");
+}
+if (checkedLab.platforms.map(({ slug }) => slug).join(",") !== expectedLabPlatformSlugs.join(",")) {
+  throw new Error("La première matrice Lab doit couvrir Qonto, Pennylane et B2Brouter");
+}
+
+for (const sourceId of checkedLab.sourceIds) {
+  const source = sourcesById.get(sourceId);
+  if (!source) throw new Error(`Source de méthode Lab inconnue : ${sourceId}`);
+  if (source.accessedAt > checkedLab.checkedAt) throw new Error(`Source Lab postérieure au contrôle : ${sourceId}`);
+  referencedSourceIds.add(sourceId);
+}
+
+for (const testCase of checkedLab.cases) {
+  const fixtureUrl = new URL(`../public${testCase.fileHref}`, import.meta.url);
+  const fixture = readFileSync(fixtureUrl);
+  const digest = createHash("sha256").update(fixture).digest("hex");
+  if (digest !== testCase.sha256) throw new Error(`${testCase.title} : empreinte SHA-256 incohérente`);
+  if (fixture.byteLength !== testCase.bytes) throw new Error(`${testCase.title} : taille de fichier incohérente`);
+  const xml = fixture.toString("utf8");
+  if (!xml.includes(`<ram:TypeCode>${testCase.documentTypeCode}</ram:TypeCode>`)) {
+    throw new Error(`${testCase.title} : type de document inattendu`);
+  }
+  const analysis = analyzeFacturXXml(xml);
+  if (analysis.status !== "usable") throw new Error(`${testCase.title} : le prévol PA Check doit être exploitable`);
+  if (analysis.metadata.invoiceNumber !== testCase.expected.invoiceNumber
+    || analysis.metadata.lineCount !== testCase.expected.lineCount
+    || analysis.metadata.grandTotal !== testCase.expected.grandTotal
+    || analysis.metadata.currency !== testCase.expected.currency) {
+    throw new Error(`${testCase.title} : résultat de prévol différent du contrat public`);
+  }
+}
+
+for (const platform of checkedLab.platforms) {
+  if (!approvedByName.has(platform.officialName)) {
+    throw new Error(`${platform.name} est absent de la liste DGFiP approuvée`);
+  }
+  for (const sourceId of platform.sourceIds) {
+    const source = sourcesById.get(sourceId);
+    if (!source) throw new Error(`Source Lab inconnue ${sourceId} pour ${platform.name}`);
+    if (source.accessedAt > checkedLab.checkedAt) throw new Error(`${platform.name} : source postérieure au contrôle Lab`);
+    referencedSourceIds.add(sourceId);
+  }
+  if (platform.status === "not_tested") {
+    if (platform.evidenceLevel !== "documentation_only" || platform.testedAt !== null || platform.environment !== null || platform.sealAwarded) {
+      throw new Error(`${platform.name} : un test non exécuté ne peut afficher ni observation ni sceau`);
+    }
+    if (!platform.caseResults.every((result) => result.status === "not_tested")
+      || !platform.observations.every((observation) => observation.status === "not_tested" && observation.evidenceIds.length === 0)) {
+      throw new Error(`${platform.name} : les cellules non testées doivent rester vides de preuves observées`);
+    }
+  }
+  if (platform.sealAwarded && !qualifiesForLabSeal(platform)) {
+    throw new Error(`${platform.name} : sceau interdit sans parcours complet observé`);
+  }
 }
 
 for (const platform of checkedPlatforms) {
@@ -196,4 +265,4 @@ if (officialDirectory.pending.length !== 18) {
   throw new Error(`La liste en attente doit contenir 18 opérateurs, reçu ${officialDirectory.pending.length}`);
 }
 
-console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${checkedPassportRoutes.length} routes Passeport, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);
+console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${checkedPassportRoutes.length} routes Passeport, ${checkedLab.cases.length} cas Lab sur ${checkedLab.platforms.length} PA, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);
