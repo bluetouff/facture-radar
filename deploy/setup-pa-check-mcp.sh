@@ -26,8 +26,8 @@ for dependency in apache2ctl curl python3 sha256sum systemctl; do
 done
 test -x /usr/bin/node
 NODE_MAJOR="$(/usr/bin/node -p 'process.versions.node.split(".")[0]')"
-if [[ ! "${NODE_MAJOR}" =~ ^[0-9]+$ || "${NODE_MAJOR}" -lt 22 ]]; then
-  echo "Echec: Node.js 22 ou plus recent est requis pour le MCP." >&2
+if [[ ! "${NODE_MAJOR}" =~ ^[0-9]+$ || "${NODE_MAJOR}" -lt 20 ]]; then
+  echo "Echec: Node.js 20 ou plus recent est requis pour le MCP." >&2
   exit 1
 fi
 test -f "${MANIFEST}"

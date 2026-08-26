@@ -35,5 +35,10 @@ jobs:
       - name: Validate, test and build
         run: npm run build
 
-      - name: Smoke-test the public MCP contract
-        run: npm run mcp:smoke
+      - name: Setup production Node.js runtime
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 20.19.2
+
+      - name: Smoke-test the public MCP contract on production runtime
+        run: node scripts/smoke-mcp.mjs

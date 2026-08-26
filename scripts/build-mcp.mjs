@@ -22,7 +22,7 @@ await build({
   bundle: true,
   platform: "node",
   format: "esm",
-  target: "node22",
+  target: "node20",
   packages: "bundle",
   minify: false,
   sourcemap: false,
