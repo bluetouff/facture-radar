@@ -21,7 +21,7 @@ if [[ "${EUID}" -ne 0 ]]; then
   echo "Echec: ce script doit etre execute avec sudo." >&2
   exit 1
 fi
-for dependency in apache2ctl curl flock grep python3 sha256sum systemctl; do
+for dependency in apache2ctl curl flock grep python3 sha256sum ss systemctl; do
   command -v "${dependency}" >/dev/null
 done
 test -x /usr/bin/node
@@ -329,21 +329,46 @@ systemctl enable pa-check-mcp.service >/dev/null
 systemctl restart pa-check-mcp.service
 systemctl is-active --quiet pa-check-mcp.service
 
-LOCAL_HEALTH="$(curl --max-time 5 -fsS "http://127.0.0.1:${MCP_PORT}/healthz")"
+MCP_LISTENING=0
+for _ in {1..80}; do
+  if ss -H -ltn "sport = :${MCP_PORT}" | grep -Fq "127.0.0.1:${MCP_PORT}"; then
+    MCP_LISTENING=1
+    break
+  fi
+  if ! systemctl is-active --quiet pa-check-mcp.service; then
+    break
+  fi
+  sleep 0.25
+done
+if [[ "${MCP_LISTENING}" -ne 1 ]]; then
+  echo "Echec: le MCP n'a pas ouvert son port loopback dans le delai imparti." >&2
+  rollback 1
+fi
+
+if ! LOCAL_HEALTH="$(curl --max-time 5 -fsS "http://127.0.0.1:${MCP_PORT}/healthz")"; then
+  echo "Echec: le controle de sante MCP local a echoue." >&2
+  rollback 1
+fi
 python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("status")=="ok" or sys.exit("Sante MCP invalide"); data.get("revision",{}).get("revision")==sys.argv[1] or sys.exit("Revision MCP live inattendue"); data.get("counts",{}).get("enrichedPlatforms")==25 or sys.exit("Corpus MCP live inattendu")' "${EXPECTED_SHA}" <<<"${LOCAL_HEALTH}"
 
 apache2ctl configtest
 systemctl reload apache2
 systemctl is-active --quiet apache2
 
-MCP_RESPONSE="$(curl --max-time 10 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" \
+if ! MCP_RESPONSE="$(curl --max-time 10 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" \
   -H 'Accept: application/json, text/event-stream' \
   -H 'Content-Type: application/json' \
   --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"pa-check-deploy-smoke","version":"0.1.0"}}}' \
-  "https://${SITE_HOST}/api/mcp")"
+  "https://${SITE_HOST}/api/mcp")"; then
+  echo "Echec: le smoke test MCP HTTPS a echoue." >&2
+  rollback 1
+fi
 python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("jsonrpc")=="2.0" or sys.exit("Reponse JSON-RPC invalide"); data.get("result",{}).get("serverInfo",{}).get("name")=="io.github.bluetouff/pa-check" or sys.exit("Identite MCP live inattendue")' <<<"${MCP_RESPONSE}"
 
-MCP_HEADERS="$(curl --max-time 10 -fsSI --resolve "${SITE_HOST}:443:127.0.0.1" "https://${SITE_HOST}/api/mcp")"
+if ! MCP_HEADERS="$(curl --max-time 10 -fsSI --resolve "${SITE_HOST}:443:127.0.0.1" "https://${SITE_HOST}/api/mcp")"; then
+  echo "Echec: le controle des en-tetes MCP a echoue." >&2
+  rollback 1
+fi
 grep -iq '^content-security-policy:.*default-src '\''none'\''' <<<"${MCP_HEADERS}"
 grep -iq '^cache-control:.*no-store' <<<"${MCP_HEADERS}"
 
