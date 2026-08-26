@@ -184,21 +184,23 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
             </a>
             <p>Une réponse claire à vos questions sur la facture électronique.</p>
             <div class="footer-privacy"><InterfaceIcon name="lock" /><span>Vos choix restent dans ce navigateur.</span></div>
+          </div>
+
+          <div class="footer-links">
+            <nav class="footer-nav" aria-label="Pied de page">
+              {footerGroups.map((group) => (
+                <section>
+                  <h2>{group.label}</h2>
+                  {group.links.map((link) => <a href={link.href}><InterfaceIcon name={link.icon} /><span>{link.label}</span></a>)}
+                </section>
+              ))}
+            </nav>
             <a class="footer-support" href="https://l0g.fr/soutenir/" aria-label="Soutenir le projet indépendant l0g">
               <span class="footer-support-icon"><InterfaceIcon name="support" /></span>
               <span class="footer-support-copy"><small>Projet public et indépendant</small><strong>Soutenir l0g</strong></span>
               <InterfaceIcon class="footer-support-arrow" name="arrow" />
             </a>
           </div>
-
-          <nav class="footer-nav" aria-label="Pied de page">
-            {footerGroups.map((group) => (
-              <section>
-                <h2>{group.label}</h2>
-                {group.links.map((link) => <a href={link.href}><InterfaceIcon name={link.icon} /><span>{link.label}</span></a>)}
-              </section>
-            ))}
-          </nav>
         </div>
 
         <div class="footer-note">
