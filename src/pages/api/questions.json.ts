@@ -6,7 +6,7 @@ const linkedSourceIds = new Set(practicalQuestionSourceIds);
 const linkedSources = sources.filter((source) => linkedSourceIds.has(source.id));
 
 export const GET: APIRoute = () => new Response(JSON.stringify({
-  schemaVersion: "0.1.0",
+  schemaVersion: "0.2.0",
   generatedAt: QUESTIONS_CHECKED_AT,
   methodology: "https://pa.l0g.fr/methodologie/",
   questions: practicalQuestions,

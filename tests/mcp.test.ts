@@ -39,7 +39,7 @@ test("une question absente reste absente", () => {
   const result = answerQuestion("culture hydroponique martienne", 3);
   assert.equal(result.found, false);
   assert.equal(result.answer, null);
-  assert.equal(result.fallback?.availableQuestions.length, 15);
+  assert.equal(result.fallback?.availableQuestions.length, 25);
 });
 
 test("une fiche ne transforme pas une inconnue en réponse positive", () => {
@@ -77,14 +77,15 @@ test("l'annuaire MCP distingue approuvé et en attente sans exposer les contacts
 test("le manifeste et les ressources couvrent tout le corpus public", () => {
   const manifest = corpusManifest(revision);
   assert.deepEqual(manifest.counts, {
-    questions: 15,
+    questions: 25,
     enrichedPlatforms: 148,
     approvedPlatforms: 148,
     pendingPlatforms: 18,
     journeys: 148,
     invoiceRoutes: 6,
     directRoutingOptions: 3,
-    sources: 266,
+    sources: 268,
+    observedPublicSites: 11,
   });
   const directory = getResourceByUri("pacheck://corpus/official-directory", revision) as { approved: unknown[]; pending: unknown[] };
   assert.equal(directory.approved.length, 148);

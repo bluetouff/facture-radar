@@ -66,6 +66,58 @@ export const sourceSchema = z.object({
 export const platformsSchema = z.array(platformSchema).length(148);
 export const sourcesSchema = z.array(sourceSchema).min(12);
 
+const capabilityAvailability = z.object({
+  stage: z.enum(["available", "limited", "beta", "announced"]),
+  scope: z.string().min(1),
+}).strict();
+
+export const platformResearchSchema = z.object({
+  platformSlug: z.string().regex(/^[a-z0-9-]+$/),
+  availability: z.object({
+    sendsInvoices: evidence(capabilityAvailability),
+    receivesInvoices: evidence(capabilityAvailability),
+    eReporting: evidence(capabilityAvailability),
+  }).strict(),
+  directImport: evidence(z.object({
+    acceptsThirdPartyFile: z.boolean(),
+    formats: z.array(z.string().min(1)),
+    preservesEmbeddedXml: z.boolean().nullable(),
+    requiresReentry: z.boolean().nullable(),
+  }).strict()),
+  overagePricing: evidence(z.string().min(1)),
+  exitTerms: evidence(z.object({
+    bulkExport: z.boolean().nullable(),
+    formats: z.array(z.string().min(1)),
+    postTerminationAccess: z.string().min(1).nullable(),
+    fees: z.string().min(1).nullable(),
+  }).strict()),
+  terminationTerms: evidence(z.string().min(1)),
+  hostingProviders: evidence(z.array(z.string().min(1))),
+  declaredSubprocessors: evidence(z.array(z.string().min(1))),
+}).strict();
+
+export const platformResearchProfilesSchema = z.array(platformResearchSchema).length(148);
+
+export const publicSiteObservationSchema = z.object({
+  platformSlug: z.string().regex(/^[a-z0-9-]+$/),
+  status: z.enum(["observed", "blocked", "not_scanned"]),
+  scanUrl: z.url().refine(isPublicHttpUrl, "Seules les URL HTTP et HTTPS sont autorisées").nullable(),
+  finalUrl: z.url().refine(isPublicHttpUrl, "Seules les URL HTTP et HTTPS sont autorisées").nullable(),
+  checkedAt: z.iso.date().nullable(),
+  consentState: z.literal("before-choice"),
+  methodologyVersion: z.literal("1.0"),
+  trackers: z.array(z.object({
+    domain: z.string().min(1),
+    entity: z.string().min(1),
+    categories: z.array(z.string().min(1)),
+    source: z.literal("DuckDuckGo Tracker Radar"),
+  }).strict()),
+  thirdPartyDomains: z.array(z.string().min(1)),
+  note: z.string().min(1),
+}).strict();
+
+export const publicSiteObservationsSchema = z.array(publicSiteObservationSchema).length(148);
+
 const passportFactSchema = z.object({
   id: z.enum(["entry", "format", "transmission", "integrity"]),
   label: z.string().min(1).max(80),

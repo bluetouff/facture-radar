@@ -37,7 +37,7 @@ await chmod(outputFile, 0o755);
 const bundle = await readFile(outputFile);
 const sha256 = createHash("sha256").update(bundle).digest("hex");
 const manifest = {
-  schemaVersion: "0.1.0",
+  schemaVersion: "0.2.0",
   revision,
   builtAt: buildTime,
   entrypoint: "server.mjs",

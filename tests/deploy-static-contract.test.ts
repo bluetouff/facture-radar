@@ -6,9 +6,9 @@ import test from "node:test";
 const root = resolve(import.meta.dirname, "..");
 const activationScript = readFileSync(resolve(root, "deploy/activate-pa-check-site.sh"), "utf8");
 
-test("le déploiement statique exige le corpus public des quinze questions", () => {
+test("le déploiement statique exige le corpus public des vingt-cinq questions", () => {
   assert.match(activationScript, /"api\/questions\.json",/);
-  assert.match(activationScript, /if counts\.get\("questions"\) != 15:\n    raise SystemExit\("Nombre de questions inattendu"\)/);
+  assert.match(activationScript, /if counts\.get\("questions"\) != 25:\n    raise SystemExit\("Nombre de questions inattendu"\)/);
 });
 
 test("le smoke live vérifie les trois dimensions stables du corpus", () => {
@@ -18,6 +18,6 @@ test("le smoke live vérifie les trois dimensions stables du corpus", () => {
 
   const liveSmoke = activationScript.slice(smokeStart, smokeEnd);
   assert.match(liveSmoke, /counts\.get\("enrichedPlatforms"\) != 148/);
-  assert.match(liveSmoke, /counts\.get\("questions"\) != 15/);
-  assert.match(liveSmoke, /counts\.get\("sources"\) != 266/);
+  assert.match(liveSmoke, /counts\.get\("questions"\) != 25/);
+  assert.match(liveSmoke, /counts\.get\("sources"\) != 268/);
 });

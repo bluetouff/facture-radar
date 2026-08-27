@@ -5,9 +5,11 @@ import { platforms } from "../src/data/platforms.ts";
 import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-profiles.ts";
 import { directRoutingOptions, directRoutingSourceIds } from "../src/data/direct-routing-options.ts";
 import { practicalQuestions, practicalQuestionSourceIds } from "../src/data/practical-questions.ts";
+import { collectResearchSourceIds, platformResearchProfiles } from "../src/data/platform-research.ts";
+import { publicSiteObservations, TRACKER_OBSERVATION_SOURCE_IDS } from "../src/data/public-site-observations.ts";
 import { PASSPORT_CHECKED_AT, passportRoutes, passportRouteSourceIds } from "../src/data/passport-routes.ts";
 import { INVOICE_RULESET_CHECKED_AT, invoiceVerifierSourceIds } from "../src/lib/invoice-verifier.ts";
-import { passportRoutesSchema, platformsSchema, sourcesSchema } from "../src/data/schema.ts";
+import { passportRoutesSchema, platformResearchProfilesSchema, platformsSchema, publicSiteObservationsSchema, sourcesSchema } from "../src/data/schema.ts";
 import { z } from "zod";
 
 const corpusSelectionSchema = z.object({
@@ -31,6 +33,8 @@ const checkedPlatforms = platformsSchema.parse(platforms);
 const checkedSources = sourcesSchema.parse(sourcesData);
 const checkedSelection = corpusSelectionSchema.parse(corpusSelectionData);
 const checkedPassportRoutes = passportRoutesSchema.parse(passportRoutes);
+const checkedResearchProfiles = platformResearchProfilesSchema.parse(platformResearchProfiles);
+const checkedSiteObservations = publicSiteObservationsSchema.parse(publicSiteObservations);
 const sourceIds = new Set(checkedSources.map((source) => source.id));
 if (sourceIds.size !== checkedSources.length) throw new Error("Un identifiant de source est dupliqué");
 const sourcesById = new Map(checkedSources.map((source) => [source.id, source]));
@@ -141,6 +145,70 @@ for (const entry of officialDirectory.approved) {
   if (!officialNames.has(entry.name)) throw new Error(`Plateforme approuvée sans fiche enrichie : ${entry.name}`);
 }
 
+const researchSlugs = new Set<string>();
+for (const profile of checkedResearchProfiles) {
+  if (researchSlugs.has(profile.platformSlug)) throw new Error(`Recherche dupliquée : ${profile.platformSlug}`);
+  researchSlugs.add(profile.platformSlug);
+  if (!slugs.has(profile.platformSlug)) throw new Error(`Recherche liée à une fiche absente : ${profile.platformSlug}`);
+  const evidenceValues = [
+    ...Object.values(profile.availability),
+    profile.directImport,
+    profile.overagePricing,
+    profile.exitTerms,
+    profile.terminationTerms,
+    profile.hostingProviders,
+    profile.declaredSubprocessors,
+  ];
+  for (const evidence of evidenceValues) {
+    if (evidence.value === null && (evidence.status !== "non_documented" || evidence.sourceIds.length !== 0)) {
+      throw new Error(`${profile.platformSlug} : une recherche inconnue doit rester sans source`);
+    }
+    if (evidence.value !== null && evidence.status === "non_documented") {
+      throw new Error(`${profile.platformSlug} : une recherche publiée ne peut pas être non documentée`);
+    }
+  }
+  for (const sourceId of collectResearchSourceIds(profile)) {
+    const source = sourcesById.get(sourceId);
+    if (!source) throw new Error(`Source de recherche inconnue ${sourceId} pour ${profile.platformSlug}`);
+    const dates = evidenceValues.filter((evidence) => evidence.sourceIds.includes(sourceId)).map((evidence) => evidence.checkedAt);
+    if (dates.some((checkedAt) => source.accessedAt > checkedAt)) {
+      throw new Error(`${profile.platformSlug} : ${sourceId} est postérieure à la recherche publiée`);
+    }
+    referencedSourceIds.add(sourceId);
+  }
+}
+if (researchSlugs.size !== slugs.size) throw new Error(`Couverture de recherche incomplète : ${researchSlugs.size}/${slugs.size}`);
+
+const observationSlugs = new Set<string>();
+for (const observation of checkedSiteObservations) {
+  if (observationSlugs.has(observation.platformSlug)) throw new Error(`Observation dupliquée : ${observation.platformSlug}`);
+  observationSlugs.add(observation.platformSlug);
+  if (!slugs.has(observation.platformSlug)) throw new Error(`Observation liée à une fiche absente : ${observation.platformSlug}`);
+  if (observation.status === "observed") {
+    if (!observation.scanUrl || !observation.finalUrl || !observation.checkedAt) {
+      throw new Error(`${observation.platformSlug} : une observation publiée doit être datée et reliée à ses URL`);
+    }
+    if (new Set(observation.thirdPartyDomains).size !== observation.thirdPartyDomains.length) {
+      throw new Error(`${observation.platformSlug} : domaine tiers dupliqué`);
+    }
+    for (const tracker of observation.trackers) {
+      if (!observation.thirdPartyDomains.includes(tracker.domain)) {
+        throw new Error(`${observation.platformSlug} : le domaine classé ${tracker.domain} n'a pas été observé`);
+      }
+      if (tracker.categories.length === 0) throw new Error(`${observation.platformSlug} : classement vide pour ${tracker.domain}`);
+    }
+  } else if (observation.status === "not_scanned") {
+    if (observation.scanUrl !== null || observation.finalUrl !== null || observation.checkedAt !== null || observation.trackers.length || observation.thirdPartyDomains.length) {
+      throw new Error(`${observation.platformSlug} : une observation non réalisée ne doit publier aucun résultat`);
+    }
+  }
+}
+if (observationSlugs.size !== slugs.size) throw new Error(`Couverture d'observation incomplète : ${observationSlugs.size}/${slugs.size}`);
+for (const sourceId of TRACKER_OBSERVATION_SOURCE_IDS) {
+  if (!sourceIds.has(sourceId)) throw new Error(`Source de méthode d'observation inconnue : ${sourceId}`);
+  referencedSourceIds.add(sourceId);
+}
+
 const selectedSlugs = new Set<string>();
 for (const selected of checkedSelection.selected) {
   if (selectedSlugs.has(selected.slug)) throw new Error(`Sélection dupliquée : ${selected.slug}`);
@@ -192,8 +260,8 @@ if (journeySlugs.size !== checkedPlatforms.length) {
   throw new Error(`Chaque fiche doit avoir un parcours détaillé : ${journeySlugs.size}/${checkedPlatforms.length}`);
 }
 
-if (practicalQuestions.length !== 15) {
-  throw new Error(`La bibliothèque doit contenir exactement 15 questions : ${practicalQuestions.length}`);
+if (practicalQuestions.length !== 25) {
+  throw new Error(`La bibliothèque doit contenir exactement 25 questions : ${practicalQuestions.length}`);
 }
 const questionSlugs = new Set<string>();
 for (const question of practicalQuestions) {

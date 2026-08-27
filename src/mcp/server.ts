@@ -68,6 +68,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
       "Répondez d'abord à la question concrète de l'utilisateur.",
       "N'inventez jamais une fonction, un tarif ou une compatibilité absent du corpus.",
       "Lorsque le corpus indique qu'un point reste à confirmer, conservez cette limite.",
+      "Une observation du site public ne décrit ni l'application, ni l'hébergement des factures, et ne doit jamais devenir un score.",
       "Ne demandez ni facture, ni SIREN, ni identifiant de compte. Le serveur ne traite que des informations publiques.",
       "Pour contrôler un fichier Factur-X ou XML, renvoyez l'utilisateur vers https://pa.l0g.fr/verifier-une-facture/ : le fichier y reste dans son navigateur.",
     ].join(" "),
@@ -77,7 +78,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
   const resourceDefinitions = [
     ["manifest", "pacheck://corpus/manifest", "État et périmètre du corpus", resources.manifest],
     ["questions", "pacheck://corpus/questions", "Questions pratiques et réponses publiées", resources.questions],
-    ["platforms", "pacheck://corpus/platforms", "Cent fiches de plateformes enrichies", resources.platforms],
+    ["platforms", "pacheck://corpus/platforms", "148 fiches enrichies, recherches contractuelles et observations publiques", resources.platforms],
     ["official-directory", "pacheck://corpus/official-directory", "Annuaire officiel complet de la DGFiP", resources.officialDirectory],
     ["journeys", "pacheck://corpus/journeys", "Parcours d'activation des outils étudiés", resources.journeys],
     ["invoice-routes", "pacheck://corpus/invoice-routes", "Options publiques d'envoi d'un fichier déjà produit", resources.invoiceRoutes],

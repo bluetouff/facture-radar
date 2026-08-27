@@ -4,6 +4,8 @@ import { directRoutingOptions } from "../data/direct-routing-options.ts";
 import { journeyProfiles } from "../data/journey-profiles.ts";
 import { passportRoutes } from "../data/passport-routes.ts";
 import { platforms } from "../data/platforms.ts";
+import { platformResearchProfiles, researchForPlatform } from "../data/platform-research.ts";
+import { publicSiteObservationForPlatform, publicSiteObservations, TRACKER_OBSERVATION_SOURCE_IDS, TRACKER_RADAR_REVISION } from "../data/public-site-observations.ts";
 import {
   practicalQuestionKeywords,
   practicalQuestions,
@@ -17,7 +19,7 @@ import { runDiagnostic } from "../lib/matcher.ts";
 export const MCP_ENDPOINT = "https://pa.l0g.fr/api/mcp";
 export const MCP_SERVER_NAME = "io.github.bluetouff/pa-check";
 export const MCP_SERVER_TITLE = "PA Check";
-export const MCP_SERVER_VERSION = "0.1.0";
+export const MCP_SERVER_VERSION = "0.2.0";
 export const MCP_CORPUS_CHECKED_AT = QUESTIONS_CHECKED_AT;
 
 const sourceRecords = sources as SourceRecord[];
@@ -101,7 +103,7 @@ export function expandSources(sourceIds: readonly string[]): SourceRecord[] {
 
 function knownValue<T>(evidence: Evidence<T>): T | null {
   if (evidence.value === null || evidence.sourceIds.length === 0) return null;
-  return evidence.status === "official" || evidence.status === "documented" ? evidence.value : null;
+  return evidence.status === "non_documented" ? null : evidence.value;
 }
 
 function presentEvidence<T>(evidence: Evidence<T>) {
@@ -141,6 +143,8 @@ function presentQuestion(question: PracticalQuestion) {
 }
 
 export function presentPlatform(platform: Platform) {
+  const research = researchForPlatform(platform.slug);
+  const publicSiteObservation = publicSiteObservationForPlatform(platform.slug);
   return {
     slug: platform.slug,
     name: platform.displayName,
@@ -174,8 +178,27 @@ export function presentPlatform(platform: Platform) {
       hostingCountries: presentEvidence(platform.hostingCountries),
       iso27001: presentEvidence(platform.iso27001),
     },
+    availabilityToday: {
+      sendsInvoices: presentEvidence(research.availability.sendsInvoices),
+      receivesInvoices: presentEvidence(research.availability.receivesInvoices),
+      eReporting: presentEvidence(research.availability.eReporting),
+    },
+    practicalTerms: {
+      directThirdPartyImport: presentEvidence(research.directImport),
+      overagePricing: presentEvidence(research.overagePricing),
+      exitTerms: presentEvidence(research.exitTerms),
+      terminationTerms: presentEvidence(research.terminationTerms),
+    },
+    infrastructureDeclarations: {
+      hostingProviders: presentEvidence(research.hostingProviders),
+      subprocessors: presentEvidence(research.declaredSubprocessors),
+    },
+    publicWebsiteObservation: publicSiteObservation,
     pointsToConfirm: platform.importantUnknowns,
-    sources: expandSources(uniqueSourceIds(platform)),
+    sources: expandSources([
+      ...uniqueSourceIds({ platform, research }),
+      ...(publicSiteObservation.status === "observed" ? TRACKER_OBSERVATION_SOURCE_IDS : []),
+    ]),
   };
 }
 
@@ -226,9 +249,12 @@ export function getQuestion(slug: string) {
 
 export function searchPlatforms(query: string, limit = 10) {
   return platforms
-    .map((platform) => ({
-      platform,
-      score: scoreText(query, [
+    .map((platform) => {
+      const research = researchForPlatform(platform.slug);
+      const observation = publicSiteObservationForPlatform(platform.slug);
+      return {
+        platform,
+        score: scoreText(query, [
         { value: platform.slug, weight: 8 },
         { value: platform.displayName, weight: 8 },
         { value: platform.officialName, weight: 7 },
@@ -236,8 +262,11 @@ export function searchPlatforms(query: string, limit = 10) {
         { value: platform.targets.join(" "), weight: 2 },
         { value: platform.ecosystem.join(" "), weight: 2 },
         { value: platform.importantUnknowns.join(" "), weight: 1 },
+        { value: JSON.stringify(research), weight: 2 },
+        { value: observation.trackers.map((tracker) => `${tracker.entity} ${tracker.domain}`).join(" "), weight: 1 },
       ]),
-    }))
+      };
+    })
     .filter((candidate) => candidate.score > 0)
     .sort((a, b) => b.score - a.score || a.platform.displayName.localeCompare(b.platform.displayName, "fr"))
     .slice(0, limit)
@@ -315,7 +344,7 @@ export function searchOfficialDirectory(query: string, status: "approved" | "pen
 
 export function corpusManifest(revision: CorpusRevision) {
   return {
-    schemaVersion: "0.1.0",
+    schemaVersion: "0.2.0",
     server: {
       name: MCP_SERVER_NAME,
       title: MCP_SERVER_TITLE,
@@ -335,6 +364,7 @@ export function corpusManifest(revision: CorpusRevision) {
       invoiceRoutes: passportRoutes.length,
       directRoutingOptions: directRoutingOptions.length,
       sources: sourceRecords.length,
+      observedPublicSites: publicSiteObservations.filter((observation) => observation.status === "observed").length,
     },
     canonical: {
       site: "https://pa.l0g.fr/",
@@ -362,7 +392,10 @@ export function corpusResources(revision: CorpusRevision) {
     platforms: {
       checkedAt: MCP_CORPUS_CHECKED_AT,
       platforms,
-      sources: expandSources(uniqueSourceIds(platforms)),
+      research: platformResearchProfiles,
+      publicSiteObservations,
+      trackerRadarRevision: TRACKER_RADAR_REVISION,
+      sources: expandSources([...uniqueSourceIds({ platforms, platformResearchProfiles }), ...TRACKER_OBSERVATION_SOURCE_IDS]),
     },
     officialDirectory,
     journeys: {

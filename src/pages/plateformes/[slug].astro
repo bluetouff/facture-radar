@@ -4,21 +4,37 @@ import EvidenceBadge from "../../components/EvidenceBadge.astro";
 import EvidenceRow from "../../components/EvidenceRow.astro";
 import InterfaceIcon from "../../components/InterfaceIcon.astro";
 import { platforms } from "../../data/platforms";
+import { collectResearchSourceIds, researchForPlatform } from "../../data/platform-research";
+import { publicSiteObservationForPlatform, TRACKER_OBSERVATION_SOURCE_IDS } from "../../data/public-site-observations";
 import sources from "../../data/sources.json";
-import { sourceCount } from "../../lib/evidence";
 
 export function getStaticPaths() {
   return platforms.map((platform) => ({ params: { slug: platform.slug }, props: { platform } }));
 }
 
 const { platform } = Astro.props;
+const research = researchForPlatform(platform.slug);
+const publicSiteObservation = publicSiteObservationForPlatform(platform.slug);
 const targetLabels = { micro: "indépendants", tpe: "TPE", pme: "PME", eti: "ETI", ge: "grands comptes" } as const;
 const platformIndex = Math.max(0, platforms.findIndex((candidate) => candidate.slug === platform.slug));
 const profileTone = `tone-${platformIndex % 5}`;
 const linkedSourceIds = new Set<string>();
-for (const value of Object.values(platform)) {
-  if (!value || typeof value !== "object" || !("sourceIds" in value)) continue;
-  for (const sourceId of value.sourceIds as string[]) linkedSourceIds.add(sourceId);
+const collectSourceIds = (value: unknown): void => {
+  if (Array.isArray(value)) {
+    for (const item of value) collectSourceIds(item);
+    return;
+  }
+  if (!value || typeof value !== "object") return;
+  for (const [key, item] of Object.entries(value)) {
+    if (key === "sourceIds" && Array.isArray(item)) {
+      for (const sourceId of item) if (typeof sourceId === "string") linkedSourceIds.add(sourceId);
+    } else collectSourceIds(item);
+  }
+};
+collectSourceIds(platform);
+for (const sourceId of collectResearchSourceIds(research)) linkedSourceIds.add(sourceId);
+if (publicSiteObservation.status === "observed") {
+  for (const sourceId of TRACKER_OBSERVATION_SOURCE_IDS) linkedSourceIds.add(sourceId);
 }
 const linkedSources = sources.filter((source) => linkedSourceIds.has(source.id));
 
@@ -43,6 +59,19 @@ const rows = [
 
 const choiceRows = rows.slice(0, 9);
 const technicalRows = rows.slice(9);
+const availabilityRows = [
+  ["Émission aujourd'hui", research.availability.sendsInvoices],
+  ["Réception aujourd'hui", research.availability.receivesInvoices],
+  ["E-reporting aujourd'hui", research.availability.eReporting],
+] as const;
+const researchRows = [
+  ["Import d'un Factur-X tiers", research.directImport],
+  ["Dépassements et paliers", research.overagePricing],
+  ["Données remises au départ", research.exitTerms],
+  ["Résiliation", research.terminationTerms],
+  ["Hébergeurs nommés", research.hostingProviders],
+  ["Sous-traitants déclarés", research.declaredSubprocessors],
+] as const;
 const pricing = platform.pricing.value;
 const priceValue = pricing?.kind === "free"
   ? "0 € HT"
@@ -64,6 +93,12 @@ const accountantValue = platform.accountantAccess.value === true
     ? "Accès non prévu"
     : "À confirmer";
 const reviewedAt = platform.officialStatus.checkedAt.split("-").reverse().map((part, index) => index === 2 ? part.slice(-2) : part).join(".");
+const observationDate = publicSiteObservation.checkedAt?.split("-").reverse().join("/") ?? null;
+const observedTrackerLabel = publicSiteObservation.status !== "observed"
+  ? "Observation non publiée"
+  : publicSiteObservation.trackers.length === 0
+    ? "Aucun domaine classé identifié pendant cette observation"
+    : `${publicSiteObservation.trackers.length} domaine${publicSiteObservation.trackers.length > 1 ? "s" : ""} classé${publicSiteObservation.trackers.length > 1 ? "s" : ""}`;
 ---
 
 <BaseLayout
@@ -87,7 +122,7 @@ const reviewedAt = platform.officialStatus.checkedAt.split("-").reverse().map((p
 
       <aside class="profile-ledger" aria-label="Repères documentaires">
         <header><span>FICHE ACTIVE</span><EvidenceBadge status="official" label="Liste DGFiP" /></header>
-        <div class="ledger-number"><strong>{sourceCount(platform)}</strong><span>sources publiques<br />reliées à cette fiche</span></div>
+        <div class="ledger-number"><strong>{linkedSources.length}</strong><span>sources publiques<br />reliées à cette fiche</span></div>
         <dl>
           <div><dt>Immatriculation</dt><dd>{platform.registeredAt.value?.split("-").reverse().join(".")}</dd></div>
           <div><dt>Points à confirmer</dt><dd>{platform.importantUnknowns.length}</dd></div>
@@ -125,13 +160,71 @@ const reviewedAt = platform.officialStatus.checkedAt.split("-").reverse().map((p
       </div>
 
       <header class="matrix-head secondary-head">
-        <div><p class="mono-label">pour intégrer et sortir</p><span>02</span></div>
+        <div><p class="mono-label">utilisable aujourd'hui</p><span>02</span></div>
+        <h2>Disponible, limité, en bêta ou annoncé.</h2>
+        <p>Ce statut demande une source assez précise pour distinguer une fonction réellement accessible d'une simple présentation commerciale.</p>
+      </header>
+      <div class="evidence-matrix">
+        {availabilityRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
+      </div>
+
+      <header class="matrix-head secondary-head">
+        <div><p class="mono-label">pour intégrer et sortir</p><span>03</span></div>
         <h2>La partie technique et les conditions de continuité.</h2>
         <p>API, exports, formats, hébergement et engagement deviennent importants dès qu'un autre logiciel ou plusieurs entités entrent dans le circuit.</p>
       </header>
       <div class="evidence-matrix">
         {technicalRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
       </div>
+
+      <header class="matrix-head secondary-head">
+        <div><p class="mono-label">le contrat concret</p><span>04</span></div>
+        <h2>Les détails qui évitent les mauvaises surprises.</h2>
+        <p>Import d'un fichier produit ailleurs, coût après le quota, restitution, résiliation et prestataires nommés. Une réponse partielle reste affichée comme telle.</p>
+      </header>
+      <div class="evidence-matrix">
+        {researchRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
+      </div>
+
+      <section class="site-observation" aria-labelledby="site-observation-title">
+        <header>
+          <div><p class="mono-label">site public observé</p><span>05</span></div>
+          <div>
+            <h2 id="site-observation-title">Ce que la page vitrine charge avant votre choix.</h2>
+            <p>Cette observation ne porte ni sur l'espace connecté, ni sur les factures, ni sur leur hébergement. Elle n'intervient jamais dans l'ordre des résultats.</p>
+          </div>
+        </header>
+        {publicSiteObservation.status === "observed" ? (
+          <div class="observation-body">
+            <div class="observation-summary">
+              <strong>{observedTrackerLabel}</strong>
+              <span>{publicSiteObservation.thirdPartyDomains.length} domaine{publicSiteObservation.thirdPartyDomains.length > 1 ? "s" : ""} tiers chargé{publicSiteObservation.thirdPartyDomains.length > 1 ? "s" : ""} au total</span>
+              <small>Page chargée le {observationDate}, profil neuf, aucun choix dans le bandeau.</small>
+              <a href={publicSiteObservation.finalUrl ?? publicSiteObservation.scanUrl ?? "#"} rel="noopener">Voir la page observée ↗</a>
+            </div>
+            {publicSiteObservation.trackers.length > 0 ? (
+              <div class="tracker-list">
+                {publicSiteObservation.trackers.slice(0, 8).map((tracker) => (
+                  <article><strong>{tracker.entity}</strong><code>{tracker.domain}</code><small>{tracker.categories.join(" · ")}</small></article>
+                ))}
+                {publicSiteObservation.trackers.length > 8 && (
+                  <details>
+                    <summary>Afficher les {publicSiteObservation.trackers.length - 8} autres domaines classés</summary>
+                    <div>{publicSiteObservation.trackers.slice(8).map((tracker) => (
+                      <article><strong>{tracker.entity}</strong><code>{tracker.domain}</code><small>{tracker.categories.join(" · ")}</small></article>
+                    ))}</div>
+                  </details>
+                )}
+              </div>
+            ) : (
+              <p class="no-tracker">Aucun domaine chargé pendant ce test ne correspondait aux catégories de suivi retenues dans la version indiquée de Tracker Radar. Ce résultat ponctuel ne garantit pas l'absence de traceur sur les autres pages ou à une autre date.</p>
+            )}
+          </div>
+        ) : (
+          <p class="observation-pending">Aucune observation technique relue n'est encore publiée pour ce site. La fiche reste vide plutôt que d'afficher une détection incertaine.</p>
+        )}
+        <footer><a href="/methodologie/#observation-sites-publics">Lire les règles, les limites et la version du référentiel</a></footer>
+      </section>
     </article>
 
     <aside class="profile-aside">
@@ -203,6 +296,29 @@ const reviewedAt = platform.officialStatus.checkedAt.split("-").reverse().map((p
   .matrix-head > p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.6; }
   .secondary-head { margin-top: 3.8rem; }
   .evidence-matrix { display: grid; gap: .55rem; margin-top: .8rem; }
+  .site-observation { overflow: hidden; margin-top: 3.8rem; border: 1px solid #cdd5e5; border-radius: 1.15rem; background: linear-gradient(150deg,#f8fafc,#eef3f8); box-shadow: 0 1rem 3rem rgba(29,44,72,.06); }
+  .site-observation > header { display: grid; grid-template-columns: 10rem 1fr; gap: 1.2rem; padding: 1.25rem; background: #142238; color: #fff; }
+  .site-observation > header > div:first-child { display: grid; align-content: start; gap: .65rem; color: #9fb1ff; font: 680 .7rem/1 var(--font-mono); }
+  .site-observation h2 { margin: 0; color: #fff; font-size: clamp(1.35rem,2.5vw,1.9rem); font-weight: 500; letter-spacing: -.035em; }
+  .site-observation header p { max-width: 52rem; margin: .55rem 0 0; color: rgba(238,243,255,.7); font-size: .8rem; line-height: 1.6; }
+  .observation-body { display: grid; grid-template-columns: 14rem 1fr; gap: 1rem; padding: 1rem; }
+  .observation-summary { display: grid; gap: .45rem; align-content: start; border: 1px solid #d9e0eb; border-radius: .85rem; padding: .9rem; background: rgba(255,255,255,.85); }
+  .observation-summary strong { color: var(--bright); font-size: .86rem; line-height: 1.4; }
+  .observation-summary span { color: var(--signal); font: 680 .69rem/1.45 var(--font-mono); }
+  .observation-summary small { color: var(--muted); font-size: .72rem; line-height: 1.45; }
+  .observation-summary a { margin-top: .2rem; color: var(--signal); font-size: .72rem; font-weight: 680; }
+  .tracker-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .55rem; }
+  .tracker-list article { display: grid; gap: .25rem; align-content: start; min-width: 0; border: 1px solid #d9e0eb; border-radius: .8rem; padding: .75rem; background: rgba(255,255,255,.82); }
+  .tracker-list article strong { color: var(--bright); font-size: .78rem; }
+  .tracker-list code { overflow-wrap: anywhere; color: #405173; font-size: .68rem; }
+  .tracker-list article small { color: var(--muted); font-size: .67rem; line-height: 1.4; }
+  .tracker-list details { grid-column: 1 / -1; border: 1px solid #d9e0eb; border-radius: .8rem; background: rgba(255,255,255,.62); }
+  .tracker-list summary { cursor: pointer; padding: .75rem; color: var(--signal); font-size: .75rem; font-weight: 680; }
+  .tracker-list details > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .55rem; border-top: 1px solid #d9e0eb; padding: .55rem; }
+  .no-tracker,.observation-pending { margin: 0; border: 1px solid #cfe1da; border-radius: .85rem; padding: 1rem; background: #f5fbf8; color: #356054; font-size: .8rem; line-height: 1.65; }
+  .observation-pending { margin: 1rem; border-color: #d9e0eb; background: rgba(255,255,255,.7); color: var(--muted); }
+  .site-observation > footer { border-top: 1px solid #d9e0eb; padding: .8rem 1rem; text-align: right; }
+  .site-observation > footer a { color: var(--signal); font-size: .72rem; font-weight: 680; }
   .profile-aside { display: grid; gap: 1rem; align-content: start; }
   .unknown-panel,.source-panel { overflow: hidden; border: 1px solid var(--line); border-radius: 1.05rem; padding: 1rem; background: rgba(255,255,255,.82); box-shadow: 0 .6rem 2rem rgba(41,57,86,.045); }
   .unknown-panel { border-top: 3px solid var(--amber); }
@@ -225,6 +341,6 @@ const reviewedAt = platform.officialStatus.checkedAt.split("-").reverse().map((p
   .contribute-link strong { color: var(--bright); font-size: .78rem; }
   .contribute-link small { color: var(--muted); font-size: .76rem; }
   @media (max-width: 1000px) { .profile-cover-inner,.profile-layout { grid-template-columns: 1fr; } .profile-ledger { display: grid; grid-template-columns: 1fr auto; gap: 0 1.5rem; } .profile-ledger header { grid-column: 1 / -1; } .profile-ledger dl { grid-column: 1; } .profile-ledger > p { grid-column: 1 / -1; } .profile-aside { grid-template-columns: repeat(2,1fr); } .profile-actions { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 820px) { .choice-snapshot { grid-template-columns: 1fr; } .matrix-head { grid-template-columns: 1fr; } .matrix-head > div { display: flex; justify-content: space-between; } }
-  @media (max-width: 620px) { .profile-cover-inner { padding-top: 2.3rem; } .profile-cover h1 { font-size: 2.45rem; } .profile-ledger { display: block; } .choice-snapshot { margin-top: -1rem; } .profile-aside,.profile-actions { grid-template-columns: 1fr; } .profile-actions { grid-column: auto; } }
+  @media (max-width: 820px) { .choice-snapshot { grid-template-columns: 1fr; } .matrix-head,.site-observation > header { grid-template-columns: 1fr; } .matrix-head > div,.site-observation > header > div:first-child { display: flex; justify-content: space-between; } .observation-body { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .profile-cover-inner { padding-top: 2.3rem; } .profile-cover h1 { font-size: 2.45rem; } .profile-ledger { display: block; } .choice-snapshot { margin-top: -1rem; } .profile-aside,.profile-actions,.tracker-list,.tracker-list details > div { grid-template-columns: 1fr; } .profile-actions { grid-column: auto; } }
 </style>

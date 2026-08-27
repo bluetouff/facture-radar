@@ -2,6 +2,8 @@ import type { APIRoute } from "astro";
 import officialDirectory from "../data/official-directory.json" with { type: "json" };
 import sources from "../data/sources.json" with { type: "json" };
 import { platforms } from "../data/platforms.ts";
+import { researchForPlatform } from "../data/platform-research.ts";
+import { publicSiteObservationForPlatform, TRACKER_OBSERVATION_SOURCE_IDS } from "../data/public-site-observations.ts";
 import { practicalQuestions } from "../data/practical-questions.ts";
 
 const sourcesById = new Map(sources.map((source) => [source.id, source]));
@@ -10,12 +12,21 @@ const linkedSources = (sourceIds: readonly string[]) => [...new Set(sourceIds)]
   .filter((source) => source !== undefined)
   .map((source) => `  - ${source.title} (${source.publisher}, consulté le ${source.accessedAt}) : ${source.url}`)
   .join("\n");
-const evidenceSourceIds = (platform: (typeof platforms)[number]) => {
+const evidenceSourceIds = (value: unknown) => {
   const collected = new Set<string>();
-  for (const value of Object.values(platform)) {
-    if (!value || typeof value !== "object" || !("sourceIds" in value) || !Array.isArray(value.sourceIds)) continue;
-    for (const sourceId of value.sourceIds) if (typeof sourceId === "string") collected.add(sourceId);
-  }
+  const visit = (candidate: unknown): void => {
+    if (Array.isArray(candidate)) {
+      for (const item of candidate) visit(item);
+      return;
+    }
+    if (!candidate || typeof candidate !== "object") return;
+    for (const [key, item] of Object.entries(candidate)) {
+      if (key === "sourceIds" && Array.isArray(item)) {
+        for (const sourceId of item) if (typeof sourceId === "string") collected.add(sourceId);
+      } else visit(item);
+    }
+  };
+  visit(value);
   return [...collected];
 };
 const displayValue = (evidence: { value: unknown; status: string; note?: string }) => {
@@ -46,7 +57,10 @@ Sources :
 ${linkedSources([...question.sourceIds, ...recommendationSourceIds]) || "  - Aucune source supplémentaire"}`;
 }).join("\n\n");
 
-const platformSections = platforms.map((platform) => `## ${platform.displayName}
+const platformSections = platforms.map((platform) => {
+  const research = researchForPlatform(platform.slug);
+  const observation = publicSiteObservationForPlatform(platform.slug);
+  return `## ${platform.displayName}
 
 URL : https://pa.l0g.fr/plateformes/${platform.slug}/
 Nom officiel : ${platform.officialName}
@@ -65,12 +79,28 @@ ${platform.summary}
 - Export documenté : ${displayValue(platform.exportDocumented)}
 - Formats : ${displayValue(platform.formats)}
 - Engagement : ${displayValue(platform.commitmentMonths)}
+- Disponibilité actuelle, émission : ${displayValue(research.availability.sendsInvoices)}
+- Disponibilité actuelle, réception : ${displayValue(research.availability.receivesInvoices)}
+- Disponibilité actuelle, e-reporting : ${displayValue(research.availability.eReporting)}
+- Import direct d'un fichier tiers : ${displayValue(research.directImport)}
+- Prix des dépassements : ${displayValue(research.overagePricing)}
+- Données remises au départ : ${displayValue(research.exitTerms)}
+- Résiliation : ${displayValue(research.terminationTerms)}
+- Hébergeurs nommés : ${displayValue(research.hostingProviders)}
+- Sous-traitants déclarés : ${displayValue(research.declaredSubprocessors)}
+
+Site public : ${observation.status === "observed" ? `observé le ${observation.checkedAt}, ${observation.trackers.length} domaine(s) classé(s) pendant ce chargement avant choix du bandeau` : "observation non publiée"}
+${observation.trackers.map((tracker) => `- ${tracker.entity} | ${tracker.domain} | ${tracker.categories.join(", ")}`).join("\n")}
 
 Points à confirmer :
 ${platform.importantUnknowns.map((item) => `- ${item}`).join("\n")}
 
 Sources :
-${linkedSources(evidenceSourceIds(platform))}`).join("\n\n");
+${linkedSources([
+  ...evidenceSourceIds({ platform, research }),
+  ...(observation.status === "observed" ? TRACKER_OBSERVATION_SOURCE_IDS : []),
+])}`;
+}).join("\n\n");
 
 const directorySections = [
   ...officialDirectory.approved.map((entry) => `- ${entry.name} | approuvée | ${entry.registeredAt} | ${entry.city} | ${entry.website}`),

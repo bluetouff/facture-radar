@@ -4,7 +4,7 @@ import InterfaceIcon from "../../components/InterfaceIcon.astro";
 import { practicalQuestions, QUESTIONS_CHECKED_AT } from "../../data/practical-questions";
 
 const leadQuestions = practicalQuestions.slice(0, 3);
-const questionCountLabel = practicalQuestions.length === 15 ? "quinze" : String(practicalQuestions.length);
+const questionCountLabel = String(practicalQuestions.length);
 const checkedAtLabel = QUESTIONS_CHECKED_AT.split("-").reverse().join(".");
 ---
 

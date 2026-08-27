@@ -2126,5 +2126,21 @@
     "url": "https://com.ytems.app/expert-comptable/facturation-electronique-pdp",
     "type": "documentation",
     "accessedAt": "2026-08-26"
+  },
+  {
+    "id": "tracker-radar-data-model-2026",
+    "title": "Tracker Radar data model",
+    "publisher": "DuckDuckGo",
+    "url": "https://github.com/duckduckgo/tracker-radar/blob/a1d894db2312f3fdeea06d6c784739b97eb727c8/docs/DATA_MODEL.md",
+    "type": "security",
+    "accessedAt": "2026-08-27"
+  },
+  {
+    "id": "tracker-radar-collector-2026",
+    "title": "Tracker Radar Collector",
+    "publisher": "DuckDuckGo",
+    "url": "https://github.com/duckduckgo/tracker-radar-collector",
+    "type": "security",
+    "accessedAt": "2026-08-27"
   }
 ]

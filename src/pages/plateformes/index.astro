@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import InterfaceIcon from "../../components/InterfaceIcon.astro";
 import PlatformAtlasRow from "../../components/PlatformAtlasRow.astro";
 import { platforms } from "../../data/platforms";
+import sources from "../../data/sources.json";
 
 const sections = [
   {
@@ -39,7 +40,7 @@ let dossierIndex = 0;
   <section class="atlas-hero">
     <div class="shell atlas-hero-layout">
       <div class="atlas-hero-copy">
-        <span class="atlas-edition">édition 02 · 26 août 2026</span>
+        <span class="atlas-edition">édition 03 · 27 août 2026</span>
         <p class="atlas-kicker">l'atlas PA Check</p>
         <h1>Un atlas pour décider, <em>pas un podium.</em></h1>
         <p>Commencez par votre façon de travailler. Chaque dossier rassemble ce qui est public, ce qui change réellement votre choix et ce que vous devrez encore demander.</p>
@@ -55,7 +56,7 @@ let dossierIndex = 0;
         <div class="orbit orbit-two"></div>
         <div class="atlas-scale"><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <strong>{platforms.length}</strong>
-        <small>dossiers reliés<br />à 90 sources</small>
+        <small>dossiers reliés<br />à {sources.length} sources</small>
       </div>
     </div>
   </section>

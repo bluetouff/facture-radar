@@ -52,6 +52,64 @@ export interface Platform {
   importantUnknowns: string[];
 }
 
+export type AvailabilityStage = "available" | "limited" | "beta" | "announced";
+
+export interface CapabilityAvailability {
+  stage: AvailabilityStage;
+  scope: string;
+}
+
+export interface DirectImportDetail {
+  acceptsThirdPartyFile: boolean;
+  formats: string[];
+  preservesEmbeddedXml: boolean | null;
+  requiresReentry: boolean | null;
+}
+
+export interface ExitTerms {
+  bulkExport: boolean | null;
+  formats: string[];
+  postTerminationAccess: string | null;
+  fees: string | null;
+}
+
+export interface PlatformResearchProfile {
+  platformSlug: string;
+  availability: {
+    sendsInvoices: Evidence<CapabilityAvailability>;
+    receivesInvoices: Evidence<CapabilityAvailability>;
+    eReporting: Evidence<CapabilityAvailability>;
+  };
+  directImport: Evidence<DirectImportDetail>;
+  overagePricing: Evidence<string>;
+  exitTerms: Evidence<ExitTerms>;
+  terminationTerms: Evidence<string>;
+  hostingProviders: Evidence<string[]>;
+  declaredSubprocessors: Evidence<string[]>;
+}
+
+export type PublicSiteObservationStatus = "observed" | "blocked" | "not_scanned";
+
+export interface TrackerObservation {
+  domain: string;
+  entity: string;
+  categories: string[];
+  source: "DuckDuckGo Tracker Radar";
+}
+
+export interface PublicSiteObservation {
+  platformSlug: string;
+  status: PublicSiteObservationStatus;
+  scanUrl: string | null;
+  finalUrl: string | null;
+  checkedAt: string | null;
+  consentState: "before-choice";
+  methodologyVersion: "1.0";
+  trackers: TrackerObservation[];
+  thirdPartyDomains: string[];
+  note: string;
+}
+
 export interface SourceRecord {
   id: string;
   title: string;

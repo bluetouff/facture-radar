@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { platforms } from "../data/platforms";
+import { publicSiteObservations, TRACKER_RADAR_REVISION } from "../data/public-site-observations";
+
+const observedSiteCount = publicSiteObservations.filter((observation) => observation.status === "observed").length;
 ---
 
 <BaseLayout
@@ -8,14 +11,14 @@ import { platforms } from "../data/platforms";
   description="Découvrez comment PA Check rassemble ses informations, prépare ses réponses et corrige ses fiches."
 >
   <section class="shell page-hero">
-    <span class="eyebrow">comment ça marche · version 0.5</span>
+    <span class="eyebrow">comment ça marche · version 0.6</span>
     <h1>Comment PA Check prépare ses réponses.</h1>
     <p>Nous consultons les listes officielles, les tarifs, les contrats et la documentation des éditeurs. Cette page explique simplement ce que nous regardons et comment nous signaler une erreur.</p>
   </section>
   <section class="shell method-layout">
     <article class="prose">
       <h2>Les informations regardées</h2>
-      <p>Pour chaque plateforme, nous relevons son statut DGFiP, son prix public, le volume inclus, les fonctions de réception et d'émission, l'e-reporting, les accès pour le comptable, les connexions possibles, l'export des données, l'hébergement et les conditions d'engagement.</p>
+      <p>Pour chaque plateforme, nous relevons son statut DGFiP, son prix public, le volume inclus, les fonctions de réception et d'émission, l'e-reporting, les accès pour le comptable, les connexions possibles, l'import de fichiers tiers, l'export des données, l'hébergement, les sous-traitants et les conditions d'engagement.</p>
       <p>Les fiches décrivent les offres et les fonctions présentées dans les documents consultés. Elles ne constituent ni un audit technique de l'éditeur ni un conseil juridique personnalisé.</p>
 
       <h2>Faire le point sur un outil</h2>
@@ -27,9 +30,19 @@ import { platforms } from "../data/platforms";
         <li><strong>Source officielle :</strong> information publiée par la DGFiP, l'AIFE ou un texte applicable.</li>
         <li><strong>Information publiée :</strong> tarif, contrat, documentation ou certificat consultable en ligne.</li>
         <li><strong>Déclaré par l'éditeur :</strong> information annoncée par l'entreprise, dont le détail reste à vérifier.</li>
-        <li><strong>À confirmer :</strong> information publique non trouvée à la date de mise à jour.</li>
+        <li><strong>À confirmer :</strong> les sources retenues ne permettent pas de conclure à la date de mise à jour.</li>
       </ul>
       <p>Une mention « à confirmer » vous indique simplement qu'il faut poser la question à l'éditeur avant de choisir.</p>
+
+      <h2>Distinguer ce qui marche déjà de ce qui est annoncé</h2>
+      <p>Une fonction n'est indiquée comme disponible que si la documentation décrit un accès ou une procédure utilisable pour le public concerné. Une présentation commerciale générale ne suffit pas lorsqu'un centre d'aide, un tarif ou une procédure d'activation décrit une limite.</p>
+      <ul>
+        <li><strong>Disponible :</strong> une source décrit un service accessible dans le périmètre indiqué.</li>
+        <li><strong>Accès limité :</strong> la fonction est réservée à une offre, une édition, un volume, un pays ou un type de client.</li>
+        <li><strong>En bêta :</strong> l'accès est explicitement restreint à un pilote ou à des organisations éligibles.</li>
+        <li><strong>Annoncée :</strong> une date ou une intention est publiée, sans procédure d'accès actuelle assez précise.</li>
+      </ul>
+      <p>En cas de contradiction, la source la plus opérationnelle et la plus restrictive est retenue. C'est par exemple le centre d'aide d'une fonction plutôt que la phrase générale d'une page commerciale. Si deux documents restent incompatibles, la fiche l'indique au lieu de choisir la version la plus rassurante.</p>
 
       <h2>Trouver des plateformes en trois questions</h2>
       <p>Vous indiquez la taille de votre entreprise, votre volume mensuel de factures et votre priorité. PA Check affiche jusqu'à trois plateformes qui correspondent à ces critères.</p>
@@ -37,6 +50,27 @@ import { platforms } from "../data/platforms";
 
       <h2>Lire les prix</h2>
       <p>Nous reprenons le prix mensuel public de l'offre étudiée et écartons les promotions temporaires. Si le tarif dépend du nombre d'utilisateurs, du volume ou d'un devis, la fiche indique qu'il reste à confirmer. Les frais de mise en service, de dépassement, de connecteur, d'archivage et de sortie sont ajoutés lorsqu'ils sont publiés.</p>
+
+      <h2>Lire l'import, la sortie et la résiliation</h2>
+      <p>Un bouton d'import ne prouve pas qu'un Factur-X produit par un autre logiciel sera transmis sans modification. Nous cherchons séparément le format accepté, la conservation de l'XML embarqué et l'absence de ressaisie. Si l'un de ces points n'est pas publié, il reste à confirmer.</p>
+      <p>Pour la sortie, un export FEC ou CSV n'est pas présenté comme une restitution complète. Une réponse complète doit préciser les factures, les XML, les pièces jointes, les statuts, les journaux, le format, le délai, le coût et l'accès après résiliation.</p>
+      <p>La durée minimale, le renouvellement, le préavis et le canal de résiliation sont relevés séparément. « Sans engagement » ne permet pas de conclure sur la conservation des données après la fin du contrat.</p>
+
+      <h2>Publier l'hébergement et les sous-traitants</h2>
+      <p>Le pays d'hébergement ou le nom d'un hébergeur n'est ajouté que si une déclaration, un contrat, une page de sécurité ou une liste de sous-traitants vise le service étudié. Nous ne déduisons jamais l'hébergement des factures depuis l'adresse IP, le DNS, le CDN du site vitrine ou le pays du siège social.</p>
+      <p>Les hébergeurs nommés, les autres sous-traitants déclarés et leurs localisations sont conservés dans des champs distincts. Une liste de sous-traitants peut couvrir plusieurs produits : la fiche le rappelle lorsqu'elle ne permet pas d'isoler parfaitement le périmètre de la PA.</p>
+
+      <h2 id="observation-sites-publics">Observer les sites publics sans en faire une note</h2>
+      <p>{observedSiteCount} sites disposent actuellement d'une observation relue. Chaque page est chargée une seule fois dans un profil Chrome neuf, sans compte, sans formulaire et sans accepter ni refuser le bandeau de consentement. L'URL initiale, l'URL finale, la date et tous les domaines tiers demandés sont conservés.</p>
+      <p>Un domaine tiers n'est affiché comme traceur que s'il a réellement été demandé pendant ce chargement et si la version française de <a href={`https://github.com/duckduckgo/tracker-radar/tree/${TRACKER_RADAR_REVISION}`}>DuckDuckGo Tracker Radar</a>, figée au commit <code>{TRACKER_RADAR_REVISION.slice(0, 12)}</code>, le classe dans une catégorie de suivi retenue : publicité, analyse d'audience, pixel d'action, relecture de session ou gestion de balises. Les CDN, polices, outils de consentement et domaines sans catégorie de suivi ne sont pas affichés comme traceurs.</p>
+      <p>Tracker Radar est un référentiel construit à partir de requêtes tierces, de cookies et d'API de navigateur. PA Check utilise son <a href={`https://github.com/duckduckgo/tracker-radar/blob/${TRACKER_RADAR_REVISION}/docs/DATA_MODEL.md`}>modèle de données public</a> et attribue chaque résultat à DuckDuckGo. Le collecteur local reprend le principe du <a href="https://github.com/duckduckgo/tracker-radar-collector">Tracker Radar Collector</a>, sans automatiser le consentement.</p>
+      <ul>
+        <li>« Aucun domaine classé identifié » décrit uniquement ce chargement. Ce n'est jamais une garantie d'absence de traceur.</li>
+        <li>Une observation peut varier selon la page, le pays, la date, le navigateur ou le contenu chargé.</li>
+        <li>Le site vitrine ne permet aucune conclusion sur l'espace connecté, la plateforme de facturation ou l'hébergement des données.</li>
+        <li>Le résultat n'entre dans aucun score, filtre ou ordre de recommandation.</li>
+        <li>Un chargement bloqué, instable ou ambigu reste non publié jusqu'à une nouvelle observation relue.</li>
+      </ul>
 
       <h2>Vérifier une facture test</h2>
       <p>Le vérificateur lit localement un PDF Factur-X ou un XML CII. Il recherche le profil, le numéro, la date, les parties, la devise, les lignes, la ventilation de TVA et les totaux structurés. Il contrôle aussi que la base de TVA et le montant de TVA correspondent au total TTC, avec une tolérance d'arrondi de deux centimes.</p>
@@ -65,7 +99,8 @@ import { platforms } from "../data/platforms";
 
       <h2>Ce que la bêta ne couvre pas encore</h2>
       <ul>
-        <li>Les conditions de résiliation et d'export restent incomplètes pour plusieurs acteurs.</li>
+        <li>Les conditions de résiliation et d'export restent incomplètes pour plusieurs acteurs lorsque les contrats ne sont pas publics.</li>
+        <li>L'observation des sites publics est encore limitée à {observedSiteCount} fiches relues.</li>
         <li>Les certificats de sécurité annoncés par les éditeurs n'ont pas tous pu être contrôlés dans leur intégralité.</li>
         <li>Les chiffres d'utilisateurs publiés par les acteurs ne sont pas directement comparables.</li>
         <li>Le vérificateur accepte Factur-X et le XML CII correspondant, mais pas encore UBL.</li>
@@ -84,7 +119,7 @@ import { platforms } from "../data/platforms";
         <div><dt>Donnée envoyée au MCP</dt><dd>Question et critères bornés</dd></div>
         <div><dt>Fonction sans source consultable</dt><dd>Signalée</dd></div>
         <div><dt>Information manquante</dt><dd>Signalée</dd></div>
-        <div><dt>Dernière mise à jour</dt><dd>26 août 2026</dd></div>
+        <div><dt>Dernière mise à jour</dt><dd>27 août 2026</dd></div>
       </dl>
       <a class="button secondary" href="/api/platforms.json">Télécharger les données</a>
       <a class="button secondary" href="/agents/">Accès pour les agents</a>

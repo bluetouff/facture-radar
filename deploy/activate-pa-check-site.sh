@@ -186,9 +186,9 @@ with open(sys.argv[1], encoding="utf-8") as handle:
 counts = corpus["manifest"]["counts"]
 if counts.get("enrichedPlatforms") != 148:
     raise SystemExit("Nombre de fiches enrichies inattendu")
-if counts.get("questions") != 15:
+if counts.get("questions") != 25:
     raise SystemExit("Nombre de questions inattendu")
-if counts.get("sources") != 266:
+if counts.get("sources") != 268:
     raise SystemExit("Nombre de sources inattendu")
 if len(corpus["officialDirectory"]["approved"]) != counts.get("approvedPlatforms"):
     raise SystemExit("Annuaire approuve incoherent")
@@ -233,9 +233,9 @@ data = json.load(sys.stdin)
 counts = data["manifest"]["counts"]
 if counts.get("enrichedPlatforms") != 148:
     raise SystemExit("Nombre de fiches live inattendu")
-if counts.get("questions") != 15:
+if counts.get("questions") != 25:
     raise SystemExit("Nombre de questions live inattendu")
-if counts.get("sources") != 266:
+if counts.get("sources") != 268:
     raise SystemExit("Nombre de sources live inattendu")
 ' <<<"${LIVE_CORPUS}"
 

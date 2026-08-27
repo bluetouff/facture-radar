@@ -23,6 +23,29 @@ function displayValue(value: unknown): string {
   if (typeof value === "string" || typeof value === "number") return String(value);
   if (Array.isArray(value)) return value.length ? value.join(", ") : "Aucune information publiée";
   if (typeof value === "object" && value) {
+    if ("stage" in value && "scope" in value) {
+      const availability = value as { stage: "available" | "limited" | "beta" | "announced"; scope: string };
+      const stageLabels = { available: "Disponible", limited: "Accès limité", beta: "En bêta", announced: "Annoncée" } as const;
+      return `${stageLabels[availability.stage]} · ${availability.scope}`;
+    }
+    if ("acceptsThirdPartyFile" in value) {
+      const detail = value as { acceptsThirdPartyFile: boolean; formats: string[]; preservesEmbeddedXml: boolean | null; requiresReentry: boolean | null };
+      const parts = [detail.acceptsThirdPartyFile ? "Import tiers publié" : "Import tiers non pris en charge"];
+      if (detail.formats.length) parts.push(detail.formats.join(", "));
+      if (detail.preservesEmbeddedXml === true) parts.push("XML embarqué conservé");
+      if (detail.preservesEmbeddedXml === false) parts.push("XML embarqué non conservé");
+      if (detail.requiresReentry === false) parts.push("sans ressaisie publiée");
+      if (detail.requiresReentry === true) parts.push("ressaisie requise");
+      return parts.join(" · ");
+    }
+    if ("bulkExport" in value) {
+      const detail = value as { bulkExport: boolean | null; formats: string[]; postTerminationAccess: string | null; fees: string | null };
+      const parts = [detail.bulkExport === true ? "Export en masse publié" : detail.bulkExport === false ? "Pas d'export en masse" : "Export en masse à confirmer"];
+      if (detail.formats.length) parts.push(`formats : ${detail.formats.join(", ")}`);
+      if (detail.postTerminationAccess) parts.push(detail.postTerminationAccess);
+      if (detail.fees) parts.push(detail.fees);
+      return parts.join(" · ");
+    }
     if ("label" in value && typeof value.label === "string") return value.label;
     if ("available" in value) {
       const api = value as { available: boolean; includedInFree: boolean | null };
@@ -50,7 +73,7 @@ const checkedAtLabel = evidence.checkedAt.split("-").reverse().join("/");
   <div class="evidence-sources">
     {linkedSources.length ? linkedSources.map((source) => (
       <a href={source.url} rel="noopener">{source.publisher}<span aria-hidden="true">↗</span></a>
-    )) : <span>Source publique non trouvée</span>}
+    )) : <span>Aucune source concluante</span>}
     <small>Mis à jour le {checkedAtLabel}</small>
   </div>
 </div>

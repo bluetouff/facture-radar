@@ -76,7 +76,7 @@ try {
 
   const health = await fetch(new URL("/healthz", endpoint));
   assert.equal(health.status, 200);
-  assert.equal((await health.json()).counts.sources, 266);
+  assert.equal((await health.json()).counts.sources, 268);
 
   const missing = await fetch(new URL("/not-found", endpoint));
   assert.equal(missing.status, 404);
