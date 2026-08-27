@@ -20,6 +20,7 @@ test("les 148 fiches ont un contrat de recherche fail-closed", () => {
       profile.terminationTerms,
       profile.hostingProviders,
       profile.declaredSubprocessors,
+      profile.iso27001Scope,
     ];
     for (const evidence of evidenceValues) {
       if (evidence.value === null) {
@@ -40,6 +41,10 @@ test("les cas décisifs gardent leur limite exacte", () => {
   assert.equal(researchForPlatform("b2brouter").directImport.value?.preservesEmbeddedXml, null);
   assert.deepEqual(researchForPlatform("sellsy").hostingProviders.value, ["Scaleway"]);
   assert.ok((researchForPlatform("tiime").declaredSubprocessors.value?.length ?? 0) >= 10);
+  assert.equal(researchForPlatform("doxallia").iso27001Scope.value?.platformRelation, "explicit_platform");
+  assert.equal(researchForPlatform("doxallia").iso27001Scope.value?.validity, "expired");
+  assert.equal(researchForPlatform("esker").iso27001Scope.value?.platformRelation, "service_family");
+  assert.equal(researchForPlatform("esker").iso27001Scope.status, "declared");
 });
 
 test("les observations publiques couvrent tout le corpus sans fabriquer les fiches non scannées", () => {

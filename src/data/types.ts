@@ -73,6 +73,24 @@ export interface ExitTerms {
   fees: string | null;
 }
 
+export type Iso27001PublicEvidenceKind = "certificate" | "scope_statement" | "renewal_statement";
+export type Iso27001PlatformRelation = "explicit_platform" | "service_family" | "organization_only" | "not_established";
+export type Iso27001PublicValidity = "valid" | "expired" | "not_published";
+
+export interface Iso27001ScopeDetail {
+  evidenceKind: Iso27001PublicEvidenceKind;
+  legalEntity: string | null;
+  standard: string | null;
+  certificateNumber: string | null;
+  certificationBody: string | null;
+  validFrom: string | null;
+  validUntil: string | null;
+  statementOfApplicability: string | null;
+  scopeText: string | null;
+  platformRelation: Iso27001PlatformRelation;
+  validity: Iso27001PublicValidity;
+}
+
 export interface PlatformResearchProfile {
   platformSlug: string;
   availability: {
@@ -86,6 +104,7 @@ export interface PlatformResearchProfile {
   terminationTerms: Evidence<string>;
   hostingProviders: Evidence<string[]>;
   declaredSubprocessors: Evidence<string[]>;
+  iso27001Scope: Evidence<Iso27001ScopeDetail>;
 }
 
 export type PublicSiteObservationStatus = "observed" | "blocked" | "not_scanned";

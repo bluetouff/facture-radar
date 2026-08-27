@@ -71,6 +71,20 @@ const capabilityAvailability = z.object({
   scope: z.string().min(1),
 }).strict();
 
+const iso27001ScopeDetail = z.object({
+  evidenceKind: z.enum(["certificate", "scope_statement", "renewal_statement"]),
+  legalEntity: z.string().min(1).nullable(),
+  standard: z.string().min(1).nullable(),
+  certificateNumber: z.string().min(1).nullable(),
+  certificationBody: z.string().min(1).nullable(),
+  validFrom: z.iso.date().nullable(),
+  validUntil: z.iso.date().nullable(),
+  statementOfApplicability: z.string().min(1).nullable(),
+  scopeText: z.string().min(1).nullable(),
+  platformRelation: z.enum(["explicit_platform", "service_family", "organization_only", "not_established"]),
+  validity: z.enum(["valid", "expired", "not_published"]),
+}).strict();
+
 export const platformResearchSchema = z.object({
   platformSlug: z.string().regex(/^[a-z0-9-]+$/),
   availability: z.object({
@@ -94,6 +108,7 @@ export const platformResearchSchema = z.object({
   terminationTerms: evidence(z.string().min(1)),
   hostingProviders: evidence(z.array(z.string().min(1))),
   declaredSubprocessors: evidence(z.array(z.string().min(1))),
+  iso27001Scope: evidence(iso27001ScopeDetail),
 }).strict();
 
 export const platformResearchProfilesSchema = z.array(platformResearchSchema).length(148);

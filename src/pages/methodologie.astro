@@ -11,7 +11,7 @@ const observedSiteCount = publicSiteObservations.filter((observation) => observa
   description="Découvrez comment PA Check rassemble ses informations, prépare ses réponses et corrige ses fiches."
 >
   <section class="shell page-hero">
-    <span class="eyebrow">comment ça marche · version 0.6</span>
+    <span class="eyebrow">comment ça marche · version 0.7</span>
     <h1>Comment PA Check prépare ses réponses.</h1>
     <p>Nous consultons les listes officielles, les tarifs, les contrats et la documentation des éditeurs. Cette page explique simplement ce que nous regardons et comment nous signaler une erreur.</p>
   </section>
@@ -60,6 +60,16 @@ const observedSiteCount = publicSiteObservations.filter((observation) => observa
       <p>Le pays d'hébergement ou le nom d'un hébergeur n'est ajouté que si une déclaration, un contrat, une page de sécurité ou une liste de sous-traitants vise le service étudié. Nous ne déduisons jamais l'hébergement des factures depuis l'adresse IP, le DNS, le CDN du site vitrine ou le pays du siège social.</p>
       <p>Les hébergeurs nommés, les autres sous-traitants déclarés et leurs localisations sont conservés dans des champs distincts. Une liste de sous-traitants peut couvrir plusieurs produits : la fiche le rappelle lorsqu'elle ne permet pas d'isoler parfaitement le périmètre de la PA.</p>
 
+      <h2 id="iso-27001">Lire ISO 27001 sans surinterpréter un logo</h2>
+      <p>L'<a href="https://www.legifrance.gouv.fr/codes/id/LEGISCTA000054552492/2026-07-29">article 242 nonies B</a> impose aux plateformes agréées une attestation ISO/IEC 27001 en cours de validité. Le périmètre doit couvrir les infrastructures, outils, services et éléments d'organisation qui participent à l'émission, la transmission et la réception des factures ainsi qu'aux données de facturation, de transaction et de paiement. Cette exigence s'étend aux tiers qui peuvent accéder aux données exploitées.</p>
+      <p>Cette règle fait partie du dossier d'immatriculation, mais elle ne rend pas automatiquement publics le certificat, son titulaire, ses dates et son texte de périmètre. Les fiches séparent donc trois informations :</p>
+      <ul>
+        <li><strong>Exigence réglementaire :</strong> elle s'applique à toute plateforme agréée et renvoie au texte officiel.</li>
+        <li><strong>Déclaration de l'éditeur :</strong> l'entreprise annonce une certification ou décrit un périmètre, sans publier toutes les caractéristiques du certificat.</li>
+        <li><strong>Certificat public :</strong> le document permet de lire l'entité, l'organisme certificateur, le numéro, les dates et le périmètre. Une date dépassée reste signalée, même si l'éditeur annonce un renouvellement.</li>
+      </ul>
+      <p>Un certificat absent des sources publiques ne signifie pas que la plateforme n'est pas certifiée. Il signifie seulement que PA Check ne peut pas en publier le détail. Inversement, une certification attribuée à un groupe ou à une activité générale n'est pas présentée comme couvrant précisément la plateforme sans texte qui établit ce lien.</p>
+
       <h2 id="observation-sites-publics">Observer les sites publics sans en faire une note</h2>
       <p>{observedSiteCount} sites disposent actuellement d'une observation relue. Chaque page est chargée une seule fois dans un profil Chrome neuf, sans compte, sans formulaire et sans accepter ni refuser le bandeau de consentement. L'URL initiale, l'URL finale, la date et tous les domaines tiers demandés sont conservés.</p>
       <p>Un domaine tiers n'est affiché comme traceur que s'il a réellement été demandé pendant ce chargement et si la version française de <a href={`https://github.com/duckduckgo/tracker-radar/tree/${TRACKER_RADAR_REVISION}`}>DuckDuckGo Tracker Radar</a>, figée au commit <code>{TRACKER_RADAR_REVISION.slice(0, 12)}</code>, le classe dans une catégorie de suivi retenue : publicité, analyse d'audience, pixel d'action, relecture de session ou gestion de balises. Les CDN, polices, outils de consentement et domaines sans catégorie de suivi ne sont pas affichés comme traceurs.</p>
@@ -101,7 +111,7 @@ const observedSiteCount = publicSiteObservations.filter((observation) => observa
       <ul>
         <li>Les conditions de résiliation et d'export restent incomplètes pour plusieurs acteurs lorsque les contrats ne sont pas publics.</li>
         <li>L'observation des sites publics est encore limitée à {observedSiteCount} fiches relues.</li>
-        <li>Les certificats de sécurité annoncés par les éditeurs n'ont pas tous pu être contrôlés dans leur intégralité.</li>
+        <li>Le certificat, sa période de validité et son périmètre exact ne sont pas publics pour la plupart des plateformes étudiées.</li>
         <li>Les chiffres d'utilisateurs publiés par les acteurs ne sont pas directement comparables.</li>
         <li>Le vérificateur accepte Factur-X et le XML CII correspondant, mais pas encore UBL.</li>
         <li>PA Check fournit des informations générales. Un professionnel du droit peut vous conseiller sur votre situation particulière.</li>

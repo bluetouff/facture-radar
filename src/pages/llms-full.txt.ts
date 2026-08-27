@@ -88,6 +88,7 @@ ${platform.summary}
 - Résiliation : ${displayValue(research.terminationTerms)}
 - Hébergeurs nommés : ${displayValue(research.hostingProviders)}
 - Sous-traitants déclarés : ${displayValue(research.declaredSubprocessors)}
+- Périmètre ISO 27001 public : ${displayValue(research.iso27001Scope)}
 
 Site public : ${observation.status === "observed" ? `observé le ${observation.checkedAt}, ${observation.trackers.length} domaine(s) classé(s) pendant ce chargement avant choix du bandeau` : "observation non publiée"}
 ${observation.trackers.map((tracker) => `- ${tracker.entity} | ${tracker.domain} | ${tracker.categories.join(", ")}`).join("\n")}

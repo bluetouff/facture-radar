@@ -4,6 +4,7 @@ import type {
   DirectImportDetail,
   Evidence,
   ExitTerms,
+  Iso27001ScopeDetail,
   PlatformResearchProfile,
 } from "./types.ts";
 
@@ -76,6 +77,36 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       requiresReentry: null,
     }, ["dext-add-documents-2026", "dext-send-electronic-2026"], "L'ajout de documents et l'envoi par la PA sont décrits. Le traitement d'un Factur-X tiers et de son XML embarqué n'est pas précisé."),
     terminationTerms: documented("Le compte gratuit n'impose pas d'engagement. Les conditions applicables aux offres payantes dépendent de l'abonnement.", ["dext-pricing-2026"]),
+  },
+  doxallia: {
+    iso27001Scope: documented<Iso27001ScopeDetail>({
+      evidenceKind: "certificate",
+      legalEntity: "DOXALLIA",
+      standard: "NF EN ISO/IEC 27001:2023 / ISO/IEC 27001:2022",
+      certificateNumber: "2023/105178.4",
+      certificationBody: "AFNOR Certification",
+      validFrom: "2025-10-24",
+      validUntil: "2026-06-19",
+      statementOfApplicability: "Déclaration d'applicabilité version 5 du 18 juin 2025",
+      scopeText: "Système d'archivage électronique, hébergement de données de santé et plateforme de traitement de factures électroniques.",
+      platformRelation: "explicit_platform",
+      validity: "expired",
+    }, ["doxallia-iso27001-certificate-2026", "doxallia-iso27001-renewal-2026", "doxallia-invoxia-iso-scope-2026"], "Le certificat public retrouvé couvre explicitement la plateforme de traitement de factures électroniques, mais sa date de validité est dépassée au 27 août 2026. Doxallia annonce un renouvellement ; le certificat public de remplacement n'a pas été retrouvé."),
+  },
+  esker: {
+    iso27001Scope: declared<Iso27001ScopeDetail>({
+      evidenceKind: "scope_statement",
+      legalEntity: null,
+      standard: "ISO/IEC 27001",
+      certificateNumber: null,
+      certificationBody: null,
+      validFrom: null,
+      validUntil: null,
+      statementOfApplicability: null,
+      scopeText: "Toutes les activités de la plateforme cloud Esker on Demand.",
+      platformRelation: "service_family",
+      validity: "not_published",
+    }, ["esker-iso27001-scope-2026"], "Esker publie un périmètre couvrant ses activités cloud. Le certificat courant, son titulaire exact, son numéro et ses dates de validité n'ont pas été retrouvés dans les sources publiques retenues."),
   },
   "fiducial-cloud": {
     availability: {
@@ -230,6 +261,7 @@ function defaultResearch(platformSlug: string): PlatformResearchProfile {
     terminationTerms: unknown("Les règles de résiliation applicables à l'offre étudiée ne sont pas publiées avec assez de précision."),
     hostingProviders: unknown("Aucun hébergeur applicable à la plateforme agréée n'est nommé dans les sources retenues."),
     declaredSubprocessors: unknown("Aucune liste de sous-traitants applicable à la plateforme agréée n'est reliée à la fiche."),
+    iso27001Scope: unknown("Le certificat public, son titulaire, sa validité et le texte exact du périmètre ne sont pas reliés à la fiche."),
   };
 }
 

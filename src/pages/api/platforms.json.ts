@@ -5,7 +5,7 @@ import { platformResearchProfiles } from "../../data/platform-research";
 import { publicSiteObservations, TRACKER_RADAR_REVISION } from "../../data/public-site-observations";
 
 export const GET: APIRoute = () => new Response(JSON.stringify({
-  schemaVersion: "0.2.0",
+  schemaVersion: "0.3.0",
   generatedAt: "2026-08-27",
   methodology: "https://pa.l0g.fr/methodologie/",
   platforms,

@@ -177,6 +177,12 @@ export function presentPlatform(platform: Platform) {
       formats: presentEvidence(platform.formats),
       hostingCountries: presentEvidence(platform.hostingCountries),
       iso27001: presentEvidence(platform.iso27001),
+      iso27001PublicScope: presentEvidence(research.iso27001Scope),
+      iso27001RegulatoryBaseline: {
+        rule: "Le périmètre du système de management de la sécurité de l'information doit couvrir les infrastructures, outils, services et éléments d'organisation qui participent aux factures et aux données réglementaires, ainsi que les tiers qui peuvent accéder aux données exploitées.",
+        source: "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000054552492/2026-07-29",
+        caveat: "L'exigence dans le dossier d'immatriculation ne rend pas automatiquement publics le certificat, son titulaire, ses dates et son périmètre exact.",
+      },
     },
     availabilityToday: {
       sendsInvoices: presentEvidence(research.availability.sendsInvoices),

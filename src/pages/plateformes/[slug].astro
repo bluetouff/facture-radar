@@ -7,6 +7,7 @@ import { platforms } from "../../data/platforms";
 import { collectResearchSourceIds, researchForPlatform } from "../../data/platform-research";
 import { publicSiteObservationForPlatform, TRACKER_OBSERVATION_SOURCE_IDS } from "../../data/public-site-observations";
 import sources from "../../data/sources.json";
+import type { Evidence, EvidenceStatus } from "../../data/types";
 
 export function getStaticPaths() {
   return platforms.map((platform) => ({ params: { slug: platform.slug }, props: { platform } }));
@@ -36,6 +37,7 @@ for (const sourceId of collectResearchSourceIds(research)) linkedSourceIds.add(s
 if (publicSiteObservation.status === "observed") {
   for (const sourceId of TRACKER_OBSERVATION_SOURCE_IDS) linkedSourceIds.add(sourceId);
 }
+linkedSourceIds.add("legifrance-pa-iso27001-scope-2026");
 const linkedSources = sources.filter((source) => linkedSourceIds.has(source.id));
 
 const rows = [
@@ -58,20 +60,84 @@ const rows = [
 ] as const;
 
 const choiceRows = rows.slice(0, 9);
-const technicalRows = rows.slice(9);
 const availabilityRows = [
   ["Émission aujourd'hui", research.availability.sendsInvoices],
   ["Réception aujourd'hui", research.availability.receivesInvoices],
   ["E-reporting aujourd'hui", research.availability.eReporting],
 ] as const;
-const researchRows = [
+const technicalRows = [
+  ["API publique", platform.publicApi],
+  ["Intégrations", platform.integrations],
+  ["Formats", platform.formats],
+  ["Pays d'hébergement", platform.hostingCountries],
+  ["Hébergeurs nommés", research.hostingProviders],
+  ["Sous-traitants déclarés", research.declaredSubprocessors],
+] as const;
+const contractRows = [
+  ["Export des données", platform.exportDocumented],
+  ["Engagement minimal", platform.commitmentMonths],
   ["Import d'un Factur-X tiers", research.directImport],
   ["Dépassements et paliers", research.overagePricing],
   ["Données remises au départ", research.exitTerms],
   ["Résiliation", research.terminationTerms],
-  ["Hébergeurs nommés", research.hostingProviders],
-  ["Sous-traitants déclarés", research.declaredSubprocessors],
 ] as const;
+
+type DocumentationRow = readonly [string, Evidence<unknown>];
+const countStatuses = (sectionRows: readonly DocumentationRow[]) => sectionRows.reduce((counts, [, evidence]) => {
+  counts[evidence.status] += 1;
+  return counts;
+}, { official: 0, documented: 0, declared: 0, non_documented: 0 } satisfies Record<EvidenceStatus, number>);
+const isoCoverageRow = ["Périmètre ISO 27001 public", research.iso27001Scope] as const;
+const documentationSections = [
+  { id: "decision", eyebrow: "L'essentiel", label: "Prix, flux et accès", rows: choiceRows },
+  { id: "disponibilite", eyebrow: "Aujourd'hui", label: "Fonctions réellement ouvertes", rows: availabilityRows },
+  { id: "technique", eyebrow: "Infrastructure", label: "Technique et sécurité", rows: [...technicalRows, isoCoverageRow] },
+  { id: "contrat", eyebrow: "À la sortie", label: "Contrat et récupération", rows: contractRows },
+] as const;
+const documentationRows = [
+  ...choiceRows,
+  ...availabilityRows,
+  ...technicalRows,
+  isoCoverageRow,
+  ...contractRows,
+] as DocumentationRow[];
+const documentationCounts = countStatuses(documentationRows);
+const confirmedCount = documentationCounts.official + documentationCounts.documented;
+const declaredCount = documentationCounts.declared;
+const unknownCount = documentationCounts.non_documented;
+const knownCount = confirmedCount + declaredCount;
+const coveragePercent = (count: number) => Math.round(count / documentationRows.length * 1000) / 10;
+const documentationLabel = unknownCount <= 3
+  ? "Fiche très bien renseignée"
+  : knownCount >= 18
+    ? "Fiche bien renseignée"
+    : knownCount >= 12
+      ? "Fiche partiellement renseignée"
+      : "Fiche encore incomplète";
+const sectionSummary = (sectionRows: readonly DocumentationRow[]) => {
+  const counts = countStatuses(sectionRows);
+  const known = counts.official + counts.documented + counts.declared;
+  return {
+    known,
+    total: sectionRows.length,
+    level: known === sectionRows.length ? "complete" : known >= Math.ceil(sectionRows.length * .6) ? "partial" : "missing",
+  } as const;
+};
+const isoDetail = research.iso27001Scope.value;
+const isoRelationLabels = {
+  explicit_platform: "La facturation électronique figure explicitement dans le périmètre publié",
+  service_family: "Le périmètre publié couvre la famille de services cloud",
+  organization_only: "La certification est reliée à l'organisation, pas précisément à la plateforme",
+  not_established: "Le lien avec la plateforme n'est pas établi publiquement",
+} as const;
+const isoValidityLabel = isoDetail?.validity === "valid"
+  ? "Certificat public en cours de validité"
+  : isoDetail?.validity === "expired"
+    ? "Document public arrivé à échéance"
+    : "Dates du certificat non publiées";
+const isoSourceRecords = research.iso27001Scope.sourceIds
+  .map((id) => sources.find((source) => source.id === id))
+  .filter((source) => source !== undefined);
 const pricing = platform.pricing.value;
 const priceValue = pricing?.kind === "free"
   ? "0 € HT"
@@ -125,7 +191,8 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
         <div class="ledger-number"><strong>{linkedSources.length}</strong><span>sources publiques<br />reliées à cette fiche</span></div>
         <dl>
           <div><dt>Immatriculation</dt><dd>{platform.registeredAt.value?.split("-").reverse().join(".")}</dd></div>
-          <div><dt>Points à confirmer</dt><dd>{platform.importantUnknowns.length}</dd></div>
+          <div><dt>État de la fiche</dt><dd>{documentationLabel}</dd></div>
+          <div><dt>Critères sans réponse</dt><dd>{unknownCount} / {documentationRows.length}</dd></div>
           <div><dt>Publicité</dt><dd>Aucune offre sponsorisée</dd></div>
         </dl>
         <p>Les absences d'information ne deviennent jamais des réponses positives.</p>
@@ -148,9 +215,41 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
     </article>
   </section>
 
+  <section class="shell documentation-map" aria-labelledby="documentation-map-title">
+    <div class="documentation-map-intro">
+      <p class="mono-label">lecture immédiate · 25 critères</p>
+      <h2 id="documentation-map-title">{documentationLabel}</h2>
+      <p>Cette vue mesure ce que les sources publiques permettent réellement de renseigner. Elle ne note ni la qualité du service, ni la solidité de l'entreprise.</p>
+    </div>
+    <div class="documentation-meter" aria-label={`${confirmedCount} critères documentés, ${declaredCount} déclarés, ${unknownCount} encore sans réponse publique`}>
+      <div class="meter-track" aria-hidden="true">
+        <span class="meter-confirmed" style={`width:${coveragePercent(confirmedCount)}%`}></span>
+        <span class="meter-declared" style={`width:${coveragePercent(declaredCount)}%`}></span>
+        <span class="meter-unknown" style={`width:${coveragePercent(unknownCount)}%`}></span>
+      </div>
+      <div class="meter-legend">
+        <span><i class="confirmed"></i><strong>{confirmedCount}</strong> documentés</span>
+        <span><i class="declared"></i><strong>{declaredCount}</strong> déclarés</span>
+        <span><i class="unknown"></i><strong>{unknownCount}</strong> à confirmer</span>
+      </div>
+    </div>
+    <nav class="documentation-sections" aria-label="Aller aux parties de la fiche">
+      {documentationSections.map((section, index) => {
+        const summary = sectionSummary(section.rows);
+        return (
+          <a href={`#${section.id}`} data-level={summary.level}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <div><small>{section.eyebrow}</small><strong>{section.label}</strong></div>
+            <em>{summary.known}/{summary.total}</em>
+          </a>
+        );
+      })}
+    </nav>
+  </section>
+
   <section class="shell profile-layout">
     <article class="profile-facts">
-      <header class="matrix-head">
+      <header class="matrix-head" id="decision">
         <div><p class="mono-label">pour décider</p><span>01</span></div>
         <h2>Ce que les sources permettent de dire aujourd'hui.</h2>
         <p>Les premiers critères concernent le prix, les flux couverts et les conditions d'accès. Ouvrez chaque source si un point est déterminant pour votre entreprise.</p>
@@ -159,7 +258,7 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
         {choiceRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
       </div>
 
-      <header class="matrix-head secondary-head">
+      <header class="matrix-head secondary-head" id="disponibilite">
         <div><p class="mono-label">utilisable aujourd'hui</p><span>02</span></div>
         <h2>Disponible, limité, en bêta ou annoncé.</h2>
         <p>Ce statut demande une source assez précise pour distinguer une fonction réellement accessible d'une simple présentation commerciale.</p>
@@ -168,22 +267,64 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
         {availabilityRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
       </div>
 
-      <header class="matrix-head secondary-head">
+      <header class="matrix-head secondary-head" id="technique">
         <div><p class="mono-label">pour intégrer et sortir</p><span>03</span></div>
-        <h2>La partie technique et les conditions de continuité.</h2>
-        <p>API, exports, formats, hébergement et engagement deviennent importants dès qu'un autre logiciel ou plusieurs entités entrent dans le circuit.</p>
+        <h2>Infrastructure, échanges et sécurité.</h2>
+        <p>API, formats et hébergement sont séparés des déclarations de l'éditeur. Le périmètre ISO n'est jamais déduit d'un simple logo.</p>
       </header>
       <div class="evidence-matrix">
         {technicalRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
       </div>
 
-      <header class="matrix-head secondary-head">
+      <section class:list={["iso-scope-card", { expired: isoDetail?.validity === "expired", missing: !isoDetail }]} aria-labelledby="iso-scope-title">
+        <header>
+          <div class="iso-mark" aria-hidden="true"><InterfaceIcon name="verdict" /></div>
+          <div>
+            <p class="mono-label">ISO/IEC 27001 · périmètre public</p>
+            <h3 id="iso-scope-title">Ce que la certification permet réellement de relier à la plateforme</h3>
+          </div>
+          <EvidenceBadge
+            status={research.iso27001Scope.status}
+            label={isoDetail?.validity === "expired" ? "Document public expiré" : isoDetail?.validity === "valid" ? "Certificat public" : isoDetail ? "Périmètre déclaré" : "À confirmer"}
+          />
+        </header>
+        <div class="iso-regulatory-line">
+          <span>Exigence réglementaire</span>
+          <p>Le dossier d'immatriculation d'une plateforme agréée doit couvrir l'ensemble des systèmes qui participent aux factures et aux données réglementaires, y compris les tiers qui peuvent y accéder.</p>
+          <a href="https://www.legifrance.gouv.fr/codes/id/LEGISCTA000054552492/2026-07-29" rel="noopener">Lire l'article 242 nonies B ↗</a>
+        </div>
+        {isoDetail ? (
+          <div class="iso-public-detail">
+            <div class="iso-conclusion">
+              <small>Conclusion pour cette fiche</small>
+              <strong>{isoRelationLabels[isoDetail.platformRelation]}</strong>
+              <p>{isoDetail.scopeText ?? research.iso27001Scope.note}</p>
+            </div>
+            <dl>
+              <div><dt>Entité certifiée</dt><dd>{isoDetail.legalEntity ?? "Non publiée"}</dd></div>
+              <div><dt>Organisme</dt><dd>{isoDetail.certificationBody ?? "Non publié"}</dd></div>
+              <div><dt>Certificat</dt><dd>{isoDetail.certificateNumber ?? "Numéro non publié"}</dd></div>
+              <div><dt>Validité publique</dt><dd>{isoValidityLabel}{isoDetail.validUntil ? ` · jusqu'au ${isoDetail.validUntil.split("-").reverse().join("/")}` : ""}</dd></div>
+            </dl>
+            {research.iso27001Scope.note && <p class="iso-caveat">{research.iso27001Scope.note}</p>}
+            {isoSourceRecords.length > 0 && <div class="iso-links">{isoSourceRecords.map((source) => <a href={source.url} rel="noopener">{source.title} ↗</a>)}</div>}
+          </div>
+        ) : (
+          <div class="iso-missing-detail">
+            <strong>Périmètre public non retrouvé</strong>
+            <p>{research.iso27001Scope.note}</p>
+            <small>Cela ne signifie pas que la plateforme n'est pas certifiée : l'exigence est contrôlée dans le dossier d'immatriculation. Cela signifie que le certificat, son titulaire, ses dates et son périmètre ne sont pas consultables depuis les sources reliées ici.</small>
+          </div>
+        )}
+      </section>
+
+      <header class="matrix-head secondary-head" id="contrat">
         <div><p class="mono-label">le contrat concret</p><span>04</span></div>
         <h2>Les détails qui évitent les mauvaises surprises.</h2>
         <p>Import d'un fichier produit ailleurs, coût après le quota, restitution, résiliation et prestataires nommés. Une réponse partielle reste affichée comme telle.</p>
       </header>
       <div class="evidence-matrix">
-        {researchRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
+        {contractRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
       </div>
 
       <section class="site-observation" aria-labelledby="site-observation-title">
@@ -288,14 +429,75 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
   .choice-snapshot p { margin: 0; color: var(--muted); font-size: .75rem; font-weight: 680; text-transform: uppercase; }
   .choice-snapshot strong { display: block; margin-top: .2rem; color: var(--bright); font-size: .83rem; }
   .choice-snapshot small { display: block; margin-top: .25rem; color: var(--muted); font-size: .76rem; line-height: 1.45; }
-  .profile-layout { display: grid; grid-template-columns: minmax(0,1fr) 20rem; gap: 1.4rem; padding-top: clamp(3rem,6vw,5rem); }
+  .documentation-map { position: relative; overflow: hidden; margin-top: clamp(2rem,4vw,3.4rem); border: 1px solid #d6ddeb; border-radius: 1.2rem; padding: clamp(1.1rem,2.5vw,1.65rem); background: linear-gradient(135deg,rgba(255,255,255,.96),rgba(247,249,253,.9)); box-shadow: 0 1.1rem 3.5rem rgba(32,48,78,.07); }
+  .documentation-map::after { position: absolute; top: -10rem; right: -8rem; width: 25rem; height: 25rem; border: 1px solid color-mix(in srgb,var(--profile-tone) 15%,transparent); border-radius: 50%; box-shadow: 0 0 0 3rem color-mix(in srgb,var(--profile-tone) 3%,transparent),0 0 0 6rem color-mix(in srgb,var(--profile-tone) 2%,transparent); content: ""; pointer-events: none; }
+  .documentation-map-intro,.documentation-meter,.documentation-sections { position: relative; z-index: 1; }
+  .documentation-map-intro { display: grid; grid-template-columns: minmax(12rem,.55fr) minmax(15rem,.8fr) minmax(18rem,1fr); gap: 1rem; align-items: end; }
+  .documentation-map-intro > p:last-child { margin: 0; color: var(--muted); font-size: .79rem; line-height: 1.6; }
+  .documentation-map h2 { margin: 0; color: var(--bright); font-size: clamp(1.45rem,2.5vw,2rem); font-weight: 510; line-height: 1.08; letter-spacing: -.035em; }
+  .documentation-meter { margin-top: 1.35rem; }
+  .meter-track { display: flex; overflow: hidden; height: .55rem; border-radius: 999px; background: #edf0f5; }
+  .meter-track span { display: block; height: 100%; }
+  .meter-confirmed { background: linear-gradient(90deg,#318875,#58ad95); }
+  .meter-declared { background: linear-gradient(90deg,#6f6ddd,#8a7ce6); }
+  .meter-unknown { background: linear-gradient(90deg,#e8b15c,#f0c77e); }
+  .meter-legend { display: flex; flex-wrap: wrap; gap: .55rem 1.15rem; margin-top: .65rem; }
+  .meter-legend span { display: inline-flex; gap: .38rem; align-items: center; color: var(--muted); font-size: .73rem; }
+  .meter-legend strong { color: var(--bright); font: 700 .72rem/1 var(--font-mono); }
+  .meter-legend i { width: .48rem; height: .48rem; border-radius: 50%; }
+  .meter-legend i.confirmed { background: #3d957f; }
+  .meter-legend i.declared { background: #7872dc; }
+  .meter-legend i.unknown { background: #d99c40; }
+  .documentation-sections { display: grid; grid-template-columns: repeat(4,1fr); gap: .55rem; margin-top: 1.15rem; }
+  .documentation-sections a { display: grid; grid-template-columns: auto 1fr auto; gap: .65rem; align-items: center; min-width: 0; border: 1px solid #dbe1ec; border-radius: .85rem; padding: .72rem; background: rgba(255,255,255,.82); transition: transform 150ms ease,border-color 150ms ease,box-shadow 150ms ease; }
+  .documentation-sections a:hover { transform: translateY(-2px); border-color: color-mix(in srgb,var(--profile-tone) 32%,#dbe1ec); box-shadow: 0 .65rem 1.4rem rgba(35,50,79,.07); }
+  .documentation-sections a > span { color: var(--profile-tone); font: 700 .63rem/1 var(--font-mono); }
+  .documentation-sections a div { display: grid; min-width: 0; }
+  .documentation-sections small { color: var(--muted); font-size: .64rem; }
+  .documentation-sections strong { overflow: hidden; color: var(--bright); font-size: .73rem; text-overflow: ellipsis; white-space: nowrap; }
+  .documentation-sections em { border-radius: 999px; padding: .28rem .4rem; background: #edf8f4; color: #237563; font: 700 .63rem/1 var(--font-mono); font-style: normal; }
+  .documentation-sections a[data-level="partial"] em { background: #f0effd; color: #5f59bd; }
+  .documentation-sections a[data-level="missing"] em { background: #fff4e5; color: #9b6424; }
+  .profile-layout { display: grid; grid-template-columns: minmax(0,1fr) 20rem; gap: 1.4rem; padding-top: clamp(2.8rem,5vw,4.2rem); }
   .matrix-head { display: grid; grid-template-columns: 10rem minmax(18rem,.8fr) minmax(17rem,1fr); gap: 1.2rem; align-items: end; border-bottom: 1px solid var(--line); padding: 0 .2rem 1.25rem; }
+  .matrix-head[id] { scroll-margin-top: 7rem; }
   .matrix-head > div { display: grid; gap: .7rem; justify-items: start; }
   .matrix-head > div > span { color: var(--signal); font: 690 .7rem/1 var(--font-mono); }
   .matrix-head h2 { margin: 0; color: var(--bright); font-size: clamp(1.5rem,2.8vw,2.1rem); font-weight: 500; line-height: 1.15; letter-spacing: -.037em; }
   .matrix-head > p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.6; }
   .secondary-head { margin-top: 3.8rem; }
   .evidence-matrix { display: grid; gap: .55rem; margin-top: .8rem; }
+  .iso-scope-card { overflow: hidden; margin-top: .75rem; border: 1px solid #cadbd5; border-radius: 1rem; background: linear-gradient(145deg,#f8fcfa,#fff); box-shadow: 0 .8rem 2rem rgba(34,66,58,.055); }
+  .iso-scope-card.expired,.iso-scope-card.missing { border-color: #e5d4b9; background: linear-gradient(145deg,#fffaf2,#fff); }
+  .iso-scope-card > header { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; border-bottom: 1px solid #dfe8e4; padding: 1rem; background: rgba(255,255,255,.68); }
+  .iso-scope-card.expired > header,.iso-scope-card.missing > header { border-color: #eee1cd; }
+  .iso-mark { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: .75rem; background: #e5f4ef; color: #287965; }
+  .iso-scope-card.expired .iso-mark,.iso-scope-card.missing .iso-mark { background: #fff0d9; color: #a06525; }
+  .iso-mark :global(svg) { width: 1.1rem; height: 1.1rem; }
+  .iso-scope-card h3 { margin: .25rem 0 0; color: var(--bright); font-size: 1rem; font-weight: 560; letter-spacing: -.018em; }
+  .iso-regulatory-line { display: grid; grid-template-columns: 9rem 1fr auto; gap: 1rem; align-items: center; border-bottom: 1px solid #dfe8e4; padding: .85rem 1rem; }
+  .iso-scope-card.expired .iso-regulatory-line,.iso-scope-card.missing .iso-regulatory-line { border-color: #eee1cd; }
+  .iso-regulatory-line > span { color: #287965; font: 700 .66rem/1.3 var(--font-mono); text-transform: uppercase; }
+  .iso-scope-card.expired .iso-regulatory-line > span,.iso-scope-card.missing .iso-regulatory-line > span { color: #9a6124; }
+  .iso-regulatory-line p { margin: 0; color: var(--muted); font-size: .75rem; line-height: 1.55; }
+  .iso-regulatory-line a { color: var(--signal); font-size: .69rem; font-weight: 680; white-space: nowrap; }
+  .iso-public-detail { padding: 1rem; }
+  .iso-conclusion { display: grid; gap: .3rem; border-left: 3px solid #3d957f; padding-left: .8rem; }
+  .iso-scope-card.expired .iso-conclusion { border-color: #d99c40; }
+  .iso-conclusion small { color: var(--muted); font: 680 .64rem/1.2 var(--font-mono); text-transform: uppercase; }
+  .iso-conclusion strong { color: var(--bright); font-size: .88rem; }
+  .iso-conclusion p { margin: 0; color: var(--paper); font-size: .8rem; line-height: 1.55; }
+  .iso-public-detail dl { display: grid; grid-template-columns: repeat(2,1fr); gap: .5rem; margin: .9rem 0 0; }
+  .iso-public-detail dl > div { display: grid; gap: .2rem; border: 1px solid #dfe7e4; border-radius: .7rem; padding: .65rem .75rem; background: rgba(255,255,255,.76); }
+  .iso-public-detail dt { color: var(--muted); font-size: .64rem; }
+  .iso-public-detail dd { margin: 0; color: var(--bright); font-size: .76rem; font-weight: 650; }
+  .iso-caveat,.iso-missing-detail { margin: .8rem 0 0; border-radius: .7rem; padding: .75rem; background: #fff5e7; color: #76502a; font-size: .75rem; line-height: 1.55; }
+  .iso-links { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .75rem; }
+  .iso-links a { border-radius: 999px; padding: .34rem .52rem; background: var(--signal-soft); color: var(--signal); font: .62rem/1.35 var(--font-mono); }
+  .iso-missing-detail { display: grid; gap: .35rem; margin: 0; border-radius: 0; padding: 1rem; }
+  .iso-missing-detail strong { color: #70471e; font-size: .88rem; }
+  .iso-missing-detail p,.iso-missing-detail small { margin: 0; color: #765a3b; font-size: .77rem; line-height: 1.55; }
+  .iso-missing-detail small { color: #8a6e4f; }
   .site-observation { overflow: hidden; margin-top: 3.8rem; border: 1px solid #cdd5e5; border-radius: 1.15rem; background: linear-gradient(150deg,#f8fafc,#eef3f8); box-shadow: 0 1rem 3rem rgba(29,44,72,.06); }
   .site-observation > header { display: grid; grid-template-columns: 10rem 1fr; gap: 1.2rem; padding: 1.25rem; background: #142238; color: #fff; }
   .site-observation > header > div:first-child { display: grid; align-content: start; gap: .65rem; color: #9fb1ff; font: 680 .7rem/1 var(--font-mono); }
@@ -340,7 +542,8 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
   .contribute-link span { display: grid; }
   .contribute-link strong { color: var(--bright); font-size: .78rem; }
   .contribute-link small { color: var(--muted); font-size: .76rem; }
+  @media (max-width: 1100px) { .documentation-sections { grid-template-columns: repeat(2,1fr); } }
   @media (max-width: 1000px) { .profile-cover-inner,.profile-layout { grid-template-columns: 1fr; } .profile-ledger { display: grid; grid-template-columns: 1fr auto; gap: 0 1.5rem; } .profile-ledger header { grid-column: 1 / -1; } .profile-ledger dl { grid-column: 1; } .profile-ledger > p { grid-column: 1 / -1; } .profile-aside { grid-template-columns: repeat(2,1fr); } .profile-actions { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 820px) { .choice-snapshot { grid-template-columns: 1fr; } .matrix-head,.site-observation > header { grid-template-columns: 1fr; } .matrix-head > div,.site-observation > header > div:first-child { display: flex; justify-content: space-between; } .observation-body { grid-template-columns: 1fr; } }
-  @media (max-width: 620px) { .profile-cover-inner { padding-top: 2.3rem; } .profile-cover h1 { font-size: 2.45rem; } .profile-ledger { display: block; } .choice-snapshot { margin-top: -1rem; } .profile-aside,.profile-actions,.tracker-list,.tracker-list details > div { grid-template-columns: 1fr; } .profile-actions { grid-column: auto; } }
+  @media (max-width: 820px) { .choice-snapshot { grid-template-columns: 1fr; } .documentation-map-intro,.matrix-head,.site-observation > header { grid-template-columns: 1fr; } .matrix-head > div,.site-observation > header > div:first-child { display: flex; justify-content: space-between; } .observation-body { grid-template-columns: 1fr; } .iso-regulatory-line { grid-template-columns: 1fr; gap: .45rem; } }
+  @media (max-width: 620px) { .profile-cover-inner { padding-top: 2.3rem; } .profile-cover h1 { font-size: 2.45rem; } .profile-ledger { display: block; } .choice-snapshot { margin-top: -1rem; } .documentation-sections,.iso-public-detail dl,.profile-aside,.profile-actions,.tracker-list,.tracker-list details > div { grid-template-columns: 1fr; } .iso-scope-card > header { grid-template-columns: auto 1fr; } .iso-scope-card > header :global(.evidence-badge) { grid-column: 2; } .profile-actions { grid-column: auto; } }
 </style>
