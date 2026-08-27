@@ -82,6 +82,7 @@ BACKUP_DIR="${BACKUPS_ROOT}/${STAMP}-before-${EXPECTED_SHA}"
 SMOKE_DIR="${BACKUP_DIR}/smoke"
 MCP_BODY_FILE="${SMOKE_DIR}/body"
 MCP_HEADERS_FILE="${SMOKE_DIR}/headers"
+NOT_FOUND_BODY_FILE="${SMOKE_DIR}/not-found-body"
 OLD_TARGET=""
 TARGET_CREATED=0
 SWAPPED=0
@@ -98,7 +99,7 @@ if [[ "${VHOST}" != /etc/apache2/sites-available/* ]]; then
   echo "Echec: le vhost doit se trouver dans sites-available." >&2
   exit 1
 fi
-if [[ "${SMOKE_DIR}" != "${BACKUP_DIR}/smoke" || "${MCP_BODY_FILE}" != "${SMOKE_DIR}/body" || "${MCP_HEADERS_FILE}" != "${SMOKE_DIR}/headers" ]]; then
+if [[ "${SMOKE_DIR}" != "${BACKUP_DIR}/smoke" || "${MCP_BODY_FILE}" != "${SMOKE_DIR}/body" || "${MCP_HEADERS_FILE}" != "${SMOKE_DIR}/headers" || "${NOT_FOUND_BODY_FILE}" != "${SMOKE_DIR}/not-found-body" ]]; then
   echo "Echec: chemins temporaires de smoke test inattendus." >&2
   exit 1
 fi
@@ -177,7 +178,7 @@ rollback() {
   if [[ "${TARGET_CREATED}" -eq 1 && -d "${TARGET}" ]]; then
     rm -rf -- "${TARGET}"
   fi
-  rm -f -- "${MCP_BODY_FILE}" "${MCP_HEADERS_FILE}"
+  rm -f -- "${MCP_BODY_FILE}" "${MCP_HEADERS_FILE}" "${NOT_FOUND_BODY_FILE}"
   rmdir -- "${SMOKE_DIR}" 2>/dev/null || true
   echo "Echec: restauration du MCP et du vhost precedents." >&2
   echo "Sauvegarde et etat d'echec: ${BACKUP_DIR}" >&2
@@ -266,6 +267,7 @@ chown root:root "${SERVICE_FILE}"
 
 cat > "${APACHE_SNIPPET}" <<EOF
 # PA_CHECK_MCP_MANAGED_BEGIN
+ErrorDocument 404 /404.html
 ProxyPass "/api/mcp" "http://127.0.0.1:${MCP_PORT}/api/mcp" connectiontimeout=2 timeout=20 retry=0
 ProxyPassReverse "/api/mcp" "http://127.0.0.1:${MCP_PORT}/api/mcp"
 <Location "/api/mcp">
@@ -365,6 +367,16 @@ apache2ctl configtest
 systemctl reload apache2
 systemctl is-active --quiet apache2
 
+NOT_FOUND_STATUS="$(curl --max-time 10 -sS --resolve "${SITE_HOST}:443:127.0.0.1" \
+  --output "${NOT_FOUND_BODY_FILE}" \
+  --write-out '%{http_code}' \
+  "https://${SITE_HOST}/controle-404-pa-check")"
+if [[ "${NOT_FOUND_STATUS}" != "404" ]]; then
+  echo "Echec: la page introuvable ne renvoie pas le statut 404." >&2
+  false
+fi
+grep -Fq "Cette page a changé d'adresse." "${NOT_FOUND_BODY_FILE}"
+
 if ! curl --max-time 10 --max-filesize 262144 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" \
   -H 'Accept: application/json, text/event-stream' \
   -H 'Content-Type: application/json' \
@@ -418,7 +430,7 @@ print("MCP_HTTPS_SMOKE_OK")
 PY
 grep -iq '^content-security-policy:.*default-src '\''none'\''' "${MCP_HEADERS_FILE}"
 grep -iq '^cache-control:.*no-store' "${MCP_HEADERS_FILE}"
-rm -f -- "${MCP_BODY_FILE}" "${MCP_HEADERS_FILE}"
+rm -f -- "${MCP_BODY_FILE}" "${MCP_HEADERS_FILE}" "${NOT_FOUND_BODY_FILE}"
 rmdir -- "${SMOKE_DIR}"
 
 trap - ERR INT TERM

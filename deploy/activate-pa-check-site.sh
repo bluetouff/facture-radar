@@ -103,18 +103,21 @@ if archive_path.stat().st_size > 16 * 1024 * 1024:
 
 required = {
     "index.html",
+    "404.html",
     "agents/index.html",
+    "apple-touch-icon.png",
     "api/corpus.json",
     "api/platforms.json",
     "api/questions.json",
     "llms.txt",
     "llms-full.txt",
+    "og/pa-check-facturation-electronique.png",
     "server.json",
     "verifier-mon-outil/index.html",
     "verifier-une-facture/index.html",
 }
 blocked_names = re.compile(r"(^|/)(\.env(?:\..*)?|id_(?:rsa|ed25519)(?:\..*)?|[^/]+\.(?:key|pem))$", re.I)
-allowed_suffixes = {".css", ".html", ".js", ".json", ".mjs", ".svg", ".txt", ".woff2", ".xml"}
+allowed_suffixes = {".css", ".html", ".js", ".json", ".mjs", ".png", ".svg", ".txt", ".woff2", ".xml"}
 seen = set()
 total = 0
 

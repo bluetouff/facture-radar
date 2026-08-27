@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="65" y1="38" x2="1135" y2="605" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101D35"/>
+      <stop offset=".58" stop-color="#142542"/>
+      <stop offset="1" stop-color="#173449"/>
+    </linearGradient>
+    <linearGradient id="route" x1="723" y1="193" x2="1088" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#91A2FF"/>
+      <stop offset="1" stop-color="#72D4BA"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#C9D3FF" stroke-opacity=".045"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020916" flood-opacity=".28"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1100" cy="82" r="252" stroke="#8799F5" stroke-opacity=".12"/>
+  <circle cx="1100" cy="82" r="190" stroke="#72D4BA" stroke-opacity=".08"/>
+  <circle cx="81" cy="630" r="215" fill="#7557D6" fill-opacity=".07"/>
+
+  <g transform="translate(70 62)">
+    <rect x="2" y="2" width="72" height="72" rx="21" fill="#14243A" stroke="#52617A"/>
+    <path d="M6 51C20 37 34 25 60 7H74V33C57 41 43 55 30 74H6Z" fill="#576DDA" fill-opacity=".2"/>
+    <path d="M24 16h21l12 12v31H24Z" fill="#fff" fill-opacity=".035" stroke="#ECF1FF" stroke-opacity=".64" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 16.5V28h12" stroke="#9EACF2" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M15 31h7c7 0 7 7 13 7h3" stroke="#8EA0F2" stroke-width="2" stroke-linecap="round"/>
+    <path d="M15 49h7c7 0 7-11 13-11" stroke="#55BDA5" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="15" cy="31" r="2.8" fill="#8EA0F2"/>
+    <circle cx="15" cy="49" r="2.8" fill="#55BDA5"/>
+    <circle cx="38" cy="38" r="3.2" fill="#EEF2FF" stroke="#405BD8" stroke-width="1.5"/>
+    <path d="m38 41 6 6 13-16" stroke="#73D1B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="162" y="95" fill="#F5F7FF" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="650" letter-spacing="-1">PA Check</text>
+  <text x="162" y="126" fill="#AEB9D0" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="500">Facturation électronique</text>
+
+  <text x="70" y="239" fill="#F8FAFF" font-family="Inter,Arial,sans-serif" font-size="61" font-weight="540" letter-spacing="-2.5">Des réponses claires sur la</text>
+  <text x="70" y="309" fill="#AAB7FF" font-family="Inter,Arial,sans-serif" font-size="61" font-weight="540" letter-spacing="-2.5">facturation électronique.</text>
+  <text x="72" y="363" fill="#C1CBDE" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="450">Choisir une plateforme agréée, vérifier son outil,</text>
+  <text x="72" y="395" fill="#C1CBDE" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="450">contrôler un fichier Factur-X.</text>
+
+  <g font-family="Inter,Arial,sans-serif" font-size="17" font-weight="600">
+    <rect x="70" y="458" width="244" height="48" rx="24" fill="#8FA0FF" fill-opacity=".12" stroke="#8FA0FF" stroke-opacity=".24"/>
+    <circle cx="96" cy="482" r="6" fill="#8FA0FF"/>
+    <text x="114" y="488" fill="#D9DFFF">148 plateformes étudiées</text>
+    <rect x="330" y="458" width="210" height="48" rx="24" fill="#72D4BA" fill-opacity=".1" stroke="#72D4BA" stroke-opacity=".22"/>
+    <circle cx="356" cy="482" r="6" fill="#72D4BA"/>
+    <text x="374" y="488" fill="#D4F4EC">Sans compte</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="694" y="164" width="436" height="312" rx="28" fill="#F8FAFE"/>
+    <rect x="716" y="186" width="392" height="58" rx="15" fill="#EEF1FF"/>
+    <text x="742" y="221" fill="#405BD8" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">VOTRE QUESTION</text>
+    <path d="M744 296C796 296 798 348 852 348H934C990 348 986 282 1042 282" stroke="url(#route)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="744" cy="296" r="17" fill="#E9EDFF" stroke="#8EA0F2"/>
+    <circle cx="852" cy="348" r="22" fill="#405BD8"/>
+    <circle cx="1042" cy="282" r="24" fill="#E9F7F1" stroke="#55BDA5"/>
+    <path d="m1032 282 7 7 14-17" stroke="#168065" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="716" y="393" fill="#6A788C" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="550">VOTRE SITUATION</text>
+    <text x="842" y="393" fill="#405BD8" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="650">INFORMATION UTILE</text>
+    <text x="1010" y="393" fill="#168065" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="650">ACTION</text>
+    <rect x="716" y="424" width="392" height="1" fill="#DDE3EE"/>
+    <text x="716" y="452" fill="#6A788C" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500">Sources, limites et date de mise à jour accessibles</text>
+  </g>
+
+  <text x="70" y="580" fill="#8492AA" font-family="JetBrains Mono,monospace" font-size="17" font-weight="550" letter-spacing="1">PA.L0G.FR</text>
+</svg>

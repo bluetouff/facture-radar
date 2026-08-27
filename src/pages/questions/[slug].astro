@@ -20,11 +20,21 @@ const related = practicalQuestions.filter((candidate) => candidate.slug !== ques
 const stateLabels = { start: "Point de départ", consider: "À examiner", confirm: "À confirmer" } as const;
 ---
 
-<BaseLayout title={`${question.title} | PA Check`} description={question.description}>
+<BaseLayout title={`${question.shortLabel} | PA Check`} description={question.description}>
   <section class:list={["answer-cover", `tone-${question.tone}`]}>
     <div class="shell answer-cover-layout">
       <div class="answer-intro">
-        <a class="back-link" href="/questions/"><InterfaceIcon name="arrow" /> Toutes les questions</a>
+        <nav class="page-breadcrumb" aria-label="Fil d’Ariane" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="back-link" itemprop="item" href="/questions/"><InterfaceIcon name="arrow" /><span itemprop="name">Questions pratiques</span></a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          <span class="breadcrumb-current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">{question.shortLabel}</span>
+            <meta itemprop="position" content="2" />
+          </span>
+        </nav>
         <p class="answer-reference"><span>QUESTION {String(questionIndex + 1).padStart(2, "0")}</span><i></i><span>{question.category}</span></p>
         <h1>{question.title}</h1>
         <p>{question.description}</p>
@@ -105,6 +115,9 @@ const stateLabels = { start: "Point de départ", consider: "À examiner", confir
   .answer-cover-layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) 22rem; gap: clamp(3rem,8vw,7rem); align-items: center; padding-block: clamp(3rem,6vw,5.2rem); }
   .back-link { display: inline-flex; gap: .45rem; align-items: center; color: rgba(228,234,248,.62); font-size: .78rem; }
   .back-link :global(svg) { width: .85rem; rotate: 180deg; }
+  .page-breadcrumb { display: flex; gap: .55rem; align-items: center; min-width: 0; color: rgba(228,234,248,.46); font-size: .78rem; }
+  .breadcrumb-separator { color: rgba(228,234,248,.26); }
+  .breadcrumb-current { overflow: hidden; max-width: 20rem; text-overflow: ellipsis; white-space: nowrap; }
   .answer-reference { display: flex; gap: .7rem; align-items: center; margin: 1.8rem 0 0; color: var(--soft); font: 680 .69rem/1 var(--font-mono); letter-spacing: .055em; text-transform: uppercase; }
   .answer-reference i { width: 3rem; height: 1px; background: linear-gradient(90deg,var(--tone),var(--soft)); }
   .answer-intro h1 { max-width: 19ch; margin: .8rem 0 0; color: #fff; font-size: clamp(2.1rem,4.2vw,3.25rem); font-weight: 470; line-height: 1.07; letter-spacing: -.048em; text-wrap: balance; }

@@ -46,13 +46,19 @@ img, svg { display: block; max-width: 100%; }
 .header-shell { width: min(1500px, calc(100% - 3rem)); margin-inline: auto; }
 .header-inner { display: grid; grid-template-columns: auto minmax(610px, 1fr) auto; gap: clamp(1.4rem, 3vw, 3.5rem); align-items: center; min-height: 86px; }
 .brand { display: inline-flex; align-items: center; gap: .82rem; min-width: max-content; }
-.brand-mark { display: grid; place-items: center; width: 2.82rem; height: 2.82rem; }
-.brand-mark svg { width: 2.72rem; height: 2.72rem; }
-.brand-mark .brand-p, .brand-mark .brand-a, .brand-mark .brand-orbit { fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.brand-mark .brand-orbit { stroke: rgba(20,36,58,.15); stroke-width: 1; stroke-dasharray: 58 76; rotate: -28deg; transform-origin: center; }
-.brand-mark .brand-p { stroke: var(--bright); stroke-width: 1.65; }
-.brand-mark .brand-a { stroke: var(--success); stroke-width: 1.65; }
-.brand-mark .brand-dot { fill: var(--signal); }
+.brand-mark { display: grid; flex: 0 0 auto; place-items: center; width: 3.05rem; height: 3.05rem; }
+.brand-mark svg { width: 3.05rem; height: 3.05rem; filter: drop-shadow(0 .48rem .75rem rgba(20,36,58,.16)); }
+.brand-mark .brand-symbol-frame { fill: #14243a; stroke: rgba(255,255,255,.18); stroke-width: 1; }
+.brand-mark .brand-symbol-glow { fill: rgba(87,109,218,.18); }
+.brand-mark .brand-symbol-sheet { fill: rgba(255,255,255,.035); stroke: rgba(236,241,255,.62); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.2; }
+.brand-mark .brand-symbol-fold { stroke: #9eacf2; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.35; }
+.brand-mark .brand-symbol-route { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.45; }
+.brand-mark .brand-symbol-route-a { stroke: #8ea0f2; }
+.brand-mark .brand-symbol-route-b { stroke: #55bda5; }
+.brand-mark .brand-symbol-node-a { fill: #8ea0f2; }
+.brand-mark .brand-symbol-node-b { fill: #55bda5; }
+.brand-mark .brand-symbol-node-c { fill: #eef2ff; stroke: #405bd8; stroke-width: 1.2; }
+.brand-mark .brand-symbol-check { fill: none; stroke: #73d1b8; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.25; }
 .brand-copy { display: grid; gap: .03rem; }
 .brand-copy strong { color: var(--bright); font-size: 1.04rem; font-weight: 520; letter-spacing: -.025em; }
 .brand-copy strong span { color: var(--signal); font-weight: 620; }
@@ -200,10 +206,8 @@ img, svg { display: block; max-width: 100%; }
 .footer-main { display: grid; grid-template-columns: minmax(260px,.8fr) minmax(0,1.4fr); gap: clamp(3rem,8vw,7rem); padding-block: clamp(3rem,6vw,4.7rem); }
 .footer-brand-lockup { display: inline-flex; gap: .8rem; align-items: center; color: #fff; }
 .footer-brand-lockup:hover { color: #fff; }
-.footer-brand-lockup .brand-orbit { stroke: rgba(255,255,255,.2); }
-.footer-brand-lockup .brand-p { stroke: #fff; }
-.footer-brand-lockup .brand-a { stroke: #73dcc7; }
-.footer-brand-lockup .brand-dot { fill: #91a3ff; }
+.footer-brand-lockup .brand-symbol-frame { stroke: rgba(255,255,255,.32); }
+.footer-brand-lockup .brand-symbol-glow { fill: rgba(111,128,228,.25); }
 .footer-brand-lockup > span:last-child { display: grid; }
 .footer-brand-lockup strong { color: #fff; font-size: 1.05rem; font-weight: 520; letter-spacing: -.025em; }
 .footer-brand-lockup strong b { color: #91a3ff; font-weight: 650; }

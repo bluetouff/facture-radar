@@ -3,6 +3,7 @@ import "@fontsource-variable/inter";
 import "@fontsource-variable/jetbrains-mono";
 import "../styles/global.css";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
+import BrandMark from "../components/BrandMark.astro";
 import { platforms } from "../data/platforms";
 import { practicalQuestions } from "../data/practical-questions";
 
@@ -10,10 +11,13 @@ interface Props {
   title: string;
   description: string;
   canonical?: string;
+  robots?: string;
 }
 
-const { title, description, canonical = Astro.url.pathname } = Astro.props;
+const { title, description, canonical = Astro.url.pathname, robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
+const isHome = Astro.url.pathname === "/";
+const socialImageUrl = new URL("/og/pa-check-facturation-electronique.png", Astro.site);
 const primaryNav = [
   { href: "/verifier-mon-outil/", label: "Vérifier mon outil", hint: "Garder, compléter ou changer", icon: "route", tone: "violet" },
   { href: "/verifier-une-facture/", label: "Vérifier une facture", hint: "Factur-X ou XML, contrôle local", icon: "invoice", tone: "blue" },
@@ -61,40 +65,50 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
 ---
 
 <!doctype html>
-<html lang="fr">
+<html lang="fr" itemscope={isHome || undefined} itemtype={isHome ? "https://schema.org/WebSite" : undefined}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content={robots} />
+    {isHome && <meta itemprop="name" content="PA Check" />}
+    {isHome && <meta itemprop="alternateName" content="PA Check facturation électronique" />}
+    {isHome && <meta itemprop="url" content={canonicalUrl} />}
     <meta name="theme-color" content="#e7edf5" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' data:; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
     />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>{title}</title>
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PA Check" />
+    <meta property="og:locale" content="fr_FR" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PA Check, réponses sur la facturation électronique et les plateformes agréées" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content="PA Check, réponses sur la facturation électronique et les plateformes agréées" />
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header">
       <div class="header-shell header-inner">
-        <a class="brand" href="/" aria-label="PA Check, accueil">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none">
-              <circle class="brand-orbit" cx="24" cy="24" r="20" />
-              <path class="brand-p" d="M15 34V14h7.2c4.7 0 7.4 2.5 7.4 6.5S26.9 27 22.2 27H15" />
-              <path class="brand-a" d="m27.2 34 6.4-19.6L40 34M29.8 26.3h7.7" />
-              <circle class="brand-dot" cx="39.5" cy="10.2" r="1.7" />
-            </svg>
-          </span>
-          <span class="brand-copy"><strong><span>PA</span> Check</strong><small>Choisir et vérifier</small></span>
+        <a class="brand" href="/" aria-label="PA Check, facturation électronique, accueil">
+          <span class="brand-mark" aria-hidden="true"><BrandMark /></span>
+          <span class="brand-copy"><strong><span>PA</span> Check</strong><small>Facturation électronique</small></span>
         </a>
         <nav class="main-nav" aria-label="Actions principales">
           {primaryNav.map(({ href, label, hint, icon, tone }) => (
@@ -171,16 +185,9 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
 
         <div class="footer-main">
           <div class="footer-brand">
-            <a class="footer-brand-lockup" href="/" aria-label="PA Check, accueil">
-              <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none">
-                  <circle class="brand-orbit" cx="24" cy="24" r="20" />
-                  <path class="brand-p" d="M15 34V14h7.2c4.7 0 7.4 2.5 7.4 6.5S26.9 27 22.2 27H15" />
-                  <path class="brand-a" d="m27.2 34 6.4-19.6L40 34M29.8 26.3h7.7" />
-                  <circle class="brand-dot" cx="39.5" cy="10.2" r="1.7" />
-                </svg>
-              </span>
-              <span><strong><b>PA</b> Check</strong><small>Choisir et vérifier</small></span>
+            <a class="footer-brand-lockup" href="/" aria-label="PA Check, facturation électronique, accueil">
+              <span class="brand-mark" aria-hidden="true"><BrandMark /></span>
+              <span><strong><b>PA</b> Check</strong><small>Facturation électronique</small></span>
             </a>
             <p>Une réponse claire à vos questions sur la facture électronique.</p>
             <div class="footer-privacy"><InterfaceIcon name="lock" /><span>Vos choix restent dans ce navigateur.</span></div>

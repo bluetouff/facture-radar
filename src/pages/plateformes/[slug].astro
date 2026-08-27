@@ -168,13 +168,23 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
 ---
 
 <BaseLayout
-  title={`${platform.displayName} : prix, fonctions et informations utiles | PA Check`}
+  title={`${platform.displayName} : plateforme agréée, prix et fonctions | PA Check`}
   description={`Prix, fonctions, conditions et points à confirmer pour ${platform.displayName}, plateforme agréée de facturation électronique.`}
 >
   <section class:list={["profile-cover", profileTone]}>
     <div class="shell profile-cover-inner">
       <div class="profile-copy">
-        <a class="back-link" href="/plateformes/"><InterfaceIcon name="arrow" /> Retour à l'atlas</a>
+        <nav class="page-breadcrumb" aria-label="Fil d’Ariane" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="back-link" itemprop="item" href="/plateformes/"><InterfaceIcon name="arrow" /><span itemprop="name">Plateformes agréées</span></a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          <span class="breadcrumb-current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">{platform.displayName}</span>
+            <meta itemprop="position" content="2" />
+          </span>
+        </nav>
         <div class="profile-reference">
           <span>dossier {String(platformIndex + 1).padStart(2, "0")} / {platforms.length}</span>
           <i></i>
@@ -401,6 +411,9 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
   .profile-cover-inner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) 19rem; gap: clamp(2.5rem,7vw,7rem); align-items: center; padding-block: clamp(2.8rem,6vw,5.4rem); }
   .back-link { display: inline-flex; gap: .45rem; align-items: center; color: rgba(225,232,247,.68); font-size: .76rem; font-weight: 640; }
   .back-link :global(svg) { width: .9rem; height: .9rem; rotate: 180deg; }
+  .page-breadcrumb { display: flex; gap: .55rem; align-items: center; min-width: 0; color: rgba(225,232,247,.48); font-size: .76rem; }
+  .breadcrumb-separator { color: rgba(225,232,247,.28); }
+  .breadcrumb-current { overflow: hidden; max-width: 18rem; text-overflow: ellipsis; white-space: nowrap; }
   .profile-reference { display: flex; gap: .7rem; align-items: center; margin-top: 2rem; color: #9eb0ff; font: 660 .62rem/1 var(--font-mono); letter-spacing: .055em; text-transform: uppercase; }
   .profile-reference i { width: 3rem; height: 1px; background: linear-gradient(90deg,var(--profile-tone),#78d9c6); }
   .profile-cover h1 { max-width: 16ch; margin: .75rem 0 0; color: #fff; font-size: clamp(2.3rem,4.8vw,3.65rem); font-weight: 470; line-height: 1.04; letter-spacing: -.05em; text-wrap: balance; }
@@ -501,8 +514,9 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
   .site-observation { overflow: hidden; margin-top: 3.8rem; border: 1px solid #cdd5e5; border-radius: 1.15rem; background: linear-gradient(150deg,#f8fafc,#eef3f8); box-shadow: 0 1rem 3rem rgba(29,44,72,.06); }
   .site-observation > header { display: grid; grid-template-columns: 10rem 1fr; gap: 1.2rem; padding: 1.25rem; background: #142238; color: #fff; }
   .site-observation > header > div:first-child { display: grid; align-content: start; gap: .65rem; color: #9fb1ff; font: 680 .7rem/1 var(--font-mono); }
+  .site-observation > header .mono-label { border: 1px solid rgba(173,187,255,.3); background: rgba(112,130,224,.18); color: #dce3ff; }
   .site-observation h2 { margin: 0; color: #fff; font-size: clamp(1.35rem,2.5vw,1.9rem); font-weight: 500; letter-spacing: -.035em; }
-  .site-observation header p { max-width: 52rem; margin: .55rem 0 0; color: rgba(238,243,255,.7); font-size: .8rem; line-height: 1.6; }
+  .site-observation > header > div:last-child > p { max-width: 52rem; margin: .55rem 0 0; color: rgba(238,243,255,.76); font-size: .8rem; line-height: 1.6; }
   .observation-body { display: grid; grid-template-columns: 14rem 1fr; gap: 1rem; padding: 1rem; }
   .observation-summary { display: grid; gap: .45rem; align-content: start; border: 1px solid #d9e0eb; border-radius: .85rem; padding: .9rem; background: rgba(255,255,255,.85); }
   .observation-summary strong { color: var(--bright); font-size: .86rem; line-height: 1.4; }
