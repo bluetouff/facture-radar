@@ -32,7 +32,7 @@ test("Apache sert la page PA Check avec un véritable statut 404", () => {
 
 test("la release statique contient les images sociales attendues", () => {
   assert.match(activationScript, /"apple-touch-icon\.png",/);
-  assert.match(activationScript, /"og\/pa-check-facturation-electronique\.png",/);
+  assert.match(activationScript, /"og\/pa-check-facturation-electronique-v2\.png",/);
   assert.match(activationScript, /allowed_suffixes = \{[^\n]*"\.png"/);
 });
 

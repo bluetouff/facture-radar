@@ -112,7 +112,7 @@ required = {
     "api/questions.json",
     "llms.txt",
     "llms-full.txt",
-    "og/pa-check-facturation-electronique.png",
+    "og/pa-check-facturation-electronique-v2.png",
     "server.json",
     "conditions-utilisation/index.html",
     "confidentialite/index.html",

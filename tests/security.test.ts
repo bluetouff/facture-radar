@@ -139,3 +139,16 @@ test("les conditions, la confidentialité et le canal de sécurité sont publics
   assert.match(securityTxt, /Canonical: https:\/\/pa\.l0g\.fr\/\.well-known\/security\.txt/);
   assert.match(securityTxt, /Policy: https:\/\/pa\.l0g\.fr\/securite\//);
 });
+
+test("le partage reste composé de liens sans SDK ni traceur embarqué", async () => {
+  const layout = await readFile(new URL("../src/layouts/BaseLayout.astro", import.meta.url), "utf8");
+  for (const target of [
+    "https://x.com/intent/post?",
+    "https://www.linkedin.com/sharing/share-offsite/?",
+    "https://www.facebook.com/sharer/sharer.php?",
+    "mailto:?subject=",
+  ]) assert.ok(layout.includes(target), target);
+  assert.match(layout, /encodeURIComponent\(canonicalUrl\.toString\(\)\)/);
+  assert.match(layout, /noopener noreferrer/);
+  assert.doesNotMatch(layout, /platform\.twitter|connect\.facebook|snap\.licdn|<iframe/i);
+});

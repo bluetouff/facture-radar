@@ -17,7 +17,16 @@ interface Props {
 const { title, description, canonical = Astro.url.pathname, robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
 const isHome = Astro.url.pathname === "/";
-const socialImageUrl = new URL("/og/pa-check-facturation-electronique.png", Astro.site);
+const socialImageUrl = new URL("/og/pa-check-facturation-electronique-v2.png", Astro.site);
+const encodedShareUrl = encodeURIComponent(canonicalUrl.toString());
+const encodedShareTitle = encodeURIComponent(title);
+const encodedEmailBody = encodeURIComponent(`${title}\n\n${canonicalUrl.toString()}`);
+const shareLinks = [
+  { label: "X", icon: "social-x", href: `https://x.com/intent/post?url=${encodedShareUrl}&text=${encodedShareTitle}`, tone: "x", external: true },
+  { label: "LinkedIn", icon: "social-linkedin", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}`, tone: "linkedin", external: true },
+  { label: "Facebook", icon: "social-facebook", href: `https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`, tone: "facebook", external: true },
+  { label: "E-mail", icon: "email", href: `mailto:?subject=${encodedShareTitle}&body=${encodedEmailBody}`, tone: "email", external: false },
+] as const;
 const primaryNav = [
   { href: "/verifier-mon-outil/", label: "Vérifier mon outil", hint: "Garder, compléter ou changer", icon: "route", tone: "violet" },
   { href: "/verifier-une-facture/", label: "Vérifier une facture", hint: "Factur-X ou XML, contrôle local", icon: "invoice", tone: "blue" },
@@ -119,6 +128,21 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
           ))}
         </nav>
         <div class="header-tools">
+          <nav class="share-cluster" aria-label="Partager cette page">
+            <span>Partager</span>
+            <div>
+              {shareLinks.map(({ label, icon, href, tone, external }) => (
+                <a
+                  class={`share-link share-${tone}`}
+                  href={href}
+                  aria-label={`Partager sur ${label}`}
+                  title={label}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                ><InterfaceIcon name={icon} /></a>
+              ))}
+            </div>
+          </nav>
           <details class="resource-menu">
             <summary class:list={{ current: resourceIsCurrent }}>
               <span class="summary-icon"><InterfaceIcon name="grid" /></span>
@@ -148,6 +172,17 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
                     <span class="nav-icon"><InterfaceIcon name={icon} /></span>
                     <strong>{label}<small>{hint}</small></strong>
                   </a>
+                ))}
+              </nav>
+              <p>Partager cette page</p>
+              <nav class="mobile-share" aria-label="Partager cette page">
+                {shareLinks.map(({ label, icon, href, tone, external }) => (
+                  <a
+                    class={`share-${tone}`}
+                    href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                  ><InterfaceIcon name={icon} /><span>{label}</span></a>
                 ))}
               </nav>
               <p>Explorer</p>
