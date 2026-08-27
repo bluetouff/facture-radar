@@ -31,6 +31,7 @@ const tools = [
           <code>{MCP_ENDPOINT}</code>
           <a href="/server.json">server.json <InterfaceIcon name="arrow" /></a>
         </div>
+        <p class="endpoint-note">Pour un annuaire ou un test de connexion, utilisez l’adresse complète ci-dessus. La page d’accueil reste une page web.</p>
       </div>
       <div class="agent-route" aria-label="Une question conduit à la même réponse publique sur le site et dans le MCP">
         <header><span>PA CHECK · CORPUS</span><small>sans compte</small></header>
@@ -121,6 +122,7 @@ const tools = [
   .endpoint-card > span :global(svg), .endpoint-card a :global(svg) { width: .9rem; height: .9rem; }
   .endpoint-card code { grid-column: 1 / -1; overflow-wrap: anywhere; color: #fff; font: 610 .82rem/1.5 var(--font-mono); }
   .endpoint-card a { grid-column: 2; grid-row: 1; display: flex; gap: .4rem; align-items: center; color: #6dd8c4; font-size: .75rem; font-weight: 700; }
+  .endpoint-note { max-width: 39rem; margin: .65rem 0 0; color: var(--muted); font-size: .76rem; }
   .agent-route { overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 1.35rem; padding: 1rem; background: #13223a; color: #fff; box-shadow: 0 1.6rem 4rem rgba(20,36,58,.21); }
   .agent-route header, .agent-route footer { display: flex; justify-content: space-between; gap: 1rem; align-items: center; color: #aebcff; font: 680 .62rem/1 var(--font-mono); letter-spacing: .05em; }
   .agent-route header { border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: .85rem; }

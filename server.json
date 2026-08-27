@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.bluetouff/pa-check",
   "title": "PA Check",
-  "description": "Réponses publiques et sourcées pour choisir une plateforme agréée et comprendre la facture électronique en France.",
+  "description": "Corpus public sur les plateformes agréées et la facturation électronique en France.",
   "repository": {
     "url": "https://github.com/bluetouff/facture-radar",
     "source": "github"

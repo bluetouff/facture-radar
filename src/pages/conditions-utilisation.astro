@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Conditions d’utilisation | PA Check"
+  description="Conditions d’utilisation du site, du corpus public et du serveur MCP en lecture seule de PA Check."
+>
+  <section class="shell page-hero compact-hero">
+    <span class="eyebrow">conditions d’utilisation · version du 27 août 2026</span>
+    <h1>Un service d’information public, à utiliser avec discernement.</h1>
+    <p>PA Check aide à comprendre la facturation électronique et à préparer un choix. Il ne remplace ni le contrat d’un éditeur, ni un conseil juridique adapté à votre situation.</p>
+  </section>
+  <section class="shell policy-layout">
+    <article class="prose">
+      <h2>Portée des réponses</h2>
+      <p>Les fiches décrivent les informations publiques consultées à la date indiquée. Une fonction, un prix ou une condition peut évoluer. Avant de vous engager, vérifiez les éléments décisifs auprès de la plateforme concernée et dans ses documents contractuels.</p>
+
+      <h2>Accès au corpus et au MCP</h2>
+      <p>La consultation du site, des exports publics et du serveur MCP est ouverte, sans compte ni clé d’API. Les appels doivent rester raisonnables et compatibles avec la disponibilité du service. Toute tentative d’écriture, de contournement des limites, de surcharge ou d’accès à une donnée non publiée est interdite.</p>
+
+      <h2>Réutilisation</h2>
+      <p>L’accès public ne crée pas de licence implicite sur les marques, les documents tiers ou les contenus auxquels les fiches renvoient. Une réutilisation doit conserver l’origine des informations, leur date, leurs limites et respecter les droits attachés aux sources citées.</p>
+
+      <h2>Corrections</h2>
+      <p>Une plateforme ou un lecteur peut proposer une correction depuis la page <a href="/contribuer/">Mettre à jour une fiche</a>. La publication reste soumise à vérification et ne peut pas être achetée.</p>
+
+      <h2>Sécurité et disponibilité</h2>
+      <p>Le service est fourni sans garantie de disponibilité continue. Une anomalie de sécurité doit être signalée par le canal privé indiqué dans notre <a href="/securite/">politique de sécurité</a>, sans publier de données sensibles ni de procédure exploitable.</p>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .compact-hero { padding-bottom: 2rem; }
+  .compact-hero h1 { max-width: 20ch; }
+  .policy-layout { padding-bottom: 3rem; }
+</style>

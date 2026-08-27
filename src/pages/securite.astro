@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Sécurité | PA Check"
+  description="Canal privé et règles de signalement responsable d’une vulnérabilité concernant PA Check."
+>
+  <section class="shell page-hero compact-hero">
+    <span class="eyebrow">signalement responsable</span>
+    <h1>Signaler un problème de sécurité sans l’exposer.</h1>
+    <p>Nous traitons les signalements de manière défensive. Ne publiez pas de procédure exploitable, de facture réelle, de donnée personnelle ou de secret dans une issue publique.</p>
+  </section>
+  <section class="shell policy-layout">
+    <article class="prose">
+      <h2>Canal de contact</h2>
+      <p>Écrivez à <a href="mailto:olivier@l0g.fr">olivier@l0g.fr</a> avec la version concernée, l’impact observé et le chemin minimal permettant de comprendre le problème. Si un échange de données sensibles devient nécessaire, convenez d’abord d’un canal adapté.</p>
+
+      <h2>Périmètre</h2>
+      <p>Le site public, le vérificateur local, les exports publics et le serveur MCP en lecture seule sont dans le périmètre. Les sites des plateformes référencées, leurs comptes et leurs infrastructures ne le sont pas.</p>
+
+      <h2>Ce que nous demandons</h2>
+      <p>Limitez les vérifications aux données et systèmes que vous êtes autorisé à tester. N’interrompez pas le service, n’accédez pas aux données d’un tiers et ne transmettez jamais une facture réelle. Nous accusons réception et privilégions une correction avant toute communication publique.</p>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .compact-hero { padding-bottom: 2rem; }
+  .compact-hero h1 { max-width: 18ch; }
+  .policy-layout { padding-bottom: 3rem; }
+</style>

@@ -2,6 +2,7 @@ node_modules/
 dist/
 dist-mcp/
 .astro/
+public/assets/pdf.worker.bounded-v1.mjs
 tmp/
 .DS_Store
 *.log

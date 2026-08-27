@@ -62,7 +62,8 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
     name: MCP_SERVER_NAME,
     title: MCP_SERVER_TITLE,
     version: MCP_SERVER_VERSION,
-    description: "Réponses publiques sur les plateformes agréées et la facture électronique en France.",
+    websiteUrl: "https://pa.l0g.fr/agents/",
+    description: "Corpus public sur les plateformes agréées et la facturation électronique en France.",
   }, {
     instructions: [
       "Répondez d'abord à la question concrète de l'utilisateur.",
@@ -71,6 +72,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
       "Une observation du site public ne décrit ni l'application, ni l'hébergement des factures, et ne doit jamais devenir un score.",
       "Ne demandez ni facture, ni SIREN, ni identifiant de compte. Le serveur ne traite que des informations publiques.",
       "Pour contrôler un fichier Factur-X ou XML, renvoyez l'utilisateur vers https://pa.l0g.fr/verifier-une-facture/ : le fichier y reste dans son navigateur.",
+      "Conditions d'utilisation : https://pa.l0g.fr/conditions-utilisation/. Confidentialité : https://pa.l0g.fr/confidentialite/. Sécurité : https://pa.l0g.fr/securite/.",
     ].join(" "),
   });
 

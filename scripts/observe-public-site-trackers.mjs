@@ -5,9 +5,9 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { spawn } from "node:child_process";
 import { once } from "node:events";
-import { isIP } from "node:net";
 import officialDirectory from "../src/data/official-directory.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
+import { isForbiddenHostname, startPinnedHttpsProxy } from "./lib/public-egress-proxy.mjs";
 
 const TRACKER_RADAR_REVISION = "a1d894db2312f3fdeea06d6c784739b97eb727c8";
 const CHROME_DEFAULT = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
@@ -23,45 +23,6 @@ const TRACKING_CATEGORIES = new Set([
   "Tag Manager",
   "Third-Party Analytics Marketing",
 ]);
-
-function isPrivateOrReservedIpv4(hostname) {
-  const octets = hostname.split(".").map(Number);
-  if (octets.length !== 4 || octets.some((octet) => !Number.isInteger(octet) || octet < 0 || octet > 255)) return true;
-  const [first, second] = octets;
-  return first === 0
-    || first === 10
-    || first === 127
-    || (first === 100 && second >= 64 && second <= 127)
-    || (first === 169 && second === 254)
-    || (first === 172 && second >= 16 && second <= 31)
-    || (first === 192 && second === 168)
-    || first >= 224;
-}
-
-function isForbiddenHostname(hostname) {
-  const host = hostname.toLowerCase().replace(/^\[|\]$/g, "").replace(/\.$/, "");
-  if (host === "localhost"
-    || host.endsWith(".localhost")
-    || host.endsWith(".local")
-    || host.endsWith(".lan")
-    || host.endsWith(".internal")
-    || host.endsWith(".home.arpa")) return true;
-  const ipVersion = isIP(host);
-  if (ipVersion === 4) return isPrivateOrReservedIpv4(host);
-  if (ipVersion === 6) {
-    return host === "::1"
-      || host === "::"
-      || host.startsWith("fc")
-      || host.startsWith("fd")
-      || /^fe[89ab]/.test(host)
-      || host.startsWith("::ffff:10.")
-      || host.startsWith("::ffff:127.")
-      || host.startsWith("::ffff:169.254.")
-      || /^::ffff:172\.(1[6-9]|2\d|3[01])\./.test(host)
-      || host.startsWith("::ffff:192.168.");
-  }
-  return false;
-}
 
 function argument(name) {
   const index = process.argv.indexOf(`--${name}`);
@@ -142,7 +103,7 @@ class CdpConnection {
   }
 }
 
-async function startChrome(profileDirectory) {
+async function startChrome(profileDirectory, proxyUrl) {
   const chrome = process.env.PA_CHECK_CHROME_BIN ?? CHROME_DEFAULT;
   const child = spawn(chrome, [
     "--headless=new",
@@ -152,39 +113,55 @@ async function startChrome(profileDirectory) {
     "--disable-component-update",
     "--disable-default-apps",
     "--disable-extensions",
+    "--disable-quic",
+    "--disable-webrtc",
     "--disable-sync",
+    "--force-webrtc-ip-handling-policy=disable_non_proxied_udp",
+    `--proxy-server=${proxyUrl}`,
+    "--proxy-bypass-list=<-loopback>",
     "--no-default-browser-check",
     "--no-first-run",
     "about:blank",
   ], { stdio: ["ignore", "ignore", "pipe"] });
 
-  const browserWs = await new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error("Chrome n'a pas ouvert son port de débogage")), 8_000);
-    let buffer = "";
-    child.stderr.setEncoding("utf8");
-    child.stderr.on("data", (chunk) => {
-      buffer += chunk;
-      const match = buffer.match(/DevTools listening on (ws:\/\/[^\s]+)/);
-      if (!match) return;
-      clearTimeout(timer);
-      resolve(match[1]);
+  try {
+    const browserWs = await new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error("Chrome n'a pas ouvert son port de débogage")), 8_000);
+      let buffer = "";
+      child.stderr.setEncoding("utf8");
+      child.stderr.on("data", (chunk) => {
+        buffer += chunk;
+        const match = buffer.match(/DevTools listening on (ws:\/\/[^\s]+)/);
+        if (!match) return;
+        clearTimeout(timer);
+        resolve(match[1]);
+      });
+      child.once("error", (error) => {
+        clearTimeout(timer);
+        reject(error);
+      });
+      child.once("exit", (code) => {
+        clearTimeout(timer);
+        reject(new Error(`Chrome s'est arrêté avant l'observation (${code})`));
+      });
     });
-    child.once("error", (error) => {
-      clearTimeout(timer);
-      reject(error);
-    });
-    child.once("exit", (code) => {
-      clearTimeout(timer);
-      reject(new Error(`Chrome s'est arrêté avant l'observation (${code})`));
-    });
-  });
 
-  const browserUrl = new URL(browserWs);
-  const listUrl = `http://${browserUrl.hostname}:${browserUrl.port}/json/list`;
-  const pages = await fetch(listUrl).then((response) => response.json());
-  const page = pages.find((candidate) => candidate.type === "page");
-  if (!page?.webSocketDebuggerUrl) throw new Error("Aucune page Chrome contrôlable");
-  return { child, pageWs: page.webSocketDebuggerUrl };
+    const browserUrl = new URL(browserWs);
+    const listUrl = `http://${browserUrl.hostname}:${browserUrl.port}/json/list`;
+    const pages = await fetch(listUrl).then((response) => response.json());
+    const page = pages.find((candidate) => candidate.type === "page");
+    if (!page?.webSocketDebuggerUrl) throw new Error("Aucune page Chrome contrôlable");
+    return { child, pageWs: page.webSocketDebuggerUrl };
+  } catch (error) {
+    if (child.exitCode === null) {
+      child.kill("SIGTERM");
+      await Promise.race([
+        once(child, "exit"),
+        new Promise((resolve) => setTimeout(resolve, 2_000)),
+      ]);
+    }
+    throw error;
+  }
 }
 
 async function trackerRadarRecord(domain) {
@@ -198,9 +175,11 @@ async function trackerRadarRecord(domain) {
 const profileDirectory = await mkdtemp(join(tmpdir(), "pa-check-observation-"));
 let chrome;
 let cdp;
+let egressProxy;
 
 try {
-  chrome = await startChrome(profileDirectory);
+  egressProxy = await startPinnedHttpsProxy();
+  chrome = await startChrome(profileDirectory, egressProxy.url);
   cdp = new CdpConnection(chrome.pageWs);
   await cdp.open();
   await cdp.send("Network.enable");
@@ -290,5 +269,6 @@ try {
       new Promise((resolve) => setTimeout(resolve, 2_000)),
     ]);
   }
+  await egressProxy?.close();
   await rm(profileDirectory, { recursive: true, force: true, maxRetries: 4, retryDelay: 150 });
 }

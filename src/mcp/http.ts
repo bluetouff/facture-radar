@@ -12,6 +12,7 @@ const DEFAULT_PORT = 3747;
 const MAX_BODY_BYTES = 128 * 1024;
 const REQUEST_TIMEOUT_MS = 15_000;
 const MCP_PATH = "/api/mcp";
+const MCP_PATHS = new Set([MCP_PATH, `${MCP_PATH}/`]);
 const HEALTH_PATH = "/healthz";
 
 function safeBuildValue(name: "sha" | "time"): string {
@@ -100,7 +101,7 @@ export function createPaCheckHttpServer() {
   const allowedOrigins = parseHostnames(process.env.PA_CHECK_MCP_ALLOWED_ORIGINS, ["127.0.0.1", "localhost", "pa.l0g.fr"]);
   const validateHost = hostHeaderValidation(allowedHosts);
   const validateOrigin = originValidation(allowedOrigins);
-  const handler = createMcpHandler(() => createPaCheckMcpServer(MCP_REVISION), { responseMode: "json" });
+  const handler = createMcpHandler(() => createPaCheckMcpServer(MCP_REVISION), { responseMode: "auto" });
   const nodeHandler = toNodeHandler(handler, {
     onerror: () => undefined,
   });
@@ -121,7 +122,7 @@ export function createPaCheckHttpServer() {
       return;
     }
 
-    if (requestUrl.pathname !== MCP_PATH) {
+    if (!MCP_PATHS.has(requestUrl.pathname)) {
       writeJson(res, 404, { error: "Not found" });
       return;
     }

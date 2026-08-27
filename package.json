@@ -4,8 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare:pdf-worker": "node scripts/prepare-pdf-worker.mjs",
+    "predev": "npm run prepare:pdf-worker",
     "dev": "astro dev",
-    "check": "node --experimental-strip-types scripts/validate-data.ts && astro check",
+    "check": "node scripts/prepare-pdf-worker.mjs --clean && node --experimental-strip-types scripts/validate-data.ts && astro check && npm run prepare:pdf-worker",
+    "pretest": "npm run prepare:pdf-worker",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "build": "npm run check && npm test && astro build && npm run seo:check && npm run mcp:build",
     "seo:check": "node scripts/check-seo.mjs",

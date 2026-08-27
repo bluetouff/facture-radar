@@ -102,6 +102,7 @@ if archive_path.stat().st_size > 16 * 1024 * 1024:
     raise SystemExit("Archive statique anormalement volumineuse")
 
 required = {
+    ".well-known/security.txt",
     "index.html",
     "404.html",
     "agents/index.html",
@@ -113,6 +114,9 @@ required = {
     "llms-full.txt",
     "og/pa-check-facturation-electronique.png",
     "server.json",
+    "conditions-utilisation/index.html",
+    "confidentialite/index.html",
+    "securite/index.html",
     "verifier-mon-outil/index.html",
     "verifier-une-facture/index.html",
 }

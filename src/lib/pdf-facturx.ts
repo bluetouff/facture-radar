@@ -1,8 +1,11 @@
 import { GlobalWorkerOptions, getDocument } from "pdfjs-dist";
-import workerUrl from "pdfjs-dist/build/pdf.worker.mjs?url";
 import { MAX_FACTURX_XML_BYTES } from "./invoice-verifier.ts";
 
-GlobalWorkerOptions.workerSrc = workerUrl;
+export const BOUNDED_PDF_WORKER_URL = "/assets/pdf.worker.bounded-v1.mjs";
+const MAX_PDF_ATTACHMENTS_TO_INSPECT = 8;
+const MAX_PDF_ATTACHMENT_BYTES_INSPECTED = 4 * 1024 * 1024;
+
+GlobalWorkerOptions.workerSrc = BOUNDED_PDF_WORKER_URL;
 
 export interface EmbeddedFacturX {
   filename: string;
@@ -49,10 +52,13 @@ export async function extractFacturXFromPdf(data: Uint8Array): Promise<EmbeddedF
       return score(leftName) - score(rightName);
     });
 
-    for (const [key, attachment] of ordered) {
+    let inspectedBytes = 0;
+    for (const [key, attachment] of ordered.slice(0, MAX_PDF_ATTACHMENTS_TO_INSPECT)) {
       const filename = (attachment.filename ?? key).slice(0, 180);
       const content = await document.getAttachmentContent(key);
       if (!(content instanceof Uint8Array)) continue;
+      inspectedBytes += content.byteLength;
+      if (inspectedBytes > MAX_PDF_ATTACHMENT_BYTES_INSPECTED) return null;
       const xml = decodeXml(content);
       if (xml && /<[^>]*CrossIndustryInvoice\b/.test(xml)) return { filename, xml };
     }

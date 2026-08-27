@@ -93,6 +93,8 @@ test("l'extraction PDF désactive les fonctions de rendu inutiles et détruit le
   assert.match(module, /enableXfa: false/);
   assert.match(module, /stopAtErrors: true/);
   assert.match(module, /document\.getAttachmentContent\(key\)/);
+  assert.match(module, /BOUNDED_PDF_WORKER_URL = "\/assets\/pdf\.worker\.bounded-v1\.mjs"/);
+  assert.doesNotMatch(module, /pdf\.worker\.mjs\?url/);
   assert.match(module, /loadingTask\.destroy\(\)/);
   assert.doesNotMatch(module, /\.getPage\s*\(/);
   assert.doesNotMatch(module, /\.render\s*\(/);
@@ -126,4 +128,14 @@ test("le soutien passe par la page publique de l0g", async () => {
   const layout = await readFile(new URL("../src/layouts/BaseLayout.astro", import.meta.url), "utf8");
   assert.match(layout, /class="footer-support" href="https:\/\/l0g\.fr\/soutenir\/"/);
   assert.doesNotMatch(layout, /(?:donate|buy)\.stripe\.com/);
+});
+
+test("les conditions, la confidentialité et le canal de sécurité sont publics", async () => {
+  const layout = await readFile(new URL("../src/layouts/BaseLayout.astro", import.meta.url), "utf8");
+  const securityTxt = await readFile(new URL("../src/pages/.well-known/security.txt.ts", import.meta.url), "utf8");
+  assert.match(layout, /href="\/confidentialite\/"/);
+  assert.match(layout, /href="\/conditions-utilisation\/"/);
+  assert.match(layout, /href="\/securite\/"/);
+  assert.match(securityTxt, /Canonical: https:\/\/pa\.l0g\.fr\/\.well-known\/security\.txt/);
+  assert.match(securityTxt, /Policy: https:\/\/pa\.l0g\.fr\/securite\//);
 });

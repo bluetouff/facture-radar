@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Confidentialité | PA Check"
+  description="Données traitées par PA Check, fonctionnement local du vérificateur et informations techniques conservées par l’hébergement."
+>
+  <section class="shell page-hero compact-hero">
+    <span class="eyebrow">confidentialité · version du 27 août 2026</span>
+    <h1>Ce que PA Check reçoit, et ce qu’il ne reçoit pas.</h1>
+    <p>Le site fonctionne sans compte et sans traceur publicitaire. Les outils interactifs ont été conçus pour limiter les données transmises au strict nécessaire.</p>
+  </section>
+  <section class="shell policy-layout">
+    <article class="prose">
+      <h2>Vérifier une facture</h2>
+      <p>Le PDF Factur-X ou le XML sélectionné reste dans votre navigateur. Le fichier n’est ni téléversé, ni enregistré, ni envoyé au serveur MCP. Fermer ou recharger la page efface le résultat du contrôle.</p>
+
+      <h2>Utiliser les parcours</h2>
+      <p>Les réponses du diagnostic et du vérificateur d’outil restent dans votre navigateur. Le diagnostic peut placer des critères non personnels dans le fragment de l’URL afin de permettre un partage ; ce fragment n’est pas transmis au serveur.</p>
+
+      <h2>Interroger le serveur MCP</h2>
+      <p>Le serveur MCP reçoit uniquement les questions et critères bornés envoyés volontairement par le client MCP. Il n’accepte aucun document, SIREN, identifiant de compte ou outil d’écriture. Il ne consulte pas d’URL fournie par un utilisateur.</p>
+
+      <h2>Journaux techniques</h2>
+      <p>Comme la plupart des services web, l’hébergement produit des journaux techniques pouvant contenir l’adresse IP, la date, l’URL demandée, le code de réponse et le navigateur déclaré. Ils servent à la sécurité, au diagnostic et à la mesure technique du service. Ils ne sont ni enrichis avec un profil commercial, ni vendus.</p>
+
+      <h2>Liens externes et contact</h2>
+      <p>Les liens vers les sources et les plateformes mènent à des sites tiers qui appliquent leurs propres règles. Pour une question relative aux données ou demander l’examen d’un journal vous concernant, écrivez à <a href="mailto:olivier@l0g.fr">olivier@l0g.fr</a>. Les informations légales de l’éditeur sont disponibles sur <a href="https://l0g.fr/rgpd/">l0g.fr</a>.</p>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .compact-hero { padding-bottom: 2rem; }
+  .compact-hero h1 { max-width: 18ch; }
+  .policy-layout { padding-bottom: 3rem; }
+</style>

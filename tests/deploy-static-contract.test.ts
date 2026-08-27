@@ -35,3 +35,10 @@ test("la release statique contient les images sociales attendues", () => {
   assert.match(activationScript, /"og\/pa-check-facturation-electronique\.png",/);
   assert.match(activationScript, /allowed_suffixes = \{[^\n]*"\.png"/);
 });
+
+test("la release statique exige les surfaces publiques de conformité", () => {
+  assert.match(activationScript, /"\.well-known\/security\.txt",/);
+  assert.match(activationScript, /"conditions-utilisation\/index\.html",/);
+  assert.match(activationScript, /"confidentialite\/index\.html",/);
+  assert.match(activationScript, /"securite\/index\.html",/);
+});
