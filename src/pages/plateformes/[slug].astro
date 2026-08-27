@@ -198,7 +198,11 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
 
       <aside class="profile-ledger" aria-label="Repères documentaires">
         <header><span>FICHE ACTIVE</span><EvidenceBadge status="official" label="Liste DGFiP" /></header>
-        <div class="ledger-number"><strong>{linkedSources.length}</strong><span>sources publiques<br />reliées à cette fiche</span></div>
+        <a class="ledger-sources" href="#sources-reliees">
+          <span class="ledger-sources-icon"><InterfaceIcon name="proof" /></span>
+          <span><strong>Sources consultables</strong><small>Chaque information renvoie au document public utilisé.</small></span>
+          <InterfaceIcon name="arrow" />
+        </a>
         <dl>
           <div><dt>Immatriculation</dt><dd>{platform.registeredAt.value?.split("-").reverse().join(".")}</dd></div>
           <div><dt>État de la fiche</dt><dd>{documentationLabel}</dd></div>
@@ -384,7 +388,7 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
         <h2>Avant de signer</h2>
         <ol>{platform.importantUnknowns.map((unknown) => <li>{unknown}</li>)}</ol>
       </section>
-      <section class="source-panel">
+      <section class="source-panel" id="sources-reliees">
         <p class="panel-index">SOURCES RELIÉES</p>
         <h2>Remonter au document</h2>
         <ol>{linkedSources.map((source) => <li><a href={source.url} rel="noopener"><strong>{source.title}</strong><span>{source.publisher} · consulté le {source.accessedAt.split("-").reverse().join("/")}</span></a></li>)}</ol>
@@ -425,9 +429,13 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
   .profile-ledger::before { position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg,var(--profile-tone),#78d9c6); content: ""; }
   .profile-ledger header { display: flex; justify-content: space-between; gap: .6rem; align-items: center; border-bottom: 1px solid var(--line); padding: .15rem 0 .8rem; }
   .profile-ledger header > span { color: var(--profile-tone); font: 690 .68rem/1 var(--font-mono); letter-spacing: .06em; }
-  .ledger-number { display: flex; gap: .7rem; align-items: end; padding-block: 1.15rem; }
-  .ledger-number strong { color: var(--bright); font-size: 3.2rem; font-weight: 520; line-height: .85; letter-spacing: -.07em; }
-  .ledger-number span { color: var(--muted); font-size: .76rem; line-height: 1.4; }
+  .ledger-sources { display: grid; grid-template-columns: auto 1fr auto; gap: .7rem; align-items: center; margin-block: .8rem; border: 1px solid color-mix(in srgb,var(--profile-tone) 20%,var(--line)); border-radius: .8rem; padding: .72rem; background: color-mix(in srgb,var(--profile-tone) 5%,#fff); }
+  .ledger-sources-icon { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: .58rem; background: #fff; color: var(--profile-tone); box-shadow: 0 .3rem .9rem rgba(24,36,60,.07); }
+  .ledger-sources :global(svg) { width: .95rem; height: .95rem; }
+  .ledger-sources > :global(svg) { color: var(--muted); }
+  .ledger-sources strong,.ledger-sources small { display: block; }
+  .ledger-sources strong { color: var(--bright); font-size: .76rem; font-weight: 700; }
+  .ledger-sources small { margin-top: .16rem; color: var(--muted); font-size: .69rem; line-height: 1.4; }
   .profile-ledger dl { margin: 0; border-block: 1px solid var(--line); }
   .profile-ledger dl > div { display: flex; justify-content: space-between; gap: .7rem; padding-block: .58rem; }
   .profile-ledger dl > div + div { border-top: 1px solid var(--line); }

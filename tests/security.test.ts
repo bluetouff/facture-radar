@@ -152,3 +152,11 @@ test("le partage reste composé de liens sans SDK ni traceur embarqué", async (
   assert.match(layout, /noopener noreferrer/);
   assert.doesNotMatch(layout, /platform\.twitter|connect\.facebook|snap\.licdn|<iframe/i);
 });
+
+test("le nombre de sources d'une fiche n'est jamais présenté comme un score", async () => {
+  const page = await readFile(new URL("../src/pages/plateformes/[slug].astro", import.meta.url), "utf8");
+  assert.match(page, /class="ledger-sources" href="#sources-reliees"/);
+  assert.match(page, /Chaque information renvoie au document public utilisé/);
+  assert.match(page, /class="source-panel" id="sources-reliees"/);
+  assert.doesNotMatch(page, /class="ledger-number"/);
+});
