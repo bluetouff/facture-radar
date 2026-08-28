@@ -56,6 +56,8 @@ Sept ressources couvrent les questions, les fiches, l'annuaire officiel, les par
 
 Le serveur ne possède aucun outil d'écriture, n'appelle aucune URL fournie par le client et n'accepte aucun document. Il est lié à `127.0.0.1` derrière Apache. Les requêtes sont bornées et les critères sont validés par des schémas stricts.
 
+Le rapport public `https://pa.l0g.fr/api/mcp/usage` agrège sur 91 jours les appels MCP, outils invoqués, jours actifs et histogrammes de latence. Il ne conserve ni IP, cookie, session, empreinte, chaîne user-agent, contenu de requête ou réponse. Les sondes internes sont exclues ; les séries quotidiennes, la date du dernier appel et les familles client sous `k=5` restent masquées. La récurrence porte sur les jours actifs, jamais sur des utilisateurs uniques.
+
 Les conditions publiques sont disponibles sur les pages [Conditions d’utilisation](https://pa.l0g.fr/conditions-utilisation/), [Confidentialité](https://pa.l0g.fr/confidentialite/) et [Sécurité](https://pa.l0g.fr/securite/). Le contact de signalement responsable est également publié dans [`/.well-known/security.txt`](https://pa.l0g.fr/.well-known/security.txt).
 
 ## Statut des informations

@@ -1,12 +1,16 @@
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { once } from "node:events";
-import { resolve } from "node:path";
+import { mkdtemp, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join, resolve } from "node:path";
 import { Client, StreamableHTTPClientTransport } from "@modelcontextprotocol/client";
 
 const root = resolve(import.meta.dirname, "..");
 const port = 38_000 + (process.pid % 1_000);
 const endpoint = new URL(`http://127.0.0.1:${port}/api/mcp`);
+const usageDirectory = await mkdtemp(join(tmpdir(), "pa-check-mcp-smoke-"));
+const usagePath = join(usageDirectory, "usage.json");
 const child = spawn(process.execPath, [resolve(root, "dist-mcp/server.mjs")], {
   cwd: root,
   env: {
@@ -14,6 +18,7 @@ const child = spawn(process.execPath, [resolve(root, "dist-mcp/server.mjs")], {
     PA_CHECK_MCP_PORT: String(port),
     PA_CHECK_MCP_ALLOWED_HOSTS: "127.0.0.1,localhost",
     PA_CHECK_MCP_ALLOWED_ORIGINS: "127.0.0.1,localhost",
+    PA_CHECK_MCP_USAGE_FILE: usagePath,
   },
   stdio: ["ignore", "pipe", "pipe"],
 });
@@ -36,7 +41,9 @@ async function waitUntilReady() {
 
 async function inspectClient(versionNegotiation) {
   const client = new Client({ name: "pa-check-smoke", version: "0.1.0" }, versionNegotiation ? { versionNegotiation } : undefined);
-  const transport = new StreamableHTTPClientTransport(endpoint);
+  const transport = new StreamableHTTPClientTransport(endpoint, {
+    requestInit: { headers: { "user-agent": "pa-check-smoke/0.1.0" } },
+  });
   await client.connect(transport);
   try {
     const tools = await client.listTools();
@@ -101,8 +108,40 @@ try {
   await inspectClient(undefined);
   await inspectClient({ mode: { pin: "2026-07-28" } });
 
-  process.stdout.write("MCP_SMOKE_OK legacy+2026 tools=5 resources=7 boundaries=ok\n");
+  const emptyUsage = await (await fetch(new URL("/api/mcp/usage", endpoint))).json();
+  assert.equal(emptyUsage.enabled, true);
+  assert.equal(emptyUsage.storage_healthy, true);
+  assert.equal(emptyUsage.schema_version, "1.0.0");
+  assert.equal(emptyUsage.minimum_public_cohort, 5);
+  assert.equal(emptyUsage.totals.requests, 0);
+
+  const externalInitialize = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      accept: "application/json, text/event-stream",
+      "content-type": "application/json",
+      "user-agent": "Claude Desktop",
+    },
+    body: JSON.stringify({
+      jsonrpc: "2.0",
+      id: 81,
+      method: "initialize",
+      params: {
+        protocolVersion: "2025-06-18",
+        capabilities: {},
+        clientInfo: { name: "Claude Desktop", version: "1.0.0" },
+      },
+    }),
+  });
+  assert.equal(externalInitialize.status, 200);
+  const measuredUsage = await (await fetch(new URL("/api/mcp/usage", endpoint))).json();
+  assert.equal(measuredUsage.totals.requests, 1);
+  assert.equal(measuredUsage.totals.initializations, 1);
+  assert.deepEqual(measuredUsage.clients, []);
+
+  process.stdout.write("MCP_SMOKE_OK legacy+2026 tools=5 resources=7 boundaries=ok usage=private\n");
 } finally {
   child.kill("SIGTERM");
   await Promise.race([once(child, "exit"), new Promise((resolvePromise) => setTimeout(resolvePromise, 2_000))]);
+  await rm(usageDirectory, { recursive: true, force: true });
 }

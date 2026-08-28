@@ -3,6 +3,7 @@ import { createMcpHandler } from "@modelcontextprotocol/server";
 import { hostHeaderValidation, originValidation, toNodeHandler } from "@modelcontextprotocol/node";
 import { corpusManifest, type CorpusRevision } from "./corpus.ts";
 import { createPaCheckMcpServer } from "./server.ts";
+import { createMcpUsageStore } from "./usage-telemetry.ts";
 
 declare const __PA_CHECK_BUILD_SHA__: string | undefined;
 declare const __PA_CHECK_BUILD_TIME__: string | undefined;
@@ -13,6 +14,8 @@ const MAX_BODY_BYTES = 128 * 1024;
 const REQUEST_TIMEOUT_MS = 15_000;
 const MCP_PATH = "/api/mcp";
 const MCP_PATHS = new Set([MCP_PATH, `${MCP_PATH}/`]);
+const MCP_USAGE_PATH = `${MCP_PATH}/usage`;
+const MCP_USAGE_PATHS = new Set([MCP_USAGE_PATH, `${MCP_USAGE_PATH}/`]);
 const HEALTH_PATH = "/healthz";
 
 function safeBuildValue(name: "sha" | "time"): string {
@@ -105,6 +108,10 @@ export function createPaCheckHttpServer() {
   const nodeHandler = toNodeHandler(handler, {
     onerror: () => undefined,
   });
+  const usageStore = createMcpUsageStore({
+    path: process.env.PA_CHECK_MCP_USAGE_FILE,
+    onError: (error) => process.stderr.write(`[pa-check-mcp] usage telemetry failed: ${error instanceof Error ? error.message : "unknown"}\n`),
+  });
 
   const httpServer = createServer(async (req, res) => {
     setResponseHeaders(res);
@@ -119,6 +126,16 @@ export function createPaCheckHttpServer() {
         checkedAt: manifest.checkedAt,
         counts: manifest.counts,
       });
+      return;
+    }
+
+    if (MCP_USAGE_PATHS.has(requestUrl.pathname)) {
+      if (req.method !== "GET") {
+        res.setHeader("allow", "GET");
+        writeJson(res, 405, { error: "Method not allowed" });
+        return;
+      }
+      writeJson(res, 200, await usageStore.publicReport());
       return;
     }
 
@@ -145,10 +162,12 @@ export function createPaCheckHttpServer() {
     }
 
     const controller = new AbortController();
+    const startedAt = performance.now();
     const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
     req.once("aborted", () => controller.abort());
+    let parsedBody: unknown;
     try {
-      const parsedBody = req.method === "POST" ? await readJsonBody(req) : undefined;
+      parsedBody = req.method === "POST" ? await readJsonBody(req) : undefined;
       if (controller.signal.aborted) throw new RequestBoundaryError(408, "Délai dépassé");
       await nodeHandler(req, res, parsedBody);
     } catch (error) {
@@ -161,6 +180,12 @@ export function createPaCheckHttpServer() {
       }
     } finally {
       clearTimeout(timeout);
+      usageStore.recordRequest({
+        body: parsedBody,
+        durationMs: performance.now() - startedAt,
+        statusCode: res.statusCode,
+        userAgent: req.headers["user-agent"],
+      });
     }
   });
 
@@ -173,19 +198,21 @@ export function createPaCheckHttpServer() {
     socket.end("HTTP/1.1 400 Bad Request\r\nConnection: close\r\nContent-Length: 0\r\n\r\n");
   });
 
-  return { httpServer, handler };
+  return { httpServer, handler, usageStore };
 }
 
 export function startPaCheckHttpServer(): void {
   const port = parsePort(process.env.PA_CHECK_MCP_PORT);
-  const { httpServer, handler } = createPaCheckHttpServer();
+  const { httpServer, handler, usageStore } = createPaCheckHttpServer();
   httpServer.listen(port, HOST, () => {
     process.stdout.write(`PA_CHECK_MCP_READY ${HOST}:${port} ${MCP_REVISION.revision}\n`);
   });
 
   const shutdown = (): void => {
     httpServer.close(() => {
-      void handler.close().finally(() => process.exit(0));
+      void usageStore.flush()
+        .then(() => handler.close())
+        .finally(() => process.exit(0));
     });
     setTimeout(() => process.exit(1), 5_000).unref();
   };

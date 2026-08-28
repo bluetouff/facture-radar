@@ -227,6 +227,7 @@ Environment=PA_CHECK_MCP_PORT=${MCP_PORT}
 Environment=PA_CHECK_REVISION=${EXPECTED_SHA}
 Environment=PA_CHECK_MCP_ALLOWED_HOSTS=127.0.0.1,localhost,pa.l0g.fr
 Environment=PA_CHECK_MCP_ALLOWED_ORIGINS=127.0.0.1,localhost,pa.l0g.fr
+Environment=PA_CHECK_MCP_USAGE_FILE=/var/lib/pa-check-mcp/usage.json
 Restart=on-failure
 RestartSec=3s
 TimeoutStartSec=20s
@@ -255,6 +256,8 @@ SystemCallArchitectures=native
 CapabilityBoundingSet=
 AmbientCapabilities=
 UMask=0077
+StateDirectory=pa-check-mcp
+StateDirectoryMode=0700
 LimitNOFILE=1024
 TasksMax=64
 MemoryMax=256M
@@ -362,6 +365,12 @@ if ! LOCAL_HEALTH="$(curl --max-time 5 -fsS "http://127.0.0.1:${MCP_PORT}/health
   rollback 1
 fi
 python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("status")=="ok" or sys.exit("Sante MCP invalide"); data.get("revision",{}).get("revision")==sys.argv[1] or sys.exit("Revision MCP live inattendue"); data.get("counts",{}).get("enrichedPlatforms")==148 or sys.exit("Corpus MCP live inattendu")' "${EXPECTED_SHA}" <<<"${LOCAL_HEALTH}"
+
+if ! LOCAL_USAGE="$(curl --max-time 5 -fsS "http://127.0.0.1:${MCP_PORT}/api/mcp/usage")"; then
+  echo "Echec: le rapport d'usage MCP local est indisponible." >&2
+  rollback 1
+fi
+python3 -c 'import json,sys; data=json.load(sys.stdin); data.get("enabled") is True or sys.exit("Collecte MCP inactive"); data.get("schema_version")=="1.0.0" or sys.exit("Schema usage MCP inattendu"); data.get("window",{}).get("retention_days")==91 or sys.exit("Retention usage MCP inattendue"); data.get("minimum_public_cohort")==5 or sys.exit("Seuil usage MCP inattendu")' <<<"${LOCAL_USAGE}"
 
 apache2ctl configtest
 systemctl reload apache2
