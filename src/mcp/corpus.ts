@@ -40,6 +40,8 @@ export interface CorpusRevision {
 }
 
 export interface PlatformSearchInput extends DiagnosticInput {
+  /** Champ historique accepté pour ne pas casser les clients MCP existants. Il n'influence aucun résultat. */
+  priorities?: Array<"simplicity" | "ecosystem" | "documentation" | "reversibility">;
   limit: number;
 }
 
@@ -295,15 +297,20 @@ export function getPlatform(slugOrName: string) {
 }
 
 export function findPlatforms(input: PlatformSearchInput) {
-  const { limit, ...diagnosticInput } = input;
+  const { limit, priorities: _ignoredPriorities, ...diagnosticInput } = input;
   const results = runDiagnostic(platforms, diagnosticInput);
   const eligible = results.filter((result) => result.eligible);
   const selected = (eligible.length > 0 ? eligible : results).slice(0, limit);
+  const isTruncated = selected.length < (eligible.length > 0 ? eligible.length : results.length);
 
   return {
     criteria: diagnosticInput,
     eligibleCount: eligible.length,
     resultType: eligible.length > 0 ? "matching-options" : "points-to-resolve",
+    presentation: "alphabetical-no-ranking" as const,
+    ordering: "alphabetical" as const,
+    ranking: false,
+    truncated: isTruncated,
     options: selected.map((result) => ({
       slug: result.platform.slug,
       name: result.platform.displayName,
@@ -317,8 +324,8 @@ export function findPlatforms(input: PlatformSearchInput) {
       sources: expandSources(uniqueSourceIds(result.platform)),
     })),
     note: eligible.length > 0
-      ? "Ces options répondent aux critères documentés. Vérifiez le contrat et l'activation correspondant à votre offre."
-      : "Aucune fiche ne répond à tous les critères documentés. Les options affichées indiquent ce qui bloque ou reste à confirmer.",
+      ? `Toutes les options confirmées ont le même statut. ${isTruncated ? `La réponse affiche les ${selected.length} premières par ordre alphabétique sur ${eligible.length}. ` : ""}Aucun score ni classement caché. Vérifiez le contrat et l'activation correspondant à votre offre.`
+      : `Aucune fiche ne répond à tous les critères documentés. ${isTruncated ? `La réponse affiche les ${selected.length} premières fiches par ordre alphabétique. ` : ""}Les options indiquent ce qui bloque ou reste à confirmer, sans classement.`,
   };
 }
 

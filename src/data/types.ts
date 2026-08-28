@@ -146,13 +146,11 @@ export interface DiagnosticInput {
   needsAccountantAccess: boolean;
   needsApi: boolean;
   needsInternationalReporting: boolean;
-  priorities: Array<"simplicity" | "ecosystem" | "documentation" | "reversibility">;
 }
 
 export interface MatchResult {
   platform: Platform;
   eligible: boolean;
-  compatibility: number;
   reasons: string[];
   blockers: string[];
   unknowns: string[];

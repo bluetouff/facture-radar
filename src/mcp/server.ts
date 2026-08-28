@@ -46,7 +46,7 @@ function platformText(platform: NonNullable<ReturnType<typeof getPlatform>>): st
 
 function matchingText(result: ReturnType<typeof findPlatforms>): string {
   const heading = result.eligibleCount > 0
-    ? `${result.eligibleCount} option(s) répondent aux critères documentés.`
+    ? `${result.eligibleCount} option(s) répondent aux critères documentés, sans classement.`
     : "Aucune fiche ne répond à tous les critères documentés.";
   const options = result.options.map((option) => {
     const reason = option.fitsAllCriteria
@@ -149,7 +149,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
 
   server.registerTool("find_platforms", {
     title: "Trouver des plateformes adaptées",
-    description: "Applique les critères publics de PA Check aux 148 fiches enrichies. Il ne s'agit pas d'un classement commercial. Si un critère obligatoire n'est pas documenté, l'outil le signale au lieu de supposer un oui.",
+    description: "Applique les critères publics de PA Check aux 148 fiches enrichies. Toutes les réponses confirmées ont le même statut et sont renvoyées par ordre alphabétique, sans score ni classement caché. Si un critère obligatoire n'est pas documenté, l'outil le signale au lieu de supposer un oui.",
     inputSchema: z.object({
       size: z.enum(["micro", "tpe", "pme", "eti", "ge"]).describe("Taille de l'entreprise"),
       monthlyInvoices: z.number().int().min(0).max(100_000).default(10).describe("Total mensuel approximatif des factures d'achat et de vente"),
@@ -160,9 +160,9 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
       needsInternationalReporting: z.boolean().default(false).describe("Exiger l'e-reporting B2C ou international documenté"),
       priorities: z.array(z.enum(["simplicity", "ecosystem", "documentation", "reversibility"]))
         .max(2)
-        .default(["simplicity"])
-        .describe("Une ou deux priorités maximum"),
-      limit: z.number().int().min(1).max(10).default(5),
+        .default([])
+        .describe("Champ historique accepté pour compatibilité ; il n'influence plus l'ordre des résultats"),
+      limit: z.number().int().min(1).max(50).default(10).describe("Nombre maximal de fiches renvoyées, par ordre alphabétique et sans classement"),
     }).strict(),
     annotations: readOnlyAnnotations,
   }, async (input) => {

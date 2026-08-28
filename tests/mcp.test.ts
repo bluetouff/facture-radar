@@ -50,7 +50,7 @@ test("une fiche ne transforme pas une inconnue en réponse positive", () => {
   assert.match(qonto.functions.eReporting.note ?? "", /accès bêta limité/);
 });
 
-test("la recherche de plateformes renvoie des options traçables et les blocages", () => {
+test("la recherche de plateformes renvoie des options traçables sans classement caché", () => {
   const result = findPlatforms({
     size: "micro",
     monthlyInvoices: 20,
@@ -65,6 +65,30 @@ test("la recherche de plateformes renvoie des options traçables et les blocages
   assert.ok(result.eligibleCount > 0);
   assert.ok(result.options.every((option) => option.sources.length > 0));
   assert.ok(result.options.every((option) => option.fitsAllCriteria));
+  assert.equal(result.ordering, "alphabetical");
+  assert.equal(result.ranking, false);
+  assert.equal(result.presentation, "alphabetical-no-ranking");
+  assert.deepEqual(
+    result.options.map((option) => option.name),
+    result.options.map((option) => option.name).sort((left, right) => left.localeCompare(right, "fr")),
+  );
+});
+
+test("les anciennes priorités MCP sont acceptées mais n'influencent plus les résultats", () => {
+  const common = {
+    size: "micro" as const,
+    monthlyInvoices: 20,
+    freeOnly: true,
+    noBankAccount: false,
+    needsAccountantAccess: false,
+    needsApi: false,
+    needsInternationalReporting: false,
+    limit: 10,
+  };
+  const simplicity = findPlatforms({ ...common, priorities: ["simplicity"] });
+  const documentation = findPlatforms({ ...common, priorities: ["documentation"] });
+  assert.deepEqual(simplicity.options.map((option) => option.slug), documentation.options.map((option) => option.slug));
+  assert.deepEqual(simplicity.criteria, documentation.criteria);
 });
 
 test("l'annuaire MCP distingue approuvé et en attente sans exposer les contacts", () => {

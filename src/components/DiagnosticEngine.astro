@@ -43,9 +43,13 @@
     <div><p class="mono-label">votre réponse</p><h2 id="result-title"></h2><p id="result-context"></p></div>
     <button type="button" class="share-button">Copier le lien</button>
   </header>
-  <div id="eligible-results" class="result-grid"></div>
+  <details class="eligible-results" data-eligible-results open>
+    <summary id="eligible-summary"></summary>
+    <p class="equal-footing">Même statut pour toutes : ordre alphabétique, aucun score ni classement caché.</p>
+    <div id="eligible-results" class="eligible-list"></div>
+  </details>
   <details class="excluded-results" data-other-results>
-    <summary>Voir toutes les autres plateformes étudiées</summary>
+    <summary>Voir les fiches où ce critère n'est pas confirmé</summary>
     <div id="excluded-list"></div>
   </details>
 </section>
@@ -61,6 +65,8 @@
   const resultTitle = document.querySelector<HTMLElement>("#result-title");
   const resultContext = document.querySelector<HTMLElement>("#result-context");
   const shareButton = document.querySelector<HTMLButtonElement>(".share-button");
+  const eligibleDetails = document.querySelector<HTMLDetailsElement>("[data-eligible-results]");
+  const eligibleSummary = document.querySelector<HTMLElement>("#eligible-summary");
   const otherResults = document.querySelector<HTMLDetailsElement>("[data-other-results]");
   const otherResultsSummary = otherResults?.querySelector<HTMLElement>("summary");
 
@@ -89,9 +95,6 @@
     needsAccountantAccess: input.constraint === "accountant",
     needsApi: input.constraint === "api",
     needsInternationalReporting: input.constraint === "reporting",
-    priorities: input.constraint === "accountant" || input.constraint === "api"
-        ? ["ecosystem", "documentation"]
-        : ["documentation"],
   });
 
   const inputToParams = (input: ReturnType<typeof getInput>) => {
@@ -134,38 +137,35 @@
     reporting: /report|international|b2c|particulier/i,
   };
 
-  const renderEligible = (result: ReturnType<typeof runDiagnostic>[number], rank: number, constraint: string) => {
+  const renderEligible = (result: ReturnType<typeof runDiagnostic>[number], constraint: string) => {
     const article = document.createElement("article");
-    article.className = "result-card";
-    const top = document.createElement("div");
-    top.className = "result-top";
-    top.append(text("span", `OPTION ${String(rank + 1).padStart(2, "0")}`, "rank"));
-    top.append(text("strong", fitLabels[constraint] ?? "Critère documenté", "compatibility"));
-    article.append(top);
-    article.append(text("h3", result.platform.displayName));
-    article.append(text("p", result.platform.summary, "result-summary"));
-    const price = document.createElement("div");
-    price.className = "price";
-    price.append(text("small", "Budget publié"), text("strong", result.platform.pricing.value?.label || "Tarif public non trouvé"));
-    article.append(price);
+    article.className = "eligible-row";
+    const heading = document.createElement("div");
+    heading.className = "eligible-heading";
+    const identity = document.createElement("div");
+    identity.append(text("h3", result.platform.displayName), text("p", result.platform.summary));
+    heading.append(identity, text("span", fitLabels[constraint] ?? "Critère confirmé", "fit-label"));
+    article.append(heading);
 
-    const reasonTitle = text("h4", "Ce qui correspond à votre besoin");
-    const reasons = document.createElement("ul");
-    const usefulReasons = result.reasons.filter((reason) => reason !== "Informations publiques suffisamment détaillées");
-    for (const reason of usefulReasons.slice(0, 3)) reasons.append(text("li", reason));
-    article.append(reasonTitle, reasons);
+    const facts = document.createElement("div");
+    facts.className = "eligible-facts";
+    const price = document.createElement("div");
+    price.append(text("small", "Budget publié"), text("strong", result.platform.pricing.value?.label || "Tarif public non trouvé"));
+    const reason = document.createElement("div");
+    reason.append(text("small", "Pourquoi elle apparaît"), text("strong", result.reasons.slice(0, 2).join(" · ")));
+    facts.append(price, reason);
 
     const unknownPattern = unknownPatterns[constraint];
-    const relevantUnknowns = unknownPattern
+    const relevantUnknowns = [...result.unknowns, ...(unknownPattern
       ? result.platform.importantUnknowns.filter((unknown) => unknownPattern.test(unknown))
-      : [];
+      : [])].filter((value, index, values) => values.indexOf(value) === index);
     if (relevantUnknowns.length) {
-      article.append(text("h4", "À vérifier avant de choisir"));
-      const unknowns = document.createElement("ul");
-      unknowns.className = "unknown-list";
-      for (const unknown of relevantUnknowns.slice(0, 2)) unknowns.append(text("li", unknown));
-      article.append(unknowns);
+      const check = document.createElement("div");
+      check.className = "eligible-check";
+      check.append(text("small", "À vérifier"), text("strong", relevantUnknowns.slice(0, 2).join(" · ")));
+      facts.append(check);
     }
+    article.append(facts);
 
     const link = document.createElement("a");
     link.href = `/plateformes/${result.platform.slug}/`;
@@ -180,12 +180,9 @@
     row.className = "excluded-row";
     const heading = document.createElement("div");
     heading.append(text("strong", result.platform.displayName));
-    heading.append(text("span", result.eligible ? "CORRESPOND AUSSI" : "CRITÈRE NON CONFIRMÉ"));
+    heading.append(text("span", "CRITÈRE NON CONFIRMÉ"));
     const list = document.createElement("ul");
-    const details = result.eligible
-      ? result.reasons.filter((reason) => reason !== "Informations publiques suffisamment détaillées")
-      : result.blockers;
-    for (const detail of details.slice(0, 2)) list.append(text("li", detail));
+    for (const detail of result.blockers.slice(0, 2)) list.append(text("li", detail));
     const link = document.createElement("a");
     link.href = `/plateformes/${result.platform.slug}/`;
     link.className = "excluded-link";
@@ -199,26 +196,32 @@
     if (!form || !resultsSection || !eligibleContainer || !excludedContainer || !resultTitle || !resultContext) return;
     const input = getInput();
     const matches = runDiagnostic(platforms, toDiagnosticInput(input) as Parameters<typeof runDiagnostic>[1]);
-    const { eligibleCount, featured, remaining } = partitionDiagnosticResults(matches);
-    const additionalEligibleCount = remaining.filter((result) => result.eligible).length;
-    eligibleContainer.replaceChildren(...featured.map((result, rank) => renderEligible(result, rank, input.constraint)));
-    excludedContainer.replaceChildren(...remaining.map(renderExcluded));
+    const { eligible, unconfirmed } = partitionDiagnosticResults(matches);
+    const eligibleCount = eligible.length;
+    eligibleContainer.replaceChildren(...eligible.map((result) => renderEligible(result, input.constraint)));
+    excludedContainer.replaceChildren(...unconfirmed.map(renderExcluded));
     const sizeLabel = sizeLabels[input.size] ?? "votre entreprise";
     const priorityLabel = priorityLabels[input.constraint] ?? "critère choisi";
     if (eligibleCount) {
-      resultTitle.textContent = `${eligibleCount} option${eligibleCount > 1 ? "s" : ""} correspondent à votre situation`;
-      resultContext.textContent = `Pour ${sizeLabel}, ${input.monthlyInvoices.toLocaleString("fr-FR")} facture${input.monthlyInvoices > 1 ? "s" : ""} par mois et votre priorité « ${priorityLabel} ». Voici trois options à regarder d'abord, puis les ${remaining.length} autres plateformes étudiées.`;
+      resultTitle.textContent = `${eligibleCount} plateforme${eligibleCount > 1 ? "s" : ""} confirme${eligibleCount > 1 ? "nt" : ""} ce critère`;
+      const volumeDetail = input.constraint === "free"
+        ? "Le volume a été comparé aux plafonds gratuits publiés."
+        : "Le volume signale les dépassements documentés mais ne crée aucun classement.";
+      resultContext.textContent = `Pour ${sizeLabel} et votre besoin « ${priorityLabel} ». ${volumeDetail} Toutes les réponses confirmées sont présentées par ordre alphabétique.`;
     }
     else {
       resultTitle.textContent = "Aucune des 148 fiches ne confirme ce critère";
       resultContext.textContent = `Pour ${sizeLabel}, le critère « ${priorityLabel} » comporte un blocage ou une information manquante dans chaque fiche étudiée.`;
       eligibleContainer.append(text("p", "Essayez une autre priorité ou consultez les informations manquantes ci-dessous.", "no-result"));
     }
+    if (eligibleDetails && eligibleSummary) {
+      eligibleDetails.hidden = eligibleCount === 0;
+      eligibleDetails.open = eligibleCount <= 12;
+      eligibleSummary.textContent = `Voir les ${eligibleCount} plateforme${eligibleCount > 1 ? "s" : ""} qui répond${eligibleCount > 1 ? "ent" : ""} au critère, sans classement`;
+    }
     if (otherResults && otherResultsSummary) {
-      otherResults.hidden = remaining.length === 0;
-      otherResultsSummary.textContent = additionalEligibleCount
-        ? `Voir les ${remaining.length} autres plateformes, dont ${additionalEligibleCount} correspondent aussi`
-        : `Voir les ${remaining.length} autres plateformes étudiées`;
+      otherResults.hidden = unconfirmed.length === 0;
+      otherResultsSummary.textContent = `Voir les ${unconfirmed.length} fiche${unconfirmed.length > 1 ? "s" : ""} où ce critère n'est pas confirmé`;
     }
     resultsSection.hidden = false;
     const params = inputToParams(input);
@@ -292,27 +295,26 @@
   .results h2 { margin: 0.55rem 0 0; color: var(--bright); font-size: clamp(1.6rem, 4vw, 2.5rem); letter-spacing: -0.045em; }
   #result-context { max-width: 48rem; margin: .55rem 0 0; color: var(--muted); font-size: .9rem; }
   .share-button { border: 1px solid var(--line); border-radius: .65rem; padding: 0.7rem 0.85rem; background: var(--surface); color: var(--signal); cursor: pointer; font: 650 0.75rem/1 var(--font-sans); }
-  .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.3rem; }
-  .result-card { position: relative; display: flex; overflow: hidden; min-width: 0; min-height: 20rem; flex-direction: column; border: 1px solid color-mix(in srgb, var(--signal) 18%, var(--line)); border-radius: 1.15rem; padding: 1.1rem; background: linear-gradient(145deg, var(--signal-soft), #fff 35%, #fff); box-shadow: 0 .7rem 2rem rgba(41,57,86,.06); }
-  .result-card::after { position: absolute; top: -4rem; right: -4rem; width: 9rem; height: 9rem; border: 1px solid rgba(64,91,216,.14); border-radius: 50%; box-shadow: 0 0 0 1.3rem rgba(64,91,216,.035); content: ""; }
-  .result-card > * { position: relative; z-index: 1; }
-  .result-top { display: flex; justify-content: space-between; gap: 0.5rem; }
-  .rank { color: var(--accent); font: 730 0.68rem/1 var(--font-sans); letter-spacing: .04em; }
-  .compatibility { border-radius: 999px; padding: .3rem .45rem; background: var(--success-soft); color: var(--success); font: 680 0.7rem/1 var(--font-sans); }
-  .result-card h3 { margin: 1rem 0 0; color: var(--bright); font-size: 1.4rem; }
-  .result-summary { min-height: 4.8rem; color: var(--muted); font-size: .84rem; }
-  .result-card .price { display: grid; gap: .25rem; min-height: 4.5rem; border-block: 1px solid var(--line); padding-block: .75rem; }
-  .result-card .price small { color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
-  .result-card .price strong { color: var(--paper); font-size: .84rem; line-height: 1.45; }
-  .result-card h4 { margin: 1rem 0 0.45rem; color: var(--paper); font-size: 0.8rem; }
-  .result-card ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.78rem; }
-  .result-card li + li { margin-top: 0.35rem; }
-  .unknown-list li::marker { color: var(--amber); }
-  .result-link { display: flex; justify-content: space-between; margin-top: auto; border-radius: .7rem; padding: .75rem; background: var(--signal-soft); color: var(--signal); font-size: .75rem; font-weight: 720; }
+  .eligible-results,.excluded-results { overflow: hidden; margin-top: 1rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
+  .eligible-results { border-color: color-mix(in srgb,var(--success) 25%,var(--line)); }
+  .eligible-results summary,.excluded-results summary { padding: 1rem; color: var(--paper); cursor: pointer; font-size: .8rem; font-weight: 670; }
+  .eligible-results[open] summary,.excluded-results[open] summary { border-bottom: 1px solid var(--line); }
+  .equal-footing { margin: 0; border-bottom: 1px solid var(--line); padding: .7rem 1rem; background: var(--success-soft); color: color-mix(in srgb,var(--success) 70%,var(--paper)); font-size: .74rem; line-height: 1.5; }
+  .eligible-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .eligible-row { min-width: 0; border-bottom: 1px solid var(--line); padding: 1rem; background: rgba(255,255,255,.7); }
+  .eligible-row:nth-child(odd) { border-right: 1px solid var(--line); }
+  .eligible-heading { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .8rem; align-items: start; }
+  .eligible-heading h3 { margin: 0; color: var(--bright); font-size: 1rem; }
+  .eligible-heading p { margin: .3rem 0 0; color: var(--muted); font-size: .76rem; line-height: 1.45; }
+  .fit-label { border-radius: 999px; padding: .3rem .45rem; background: var(--success-soft); color: var(--success); font: 680 .64rem/1 var(--font-sans); white-space: nowrap; }
+  .eligible-facts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .65rem; margin-top: .8rem; border-top: 1px solid var(--line); padding-top: .7rem; }
+  .eligible-facts > div { display: grid; gap: .2rem; min-width: 0; }
+  .eligible-facts small { color: var(--muted); font-size: .64rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+  .eligible-facts strong { color: var(--paper); font-size: .72rem; font-weight: 620; line-height: 1.45; }
+  .eligible-check { grid-column: 1 / -1; border-left: 2px solid var(--amber); padding-left: .55rem; }
+  .result-link { display: flex; justify-content: space-between; margin-top: .8rem; border-radius: .65rem; padding: .65rem .72rem; background: var(--signal-soft); color: var(--signal); font-size: .72rem; font-weight: 720; }
   .result-link::after { content: "→"; }
-  .no-result { grid-column: 1 / -1; border-left: 3px solid var(--amber); padding: 1rem; background: var(--surface); color: var(--paper); }
-  .excluded-results { overflow: hidden; margin-top: 1rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
-  .excluded-results summary { padding: 1rem; color: var(--paper); cursor: pointer; font-size: .8rem; font-weight: 670; }
+  .no-result { border-left: 3px solid var(--amber); padding: 1rem; background: var(--surface); color: var(--paper); }
   .excluded-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding: 0.8rem 1rem; }
   .excluded-row > div { display: grid; justify-items: start; gap: 0.35rem; }
   .excluded-row strong { color: var(--bright); }
@@ -320,6 +322,6 @@
   .excluded-link { color: var(--signal); font-size: .76rem; font-weight: 700; }
   .excluded-row ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.78rem; }
   .excluded-row li::marker { color: var(--accent); }
-  @media (max-width: 850px) { .result-grid { grid-template-columns: 1fr; } .result-summary, .result-card .price { min-height: 0; } .constraint-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 620px) { .diagnostic-head, .question-grid, .constraint-grid { grid-template-columns: 1fr; } .question-grid .wide { grid-column: auto; } .excluded-row { grid-template-columns: 1fr; } .results > header { align-items: start; flex-direction: column; } }
+  @media (max-width: 850px) { .eligible-list { grid-template-columns: 1fr; } .eligible-row:nth-child(odd) { border-right: 0; } .constraint-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .diagnostic-head, .question-grid, .constraint-grid { grid-template-columns: 1fr; } .question-grid .wide { grid-column: auto; } .eligible-heading,.eligible-facts,.excluded-row { grid-template-columns: 1fr; } .fit-label { justify-self: start; } .eligible-check { grid-column: auto; } .results > header { align-items: start; flex-direction: column; } }
 </style>

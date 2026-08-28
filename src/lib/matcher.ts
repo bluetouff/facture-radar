@@ -1,5 +1,4 @@
 import type { DiagnosticInput, Evidence, MatchResult, Platform } from "../data/types.ts";
-import { documentationCoverage } from "./evidence.ts";
 
 function trustedValue<T>(evidence: Evidence<T>): T | null {
   if (evidence.value === null) return null;
@@ -43,8 +42,6 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
   const blockers: string[] = [];
   const reasons: string[] = [];
   const unknowns: string[] = [];
-  let preferencePoints = 0;
-  let preferenceTotal = 0;
 
   if (!platform.targets.includes(input.size)) {
     blockers.push("Cette offre ne vise pas votre taille d'entreprise");
@@ -104,36 +101,9 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
     }
   }
 
-  for (const priority of input.priorities) {
-    preferenceTotal += 1;
-    if (priority === "simplicity" && pricing?.monthlyFrom === 0 && pricing.freeFor.includes(input.size)) {
-      preferencePoints += 1;
-      reasons.push("Offre gratuite conçue pour les petites structures");
-    }
-    if (priority === "ecosystem" && platform.ecosystem.length >= 3) {
-      preferencePoints += 1;
-      reasons.push("Nombreuses intégrations disponibles");
-    }
-    if (priority === "documentation" && documentationCoverage(platform) >= 60) {
-      preferencePoints += 1;
-      reasons.push("Informations publiques suffisamment détaillées");
-    }
-    if (priority === "reversibility" && trustedValue(platform.exportDocumented) === true && trustedValue(platform.commitmentMonths) === 0) {
-      preferencePoints += 1;
-      reasons.push("Export disponible et aucun engagement minimal indiqué");
-    }
-  }
-
-  const mandatoryTotal = 1 + Number(input.freeOnly) + Number(input.noBankAccount)
-    + Number(input.needsAccountantAccess) + Number(input.needsApi) + Number(input.needsInternationalReporting);
-  const mandatoryMet = Math.max(0, mandatoryTotal - blockers.length);
-  const denominator = mandatoryTotal + preferenceTotal;
-  const compatibility = denominator === 0 ? 0 : Math.round(((mandatoryMet + preferencePoints) / denominator) * 100);
-
   return {
     platform,
     eligible: blockers.length === 0,
-    compatibility,
     reasons,
     blockers,
     unknowns: [...new Set(unknowns)],
@@ -146,22 +116,16 @@ export function runDiagnostic(platforms: Platform[], input: DiagnosticInput): Ma
     .map((platform) => matchPlatform(platform, input))
     .sort((a, b) => {
       if (a.eligible !== b.eligible) return a.eligible ? -1 : 1;
-      if (b.compatibility !== a.compatibility) return b.compatibility - a.compatibility;
-      const coverageDifference = documentationCoverage(b.platform) - documentationCoverage(a.platform);
-      if (coverageDifference !== 0) return coverageDifference;
       return a.platform.displayName.localeCompare(b.platform.displayName, "fr");
     });
 }
 
-export function partitionDiagnosticResults(results: MatchResult[], featuredLimit = 3): {
-  eligibleCount: number;
-  featured: MatchResult[];
-  remaining: MatchResult[];
+export function partitionDiagnosticResults(results: MatchResult[]): {
+  eligible: MatchResult[];
+  unconfirmed: MatchResult[];
 } {
-  const eligible = results.filter((result) => result.eligible);
   return {
-    eligibleCount: eligible.length,
-    featured: eligible.slice(0, featuredLimit),
-    remaining: [...eligible.slice(featuredLimit), ...results.filter((result) => !result.eligible)],
+    eligible: results.filter((result) => result.eligible),
+    unconfirmed: results.filter((result) => !result.eligible),
   };
 }

@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { platforms } from "../src/data/platforms.ts";
 import { partitionDiagnosticResults, runDiagnostic } from "../src/lib/matcher.ts";
 import type { DiagnosticInput } from "../src/data/types.ts";
@@ -12,7 +13,6 @@ const base: DiagnosticInput = {
   needsAccountantAccess: false,
   needsApi: false,
   needsInternationalReporting: false,
-  priorities: ["simplicity", "documentation"],
 };
 
 test("un indépendant obtient plusieurs parcours gratuits sans compte bancaire", () => {
@@ -24,27 +24,27 @@ test("un indépendant obtient plusieurs parcours gratuits sans compte bancaire",
   assert.ok(eligible.some((result) => result.platform.slug === "abby"));
 });
 
-test("le parcours garde toutes les options compatibles après les trois fiches mises en avant", () => {
+test("le parcours sépare toutes les réponses confirmées sans fabriquer de top 3", () => {
   const results = runDiagnostic(platforms, {
     ...base,
     freeOnly: false,
     noBankAccount: false,
-    priorities: ["simplicity", "documentation"],
   });
   const partition = partitionDiagnosticResults(results);
-  assert.equal(partition.featured.length, 3);
-  assert.equal(partition.featured.length + partition.remaining.length, results.length);
-  assert.ok(partition.remaining.some((result) => result.eligible));
+  assert.ok(partition.eligible.length > 3);
+  assert.equal(partition.eligible.length + partition.unconfirmed.length, results.length);
+  assert.ok(partition.eligible.every((result) => result.eligible));
+  assert.ok(partition.unconfirmed.every((result) => !result.eligible));
 });
 
-test("à critères égaux les fiches les mieux renseignées sont présentées en premier", () => {
+test("les réponses confirmées sont alphabétiques et non classées par documentation", () => {
   const results = runDiagnostic(platforms, {
     ...base,
     freeOnly: true,
     noBankAccount: false,
-    priorities: ["documentation"],
   }).filter((result) => result.eligible);
-  assert.deepEqual(results.slice(0, 3).map((result) => result.platform.slug), ["tiime", "pennylane", "neotimo"]);
+  const names = results.map((result) => result.platform.displayName);
+  assert.deepEqual(names, [...names].sort((left, right) => left.localeCompare(right, "fr")));
 });
 
 test("une exigence API gratuite échoue lorsque l'inclusion gratuite n'est pas prouvée", () => {
@@ -91,4 +91,12 @@ test("une valeur déclarée sans preuve forte est traitée comme inconnue", () =
   assert.ok(qonto);
   assert.equal(qonto.eligible, false);
   assert.ok(qonto.unknowns.includes("Compte bancaire obligatoire ou facultatif"));
+});
+
+test("l'interface explique l'absence de classement et n'affiche plus de faux top 3", async () => {
+  const source = await readFile(new URL("../src/components/DiagnosticEngine.astro", import.meta.url), "utf8");
+  const visual = await readFile(new URL("../src/components/ChoiceMap.astro", import.meta.url), "utf8");
+  assert.match(source, /ordre alphabétique, aucun score ni classement caché/);
+  assert.match(visual, /Toutes les options confirmées/);
+  assert.doesNotMatch(`${source}\n${visual}`, /Voici trois options|OPTION 0|Meilleur point de départ|featured|compatibility/);
 });
