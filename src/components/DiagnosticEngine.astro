@@ -44,12 +44,28 @@
     <button type="button" class="share-button">Copier le lien</button>
   </header>
   <details class="eligible-results" data-eligible-results open>
-    <summary id="eligible-summary"></summary>
+    <summary id="eligible-summary">
+      <span class="disclosure-icon" aria-hidden="true">✓</span>
+      <span class="disclosure-copy">
+        <small>Critère confirmé</small>
+        <strong id="eligible-summary-title"></strong>
+        <span>Ouvrez pour consulter toutes les fiches correspondantes.</span>
+      </span>
+      <span class="disclosure-toggle" aria-hidden="true"><b class="when-closed">Afficher</b><b class="when-open">Masquer</b><i></i></span>
+    </summary>
     <p class="equal-footing">Même statut pour toutes : ordre alphabétique, aucun score ni classement caché.</p>
     <div id="eligible-results" class="eligible-list"></div>
   </details>
   <details class="excluded-results" data-other-results>
-    <summary>Voir les fiches où ce critère n'est pas confirmé</summary>
+    <summary>
+      <span class="disclosure-icon" aria-hidden="true">?</span>
+      <span class="disclosure-copy">
+        <small>Critère non confirmé</small>
+        <strong id="unconfirmed-summary-title"></strong>
+        <span>Une information absente ne signifie pas que la plateforme est incompatible.</span>
+      </span>
+      <span class="disclosure-toggle" aria-hidden="true"><b class="when-closed">Afficher</b><b class="when-open">Masquer</b><i></i></span>
+    </summary>
     <div id="excluded-list"></div>
   </details>
 </section>
@@ -66,9 +82,9 @@
   const resultContext = document.querySelector<HTMLElement>("#result-context");
   const shareButton = document.querySelector<HTMLButtonElement>(".share-button");
   const eligibleDetails = document.querySelector<HTMLDetailsElement>("[data-eligible-results]");
-  const eligibleSummary = document.querySelector<HTMLElement>("#eligible-summary");
+  const eligibleSummaryTitle = document.querySelector<HTMLElement>("#eligible-summary-title");
   const otherResults = document.querySelector<HTMLDetailsElement>("[data-other-results]");
-  const otherResultsSummary = otherResults?.querySelector<HTMLElement>("summary");
+  const unconfirmedSummaryTitle = document.querySelector<HTMLElement>("#unconfirmed-summary-title");
 
   const text = (tag: string, value: string, className?: string) => {
     const element = document.createElement(tag);
@@ -214,14 +230,14 @@
       resultContext.textContent = `Pour ${sizeLabel}, le critère « ${priorityLabel} » comporte un blocage ou une information manquante dans chaque fiche étudiée.`;
       eligibleContainer.append(text("p", "Essayez une autre priorité ou consultez les informations manquantes ci-dessous.", "no-result"));
     }
-    if (eligibleDetails && eligibleSummary) {
+    if (eligibleDetails && eligibleSummaryTitle) {
       eligibleDetails.hidden = eligibleCount === 0;
       eligibleDetails.open = eligibleCount <= 12;
-      eligibleSummary.textContent = `Voir les ${eligibleCount} plateforme${eligibleCount > 1 ? "s" : ""} qui répond${eligibleCount > 1 ? "ent" : ""} au critère, sans classement`;
+      eligibleSummaryTitle.textContent = `${eligibleCount} plateforme${eligibleCount > 1 ? "s" : ""} à consulter, sans classement`;
     }
-    if (otherResults && otherResultsSummary) {
+    if (otherResults && unconfirmedSummaryTitle) {
       otherResults.hidden = unconfirmed.length === 0;
-      otherResultsSummary.textContent = `Voir les ${unconfirmed.length} fiche${unconfirmed.length > 1 ? "s" : ""} où ce critère n'est pas confirmé`;
+      unconfirmedSummaryTitle.textContent = `${unconfirmed.length} fiche${unconfirmed.length > 1 ? "s" : ""} à vérifier`;
     }
     resultsSection.hidden = false;
     const params = inputToParams(input);
@@ -295,10 +311,32 @@
   .results h2 { margin: 0.55rem 0 0; color: var(--bright); font-size: clamp(1.6rem, 4vw, 2.5rem); letter-spacing: -0.045em; }
   #result-context { max-width: 48rem; margin: .55rem 0 0; color: var(--muted); font-size: .9rem; }
   .share-button { border: 1px solid var(--line); border-radius: .65rem; padding: 0.7rem 0.85rem; background: var(--surface); color: var(--signal); cursor: pointer; font: 650 0.75rem/1 var(--font-sans); }
-  .eligible-results,.excluded-results { overflow: hidden; margin-top: 1rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
-  .eligible-results { border-color: color-mix(in srgb,var(--success) 25%,var(--line)); }
-  .eligible-results summary,.excluded-results summary { padding: 1rem; color: var(--paper); cursor: pointer; font-size: .8rem; font-weight: 670; }
+  .eligible-results,.excluded-results { overflow: hidden; margin-top: 1rem; border: 1px solid var(--line); border-radius: 1.15rem; background: var(--surface); box-shadow: 0 .7rem 2rem rgba(41,57,86,.055); }
+  .eligible-results { border-color: color-mix(in srgb,var(--success) 38%,var(--line)); }
+  .excluded-results { border-color: color-mix(in srgb,var(--amber) 24%,var(--line)); }
+  .eligible-results summary,.excluded-results summary { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 1rem; align-items: center; min-height: 6.5rem; padding: 1rem 1.2rem; color: var(--paper); cursor: pointer; list-style: none; transition: background 160ms ease, box-shadow 160ms ease; }
+  .eligible-results summary::-webkit-details-marker,.excluded-results summary::-webkit-details-marker { display: none; }
+  .eligible-results summary { border-left: .35rem solid var(--success); background: linear-gradient(100deg,var(--success-soft),rgba(255,255,255,.96) 58%); }
+  .excluded-results summary { border-left: .35rem solid var(--amber); background: linear-gradient(100deg,color-mix(in srgb,var(--amber) 10%,#fff),rgba(255,255,255,.96) 58%); }
+  .eligible-results summary:hover { background: linear-gradient(100deg,color-mix(in srgb,var(--success) 13%,#fff),#fff 62%); box-shadow: inset 0 0 0 1px color-mix(in srgb,var(--success) 11%,transparent); }
+  .excluded-results summary:hover { background: linear-gradient(100deg,color-mix(in srgb,var(--amber) 14%,#fff),#fff 62%); box-shadow: inset 0 0 0 1px color-mix(in srgb,var(--amber) 10%,transparent); }
+  .eligible-results summary:focus-visible,.excluded-results summary:focus-visible { outline: 3px solid color-mix(in srgb,var(--signal) 35%,transparent); outline-offset: -3px; }
   .eligible-results[open] summary,.excluded-results[open] summary { border-bottom: 1px solid var(--line); }
+  .disclosure-icon { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; border-radius: .85rem; background: var(--success); color: #fff; font: 760 1rem/1 var(--font-sans); box-shadow: 0 .45rem 1rem color-mix(in srgb,var(--success) 22%,transparent); }
+  .excluded-results .disclosure-icon { background: var(--amber); box-shadow: 0 .45rem 1rem color-mix(in srgb,var(--amber) 20%,transparent); }
+  .disclosure-copy { display: grid; gap: .18rem; min-width: 0; }
+  .disclosure-copy small { color: var(--success); font: 750 .64rem/1.2 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; }
+  .excluded-results .disclosure-copy small { color: color-mix(in srgb,var(--amber) 78%,var(--paper)); }
+  .disclosure-copy strong { color: var(--bright); font-size: clamp(.92rem,1.6vw,1.08rem); line-height: 1.25; }
+  .disclosure-copy > span { color: var(--muted); font-size: .74rem; font-weight: 520; line-height: 1.4; }
+  .disclosure-toggle { display: flex; gap: .65rem; align-items: center; border: 1px solid color-mix(in srgb,var(--success) 28%,var(--line)); border-radius: 999px; padding: .65rem .8rem; background: rgba(255,255,255,.75); color: var(--success); }
+  .excluded-results .disclosure-toggle { border-color: color-mix(in srgb,var(--amber) 28%,var(--line)); color: color-mix(in srgb,var(--amber) 76%,var(--paper)); }
+  .disclosure-toggle b { font-size: .68rem; font-weight: 720; }
+  .disclosure-toggle i { width: .45rem; height: .45rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; rotate: 45deg; translate: 0 -.12rem; transition: rotate 160ms ease, translate 160ms ease; }
+  .when-open { display: none; }
+  details[open] .when-closed { display: none; }
+  details[open] .when-open { display: inline; }
+  details[open] .disclosure-toggle i { rotate: 225deg; translate: 0 .12rem; }
   .equal-footing { margin: 0; border-bottom: 1px solid var(--line); padding: .7rem 1rem; background: var(--success-soft); color: color-mix(in srgb,var(--success) 70%,var(--paper)); font-size: .74rem; line-height: 1.5; }
   .eligible-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
   .eligible-row { min-width: 0; border-bottom: 1px solid var(--line); padding: 1rem; background: rgba(255,255,255,.7); }
@@ -323,5 +361,5 @@
   .excluded-row ul { margin: 0; padding-left: 1rem; color: var(--muted); font-size: 0.78rem; }
   .excluded-row li::marker { color: var(--accent); }
   @media (max-width: 850px) { .eligible-list { grid-template-columns: 1fr; } .eligible-row:nth-child(odd) { border-right: 0; } .constraint-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 620px) { .diagnostic-head, .question-grid, .constraint-grid { grid-template-columns: 1fr; } .question-grid .wide { grid-column: auto; } .eligible-heading,.eligible-facts,.excluded-row { grid-template-columns: 1fr; } .fit-label { justify-self: start; } .eligible-check { grid-column: auto; } .results > header { align-items: start; flex-direction: column; } }
+  @media (max-width: 620px) { .diagnostic-head, .question-grid, .constraint-grid { grid-template-columns: 1fr; } .question-grid .wide { grid-column: auto; } .eligible-heading,.eligible-facts,.excluded-row { grid-template-columns: 1fr; } .fit-label { justify-self: start; } .eligible-check { grid-column: auto; } .results > header { align-items: start; flex-direction: column; } .eligible-results summary,.excluded-results summary { grid-template-columns: auto minmax(0,1fr); gap: .75rem; min-height: 7rem; padding: .9rem; } .disclosure-icon { width: 2.4rem; height: 2.4rem; } .disclosure-toggle { grid-column: 2; justify-self: start; padding: .5rem .7rem; } }
 </style>

@@ -97,6 +97,9 @@ test("l'interface explique l'absence de classement et n'affiche plus de faux top
   const source = await readFile(new URL("../src/components/DiagnosticEngine.astro", import.meta.url), "utf8");
   const visual = await readFile(new URL("../src/components/ChoiceMap.astro", import.meta.url), "utf8");
   assert.match(source, /ordre alphabétique, aucun score ni classement caché/);
+  assert.match(source, /Critère confirmé/);
+  assert.match(source, /Critère non confirmé/);
+  assert.match(source, /Une information absente ne signifie pas que la plateforme est incompatible/);
   assert.match(visual, /Toutes les options confirmées/);
   assert.doesNotMatch(`${source}\n${visual}`, /Voici trois options|OPTION 0|Meilleur point de départ|featured|compatibility/);
 });
