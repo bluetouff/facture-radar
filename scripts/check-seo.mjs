@@ -23,6 +23,16 @@ const seenTitles = new Map();
 const seenCanonicals = new Map();
 const seenDescriptions = new Map();
 
+// Validate built assets: the development server does not inline these fonts.
+for (const file of files.filter((file) => file.endsWith(".css"))) {
+  const css = await readFile(file, "utf8");
+  for (const fontFace of css.matchAll(/@font-face\s*\{[^}]+\}/gi)) {
+    if (/url\(\s*["']?\s*data:/i.test(fontFace[0])) {
+      failures.push(`${path.relative(distDir, file)} : police inline incompatible avec font-src 'self'`);
+    }
+  }
+}
+
 const capture = (html, expression) => html.match(expression)?.[1]?.trim() ?? "";
 const textOnly = (value) => value.replace(/<[^>]+>/g, " ").replace(/&nbsp;|&#160;/g, " ").replace(/\s+/g, " ").trim();
 const publicPathForFile = (file) => {
