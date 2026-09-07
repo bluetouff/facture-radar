@@ -1,0 +1,21 @@
+---
+interface Props { kind: "tool" | "platform" | "invoice"; }
+const { kind } = Astro.props;
+---
+<svg viewBox="0 0 80 64" fill="none" aria-hidden="true" focusable="false">
+  <path d="M12 10h34l10 10v32H12V10Z" fill="currentColor" opacity=".08" />
+  {kind === "tool" ? <>
+    <rect x="13" y="14" width="43" height="29" rx="3" stroke="currentColor" stroke-width="1.5" />
+    <path d="M21 22h13M21 28h20M28 51h18M37 43v8M47 32h13c8 0 4-12 13-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    <circle cx="69" cy="20" r="4" fill="currentColor" />
+  </> : kind === "platform" ? <>
+    <path d="M12 19h19l7 7v24H12V19ZM45 9h18l7 7v25H45V9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+    <path d="M31 19v7h7M63 9v7h7M19 35h9M52 24h9M5 55h27c13 0 10-17 24-17h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    <circle cx="56" cy="38" r="4" fill="currentColor" />
+  </> : <>
+    <path d="M22 8h27l10 10v39H22V8ZM49 8v10h10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+    <path d="M30 25h20M30 32h12M12 44h24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    <circle cx="55" cy="44" r="12" fill="var(--surface)" stroke="currentColor" stroke-width="1.5" />
+    <path d="m49 44 4 4 8-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </>}
+</svg>

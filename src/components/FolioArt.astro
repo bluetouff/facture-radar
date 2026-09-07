@@ -1,0 +1,40 @@
+---
+interface Props { variant?: "route" | "publication"; }
+const { variant = "route" } = Astro.props;
+---
+<div class:list={["folio-art", variant]} aria-hidden="true">
+  <svg viewBox="0 0 480 340" fill="none" focusable="false">
+    <path d="M16 247H91c57 0 43-124 102-124h194c45 0 29 150 77 150" stroke="#748d85" opacity=".4" />
+    <path d="M8 263H96c64 0 41-123 99-123h187c39 0 35 150 90 150" stroke="#c49777" opacity=".6" />
+    <g transform="rotate(-13 200 167)">
+      <path d="M114 41h161l37 37v202H114V41Z" fill="#91aca2" />
+      <path d="M275 41v37h37" fill="#719286" />
+      <path d="M139 109h72M139 121h48M139 218h133M139 232h88" stroke="#d2e0d6" stroke-width="2" />
+    </g>
+    <g transform="rotate(7 266 184)">
+      <path d="M168 55h154l37 37v214H168V55Z" fill="#f2ede3" />
+      <path d="M322 55v37h37" fill="#d4c7b4" />
+      <path d="M191 94h39M191 104h22" stroke="#60756c" stroke-width="2" />
+      <path d="M191 140h112M191 152h82M191 189h145M191 218h145M191 247h145" stroke="#c9c9ba" stroke-width="1.5" />
+      <path d="M191 175h33M310 175h26M191 205h52M311 205h25M191 234h38M309 234h27" stroke="#a9b1a4" stroke-width="2" />
+      <path d="M191 280h46" stroke="#9b6e53" stroke-width="3" />
+      {variant === "publication" && <path d="M186 117h65" stroke="#a27656" stroke-width="5" />}
+    </g>
+    <path class="folio-thread" d="M24 263h95c52 0 38-66 91-66h125c38 0 27-65 74-65h40" stroke="#75b7a3" stroke-width="3" stroke-linecap="round" />
+    <circle cx="24" cy="263" r="5" fill="#75b7a3" />
+    <circle cx="409" cy="132" r="23" fill="#163b36" stroke="#75b7a3" />
+    <path d="m399 132 7 7 13-15" stroke="#c8e7d7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16 28h32M16 28v32M432 314h32v-32" stroke="#97ada2" opacity=".5" />
+  </svg>
+  <div class="art-caption"><span>{variant === "publication" ? "l0g / les dessous de la réforme" : "Votre facture, son prochain chemin"}</span><span>↗</span></div>
+</div>
+<style>
+  .folio-art { width: 100%; max-width: 32rem; color: #c5d2c9; }
+  svg { width: 100%; height: auto; }
+  .art-caption { display: flex; justify-content: space-between; gap: 1rem; margin: 0 1.2rem; border-top: 1px solid #526c64; padding-top: .8rem; font: .75rem/1.4 var(--font-sans); letter-spacing: .03em; }
+  .publication { max-width: 26rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    .folio-thread { stroke-dasharray: 640; animation: trace 1.4s ease-out both; }
+    @keyframes trace { from { stroke-dashoffset: 640; } to { stroke-dashoffset: 0; } }
+  }
+</style>

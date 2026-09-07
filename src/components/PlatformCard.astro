@@ -23,10 +23,9 @@ const counter = String(index + 1).padStart(2, "0");
 
 <article class={`dossier-teaser tone-${index % 4}`}>
   <a href={`/plateformes/${platform.slug}/`}>
-    <span class="teaser-ghost" aria-hidden="true">{counter}</span>
     <div class="teaser-meta"><span>dossier {counter}</span><small>{sourceCount(platform)} sources consultées</small></div>
     <div class="teaser-heading">
-      <span class="teaser-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="teaser-mark" aria-hidden="true"><InterfaceIcon name="proof" /></span>
       <h3>{platform.displayName}</h3>
     </div>
     <p>{platform.summary}</p>
@@ -39,30 +38,23 @@ const counter = String(index + 1).padStart(2, "0");
 </article>
 
 <style>
-  .dossier-teaser { --teaser-tone: #5368d9; position: relative; overflow: hidden; min-height: 20rem; border: 1px solid color-mix(in srgb,var(--teaser-tone) 19%,var(--line)); border-radius: 1.25rem; background: #fff; box-shadow: 0 .8rem 2.8rem rgba(41,57,86,.06); transition: translate 180ms ease,box-shadow 180ms ease; }
-  .dossier-teaser.tone-1 { --teaser-tone: #7458c8; }
-  .dossier-teaser.tone-2 { --teaser-tone: #178873; }
-  .dossier-teaser.tone-3 { --teaser-tone: #ae603f; }
-  .dossier-teaser::after { position: absolute; top: 0; right: 0; border-width: 0 2.3rem 2.3rem 0; border-style: solid; border-color: transparent color-mix(in srgb,var(--teaser-tone) 14%,#fff) transparent transparent; content: ""; }
-  .dossier-teaser:hover { translate: 0 -3px; box-shadow: 0 1.25rem 3.4rem rgba(41,57,86,.12); }
-  .dossier-teaser > a { position: relative; z-index: 1; display: flex; min-height: 20rem; flex-direction: column; padding: 1.2rem; color: inherit; }
-  .teaser-ghost { position: absolute; right: 1rem; bottom: 1.1rem; color: color-mix(in srgb,var(--teaser-tone) 7%,transparent); font: 760 7.5rem/1 var(--font-mono); letter-spacing: -.12em; pointer-events: none; }
-  .teaser-meta { display: flex; justify-content: space-between; gap: .8rem; border-bottom: 1px solid var(--line); padding-bottom: .75rem; }
-  .teaser-meta span { color: var(--teaser-tone); font: 690 .75rem/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; }
-  .teaser-meta small { color: var(--muted); font-size: .76rem; }
-  .teaser-heading { display: flex; gap: .75rem; align-items: center; margin-top: 1.25rem; }
-  .teaser-mark { display: flex; width: 2.45rem; height: 2.45rem; gap: .2rem; align-items: end; justify-content: center; border-radius: 50%; padding-bottom: .65rem; background: color-mix(in srgb,var(--teaser-tone) 9%,#fff); }
-  .teaser-mark i { width: .18rem; height: .48rem; border-radius: 999px; background: var(--teaser-tone); }
-  .teaser-mark i:nth-child(2) { height: .82rem; }
-  .teaser-mark i:nth-child(3) { height: .62rem; }
-  .teaser-heading h3 { margin: 0; color: var(--bright); font-size: 1.28rem; font-weight: 510; letter-spacing: -.03em; }
-  .dossier-teaser a > p { max-width: 36rem; margin: 1rem 0 0; color: var(--muted); font-size: .8rem; line-height: 1.58; }
-  .teaser-signal { display: grid; grid-template-columns: auto 1fr; gap: .55rem; align-items: center; margin-top: 1rem; border-left: 2px solid var(--teaser-tone); padding: .5rem 0 .5rem .75rem; }
-  .teaser-signal :global(svg) { width: 1rem; height: 1rem; color: var(--teaser-tone); }
-  .teaser-signal strong { color: var(--paper); font-size: .78rem; font-weight: 630; }
-  .dossier-teaser footer { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: .8rem; align-items: center; margin-top: auto; border-top: 1px solid var(--line); padding-top: .85rem; }
-  .dossier-teaser footer > span { color: var(--muted); font-size: .75rem; }
-  .dossier-teaser footer > strong { display: inline-flex; gap: .4rem; align-items: center; color: var(--teaser-tone); font-size: .76rem; }
-  .dossier-teaser footer :global(svg) { width: .9rem; height: .9rem; }
-  @media (max-width: 620px) { .dossier-teaser,.dossier-teaser > a { min-height: 18rem; } }
+  .dossier-teaser { position: relative; border: 1px solid #bcc9b7; border-radius: .4rem; background: #f5f2e8; transition: border-color 160ms ease, box-shadow 160ms ease; }
+  .dossier-teaser::after { position: absolute; top: 0; right: 0; border-width: 0 1.7rem 1.7rem 0; border-style: solid; border-color: transparent #d1d9c6 transparent transparent; content: ""; }
+  .dossier-teaser:hover { border-color: #6b8662; box-shadow: 4px 4px 0 #b8c6ad; }
+  .dossier-teaser > a { display: flex; height: 100%; flex-direction: column; padding: 1.5rem; color: inherit; }
+  .teaser-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; border-bottom: 1px solid #c7d0be; padding-bottom: .9rem; padding-right: .5rem; font-size: .72rem; color: #64775a; }
+  .teaser-meta span { letter-spacing: .06em; text-transform: uppercase; }
+  .teaser-meta small { font-size: .75rem; color: var(--muted); }
+  .teaser-heading { display: flex; gap: .8rem; align-items: center; margin-top: 1.4rem; }
+  .teaser-mark { color: #74946b; }
+  .teaser-mark :global(svg) { width: 1.7rem; height: 1.7rem; stroke-width: 1.2; }
+  .teaser-heading h3 { margin: 0; color: var(--bright); font: 430 1.8rem/1.1 var(--font-serif); }
+  .dossier-teaser a > p { margin: 1rem 0; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+  .teaser-signal { display: flex; gap: .65rem; align-items: center; padding-block: .7rem 1.2rem; }
+  .teaser-signal :global(svg) { flex-shrink: 0; width: 1.1rem; height: 1.1rem; color: #65875b; }
+  .teaser-signal strong { color: var(--paper); font-size: .86rem; font-weight: 500; }
+  .dossier-teaser footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; align-items: center; margin-top: auto; border-top: 1px solid #c7d0be; padding-top: 1rem; }
+  .dossier-teaser footer > span { color: var(--muted); font-size: .74rem; }
+  .dossier-teaser footer > strong { display: inline-flex; gap: .6rem; align-items: center; color: #456e42; font-size: .84rem; font-weight: 550; }
+  .dossier-teaser footer :global(svg) { width: 1rem; }
 </style>

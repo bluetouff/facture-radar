@@ -1,9 +1,13 @@
 ---
 import "@fontsource-variable/inter";
 import "@fontsource-variable/jetbrains-mono";
+import "@fontsource-variable/newsreader";
+import "@fontsource-variable/newsreader/wght-italic.css";
 import "../styles/global.css";
+import "../styles/chrome.css";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import BrandMark from "../components/BrandMark.astro";
+import FolioArt from "../components/FolioArt.astro";
 import { platforms } from "../data/platforms";
 import { practicalQuestions } from "../data/practical-questions";
 
@@ -84,7 +88,7 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
     {isHome && <meta itemprop="name" content="PA Check" />}
     {isHome && <meta itemprop="alternateName" content="PA Check facturation électronique" />}
     {isHome && <meta itemprop="url" content={canonicalUrl} />}
-    <meta name="theme-color" content="#e7edf5" />
+    <meta name="theme-color" content="#142c30" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' data:; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
@@ -195,28 +199,21 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
           </details>
         </div>
       </div>
-      <div class="header-signal" aria-hidden="true"><span></span><span></span><span></span></div>
     </header>
     <main id="contenu">
       <slot />
     </main>
     <footer class="site-footer">
       <div class="shell">
-        <a class="footer-investigation" href="https://l0g.fr/publications/grand-peage-facture/" aria-label="Lire l’enquête l0g : Le grand péage de la facture">
+        {!isHome && <a class="footer-investigation" href="https://l0g.fr/publications/grand-peage-facture/" aria-label="Lire l’enquête l0g : Le grand péage de la facture">
           <div class="footer-investigation-copy">
             <p class="footer-kicker"><span>l0g</span> L’enquête à l’origine de PA Check</p>
             <h2>Le grand péage<br />de la facture</h2>
             <p>Cinq volets pour comprendre ce que la réforme change concrètement : l’architecture, le marché, les prix, les données et la continuité.</p>
             <strong>Lire l’enquête sur l0g.fr <InterfaceIcon name="arrow" /></strong>
           </div>
-          <div class="footer-investigation-map" aria-hidden="true">
-            <span><b>01</b><small>Portail</small></span>
-            <span><b>02</b><small>Marché</small></span>
-            <span><b>03</b><small>Prix</small></span>
-            <span><b>04</b><small>Données</small></span>
-            <span><b>05</b><small>Incident</small></span>
-          </div>
-        </a>
+          <FolioArt variant="publication" />
+        </a>}
 
         <div class="footer-main">
           <div class="footer-brand">
