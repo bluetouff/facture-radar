@@ -8,6 +8,7 @@ const sorted = [...platforms].sort((a, b) => a.displayName.localeCompare(b.displ
   </div>
   <div class="compare-actions" hidden>
     <label class="compare-differences"><input type="checkbox" id="compare-differences" /> Voir seulement les différences</label>
+    <label class="compare-jump">Aller au critère<select id="compare-jump"><option value="">Choisir un critère</option></select></label>
     <button class="button secondary" type="button" id="compare-share">Copier le lien</button>
   </div>
   <p class="compare-status" role="status">Choisissez deux ou trois plateformes.</p>
@@ -29,6 +30,7 @@ const sorted = [...platforms].sort((a, b) => a.displayName.localeCompare(b.displ
   const actions = document.querySelector<HTMLElement>(".compare-actions")!;
   const links = document.querySelector<HTMLElement>(".compare-profile-links")!;
   const differences = document.querySelector<HTMLInputElement>("#compare-differences")!;
+  const jump = document.querySelector<HTMLSelectElement>("#compare-jump")!;
   const sourceMap = new Map(sources.map(source => [source.id, source]));
   const platformMap = new Map(platforms.map(platform => [platform.slug, platform]));
   const make = <K extends keyof HTMLElementTagNameMap>(tag: K, text: string, className?: string) => {
@@ -59,6 +61,7 @@ const sorted = [...platforms].sort((a, b) => a.displayName.localeCompare(b.displ
     const firstColumn = columns[0];
     if (!firstColumn) return;
     let omitted = 0;
+    jump.replaceChildren(new Option("Choisir un critère", ""));
     const rows = firstColumn.flatMap((first, index) => {
       const facts = columns.map(column => {
         const fact = column[index];
@@ -66,9 +69,11 @@ const sorted = [...platforms].sort((a, b) => a.displayName.localeCompare(b.displ
         return fact;
       });
       if (differences.checked && sameComparisonFact(facts)) { omitted++; return []; }
+      jump.append(new Option(first.label, `criterion-${first.key}`));
       const section = make("section", "", "compare-criterion");
       const title = make("h2", first.label);
       title.id = `criterion-${first.key}`;
+      title.tabIndex = -1;
       section.setAttribute("aria-labelledby", title.id);
       const values = make("div", "", "compare-values");
       values.style.setProperty("--compare-columns", String(selected.length));
@@ -105,7 +110,27 @@ const sorted = [...platforms].sort((a, b) => a.displayName.localeCompare(b.displ
     status.textContent = `${selected.length} plateformes · ${rows.length} critères affichés${omitted ? ` · ${omitted} critères identiques masqués` : ""}. Les tarifs et conditions dépendent de l’offre étudiée.`;
   };
   selects.forEach(select => select.addEventListener("change", () => setSelection(selects.map(item => item.value).filter(Boolean))));
-  differences.addEventListener("change", render);
+  differences.addEventListener("change", () => {
+    const bar = actions.getBoundingClientRect();
+    const sticky = bar.top <= Number.parseFloat(getComputedStyle(actions).top) + 1;
+    const sections = [...output.querySelectorAll<HTMLElement>(".compare-criterion")];
+    const index = sections.findIndex(section => section.getBoundingClientRect().bottom > bar.bottom + 1);
+    const candidates = [...sections.slice(Math.max(0, index)), ...sections.slice(0, Math.max(0, index)).reverse()]
+      .map(section => section.getAttribute("aria-labelledby"));
+    render();
+    // Removing identical rows must not strand a reader at the footer.
+    if (sticky) {
+      const destination = candidates.map(id => id ? document.getElementById(id) : null).find(Boolean)
+        ?? document.querySelector<HTMLElement>(".compare-controls");
+      destination?.scrollIntoView({ block: "start" });
+    }
+  });
+  jump.addEventListener("change", () => {
+    const title = document.getElementById(jump.value);
+    if (!title) return;
+    title.focus({ preventScroll: true });
+    title.scrollIntoView({ block: "start" });
+  });
   document.addEventListener(selectionEvent, render);
   document.querySelector("#compare-share")?.addEventListener("click", async () => {
     const result = document.querySelector<HTMLElement>(".compare-share-status")!;
@@ -116,20 +141,23 @@ const sorted = [...platforms].sort((a, b) => a.displayName.localeCompare(b.displ
 </script>
 <style is:global>
   .compare-tool { margin-bottom: 3rem; }
-  .compare-controls { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; border: 1px solid var(--line); border-radius: 1rem; padding: 1.2rem; background: #fff; }
+  .compare-controls { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; border: 1px solid var(--line); border-radius: .5rem; padding: 1.5rem; background: #fffcf5; }
   .compare-controls label { display: grid; gap: .5rem; min-width: 0; }
   .compare-controls label > span { color: var(--muted); font-size: .78rem; }
-  .compare-select { width: 100%; min-width: 0; min-height: 3rem; border: 1px solid #d9e1f1; border-radius: .6rem; padding: .7rem; background: #f6f8fd; color: var(--bright); font-size: .9rem; }
-  .compare-actions { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .8rem; margin-top: 1rem; }
+  .compare-select { width: 100%; min-width: 0; min-height: 3rem; border: 1px solid var(--line); border-radius: .6rem; padding: .7rem; background: #f3f0e8; color: var(--bright); font-size: .9rem; }
+  .compare-actions { position: sticky; top: 80px; z-index: 10; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: .5rem; background: #f6f3ecf5; backdrop-filter: blur(12px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .8rem; margin-top: 1rem; }
   .compare-differences { display: flex; gap: .6rem; align-items: center; color: var(--bright); font-size: .85rem; cursor: pointer; }
   .compare-differences input { width: 1.15rem; height: 1.15rem; accent-color: var(--signal); }
   .compare-status, .compare-share-status { color: var(--muted); font-size: .82rem; }
   .compare-share-status:empty { display: none; }
   .compare-profile-links { display: flex; flex-wrap: wrap; gap: .6rem; margin-block: 1rem 1.5rem; }
-  .compare-profile-links a { border: 1px solid #d3ddf2; border-radius: 999px; padding: .45rem .7rem; background: #fff; color: var(--signal); font-size: .78rem; }
-  .compare-output { display: grid; gap: 1.2rem; }
-  .compare-criterion { min-width: 0; overflow: hidden; border: 1px solid #dce4f0; border-radius: 1rem; background: #fff; }
-  .compare-criterion h2 { margin: 0; border-bottom: 1px solid #dce4f0; padding: .8rem 1rem; background: #eef2fc; color: var(--bright); font-size: .98rem; font-weight: 650; }
+  .compare-profile-links a { border: 1px solid #dedbd2; border-radius: 999px; padding: .45rem .7rem; background: #fff; color: var(--signal); font-size: .78rem; }
+  .compare-output { display: grid; gap: 1.6rem; }
+  .compare-criterion { min-width: 0; overflow: hidden; border: 1px solid #dedbd2; border-radius: .5rem; background: #fffdf8; }
+  .compare-criterion h2 { margin: 0; border-bottom: 1px solid #dedbd2; padding: .8rem 1rem; background: #e9e6dc; color: var(--bright); font-size: .98rem; font-weight: 650; }
+  .compare-jump { display: flex; gap: .65rem; align-items: center; font-size: .75rem; color: var(--muted); }
+  #compare-jump { max-width: 15rem; min-height: 2.7rem; border: 1px solid var(--line); border-radius: .35rem; padding: .4rem; background: #fffdf8; font-size: .78rem; color: var(--bright); }
+  .compare-criterion h2 { scroll-margin-top: 11.5rem; }
   .compare-values { display: grid; grid-template-columns: repeat(var(--compare-columns),minmax(0,1fr)); }
   .compare-value { min-width: 0; padding: 1rem; overflow-wrap: anywhere; }
   .compare-value + .compare-value { border-left: 1px solid var(--line); }
@@ -143,5 +171,7 @@ const sorted = [...platforms].sort((a, b) => a.displayName.localeCompare(b.displ
   .compare-sources ul { padding-left: 1.2rem; }
   .compare-sources li { margin-top: .5rem; }
   .compare-sources a { color: var(--signal); text-decoration: underline; text-underline-offset: .15em; }
+  @media (max-width: 1120px) { .compare-actions { top: 74px; } }
+  @media (max-width: 800px) { .compare-actions { gap: .5rem; padding: .75rem; } .compare-differences { width: 100%; font-size: .78rem; } .compare-jump { min-width: 0; font-size: 0; flex: 1; } #compare-jump { width: 100%; max-width: 100%; } .compare-actions .button { min-height: 2.7rem; padding: .6rem; font-size: .75rem; } .compare-criterion h2 { scroll-margin-top: 13rem; } }
   @media (max-width: 700px) { .compare-controls { grid-template-columns: 1fr; gap: .8rem; padding: 1rem; } .compare-values { grid-template-columns: 1fr; } .compare-value + .compare-value { border-left: 0; border-top: 1px solid var(--line); } .compare-criterion h2 { font-size: .95rem; } }
 </style>

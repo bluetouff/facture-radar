@@ -92,6 +92,19 @@ document.querySelectorAll("[data-directory-reset]").forEach(button => button.add
   filter();
   searchInput?.focus();
 }));
-document.querySelectorAll(".directory-alphabet, .directory-views, .directory-facets").forEach(element => { element.hidden = false; });
+document.querySelectorAll(".directory-controls, .directory-alphabet, .directory-views, .directory-facets").forEach(element => { element.hidden = false; });
 window.addEventListener("hashchange", restore);
 restore();
+
+// Returning to the controls must not touch the fragment that stores active filters.
+const controls = document.querySelector("#directory-controls");
+const refine = document.querySelector(".directory-refine");
+refine?.addEventListener("click", () => {
+  searchInput?.focus({ preventScroll: true });
+  controls?.scrollIntoView({ block: "start" });
+});
+if (controls && refine && "IntersectionObserver" in window) {
+  new IntersectionObserver(([entry]) => {
+    refine.hidden = entry.isIntersecting || entry.boundingClientRect.top >= 0;
+  }, { rootMargin: "-80px 0px 0px" }).observe(controls);
+}

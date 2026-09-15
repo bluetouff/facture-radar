@@ -22,7 +22,7 @@ interface Props {
 const { title, description, canonical = Astro.url.pathname, robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site);
 const isHome = Astro.url.pathname === "/";
-const socialImageUrl = new URL("/og/pa-check-facturation-electronique-v2.png", Astro.site);
+const socialImageUrl = new URL("/og/pa-check-facturation-electronique-v3.png", Astro.site);
 const encodedShareUrl = encodeURIComponent(canonicalUrl.toString());
 const encodedShareTitle = encodeURIComponent(title);
 const encodedEmailBody = encodeURIComponent(`${title}\n\n${canonicalUrl.toString()}`);
@@ -90,7 +90,7 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
     {isHome && <meta itemprop="name" content="PA Check" />}
     {isHome && <meta itemprop="alternateName" content="PA Check facturation électronique" />}
     {isHome && <meta itemprop="url" content={canonicalUrl} />}
-    <meta name="theme-color" content="#4259df" />
+    <meta name="theme-color" content="#f1ede4" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' data:; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"

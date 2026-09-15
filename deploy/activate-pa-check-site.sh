@@ -112,7 +112,7 @@ required = {
     "api/questions.json",
     "llms.txt",
     "llms-full.txt",
-    "og/pa-check-facturation-electronique-v2.png",
+    "og/pa-check-facturation-electronique-v3.png",
     "server.json",
     "conditions-utilisation/index.html",
     "confidentialite/index.html",
@@ -121,7 +121,7 @@ required = {
     "verifier-une-facture/index.html",
 }
 blocked_names = re.compile(r"(^|/)(\.env(?:\..*)?|id_(?:rsa|ed25519)(?:\..*)?|[^/]+\.(?:key|pem))$", re.I)
-allowed_suffixes = {".css", ".html", ".js", ".json", ".mjs", ".png", ".svg", ".txt", ".woff2", ".xml"}
+allowed_suffixes = {".css", ".html", ".js", ".json", ".mjs", ".png", ".svg", ".txt", ".woff2", ".webp", ".xml"}
 seen = set()
 total = 0
 

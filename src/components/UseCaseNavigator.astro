@@ -1,21 +1,21 @@
 ---
 import InterfaceIcon from "./InterfaceIcon.astro";
-import ChapterIcon from "./ChapterIcon.astro";
 import { practicalQuestions } from "../data/practical-questions";
 
 const useCases = [
-  { href: "/verifier-mon-outil/#verifier-logiciel", label: "Puis-je garder mon outil actuel ?", detail: "Entrez son nom et obtenez la prochaine action", icon: "search", tone: "violet" },
-  { href: "/diagnostic/", label: "Quelle plateforme regarder ?", detail: "Trois questions, puis toutes les options pertinentes", icon: "target", tone: "green" },
-  { href: "/verifier-une-facture/", label: "Ma facture est-elle prête ?", detail: "Contrôlez un Factur-X ou un XML sur votre appareil", icon: "invoice", tone: "blue" },
+  { href: "/verifier-mon-outil/#verifier-logiciel", label: "Garder mon outil", detail: "Entrez son nom et obtenez la prochaine action", icon: "search", tone: "violet" },
+  { href: "/diagnostic/", label: "Choisir ma plateforme", detail: "Trois questions, puis toutes les options pertinentes", icon: "target", tone: "green" },
+  { href: "/verifier-une-facture/", label: "Contrôler une facture", detail: "Contrôlez un Factur-X ou un XML sur votre appareil", icon: "invoice", tone: "blue" },
 ] as const;
 ---
 
 <section class="usecase-navigator" aria-labelledby="usecase-title">
+  <div class="finder-console">
   <header>
-    <div><small>Décrivez simplement votre besoin</small><h2 id="usecase-title">Quelle question vous amène&nbsp;?</h2></div>
-    <span><i></i> réponse locale, sans compte</span>
+    <div><small>01 / Une question, un point de départ</small><h2 id="usecase-title">On commence par vous.</h2></div>
+    <span><i></i> Sans compte · recherche locale</span>
   </header>
-  <div class="answer-finder" id="answer-finder" role="search">
+  <div class="answer-finder" id="answer-finder" role="search" hidden>
     <label for="answer-query">Écrivez quelques mots ou le nom de votre outil</label>
     <div class="answer-search-row">
       <span class="answer-search-icon"><InterfaceIcon name="search" /></span>
@@ -23,12 +23,14 @@ const useCases = [
         id="answer-query"
         name="question"
         type="search"
+        role="combobox"
+        aria-autocomplete="list"
         maxlength="120"
         autocomplete="off"
         spellcheck="false"
         aria-controls="answer-suggestions"
         aria-expanded="false"
-        placeholder="Ex. Factur-X sans intermédiaire, Tiime, offre gratuite…"
+        placeholder="Un outil, une question… Ex. Tiime, offre gratuite"
       />
       <button type="button" id="answer-submit">Trouver la réponse <InterfaceIcon name="arrow" /></button>
     </div>
@@ -44,12 +46,13 @@ const useCases = [
     <div class="answer-suggestions" id="answer-suggestions" role="listbox" aria-label="Réponses proposées" hidden></div>
     <p class="answer-empty" id="answer-empty" hidden>Cette formulation ne correspond pas encore à une réponse directe. Consultez les questions pratiques ou utilisez l'un des trois parcours ci-dessous.</p>
   </div>
-  <p class="shortcut-label">Ou choisissez votre situation</p>
+  </div>
+  <p class="shortcut-label">02 / Ou avancez directement</p>
   <div class="usecase-grid">
     {useCases.map(({ href, label, detail, icon, tone }, index) => (
       <a class={`usecase tone-${tone}`} href={href}>
         <span class="case-number">{String(index + 1).padStart(2, "0")}</span>
-        <span class="case-icon"><ChapterIcon kind={icon === "search" ? "tool" : icon === "target" ? "platform" : "invoice"} /></span>
+        <span class="case-icon"><InterfaceIcon name={icon} /></span>
         <span class="case-copy"><strong>{label}</strong><small>{detail}</small></span>
         <InterfaceIcon name="arrow" />
       </a>
@@ -61,6 +64,8 @@ const useCases = [
 <script>
   import { findAnswers, type FinderEntry } from "../lib/answer-finder";
 
+  const finder = document.querySelector<HTMLElement>("#answer-finder");
+  if (finder) finder.hidden = false;
   const input = document.querySelector<HTMLInputElement>("#answer-query");
   const submit = document.querySelector<HTMLButtonElement>("#answer-submit");
   const suggestions = document.querySelector<HTMLElement>("#answer-suggestions");
@@ -112,6 +117,12 @@ const useCases = [
     input.setAttribute("aria-expanded", "true");
   };
 
+  document.querySelectorAll<HTMLAnchorElement>("[data-answer-open]").forEach(link => link.addEventListener("click", event => {
+    if (!finder || !input) return;
+    event.preventDefault();
+    input.focus({ preventScroll: true });
+    finder.scrollIntoView({ block: "start" });
+  }));
   input?.addEventListener("input", render);
   input?.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeSuggestions();
@@ -155,66 +166,67 @@ const useCases = [
 </script>
 
 <style>
-  .usecase-navigator { border: 1px solid #dfe5f0; border-radius: 1.3rem; background: #fff; color: var(--paper); box-shadow: 0 12px 40px #263d7309; }
-  header { display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding: 1.3rem 1.8rem .8rem; }
-  header small { color: #667993; font-size: .7rem; font-weight: 550; letter-spacing: .09em; text-transform: uppercase; }
-  header h2 { margin: .25rem 0 0; color: var(--bright); font: 630 1.5rem/1.25 var(--font-sans); letter-spacing: -.035em; }
-  header > span { display: inline-flex; gap: .4rem; align-items: center; color: var(--muted); font-size: .78rem; white-space: nowrap; }
-  header i { width: .4rem; height: .4rem; border-radius: 50%; background: var(--success); }
-  .answer-finder { position: relative; scroll-margin-top: 6.5rem; padding: .6rem 1.8rem 1.3rem; }
-  .answer-finder > label { display: block; margin-bottom: .55rem; color: var(--paper); font-size: .82rem; }
-  .answer-search-row { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; border: 1px solid #d7dfee; border-radius: .8rem; background: #fff; box-shadow: 0 2px 0 #e5ebf655; }
-  .answer-search-row:focus-within { outline: 2px solid var(--signal); outline-offset: 2px; }
-  .answer-search-icon { display: grid; place-items: center; width: 3.2rem; color: #637bb2; }
+  .usecase-navigator { min-width: 0; }
+  .finder-console { border-radius: .9rem; background: var(--bright); color: #eeeae0; padding: clamp(1.25rem,3vw,2.5rem); }
+  header { display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin-bottom: 1.7rem; }
+  header small, .shortcut-label { font: .68rem/1.5 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; }
+  header small { color: #c1c0b5; }
+  header h2 { margin: .65rem 0 0; color: #fffaf0; font: 520 clamp(1.8rem,3.2vw,2.7rem)/1.1 var(--font-sans); letter-spacing: -.055em; }
+  header > span { display: inline-flex; gap: .5rem; align-items: center; color: #cbc9bd; font-size: .72rem; white-space: nowrap; }
+  header i { width: .35rem; height: .35rem; border-radius: 50%; background: #f6a078; }
+  .answer-finder { scroll-margin-top: 7rem; }
+  .answer-finder > label { display: block; margin-bottom: .65rem; color: #d0cec3; font-size: .8rem; }
+  .answer-search-row { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; border: 1px solid #ece9dd; border-radius: .5rem; background: #fffdf8; }
+  .answer-search-row:focus-within { outline: 2px solid #ffab87; outline-offset: 4px; }
+  .answer-search-icon { display: grid; place-items: center; width: 3.4rem; color: var(--signal); }
   .answer-search-icon :global(svg) { width: 1.3rem; height: 1.3rem; }
-  .answer-search-row input { min-width: 0; min-height: 3.6rem; border: 0; outline: 0; background: transparent; color: var(--bright); font: 450 1rem/1.3 var(--font-sans); }
-  .answer-search-row input::placeholder { color: #7c8aa2; }
-  .answer-search-row button { display: inline-flex; justify-content: center; gap: .7rem; align-items: center; min-height: 2.85rem; margin: .3rem; border: 0; border-radius: .6rem; padding: .7rem 1.2rem; background: var(--signal); color: #fff; cursor: pointer; font: 550 .88rem/1.3 var(--font-sans); }
-  .answer-search-row button:hover { background: #293da2; }
+  .answer-search-row input { min-width: 0; min-height: 4.2rem; border: 0; outline: 0; background: transparent; color: var(--bright); font: 450 1rem/1.3 var(--font-sans); }
+  .answer-search-row input::placeholder { color: #76766c; }
+  .answer-search-row button { display: inline-flex; justify-content: center; gap: .7rem; align-items: center; min-height: 3.25rem; margin: .4rem; border: 0; border-radius: .3rem; padding: .8rem 1.2rem; background: var(--signal); color: #fff; cursor: pointer; font: 550 .85rem/1.3 var(--font-sans); }
+  .answer-search-row button:hover { background: #972d16; }
   .answer-search-row button :global(svg) { width: 1rem; }
-  .answer-examples { display: flex; flex-wrap: wrap; gap: .35rem .6rem; align-items: center; margin-top: .85rem; }
-  .answer-examples span { color: var(--muted); font-size: .74rem; margin-right: .3rem; }
-  .answer-examples button { border: 1px solid #e0e6f1; border-radius: 999px; min-height: 2.1rem; padding: .42rem .7rem; background: #f6f8fc; color: #526683; cursor: pointer; font: 500 .76rem/1.2 var(--font-sans); }
-  .answer-examples button:hover { background: #edf2ff; border-color: #bbc9ed; }
-  .answer-suggestions { margin-top: .9rem; border: 1px solid #dce4f0; border-radius: .5rem; background: #fff; }
-  .answer-suggestions :global(a) { display: grid; grid-template-columns: 1fr auto; gap: .8rem; align-items: center; border-top: 1px solid var(--line); padding: .9rem 1rem; color: var(--paper); }
+  .answer-examples { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1.1rem; }
+  .answer-examples span { color: #c6c5ba; font-size: .72rem; margin-right: .2rem; }
+  .answer-examples button { border: 1px solid #626357; border-radius: .3rem; min-height: 2.25rem; padding: .45rem .65rem; background: transparent; color: #e9e6dd; cursor: pointer; font: 450 .73rem/1.2 var(--font-sans); transition: background 160ms; }
+  .answer-examples button:hover { background: #414337; border-color: #9a9d8b; }
+  .answer-suggestions { margin-top: 1rem; border-radius: .5rem; overflow: hidden; background: #fffdf8; }
+  .answer-suggestions :global(a) { display: grid; grid-template-columns: 1fr auto; gap: .8rem; align-items: center; border-top: 1px solid var(--line); padding: 1rem 1.2rem; color: var(--paper); }
   .answer-suggestions :global(a:first-child) { border-top: 0; }
-  .answer-suggestions :global(a:hover), .answer-suggestions :global(a:focus-visible) { background: #f0f4ff; outline: 2px solid var(--signal); outline-offset: -2px; }
-  .answer-suggestions :global(small) { display: block; color: #5b72a5; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
-  .answer-suggestions :global(strong) { display: block; margin-top: .25rem; color: var(--bright); font-size: .95rem; }
-  .answer-suggestions :global(p) { margin: .2rem 0 0; color: var(--muted); font-size: .84rem; line-height: 1.5; }
+  .answer-suggestions :global(a:hover), .answer-suggestions :global(a:focus-visible) { background: var(--signal-soft); outline: 2px solid var(--signal); outline-offset: -2px; }
+  .answer-suggestions :global(small) { display: block; color: var(--signal); font: .65rem/1.4 var(--font-mono); text-transform: uppercase; }
+  .answer-suggestions :global(strong) { display: block; margin-top: .3rem; color: var(--bright); font-size: 1rem; }
+  .answer-suggestions :global(p) { margin: .25rem 0 0; color: var(--muted); font-size: .82rem; line-height: 1.5; }
   .answer-suggestions :global(b) { color: var(--signal); }
-  .answer-empty { margin: 1rem 0 0; border-left: 2px solid var(--amber); padding-left: .8rem; font-size: .88rem; }
-  .shortcut-label { margin: 0 1.8rem; border-top: 1px solid #e6ebf4; padding-top: 1rem; color: #718099; font-size: .73rem; letter-spacing: .04em; }
-  .usecase-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; padding: 1rem 1.8rem 1.5rem; }
-  .usecase { --case-tone: #795cca; position: relative; display: grid; grid-template-columns: 1fr auto; gap: .3rem .6rem; align-items: start; min-width: 0; padding: 1rem 1.1rem; border: 1px solid #e1e7f2; border-radius: .95rem; background: #f3f1ff; color: var(--paper); transition: background 180ms ease, border-color 180ms ease, translate 180ms ease, box-shadow 180ms ease; }
-  .usecase.tone-blue { --case-tone: #3e75ab; background: #eff6ff; }
-  .usecase.tone-green { --case-tone: #2f856e; background: #edf8f3; }
-  .usecase:hover { translate: 0 -3px; box-shadow: 0 8px 16px #293b670a; border-color: var(--case-tone); background: #f5f7ff; color: inherit; }
-  .case-number { grid-column: 2; grid-row: 1; color: #7888a3; font: .7rem/1 var(--font-mono); }
-  .case-icon { grid-column: 1; grid-row: 1; width: 3.8rem; color: var(--case-tone); }
-  .case-icon :global(svg) { width: 100%; height: auto; }
-  .case-copy { grid-column: 1 / -1; display: grid; gap: .3rem; min-width: 0; padding-top: .2rem; }
-  .case-copy strong { color: var(--bright); font-size: .98rem; font-weight: 580; line-height: 1.4; }
-  .case-copy small { color: var(--muted); font-size: .82rem; line-height: 1.55; max-width: 27ch; }
-  .usecase > :global(svg) { grid-column: 2; grid-row: 3; justify-self: end; color: var(--case-tone); width: 1.1rem; }
-  .question-library-link { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .9rem 1.8rem; border-top: 1px solid #e1e7f2; color: #4d64bb; font-size: .82rem; }
-  .question-library-link:hover { background: #f7f9fd; color: #3048a7; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+  .answer-empty { margin: 1rem 0 0; border-left: 2px solid #ffa279; padding-left: .8rem; font-size: .88rem; }
+  .shortcut-label { margin: 2rem 0 1rem; color: var(--muted); }
+  .usecase-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+  .usecase { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; min-width: 0; padding: 1.5rem; border: 1px solid var(--line); border-radius: .5rem; background: #fffcf6; transition: border-color 180ms ease, translate 180ms ease, box-shadow 180ms ease; }
+  .usecase:hover { translate: 0 -4px; box-shadow: 0 10px 20px #23251f08; border-color: #c47150; color: inherit; }
+  .case-number { grid-column: 2; grid-row: 1; color: #c6c3b6; font: 420 2.7rem/1 var(--font-sans); letter-spacing: -.06em; }
+  .case-icon { display: grid; place-items: center; grid-column: 1; grid-row: 1; width: 2.7rem; height: 2.7rem; border: 1px solid #dedbd2; border-radius: .6rem; color: var(--signal); }
+  .case-icon :global(svg) { width: 1.3rem; height: 1.3rem; }
+  .case-copy { grid-column: 1 / -1; display: grid; gap: .55rem; min-width: 0; }
+  .case-copy strong { color: var(--bright); font-size: 1.15rem; font-weight: 580; line-height: 1.3; letter-spacing: -.025em; }
+  .case-copy small { color: var(--muted); font-size: .84rem; line-height: 1.65; max-width: 28ch; }
+  .usecase > :global(svg) { grid-column: 2; grid-row: 3; justify-self: end; color: var(--signal); width: 1.2rem; transition: translate 160ms; }
+  .usecase:hover > :global(svg) { translate: 3px 0; }
+  .question-library-link { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 0; margin-top: .7rem; border-bottom: 1px solid var(--line); color: var(--bright); font-size: .8rem; }
+  .question-library-link :global(svg) { width: 1rem; }
+  .finder-console button:focus-visible { outline-color: #ffa279; }
   @media (max-width: 700px) {
     .usecase-grid { grid-template-columns: 1fr; gap: .6rem; }
-    .usecase { grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; padding: .9rem; }
+    .usecase { grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: 1.2rem 1rem; }
     .case-number { display: none; }
-    .case-icon { grid-column: 1; grid-row: 1; width: 3.7rem; }
-    .case-copy { grid-column: 2; grid-row: 1; padding: 0; }
-    .case-copy small { max-width: none; }
+    .case-icon { grid-column: 1; grid-row: 1; width: 2.6rem; }
+    .case-copy { grid-column: 2; grid-row: 1; }
+    .case-copy strong { font-size: 1rem; }
+    .case-copy small { max-width: none; font-size: .8rem; }
     .usecase > :global(svg) { grid-column: 3; grid-row: 1; }
-    header, .answer-finder, .usecase-grid, .question-library-link { padding-inline: 1rem; }
-    .shortcut-label { margin-inline: 1rem; }
     header > span { display: none; }
     .answer-search-row { grid-template-columns: auto minmax(0,1fr); }
-    .answer-search-row input { font-size: 1rem; }
-    .answer-search-row button { grid-column: 1 / -1; margin: .2rem .45rem .45rem; }
+    .answer-search-icon { width: 2.5rem; }
+    .answer-search-row input { min-height: 3.5rem; }
+    .answer-search-row button { grid-column: 1 / -1; margin: .2rem .4rem .4rem; }
     .answer-examples span { flex-basis: 100%; }
   }
 </style>

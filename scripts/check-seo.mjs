@@ -82,7 +82,7 @@ for (const file of htmlFiles) {
       failures.push(`${publicPath} : ${required} absent`);
     }
   }
-  const expectedSocialImage = "https://pa.l0g.fr/og/pa-check-facturation-electronique-v2.png";
+  const expectedSocialImage = "https://pa.l0g.fr/og/pa-check-facturation-electronique-v3.png";
   if (!html.includes(`property="og:image" content="${expectedSocialImage}"`)
     || !html.includes(`name="twitter:image" content="${expectedSocialImage}"`)) {
     failures.push(`${publicPath} : image sociale dédiée absente`);
@@ -168,7 +168,7 @@ if (!/<meta\s+name="robots"\s+content="[^"]*max-image-preview:large/.test(home))
   failures.push("Accueil : aperçu d’image large non autorisé");
 }
 
-const image = await readFile(new URL("og/pa-check-facturation-electronique-v2.png", distUrl));
+const image = await readFile(new URL("og/pa-check-facturation-electronique-v3.png", distUrl));
 const pngSignature = "89504e470d0a1a0a";
 if (image.subarray(0, 8).toString("hex") !== pngSignature || image.readUInt32BE(16) !== 1200 || image.readUInt32BE(20) !== 630) {
   failures.push("Image sociale : PNG 1200 × 630 attendu");

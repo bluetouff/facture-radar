@@ -93,14 +93,16 @@ const catalog = platforms.map(({ slug, displayName }) => ({ slug, name: displayN
   render();
 </script>
 <style is:global>
-  .selection-tray { position: fixed; z-index: 30; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); width: min(30rem, calc(100% - 2rem)); border: 1px solid #c5d0f0; border-radius: 1rem; padding: .85rem 1rem; background: #fff; box-shadow: 0 10px 45px #18263d26; }
+  .selection-tray { position: fixed; z-index: 30; left: 50%; translate: -50% 0; bottom: max(1rem, env(safe-area-inset-bottom)); width: min(42rem, calc(100% - 2rem)); border: 1px solid #56584b; border-radius: .7rem; padding: 1rem 1.25rem; background: #23251f; box-shadow: 0 10px 45px #23251f26; }
   .selection-top, .selection-bottom { display: flex; justify-content: space-between; gap: .7rem; align-items: center; }
-  .selection-top strong { color: var(--bright); font-size: .84rem; }
-  .selection-top button { border: 0; padding: .4rem 0; background: transparent; color: var(--muted); font-size: .73rem; text-decoration: underline; cursor: pointer; }
+  .selection-top strong { color: #fffaf0; font-size: .84rem; }
+  .selection-top button { border: 0; padding: .4rem 0; background: transparent; color: #d4d4c8; font-size: .73rem; text-decoration: underline; cursor: pointer; }
   .selection-items { display: flex; flex-wrap: wrap; gap: .4rem; margin-block: .65rem; }
-  .selection-items button { max-width: 100%; border: 1px solid #dce3f7; border-radius: .45rem; background: var(--signal-soft); color: var(--signal); padding: .3rem .5rem; font-size: .74rem; overflow-wrap: anywhere; cursor: pointer; }
-  .selection-bottom small { color: var(--muted); font-size: .7rem; }
+  .selection-items button { max-width: 100%; border: 1px solid #66695a; border-radius: .35rem; background: #393c31; color: #fffaf0; padding: .3rem .5rem; font-size: .74rem; overflow-wrap: anywhere; cursor: pointer; }
+  .selection-bottom small { color: #c6c8b9; font-size: .7rem; }
   .selection-bottom .button { min-height: 2.5rem; padding: .5rem .7rem; font-size: .76rem; }
+  .selection-items button:hover { border-color: #ffad86; background: #4a493a; }
+  .selection-tray :focus-visible { outline-color: #ffad86; }
   .selection-announcement { position: fixed; z-index: 35; left: 50%; bottom: 1rem; translate: -50% 0; max-width: min(32rem, calc(100% - 2rem)); margin: 0; border-radius: .65rem; background: var(--navy); color: #fff; padding: .65rem .9rem; font-size: .8rem; pointer-events: none; }
   .selection-announcement:empty { display: none; }
   .has-selection { padding-bottom: var(--selection-height, 13rem); }

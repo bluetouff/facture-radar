@@ -19,10 +19,11 @@ const updates = (slug ? updatesForPlatform(slug) : platformUpdates).slice(0, lim
 <style>
   .platform-updates { margin-block: 2rem; min-width: 0; }
   .platform-updates > header { margin-bottom: 1.1rem; }
-  .platform-updates h2 { margin: .65rem 0 .4rem; color: var(--bright); font-size: clamp(1.3rem,2.6vw,1.85rem); font-weight: 650; letter-spacing: -.03em; }
+  .platform-updates h2 { margin: .65rem 0 .4rem; color: var(--bright); font-size: clamp(1.5rem,3vw,2.4rem); font-weight: 570; letter-spacing: -.045em; }
   .platform-updates header > p { margin: 0; color: var(--muted); font-size: .85rem; }
   .updates-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,20rem),1fr)); gap: .8rem; }
-  article { min-width: 0; border: 1px solid #dce4f1; border-radius: .9rem; padding: 1.1rem; background: #fff; scroll-margin-top: 7rem; }
+  article { min-width: 0; border: 1px solid #dedbd2; border-radius: .4rem; padding: 1.3rem; background: #fffcf5; scroll-margin-top: 7rem; }
+  .updates-grid article { border-top: 2px solid var(--bright); }
   .update-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .72rem; color: var(--muted); }
   .update-meta > span { color: var(--signal); font-weight: 600; }
   h3 { margin: .8rem 0 .5rem; color: var(--bright); font-size: 1rem; line-height: 1.45; font-weight: 600; }
