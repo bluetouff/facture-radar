@@ -85,12 +85,12 @@
 .footer-note a svg { width: .95rem; height: .95rem; }
 .site-footer a:focus-visible { outline: 2px solid #e4bd93; outline-offset: 4px; }
 
-@media (max-width: 1370px) {
+@media (max-width: 1550px) {
   .nav-copy small { display: none; }
   .header-inner { gap: .8rem; }
   .nav-action { padding-inline: .4rem; }
 }
-@media (max-width: 1130px) {
+@media (max-width: 1290px) {
   .header-shell { width: calc(100% - 2rem); }
   .header-inner { min-height: 74px; }
   .main-nav, .resource-menu { display: none; }

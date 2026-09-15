@@ -32,14 +32,14 @@ const shareLinks = [
   { label: "E-mail", icon: "email", href: `mailto:?subject=${encodedShareTitle}&body=${encodedEmailBody}`, tone: "email", external: false },
 ] as const;
 const primaryNav = [
+  { href: "/annuaire/", label: "Annuaire des PA", hint: `${platforms.length} fiches, liste complète`, icon: "directory", tone: "green" },
   { href: "/verifier-mon-outil/", label: "Vérifier mon outil", hint: "Garder, compléter ou changer", icon: "route", tone: "violet" },
   { href: "/verifier-une-facture/", label: "Vérifier une facture", hint: "Factur-X ou XML, contrôle local", icon: "invoice", tone: "blue" },
   { href: "/diagnostic/", label: "Choisir une plateforme", hint: "3 questions, toutes les options", icon: "target", tone: "green" },
 ] as const;
 const resourceNav = [
   { href: "/questions/", label: `${practicalQuestions.length} questions pratiques`, hint: "Des réponses directement utilisables", icon: "question" },
-  { href: "/plateformes/", label: `${platforms.length} plateformes étudiées`, hint: "Fiches détaillées et tarifs", icon: "layers" },
-  { href: "/annuaire/", label: "Annuaire officiel", hint: "La liste publique de la DGFiP", icon: "directory" },
+  { href: "/plateformes/", label: "Plateformes par usage", hint: "Sélection de fiches détaillées", icon: "layers" },
   { href: "/a-propos/", label: "Pourquoi PA Check ?", hint: "De l’enquête l0g à l’outil", icon: "route" },
   { href: "/contribuer/", label: "Mettre à jour une fiche", hint: "Pour les plateformes agréées", icon: "action" },
   { href: "/agents/", label: "Accès pour les agents", hint: "MCP public et corpus complet", icon: "route" },

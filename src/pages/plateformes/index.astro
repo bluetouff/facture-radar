@@ -30,17 +30,18 @@ const sections = [
 ] as const;
 
 const bySlug = new Map(platforms.map((platform) => [platform.slug, platform]));
+const selectedCount = sections.reduce((count, section) => count + section.slugs.length, 0);
 let dossierIndex = 0;
 ---
 
 <BaseLayout
-  title={`Plateformes agréées de facturation électronique : ${platforms.length} fiches | PA Check`}
-  description={`Explorez ${platforms.length} plateformes agréées de facturation électronique : prix, fonctions, formats, hébergement, contrat et informations encore manquantes.`}
+  title={`Choisir une PA : ${selectedCount} plateformes par usage | PA Check`}
+  description={`Comparez ${selectedCount} plateformes agréées selon votre usage : indépendant, cabinet comptable ou système d'information. Accédez aussi à l'annuaire complet des ${platforms.length} PA.`}
 >
   <section class="atlas-hero">
     <div class="shell atlas-hero-layout">
       <div class="atlas-hero-copy">
-        <span class="atlas-edition">édition 03 · 27 août 2026</span>
+        <span class="atlas-edition">sélection par usage · annuaire complet disponible</span>
         <p class="atlas-kicker">l'atlas PA Check</p>
         <h1>Les plateformes agréées de facturation électronique, <em>sans podium.</em></h1>
         <p>Commencez par votre façon de travailler. Chaque dossier rassemble ce qui est public, ce qui change réellement votre choix et ce que vous devrez encore demander.</p>
@@ -56,7 +57,7 @@ let dossierIndex = 0;
         <div class="orbit orbit-two"></div>
         <div class="atlas-scale"><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <strong>{platforms.length}</strong>
-        <small>dossiers reliés<br />à {sources.length} sources</small>
+        <small>fiches dans l'annuaire<br />{sources.length} sources</small>
       </div>
     </div>
   </section>
@@ -73,7 +74,7 @@ let dossierIndex = 0;
 
   <div class="shell atlas-note">
     <InterfaceIcon name="directory" />
-    <p><strong>Cette sélection n'est pas un classement.</strong> Elle documente les {platforms.length} plateformes approuvées du relevé DGFiP du 10 septembre 2026. <a href="/annuaire/">Voir l'annuaire complet</a>.</p>
+    <p><strong>Cette sélection n'est pas un classement.</strong> Les trois chapitres présentent {selectedCount} dossiers par usage. <a href="/annuaire/">Consulter l'annuaire complet des {platforms.length} plateformes agréées et leurs fiches</a>.</p>
   </div>
 
   <div class="shell atlas-sections">

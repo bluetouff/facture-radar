@@ -4,18 +4,34 @@ import directory from "../data/official-directory.json";
 import { platforms } from "../data/platforms";
 import { normalizePublicHttpUrl } from "../lib/urls.ts";
 
-const approvedEntries = directory.approved.map((entry) => ({ ...entry, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) }));
+const profilesByName = new Map(platforms.map((platform) => [platform.officialName, platform]));
+const approvedEntries = directory.approved.map((entry) => {
+  const profile = profilesByName.get(entry.name);
+  if (!profile) throw new Error(`Fiche absente de l'annuaire : ${entry.name}`);
+  return { ...entry, profileHref: `/plateformes/${profile.slug}/`, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) };
+});
 const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) }));
+const title = `Annuaire des PA : ${directory.approved.length} plateformes agréées | PA Check`;
+const description = `Annuaire complet des ${directory.approved.length} plateformes agréées pour la facturation électronique : fiches, tarifs et sources DGFiP. ${directory.pending.length} opérateurs en attente distingués.`;
+const snapshotLabel = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${directory.snapshotDate}T00:00:00Z`));
 ---
 
-<BaseLayout
-  title="Annuaire officiel des plateformes agréées | PA Check"
-  description="Consultez et recherchez les plateformes agréées publiées par la DGFiP, ainsi que les opérateurs encore en attente au 10 septembre 2026."
->
+<BaseLayout title={title} description={description}>
+  <div itemscope itemtype="https://schema.org/CollectionPage">
+  <meta itemprop="name" content={title} />
+  <meta itemprop="description" content={description} />
+  <link itemprop="url" href={new URL("/annuaire/", Astro.site)} />
   <section class="shell page-hero">
+    <nav class="directory-breadcrumb" aria-label="Fil d’Ariane" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/"><span itemprop="name">Accueil</span></a><meta itemprop="position" content="1" /></span>
+      <span aria-hidden="true">/</span>
+      <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">Annuaire des PA</span><meta itemprop="position" content="2" /></span>
+    </nav>
     <span class="eyebrow">liste DGFiP · {directory.snapshotDate}</span>
-    <h1>Toutes les plateformes agréées par la DGFiP.</h1>
-    <p>Recherchez une plateforme dans la liste officielle. PA Check propose une fiche détaillée pour {platforms.length} d'entre elles.</p>
+    <h1>Annuaire complet des plateformes agréées (PA).</h1>
+    <p>Retrouvez les {directory.approved.length} plateformes approuvées pour la facturation électronique dans le relevé DGFiP du {snapshotLabel}, ainsi que les {directory.pending.length} opérateurs encore en attente.</p>
+    <p>Chaque nom de plateforme approuvée ouvre sa fiche PA Check : tarifs publiés, fonctions, hébergement, conditions et sources. PA Check est un guide indépendant ; la <a href={directory.sourcePage}>liste publiée par la DGFiP</a> reste la référence pour le statut officiel.</p>
+    <div class="hero-actions"><a class="button secondary" href="/diagnostic/">Choisir selon mes besoins</a><a class="button secondary" href="/questions/">Comprendre la facturation électronique</a></div>
   </section>
   <section class="shell directory-section">
     <div class="directory-meta">
@@ -27,19 +43,23 @@ const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: no
       <label><span>Statut</span><select id="directory-status"><option value="all">Toutes</option><option value="approved">Approuvées</option><option value="pending">En attente</option></select></label>
       <p id="directory-count" aria-live="polite"></p>
     </div>
-    <div class="directory-list">
-      {approvedEntries.map((entry) => (
-        <article class="directory-row" data-status="approved" data-search={`${entry.name} ${entry.city} ${entry.postalCode}`.toLocaleLowerCase("fr")}>
-          <span class="directory-state approved">Approuvée</span>
-          <div><strong>{entry.name}</strong><small>{entry.city}{entry.postalCode ? ` · ${entry.postalCode}` : ""} · immatriculée le {entry.registeredAt}</small></div>
-          <a href={entry.website} rel="noopener">Site<span aria-hidden="true">↗</span></a>
+    <div class="directory-list" itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+      <meta itemprop="name" content="Plateformes approuvées et opérateurs en attente dans la liste DGFiP" />
+      <meta itemprop="numberOfItems" content={String(approvedEntries.length + pendingEntries.length)} />
+      {approvedEntries.map((entry, index) => (
+        <article class="directory-row" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" data-status="approved" data-search={`${entry.name} ${entry.city} ${entry.postalCode}`.toLocaleLowerCase("fr")}>
+          <meta itemprop="position" content={String(index + 1)} />
+          <span class="directory-state approved" itemprop="description">Approuvée</span>
+          <div><h2><a class="directory-profile" itemprop="url" href={entry.profileHref}><span itemprop="name">{entry.name}</span><span class="profile-link-hint">Voir la fiche PA Check</span></a></h2><small>{entry.city}{entry.postalCode ? ` · ${entry.postalCode}` : ""} · immatriculée le {entry.registeredAt}</small></div>
+          <a class="directory-website" href={entry.website} rel="noopener" aria-label={`Site de ${entry.name}`}>Site<span aria-hidden="true">↗</span></a>
         </article>
       ))}
-      {pendingEntries.map((entry) => (
-        <article class="directory-row" data-status="pending" data-search={`${entry.name} ${entry.city} ${entry.postalCode}`.toLocaleLowerCase("fr")}>
-          <span class="directory-state pending">En attente</span>
-          <div><strong>{entry.name}</strong><small>{entry.city}{entry.postalCode ? ` · ${entry.postalCode}` : ""}</small></div>
-          <a href={entry.website} rel="noopener">Site<span aria-hidden="true">↗</span></a>
+      {pendingEntries.map((entry, index) => (
+        <article class="directory-row" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" data-status="pending" data-search={`${entry.name} ${entry.city} ${entry.postalCode}`.toLocaleLowerCase("fr")}>
+          <meta itemprop="position" content={String(approvedEntries.length + index + 1)} />
+          <span class="directory-state pending" itemprop="description">En attente</span>
+          <div><h2 itemprop="name">{entry.name}</h2><small>{entry.city}{entry.postalCode ? ` · ${entry.postalCode}` : ""}</small></div>
+          <a class="directory-website" itemprop="url" href={entry.website} rel="noopener" aria-label={`Site de ${entry.name}`}>Site<span aria-hidden="true">↗</span></a>
         </article>
       ))}
     </div>
@@ -52,10 +72,13 @@ const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: no
     </details>
     <p class="source-note">Source : <a href={directory.sourcePage}>DGFiP, liste des plateformes agréées</a>. Le libellé « en attente » désigne ici les opérateurs dont l'immatriculation définitive reste conditionnée à la réussite des tests d'interopérabilité, selon la page officielle.</p>
   </section>
+  </div>
   <script is:inline type="module" src="/directory.js"></script>
 </BaseLayout>
 
 <style>
+  .directory-breadcrumb { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.5rem; font-size: .8rem; color: var(--muted); }
+  .directory-breadcrumb a, .page-hero > p a { text-decoration: underline; text-underline-offset: .2em; }
   .directory-section { display: grid; gap: 1rem; }
   .directory-meta { display: grid; max-width: 22rem; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
   .directory-meta > div { overflow: hidden; border: 1px solid var(--line); border-radius: .9rem; padding: 1rem; background: rgba(255,255,255,.8); box-shadow: 0 .4rem 1.3rem rgba(41,57,86,.04); }
@@ -82,9 +105,13 @@ const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: no
   .directory-state.approved { background: var(--success-soft); color: var(--success); }
   .directory-state.pending { background: var(--amber-soft); color: var(--amber); }
   .directory-row > div { display: grid; }
-  .directory-row strong { color: var(--paper); font-size: .8rem; }
+  .directory-row h2 { margin: 0; color: var(--paper); font-size: .85rem; font-weight: 650; }
   .directory-row small { color: var(--muted); font: .56rem/1.4 var(--font-mono); }
-  .directory-row a { display: flex; justify-content: space-between; gap: .3rem; border-radius: .45rem; padding: .35rem .42rem; background: var(--signal-soft); color: var(--signal); font-size: .6rem; font-weight: 700; }
+  .directory-profile { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .75rem; min-height: 2rem; color: var(--bright); overflow-wrap: anywhere; }
+  .directory-profile:hover > span:first-child { text-decoration: underline; text-underline-offset: .2em; }
+  .profile-link-hint { color: var(--signal); font-size: .65rem; font-weight: 500; }
+  .directory-website { display: flex; justify-content: space-between; gap: .3rem; border-radius: .45rem; padding: .35rem .42rem; background: var(--signal-soft); color: var(--signal); font-size: .6rem; font-weight: 700; }
+  .directory-row a:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
   .source-note { margin-block: 1rem 3rem; color: var(--muted); font-size: .7rem; }
   .source-note a { color: var(--signal); text-decoration: underline; }
   @media (max-width: 850px) { .directory-meta { grid-template-columns: 1fr 1fr; } .directory-controls { grid-template-columns: 1fr 12rem; } .directory-controls p { grid-column: 1 / -1; } }

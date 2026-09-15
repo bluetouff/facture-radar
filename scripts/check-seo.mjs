@@ -1,6 +1,7 @@
 import { access, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { validateSitemap } from "./seo-contracts.mjs";
 
 const distUrl = new URL("../dist/", import.meta.url);
 const distDir = fileURLToPath(distUrl);
@@ -22,6 +23,8 @@ const htmlFiles = files.filter((file) => file.endsWith(".html"));
 const seenTitles = new Map();
 const seenCanonicals = new Map();
 const seenDescriptions = new Map();
+const pageLinks = new Map();
+const indexablePages = new Map();
 
 // Validate built assets: the development server does not inline these fonts.
 for (const file of files.filter((file) => file.endsWith(".css"))) {
@@ -55,12 +58,21 @@ for (const file of htmlFiles) {
   const description = capture(html, /<meta\s+name="description"\s+content="([^"]*)"/i);
   const canonical = capture(html, /<link\s+rel="canonical"\s+href="([^"]*)"/i);
   const h1Count = (html.match(/<h1(?:\s[^>]*)?>/gi) ?? []).length;
+  const robotsContent = capture(html, /<meta\s+name="robots"\s+content="([^"]*)"/i);
+  const indexable = !robotsContent.split(/[\s,]+/).includes("noindex");
+  const links = new Set();
+  pageLinks.set(publicPath, links);
+  if (indexable) indexablePages.set(`https://pa.l0g.fr${publicPath}`, {});
 
   if (!title) failures.push(`${publicPath} : title absent`);
   if (title.length > 90) failures.push(`${publicPath} : title trop long (${title.length} caractères)`);
   if (!description) failures.push(`${publicPath} : meta description absente`);
-  if (!canonical.startsWith("https://pa.l0g.fr/")) failures.push(`${publicPath} : canonical invalide`);
+  if (canonical !== `https://pa.l0g.fr${publicPath}`) failures.push(`${publicPath} : canonical différente de l’URL publique`);
   if (h1Count !== 1) failures.push(`${publicPath} : ${h1Count} H1`);
+  for (const label of ["Actions principales", "Menu principal mobile"]) {
+    const navigation = capture(html, new RegExp(`<nav\\b[^>]*aria-label="${label}"[^>]*>([\\s\\S]*?)<\\/nav>`));
+    if (!navigation.includes('href="/annuaire/"')) failures.push(`${publicPath} : annuaire absent du menu ${label}`);
+  }
   if ((publicPath.startsWith("/plateformes/") && publicPath !== "/plateformes/") || (publicPath.startsWith("/questions/") && publicPath !== "/questions/")) {
     if (!/itemtype="https:\/\/schema\.org\/BreadcrumbList"/.test(html)) failures.push(`${publicPath} : fil d’Ariane structuré absent`);
   }
@@ -103,6 +115,8 @@ for (const file of htmlFiles) {
     }
     if (!href.startsWith("/")) continue;
     const targetUrl = new URL(href, "https://pa.l0g.fr");
+    if (targetUrl.origin !== "https://pa.l0g.fr") continue;
+    links.add(targetUrl.pathname);
     if (targetUrl.pathname === "/api/mcp" || targetUrl.pathname === "/stats/") continue;
     try {
       await access(targetForPath(targetUrl.pathname));
@@ -111,6 +125,36 @@ for (const file of htmlFiles) {
     }
   }
 }
+
+const reachable = new Set(["/"]);
+const queue = ["/"];
+for (const page of queue) {
+  for (const linkedPage of pageLinks.get(page) ?? []) {
+    if (!reachable.has(linkedPage) && pageLinks.has(linkedPage)) {
+      reachable.add(linkedPage);
+      queue.push(linkedPage);
+    }
+  }
+}
+for (const url of indexablePages.keys()) {
+  if (!reachable.has(new URL(url).pathname)) failures.push(`${url} : page indexable inaccessible par les liens HTML depuis l’accueil`);
+}
+
+const directory = await readFile(new URL("annuaire/index.html", distUrl), "utf8");
+const corpus = JSON.parse(await readFile(new URL("api/corpus.json", distUrl), "utf8"));
+const directoryRows = [...directory.matchAll(/<article\b[^>]*class="[^"]*\bdirectory-row\b[^"]*"[^>]*>[\s\S]*?<\/article>/gi)].map((match) => match[0]);
+const approvedRows = directoryRows.filter((row) => row.includes('data-status="approved"'));
+const pendingRows = directoryRows.filter((row) => row.includes('data-status="pending"'));
+if (approvedRows.length !== corpus.manifest.counts.approvedPlatforms || pendingRows.length !== corpus.manifest.counts.pendingPlatforms) failures.push("Annuaire : nombre d’entrées affichées incohérent avec le corpus");
+const linkedProfiles = new Set(approvedRows.flatMap((row) => [...row.matchAll(/href="(\/plateformes\/[a-z0-9-]+\/)"/g)].map((match) => match[1])));
+for (const platform of corpus.platforms.platforms) {
+  if (!linkedProfiles.has(`/plateformes/${platform.slug}/`)) failures.push(`Annuaire : fiche ${platform.slug} non reliée par un lien HTML`);
+}
+if (pendingRows.some((row) => /href="\/plateformes\//.test(row))) failures.push("Annuaire : un opérateur en attente reçoit une fiche de plateforme approuvée");
+for (const type of ["CollectionPage", "ItemList", "BreadcrumbList"]) {
+  if (!directory.includes(`itemtype="https://schema.org/${type}"`)) failures.push(`Annuaire : balisage ${type} absent`);
+}
+if (!directory.includes(`itemprop="numberOfItems" content="${directoryRows.length}"`)) failures.push("Annuaire : nombre d’éléments structurés incohérent");
 
 const home = await readFile(new URL("index.html", distUrl), "utf8");
 const homeH1 = textOnly(capture(home, /<h1(?:\s[^>]*)?>([\s\S]*?)<\/h1>/i)).toLocaleLowerCase("fr");
@@ -133,13 +177,14 @@ if (image.subarray(0, 8).toString("hex") !== pngSignature || image.readUInt32BE(
 const robots = await readFile(new URL("robots.txt", distUrl), "utf8");
 if (!robots.includes("Sitemap: https://pa.l0g.fr/sitemap.xml")) failures.push("robots.txt : sitemap absent");
 const sitemap = await readFile(new URL("sitemap.xml", distUrl), "utf8");
-for (const requiredUrl of ["https://pa.l0g.fr/", "https://pa.l0g.fr/plateformes/", "https://pa.l0g.fr/questions/"]) {
-  if (!sitemap.includes(`<loc>${requiredUrl}</loc>`)) failures.push(`sitemap.xml : ${requiredUrl} absent`);
+for (const question of corpus.questions.questions) {
+  indexablePages.set(`https://pa.l0g.fr/questions/${question.slug}/`, { modifiedAt: question.checkedAt });
 }
+failures.push(...validateSitemap(sitemap, indexablePages));
 
 if (failures.length > 0) {
   console.error(failures.join("\n"));
   process.exit(1);
 }
 
-console.log(`SEO_OK ${htmlFiles.length} pages titres=${seenTitles.size} descriptions=${seenDescriptions.size} canonicals=${seenCanonicals.size} og=1200x630 liens=valides`);
+console.log(`SEO_OK ${htmlFiles.length} pages titres=${seenTitles.size} descriptions=${seenDescriptions.size} canonicals=${seenCanonicals.size} sitemap=${indexablePages.size} fiches_reliees=${linkedProfiles.size} pages_orphelines=0 og=1200x630 liens=valides`);
