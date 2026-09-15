@@ -15,7 +15,7 @@ const latestCheckedAt = (value: unknown): string => {
 };
 const latestQuestionDate = latestCheckedAt(practicalQuestions);
 const entries: SitemapEntry[] = [
-  { path: "/", lastmod: "2026-09-14" },
+  { path: "/", lastmod: "2026-09-15" },
   { path: "/verifier-mon-outil/" },
   { path: "/verifier-une-facture/" },
   { path: "/diagnostic/" },

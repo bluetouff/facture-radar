@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PlatformCard from "../components/PlatformCard.astro";
 import UseCaseNavigator from "../components/UseCaseNavigator.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
-import FolioArt from "../components/FolioArt.astro";
+import CorpusPreview from "../components/CorpusPreview.astro";
 import { platforms } from "../data/platforms";
 import sources from "../data/sources.json";
 import directory from "../data/official-directory.json";
@@ -28,12 +28,13 @@ const chapters = [
   <section class="home-opening">
     <div class="shell opening-layout">
       <div class="opening-copy">
-        <p class="edition-label"><span>PA Check, par l0g</span><i></i> Le guide indépendant</p>
-        <h1>Facturation électronique&nbsp;:<br />choisissez votre<br /><em>plateforme agréée.</em></h1>
+        <p class="edition-label"><span class="opening-pill"><InterfaceIcon name="shield" /> Le guide indépendant</span><span>par l0g</span></p>
+        <h1>Facturation électronique.<br />Trouvez votre<br /><em>plateforme agréée.</em></h1>
         <p>Un logiciel à garder, une plateforme à choisir, une facture à envoyer. Trouvez la réponse qui vous permet d’avancer.</p>
+        <div class="opening-actions"><a class="button" href="/annuaire/">Explorer les {platforms.length} plateformes <InterfaceIcon name="arrow" /></a><a class="opening-secondary" href="#answer-finder">J’ai une question <InterfaceIcon name="search" /></a></div>
         <div class="opening-audiences">Indépendants <span>·</span> Entreprises <span>·</span> Cabinets comptables</div>
       </div>
-      <div class="opening-art"><FolioArt /></div>
+      <div class="opening-art"><CorpusPreview /></div>
     </div>
   </section>
 
@@ -41,7 +42,7 @@ const chapters = [
 
   <section class="shell corpus-register" aria-label="Les informations disponibles">
     <div class="register-label"><InterfaceIcon name="directory" /><span>Le registre<br /><strong>en accès libre</strong></span></div>
-    <a href="/plateformes/"><strong>{platforms.length}</strong><span>fiches de plateformes<small>Des informations plus ou moins complètes selon les sources disponibles</small></span><InterfaceIcon name="arrow" /></a>
+    <a href="/annuaire/"><strong>{platforms.length}</strong><span>fiches de plateformes<small>Des informations plus ou moins complètes selon les sources disponibles</small></span><InterfaceIcon name="arrow" /></a>
     <a href="/methodologie/"><strong>{sources.length}</strong><span>sources consultables<small>Les documents publics à l’origine des réponses</small></span><InterfaceIcon name="arrow" /></a>
     <a href="/annuaire/" class="register-date"><span>Liste officielle DGFiP<strong>{directory.approved.length} plateformes agréées recensées</strong><small>Liste du 10 septembre 2026</small></span><InterfaceIcon name="arrow" /></a>
   </section>
@@ -78,7 +79,7 @@ const chapters = [
         <p>Indépendant, cabinet, PME ou grands volumes : quatre exemples pour entrer dans les fiches. Toutes les plateformes restent accessibles dans le registre.</p>
       </header>
       <div class="dossier-grid">{spotlights.map((platform, index) => <PlatformCard platform={platform} index={index} />)}</div>
-      <div class="home-directory-link"><a class="button" href="/plateformes/">Voir les {platforms.length} plateformes <InterfaceIcon name="arrow" /></a><a href="/annuaire/">Consulter l’annuaire officiel</a></div>
+      <div class="home-directory-link"><a class="button" href="/annuaire/">Voir les {platforms.length} plateformes <InterfaceIcon name="arrow" /></a><a href="/plateformes/">Explorer la sélection par usage</a></div>
       <a class="pa-contribution" href="/contribuer/">
         <span><InterfaceIcon name="action" /></span>
         <div><small>Vous représentez une plateforme agréée ?</small><h3>Aidez-nous à garder votre fiche exacte.</h3><p>Une nouvelle fonction, un tarif, une correction : transmettez-nous vos informations publiques.</p></div>
@@ -89,29 +90,33 @@ const chapters = [
 </BaseLayout>
 
 <style>
-  .home-opening { position: relative; background: #142c30; color: #f2eee3; padding-block: clamp(2rem,4vw,3.5rem) 5rem; }
-  .opening-layout { display: grid; grid-template-columns: minmax(0,1.35fr) minmax(17rem,.75fr); align-items: center; gap: 3rem; }
-  .edition-label { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; margin: 0; color: #b6cbbd; font-size: .76rem; letter-spacing: .045em; }
-  .edition-label i { width: 2.5rem; height: 1px; background: #9aaf9e; }
-  .opening-copy h1 { margin: 1.1rem 0 1rem; font: 400 clamp(2.5rem,4.4vw,3.8rem)/1.05 var(--font-serif); letter-spacing: -.025em; text-wrap: balance; }
-  .opening-copy h1 em { color: #c8d8b5; font-weight: 400; }
-  .opening-copy > p:not(.edition-label) { max-width: 36rem; color: #c4d1c5; font-size: 1rem; line-height: 1.75; margin-bottom: 1rem; }
-  .opening-audiences { display: flex; flex-wrap: wrap; gap: .65rem; color: #c5d5c7; font-size: .76rem; }
-  .opening-audiences span { color: #bb9578; }
+  .home-opening { position: relative; overflow: clip; background: radial-gradient(ellipse at 83% 38%, #e9edff 0, transparent 49%), linear-gradient(180deg, #fff, #f3f6fc); padding-block: clamp(2.5rem,4vw,4rem) 5.5rem; border-bottom: 1px solid #e6ebf5; }
+  .opening-layout { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(18rem,.8fr); align-items: center; gap: 4rem; }
+  .edition-label { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; margin: 0; color: var(--muted); font-size: .76rem; letter-spacing: .015em; }
+  .opening-pill { display: inline-flex; gap: .45rem; align-items: center; border: 1px solid #dce5f4; border-radius: 999px; padding: .4rem .7rem; color: #4f6280; background: #ffffffc9; box-shadow: 0 2px 4px #18263d03; }
+  .opening-pill :global(svg) { width: 1rem; height: 1rem; color: var(--signal); }
+  .opening-copy h1 { margin: 1.5rem 0 1.25rem; color: var(--bright); font: 660 clamp(2.55rem,4.1vw,3.75rem)/1.1 var(--font-sans); letter-spacing: -.055em; text-wrap: balance; }
+  .opening-copy h1 em { position: relative; color: var(--signal); font-style: normal; font-weight: inherit; }
+  .opening-copy > p:not(.edition-label) { max-width: 32rem; color: var(--paper); font-size: 1.05rem; line-height: 1.8; }
+  .opening-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 1.8rem; }
+  .opening-secondary { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; color: var(--paper); font-size: .87rem; font-weight: 550; }
+  .opening-secondary :global(svg) { width: 1.1rem; }
+  .opening-audiences { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.65rem; color: var(--muted); font-size: .72rem; }
+  .opening-audiences span { color: #a4b1cb; }
   .opening-art { min-width: 0; }
-  .home-workbench { position: relative; margin-top: -3rem; z-index: 2; }
-  .corpus-register { display: grid; grid-template-columns: .7fr 1.2fr 1.2fr 1fr; align-items: stretch; margin-block: 2rem 3.5rem; border-block: 1px solid #bfcabe; }
+  .home-workbench { position: relative; margin-top: -2.3rem; z-index: 2; }
+  .corpus-register { display: grid; grid-template-columns: .7fr 1.2fr 1.2fr 1fr; align-items: stretch; margin-block: 2rem 3.5rem; border-block: 1px solid #dce4f0; }
   .register-label { display: flex; gap: .8rem; align-items: center; padding: 1.5rem 1rem 1.5rem 0; color: var(--muted); font-size: .8rem; }
-  .register-label :global(svg) { width: 1.7rem; height: 1.7rem; color: #6b8371; }
+  .register-label :global(svg) { width: 1.7rem; height: 1.7rem; color: #687eab; }
   .register-label strong { color: var(--bright); font-weight: 550; }
-  .corpus-register > a { display: flex; align-items: center; gap: .85rem; padding: 1.2rem; border-left: 1px solid #c6cec2; }
-  .corpus-register > a:hover { background: #dde3d9; color: var(--bright); }
+  .corpus-register > a { display: flex; align-items: center; gap: .85rem; padding: 1.2rem; border-left: 1px solid #dce4f0; }
+  .corpus-register > a:hover { background: #edf2fc; color: var(--bright); }
   .corpus-register > a > strong { font: 450 2rem/1 var(--font-serif); color: var(--bright); }
   .corpus-register a span { display: grid; font-size: .82rem; color: var(--bright); }
   .corpus-register a small { display: block; margin-top: .35rem; color: var(--muted); font-size: .75rem; line-height: 1.5; }
-  .corpus-register a :global(svg) { flex-shrink: 0; width: 1rem; color: #6b8371; }
+  .corpus-register a :global(svg) { flex-shrink: 0; width: 1rem; color: #687eab; }
   .register-date strong { margin-top: .35rem; font-size: .82rem; font-weight: 550; }
-  .story-stage { padding-block: 4rem; background: #dedfd4; border-block: 1px solid #bdc4b5; }
+  .story-stage { padding-block: 4rem; background: #eef2f8; border-block: 1px solid #dce4f0; }
   .story-layout { display: grid; grid-template-columns: minmax(0,.88fr) minmax(0,1fr); align-items: center; gap: clamp(3rem,7vw,6rem); }
   .publication-cover { position: relative; isolation: isolate; padding: clamp(2rem,4vw,3.5rem); border: 1px solid #48574b; background: #203d37; color: #f4ead9; box-shadow: 7px 7px 0 #bfc7b8,8px 8px 0 #9da996,14px 14px 0 #d4d7ca,15px 15px 0 #abb6a2; }
   .publication-cover::before { position: absolute; inset: 0 auto 0 .75rem; width: 1px; background: #79927855; content: ""; }
@@ -124,30 +129,30 @@ const chapters = [
   .publication-link { display: inline-flex; gap: .8rem; align-items: center; margin-top: 1.25rem; padding-block: .7rem; border-bottom: 1px solid #b99778; font-size: .87rem; color: #f2d1ad; }
   .publication-link:hover { color: #fff; }
   .publication-edition { display: block; border-top: 1px solid #728375; margin-top: 2.5rem; padding-top: 1rem; color: #b9c8b0; font-size: .74rem; }
-  .story-copy .edition-label { color: #6b725d; }
+  .story-copy .edition-label { color: #62718a; }
   .story-copy h3 { margin: 1rem 0; color: var(--bright); font: 430 clamp(1.8rem,3vw,2.4rem)/1.1 var(--font-serif); }
-  .story-copy > p:not(.edition-label) { color: #485b4f; font-size: .95rem; line-height: 1.75; }
-  .story-chapters { margin-top: 1.6rem; border-top: 1px solid #aebba8; }
-  .story-chapters a { display: grid; grid-template-columns: 1.5rem 1fr auto; gap: 1rem; align-items: center; border-bottom: 1px solid #b7c1af; padding: .7rem 0; color: var(--bright); transition: padding 160ms ease; }
+  .story-copy > p:not(.edition-label) { color: #47566f; font-size: .95rem; line-height: 1.75; }
+  .story-chapters { margin-top: 1.6rem; border-top: 1px solid #d0daea; }
+  .story-chapters a { display: grid; grid-template-columns: 1.5rem 1fr auto; gap: 1rem; align-items: center; border-bottom: 1px solid #d0daea; padding: .7rem 0; color: var(--bright); transition: padding 160ms ease; }
   .story-chapters a:hover { padding-inline: .3rem; background: #ffffff25; color: var(--bright); }
-  .story-chapters a > span { font: .7rem/1 var(--font-mono); color: #5b745b; }
-  .story-chapters small { display: block; color: #6b725d; font-size: .7rem; }
+  .story-chapters a > span { font: .7rem/1 var(--font-mono); color: #6279a6; }
+  .story-chapters small { display: block; color: #62718a; font-size: .7rem; }
   .story-chapters strong { font-size: .87rem; font-weight: 550; }
   .story-chapters :global(svg) { width: 1rem; }
-  .story-about { display: inline-flex; gap: .7rem; align-items: center; margin-top: 1.5rem; font-size: .84rem; color: #3b604f; }
-  .home-dossiers .edition-label { color: #68765f; }
-  .home-dossiers h2 { font-family: var(--font-serif); font-weight: 400; font-size: clamp(2rem,3.1vw,2.7rem); }
-  .home-dossiers h2 em { color: #647b61; }
+  .story-about { display: inline-flex; gap: .7rem; align-items: center; margin-top: 1.5rem; font-size: .84rem; color: var(--signal); }
+  .home-dossiers .edition-label { color: var(--signal); }
+  .home-dossiers h2 { font-family: var(--font-sans); font-weight: 630; font-size: clamp(2rem,3.1vw,2.7rem); }
+  .home-dossiers h2 em { color: var(--signal); font-style: normal; }
   .dossier-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
   .home-directory-link { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; margin-top: 1.7rem; }
   .home-directory-link > a:last-child { font-size: .9rem; text-decoration: underline; text-underline-offset: .3em; }
   .home-directory-link .button { gap: .7rem; }
-  .pa-contribution { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.3rem; margin-top: 3rem; padding: 1.7rem 0; border-block: 1px solid #b9c6b8; }
+  .pa-contribution { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.3rem; margin-top: 3rem; padding: 1.7rem 0; border-block: 1px solid #dce4f0; }
   .pa-contribution > span { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; border: 1px solid #bcb79f; border-radius: 50%; color: #93613e; }
   .pa-contribution h3 { margin: .3rem 0; color: var(--bright); font-size: 1.1rem; font-weight: 550; }
   .pa-contribution small { color: #6a715c; font-size: .8rem; }
   .pa-contribution p { margin: 0; font-size: .9rem; }
   @media (max-width: 900px) { .opening-layout { gap: 1.5rem; } .corpus-register { grid-template-columns: 1fr 1fr; } .register-label { padding-left: 1rem; } .corpus-register > a { border-left: 0; } .story-layout { gap: 3rem; } }
-  @media (max-width: 700px) { .opening-layout { grid-template-columns: 1fr; } .opening-art { display: none; } .opening-copy h1 { font-size: clamp(2.5rem,7vw,3.3rem); } .story-layout { grid-template-columns: 1fr; } .publication-cover { margin-right: 1rem; } .dossier-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) { .opening-layout { grid-template-columns: 1fr; } .opening-art { display: none; } .opening-copy h1 { font-size: clamp(2.25rem,6.6vw,3.1rem); } .story-layout { grid-template-columns: 1fr; } .publication-cover { margin-right: 1rem; } .dossier-grid { grid-template-columns: 1fr; } }
   @media (max-width: 440px) { .corpus-register { grid-template-columns: 1fr; } .corpus-register > a { border-top: 1px solid #c6cec2; padding-inline: .4rem; } .register-label { padding: 1rem .4rem; } .pa-contribution { grid-template-columns: auto 1fr; gap: .8rem; } .pa-contribution > :global(svg) { display: none; } .opening-copy > p:not(.edition-label) { font-size: .95rem; } }
 </style>

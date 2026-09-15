@@ -1,0 +1,73 @@
+---
+import InterfaceIcon from "./InterfaceIcon.astro";
+import { platforms } from "../data/platforms";
+import sources from "../data/sources.json";
+
+const previews = ["shine", "jefacture", "yooz"].map(slug => {
+  const platform = platforms.find(entry => entry.slug === slug);
+  if (!platform) throw new Error(`Fiche absente de l’aperçu : ${slug}`);
+  return platform;
+});
+---
+
+<aside class="corpus-preview" aria-label="Un aperçu de l’annuaire PA Check">
+  <div class="preview-orbit orbit-one" aria-hidden="true"></div>
+  <div class="preview-orbit orbit-two" aria-hidden="true"></div>
+  <div class="preview-window">
+    <div class="window-header"><span class="window-icon"><InterfaceIcon name="directory" /></span><strong>Votre point de départ</strong><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+    <div class="preview-total"><div><span>L’annuaire PA Check</span><strong>{platforms.length}<small>plateformes agréées</small></strong></div><span class="total-icon"><InterfaceIcon name="layers" /></span></div>
+    <div class="preview-platforms">
+      <p>Quelques fiches à explorer <span>→</span></p>
+      {previews.map((platform, index) => <a href={`/plateformes/${platform.slug}/`}>
+        <span class={`preview-monogram tone-${index}`} aria-hidden="true">{platform.displayName.slice(0, 2).toLocaleUpperCase("fr")}</span>
+        <span><strong>{platform.displayName}</strong><small>Fiche et sources publiques</small></span>
+        <InterfaceIcon name="arrow" />
+      </a>)}
+    </div>
+    <a class="preview-all" href="/annuaire/">Explorer toutes les plateformes <InterfaceIcon name="arrow" /></a>
+  </div>
+  <a class="preview-note" href="/methodologie/"><span><InterfaceIcon name="proof" /></span><div><strong>{sources.length} sources</strong><small>Pour savoir d’où vient l’info.</small></div><InterfaceIcon name="check" /></a>
+</aside>
+
+<style>
+  .corpus-preview { position: relative; isolation: isolate; padding: .4rem 1rem 0; }
+  .preview-orbit { position: absolute; z-index: -1; border: 1px solid #c6d2f0; border-radius: 50%; pointer-events: none; }
+  .orbit-one { inset: 3% -4% 2%; rotate: -18deg; }
+  .orbit-two { inset: 11% -9% 11%; rotate: 22deg; border-style: dashed; }
+  .preview-window { position: relative; border: 1px solid #dce3f1; border-radius: 1.35rem; background: #fff; box-shadow: 0 24px 65px #203b7e13, 0 5px 10px #203b7e06; rotate: -3deg; transition: rotate 350ms ease, translate 350ms ease; }
+  .corpus-preview:hover .preview-window { rotate: 0deg; translate: 0 -3px; }
+  .preview-window:focus-within { rotate: 0deg; }
+  .window-header { display: flex; align-items: center; gap: .7rem; padding: .8rem 1.15rem; border-bottom: 1px solid #edf0f8; }
+  .window-icon { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: .6rem; color: var(--signal); background: var(--signal-soft); }
+  .window-icon :global(svg) { width: 1.15rem; }
+  .window-header > strong { font-size: .8rem; color: var(--bright); font-weight: 600; }
+  .window-dots { display: flex; gap: .25rem; margin-left: auto; }
+  .window-dots i { width: .3rem; height: .3rem; background: #c9d2e3; border-radius: 50%; }
+  .preview-total { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.4rem; }
+  .preview-total div > span { color: var(--muted); font-size: .75rem; }
+  .preview-total strong { display: block; color: var(--bright); font-size: 3rem; letter-spacing: -.07em; line-height: 1.15; font-weight: 650; }
+  .preview-total small { display: block; color: var(--muted); font-size: .78rem; font-weight: 450; letter-spacing: 0; }
+  .total-icon { display: grid; place-items: center; width: 4.6rem; height: 4.6rem; border-radius: 1.5rem; background: #eef1ff; color: var(--signal); rotate: 8deg; box-shadow: 5px 5px 0 #f5f6ff; }
+  .total-icon :global(svg) { width: 2.5rem; height: 2.5rem; }
+  .preview-platforms { padding: 0 1.3rem; }
+  .preview-platforms p { display: flex; justify-content: space-between; margin: 0; padding-bottom: .5rem; color: var(--muted); font-size: .7rem; }
+  .preview-platforms a { display: flex; gap: .7rem; align-items: center; padding: .65rem 0; border-top: 1px solid #edf0f7; }
+  .preview-monogram { display: grid; place-items: center; flex: 0 0 2.3rem; height: 2.3rem; border: 1px solid #dfe4fc; border-radius: .7rem; color: #4357bf; background: #eef1ff; font-size: .72rem; font-weight: 700; }
+  .tone-1 { background: #eaf7f1; color: #236c57; border-color: #d5eee3; }
+  .tone-2 { background: #fff4e7; color: #996022; border-color: #f5e4cd; }
+  .preview-platforms a > span:nth-child(2) { flex: 1; }
+  .preview-platforms strong, .preview-platforms small { display: block; }
+  .preview-platforms strong { color: var(--bright); font-size: .8rem; font-weight: 600; }
+  .preview-platforms small { color: var(--muted); font-size: .66rem; }
+  .preview-platforms a > :global(svg) { width: 1rem; color: #7b8eac; transition: translate 180ms ease; }
+  .preview-platforms a:hover > :global(svg) { color: var(--signal); translate: 3px 0; }
+  .preview-all { display: flex; justify-content: space-between; align-items: center; padding: .95rem 1.4rem; border-top: 1px solid #edf0f7; margin-top: .5rem; color: var(--signal); font-size: .77rem; font-weight: 600; }
+  .preview-all :global(svg) { width: 1rem; }
+  .preview-note { position: relative; right: -1rem; display: flex; align-items: center; gap: .8rem; width: max-content; max-width: 100%; margin: 1rem 0 0 auto; padding: .8rem 1rem; border: 1px solid #dfe6f2; border-radius: 1rem; background: #fff; box-shadow: 0 12px 35px #29477417; rotate: 3deg; }
+  .preview-note > span { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: .8rem; background: #e9f7f1; color: #287963; }
+  .preview-note strong, .preview-note small { display: block; }
+  .preview-note strong { color: var(--bright); font-size: .85rem; }
+  .preview-note small { color: var(--muted); font-size: .7rem; }
+  .preview-note > :global(svg) { width: 1.15rem; color: #2b9474; }
+  @media (max-width: 900px) { .corpus-preview { padding-inline: 0; } .preview-note { right: -.4rem; } }
+</style>

@@ -88,7 +88,7 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
     {isHome && <meta itemprop="name" content="PA Check" />}
     {isHome && <meta itemprop="alternateName" content="PA Check facturation électronique" />}
     {isHome && <meta itemprop="url" content={canonicalUrl} />}
-    <meta name="theme-color" content="#142c30" />
+    <meta name="theme-color" content="#4259df" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' data:; form-action 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
@@ -132,21 +132,6 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
           ))}
         </nav>
         <div class="header-tools">
-          <nav class="share-cluster" aria-label="Partager cette page">
-            <span>Partager</span>
-            <div>
-              {shareLinks.map(({ label, icon, href, tone, external }) => (
-                <a
-                  class={`share-link share-${tone}`}
-                  href={href}
-                  aria-label={`Partager sur ${label}`}
-                  title={label}
-                  target={external ? "_blank" : undefined}
-                  rel={external ? "noopener noreferrer" : undefined}
-                ><InterfaceIcon name={icon} /></a>
-              ))}
-            </div>
-          </nav>
           <details class="resource-menu">
             <summary class:list={{ current: resourceIsCurrent }}>
               <span class="summary-icon"><InterfaceIcon name="grid" /></span>
@@ -162,6 +147,21 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
                     <strong>{label}<small>{hint}</small></strong>
                   </a>
                 ))}
+              </nav>
+              <nav class="share-cluster" aria-label="Partager cette page">
+                <span>Partager</span>
+                <div>
+                  {shareLinks.map(({ label, icon, href, tone, external }) => (
+                    <a
+                      class={`share-link share-${tone}`}
+                      href={href}
+                      aria-label={`Partager sur ${label}`}
+                      title={label}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
+                    ><InterfaceIcon name={icon} /></a>
+                  ))}
+                </div>
               </nav>
               <div class="source-note"><InterfaceIcon name="shield" /><span><strong>Informations sourcées</strong><small>Mises à jour et limites affichées</small></span></div>
             </div>
@@ -255,5 +255,23 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
         </div>
       </div>
     </footer>
+    <script>
+      const menus = [...document.querySelectorAll<HTMLDetailsElement>(".site-header details")];
+      menus.forEach(menu => menu.addEventListener("toggle", () => {
+        if (menu.open) menus.forEach(other => { if (other !== menu) other.open = false; });
+      }));
+      document.addEventListener("click", event => {
+        if (!(event.target instanceof Node)) return;
+        for (const menu of menus) if (menu.open && !menu.contains(event.target)) menu.open = false;
+      });
+      document.addEventListener("keydown", event => {
+        if (event.key !== "Escape") return;
+        for (const menu of menus) {
+          if (!menu.open) continue;
+          menu.open = false;
+          menu.querySelector("summary")?.focus();
+        }
+      });
+    </script>
   </body>
 </html>
