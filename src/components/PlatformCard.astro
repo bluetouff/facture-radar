@@ -2,6 +2,7 @@
 import type { Platform } from "../data/types";
 import { sourceCount } from "../lib/evidence";
 import InterfaceIcon from "./InterfaceIcon.astro";
+import CompareButton from "./CompareButton.astro";
 
 interface Props {
   platform: Platform;
@@ -35,6 +36,7 @@ const counter = String(index + 1).padStart(2, "0");
       <strong>Lire le dossier <InterfaceIcon name="arrow" /></strong>
     </footer>
   </a>
+  <div class="teaser-compare"><CompareButton slug={platform.slug} name={platform.displayName} /></div>
 </article>
 
 <style>
@@ -43,7 +45,10 @@ const counter = String(index + 1).padStart(2, "0");
   .tone-2 { --teaser-color: #936029; --teaser-fill: #fff4e6; }
   .tone-3 { --teaser-color: #7b54af; --teaser-fill: #f4eeff; }
   .dossier-teaser:hover { border-color: #b8c7ed; translate: 0 -4px; box-shadow: 0 12px 30px #263d7310; }
-  .dossier-teaser > a { display: flex; height: 100%; flex-direction: column; padding: 1.5rem; color: inherit; border-radius: inherit; }
+  .dossier-teaser { display: flex; flex-direction: column; }
+  .dossier-teaser > a { display: flex; flex: 1; flex-direction: column; padding: 1.5rem; color: inherit; border-radius: inherit; }
+  .teaser-compare { padding: 0 1.5rem 1rem; }
+  .teaser-compare:has([hidden]) { display: none; }
   .teaser-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; font-size: .68rem; color: var(--muted); }
   .teaser-meta span { color: var(--teaser-color); background: var(--teaser-fill); padding: .2rem .5rem; border-radius: .4rem; font-weight: 550; }
   .teaser-meta small { font-size: .72rem; align-self: center; }

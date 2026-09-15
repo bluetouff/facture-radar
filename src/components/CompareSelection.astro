@@ -1,0 +1,110 @@
+---
+import { platforms } from "../data/platforms";
+const catalog = platforms.map(({ slug, displayName }) => ({ slug, name: displayName }));
+---
+<aside class="selection-tray" data-selection-catalog={JSON.stringify(catalog)} aria-label="Votre sélection de plateformes" hidden>
+  <div class="selection-top"><strong data-selection-count></strong><button type="button" data-selection-clear>Tout retirer</button></div>
+  <div class="selection-items" data-selection-items></div>
+  <div class="selection-bottom"><small>Conservée dans cet onglet</small><a class="button" data-selection-open href="/comparer/">Comparer</a></div>
+</aside>
+<p class="selection-announcement" role="status" aria-live="polite" data-selection-message></p>
+<script>
+  import { selectionIds, setSelection, restoreSelection, comparisonHref, selectionEvent } from "../scripts/comparison-selection";
+  const tray = document.querySelector<HTMLElement>(".selection-tray");
+  const catalog: { slug: string; name: string }[] = JSON.parse(tray?.dataset.selectionCatalog || "[]");
+  const names = new Map(catalog.map(item => [item.slug, item.name]));
+  const message = document.querySelector<HTMLElement>("[data-selection-message]");
+  let announcementTimer: ReturnType<typeof setTimeout>;
+  const announce = (value: string) => {
+    clearTimeout(announcementTimer);
+    if (message) message.textContent = value;
+    announcementTimer = setTimeout(() => { if (message) message.textContent = ""; }, 6000);
+  };
+  const render = () => {
+    const ids = selectionIds();
+    document.querySelectorAll<HTMLButtonElement>("[data-compare-id]").forEach(button => {
+      const selected = ids.includes(button.dataset.compareId || "");
+      button.hidden = false;
+      button.setAttribute("aria-pressed", String(selected));
+      button.setAttribute("aria-label", `${selected ? "Retirer" : "Ajouter"} ${button.dataset.compareName} ${selected ? "de la" : "à la"} comparaison`);
+      button.querySelector("[data-pick-label]")!.textContent = selected ? "Sélectionnée" : "Comparer";
+      button.firstElementChild!.textContent = selected ? "✓" : "+";
+    });
+    document.querySelectorAll<HTMLAnchorElement>("[data-compare-open]").forEach(link => {
+      const id = link.dataset.compareOpen;
+      if (id && names.has(id)) link.href = comparisonHref(ids.includes(id) || ids.length === 3 ? ids : [...ids, id]);
+    });
+    if (!tray) return;
+    tray.hidden = !ids.length || location.pathname === "/comparer/";
+    document.body.classList.toggle("has-selection", !tray.hidden);
+    tray.querySelector("[data-selection-count]")!.textContent = `${ids.length} plateforme${ids.length > 1 ? "s" : ""} sélectionnée${ids.length > 1 ? "s" : ""}`;
+    const items = ids.map(id => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = `${names.get(id)} ×`;
+      button.setAttribute("aria-label", `Retirer ${names.get(id)} de la comparaison`);
+      button.addEventListener("click", () => {
+        setSelection(selectionIds().filter(item => item !== id));
+        announce(`${names.get(id)} retirée de la comparaison.`);
+        (tray.hidden ? document.querySelector<HTMLButtonElement>("[data-compare-id]") : tray.querySelector<HTMLButtonElement>("[data-selection-items] button"))?.focus();
+      });
+      return button;
+    });
+    tray.querySelector("[data-selection-items]")!.replaceChildren(...items);
+    const open = tray.querySelector<HTMLAnchorElement>("[data-selection-open]")!;
+    open.href = comparisonHref(ids);
+    open.textContent = ids.length < 2 ? "Choisir une autre PA →" : `Comparer les ${ids.length} PA →`;
+  };
+  document.addEventListener("click", event => {
+    const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>("[data-compare-open]") : null;
+    const openId = link?.dataset.compareOpen;
+    if (openId && names.has(openId)) {
+      const current = selectionIds();
+      if (!current.includes(openId) && current.length === 3) {
+        event.preventDefault();
+        announce("Trois plateformes maximum. Retirez une plateforme pour comparer celle-ci.");
+      }
+      return;
+    }
+    const button = event.target instanceof Element ? event.target.closest<HTMLButtonElement>("[data-compare-id]") : null;
+    const id = button?.dataset.compareId;
+    if (!id || !names.has(id)) return;
+    const ids = selectionIds();
+    if (ids.includes(id)) {
+      setSelection(ids.filter(item => item !== id));
+      announce(`${names.get(id)} retirée de la comparaison.`);
+    } else if (ids.length < 3) {
+      setSelection([...ids, id]);
+      announce(`${names.get(id)} ajoutée au comparateur.`);
+    } else {
+      announce("Trois plateformes maximum. Retirez une plateforme pour en ajouter une autre.");
+    }
+  });
+  tray?.querySelector("[data-selection-clear]")?.addEventListener("click", () => {
+    setSelection([]);
+    announce("Sélection effacée.");
+    document.querySelector<HTMLButtonElement>("[data-compare-id]")?.focus();
+  });
+  document.addEventListener(selectionEvent, render);
+  window.addEventListener("pageshow", event => { if (event.persisted) restoreSelection(); else render(); });
+  if (tray) new ResizeObserver(() => {
+    document.documentElement.style.setProperty("--selection-height", `${tray.hidden ? 0 : tray.getBoundingClientRect().height + 40}px`);
+  }).observe(tray);
+  render();
+</script>
+<style is:global>
+  .selection-tray { position: fixed; z-index: 30; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); width: min(30rem, calc(100% - 2rem)); border: 1px solid #c5d0f0; border-radius: 1rem; padding: .85rem 1rem; background: #fff; box-shadow: 0 10px 45px #18263d26; }
+  .selection-top, .selection-bottom { display: flex; justify-content: space-between; gap: .7rem; align-items: center; }
+  .selection-top strong { color: var(--bright); font-size: .84rem; }
+  .selection-top button { border: 0; padding: .4rem 0; background: transparent; color: var(--muted); font-size: .73rem; text-decoration: underline; cursor: pointer; }
+  .selection-items { display: flex; flex-wrap: wrap; gap: .4rem; margin-block: .65rem; }
+  .selection-items button { max-width: 100%; border: 1px solid #dce3f7; border-radius: .45rem; background: var(--signal-soft); color: var(--signal); padding: .3rem .5rem; font-size: .74rem; overflow-wrap: anywhere; cursor: pointer; }
+  .selection-bottom small { color: var(--muted); font-size: .7rem; }
+  .selection-bottom .button { min-height: 2.5rem; padding: .5rem .7rem; font-size: .76rem; }
+  .selection-announcement { position: fixed; z-index: 35; left: 50%; bottom: 1rem; translate: -50% 0; max-width: min(32rem, calc(100% - 2rem)); margin: 0; border-radius: .65rem; background: var(--navy); color: #fff; padding: .65rem .9rem; font-size: .8rem; pointer-events: none; }
+  .selection-announcement:empty { display: none; }
+  .has-selection { padding-bottom: var(--selection-height, 13rem); }
+  html:has(.has-selection) { scroll-padding-bottom: var(--selection-height, 13rem); }
+  .has-selection .selection-announcement { bottom: var(--selection-height, 13rem); }
+  @media (max-width: 600px) { .selection-top { align-items: baseline; } .selection-bottom small { max-width: 8rem; } .selection-tray { padding: .7rem .8rem; } }
+</style>

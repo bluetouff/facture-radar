@@ -1,6 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
+import CompareButton from "../components/CompareButton.astro";
+import PlatformUpdates from "../components/PlatformUpdates.astro";
+import { updatesForPlatform } from "../data/platform-updates";
+import { directoryFacts, targetLabels } from "../lib/explorer";
+import { researchForPlatform } from "../data/platform-research";
 import directory from "../data/official-directory.json";
 import { platforms } from "../data/platforms";
 import { normalizePublicHttpUrl } from "../lib/urls.ts";
@@ -14,13 +19,20 @@ const initial = (name: string) => {
 const approvedEntries = directory.approved.map((entry) => {
   const profile = profilesByName.get(entry.name);
   if (!profile) throw new Error(`Fiche absente de l'annuaire : ${entry.name}`);
-  return { ...entry, profileHref: `/plateformes/${profile.slug}/`, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) };
+  return { ...entry, profile, facts: directoryFacts(profile, researchForPlatform(profile.slug)), profileHref: `/plateformes/${profile.slug}/`, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) };
 });
 const pendingEntries = directory.pending.map((entry) => ({ ...entry, website: normalizePublicHttpUrl(entry.website, `site de ${entry.name}`) }));
 const initials = new Set([...approvedEntries, ...pendingEntries].map(entry => initial(entry.name)));
 const title = `Annuaire des PA : ${directory.approved.length} plateformes agréées | PA Check`;
 const description = `Annuaire complet des ${directory.approved.length} plateformes agréées pour la facturation électronique : fiches, tarifs et sources DGFiP. ${directory.pending.length} opérateurs en attente distingués.`;
 const snapshotLabel = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${directory.snapshotDate}T00:00:00Z`));
+const facets = [
+  { key: "target", label: "Votre structure", options: Object.entries(targetLabels) },
+  { key: "price", label: "Tarification", options: [["free", "Gratuite (conditions)"], ["paid", "Prix public payant"], ["included", "Dans un abonnement"], ["quote", "Sur devis"], ["declared", "Déclarée, à vérifier"], ["unknown", "À confirmer"]] },
+  { key: "bank", label: "Compte bancaire obligatoire", options: [["no", "Non (publié)"], ["yes", "Oui"], ["declared", "Déclaré, à vérifier"], ["unknown", "À confirmer"]] },
+  { key: "api", label: "API publique", options: [["yes", "Accès publié"], ["no", "Non"], ["declared", "Déclarée, à vérifier"], ["unknown", "À confirmer"]] },
+  { key: "facturx", label: "Import Factur-X tiers", options: [["yes", "Import publié"], ["no", "Non pris en charge"], ["declared", "Déclaré, à vérifier"], ["unknown", "À confirmer"]] },
+];
 ---
 
 <BaseLayout title={title} description={description}>
@@ -59,11 +71,17 @@ const snapshotLabel = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: 
           <label class="directory-search"><span class="sr-only">Rechercher par nom, ville ou pays</span><InterfaceIcon name="search" /><input id="directory-search" type="search" placeholder="Chercher une plateforme, une ville…" maxlength="120" autocomplete="off" aria-controls="directory-results" /></label>
           <label class="directory-status"><span>Statut</span><select id="directory-status" aria-controls="directory-results"><option value="all">Tous les statuts</option><option value="approved">Approuvées</option><option value="pending">En attente</option></select></label>
         </div>
+        <details class="directory-facets" hidden>
+          <summary>Affiner selon vos besoins <span data-facet-total></span></summary>
+          <div class="directory-facet-grid">{facets.map(facet => <label><span>{facet.label}</span><select data-directory-facet={facet.key} aria-controls="directory-results"><option value="all">Tous</option>{facet.options.map(([value, label]) => <option value={value} data-label={label}>{label}</option>)}</select></label>)}</div>
+          <p>Les critères portent sur les PA approuvées. « À confirmer » ne signifie pas « non ». Les offres gratuites ont leurs conditions ; l’import Factur-X n’implique pas la conservation de l’XML.</p>
+        </details>
         <div class="directory-alphabet" role="group" aria-label="Filtrer par initiale" hidden>
           <button type="button" data-directory-letter="all" aria-pressed="true">Tout</button>
           {["#", ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map(letter => <button type="button" data-directory-letter={letter} aria-pressed="false" aria-label={`Initiale ${letter}`} disabled={!initials.has(letter)}>{letter}</button>)}
         </div>
       </div>
+      <div class="directory-active-filters" aria-label="Filtres actifs" hidden></div>
       <div class="directory-toolbar">
         <div><p id="directory-count" aria-live="polite">{approvedEntries.length + pendingEntries.length} résultats</p><button class="directory-reset" type="button" data-directory-reset hidden>Effacer les filtres</button></div>
         <div class="directory-views" role="group" aria-label="Présentation des résultats" hidden><button type="button" data-directory-view="cards" aria-pressed="true"><InterfaceIcon name="grid" /><span>Cartes</span></button><button type="button" data-directory-view="list" aria-pressed="false"><InterfaceIcon name="menu" /><span>Liste</span></button></div>
@@ -73,12 +91,12 @@ const snapshotLabel = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: 
         <meta itemprop="name" content="Plateformes approuvées et opérateurs en attente dans la liste DGFiP" />
         <meta itemprop="numberOfItems" content={String(approvedEntries.length + pendingEntries.length)} />
         {approvedEntries.map((entry, index) => (
-          <article class={`directory-row tone-${index % 4}`} itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" data-status="approved" data-letter={initial(entry.name)} data-search={`${entry.name} ${entry.city} ${entry.postalCode}`}>
+          <article class={`directory-row tone-${index % 4}`} itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" data-status="approved" data-letter={initial(entry.name)} data-search={`${entry.name} ${entry.city} ${entry.postalCode}`} data-target={entry.facts.target} data-price={entry.facts.price} data-bank={entry.facts.bank} data-api={entry.facts.api} data-facturx={entry.facts.facturx}>
             <meta itemprop="position" content={String(index + 1)} />
             <div class="directory-card-top"><span class="directory-monogram" aria-hidden="true">{monogram(entry.name)}</span><span class="directory-state approved" itemprop="description"><InterfaceIcon name="check" />Approuvée</span></div>
             <div class="directory-identity"><h2><a class="directory-profile" itemprop="url" href={entry.profileHref}><span itemprop="name">{entry.name}</span><span class="profile-link-hint"><InterfaceIcon name="arrow" /><span class="sr-only">Voir la fiche PA Check</span></span></a></h2><p>{entry.city}{entry.postalCode ? ` · ${entry.postalCode}` : ""}</p></div>
-            <p class="directory-registered">Immatriculée le <time datetime={entry.registeredAt}>{entry.registeredAt.split("-").reverse().join(".")}</time></p>
-            <footer><span class="directory-source-count"><InterfaceIcon name="proof" />Fiche et sources</span><a class="directory-website" href={entry.website} rel="noopener" aria-label={`Site de ${entry.name}`}>Site <span aria-hidden="true">↗</span></a></footer>
+            <div class="directory-registered"><p>Immatriculée le <time datetime={entry.registeredAt}>{entry.registeredAt.split("-").reverse().join(".")}</time></p>{updatesForPlatform(entry.profile.slug).slice(0, 1).map(update => <a class="directory-update" href={`${entry.profileHref}#update-${update.id}`}>{update.label} · {update.date.slice(5).split("-").reverse().join("/")} ↗</a>)}</div>
+            <footer><CompareButton slug={entry.profile.slug} name={entry.profile.displayName} /><a class="directory-website" href={entry.website} rel="noopener" aria-label={`Site de ${entry.name}`}>Site <span aria-hidden="true">↗</span></a></footer>
           </article>
         ))}
         {pendingEntries.map((entry, index) => (
@@ -93,6 +111,7 @@ const snapshotLabel = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: 
       </div>
       <div class="directory-empty" hidden><span><InterfaceIcon name="search" /></span><h2>Aucune plateforme ne correspond.</h2><p>Essayez un autre nom ou retirez un filtre pour élargir la recherche.</p><button type="button" class="button secondary" data-directory-reset>Revoir toutes les plateformes</button></div>
       <div class="directory-method"><span><InterfaceIcon name="shield" /></span><p><strong>Un guide indépendant, des sources à portée de clic.</strong> PA Check documente les informations publiques. La <a href={directory.sourcePage}>liste publiée par la DGFiP</a> reste la référence pour le statut officiel. <a href="/questions/">Comprendre la facturation électronique</a>.</p></div>
+      <PlatformUpdates limit={3} />
       <details class="integrity-details">
         <summary>Vérifier l'origine des fichiers</summary>
         <div class="hash-grid"><div><span>SHA-256 liste approuvée</span><code>{directory.approvedSha256}</code></div><div><span>SHA-256 liste en attente</span><code>{directory.pendingSha256}</code></div></div>
@@ -152,6 +171,14 @@ const snapshotLabel = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: 
   .directory-views button[aria-pressed="true"] { border-color: #dfe5f0; background: #fff; color: var(--signal); box-shadow: 0 2px 4px #18263d08; }
   .directory-views :global(svg) { width: .95rem; height: .95rem; }
   .directory-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+  .directory-facets { border-top: 1px solid #edf0f7; margin-top: .75rem; padding-top: .7rem; }
+  .directory-facets summary { padding: .4rem 0; color: var(--signal); cursor: pointer; font-size: .85rem; font-weight: 550; }
+  .directory-facet-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,13rem),1fr)); gap: .8rem; padding-top: .8rem; }
+  .directory-facet-grid label { display: grid; gap: .5rem; min-width: 0; font-size: .77rem; color: var(--paper); }
+  .directory-facet-grid select { width: 100%; min-height: 2.75rem; border: 1px solid #dce3f0; border-radius: .5rem; padding: .5rem; background: #f7f9fd; font-size: .8rem; color: var(--bright); }
+  .directory-facets p { margin: .8rem 0 .2rem; color: var(--muted); font-size: .75rem; }
+  .directory-active-filters { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .directory-active-filters :global(button) { border: 1px solid #d2dcf2; border-radius: 999px; padding: .4rem .7rem; background: var(--signal-soft); color: var(--signal); font-size: .75rem; cursor: pointer; }
   .directory-row { --tile-color: #455dcc; --tile-bg: #edf1ff; display: flex; flex-direction: column; min-width: 0; border: 1px solid #dfe5f0; border-radius: 1rem; padding: 1.15rem; background: #fff; box-shadow: 0 2px 5px #18263d03; transition: border-color 180ms ease, box-shadow 180ms ease, translate 180ms ease; }
   .directory-row.tone-1 { --tile-color: #297d6b; --tile-bg: #e9f7f1; }
   .directory-row.tone-2 { --tile-color: #966227; --tile-bg: #fff4e7; }
@@ -172,6 +199,8 @@ const snapshotLabel = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: 
   .directory-identity p { margin: .35rem 0 0; color: var(--muted); font-size: .73rem; overflow-wrap: anywhere; }
   .directory-registered { margin: .9rem 0 1rem; color: var(--muted); font-size: .73rem; }
   .directory-registered time { color: var(--paper); }
+  .directory-registered p { margin: 0; }
+  .directory-update { display: inline-block; color: var(--signal); font-size: .72rem; margin-top: .4rem; }
   .directory-row footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; margin-top: auto; padding-top: .8rem; border-top: 1px solid #edf0f7; }
   .directory-source-count { display: inline-flex; align-items: center; gap: .3rem; color: var(--muted); font-size: .72rem; }
   .directory-source-count :global(svg) { width: .85rem; }

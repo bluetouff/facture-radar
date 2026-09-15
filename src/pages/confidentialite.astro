@@ -7,7 +7,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="Données traitées par PA Check, fonctionnement local du vérificateur et informations techniques conservées par l’hébergement."
 >
   <section class="shell page-hero compact-hero">
-    <span class="eyebrow">confidentialité · version du 28 août 2026</span>
+    <span class="eyebrow">confidentialité · version du 15 septembre 2026</span>
     <h1>Ce que PA Check reçoit, et ce qu’il ne reçoit pas.</h1>
     <p>Le site fonctionne sans compte et sans traceur publicitaire. Les outils interactifs ont été conçus pour limiter les données transmises au strict nécessaire.</p>
   </section>
@@ -19,6 +19,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2>Utiliser les parcours</h2>
       <p>Les réponses du diagnostic et du vérificateur d’outil restent dans votre navigateur. Le diagnostic peut placer des critères non personnels dans le fragment de l’URL afin de permettre un partage ; ce fragment n’est pas transmis au serveur.</p>
 
+      <h2>Sélectionner et comparer des plateformes</h2>
+      <p>La sélection du comparateur conserve au maximum trois identifiants de plateformes dans le stockage de l’onglet (sessionStorage), sans compte ni identifiant de visiteur. Vous pouvez l’effacer avec « Tout retirer ». Le lien de comparaison contient ces identifiants dans l’adresse ; il les transmet au serveur lorsqu’il est ouvert. Les filtres de l’annuaire utilisent le fragment de l’adresse, qui n’est pas transmis au serveur.</p>
       <h2>Interroger le serveur MCP</h2>
       <p>Le serveur MCP reçoit uniquement les questions et critères bornés envoyés volontairement par le client MCP. Il n’accepte aucun document, SIREN, identifiant de compte ou outil d’écriture. Il ne consulte pas d’URL fournie par un utilisateur.</p>
 

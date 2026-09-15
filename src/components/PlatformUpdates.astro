@@ -1,0 +1,38 @@
+---
+import { platformUpdates, updatesForPlatform } from "../data/platform-updates";
+import { platforms } from "../data/platforms";
+import sources from "../data/sources.json";
+interface Props { slug?: string; limit?: number }
+const { slug, limit = 5 } = Astro.props;
+const updates = (slug ? updatesForPlatform(slug) : platformUpdates).slice(0, limit);
+---
+{updates.length > 0 && <section class="platform-updates" aria-label={slug ? "Évolutions de cette fiche" : "Évolutions des fiches"}>
+  <header><span class="mono-label">Les fiches évoluent</span><h2>{slug ? "Ce qui a changé dans cette fiche" : "Les dernières informations ajoutées"}</h2><p>Changements vérifiés et datés, avec les documents utilisés.</p></header>
+  <div class="updates-grid">{updates.map(update => <article id={`update-${update.id}`}>
+    <div class="update-meta"><span>{update.label}</span><time datetime={update.date}>{update.date.split("-").reverse().join("/")}</time></div>
+    <h3>{update.title}</h3><p>{update.detail}</p>
+    <div class="update-profiles">{update.slugs.map(id => <a href={`/plateformes/${id}/`}>{platforms.find(platform => platform.slug === id)?.displayName} ↗</a>)}</div>
+    <details><summary>Consulter les sources</summary><ul>{update.sourceIds.map(id => { const source = sources.find(item => item.id === id)!; return <li><a href={source.url} rel="noopener noreferrer">{source.title}</a></li>; })}</ul></details>
+  </article>)}</div>
+  {!slug && <a class="updates-all" href="/changements/">Tout le journal des changements →</a>}
+</section>}
+<style>
+  .platform-updates { margin-block: 2rem; min-width: 0; }
+  .platform-updates > header { margin-bottom: 1.1rem; }
+  .platform-updates h2 { margin: .65rem 0 .4rem; color: var(--bright); font-size: clamp(1.3rem,2.6vw,1.85rem); font-weight: 650; letter-spacing: -.03em; }
+  .platform-updates header > p { margin: 0; color: var(--muted); font-size: .85rem; }
+  .updates-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,20rem),1fr)); gap: .8rem; }
+  article { min-width: 0; border: 1px solid #dce4f1; border-radius: .9rem; padding: 1.1rem; background: #fff; scroll-margin-top: 7rem; }
+  .update-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .72rem; color: var(--muted); }
+  .update-meta > span { color: var(--signal); font-weight: 600; }
+  h3 { margin: .8rem 0 .5rem; color: var(--bright); font-size: 1rem; line-height: 1.45; font-weight: 600; }
+  article > p { color: var(--paper); font-size: .83rem; line-height: 1.7; }
+  .update-profiles { display: flex; flex-wrap: wrap; gap: .7rem; }
+  a { color: var(--signal); font-size: .8rem; }
+  details { margin-top: .85rem; border-top: 1px solid var(--line); padding-top: .6rem; font-size: .78rem; }
+  summary { color: var(--muted); cursor: pointer; padding-block: .25rem; }
+  ul { padding-left: 1.1rem; }
+  li { margin-block: .5rem; }
+  li a { text-decoration: underline; text-underline-offset: .15em; overflow-wrap: anywhere; }
+  .updates-all { display: inline-block; margin-top: 1rem; font-weight: 600; }
+</style>

@@ -20,7 +20,7 @@ const entries: SitemapEntry[] = [
   { path: "/verifier-une-facture/" },
   { path: "/diagnostic/" },
   { path: "/plateformes/", lastmod: "2026-09-15" },
-  { path: "/comparer/" },
+  { path: "/comparer/", lastmod: "2026-09-15" },
   { path: "/annuaire/", lastmod: "2026-09-15" },
   { path: "/a-propos/" },
   { path: "/contribuer/" },
@@ -28,7 +28,7 @@ const entries: SitemapEntry[] = [
   { path: "/methodologie/", lastmod: "2026-09-14" },
   { path: "/changements/", lastmod: "2026-09-15" },
   { path: "/conditions-utilisation/" },
-  { path: "/confidentialite/" },
+  { path: "/confidentialite/", lastmod: "2026-09-15" },
   { path: "/securite/" },
   { path: "/plateformes/ecosio/", lastmod: "2026-09-14" },
   ...platforms.map((platform) => ({

@@ -86,14 +86,14 @@ const checkedAtLabel = evidence.checkedAt.split("-").reverse().join("/");
 </div>
 
 <style>
-  .evidence-row { --row-tone: #538565; display: grid; grid-template-columns: minmax(10rem,.8fr) minmax(0,1.5fr); gap: .55rem 1.5rem; border-bottom: 1px solid #cbd4c1; padding: 1.2rem 1.4rem; background: #f8f5ee; }
+  .evidence-row { --row-tone: #538565; display: grid; grid-template-columns: minmax(10rem,.8fr) minmax(0,1.5fr); gap: .55rem 1.5rem; border-bottom: 1px solid #e1e7f0; padding: 1.2rem 1.4rem; background: #fff; }
   .evidence-row:last-child { border-bottom: 0; }
   .evidence-row[data-status="official"] { --row-tone: #526cb2; }
   .evidence-row[data-status="declared"] { --row-tone: #826aa1; }
-  .evidence-row[data-status="non_documented"] { --row-tone: #a77c41; background: #f0eddf; }
+  .evidence-row[data-status="non_documented"] { --row-tone: #a77c41; background: #fffbf5; }
   .evidence-key { display: grid; grid-template-columns: auto 1fr; gap: .5rem; align-content: start; justify-items: start; }
   .status-marker { width: .5rem; height: .5rem; margin-top: .4rem; border-radius: 50%; background: var(--row-tone); }
-  .evidence-label { color: #425a4b; font-size: .87rem; font-weight: 550; line-height: 1.45; }
+  .evidence-label { color: var(--paper); font-size: .87rem; font-weight: 550; line-height: 1.45; }
   .evidence-key :global(.evidence-badge) { grid-column: 2; border: 0; background: none; padding: 0; font-size: .75rem; font-weight: 450; letter-spacing: .015em; }
   .evidence-key :global(.evidence-badge::before) { display: none; }
   .evidence-value { min-width: 0; }
@@ -101,7 +101,7 @@ const checkedAtLabel = evidence.checkedAt.split("-").reverse().join("/");
   .evidence-value p { margin: .4rem 0 0; color: var(--muted); font-size: .86rem; line-height: 1.6; overflow-wrap: anywhere; }
   [data-status="non_documented"] .evidence-value strong { color: #806137; }
   .evidence-sources { grid-column: 2; min-width: 0; }
-  .evidence-sources summary { width: fit-content; padding-block: .45rem; color: #4c6b51; font-size: .76rem; cursor: pointer; }
+  .evidence-sources summary { width: fit-content; padding-block: .45rem; color: var(--signal); font-size: .76rem; cursor: pointer; }
   .evidence-sources summary:hover { color: var(--signal); }
   .evidence-sources summary:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
   .evidence-sources > div { display: grid; gap: .5rem; padding-block: .45rem; border-top: 1px dashed #bfcbb4; }

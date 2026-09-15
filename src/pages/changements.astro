@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PlatformUpdates from "../components/PlatformUpdates.astro";
 ---
 
 <BaseLayout
@@ -12,6 +13,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <p>Cette page rassemble les changements de la liste officielle, les corrections de fiches, les tarifs, les contrats et les évolutions du service.</p>
   </section>
   <section class="shell changelog">
+    <PlatformUpdates />
+    <article><time datetime="2026-09-15">15 septembre 2026</time><div><span class="change-type">parcours et comparaison</span><h2>De l’annuaire à une comparaison sourcée</h2><p>Sélection de trois PA, filtres par besoin, comparaison adaptée aux petits écrans, affichage des différences et accès aux preuves. Les évolutions datées sont reliées aux fiches. Les questions pratiques donnent accès aux sélections correspondantes.</p></div></article>
     <article>
       <time datetime="2026-09-15">15 septembre 2026</time>
       <div><span class="change-type">interface</span><h2>Un annuaire plus facile à parcourir</h2><p>L’accueil, la navigation et les fiches adoptent une présentation plus lisible. L’<a href="/annuaire/">annuaire</a> propose des cartes, une vue liste, un filtre par initiale et une recherche insensible aux accents. Les données, les statuts et les sources restent identiques.</p></div>

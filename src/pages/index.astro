@@ -4,6 +4,7 @@ import PlatformCard from "../components/PlatformCard.astro";
 import UseCaseNavigator from "../components/UseCaseNavigator.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import CorpusPreview from "../components/CorpusPreview.astro";
+import PlatformUpdates from "../components/PlatformUpdates.astro";
 import { platforms } from "../data/platforms";
 import sources from "../data/sources.json";
 import directory from "../data/official-directory.json";
@@ -39,6 +40,7 @@ const chapters = [
   </section>
 
   <div class="shell home-workbench"><UseCaseNavigator /></div>
+  <div class="shell"><PlatformUpdates limit={3} /></div>
 
   <section class="shell corpus-register" aria-label="Les informations disponibles">
     <div class="register-label"><InterfaceIcon name="directory" /><span>Le registre<br /><strong>en accès libre</strong></span></div>

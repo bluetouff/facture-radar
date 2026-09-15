@@ -7,6 +7,7 @@ import "../styles/global.css";
 import "../styles/chrome.css";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import BrandMark from "../components/BrandMark.astro";
+import CompareSelection from "../components/CompareSelection.astro";
 import FolioArt from "../components/FolioArt.astro";
 import { platforms } from "../data/platforms";
 import { practicalQuestions } from "../data/practical-questions";
@@ -38,6 +39,7 @@ const primaryNav = [
   { href: "/diagnostic/", label: "Choisir une plateforme", hint: "3 questions, toutes les options", icon: "target", tone: "green" },
 ] as const;
 const resourceNav = [
+  { href: "/comparer/", label: "Comparer des PA", hint: "Jusqu’à trois plateformes, critère par critère", icon: "layers" },
   { href: "/questions/", label: `${practicalQuestions.length} questions pratiques`, hint: "Des réponses directement utilisables", icon: "question" },
   { href: "/plateformes/", label: "Plateformes par usage", hint: "Sélection de fiches détaillées", icon: "layers" },
   { href: "/a-propos/", label: "Pourquoi PA Check ?", hint: "De l’enquête l0g à l’outil", icon: "route" },
@@ -203,6 +205,7 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
     <main id="contenu">
       <slot />
     </main>
+    <CompareSelection />
     <footer class="site-footer">
       <div class="shell">
         {!isHome && <a class="footer-investigation" href="https://l0g.fr/publications/grand-peage-facture/" aria-label="Lire l’enquête l0g : Le grand péage de la facture">
