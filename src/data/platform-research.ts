@@ -10,19 +10,19 @@ import type {
 
 export const PLATFORM_RESEARCH_CHECKED_AT = "2026-08-27";
 
-const documented = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> => ({
+const documented = <T>(value: T, sourceIds: string[], note?: string, checkedAt = PLATFORM_RESEARCH_CHECKED_AT): Evidence<T> => ({
   value,
   status: "documented",
   sourceIds,
-  checkedAt: PLATFORM_RESEARCH_CHECKED_AT,
+  checkedAt,
   note,
 });
 
-const declared = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> => ({
+const declared = <T>(value: T, sourceIds: string[], note?: string, checkedAt = PLATFORM_RESEARCH_CHECKED_AT): Evidence<T> => ({
   value,
   status: "declared",
   sourceIds,
-  checkedAt: PLATFORM_RESEARCH_CHECKED_AT,
+  checkedAt,
   note,
 });
 
@@ -91,7 +91,7 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       scopeText: "Système d'archivage électronique, hébergement de données de santé et plateforme de traitement de factures électroniques.",
       platformRelation: "explicit_platform",
       validity: "expired",
-    }, ["doxallia-iso27001-certificate-2026", "doxallia-iso27001-renewal-2026", "doxallia-invoxia-iso-scope-2026"], "Le certificat public retrouvé couvre explicitement la plateforme de traitement de factures électroniques, mais sa date de validité est dépassée au 27 août 2026. Doxallia annonce un renouvellement ; le certificat public de remplacement n'a pas été retrouvé."),
+    }, ["doxallia-iso27001-certificate-2026", "doxallia-iso27001-renewal-2026", "doxallia-invoxia-iso-scope-2026", "doxallia-hds-2026-09"], "L’ancien certificat ISO détaillé ci-dessus a expiré. Le nouveau certificat Bureau Veritas HDS V2 FR102189 couvre le 20 juin 2026 au 19 juin 2029 et atteste aussi ISO 27001:2022, avec une DDA SAE HDS PDP V7 du 14 mai 2026. Sa date HDS n’est pas reportée comme date du certificat ISO distinct, qui reste à rattacher.", "2026-09-14"),
   },
   esker: {
     iso27001Scope: declared<Iso27001ScopeDetail>({
@@ -144,6 +144,21 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
     terminationTerms: documented("Service de facturation électronique annoncé sans engagement.", ["indy-invoicing-2026"]),
   },
   pennylane: {
+    hostingProviders: declared(["Outscale", "S3NS", "Scalingo"], ["pennylane-subprocessors-2026-09", "pennylane-security-2026-09"], "Hébergeurs auxquels Pennylane attribue le traitement des données PA en France. La répartition par client n’est pas publiée ; les autres services Pennylane ont un périmètre distinct.", "2026-09-14"),
+    declaredSubprocessors: declared(["Outscale", "S3NS", "Scalingo", "Cryptolog International (Universign)"], ["pennylane-subprocessors-2026-09"], "Extrait des prestataires explicitement rattachés à la PA : hébergement et vérification d’identité. La liste générale contient d’autres prestataires selon les services utilisés.", "2026-09-14"),
+    iso27001Scope: documented<Iso27001ScopeDetail>({
+      evidenceKind: "certificate",
+      legalEntity: "Pennylane",
+      standard: "ISO/IEC 27001:2022",
+      certificateNumber: "IS 786660",
+      certificationBody: "BSI",
+      validFrom: "2024-09-10",
+      validUntil: "2026-09-19",
+      statementOfApplicability: "DDA v1.2 du 25 février 2025",
+      scopeText: "Services SaaS de production comptable et de gestion financière, sans exclusions.",
+      platformRelation: "service_family",
+      validity: "valid",
+    }, ["pennylane-iso27001-2026-09"], "Périmètre résumé du certificat public ; la PA n’est pas nommée séparément. Validité documentaire contrôlée le 14 septembre, renouvellement après le 19 septembre à vérifier.", "2026-09-14"),
     availability: {
       sendsInvoices: available("Offre gratuite micro-entreprise et offres Pennylane", ["pennylane-free-2026"]),
       receivesInvoices: available("Offre gratuite micro-entreprise et offres Pennylane", ["pennylane-free-2026"]),
@@ -167,7 +182,7 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
     availability: {
       sendsInvoices: available("Qonto Facturation, avec ou sans compte professionnel", ["qonto-invoicing-2026"]),
       receivesInvoices: available("Qonto Facturation, avec ou sans compte professionnel", ["qonto-invoicing-2026", "qonto-flow-2026"]),
-      eReporting: documented({ stage: "beta", scope: "Certaines organisations éligibles" }, ["qonto-ereporting-2026"], "L'aide consultée limite encore l'accès à une bêta, malgré la présentation commerciale plus générale."),
+      eReporting: documented({ stage: "beta", scope: "Certaines organisations éligibles" }, ["qonto-ereporting-2026"], "L’aide relue le 14 septembre limite toujours l’accès à une bêta pour certaines organisations françaises et les transactions B2B transfrontalières, sur le web.", "2026-09-14"),
     },
     terminationTerms: documented("L'outil de facturation gratuit ne comporte pas d'engagement minimal annoncé.", ["qonto-billing-2026"]),
   },
@@ -248,20 +263,24 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
 };
 
 function defaultResearch(platformSlug: string): PlatformResearchProfile {
+  const pending = <T>(note: string): Evidence<T> => ({
+    ...unknown<T>(note),
+    checkedAt: ["blg", "fiskaltrust"].includes(platformSlug) ? "2026-09-14" : PLATFORM_RESEARCH_CHECKED_AT,
+  });
   return {
     platformSlug,
     availability: {
-      sendsInvoices: unknown("Le site ne permet pas de distinguer une disponibilité générale d'une fonction limitée, bêta ou seulement annoncée."),
-      receivesInvoices: unknown("Le site ne permet pas de distinguer une disponibilité générale d'une fonction limitée, bêta ou seulement annoncée."),
-      eReporting: unknown("Le site ne permet pas de distinguer une disponibilité générale d'une fonction limitée, bêta ou seulement annoncée."),
+      sendsInvoices: pending("Le site ne permet pas de distinguer une disponibilité générale d'une fonction limitée, bêta ou seulement annoncée."),
+      receivesInvoices: pending("Le site ne permet pas de distinguer une disponibilité générale d'une fonction limitée, bêta ou seulement annoncée."),
+      eReporting: pending("Le site ne permet pas de distinguer une disponibilité générale d'une fonction limitée, bêta ou seulement annoncée."),
     },
-    directImport: unknown("Aucune procédure publique assez précise ne confirme l'import direct d'un Factur-X produit par un autre logiciel."),
-    overagePricing: unknown("Le prix exact des dépassements ou le passage au palier suivant n'est pas publié."),
-    exitTerms: unknown("L'inventaire des données rendues, leur format, le délai, le coût et l'accès après résiliation ne sont pas publiés ensemble."),
-    terminationTerms: unknown("Les règles de résiliation applicables à l'offre étudiée ne sont pas publiées avec assez de précision."),
-    hostingProviders: unknown("Aucun hébergeur applicable à la plateforme agréée n'est nommé dans les sources retenues."),
-    declaredSubprocessors: unknown("Aucune liste de sous-traitants applicable à la plateforme agréée n'est reliée à la fiche."),
-    iso27001Scope: unknown("Le certificat public, son titulaire, sa validité et le texte exact du périmètre ne sont pas reliés à la fiche."),
+    directImport: pending("Aucune procédure publique assez précise ne confirme l'import direct d'un Factur-X produit par un autre logiciel."),
+    overagePricing: pending("Le prix exact des dépassements ou le passage au palier suivant n'est pas publié."),
+    exitTerms: pending("L'inventaire des données rendues, leur format, le délai, le coût et l'accès après résiliation ne sont pas publiés ensemble."),
+    terminationTerms: pending("Les règles de résiliation applicables à l'offre étudiée ne sont pas publiées avec assez de précision."),
+    hostingProviders: pending("Aucun hébergeur applicable à la plateforme agréée n'est nommé dans les sources retenues."),
+    declaredSubprocessors: pending("Aucune liste de sous-traitants applicable à la plateforme agréée n'est reliée à la fiche."),
+    iso27001Scope: pending("Le certificat public, son titulaire, sa validité et le texte exact du périmètre ne sont pas reliés à la fiche."),
   };
 }
 

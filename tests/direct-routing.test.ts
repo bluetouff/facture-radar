@@ -31,8 +31,8 @@ test("le volume modifie le prix sans modifier les preuves techniques", () => {
   const mediumB2b = medium.options.find((option) => option.id === "b2brouter");
 
   assert.ok(lowB2b && mediumB2b);
-  assert.match(lowB2b.price, /gratuit/i);
-  assert.match(mediumB2b.price, /chiffré/i);
+  assert.match(lowB2b.price, /110 € HT\/an/i);
+  assert.match(mediumB2b.price, /110 € HT\/an/i);
   assert.deepEqual(lowB2b.facts, mediumB2b.facts);
 });
 

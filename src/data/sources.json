@@ -2182,5 +2182,85 @@
     "url": "https://github.com/duckduckgo/tracker-radar-collector",
     "type": "security",
     "accessedAt": "2026-08-27"
+  },
+  {
+    "id": "dgfip-list-2026-09-10",
+    "title": "Listes des plateformes agréées, mise à jour du 10 septembre 2026",
+    "publisher": "DGFiP",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "blg-pa-2026-09",
+    "title": "blgCloud devient plateforme agréée",
+    "publisher": "BLG",
+    "url": "https://www.blgcloud.fr/fonctionnalites-produit-etendues/fonctionnalites-produit-etendues-14/blgcloud-devient-plateforme-agreee-pour-la-facturation-electronique-en-france-185",
+    "type": "documentation",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "blg-home-2026-09",
+    "title": "ERP pour concessionnaires, loueurs et réparateurs de matériels",
+    "publisher": "BLG",
+    "url": "https://www.blgcloud.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "fiskaltrust-france-2026-09",
+    "title": "Conformité fiscale et logiciels de caisse en France",
+    "publisher": "fiskaltrust",
+    "url": "https://fiskaltrust.eu/en-fr/",
+    "type": "documentation",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "pennylane-security-2026-09",
+    "title": "Sécurité et hébergement de la plateforme agréée",
+    "publisher": "Pennylane",
+    "url": "https://www.pennylane.com/fr/securite",
+    "type": "security",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "pennylane-subprocessors-2026-09",
+    "title": "Sous-traitants et périmètres de traitement",
+    "publisher": "Pennylane",
+    "url": "https://www.pennylane.com/fr/legal/subcontractors",
+    "type": "contract",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "pennylane-iso27001-2026-09",
+    "title": "Certificat BSI IS 786660, échéance du 19 septembre 2026",
+    "publisher": "BSI / Pennylane",
+    "url": "https://assets.ctfassets.net/b76knntgaaiu/1ZoQOqZDrK32aeBHsQPrb6/49b971c8886615ebf3577371a182773a/Pennylane_ISO27001_certificate_FR_EN_2025.pdf",
+    "type": "security",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "b2brouter-pricing-2026-09",
+    "title": "Tarifs et matrice de conformité France par abonnement",
+    "publisher": "B2Brouter",
+    "url": "https://www.b2brouter.net/fr/tarifs/",
+    "type": "pricing",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "doxallia-hds-2026-09",
+    "title": "Certificat HDS V2 FR102189, cycle 2026-2029 et mention ISO 27001",
+    "publisher": "Bureau Veritas / Doxallia",
+    "url": "https://www.doxallia.com/wp-content/uploads/2026/06/Certificate-DOXALLIA-30808728-HDS.pdf",
+    "type": "security",
+    "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "lundi-matin-pa-2026-09",
+    "title": "Offres PA seule et PA avec LMB, quotas en mouvements",
+    "publisher": "LUNDI MATIN",
+    "url": "https://www.lundimatin.fr/plateforme-agreee-facture-electronique",
+    "type": "pricing",
+    "accessedAt": "2026-09-14"
   }
 ]

@@ -1,10 +1,10 @@
 {
-  "snapshotDate": "2026-08-19",
+  "snapshotDate": "2026-09-10",
   "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
   "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
   "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
-  "approvedSha256": "146796398c5fc9461ab8a44baa629d78e8e19249063c1eeeb07f62a5626ac058",
-  "pendingSha256": "b52644a8701472afc84da047e4eda1546e1939e0d1e4375c0dea2d9ddf496dee",
+  "approvedSha256": "a5e60af6d52993f5dab763176d898f2568d1ee69565c1f0d79ca3fb921387c07",
+  "pendingSha256": "a5708e01a195f99bc53f9943d7d9ee278a896fec0db490af8a104b8b2853999d",
   "approved": [
     {
       "name": "A-Cube",
@@ -196,6 +196,15 @@
       "registeredAt": "2025-12-19"
     },
     {
+      "name": "BLG",
+      "street": "1 Rue de la Sous-Préfecture",
+      "postalCode": "60200",
+      "city": "Compiègne",
+      "website": "https://www.blgcloud.fr/",
+      "contact": "contact@blgcloud.com",
+      "registeredAt": "2026-08-26"
+    },
+    {
       "name": "CBS Corporate Business Solutions",
       "street": "Rudolf-Diesel-Straße 9 en Heidelberg",
       "postalCode": "69115",
@@ -274,7 +283,7 @@
       "city": "Lyon",
       "website": "https://cyclope.digital/",
       "contact": "cyclope@gallo.fr",
-      "registeredAt": "à venir"
+      "registeredAt": "2026-08-25"
     },
     {
       "name": "DARVA",
@@ -383,15 +392,6 @@
       "website": "https://www.doxallia.com/",
       "contact": "contact@doxallia.com",
       "registeredAt": "2025-12-11"
-    },
-    {
-      "name": "ECOSIO",
-      "street": "Wiedner Gürtel 9, Vienne",
-      "postalCode": "1100",
-      "city": "Autriche",
-      "website": "https://ecosio.com/",
-      "contact": "einvoice@ecosio.com",
-      "registeredAt": "2026-01-12"
     },
     {
       "name": "ecosio InterCom, a Vertex Company",
@@ -538,6 +538,15 @@
       "registeredAt": "2026-01-08"
     },
     {
+      "name": "FISKALTRUST",
+      "street": "132 Rue Bossuet",
+      "postalCode": "69006",
+      "city": "Lyon",
+      "website": "https://fiskaltrust.eu/fr-fr/",
+      "contact": "info@fiskaltrust.fr",
+      "registeredAt": "2026-08-28"
+    },
+    {
       "name": "FLOWIE",
       "street": "229 Rue Saint-Honoré",
       "postalCode": "75001",
@@ -615,7 +624,7 @@
       "postalCode": "77420",
       "city": "Champs-sur-Marne",
       "website": "https://www.assistances.fr/",
-      "contact": "sebastien.b@iaf.fr",
+      "contact": "supportpa@iaf.fr",
       "registeredAt": "2026-06-15"
     },
     {
@@ -757,7 +766,7 @@
       "name": "LE VILLAGE CONNECTE",
       "street": "2322 Route du Latéral",
       "postalCode": "47400",
-      "city": "FAUGUEROLLES",
+      "city": "Fauguerolles",
       "website": "https://village-connecte.fr/",
       "contact": "contact-pdp@coaxis.com",
       "registeredAt": "2026-01-08"
@@ -796,7 +805,7 @@
       "city": "Montpellier",
       "website": "https://www.lundimatin.fr/",
       "contact": "contact@lundimatin.fr",
-      "registeredAt": "à venir"
+      "registeredAt": "2026-08-24"
     },
     {
       "name": "MACOMPTA.FR",
@@ -1264,7 +1273,7 @@
       "city": "Nanterre",
       "website": "https://www.ventya.fr/",
       "contact": "contact@ventya.fr",
-      "registeredAt": "2026-12-18"
+      "registeredAt": "2025-12-18"
     },
     {
       "name": "VERYSWING",
@@ -1349,14 +1358,6 @@
       "contact": "info@fiskaltrust.fr"
     },
     {
-      "name": "BLG",
-      "street": "1 Rue de la Sous-Préfecture",
-      "postalCode": "60200",
-      "city": "Compiègne",
-      "website": "https://www.blgcloud.fr/",
-      "contact": "contact@blgcloud.com"
-    },
-    {
       "name": "BE FRESH S.à r.l.",
       "street": "13, rue de l'Innovation, Kockelscheuer",
       "postalCode": "1896",
@@ -1395,14 +1396,6 @@
       "city": "Lyon",
       "website": "https://www.factureapp.com/",
       "contact": "contact@facturesapp.com"
-    },
-    {
-      "name": "FISKALTRUST",
-      "street": "132 Rue Bossuet",
-      "postalCode": "69006",
-      "city": "Lyon",
-      "website": "https://fiskaltrust.eu/fr-fr/",
-      "contact": "info@fiskaltrust.fr"
     },
     {
       "name": "Insiders Technologies GmbH",

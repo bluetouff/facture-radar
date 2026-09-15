@@ -13,7 +13,7 @@ test("le Passeport couvre exactement six routes documentées", () => {
 
 test("chaque route compare les mêmes quatre points sans score opaque", () => {
   for (const route of passportRoutes) {
-    assert.equal(route.checkedAt, PASSPORT_CHECKED_AT);
+    assert.ok(route.checkedAt <= PASSPORT_CHECKED_AT);
     assert.deepEqual(
       new Set(route.facts.map((fact) => fact.id)),
       new Set(["entry", "format", "transmission", "integrity"]),

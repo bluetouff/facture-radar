@@ -1,3 +1,4 @@
+import { septemberPlatforms } from "./platforms-september.ts";
 import type { Evidence, Platform } from "./types.ts";
 import { expandedPlatforms } from "./platforms-expanded.ts";
 import { secondWavePlatforms } from "./platforms-expanded-second-wave.ts";
@@ -6,14 +7,14 @@ import { thirdWavePlatforms } from "./platforms-expanded-third-wave.ts";
 const checkedAt = "2026-08-25";
 
 function official<T>(value: T, note?: string): Evidence<T> {
-  return { value, status: "official", sourceIds: ["dgfip-list-2026-08-19"], checkedAt, note };
+  return { value, status: "official", sourceIds: ["dgfip-list-2026-09-10"], checkedAt: "2026-09-14", note };
 }
 
-function documented<T>(value: T, sourceIds: string[], note?: string): Evidence<T> {
+function documented<T>(value: T, sourceIds: string[], note?: string, checkedAt = "2026-08-25"): Evidence<T> {
   return { value, status: "documented", sourceIds, checkedAt, note };
 }
 
-function declared<T>(value: T, sourceIds: string[], note?: string): Evidence<T> {
+function declared<T>(value: T, sourceIds: string[], note?: string, checkedAt = "2026-08-25"): Evidence<T> {
   return { value, status: "declared", sourceIds, checkedAt, note };
 }
 
@@ -92,10 +93,10 @@ export const platforms: Platform[] = [
     exportDocumented: documented(true, ["pennylane-formats-2026"], "Le téléchargement du Factur-X et de son XML est indiqué dans la documentation."),
     integrations: documented(["API Entreprise V2", "expert-comptable"], ["pennylane-free-2026", "pennylane-formats-2026"]),
     formats: documented(["Factur-X", "UBL", "CII"], ["pennylane-formats-2026"]),
-    hostingCountries: unknown("Le lieu d'hébergement et les sous-traitants restent à confirmer."),
-    iso27001: unknown("Le certificat public applicable et son périmètre restent à rattacher."),
+    hostingCountries: declared(["France"], ["pennylane-subprocessors-2026-09", "pennylane-security-2026-09"], "Périmètre PA uniquement. La liste nomme Outscale, S3NS et Scalingo ; les autres données Pennylane ont un hébergement distinct dans l’Union européenne.", "2026-09-14"),
+    iso27001: documented(true, ["pennylane-iso27001-2026-09"], "Certificat BSI IS 786660, ISO/IEC 27001:2022, valable jusqu’au 19 septembre 2026. Périmètre SaaS comptable et gestion financière ; la PA n’est pas nommée séparément.", "2026-09-14"),
     commitmentMonths: documented(0, ["pennylane-free-2026"]),
-    importantUnknowns: ["Hébergement et sous-traitants", "Portée du certificat ISO 27001", "Coût de sortie", "Conservation après résiliation"]
+    importantUnknowns: ["Répartition des traitements entre hébergeurs PA", "Renouvellement ISO après le 19 septembre 2026", "Coût de sortie", "Conservation après résiliation"]
   },
   {
     slug: "tiime",
@@ -650,4 +651,5 @@ export const platforms: Platform[] = [
   ...expandedPlatforms,
   ...secondWavePlatforms,
   ...thirdWavePlatforms,
+  ...septemberPlatforms,
 ];

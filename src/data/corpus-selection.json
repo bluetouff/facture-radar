@@ -1,5 +1,5 @@
 {
-  "selectedAt": "2026-08-26",
+  "selectedAt": "2026-09-14",
   "audience": "Indépendants, entrepreneurs, entreprises, équipes administratives et cabinets comptables en France",
   "method": [
     "Présence dans la liste des plateformes approuvées publiée par la DGFiP",
@@ -186,9 +186,9 @@
     {
       "slug": "b2brouter",
       "segment": "tpe-pme",
-      "reach": "Offre gratuite, API et couverture Peppol documentées",
+      "reach": "Offre France à 110 € HT/an, API et couverture Peppol documentées",
       "reachSourceIds": ["b2brouter-pricing-2026", "b2brouter-api-2026"],
-      "reason": "Cas concret d'une PA utilisable directement ou par API, avec une limite gratuite publique."
+      "reason": "PA utilisable directement ou par API ; la matrice tarifaire exclut Basic du périmètre France."
     },
     {
       "slug": "dext",
@@ -427,13 +427,6 @@
       "reach": "Couverture publique des cycles clients et fournisseurs",
       "reachSourceIds": ["docprocess-pa-2026"],
       "reason": "Large jeu de formats et connexion aux ERP et portails."
-    },
-    {
-      "slug": "ecosio",
-      "segment": "eti-et-grands-comptes",
-      "reach": "Point d'accès Peppol et services API ou SFTP documentés",
-      "reachSourceIds": ["ecosio-einvoicing-2026", "ecosio-connectors-2026"],
-      "reason": "Service managé d'intégration EDI pour entreprises internationales."
     },
     {
       "slug": "edics",
@@ -776,7 +769,7 @@
       "segment": "tpe-pme",
       "reach": "Émission, réception et connexions API ou ERP annoncées",
       "reachSourceIds": ["cyclope-pa-2026"],
-      "reason": "Parcours simple pour entreprises, avec date officielle encore indiquée à venir."
+      "reason": "Parcours simple pour entreprises ; immatriculation désormais datée du 25 août 2026."
     },
     {
       "slug": "darva",
@@ -909,7 +902,7 @@
       "segment": "cabinet-et-erp",
       "reach": "Écosystème ERP Lundi Matin et module Chorus Pro",
       "reachSourceIds": ["lundi-matin-chorus-2026"],
-      "reason": "Entrée officielle conservée sans confondre le connecteur B2G et la future PA B2B."
+      "reason": "Offre PA autonome ou avec LMB désormais documentée, avec quotas en mouvements distincts des factures."
     },
     {
       "slug": "my-fiteco",
@@ -1000,7 +993,7 @@
       "segment": "eti-et-grands-comptes",
       "reach": "Plateforme française EDI, e-invoicing et e-reporting",
       "reachSourceIds": ["ventya-invoices-2026"],
-      "reason": "Couverture des flux réglementaires, avec date officielle future signalée."
+      "reason": "Couverture des flux réglementaires ; date officielle corrigée au 18 décembre 2025."
     },
     {
       "slug": "veryswing",
@@ -1043,7 +1036,26 @@
       "reach": "Portail de suivi pour plus de 200 cabinets annoncé par Ytems",
       "reachSourceIds": ["ytems-pa-2026"],
       "reason": "Parcours d'inscription multi-clients pour cabinets, avec limites publiques visibles."
+    },
+    {
+      "slug": "blg",
+      "segment": "tpe-pme",
+      "reach": "ERP métier pour concessionnaires, loueurs et réparateurs de matériels",
+      "reachSourceIds": ["blg-home-2026-09"],
+      "reason": "Entrée approuvée ajoutée au relevé DGFiP ; offre métier et fonctions réglementaires publiées."
+    },
+    {
+      "slug": "fiskaltrust",
+      "segment": "eti-et-grands-comptes",
+      "reach": "Infrastructure de conformité pour éditeurs de caisse, intégrateurs et commerçants",
+      "reachSourceIds": ["fiskaltrust-france-2026-09"],
+      "reason": "Entrée approuvée ajoutée au relevé DGFiP ; détails du service PA France encore à confirmer."
     }
   ],
-  "replaced": []
+  "replaced": [
+    {
+      "slug": "ecosio",
+      "reason": "Entrée ECOSIO absente du relevé DGFiP du 10 septembre 2026 ; ecosio InterCom reste listée. Cause non publiée, fiche historique conservée."
+    }
+  ]
 }

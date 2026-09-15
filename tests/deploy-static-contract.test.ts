@@ -6,6 +6,7 @@ import test from "node:test";
 const root = resolve(import.meta.dirname, "..");
 const activationScript = readFileSync(resolve(root, "deploy/activate-pa-check-site.sh"), "utf8");
 const mcpSetupScript = readFileSync(resolve(root, "deploy/setup-pa-check-mcp.sh"), "utf8");
+const sourceCount = JSON.parse(readFileSync(resolve(root, "src/data/sources.json"), "utf8")).length;
 
 test("le déploiement statique exige le corpus public des vingt-cinq questions", () => {
   assert.match(activationScript, /"api\/questions\.json",/);
@@ -18,9 +19,15 @@ test("le smoke live vérifie les trois dimensions stables du corpus", () => {
   assert.ok(smokeStart > 0 && smokeEnd > smokeStart);
 
   const liveSmoke = activationScript.slice(smokeStart, smokeEnd);
-  assert.match(liveSmoke, /counts\.get\("enrichedPlatforms"\) != 148/);
+  assert.match(liveSmoke, /counts\.get\("enrichedPlatforms"\) != 149/);
   assert.match(liveSmoke, /counts\.get\("questions"\) != 25/);
-  assert.match(liveSmoke, /counts\.get\("sources"\) != 273/);
+  assert.ok(liveSmoke.includes(`counts.get("sources") != ${sourceCount}:`));
+});
+
+test("les contrôles de sources avant et après activation suivent le corpus réel", () => {
+  const checks = [...activationScript.matchAll(/if counts\.get\("sources"\) != (\d+):/g)];
+  assert.equal(checks.length, 2);
+  assert.ok(checks.every((check) => Number(check[1]) === sourceCount));
 });
 
 test("Apache sert la page PA Check avec un véritable statut 404", () => {

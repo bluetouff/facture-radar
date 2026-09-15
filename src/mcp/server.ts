@@ -80,7 +80,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
   const resourceDefinitions = [
     ["manifest", "pacheck://corpus/manifest", "État et périmètre du corpus", resources.manifest],
     ["questions", "pacheck://corpus/questions", "Questions pratiques et réponses publiées", resources.questions],
-    ["platforms", "pacheck://corpus/platforms", "148 fiches enrichies, recherches contractuelles et observations publiques", resources.platforms],
+    ["platforms", "pacheck://corpus/platforms", "149 fiches enrichies, recherches contractuelles et observations publiques", resources.platforms],
     ["official-directory", "pacheck://corpus/official-directory", "Annuaire officiel complet de la DGFiP", resources.officialDirectory],
     ["journeys", "pacheck://corpus/journeys", "Parcours d'activation des outils étudiés", resources.journeys],
     ["invoice-routes", "pacheck://corpus/invoice-routes", "Options publiques d'envoi d'un fichier déjà produit", resources.invoiceRoutes],
@@ -134,7 +134,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
           type: "text",
           text: suggestions.length > 0
             ? `Fiche exacte introuvable. Suggestions : ${suggestions.map((item) => item.name).join(", ")}.`
-            : "Fiche introuvable dans les 148 plateformes enrichies. Essayez l'annuaire officiel.",
+            : "Fiche introuvable dans les 149 plateformes enrichies. Essayez l'annuaire officiel.",
         }],
         structuredContent: result,
         isError: true,
@@ -149,7 +149,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
 
   server.registerTool("find_platforms", {
     title: "Trouver des plateformes adaptées",
-    description: "Applique les critères publics de PA Check aux 148 fiches enrichies. Toutes les réponses confirmées ont le même statut et sont renvoyées par ordre alphabétique, sans score ni classement caché. Si un critère obligatoire n'est pas documenté, l'outil le signale au lieu de supposer un oui.",
+    description: "Applique les critères publics de PA Check aux 149 fiches enrichies. Toutes les réponses confirmées ont le même statut et sont renvoyées par ordre alphabétique, sans score ni classement caché. Si un critère obligatoire n'est pas documenté, l'outil le signale au lieu de supposer un oui.",
     inputSchema: z.object({
       size: z.enum(["micro", "tpe", "pme", "eti", "ge"]).describe("Taille de l'entreprise"),
       monthlyInvoices: z.number().int().min(0).max(100_000).default(10).describe("Total mensuel approximatif des factures d'achat et de vente"),

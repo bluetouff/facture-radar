@@ -93,11 +93,11 @@ export const thirdWavePlatforms: Platform[] = [
     importantUnknowns: ["Émission et réception opérationnelles", "E-reporting", "Prix et volumes", "Formats et sortie"],
   }),
   expand({
-    slug: "cyclope", displayName: "Cyclope", officialName: "CYCLOPE", registeredAt: "à venir",
+    slug: "cyclope", displayName: "Cyclope", officialName: "CYCLOPE", registeredAt: "2026-08-25",
     summary: "Plateforme française présentée pour émettre, recevoir et suivre les factures électroniques.",
     targets: ["tpe", "pme", "eti"], ecosystem: ["API", "ERP", "comptabilité", "CRM"],
     sendsInvoices: documented(true, ["cyclope-pa-2026"]), receivesInvoices: documented(true, ["cyclope-pa-2026"]), integrations: documented(["API", "ERP", "logiciels comptables", "CRM"], ["cyclope-pa-2026"]),
-    importantUnknowns: ["Date d'immatriculation publiée", "E-reporting", "Prix et volumes", "Formats et hébergement"],
+    importantUnknowns: ["E-reporting", "Prix et volumes", "Formats et hébergement"],
   }),
   expand({
     slug: "darva", displayName: "Ofeli by DARVA", officialName: "DARVA", registeredAt: "2025-12-18",
@@ -231,11 +231,16 @@ export const thirdWavePlatforms: Platform[] = [
     importantUnknowns: ["Prix par dossier", "Volumes et dépassements", "API publique", "Hébergement et sortie"],
   }),
   expand({
-    slug: "lundi-matin", displayName: "Lundi Matin", officialName: "LUNDI MATIN", registeredAt: "à venir",
-    summary: "Éditeur de logiciels de gestion documentant aujourd'hui surtout son connecteur Chorus Pro.",
+    slug: "lundi-matin", displayName: "Lundi Matin", officialName: "LUNDI MATIN", registeredAt: "2026-08-24",
+    summary: "PA autonome ou intégrée à LMB, avec quotas en mouvements incluant factures, tickets et e-reporting.",
     targets: ["tpe", "pme", "eti"], ecosystem: ["LMB", "ERP", "Chorus Pro", "gestion commerciale"],
+    pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["tpe", "pme"], promotionalPriceExcluded: true, label: "PA seule gratuite sous 500 mouvements/mois, hors connecteur dès 29 € HT/mois ; PA avec LMB sous 5 000 mouvements/mois, abonnement ERP distinct" }, ["lundi-matin-pa-2026-09"], undefined, "2026-09-14"),
+    allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: false, label: "500 mouvements/mois en PA seule, 5 000 avec LMB ; un mouvement peut être une facture, un ticket ou une opération d’e-reporting. Aucune conversion en nombre de factures." }, ["lundi-matin-pa-2026-09"], undefined, "2026-09-14"),
+    sendsInvoices: documented(true, ["lundi-matin-pa-2026-09"], undefined, "2026-09-14"),
+    receivesInvoices: documented(true, ["lundi-matin-pa-2026-09"], undefined, "2026-09-14"),
+    eReporting: documented(true, ["lundi-matin-pa-2026-09"], "B2C, opérations internationales et encaissements.", "2026-09-14"),
     integrations: documented(["LMB", "Chorus Pro", "ERP Lundi Matin"], ["lundi-matin-chorus-2026"]),
-    importantUnknowns: ["Date d'immatriculation publiée", "Émission et réception B2B", "E-reporting", "Prix, formats et sortie"],
+    importantUnknowns: ["Coût au-delà du quota de mouvements", "Conditions du connecteur et de l’API", "Hébergement", "Restitution après résiliation"],
   }),
   expand({
     slug: "my-fiteco", displayName: "MyFiteco", officialName: "MY FITECO", registeredAt: "2026-05-12",
@@ -323,11 +328,11 @@ export const thirdWavePlatforms: Platform[] = [
     importantUnknowns: ["Nombre de factures incluses", "Coût d'installation", "Engagement", "Hébergement et sortie"],
   }),
   expand({
-    slug: "ventya", displayName: "Ventya", officialName: "VENTYA", registeredAt: "2026-12-18",
+    slug: "ventya", displayName: "Ventya", officialName: "VENTYA", registeredAt: "2025-12-18",
     summary: "Plateforme française d'EDI et de facturation couvrant les flux fiscaux et le cycle de vie.",
     targets: ["pme", "eti", "ge"], ecosystem: ["EDI", "ERP", "e-reporting", "archivage"],
     sendsInvoices: documented(true, ["ventya-invoices-2026"]), receivesInvoices: documented(true, ["ventya-invoices-2026"]), eReporting: documented(true, ["ventya-invoices-2026"]), integrations: documented(["EDI", "ERP", "archivage"], ["ventya-invoices-2026"]), hostingCountries: declared(["France"], ["ventya-invoices-2026"]),
-    importantUnknowns: ["Date officielle future à confirmer", "Prix et volumes", "API publique", "Formats et sortie"],
+    importantUnknowns: ["Prix et volumes", "API publique", "Formats et sortie"],
   }),
   expand({
     slug: "veryswing", displayName: "Veryswing", officialName: "VERYSWING", registeredAt: "2026-01-15",

@@ -1,3 +1,4 @@
+import { septemberJourneyProfiles } from "./journey-profiles-september.ts";
 import { expandedJourneyProfiles } from "./journey-profiles-expanded.ts";
 import { secondWaveJourneyProfiles } from "./journey-profiles-second-wave.ts";
 import { thirdWaveJourneyProfiles } from "./journey-profiles-third-wave.ts";
@@ -64,7 +65,8 @@ export type JourneyProfileId =
   | "digital-technologies"
   | "docoon"
   | "docprocess"
-  | "ecosio"
+  | "blg"
+  | "fiskaltrust"
   | "edics"
   | "edt"
   | "eezi"
@@ -990,6 +992,7 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
   ...expandedJourneyProfiles,
   ...secondWaveJourneyProfiles,
   ...thirdWaveJourneyProfiles,
+  ...septemberJourneyProfiles,
 ];
 
 export function collectJourneySourceIds(profile: JourneyProfileDefinition): string[] {

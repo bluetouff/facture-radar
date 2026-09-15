@@ -5,12 +5,12 @@ const checkedAt = "2026-08-26";
 const official = <T>(value: T, note?: string): Evidence<T> => ({
   value,
   status: "official",
-  sourceIds: ["dgfip-list-2026-08-19"],
-  checkedAt,
+  sourceIds: ["dgfip-list-2026-09-10"],
+  checkedAt: "2026-09-14",
   note,
 });
 
-export const documented = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> => ({
+export const documented = <T>(value: T, sourceIds: string[], note?: string, checkedAt = "2026-08-26"): Evidence<T> => ({
   value,
   status: "documented",
   sourceIds,
@@ -18,7 +18,7 @@ export const documented = <T>(value: T, sourceIds: string[], note?: string): Evi
   note,
 });
 
-export const declared = <T>(value: T, sourceIds: string[], note?: string): Evidence<T> => ({
+export const declared = <T>(value: T, sourceIds: string[], note?: string, checkedAt = "2026-08-26"): Evidence<T> => ({
   value,
   status: "declared",
   sourceIds,
@@ -87,15 +87,15 @@ export const quote = (label = "Tarification publique non identifiée, devis néc
 export const expandedPlatforms: Platform[] = [
   expand({
     slug: "b2brouter", displayName: "B2BRouter", officialName: "B2BRouter", registeredAt: "2025-12-12",
-    summary: "Application web et API de facturation électronique, avec une offre gratuite limitée à 24 transactions par an.",
+    summary: "Application web et API de facturation électronique, avec conformité France dans les plans Professional et Business.",
     targets: ["micro", "tpe", "pme"], ecosystem: ["API", "Peppol", "Chorus Pro", "SFTP", "facturation"],
-    pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["micro", "tpe"], promotionalPriceExcluded: true, label: "Basic gratuit, Professional 110 € HT par an, Business 300 € HT par an" }, ["b2brouter-pricing-2026"]),
-    allowance: documented({ monthlyInvoices: null, annualInvoices: 24, unlimited: false, label: "24 transactions par an dans Basic, émission et réception illimitées en Professional" }, ["b2brouter-pricing-2026"]),
-    sendsInvoices: documented(true, ["b2brouter-pricing-2026"]), receivesInvoices: documented(true, ["b2brouter-pricing-2026"]), eReporting: documented(true, ["b2brouter-pricing-2026", "b2brouter-france-api-2026"]),
-    bankAccountRequired: documented(false, ["b2brouter-pricing-2026"]), accountantAccess: unknown("L'accès gratuit ou dédié à un comptable externe reste à confirmer."),
+    pricing: documented({ kind: "paid", monthlyFrom: 110 / 12, unit: "subscription", freeFor: [], promotionalPriceExcluded: true, label: "Conformité France : Professional 110 € HT/an, Business 300 € HT/an ; Basic gratuit exclu de ce périmètre" }, ["b2brouter-pricing-2026-09"], undefined, "2026-09-14"),
+    allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: true, label: "Émission et réception illimitées en Professional ; Basic ne couvre pas la conformité France" }, ["b2brouter-pricing-2026-09"], undefined, "2026-09-14"),
+    sendsInvoices: documented(true, ["b2brouter-pricing-2026-09"], undefined, "2026-09-14"), receivesInvoices: documented(true, ["b2brouter-pricing-2026-09"], undefined, "2026-09-14"), eReporting: documented(true, ["b2brouter-pricing-2026", "b2brouter-france-api-2026"]),
+    bankAccountRequired: documented(false, ["b2brouter-pricing-2026-09"], undefined, "2026-09-14"), accountantAccess: unknown("L'accès gratuit ou dédié à un comptable externe reste à confirmer."),
     publicApi: documented({ available: true, includedInFree: false }, ["b2brouter-api-2026", "b2brouter-france-api-2026"]),
     integrations: documented(["API", "SDK", "SFTP", "Peppol", "Chorus Pro"], ["b2brouter-api-2026", "b2brouter-france-api-2026"]),
-    formats: documented(["Factur-X", "UBL", "CII"], ["b2brouter-pricing-2026", "b2brouter-france-api-2026"]), commitmentMonths: documented(0, ["b2brouter-pricing-2026"]),
+    formats: documented(["Factur-X", "UBL", "CII"], ["b2brouter-pricing-2026", "b2brouter-france-api-2026"]), commitmentMonths: { ...unknown("Abonnement annuel ; les conditions de résiliation anticipée restent à confirmer."), checkedAt: "2026-09-14" },
     importantUnknowns: ["Conservation du XML EN16931 d'un Factur-X importé", "Accès comptable", "Hébergement", "Restitution complète après résiliation"],
   }),
   expand({

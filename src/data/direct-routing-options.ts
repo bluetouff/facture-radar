@@ -22,7 +22,7 @@ export interface DirectRoutingOption {
   profileHref: string | null;
 }
 
-const officialSourceIds = ["dgfip-list-2026-08-19"];
+const officialSourceIds = ["dgfip-list-2026-09-10"];
 
 export const directRoutingOptions: DirectRoutingOption[] = [
   {
@@ -58,15 +58,15 @@ export const directRoutingOptions: DirectRoutingOption[] = [
       },
     ],
     priceByVolume: {
-      "up-to-24": "Jusqu'à 24 transactions par an incluses gratuitement",
-      "25-to-1000": "Le tarif au-delà de 24 transactions par an doit être chiffré",
-      "over-1000": "Tarif à demander selon le volume et le mode de raccordement",
-      unknown: "Gratuit jusqu'à 24 transactions par an, tarif supérieur à confirmer",
+      "up-to-24": "Conformité France : Professional à 110 € HT/an, même sous 24 transactions",
+      "25-to-1000": "Professional à 110 € HT/an, factures illimitées sur le portail ; API à chiffrer",
+      "over-1000": "Portail Professional à 110 € HT/an ; raccordement API à chiffrer",
+      unknown: "Conformité France dès 110 € HT/an ; Basic gratuit exclu de ce périmètre",
     },
-    priceSourceIds: ["b2brouter-home-2026"],
+    priceSourceIds: ["b2brouter-pricing-2026-09"],
     decisiveUnknown: "La documentation ne dit pas explicitement si l'import d'un PDF/A-3 Factur-X tiers conserve son XML EN16931 jusqu'à l'émission, sans ressaisie.",
     nextStep: "Demandez à B2Brouter de confirmer par écrit que le portail conserve le XML EN16931 du fichier sans ressaisie.",
-    profileHref: null,
+    profileHref: "/plateformes/b2brouter/",
   },
   {
     id: "superpdp",

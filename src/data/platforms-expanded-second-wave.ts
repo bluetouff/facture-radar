@@ -93,14 +93,6 @@ export const secondWavePlatforms: Platform[] = [
     importantUnknowns: ["Prix et volumes", "API publique", "Hébergement", "Conditions de sortie"],
   }),
   expand({
-    slug: "ecosio", displayName: "ecosio", officialName: "ECOSIO", registeredAt: "2026-01-12",
-    summary: "Service managé d'intégration EDI et de facturation électronique, point d'accès Peppol.",
-    targets: ["pme", "eti", "ge"], ecosystem: ["Peppol", "API", "EDI", "ERP"],
-    sendsInvoices: documented(true, ["ecosio-einvoicing-2026"]), receivesInvoices: documented(true, ["ecosio-einvoicing-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["ecosio-einvoicing-2026", "ecosio-connectors-2026"]),
-    integrations: documented(["Messaging API", "Management API", "SFTP", "Peppol", "ERP"], ["ecosio-einvoicing-2026", "ecosio-connectors-2026"]),
-    importantUnknowns: ["E-reporting français", "Prix et volumes", "Formats France exacts", "Hébergement"],
-  }),
-  expand({
     slug: "edics", displayName: "EDiCSpro", officialName: "EDICS France", registeredAt: "2026-01-08",
     summary: "Hub documentaire multicanal avec EDI, API, archivage et clause de réversibilité.",
     targets: ["pme", "eti", "ge"], ecosystem: ["EDI", "API", "archivage", "OCR"],

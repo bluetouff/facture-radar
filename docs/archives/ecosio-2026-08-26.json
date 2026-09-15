@@ -1,0 +1,259 @@
+{
+  "archivedAt": "2026-09-14",
+  "reason": "Entrée ECOSIO absente du relevé DGFiP du 10 septembre 2026. La cause n’est pas publiée ; ecosio InterCom reste listée séparément.",
+  "platform": {
+    "slug": "ecosio",
+    "displayName": "ecosio",
+    "officialName": "ECOSIO",
+    "summary": "Service managé d'intégration EDI et de facturation électronique, point d'accès Peppol.",
+    "targets": [
+      "pme",
+      "eti",
+      "ge"
+    ],
+    "ecosystem": [
+      "Peppol",
+      "API",
+      "EDI",
+      "ERP"
+    ],
+    "officialStatus": {
+      "value": "registered",
+      "status": "official",
+      "sourceIds": [
+        "dgfip-list-2026-08-19"
+      ],
+      "checkedAt": "2026-08-26"
+    },
+    "registeredAt": {
+      "value": "2026-01-12",
+      "status": "official",
+      "sourceIds": [
+        "dgfip-list-2026-08-19"
+      ],
+      "checkedAt": "2026-08-26"
+    },
+    "pricing": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "Aucune grille tarifaire publique exploitable n'a été identifiée."
+    },
+    "allowance": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "Les volumes inclus et les coûts de dépassement ne sont pas publiés."
+    },
+    "sendsInvoices": {
+      "value": true,
+      "status": "documented",
+      "sourceIds": [
+        "ecosio-einvoicing-2026"
+      ],
+      "checkedAt": "2026-08-26"
+    },
+    "receivesInvoices": {
+      "value": true,
+      "status": "documented",
+      "sourceIds": [
+        "ecosio-einvoicing-2026"
+      ],
+      "checkedAt": "2026-08-26"
+    },
+    "eReporting": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "L'activation opérationnelle de l'e-reporting n'est pas documentée dans les pages retenues."
+    },
+    "bankAccountRequired": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "Aucun prérequis bancaire explicite n'est publié."
+    },
+    "accountantAccess": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "L'accès destiné à un comptable externe n'est pas détaillé."
+    },
+    "publicApi": {
+      "value": {
+        "available": true,
+        "includedInFree": null
+      },
+      "status": "documented",
+      "sourceIds": [
+        "ecosio-einvoicing-2026",
+        "ecosio-connectors-2026"
+      ],
+      "checkedAt": "2026-08-26"
+    },
+    "exportDocumented": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "La restitution complète des données après résiliation n'est pas documentée."
+    },
+    "integrations": {
+      "value": [
+        "Messaging API",
+        "Management API",
+        "SFTP",
+        "Peppol",
+        "ERP"
+      ],
+      "status": "documented",
+      "sourceIds": [
+        "ecosio-einvoicing-2026",
+        "ecosio-connectors-2026"
+      ],
+      "checkedAt": "2026-08-26"
+    },
+    "formats": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "La matrice des formats réellement disponibles n'est pas publiée avec assez de précision."
+    },
+    "hostingCountries": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "Le lieu d'hébergement et les sous-traitants applicables à la PA ne sont pas publiés."
+    },
+    "iso27001": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "Aucun certificat ISO 27001 applicable à la PA n'a été rattaché à la fiche."
+    },
+    "commitmentMonths": {
+      "value": null,
+      "status": "non_documented",
+      "sourceIds": [],
+      "checkedAt": "2026-08-26",
+      "note": "La durée d'engagement dépend du contrat ou du devis."
+    },
+    "importantUnknowns": [
+      "E-reporting français",
+      "Prix et volumes",
+      "Formats France exacts",
+      "Hébergement"
+    ]
+  },
+  "journey": {
+    "id": "ecosio",
+    "aliases": [
+      "ecosio"
+    ],
+    "platformSlug": "ecosio",
+    "toolLabel": "ecosio",
+    "toolDetail": "Service managé EDI et point d'accès Peppol.",
+    "checkedAt": "2026-08-26",
+    "toolSourceIds": [
+      "ecosio-einvoicing-2026",
+      "ecosio-connectors-2026"
+    ],
+    "contextSourceIds": [
+      "ecosio-einvoicing-2026",
+      "ecosio-connectors-2026"
+    ],
+    "activation": {
+      "label": "Rattachement",
+      "question": "Votre entreprise est-elle déjà rattachée à ecosio comme plateforme agréée ?",
+      "yesValue": "Actif d'après votre réponse",
+      "noValue": "À activer",
+      "unknownValue": "À vérifier avec ecosio",
+      "yesDetail": "Votre réponse indique que ecosio est déjà désignée. Contrôlez tout de même le SIREN et l'adresse de réception affichés.",
+      "todoDetail": "Le parcours public de rattachement n'est pas détaillé. Vérifiez le SIREN concerné et demandez à ecosio la confirmation écrite de l'inscription dans l'annuaire.",
+      "sourceIds": [
+        "ecosio-einvoicing-2026",
+        "ecosio-connectors-2026"
+      ],
+      "openAction": {
+        "title": "Ouvrez ecosio",
+        "detail": "Ouvrez l'espace d'administration de ecosio ou contactez son support avec le SIREN de l'entreprise.",
+        "sourceIds": [
+          "ecosio-einvoicing-2026",
+          "ecosio-connectors-2026"
+        ]
+      },
+      "activateAction": {
+        "title": "Rattachez la bonne entreprise",
+        "detail": "Demandez le rattachement de la bonne entité et les éventuelles pièces nécessaires avant de valider.",
+        "sourceIds": [
+          "ecosio-einvoicing-2026",
+          "ecosio-connectors-2026"
+        ]
+      },
+      "checkAction": {
+        "title": "Contrôlez le résultat",
+        "detail": "Contrôlez que le statut est actif pour le bon SIREN et demandez l'adresse de réception enregistrée.",
+        "sourceIds": [
+          "ecosio-einvoicing-2026",
+          "ecosio-connectors-2026"
+        ]
+      }
+    },
+    "costByAudience": {
+      "micro": {
+        "baseMonthlyFrom": null,
+        "paMonthlySurcharge": null,
+        "label": "Prix public non trouvé : devis nécessaire.",
+        "caveat": "Demandez un chiffrage écrit avec les volumes, l'intégration, l'engagement et la restitution des données.",
+        "sourceIds": [
+          "ecosio-einvoicing-2026"
+        ]
+      },
+      "tpe-pme": {
+        "baseMonthlyFrom": null,
+        "paMonthlySurcharge": null,
+        "label": "Prix public non trouvé : devis nécessaire.",
+        "caveat": "Demandez un chiffrage écrit avec les volumes, l'intégration, l'engagement et la restitution des données.",
+        "sourceIds": [
+          "ecosio-einvoicing-2026"
+        ]
+      },
+      "eti-ge": {
+        "baseMonthlyFrom": null,
+        "paMonthlySurcharge": null,
+        "label": "Prix public non trouvé : devis nécessaire.",
+        "caveat": "Demandez un chiffrage écrit avec les volumes, l'intégration, l'engagement et la restitution des données.",
+        "sourceIds": [
+          "ecosio-einvoicing-2026"
+        ]
+      }
+    },
+    "afterActivationActions": [
+      {
+        "title": "Faites préciser l'e-reporting France",
+        "detail": "L'émission, la réception et les connexions sont documentées. L'e-reporting français doit être confirmé dans votre proposition.",
+        "sourceIds": [
+          "ecosio-einvoicing-2026"
+        ]
+      }
+    ]
+  },
+  "selection": {
+    "slug": "ecosio",
+    "segment": "eti-et-grands-comptes",
+    "reach": "Point d'accès Peppol et services API ou SFTP documentés",
+    "reachSourceIds": [
+      "ecosio-einvoicing-2026",
+      "ecosio-connectors-2026"
+    ],
+    "reason": "Service managé d'intégration EDI pour entreprises internationales."
+  }
+}

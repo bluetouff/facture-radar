@@ -3,6 +3,7 @@ import type { JourneyCostDefinition, JourneyProfileDefinition } from "./journey-
 const checkedAt = "2026-08-26";
 
 export interface JourneyInput {
+  checkedAt?: string;
   id: JourneyProfileDefinition["id"];
   aliases: readonly string[];
   platformSlug: string;
@@ -66,7 +67,7 @@ export function journey(input: JourneyInput): JourneyProfileDefinition {
     platformSlug: input.platformSlug,
     toolLabel: input.toolLabel,
     toolDetail: input.toolDetail,
-    checkedAt,
+    checkedAt: input.checkedAt ?? checkedAt,
     toolSourceIds: input.sourceIds,
     contextSourceIds: input.sourceIds,
     activation: {
@@ -93,9 +94,9 @@ export function journey(input: JourneyInput): JourneyProfileDefinition {
 
 export const expandedJourneyProfiles: readonly JourneyProfileDefinition[] = [
   journey({
-    id: "b2brouter", aliases: ["B2BRouter", "B2B Router"], platformSlug: "b2brouter", toolLabel: "B2BRouter",
+    checkedAt: "2026-09-14", id: "b2brouter", aliases: ["B2BRouter", "B2B Router"], platformSlug: "b2brouter", toolLabel: "B2BRouter",
     toolDetail: "Application web et API de facturation électronique.", sourceIds: ["b2brouter-pricing-2026", "b2brouter-france-api-2026"],
-    cost: free("Basic est gratuit jusqu'à 24 transactions par an.", "Au-delà, Professional est affiché à 110 € HT par an. Une transaction inclut envoi, réception ou déclaration fiscale.", ["b2brouter-pricing-2026"]),
+    cost: paid(110 / 12, "Professional coûte 110 € HT par an pour la conformité France.", "Le montant mensuel est un équivalent de l’abonnement annuel. Basic ne couvre pas les fonctions réglementaires France. API et intégration à chiffrer séparément.", ["b2brouter-pricing-2026-09"]),
   }),
   journey({
     id: "dext", aliases: ["Dext", "Dext Prepare"], platformSlug: "dext", toolLabel: "Dext",

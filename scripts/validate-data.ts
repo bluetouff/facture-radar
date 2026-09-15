@@ -22,7 +22,7 @@ const corpusSelectionSchema = z.object({
     reach: z.string().min(1),
     reachSourceIds: z.array(z.string().min(1)).min(1),
     reason: z.string().min(1),
-  })).length(148),
+  })).length(149),
   replaced: z.array(z.object({
     slug: z.string().regex(/^[a-z0-9-]+$/),
     reason: z.string().min(1),
@@ -70,8 +70,14 @@ for (const route of checkedPassportRoutes) {
   if (!approvedByName.has(route.officialName)) {
     throw new Error(`${route.name} est absent de la liste DGFiP approuvée`);
   }
-  if (route.checkedAt !== PASSPORT_CHECKED_AT) {
+  if (route.checkedAt > PASSPORT_CHECKED_AT) {
     throw new Error(`${route.name} : date de contrôle incohérente avec la version du Passeport`);
+  }
+  for (const sourceId of [...route.facts.flatMap((fact) => fact.sourceIds), ...route.cost.sourceIds]) {
+    const source = sourcesById.get(sourceId);
+    if (!source || source.accessedAt > route.checkedAt) {
+      throw new Error(`${route.name} : source absente ou postérieure à la revue de cette route`);
+    }
   }
   const factIds = new Set(route.facts.map((fact) => fact.id));
   if (factIds.size !== route.facts.length) throw new Error(`${route.name} : fait Passeport dupliqué`);
@@ -105,10 +111,10 @@ for (const platform of checkedPlatforms) {
   if (platform.officialStatus.status !== "official" || platform.officialStatus.sourceIds.length === 0) {
     throw new Error(`${platform.displayName} : le statut PA doit être relié à une preuve officielle`);
   }
-  if (!platform.officialStatus.sourceIds.includes("dgfip-list-2026-08-19")) {
+  if (!platform.officialStatus.sourceIds.includes("dgfip-list-2026-09-10")) {
     throw new Error(`${platform.displayName} : la preuve du statut PA doit inclure la liste DGFiP`);
   }
-  if (platform.registeredAt.status !== "official" || !platform.registeredAt.sourceIds.includes("dgfip-list-2026-08-19")) {
+  if (platform.registeredAt.status !== "official" || !platform.registeredAt.sourceIds.includes("dgfip-list-2026-09-10")) {
     throw new Error(`${platform.displayName} : la date d'immatriculation doit provenir de la liste DGFiP`);
   }
   if (platform.registeredAt.value !== officialEntry.registeredAt) {
@@ -158,6 +164,7 @@ for (const profile of checkedResearchProfiles) {
     profile.terminationTerms,
     profile.hostingProviders,
     profile.declaredSubprocessors,
+    profile.iso27001Scope,
   ];
   for (const evidence of evidenceValues) {
     if (evidence.value === null && (evidence.status !== "non_documented" || evidence.sourceIds.length !== 0)) {
@@ -297,11 +304,11 @@ for (const source of checkedSources) {
   if (!referencedSourceIds.has(source.id)) throw new Error(`Source orpheline non liée au corpus : ${source.id}`);
 }
 
-if (officialDirectory.approved.length !== 148) {
-  throw new Error(`La liste approuvée doit contenir 148 opérateurs, reçu ${officialDirectory.approved.length}`);
+if (officialDirectory.approved.length !== 149) {
+  throw new Error(`La liste approuvée doit contenir 149 opérateurs, reçu ${officialDirectory.approved.length}`);
 }
-if (officialDirectory.pending.length !== 18) {
-  throw new Error(`La liste en attente doit contenir 18 opérateurs, reçu ${officialDirectory.pending.length}`);
+if (officialDirectory.pending.length !== 16) {
+  throw new Error(`La liste en attente doit contenir 16 opérateurs, reçu ${officialDirectory.pending.length}`);
 }
 
 console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${checkedPassportRoutes.length} routes Passeport, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);

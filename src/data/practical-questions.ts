@@ -846,7 +846,7 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
     title: "Que se passe-t-il si je dépasse le nombre de factures inclus ?",
     description: "Un prix de départ ne suffit pas si le palier suivant ou le coût unitaire n'est pas indiqué.",
     shortAnswer: "Regardez le déclencheur exact, le prix unitaire et le nouveau forfait avant de comparer les abonnements.",
-    answerDetail: "SuperPDP publie un basculement tarifé au-delà de 1 000 factures mensuelles. FIDUCIAL publie un coût par facture reçue. B2BRouter publie 24 transactions annuelles dans Basic puis des offres sans limitation de factures.",
+    answerDetail: "SuperPDP publie un basculement tarifé au-delà de 1 000 factures mensuelles. FIDUCIAL publie un coût par facture reçue. B2BRouter réserve la conformité France à Professional et Business ; Basic est hors de ce périmètre.",
     recommendations: [
       {
         label: "SuperPDP : bascule automatique publiée",
@@ -866,11 +866,11 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
       },
       {
         label: "B2BRouter : changer de plan",
-        detail: "Basic couvre 24 transactions par an. Professional et Business annoncent l'émission et la réception sans limitation de factures.",
+        detail: "Conformité France dès Professional à 110 € HT/an, avec émission et réception illimitées. Basic est exclu de ce périmètre.",
         state: "consider",
         platformSlug: "b2brouter",
         href: "/plateformes/b2brouter/",
-        sourceIds: ["b2brouter-pricing-2026"],
+        sourceIds: ["b2brouter-pricing-2026-09"],
       },
     ],
     checks: [
@@ -880,10 +880,10 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
       "Le KYC, le stockage, les utilisateurs et le support sont-ils facturés séparément ?",
     ],
     nextAction: { label: "Comparer les prix et volumes publiés", href: "/comparer/" },
-    sourceIds: ["superpdp-pricing-2026", "fiducial-pricing-2026", "b2brouter-pricing-2026"],
+    sourceIds: ["superpdp-pricing-2026", "fiducial-pricing-2026", "b2brouter-pricing-2026-09"],
     tone: "amber",
     icon: "layers",
-    checkedAt: QUESTIONS_CHECKED_AT,
+    checkedAt: "2026-09-14",
   },
   {
     slug: "engagement-resiliation-plateforme",

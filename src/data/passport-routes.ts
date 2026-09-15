@@ -31,7 +31,7 @@ export interface PassportRoute {
 }
 
 export const PASSPORT_VERSION = "Passeport 0.1";
-export const PASSPORT_CHECKED_AT = "2026-08-25";
+export const PASSPORT_CHECKED_AT = "2026-09-14";
 
 export const passportRoutes: PassportRoute[] = [
   {
@@ -84,7 +84,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Importer ce même fichier, contrôler les lignes et totaux repris, puis vérifier que Qonto le conserve comme Factur-X avant l'envoi.",
     nextStep: "Ouvrez Factures clients dans Qonto et utilisez l'import de facture électronique.",
     profileHref: "/plateformes/qonto/",
-    checkedAt: PASSPORT_CHECKED_AT,
+    checkedAt: "2026-08-25",
   },
   {
     slug: "pennylane",
@@ -136,7 +136,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Faire importer ce fichier par l'API, puis comparer le PDF, le profil, les lignes, les totaux et l'identifiant de facture avant émission.",
     nextStep: "Si vous avez le plan Essentiel, demandez un import test via l'API e-invoice avant de modifier votre chaîne actuelle.",
     profileHref: "/plateformes/pennylane/",
-    checkedAt: PASSPORT_CHECKED_AT,
+    checkedAt: "2026-08-25",
   },
   {
     slug: "b2brouter",
@@ -175,20 +175,20 @@ export const passportRoutes: PassportRoute[] = [
         id: "integrity",
         label: "XML d'origine",
         value: "Portail à contrôler",
-        detail: "Le chemin API est décrit, mais la conservation du XML d'un Factur-X tiers déposé dans le portail gratuit reste à tester.",
+        detail: "Le chemin API est décrit, mais la conservation du XML d'un Factur-X tiers déposé dans le portail reste à tester.",
         state: "confirm",
         sourceIds: ["b2brouter-free-2026", "b2brouter-france-api-2026"],
       },
     ],
     cost: {
-      value: "24 transactions/an gratuites",
-      detail: "Le prix du parcours au-delà de ce volume doit être chiffré avant engagement.",
-      sourceIds: ["b2brouter-home-2026"],
+      value: "Professional : 110 € HT/an",
+      detail: "Basic gratuit ne couvre pas la conformité France. Le tarif API et la conservation du XML importé restent à confirmer.",
+      sourceIds: ["b2brouter-pricing-2026-09"],
     },
-    decisiveTest: "Déposer ce fichier dans le portail gratuit et vérifier qu'il reste identifié comme Factur-X avec ses données structurées, sans recréation.",
+    decisiveTest: "Déposer ce fichier dans le portail et vérifier qu'il reste identifié comme Factur-X avec ses données structurées, sans recréation.",
     nextStep: "Créez un compte de test et importez une seule facture non sensible avant de retenir cette route.",
-    profileHref: null,
-    checkedAt: PASSPORT_CHECKED_AT,
+    profileHref: "/plateformes/b2brouter/",
+    checkedAt: "2026-09-14",
   },
   {
     slug: "superpdp",
@@ -240,7 +240,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Demander si le compte accepte un PDF/A-3 Factur-X EN 16931 tiers et s'il transmet son XML sans le reconstruire.",
     nextStep: "Posez cette question précise à SuperPDP avant de déplacer votre facturation.",
     profileHref: "/plateformes/superpdp/",
-    checkedAt: PASSPORT_CHECKED_AT,
+    checkedAt: "2026-08-25",
   },
   {
     slug: "tiime",
@@ -292,7 +292,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Demander à Tiime si une facture de vente Factur-X créée ailleurs peut être déposée puis émise sans ressaisie.",
     nextStep: "Si vous souhaitez garder votre outil actuel, faites confirmer l'import d'un Factur-X tiers avant d'activer Tiime comme PA.",
     profileHref: "/plateformes/tiime/",
-    checkedAt: PASSPORT_CHECKED_AT,
+    checkedAt: "2026-08-25",
   },
   {
     slug: "abby",
@@ -344,7 +344,7 @@ export const passportRoutes: PassportRoute[] = [
     decisiveTest: "Demander si Abby accepte une facture de vente Factur-X finalisée ailleurs et la transmet sans la recréer.",
     nextStep: "Si votre facture vient d'un autre outil, obtenez une réponse écrite d'Abby avant toute bascule.",
     profileHref: "/plateformes/abby/",
-    checkedAt: PASSPORT_CHECKED_AT,
+    checkedAt: "2026-08-25",
   },
 ];
 
