@@ -23,7 +23,7 @@ const priceSignal = pricing?.kind === "free"
   : pricing?.kind === "included"
     ? "PA incluse dans une offre"
     : pricing?.monthlyFrom !== null && pricing?.monthlyFrom !== undefined
-      ? `Dès ${pricing.monthlyFrom} € HT / mois`
+      ? `Dès ${pricing.monthlyFrom.toLocaleString("fr-FR", { maximumFractionDigits: 2 })} € HT / mois`
       : pricing?.kind === "quote"
         ? "Budget sur devis"
         : "Budget à confirmer";

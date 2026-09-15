@@ -16,7 +16,7 @@ const mainSignal = price?.kind === "free"
   : price?.kind === "included"
     ? "La PA est incluse dans une offre"
     : price?.monthlyFrom !== null && price?.monthlyFrom !== undefined
-      ? `Prix public dès ${price.monthlyFrom} € HT / mois`
+      ? `Prix public dès ${price.monthlyFrom.toLocaleString("fr-FR", { maximumFractionDigits: 2 })} € HT / mois`
       : "Le budget passe par un devis";
 const counter = String(index + 1).padStart(2, "0");
 ---
