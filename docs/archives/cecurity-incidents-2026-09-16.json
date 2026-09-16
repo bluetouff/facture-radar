@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "sourceId": "frenchbreaches-welyb-20260915",
+      "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "checkedAt": "2026-09-16",
+      "sha256": "df9ef0446de09b988c633ae0b5b2843a03fd33f96ceb088385daab5bd0d735f9"
+    },
+    {
+      "sourceId": "welyb-status-20260916",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "checkedAt": "2026-09-16",
+      "sha256": "5ab4bf15aaa25fa937acba4de15be4cc9e9c2fa8ff3f72842d9821fe6f09fa2d"
+    },
+    {
+      "sourceId": "welyb-cecurity-integration",
+      "url": "https://support.welyb.fr/connecter-welyb-avec-la-pa-efacture-cecurity",
+      "checkedAt": "2026-09-16",
+      "sha256": "68d6d3b204c24c0f32e6d3adcb78325006ab5cb50f9130156717364e1118f5f6"
+    }
+  ],
+  "review": "La notification de sécurité est relayée par FrenchBreaches. L’impact sur la PA Cecurity reste non établi. Pour l’avis Welyb de consultation des factures XML, la date propre de publication et de résolution est inconnue. La date de mise à jour globale de la page ne la remplace pas."
+}

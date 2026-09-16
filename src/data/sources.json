@@ -2790,5 +2790,29 @@
     "url": "https://status.sovos.com/",
     "type": "documentation",
     "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "welyb-status-20260916",
+    "title": "État de Welyb : connexion et consultation eFacture/Cecurity",
+    "publisher": "Welyb",
+    "url": "https://support.welyb.fr/statut-plateforme",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "welyb-cecurity-integration",
+    "title": "Connecter Welyb avec la PA eFacture by Cecurity",
+    "publisher": "Welyb",
+    "url": "https://support.welyb.fr/connecter-welyb-avec-la-pa-efacture-cecurity",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "frenchbreaches-welyb-20260915",
+    "title": "Welyb / AGIRIS : notification de fuite de données relayée le 15 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+    "type": "press",
+    "accessedAt": "2026-09-16"
   }
 ]

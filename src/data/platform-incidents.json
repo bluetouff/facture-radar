@@ -458,5 +458,92 @@
       "tungsten-support-20260916-source"
     ],
     "limitations": "L’avis porte sur le support technique. Le composant eInvoice Network est mentionné sur la page, mais le texte décrit l’accès à l’assistance."
+  },
+  {
+    "platformSlugs": [
+      "cecurity"
+    ],
+    "scope": "connected_service",
+    "verification": "primary_notice",
+    "affectedService": "Welyb ↔ eFacture by Cecurity",
+    "relationship": {
+      "note": "Welyb propose un connecteur vers eFacture by Cecurity. La fiche Cecurity référence cet avis en raison de cette intégration. Le service concerné est précisé dans l’avis.",
+      "sourceIds": [
+        "welyb-cecurity-integration"
+      ]
+    },
+    "kind": "availability",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-09-14",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-14",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "welyb-status-20260916"
+    ],
+    "id": "welyb-cecurity-connexion-20260914",
+    "title": "Welyb / eFacture : connexion des nouveaux dossiers perturbée",
+    "summary": "Welyb signale des erreurs lors du raccordement de nouveaux dossiers à eFacture/Cecurity. Un correctif est annoncé en cours de déploiement.",
+    "status": "identified",
+    "limitations": "Avis toujours ouvert lors de la consultation du 16 septembre. Périmètre : connexion des nouveaux dossiers depuis Welyb. Étendue et durée de la perturbation à préciser."
+  },
+  {
+    "platformSlugs": [
+      "cecurity"
+    ],
+    "scope": "connected_service",
+    "verification": "primary_notice",
+    "affectedService": "Welyb ↔ eFacture by Cecurity",
+    "relationship": {
+      "note": "Welyb propose un connecteur vers eFacture by Cecurity. La fiche Cecurity référence cet avis en raison de cette intégration. Le service concerné est précisé dans l’avis.",
+      "sourceIds": [
+        "welyb-cecurity-integration"
+      ]
+    },
+    "kind": "availability",
+    "startedAt": "2026-09-04",
+    "detectedAt": null,
+    "firstReportedAt": null,
+    "resolutionReportedAt": null,
+    "updatedAt": null,
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "welyb-status-20260916"
+    ],
+    "id": "welyb-cecurity-consultation-20260904",
+    "title": "Welyb / eFacture : consultation des factures rétablie",
+    "summary": "Welyb annonce le rétablissement de la consultation des factures XML provenant d’eFacture dans le Cockpit et la GED. La difficulté remontait au 4 septembre.",
+    "status": "resolved",
+    "limitations": "Avis de résolution consulté le 16 septembre, sans date de publication propre à cet avis. La date du rétablissement reste inconnue. Le problème décrit concerne l’affichage dans Welyb."
+  },
+  {
+    "platformSlugs": [
+      "cecurity"
+    ],
+    "scope": "connected_service",
+    "verification": "relayed_notice",
+    "affectedService": "Welyb / Portail AGIRIS CONNECT",
+    "relationship": {
+      "note": "Welyb propose un connecteur vers eFacture by Cecurity. La fiche Cecurity référence cet avis en raison de cette intégration. Le service concerné est précisé dans l’avis.",
+      "sourceIds": [
+        "welyb-cecurity-integration"
+      ]
+    },
+    "kind": "security",
+    "startedAt": null,
+    "detectedAt": "2026-09-01",
+    "firstReportedAt": "2026-09-15",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-15",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "frenchbreaches-welyb-20260915"
+    ],
+    "id": "welyb-agiris-securite-20260901",
+    "title": "Welyb / AGIRIS CONNECT : fuite de données signalée",
+    "summary": "FrenchBreaches relaie le 15 septembre une notification de fuite détectée le 1er septembre. Elle concerne un composant lié à Welyb / AGIRIS CONNECT : coordonnées, identifiants d’entreprise et mots de passe hachés sont cités.",
+    "status": "unknown",
+    "limitations": "Notification consultée par l’intermédiaire de FrenchBreaches ; confirmation directe de l’éditeur à obtenir. L’impact sur la PA Cecurity et sur les factures reste non établi."
   }
 ]

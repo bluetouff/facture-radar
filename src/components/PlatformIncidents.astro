@@ -1,16 +1,17 @@
 ---
-import { incidentsForPlatform, incidentScopeLabels, incidentStatusLabels } from "../data/incident-watch";
+import { incidentsForPlatform, incidentScopeLabels, incidentStatusLabels, incidentVerificationLabels } from "../data/incident-watch";
 interface Props { slug: string }
 const { slug } = Astro.props;
 const watch = incidentsForPlatform(slug);
 ---
 <section class="incident-summary" id="incidents" aria-labelledby="incident-summary-title">
   <span class="mono-label">Disponibilité & sécurité</span>
-  <h2 id="incident-summary-title">Les incidents documentés</h2>
+  <h2 id="incident-summary-title">Incidents et signalements publiés</h2>
   <p>{watch.coverage.note}</p>
   <p>Recherche de sécurité du {watch.security.checkedAt?.split("-").reverse().join("/")}. {watch.security.note}</p>
-  {watch.incidents.length > 0 && <ul>{watch.incidents.slice(0, 3).map(event => <li><a href={`/incidents/#${event.id}`}>{event.title}</a><span>{incidentScopeLabels[event.scope]} · {incidentStatusLabels[event.status]}</span></li>)}</ul>}
-  {watch.feeds.length > 0 && <small>{watch.feeds.length} source publique raccordée à la collecte quotidienne.</small>}
+  {watch.incidents.length > 0 && <ul>{watch.incidents.slice(0, 3).map(event => <li><a href={`/incidents/#${event.id}`}>{event.title}</a><span>{incidentScopeLabels[event.scope]} · {incidentVerificationLabels[event.verification]} · {incidentStatusLabels[event.status]}</span></li>)}</ul>}
+  <p class="collection-state"><strong>Collecte automatique : {watch.feeds.length ? `${watch.feeds.length} source${watch.feeds.length > 1 ? "s" : ""} raccordée${watch.feeds.length > 1 ? "s" : ""}` : "non raccordée"}.</strong><br/>{watch.incidents.length} avis publié{watch.incidents.length === 1 ? "" : "s"}, issus des sources relues, y compris manuellement.</p>
+  {watch.incidents.length === 0 && <p>Cette fiche attend des avis documentés. L’historique des incidents reste à compléter.</p>}
   <a class="incident-link" href={`/incidents/?plateforme=${slug}`}>Voir la veille et ses limites →</a>
 </section>
 <style>

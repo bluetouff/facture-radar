@@ -59,7 +59,7 @@ export const sourceSchema = z.object({
   title: z.string().min(1),
   publisher: z.string().min(1),
   url: z.url().refine(isPublicHttpUrl, "Seules les URL HTTP et HTTPS sont autorisées"),
-  type: z.enum(["official-list", "institutional", "pricing", "documentation", "contract", "security"]),
+  type: z.enum(["official-list", "institutional", "pricing", "documentation", "contract", "security", "press"]),
   accessedAt: z.iso.date(),
 });
 

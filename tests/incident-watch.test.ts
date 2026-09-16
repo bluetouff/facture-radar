@@ -10,13 +10,58 @@ import directory from "../src/data/official-directory.json" with { type: "json" 
 import { platforms } from "../src/data/platforms.ts";
 import { researchForPlatform } from "../src/data/platform-research.ts";
 import { matchPlatform } from "../src/lib/matcher.ts";
+import { formatIncidentDate, incidentDateAfter } from "../src/lib/incident-dates.ts";
+
+test("les avis manuels sont publiés pour Cecurity malgré l’absence de flux", () => {
+  const watch = incidentsForPlatform("cecurity");
+  assert.equal(watch.feeds.length, 0);
+  assert.equal(watch.incidents.length, 3);
+  assert.equal(watch.coverage.status, "partial");
+  assert.deepEqual(getPlatform("cecurity")!.incidentWatch.incidents, watch.incidents);
+  const security = watch.incidents.find(event => event.kind === "security")!;
+  assert.equal(security.scope, "connected_service");
+  assert.equal(security.affectedService, "Welyb / Portail AGIRIS CONNECT");
+  assert.equal(security.verification, "relayed_notice");
+  assert.equal(security.detectedAt, "2026-09-01");
+  assert.equal(security.startedAt, null);
+  for (const id of [...security.sourceIds, ...security.relationship!.sourceIds]) assert.ok(incidentWatchCorpus().sources.some(source => source.id === id));
+  assert.throws(() => validateIncidents([{ ...security, verification: "primary_notice" }]));
+  assert.throws(() => validateIncidents([{ ...security, affectedService: undefined }]));
+  assert.throws(() => validateIncidents([{ ...security, relationship: undefined }]));
+  assert.throws(() => validateIncidents([{ ...security, relationship: { note: "Lien supposé", sourceIds: security.sourceIds } }]));
+  const xml = renderIncidentRss([security]);
+  assert.match(xml, /Notification relayée/);
+  assert.match(xml, /impact sur la PA Cecurity/);
+  assert.match(xml, /frenchbreaches\.com/);
+  assert.ok(!xml.includes("<pubDate>"));
+});
+
+test("dates au jour près, détection et résolution sans date restent fidèles à la source", () => {
+  assert.equal(formatIncidentDate("2026-09-14"), "14 sept. 2026");
+  assert.equal(formatIncidentDate(null), "Date non publiée");
+  assert.match(formatIncidentDate("2026-09-14T10:30:00Z"), /12:30/);
+  // An offset timestamp falling on the next Paris day must not escape the date check.
+  assert.equal(incidentDateAfter("2026-09-16T23:30:00Z", "2026-09-16"), true);
+  assert.equal(incidentDateAfter("2026-09-14T23:30:00+02:00", "2026-09-14"), false);
+  const event = platformIncidents.find(event => event.id === "welyb-cecurity-consultation-20260904")!;
+  assert.equal(event.status, "resolved");
+  assert.equal(event.firstReportedAt, null);
+  assert.equal(event.updatedAt, null);
+  assert.equal(event.resolutionReportedAt, null);
+  const xml = renderIncidentRss([event]);
+  assert.ok(!xml.includes("<pubDate>"));
+  assert.match(xml, /Date non publiée/);
+  for (const change of [{ startedAt: "2026-09-31" }, { startedAt: "2026-08-01" }, { startedAt: null }, { detectedAt: "2026-09-02" }, { resolutionReportedAt: "2026-09-03" }, { updatedAt: "2026-09-17" }]) assert.throws(() => validateIncidents([{ ...event, ...change }]));
+  const dated = platformIncidents.find(event => event.updatedAt?.includes("T"))!;
+  assert.match(renderIncidentRss([dated]), /<pubDate>/);
+});
 
 test("les avis distinguent PA, application et dépendance sans durée inventée", () => {
-  assert.equal(platformIncidents.length, 23);
+  assert.equal(platformIncidents.length, 26);
   assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 6);
   assert.equal(platformIncidents.find(event => event.id === "esker-french-b2b-20260915")!.status, "monitoring");
   assert.equal(incidentsForPlatform("pennylane").incidents[0]!.scope, "publisher_service");
-  assert.ok(platformIncidents.every(event => event.startedAt === null));
+  assert.equal(platformIncidents.find(event => event.id === "welyb-cecurity-consultation-20260904")!.startedAt, "2026-09-04");
   assert.equal(incidentsForPlatform("abby").coverage.status, "not_reviewed");
   assert.equal(incidentsForPlatform("qonto").incidents.length, 0);
   assert.match(incidentsForPlatform("qonto").coverage.note, /reste à vérifier séparément/);
@@ -24,7 +69,7 @@ test("les avis distinguent PA, application et dépendance sans durée inventée"
 });
 test("chronologies et preuves d’incident invalides sont refusées", () => {
   const event = platformIncidents.find(event => event.status === "resolved")!;
-  for (const change of [{ sourceIds: [] }, { sourceIds: ["inconnu"] }, { kind: "security" }, { platformSlugs: ["introuvable"] }, { firstReportedAt: "2026-09-20T00:00:00Z" }, { updatedAt: "2026-08-01T00:00:00Z" }, { resolutionReportedAt: null }, { scope: "all" }]) {
+  for (const change of [{ sourceIds: [] }, { sourceIds: ["inconnu"] }, { kind: "security" }, { platformSlugs: ["introuvable"] }, { firstReportedAt: "2026-09-20T00:00:00Z" }, { updatedAt: "2026-08-01T00:00:00Z" }, { status: "unknown" }, { scope: "all" }]) {
     assert.throws(() => validateIncidents([{ ...event, ...change }]));
   }
   assert.throws(() => validateIncidents([event, event]));
@@ -48,7 +93,7 @@ test("une mise à jour est détectée sans répéter un avis inchangé", () => {
 });
 test("API et MCP présentent incidents, couverture et mêmes sources", () => {
   const result = getResourceByUri("pacheck://corpus/incidents", {revision:"test",builtAt:"2026-09-16"}) as ReturnType<typeof incidentWatchCorpus>;
-  assert.equal(result.incidents.length, 23);
+  assert.equal(result.incidents.length, 26);
   assert.deepEqual(getPlatform("esker")!.incidentWatch.incidents, incidentsForPlatform("esker").incidents);
 });
 
@@ -60,7 +105,7 @@ test("chaque PA a une recherche datée ; collecte et incidents restent distincts
   assert.equal(incidentsForPlatform("abby").security.status, "public_search_completed");
   assert.equal(incidentsForPlatform("weproc").incidents.length, 2);
   assert.equal(incidentsForPlatform("spendesk").incidents.filter(event => event.scope === "pa").length, 1);
-  assert.equal(platformIncidents.filter(event => event.kind === "security").length, 0);
+  assert.equal(platformIncidents.filter(event => event.kind === "security").length, 1);
   assert.ok(incidentWatchCorpus().securityReview.findings.every(finding => ["outside_period", "vulnerability_advisory"].includes(finding.type)));
 });
 

@@ -57,7 +57,7 @@ function render() {
   cards.forEach(card => card.hidden = !visibleCards.has(card));
   sources.forEach(source => source.hidden = !visibleSources.has(source));
   document.querySelector("#incident-count")!.textContent = incidents.total
-    ? `Avis ${incidents.start + 1} à ${incidents.start + incidents.items.length} sur ${incidents.total} · page ${incidents.page} sur ${incidents.totalPages} · dernière mise à jour en premier`
+    ? `Avis ${incidents.start + 1} à ${incidents.start + incidents.items.length} sur ${incidents.total} · page ${incidents.page} sur ${incidents.totalPages} · mise à jour ou consultation récente en premier`
     : "0 avis pour cette sélection";
   document.querySelector<HTMLElement>("#no-incidents")!.hidden = incidents.total !== 0;
   document.querySelector("#source-count")!.textContent = publications.total

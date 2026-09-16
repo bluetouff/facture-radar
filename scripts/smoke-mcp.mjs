@@ -61,7 +61,7 @@ async function inspectClient(versionNegotiation) {
     const incidentsResource = await client.readResource({ uri: "pacheck://corpus/incidents" });
     const incidentData = JSON.parse(incidentsResource.contents[0].text);
     assert.equal(incidentData.coverage.length, 149);
-    assert.equal(incidentData.incidents.length, 23);
+    assert.equal(incidentData.incidents.length, 26);
     assert.equal(incidentData.research.length, 149);
     assert.equal(incidentData.collection.feeds.length, 26);
     assert.ok(resources.resources.some((resource) => resource.uri === "pacheck://corpus/official-directory"));
@@ -89,7 +89,7 @@ try {
 
   const health = await fetch(new URL("/healthz", endpoint));
   assert.equal(health.status, 200);
-  assert.equal((await health.json()).counts.sources, 349);
+  assert.equal((await health.json()).counts.sources, 352);
 
   const missing = await fetch(new URL("/not-found", endpoint));
   assert.equal(missing.status, 404);

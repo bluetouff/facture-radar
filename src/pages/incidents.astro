@@ -4,34 +4,35 @@ import InterfaceIcon from "../components/InterfaceIcon.astro";
 import Pagination from "../components/Pagination.astro";
 import IncidentResearch from "../components/IncidentResearch.astro";
 import { platforms } from "../data/platforms";
-import { incidentWatchCorpus, incidentScopeLabels, incidentStatusLabels, incidentsForPlatform } from "../data/incident-watch";
+import { incidentWatchCorpus, incidentScopeLabels, incidentStatusLabels, incidentVerificationLabels, incidentsForPlatform } from "../data/incident-watch";
+import { formatIncidentDate } from "../lib/incident-dates";
 const watch = incidentWatchCorpus();
 const reviewed = watch.coverage.filter(item => item.status !== "not_reviewed");
 const open = watch.incidents.filter(event => event.status !== "resolved");
 const resolved = watch.incidents.filter(event => event.status === "resolved");
-const date = (value: string) => new Intl.DateTimeFormat("fr-FR", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Paris" }).format(new Date(value));
+const date = formatIncidentDate;
 const shortDate = (value: string) => value.split("-").reverse().join("/");
 const name = (slug: string) => platforms.find(platform => platform.slug === slug)!.displayName;
-const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route" } as const;
+const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route", connected_service: "route" } as const;
 ---
 <BaseLayout title="Incidents des PA : disponibilité et sécurité | PA Check" description="Avis d’incident sourcés depuis le 1er septembre 2026 : services touchés, chronologie, résolution et couverture des plateformes agréées.">
   <section class="shell watch-cover">
     <div class="watch-intro">
       <span class="eyebrow"><InterfaceIcon name="target" /> L’observatoire des PA</span>
       <h1>Incidents &<br/>disponibilité.</h1>
-      <p>Les signalements des éditeurs, leur évolution et les services concernés, réunis dans un journal sourcé.</p>
+      <p>Les incidents de disponibilité et de sécurité repérés dans les avis des éditeurs et les notifications relayées, avec leurs sources et les services concernés.</p>
       <div class="cover-actions"><a class="journal-link" href="#journal">Consulter les avis <InterfaceIcon name="arrow" /></a><a href="#sources">Explorer les sources</a><a href="/incidents.xml">S’abonner au flux RSS ↗</a></div>
       <span class="watch-period">Depuis le 1er septembre 2026 · heures de Paris</span>
     </div>
     <aside class="watch-board" aria-labelledby="situation-title">
       <div class="board-heading"><span id="situation-title">Le point de situation</span><span class="review-date">Revue du <time datetime={watch.checkedAt}>{shortDate(watch.checkedAt)}</time></span></div>
-      <div class="board-counts"><div><span class="board-label"><span class="status-dot"></span> À suivre</span><strong>{open.length.toString().padStart(2, "0")}</strong><small>avis encore ouverts</small></div><div><span class="board-label"><InterfaceIcon name="check" /> Résolution annoncée</span><strong>{resolved.length.toString().padStart(2, "0")}</strong><small>avis clos par leur auteur</small></div></div>
-      {open.length > 0 ? <a class="board-event" href={`#${open[0]!.id}`}><span><small>{name(open[0]!.platformSlugs[0]!)} · {incidentStatusLabels[open[0]!.status]}</small><span>{open[0]!.title}</span></span><InterfaceIcon name="arrow" /></a> : <p class="board-event">Tous les avis publiés annoncent une résolution.</p>}
+      <div class="board-counts"><div><span class="board-label"><span class="status-dot"></span> À suivre</span><strong>{open.length.toString().padStart(2, "0")}</strong><small>avis à suivre ou à préciser</small></div><div><span class="board-label"><InterfaceIcon name="check" /> Résolution annoncée</span><strong>{resolved.length.toString().padStart(2, "0")}</strong><small>avis clos par leur auteur</small></div></div>
+      {open.length > 0 ? <a class="board-event" href={`#${open[0]!.id}`}><span><small>{open[0]!.affectedService ?? name(open[0]!.platformSlugs[0]!)} · {incidentStatusLabels[open[0]!.status]}</small><span>{open[0]!.title}</span></span><InterfaceIcon name="arrow" /></a> : <p class="board-event">Tous les avis publiés annoncent une résolution.</p>}
       <p class="board-footnote">État des avis à la date de revue. <a href="#couverture">Périmètre de la veille ↗</a></p>
     </aside>
   </section>
   <section class="shell watch-metrics" aria-label="Périmètre publié">
-    <div><span class="metric-icon"><InterfaceIcon name="proof" /></span><strong>{watch.incidents.length}</strong><span>avis documentés<small>Certains avis se recoupent</small></span></div>
+    <div><span class="metric-icon"><InterfaceIcon name="proof" /></span><strong>{watch.incidents.length}</strong><span>avis publiés<small>{watch.incidents.filter(event => event.verification === "relayed_notice").length} notification relayée</small></span></div>
     <div><span class="metric-icon"><InterfaceIcon name="invoice" /></span><strong>{watch.incidents.filter(event => event.scope === "pa").length}</strong><span>avis sur les flux PA<small>Périmètre précisé par la source</small></span></div>
     <div><span class="metric-icon"><InterfaceIcon name="search" /></span><strong>{watch.research.length}</strong><span>PA recherchées<small><a href="#recherche">{reviewed.length} sources de disponibilité relues ↗</a></small></span></div>
   </section>
@@ -45,15 +46,18 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
       <button type="reset">Effacer les filtres</button>
     </form>
     <p class="filter-coverage" id="filter-coverage" hidden></p>
-    <p class="result-count" id="incident-count" role="status" aria-live="polite">{watch.incidents.length} avis publiés · classés par dernière mise à jour de la source</p>
+    <p class="result-count" id="incident-count" role="status" aria-live="polite">{watch.incidents.length} avis publiés · classés par mise à jour ou date de consultation</p>
     <noscript><p>Tous les avis et toutes les sources sont affichés ci-dessous. Activez JavaScript pour les filtres et la pagination.</p></noscript>
-    <div class="incident-list" id="incident-list">{watch.incidents.map(event => <article class="incident-card" id={event.id} data-platforms={event.platformSlugs.join(" ")} data-kind={event.kind} data-scope={event.scope} data-status={event.status}>
-      <div class="incident-date"><time datetime={event.updatedAt}><strong>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", timeZone: "Europe/Paris" }).format(new Date(event.updatedAt))}</strong><span>{new Intl.DateTimeFormat("fr-FR", { month: "short", timeZone: "Europe/Paris" }).format(new Date(event.updatedAt))}</span></time><span>{event.platformSlugs.map(name).join(", ")}</span></div>
+    <div class="incident-list" id="incident-list">{watch.incidents.map(event => <article class="incident-card" id={event.id} data-platforms={event.platformSlugs.join(" ")} data-kind={event.kind} data-scope={event.scope} data-status={event.status} data-verification={event.verification}>
+      <div class="incident-date"><time datetime={event.updatedAt ?? event.firstReportedAt ?? event.checkedAt}><strong>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", timeZone: "Europe/Paris" }).format(new Date(event.updatedAt ?? event.firstReportedAt ?? event.checkedAt))}</strong><span>{new Intl.DateTimeFormat("fr-FR", { month: "short", timeZone: "Europe/Paris" }).format(new Date(event.updatedAt ?? event.firstReportedAt ?? event.checkedAt))}</span></time>{!event.updatedAt && !event.firstReportedAt && <small>Consulté le</small>}<span>{event.affectedService ?? event.platformSlugs.map(name).join(", ")}</span></div>
       <div class="incident-content">
         <div class="incident-tags"><span class="scope-tag"><InterfaceIcon name={scopeIcons[event.scope]} />{incidentScopeLabels[event.scope]}</span><span class="status-tag" data-status={event.status}><InterfaceIcon name={event.status === "resolved" ? "check" : event.status === "unknown" ? "question" : "alert"} />{incidentStatusLabels[event.status]}</span></div>
         <h3><a href={`#${event.id}`}>{event.title}</a></h3><p>{event.summary}</p>
-        <details><summary>Chronologie et précisions <InterfaceIcon name="chevron" /></summary><dl><div><dt>Premier signalement public</dt><dd><time datetime={event.firstReportedAt}>{date(event.firstReportedAt)}</time></dd></div><div><dt>Début réel</dt><dd>{event.startedAt ? date(event.startedAt) : "À préciser par l’éditeur"}</dd></div><div><dt>{event.resolutionReportedAt ? "Résolution annoncée" : "Dernière mise à jour de la source"}</dt><dd>{date(event.resolutionReportedAt ?? event.updatedAt)}</dd></div></dl><p class="event-limits">{event.limitations}</p><a class="profile-link" href={`/plateformes/${event.platformSlugs[0]}/`}>Voir la fiche de {name(event.platformSlugs[0]!)} →</a></details>
-        <footer class="event-sources"><span class="source-label"><InterfaceIcon name="proof" /> Source</span><ul>{event.sourceIds.map(id => { const source = watch.sources.find(source => source.id === id)!; return <li><a href={source.url} rel="noopener noreferrer">{source.publisher} · avis original ↗</a></li>; })}</ul><small>Relu le {shortDate(event.checkedAt)}</small></footer>
+        <p class="verification-note" data-verification={event.verification}><InterfaceIcon name="proof" /><strong>{incidentVerificationLabels[event.verification]}</strong>{event.verification === "relayed_notice" && <span>Confirmation directe de l’éditeur à obtenir.</span>}</p>
+        {event.relationship && <p class="relationship-note">{event.relationship.note}</p>}
+        {event.verification === "relayed_notice" && <p class="event-limits">{event.limitations}</p>}
+        <details><summary>Chronologie et précisions <InterfaceIcon name="chevron" /></summary><dl><div><dt>Premier signalement public</dt><dd>{event.firstReportedAt ? <time datetime={event.firstReportedAt}>{date(event.firstReportedAt)}</time> : "Date non publiée"}</dd></div><div><dt>Début réel</dt><dd>{event.startedAt ? date(event.startedAt) : "Date non publiée"}</dd></div>{event.detectedAt && <div><dt>Détection signalée</dt><dd>{date(event.detectedAt)}</dd></div>}<div><dt>{event.status === "resolved" ? "Publication de la résolution" : "Dernière mise à jour de l’avis"}</dt><dd>{date(event.status === "resolved" ? event.resolutionReportedAt : event.updatedAt)}</dd></div></dl>{event.verification !== "relayed_notice" && <p class="event-limits">{event.limitations}</p>}<a class="profile-link" href={`/plateformes/${event.platformSlugs[0]}/`}>Voir la fiche de {name(event.platformSlugs[0]!)} →</a></details>
+        <footer class="event-sources"><span class="source-label"><InterfaceIcon name="proof" /> Source</span><ul>{event.sourceIds.map(id => { const source = watch.sources.find(source => source.id === id)!; return <li><a href={source.url} rel="noopener noreferrer">{source.publisher} · {source.type === "press" ? "notification relayée" : "avis de l’éditeur"} ↗</a></li>; })}{event.relationship?.sourceIds.map(id => { const source = watch.sources.find(source => source.id === id)!; return <li><a href={source.url} rel="noopener noreferrer">Lien du service avec la PA ↗</a></li>; })}</ul><small>Relu le {shortDate(event.checkedAt)}</small></footer>
       </div>
     </article>)}</div>
     <p class="empty-state" id="no-incidents" hidden>Aucun résultat pour ces filtres. Le détail de la couverture ci-dessous indique les plateformes et les périodes examinées.</p>
@@ -61,7 +65,7 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   </section>
   <section class="shell watch-sources" id="sources" aria-labelledby="sources-title">
     <div class="section-head"><div><span class="mono-label">Les sources</span><h2 id="sources-title" tabindex="-1">Les publications suivies.</h2></div><p>Pages d’état et historiques des éditeurs.<br/>Le détail de la revue figure sur chaque carte.</p></div>
-    <div class="collection-note"><InterfaceIcon name="route" /><div><strong>{new Set(watch.collection.feeds.flatMap(feed => feed.platformSlugs)).size} PA en collecte automatique sur {platforms.length}</strong><p>{watch.collection.feeds.length} sources au total, dont le CERT-FR, relevées une fois par jour. Les nouveaux avis et leurs modifications rejoignent une file de vérification. Les publications retenues alimentent ce journal et son <a href="/incidents.xml">flux RSS commun</a>.</p></div></div>
+    <div class="collection-note"><InterfaceIcon name="route" /><div><strong>{new Set(watch.collection.feeds.flatMap(feed => feed.platformSlugs)).size} PA en collecte automatique sur {platforms.length}</strong><p>{watch.collection.feeds.length} sources au total, dont le CERT-FR, relevées une fois par jour. Les nouveaux avis et leurs modifications rejoignent une file de vérification. Le journal et son <a href="/incidents.xml">flux RSS commun</a> réunissent aussi les avis trouvés manuellement. Une PA sans flux automatique peut donc avoir des incidents publiés.</p></div></div>
     <p class="result-count" id="source-count" role="status" aria-live="polite">{reviewed.length} sources de disponibilité consultées</p>
     <div class="coverage-list" id="source-list">{reviewed.map(item => <article class="source-card" id={`source-${item.platformSlug}`}>
       <div class="source-card-head"><span class="source-mark" aria-hidden="true">{name(item.platformSlug).slice(0, 1)}</span><div><h3><a href={`/plateformes/${item.platformSlug}/`}>{name(item.platformSlug)}</a></h3><span class="coverage-status" data-coverage={item.status}>{item.status === "partial" ? "Revue limitée" : "Historique relu"}</span></div><InterfaceIcon name="proof" /></div>
@@ -72,8 +76,8 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   </section>
   <IncidentResearch />
   <section class="shell watch-method" id="couverture" aria-labelledby="method-title">
-    <div><span class="method-icon"><InterfaceIcon name="target" /></span><span class="mono-label">Périmètre de la veille</span><h2 id="method-title">Notre méthode de lecture.</h2><p>{watch.limit}</p><p>Chaque incident est rattaché au service décrit par la source : flux PA, application ou prestataire externe. Les informations sur un prestataire restent attribuées à l’éditeur qui les rapporte. Les horaires affichés sont ceux des notifications ; le début réel et la durée de l’interruption restent à préciser lorsque l’avis les omet.</p></div>
-    <div class="security-note"><span class="method-icon"><InterfaceIcon name="lock" /></span><span class="mono-label">Sécurité</span><h2>Résultats de la recherche.</h2><p>{watch.securityReview.note}</p>{watch.securityReview.findings.map(finding => <details><summary>{finding.title}</summary><p>{finding.note}</p>{finding.sourceIds.map(id => <a href={watch.sources.find(source => source.id === id)!.url} rel="noopener noreferrer">Lire la source originale ↗</a>)}</details>)}<p>Les signalements encore à recouper restent dans le dossier de recherche. Les vulnérabilités et événements antérieurs sont présentés séparément des incidents de septembre.</p><a href="/contribuer/">Signaler une source ou demander une correction →</a></div>
+    <div><span class="method-icon"><InterfaceIcon name="target" /></span><span class="mono-label">Périmètre de la veille</span><h2 id="method-title">Notre méthode de lecture.</h2><p>{watch.limit}</p><p>Chaque incident est rattaché au service décrit par la source : flux PA, application, prestataire externe ou service connecté. Les informations sur un prestataire restent attribuées à l’éditeur qui les rapporte. Les dates conservent la précision de la source. Une date de détection est distincte du début réel. Les dates omises restent indiquées comme inconnues, y compris pour un avis de résolution.</p></div>
+    <div class="security-note"><span class="method-icon"><InterfaceIcon name="lock" /></span><span class="mono-label">Sécurité</span><h2>Résultats de la recherche.</h2><p>{watch.securityReview.note}</p>{watch.securityReview.findings.map(finding => <details><summary>{finding.title}</summary><p>{finding.note}</p>{finding.sourceIds.map(id => <a href={watch.sources.find(source => source.id === id)!.url} rel="noopener noreferrer">Lire la source originale ↗</a>)}</details>)}<p>Les notifications relayées apparaissent dans le journal avec leur attribution et la confirmation à obtenir. Les vulnérabilités et événements antérieurs sont présentés séparément. La collecte automatique indique un mode de suivi ; un bilan de sécurité exige des informations sur les incidents eux-mêmes.</p><a href="/contribuer/">Signaler une source ou demander une correction →</a></div>
   </section>
   <div id="coverage-data" hidden>{platforms.map(platform => <span data-slug={platform.slug}>{incidentsForPlatform(platform.slug).coverage.note}</span>)}</div>
 </BaseLayout>
@@ -85,6 +89,11 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   h1 { font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: 1.13; margin: 1.2rem 0; }
   h2 { font-size: clamp(1.65rem, 2.6vw, 2rem); line-height: 1.25; margin: .85rem 0; }
   a, p, dd { overflow-wrap: anywhere; }
+  .verification-note { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .55rem; font-size: .75rem; }
+  .verification-note :global(svg) { width: 1rem; height: 1rem; }
+  .verification-note[data-verification="relayed_notice"] { color: #7d4419; background: #f5ead4; padding: .65rem; border-radius: .3rem; }
+  .relationship-note { font-size: .78rem; color: var(--muted); border-left: 2px solid var(--line); padding-left: .8rem; }
+  .incident-date small { display: block; font-size: .62rem; }
   .watch-cover { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); padding-block: 3.8rem 3rem; align-items: center; }
   .eyebrow { gap: .5rem; }
   .watch-intro > p { max-width: 32rem; font-size: 1.04rem; line-height: 1.75; }
