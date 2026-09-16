@@ -10,8 +10,11 @@
 .brand-copy strong span, .footer-brand-lockup b { font-weight: 700; }
 .brand-copy small, .footer-brand-lockup small { color: var(--muted); font-size: .76rem; }
 .main-nav { display: flex; gap: .3rem; align-items: stretch; margin-left: auto; }
-.nav-action { --nav-tone: #bc381c; position: relative; display: flex; gap: .6rem; align-items: center; padding: .7rem .75rem; border-radius: .75rem; transition: background 160ms ease, translate 160ms ease; }
-.nav-icon { display: grid; place-items: center; width: 2rem; height: 2rem; flex-shrink: 0; color: var(--nav-tone); border-radius: .6rem; background: transparent; }
+.site-header .tone-green { --nav-tone: #386951; }
+.site-header .tone-violet { --nav-tone: #715487; }
+.site-header .tone-blue { --nav-tone: #426a99; }
+.nav-action { position: relative; display: flex; gap: .6rem; align-items: center; padding: .7rem .65rem; border-radius: .75rem; transition: background 160ms ease, translate 160ms ease; }
+.nav-icon { display: grid; place-items: center; width: 2rem; height: 2rem; flex-shrink: 0; color: var(--nav-tone); border-radius: .6rem; background: color-mix(in srgb, var(--nav-tone) 9%, #fffaf2); }
 .nav-icon svg { width: 1.2rem; height: 1.2rem; stroke-width: 1.45; }
 .nav-copy { display: grid; gap: .1rem; }
 .nav-copy strong { font-size: .82rem; color: var(--bright); font-weight: 580; white-space: nowrap; }
@@ -126,9 +129,6 @@
   .site-footer { padding-top: 1.5rem; }
 }
 
-/* A quieter masthead gives the content, not the chrome, the first word. */
-.main-nav .nav-icon { display: none; }
-.main-nav .nav-copy small { display: none; }
 .brand-copy small { letter-spacing: .015em; }
 .resource-menu summary { background: #fffaf2; }
 .site-footer { background: #23251f; border-color: #494b40; }
