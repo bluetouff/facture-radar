@@ -200,17 +200,52 @@ if b"ELF" in head or b"#!/bin/sh" in head or b"#!/bin/bash" in head:
     raise SystemExit("Type de bundle MCP inattendu")
 print(f"MCP_BUNDLE_OK bytes={size}")
 PY
-if [[ -e "${TARGET}" ]]; then
-  echo "Echec: la release MCP existe deja: ${TARGET}" >&2
-  false
-fi
+if [[ -e "${TARGET}" || -L "${TARGET}" ]]; then
+  # Same verifier as static activation; both bundles remain standalone.
+  python3 - "${SCRIPT_DIR}/mcp" "${TARGET}" <<'PY'
+import hashlib
+import os
+import pathlib
+import stat
+import sys
 
-install -d -m 0755 -- "${MCP_ROOT}" "${RELEASES_ROOT}" "${TARGET}"
-TARGET_CREATED=1
-install -m 0555 -- "${BUNDLE}" "${TARGET}/server.mjs"
-install -m 0444 -- "${MANIFEST}" "${TARGET}/manifest.json"
-install -m 0444 -- "${CHECKSUM}" "${TARGET}/server.mjs.sha256"
-chown -R root:root -- "${TARGET}"
+
+def tree_manifest(directory, protected):
+    root = pathlib.Path(directory)
+    if root.is_symlink() or not root.is_dir():
+        raise SystemExit("Release existante invalide : repertoire attendu")
+    manifest = {}
+    for path in [root, *root.rglob("*")]:
+        info = path.lstat()
+        if not (stat.S_ISDIR(info.st_mode) or stat.S_ISREG(info.st_mode)):
+            raise SystemExit("Release existante invalide : lien ou fichier special")
+        if protected and (info.st_uid != os.geteuid() or info.st_gid != os.getegid() or info.st_mode & 0o022):
+            raise SystemExit("Release existante invalide : proprietaire ou permissions")
+        if stat.S_ISREG(info.st_mode):
+            if info.st_nlink != 1:
+                raise SystemExit("Release existante invalide : lien physique")
+            digest = hashlib.sha256()
+            with path.open("rb") as handle:
+                for block in iter(lambda: handle.read(1024 * 1024), b""):
+                    digest.update(block)
+            manifest[path.relative_to(root).as_posix()] = ("file", digest.hexdigest())
+        else:
+            manifest[path.relative_to(root).as_posix()] = ("directory", None)
+    return manifest
+
+
+if tree_manifest(sys.argv[1], False) != tree_manifest(sys.argv[2], True):
+    raise SystemExit("Release existante differente : aucune modification autorisee")
+print("EXISTING_RELEASE_VERIFIED")
+PY
+else
+  install -d -m 0755 -- "${MCP_ROOT}" "${RELEASES_ROOT}" "${TARGET}"
+  TARGET_CREATED=1
+  install -m 0555 -- "${BUNDLE}" "${TARGET}/server.mjs"
+  install -m 0444 -- "${MANIFEST}" "${TARGET}/manifest.json"
+  install -m 0444 -- "${CHECKSUM}" "${TARGET}/server.mjs.sha256"
+  chown -R root:root -- "${TARGET}"
+fi
 
 cat > "${SERVICE_FILE}" <<EOF
 [Unit]

@@ -75,7 +75,11 @@ rollback() {
   if [[ "${TARGET_CREATED}" -eq 1 && "${TARGET}" == "${RELEASES_ROOT}/${EXPECTED_SHA}" && -d "${TARGET}" ]]; then
     rm -rf -- "${TARGET}"
   fi
-  echo "Echec: restauration de la release statique precedente." >&2
+  if [[ "${SWAPPED}" -eq 1 ]]; then
+    echo "Echec: tentative de restauration de la release statique precedente." >&2
+  else
+    echo "Echec: aucune bascule de la release statique effectuee." >&2
+  fi
   echo "Sauvegarde et etat d'echec: ${BACKUP_DIR}" >&2
   exit "${exit_code}"
 }
@@ -170,10 +174,6 @@ with tarfile.open(archive_path, mode="r:gz") as archive:
 print(f"ARCHIVE_OK entries={len(members)} bytes={total}")
 PY
 
-if [[ -e "${TARGET}" ]]; then
-  echo "Echec: la release statique existe deja: ${TARGET}" >&2
-  false
-fi
 STAGING="$(mktemp -d "${RELEASES_ROOT}/.${EXPECTED_SHA}.staging.XXXXXX")"
 tar --extract --gzip --file "${ARCHIVE}" --directory "${STAGING}" --no-same-owner --no-same-permissions
 
@@ -219,15 +219,59 @@ printf '%s\n' "${EXPECTED_SHA}" > "${STAGING}/DEPLOYED_SHA"
 find "${STAGING}" -type d -exec chmod 0755 {} +
 find "${STAGING}" -type f -exec chmod 0644 {} +
 chown -R root:root -- "${STAGING}"
-mv -- "${STAGING}" "${TARGET}"
-STAGING=""
-TARGET_CREATED=1
+if [[ -e "${TARGET}" || -L "${TARGET}" ]]; then
+  # Reuse only a complete, protected copy of this exact artifact.
+  python3 - "${STAGING}" "${TARGET}" <<'PY'
+import hashlib
+import os
+import pathlib
+import stat
+import sys
+
+
+def tree_manifest(directory, protected):
+    root = pathlib.Path(directory)
+    if root.is_symlink() or not root.is_dir():
+        raise SystemExit("Release existante invalide : repertoire attendu")
+    manifest = {}
+    for path in [root, *root.rglob("*")]:
+        info = path.lstat()
+        if not (stat.S_ISDIR(info.st_mode) or stat.S_ISREG(info.st_mode)):
+            raise SystemExit("Release existante invalide : lien ou fichier special")
+        if protected and (info.st_uid != os.geteuid() or info.st_gid != os.getegid() or info.st_mode & 0o022):
+            raise SystemExit("Release existante invalide : proprietaire ou permissions")
+        if stat.S_ISREG(info.st_mode):
+            if info.st_nlink != 1:
+                raise SystemExit("Release existante invalide : lien physique")
+            digest = hashlib.sha256()
+            with path.open("rb") as handle:
+                for block in iter(lambda: handle.read(1024 * 1024), b""):
+                    digest.update(block)
+            manifest[path.relative_to(root).as_posix()] = ("file", digest.hexdigest())
+        else:
+            manifest[path.relative_to(root).as_posix()] = ("directory", None)
+    return manifest
+
+
+if tree_manifest(sys.argv[1], False) != tree_manifest(sys.argv[2], True):
+    raise SystemExit("Release existante differente : aucune modification autorisee")
+print("EXISTING_RELEASE_VERIFIED")
+PY
+  rm -rf -- "${STAGING}"
+  STAGING=""
+else
+  mv -- "${STAGING}" "${TARGET}"
+  STAGING=""
+  TARGET_CREATED=1
+fi
 
 apache2ctl configtest
-NEXT_LINK="${SITE_ROOT}/.current.${EXPECTED_SHA}.$$"
-ln -s -- "${TARGET}" "${NEXT_LINK}"
-mv -Tf -- "${NEXT_LINK}" "${CURRENT}"
-SWAPPED=1
+if [[ "${OLD_TARGET}" != "${TARGET}" ]]; then
+  NEXT_LINK="${SITE_ROOT}/.current.${EXPECTED_SHA}.$$"
+  ln -s -- "${TARGET}" "${NEXT_LINK}"
+  mv -Tf -- "${NEXT_LINK}" "${CURRENT}"
+  SWAPPED=1
+fi
 
 LIVE_SHA="$(curl --max-time 10 -fsS --resolve "${SITE_HOST}:443:127.0.0.1" "https://${SITE_HOST}/DEPLOYED_SHA")"
 if [[ "${LIVE_SHA}" != "${EXPECTED_SHA}" ]]; then
