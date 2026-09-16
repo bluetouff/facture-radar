@@ -1,0 +1,3136 @@
+{
+  "checkedAt": "2026-09-16",
+  "since": "2026-09-01",
+  "method": "Deux recherches nominatives par PA (sécurité et sources de disponibilité). Les URL de résultat sont des pistes, pas des incidents confirmés. Les sources retenues sont relues séparément.",
+  "platforms": [
+    {
+      "platformSlug": "a-cube",
+      "security": {
+        "query": "Communiqué officiel ou avis de sécurité A-Cube acubeapi a-cube.io incident fuite de données cyberattaque data breach ransomware septembre 2026, entre le 1 et le 16 septembre 2026",
+        "resultUrls": [
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://www.acubeapi.com/fr/blog/a-cube-officially-accredited-in-france-by-dgfip-our-api-infrastructure-is-ready-for-french-e-invoicing",
+          "https://www.acubeapi.com/fr/produits/api-peppol",
+          "https://www.cyberattaque.org/snexi-confirme-une-fuite-de-donnees-apres-une-cyberattaque/",
+          "https://www.politiquematin.fr/anssi-lecornu-impose-reactiv-contrer-cyberattaques"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de A-Cube (A-Cube, https://www.acubeapi.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://docs.acubeapi.com/documentation/support/",
+          "https://www.acubeapi.com/fr/environnement-de-test",
+          "https://dashboard.acubeapi.com/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "abby",
+      "security": {
+        "query": "Abby abby.fr déclaration incident de sécurité fuite de données cyberattaque septembre 2026 notification aux clients",
+        "resultUrls": [
+          "https://abby.fr/securite",
+          "https://aide.abby.fr/fr/articles/9853360-comment-sont-securisees-mes-donnees-sur-abby",
+          "https://abby.fr/legals/mentions",
+          "https://www.donneespersonnelles.fr/notification-cyberattaque",
+          "https://abby.fr/logiciel-comptabilite"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Abby (ABBY, https://abby.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://community.abby.fr/t/maintenance-repetee-abby-23h-2h/1854",
+          "https://idees.abby.fr/fr",
+          "https://community.abby.fr/t/impossible-de-creer-mes-clients-en-avance-immediate/1704"
+        ]
+      }
+    },
+    {
+      "platformSlug": "accenture",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Accenture eComply & Verify (ACCENTURE, https://www.accenture.com/fr-fr), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-ECV-Data-Processing-and-Security-Policy-07-24.pdf",
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://www.01net.com/actualites/facturation-electronique-et-cybersecurite-letat-cherche-a-rassurer-les-francais-avant-la-reforme.html",
+          "https://www.accenture.com/us-en/support/legal/client-data-safeguards",
+          "https://www.crn.com/news/security/2026/accenture-confirms-security-incident-after-hacker-claims-data-haul"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Accenture eComply & Verify (ACCENTURE, https://www.accenture.com/fr-fr) en septembre 2026.",
+        "resultUrls": [
+          "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-ECV-Service-Levels-and-Support-Policy-07-24.pdf",
+          "https://www.accenture.com/en/products/ecomply-verify",
+          "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-55SLA-SaaS-SLA-All-Country-En-01-26.pdf"
+        ]
+      }
+    },
+    {
+      "platformSlug": "ademico",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Ademico Software (ADEMICO SOFTWARE, https://ademico-software.com/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://ademico-software.com/iso-27001/",
+          "https://www.linkedin.com/posts/ademico-software_we-are-proud-to-announce-that-ademico-software-activity-7418317922043064320-iFrR",
+          "https://ademico-software.com/",
+          "https://ademico-software.com/peppol/peppol-service-provider/",
+          "https://ademico-software.com/peppol/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Ademico Software (ADEMICO SOFTWARE, https://ademico-software.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://status.ademico-software.com/",
+          "https://ademico-software.com/",
+          "https://ademico-software.com/peppol/france-e-invoicing/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "agena3000",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by AGENA3000 (AGENA 3000, https://www.agena3000.com/fr/nos-solutions/a3-e-facture), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.agena3000.com/en/confidentiality-privacy-policy",
+          "https://www.agena3000.com/fr/nos-solutions/a3-e-invoicing",
+          "https://www.agena3000.com/fr/lp-a3-e-invoicing",
+          "https://www.agena3000.com/en/our-solutions/a3-e-invoicing",
+          "https://www.agena3000.com/en"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de AGENA3000 (AGENA 3000, https://www.agena3000.com/fr/nos-solutions/a3-e-facture) en septembre 2026.",
+        "resultUrls": [
+          "https://www.agena3000.com/fr/nos-solutions/a3-e-invoicing",
+          "https://www.agena3000.com/fr/info-covid-19",
+          "https://www.agena3000.com/fr/garanties-hds-hebergement-de-donnees-de-sante"
+        ]
+      }
+    },
+    {
+      "platformSlug": "agicap",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Agicap (AGICAP, https://agicap.com/fr/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://agicap.com/fr/securite/",
+          "https://agicap.com/en/privacy-policy/",
+          "https://agicap.com/en/security/",
+          "https://agicap.com/en-us/privacy-policy/",
+          "https://www.impots.gouv.fr/sites/default/files/media/2_actu/2026-08_acces_illegitime_donnees/faq_acces_illegitime_donnes_fiscales_professionnels.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Agicap (AGICAP, https://agicap.com/fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://trust.agicap.com/",
+          "https://agicap.com/fr/securite/",
+          "https://agicap.com/en/security/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "arratech",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Arratech Connect (Arratech, https://www.arratech.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://docs.arratech.com/technical-brief",
+          "https://docs.arratech.com/capability-brief",
+          "https://www.arratech.com/compliance-and-trust-hub",
+          "https://www.arratech.com/",
+          "https://www.arratech.com/privacypolicy"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Arratech Connect (Arratech, https://www.arratech.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://docs.arratech.com/technical-brief",
+          "https://www.arratech.com/compliance-and-trust-hub",
+          "https://docs.arratech.com/capability-brief"
+        ]
+      }
+    },
+    {
+      "platformSlug": "arteva",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Artéva Orchestrade (ARTEVA, https://www.arteva.fr/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://www.arteva.fr/en/blog/electronic-invoices/obtaining-afnor-iso-cei-270012022-arteva-certification/",
+          "https://www.arteva.fr/en/orchestrade/",
+          "https://www.arteva.fr/en/electronic-invoicing-obligations/platforms-dematerialization-invoices/partner-dematerialization-platform-pdp/",
+          "https://www.arteva.fr/blog/actualites/arteva-officiellement-immatriculee-plateforme-agreee/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Artéva Orchestrade (ARTEVA, https://www.arteva.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.arteva.fr/orchestrade/",
+          "https://www.arteva.fr/centre-d-aide-et-support-arteva/",
+          "https://www.arteva.fr/orchestrade/edi/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "aruba",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Aruba OneSuite (Aruba S.p.A., https://www.arubaonesuite.fr/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.arubaonesuite.fr/",
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://therecord.media/phishing-campaign-targets-italian-web-hosting-customers",
+          "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE16415",
+          "https://www.ia-cyber-securite.fr/facturation-electronique-2026-plateforme-agreee-securisee-fraudes/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Aruba OneSuite (Aruba S.p.A., https://www.arubaonesuite.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://guide.aruba.it/fr/alertes",
+          "https://www.arubaonesuite.fr/",
+          "https://outagedown.com/fr/web/aruba.it"
+        ]
+      }
+    },
+    {
+      "platformSlug": "avalara",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Avalara (AVALARA, https://www.avalara.com/eu/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.oag.ca.gov/system/files/PRIVILEGED%20AND%20CONFIDENTIAL%20-%20Sample%20General%20Data%20Subject%20Notice%20_0.pdf",
+          "https://www.board-cybersecurity.com/incidents/tracker/avalara-cybersecurity-incident-a02dc487",
+          "https://avalara.pactsafe.io/versions/689283309df64fd7af4ad97c.pdf",
+          "https://www.upguard.com/security-report/avalara",
+          "https://www.avalara.com/blog/en/north-america/2025/09/security-update-regarding-salesloft-drift.html"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Avalara (AVALARA, https://www.avalara.com/eu/fr) en septembre 2026.",
+        "resultUrls": [
+          "https://status.avalara.com/",
+          "https://status.avalara.com/history",
+          "https://status.avalara.com/uptime"
+        ]
+      }
+    },
+    {
+      "platformSlug": "axelor",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Axelor (AXELOR, https://axelor.com/fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://axelor.com/data-security-and-processing-policy/",
+          "https://github.com/axelor/axelor-open-platform/security",
+          "https://notcve.org/cve/CVE-2026-63085",
+          "https://axelor.com/axelor-iso-27001-certified/",
+          "https://dbugs.ptsecurity.com/vulnerability/PT-2026-60506"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Axelor (AXELOR, https://axelor.com/fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://axelor.com/data-security-and-processing-policy/",
+          "https://axelor.com/fr/politique-de-securisation-et-de-traitement-des-donnees/",
+          "https://github.com/axelor/axelor-open-suite/releases"
+        ]
+      }
+    },
+    {
+      "platformSlug": "axonaut",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Axonaut (AXONAUT, https://axonaut.com/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.cyberattaque.org/axonaut-8-bases-clients-revendiquees-plusieurs-milliers-de-factures-exposees/",
+          "https://frenchbreaches.com/alertes/axonaut-mqygp4ygl2o4wc6v2i",
+          "https://fr.linkedin.com/posts/pascal-109a0187_cyberalerte-factures-documents-activity-7477351030238879744-Cpd9",
+          "https://fr.linkedin.com/posts/cyberattaque-org_plusieurs-milliers-de-factures-de-clients-activity-7477572291896418305-gne4",
+          "https://axonaut.com/content/presse"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Axonaut (AXONAUT, https://axonaut.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.statut-services.fr/service/axonaut",
+          "https://www.saashub.com/axonaut-status",
+          "https://www.totalbug.com/axonaut/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "axway",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Axway eInvoicing (AXWAY SOFTWARE, https://www.axway.com/fr), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://www.axway.com/fr/produits/b2b-integration/einvoice",
+          "https://trust.axway.com/",
+          "https://www.axway.com/en/gdpr",
+          "https://guidefacturation.com/logiciels/axway-software/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Axway eInvoicing (AXWAY SOFTWARE, https://www.axway.com/fr) en septembre 2026.",
+        "resultUrls": [
+          "https://status.axway.com/history",
+          "https://status.axway.com/",
+          "https://status.axway.com/uptime"
+        ]
+      }
+    },
+    {
+      "platformSlug": "azopio",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Azopio (AZOPIO, https://www.azopio.com/fr/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.azopio.com/en/confidentiality-policy/",
+          "https://blog.azopio.com/en/rgpd-pre-accounting-how-azopio-ensures-financial-data-compliance/",
+          "https://blog.azopio.com/rgpd-pre-comptabilite-comment-azopio-garantit-la-conformite-des-donnees-financieres/",
+          "https://www.azopio.com/fr/security-policy/",
+          "https://www.azopio.com/en/security-policy/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Azopio (AZOPIO, https://www.azopio.com/fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.azopio.com/fr/cgu-service-fr/",
+          "https://www.azopio.com/fr/security-policy/",
+          "https://www.azopio.com/fr/charte-de-confidentialite/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "b2brouter",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by B2BRouter (B2BRouter, https://www.b2brouter.net/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.b2brouter.net/fr/politique-securite-information/",
+          "https://www.b2brouter.net/global/whistleblowing/",
+          "https://www.b2brouter.net/fr/dispositif-de-signalement-whistleblowing/",
+          "https://www.b2brouter.net/global/privacy-policy/",
+          "https://www.b2brouter.net/wp-content/uploads/legal/B2Brouter-ISO-27001-certificate-en.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de B2BRouter (B2BRouter, https://www.b2brouter.net/fr) en septembre 2026.",
+        "resultUrls": [
+          "https://www.b2brouter.net/fr/conditions-generales-du-service/",
+          "https://docs.b2brouter.net/fr/user-guide/integration/configuring-api/",
+          "https://www.b2brouter.net/fr/politique-securite-information/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "b4value",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning b4value.net (B4VALUE.NET, https://www.b4value.net/en/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://guidefacturation.com/logiciels/b4value-net/",
+          "https://www.b4value.net/en/index.html",
+          "https://comparer-pa.fr/plateformes/b4value-net",
+          "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE16415"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de b4value.net (B4VALUE.NET, https://www.b4value.net/en/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.b4value.net/en/",
+          "https://www.b4value.net/en/index.html",
+          "https://www.b4value.net/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "basware",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Basware (BASWARE, https://www.basware.com/fr), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.basware.com/en/why-basware/trust/",
+          "https://www.basware.com/hubfs/Legal/personal-data-processing-notice-on-basware-services.pdf",
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://www2.basware.com/hubfs/Legal/personal-data-processing-notice-on-basware-services.pdf",
+          "https://www.selexium.com/actualites/facturation-electronique-factures-a-labri-pirates/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Basware (BASWARE, https://www.basware.com/fr) en septembre 2026.",
+        "resultUrls": [
+          "https://basware.service-now.com/bw?id=bw_kb_article&sysparm_article=BWKB0016100",
+          "https://www.basware.com/fr/nous-contacter",
+          "https://www.basware.com/en/why-basware/trust/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "atgp",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning BEE.FACT (ATGP, https://www.atgp.net/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.atgp.net/info-incidents/",
+          "https://www.atgp.net/nos-solutions/facture-electronique/",
+          "https://www.atgp.net/",
+          "https://cnil.fr/fr/facturation-electronique-quels-enjeux",
+          "https://www.atgp.net/entreprise/nos-qualifications/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de BEE.FACT (ATGP, https://www.atgp.net/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.atgp.net/info-incidents/",
+          "https://www.atgp.net/",
+          "https://www.atgp.net/nos-solutions/facture-electronique/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "billit",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Billit (BILLIT, https://www.billit.eu/fr-be/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.billit.eu/fr-lu/qui-sommes-nous/conformite-et-confiance/",
+          "https://www.billit.eu/fr-be/conseils-astuces/protegez-votre-compte-en-deux-clics-authentification-multifacteur-amf-le-choix-malin/",
+          "https://www.billit.eu/fr-be/resources/blog/pour-une-protection-optimale-de-vos-donnees-d-entreprise/",
+          "https://www.billit.eu/en-int/about-us/compliance-trust/",
+          "https://my.billit.eu/Account/TermsAndConditions?Language=FR"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Billit (BILLIT, https://www.billit.eu/fr-be/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.billit.eu/fr-be/qui-sommes-nous/conformite-et-confiance/",
+          "https://www.billit.eu/en-int/about-us/compliance-trust/sla/",
+          "https://www.billit.eu/fr-lu/informations-juridiques/conditions-d-utilisation/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "blg",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning blgCloud (BLG, https://www.blgcloud.fr/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/notification-d-incident-de-securite-et-mesures-de-protection-blgcloud-545",
+          "https://www.blgcloud.com/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545",
+          "https://www.blgcloud.com/press-release-blg/communique-de-presse-18/notification-d-incident-de-securite-et-mesures-de-protection-blgcloud-545",
+          "https://fr.linkedin.com/posts/blgcloud_nous-vous-informons-que-certaines-instances-activity-7492495679936860160-oMIp",
+          "https://www.zataz.com/deux-pirates-revendiquent-le-piratage-de-pro-du-cloud/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de blgCloud (BLG, https://www.blgcloud.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://status.blgcloud.com/",
+          "https://status.blgcloud.com/history",
+          "https://status.blgcloud.com/uptime"
+        ]
+      }
+    },
+    {
+      "platformSlug": "cbs",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning cbs e-world.cloud (CBS Corporate Business Solutions, https://www.cbs-consulting.com/en/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://e-world.cloud/",
+          "https://www.cbs-consulting.com/en/expertise/e-invoice-world-cloud/",
+          "https://www.cbs-consulting.com/en/update/cbs-e-world-cloud-new-name-for-the-all-in-one-compliance-platform/",
+          "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE16415",
+          "https://e-world.cloud/ewc-landing-page/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de cbs e-world.cloud (CBS Corporate Business Solutions, https://www.cbs-consulting.com/en/) en septembre 2026.",
+        "resultUrls": [
+          "https://e-world.cloud/",
+          "https://www.cbs-consulting.com/en/expertise/e-invoice-world-cloud/",
+          "https://www.cbs-consulting.com/en/expertise/business-solution-management/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "cecurity",
+      "security": {
+        "query": "Official security incident disclosure, customer data breach or cyberattack notification concerning Cecurity eFacture (CECURITY, https://www.cecurity.com/), September 1–16, 2026. French electronic invoicing provider.",
+        "resultUrls": [
+          "https://www.cecurity.com/conformite-facture-electronique/",
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://www.01net.com/actualites/facturation-electronique-et-cybersecurite-letat-cherche-a-rassurer-les-francais-avant-la-reforme.html",
+          "https://www.impots.gouv.fr/sites/default/files/media/2_actu/2026-08_acces_illegitime_donnees/faq_acces_illegitime_donnes_fiscales_professionnels.pdf",
+          "https://www.selexium.com/actualites/facturation-electronique-factures-a-labri-pirates/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Cecurity eFacture (CECURITY, https://www.cecurity.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.cecurity.com/politique_support_maintenance/",
+          "https://www.cecurity.com/conformite-facture-electronique/",
+          "https://www.cecurity.com/conforme-avec-cecurity/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "cegedim",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Cegedim SY business (CEGEDIM, https://www.cegedim.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.cegedim.com/Communique/Cegedim_PressRelease260226_ENG.pdf",
+          "https://www.cegedim.fr/Communique/Cegedim_Communique26022026.pdf",
+          "https://www.cegedim-sante.com/le-blog/precisions-complementaires-cp-mlm/",
+          "https://presse83.fr/wp-content/uploads/2026/02/Cegedim_Communique26022026.pdf",
+          "http://www.marketscreener.com/news/cegedim-2026-february-27-release-statement-regarding-the-report-broadcast-during-france-2-tv-s-8-ce7e5cdede80f024"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Cegedim SY business (CEGEDIM, https://www.cegedim.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.cegedim.com/Communique/CegedimBusinessServices_%20ReformeFactureElectronique_09092026.pdf",
+          "https://www.cegedim.fr/Communique/Cegedim_Communique26022026.pdf",
+          "https://www.cegedim.fr/groupe/qualite/Pages/qualite.aspx"
+        ]
+      }
+    },
+    {
+      "platformSlug": "cegi-alfa",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Cegi Alfa (CEGI ALFA, https://www.cegi.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.cegi.fr/nos-solutions/services/hebergement/",
+          "https://www.cegi.fr/facture-electronique-groupe-cegi-obtient-limmatriculation-de-sa-plateforme-agreee/",
+          "https://www.cegi.fr/",
+          "https://www.cegi.fr/le-groupe/qui-somme-nous/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/cegi-alfa/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Cegi Alfa (CEGI ALFA, https://www.cegi.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://extranet.cegialfa.fr/",
+          "https://www.cegi.fr/nos-solutions/services/hebergement/",
+          "https://www.cegi.fr/nos-solutions/services/service-client/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "cegid",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Cegid (CEGID, https://www.cegid.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.cyberbreaches.org/en/incidents/cegid",
+          "https://fuitesinfos.fr/article/2026-02-24-cegid",
+          "https://www.cegid.com/global/privacy-policy/",
+          "https://www.cegid.com/ao/politica-de-privacidade/",
+          "https://www.cegid.com/fr/cgv/?slugFileName=pas_cegid_saas"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Cegid (CEGID, https://www.cegid.com/fr) en septembre 2026.",
+        "resultUrls": [
+          "https://www.cegid.com/fr/cgv/?slugFileName=pas_cegid_saas",
+          "https://www.statut-services.fr/service/cegid",
+          "https://www.cegid.com/fr/cgv/?slugFileName=fr_livret-de-services_cegid-hr-suite-saas"
+        ]
+      }
+    },
+    {
+      "platformSlug": "chaintrust",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Chaintrust (CHAINTRUST by Visma, https://www.chaintrust.io/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.visma.com/trust-centre-products/chaintrust-app",
+          "https://www.chaintrust.io/",
+          "https://www.chaintrust.io/blog/actualites/chaintrust-devient-la-plateforme-agreee-du-groupe-visma/",
+          "https://www.chaintrust.io/blog/la-tech-dans-la-compta/evoliz-choisit-chaintrust-pour-sa-solution-compatible-plateforme-agreee-incluse/",
+          "https://www.chaintrust.io/blog/actualites/chaintrust-rejoint-le-groupe-visma/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Chaintrust (CHAINTRUST by Visma, https://www.chaintrust.io/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.visma.com/trust-centre-products/chaintrust-app",
+          "https://www.chaintrust.io/plateforme-agreee-chaintrust/",
+          "https://www.chaintrust.io/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "cleartax",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by ClearTax (CLEARTAX, https://www.cleartax.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.cleartax.com/global/trust-center",
+          "https://www.upguard.com/security-report/cleartax",
+          "https://cleartax.in/s/trust",
+          "https://cleartax.in/s/terms-for-business-vendors",
+          "https://www.cleartax.com/global/scale-security"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de ClearTax (CLEARTAX, https://www.cleartax.com/fr) en septembre 2026.",
+        "resultUrls": [
+          "https://www.cleartax.com/fr",
+          "https://www.cleartax.com/global/trust-center",
+          "https://www.entireweb.com/fr/status/cleartax"
+        ]
+      }
+    },
+    {
+      "platformSlug": "comarch",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Comarch (COMARCH SA, https://www.comarch.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.comarch.com/responsible-disclosure/",
+          "https://www.comarch.pl/o-firmie/centrum-prasowe/aktualnosci/korporacja/ostrzezenie-przed-phishingiem/",
+          "https://cert.pl/en/posts/2026/05/CVE-2025-68420/",
+          "https://www.upguard.com/security-report/comarch",
+          "https://db.gcve.eu/search?vendor=Comarch"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Comarch (COMARCH SA, https://www.comarch.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://pomoc.comarch.pl/erp-status/",
+          "https://awariadzisiaj.pl/comarch/",
+          "https://www.comarch.pl/o-firmie/centrum-prasowe/aktualnosci/korporacja/ostrzezenie-przed-phishingiem/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "cyclope",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Cyclope (CYCLOPE, https://cyclope.digital/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://cyclope.digital/",
+          "https://github.com/advisories/GHSA-f73p-x799-9gh3",
+          "https://securitykb.stormshield.eu/us/b4fe4cc6af7e3e32.html",
+          "https://cyclop.lu/wp-content/uploads/2025/02/Privacy-policy_Cyclop.2025.pdf",
+          "https://www.mckesson.com/utility/cybersecurity/notice-of-data-breach/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Cyclope (CYCLOPE, https://cyclope.digital/) en septembre 2026.",
+        "resultUrls": [
+          "https://cyclope.digital/",
+          "https://openbase.fr/entreprise/cyclope-982147936",
+          "https://linkedin.com/company/cyclope-cool"
+        ]
+      }
+    },
+    {
+      "platformSlug": "icd",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by DEMATRUST Light (ICD International, https://icdint.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.icdint.fr/en/dematrust-light",
+          "https://www.icdint.fr/dematrust-light",
+          "https://www.icdint.fr/en/dematrust",
+          "https://fr.linkedin.com/posts/icd-international-icdsc_facturation-%C3%A9lectronique-qui-prot%C3%A8ge-vos-activity-7502606627385016321-7uBI",
+          "https://www.icdint.fr/dematrust"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de DEMATRUST Light (ICD International, https://icdint.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.icdint.fr/dematrust-light",
+          "https://www.icdint.fr/dematrust",
+          "https://www.icdint.fr/en/dematrust-light"
+        ]
+      }
+    },
+    {
+      "platformSlug": "dext",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Dext (DEXT, https://dext.com/fr/produits/logiciel-facturation), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://dext.com/fr/securite",
+          "https://help.dext.com/fr/articles/757592-dext-paiements-securite-et-conformite",
+          "https://dext.com/en/information-security",
+          "https://dext.com/fr/terms-and-conditions",
+          "https://dext.com/fr/cabinet/produits/logiciel-facturation"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Dext (DEXT, https://dext.com/fr/produits/logiciel-facturation) en septembre 2026.",
+        "resultUrls": [
+          "https://dext.com/fr/securite",
+          "https://dext.com/fr/terms-and-conditions",
+          "https://dext.com/fr"
+        ]
+      }
+    },
+    {
+      "platformSlug": "digipharmacie",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by DigiPA (DIGIPHARMACIE, https://digipharmacie.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://digipharmacie.fr/digipa-la-facturation-electronique-en-officine-en-clair",
+          "https://equasens.com/wp-content/uploads/2026/01/Digipharmacie-CP_260114.pdf",
+          "https://digipharmacie.fr/",
+          "https://digipharmacie.fr/confidentialite",
+          "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/digipharmacie/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de DigiPA (DIGIPHARMACIE, https://digipharmacie.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://digipharmacie.fr/cgu-pharmavie",
+          "https://digipharmacie.fr/",
+          "https://digipharmacie.fr/digipa-la-facturation-electronique-en-officine-en-clair"
+        ]
+      }
+    },
+    {
+      "platformSlug": "tessi",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Digital Invoice by Tessi (TESSI Technologies, https://www.tessi.eu/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.tessi.eu/fr/digital-invoice-by-tessi/",
+          "https://www.impots.gouv.fr/sites/default/files/media/2_actu/2026-08_acces_illegitime_donnees/faq_acces_illegitime_donnes_fiscales_professionnels.pdf",
+          "https://www.tessi.eu/fr/facture-electronique-la-direction-generale-des-finances-publiques-dgfip-confirme-limmatriculation-definitive-de-la-plateforme-agreee-digital-invoice-by-tessi/",
+          "https://www.tessi.eu/fr/tessi-franchit-une-nouvelle-etape-dans-la-facturation-electronique-en-obtenant-le-statut-de-plateforme-de-dematerialisation-partenaire-pdp/",
+          "https://www.tessi.eu/en/personal-data-use-policy/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Digital Invoice by Tessi (TESSI Technologies, https://www.tessi.eu/fr) en septembre 2026.",
+        "resultUrls": [
+          "https://www.tessi.eu/fr/digital-invoice-by-tessi/",
+          "https://www.tessi.eu/fr/facture-electronique-la-direction-generale-des-finances-publiques-dgfip-confirme-limmatriculation-definitive-de-la-plateforme-agreee-digital-invoice-by-tessi/",
+          "https://guidefacturation.com/logiciels/tessi/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "digital-technologies",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Digital Technologies (DIGITAL TECHNOLOGIES, https://digtechs.com/?lang=fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.digtechs.com/fr/modele-organisationnel/",
+          "https://www.digtechs.com/fr/a-propos-de-dt/",
+          "https://digtechs.com/piattaforma-global-einvoicing/?lang=fr",
+          "https://www.digtechs.com/fr/services-numeriques/",
+          "https://digtechs.com/work-with-us/?lang=en"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Digital Technologies (DIGITAL TECHNOLOGIES, https://digtechs.com/?lang=fr) en septembre 2026.",
+        "resultUrls": [
+          "https://www.digtechs.com/fr/",
+          "https://www.digtechs.com/fr/category/actualites/",
+          "https://www.digtechs.com/fr/order-to-cash/echange-de-donnees-informatise/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "docnova",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Docnova (Docnova, MELASOFT GmbH, https://www.melasoft.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://docnova.ai/privacy-policy-docnova/",
+          "https://docnova.ai/de/datenschutzbestimmungen-docnova/",
+          "https://www.melasoft.com/gdpr",
+          "https://www.melasoft.com/docnova-ai",
+          "https://www.melasoft.com/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Docnova (Docnova, MELASOFT GmbH, https://www.melasoft.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://docnova.ai/fr/",
+          "https://www.melasoft.com/",
+          "https://www.melasoft.com/docnova-ai"
+        ]
+      }
+    },
+    {
+      "platformSlug": "docoon",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Docoon Invoice (DOCOON, https://docoon.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://docoon.com/en/qualite-de-service/",
+          "https://docoon.com/en/cgu-docoon-invoice/",
+          "https://docoon.com/en/cgu/",
+          "https://docoon.com/en/dematerialisation-toutes-les-actualites/",
+          "https://docoon.com/blog/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Docoon Invoice (DOCOON, https://docoon.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://docoonmessaging.statuspage.io/",
+          "https://docoonmessaging.statuspage.io/uptime",
+          "https://docoon.com/qualite-de-service/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "docprocess",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by DocProcess (DOCPROCESS, https://doc-process.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://doc-process.com/fr/privacy-notice/",
+          "https://doc-process.com/fr/solutions-security/",
+          "https://doc-process.com/privacy-notice/",
+          "https://doc-process.com/solutions-security/",
+          "https://doc-process.com/fr/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de DocProcess (DOCPROCESS, https://doc-process.com/fr) en septembre 2026.",
+        "resultUrls": [
+          "https://doc-process.com/fr/solutions-security/",
+          "https://doc-process.com/fr/bea-platform/",
+          "https://doc-process.com/solutions-security/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "docuware",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by DocuWare (DOCUWARE, https://start.docuware.com/fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.upguard.com/security-report/docuware",
+          "https://support.docuware.com/en-us/knowledgebase/article/KBA-38007",
+          "https://learn.microsoft.com/en-us/microsoft-365-app-certification/teams/docuware-gmbh",
+          "https://support.docuware.com/en-US/forums/Support-Announcements/22ac617e-bb5c-ec11-a3ee-0003ff5995b2",
+          "https://start.docuware.com/security"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de DocuWare (DOCUWARE, https://start.docuware.com/fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://statusportal.docuware.cloud/",
+          "https://knowledgecenter.docuware.com/docs/fr/docuware-cloud-status-page-web-client",
+          "https://support.docuware.com/fr-fr/knowledgebase/article/KBA-36324"
+        ]
+      }
+    },
+    {
+      "platformSlug": "dokapi",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Dokapi (DOKAPI, https://www.dokapi.io/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.dokapi.io/security",
+          "https://www.dokapi.io/articles/iso-27001-and-peppol",
+          "https://www.dokapi.io/",
+          "https://www.dokapi.io/privacy",
+          "https://www.dokapi.io/terms-and-conditions"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Dokapi (DOKAPI, https://www.dokapi.io/) en septembre 2026.",
+        "resultUrls": [
+          "https://dokapi.statuspage.io/",
+          "https://www.dokapi.io/security",
+          "https://www.dokapi.io/fr-be/terms-and-conditions"
+        ]
+      }
+    },
+    {
+      "platformSlug": "dougs",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Dougs (Dougs Facturation gratuite, https://www.dougs.fr/logiciel-facturation-gratuit/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.dougs.fr/logiciel-facturation-gratuit/",
+          "https://www.impots.gouv.fr/sites/default/files/media/2_actu/2026-08_acces_illegitime_donnees/faq_acces_illegitime_donnes_fiscales_professionnels.pdf",
+          "https://www.dougs.fr/blog/plateforme-agreee/",
+          "https://logicielcomptable.net/dougs-plateforme-agreee-tarifs-et-statut-dgfip/",
+          "https://www.dougs.fr/cgu/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Dougs (Dougs Facturation gratuite, https://www.dougs.fr/logiciel-facturation-gratuit/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.statut-services.fr/service/dougs",
+          "https://www.dougs.fr/logiciel-facturation-gratuit/",
+          "https://www.dougs.fr/cgu/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "doxallia",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Doxallia Invox-IA (DOXALLIA, https://www.doxallia.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.doxallia.com/3-certifications-renouvelees-iso-27001-hds-nf-544-2/",
+          "https://www.doxallia.com/actualites/",
+          "https://invox-ia.doxallia.com/",
+          "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/doxallia/",
+          "https://www.doxallia.com/doxallia-obtient-limmatriculation-definitive-de-sa-plateforme-agreee-invox-ia-par-la-dgfip/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Doxallia Invox-IA (DOXALLIA, https://www.doxallia.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://invox-ia.doxallia.com/",
+          "https://www.doxallia.com/actualites/",
+          "https://www.doxallia.com/plateforme-de-facturation-electronique-pdp/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "bc-solutions",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by eas'Invoice (BC SOLUTIONS, https://bcsolutions.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://bcsolutions.fr/en/certification-iso-27001/",
+          "https://bcsolutions.fr/en/easinvoice/",
+          "https://bcsolutions.fr/easinvoice/",
+          "https://bcsolutions.fr/en/reforme-de-la-facturation-electronique/",
+          "https://bcsolutions.fr/reforme-facturation-electronique-2026/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de eas'Invoice (BC SOLUTIONS, https://bcsolutions.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://bcsolutions.fr/en/easinvoice/",
+          "https://bcsolutions.fr/easinvoice/",
+          "https://bcsolutions.fr/easeflow/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "ecosio-intercom",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by ecosio InterCom (ecosio InterCom, a Vertex Company, https://ecosio.com/fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/ecosio-intercom-a-vertex-company/",
+          "https://explore.openli.com/privacy/ecosio",
+          "https://guidefacturation.com/logiciels/ecosio-intercom/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/ecosio/",
+          "https://www.comparateur-facturation-electronique.fr/produit/ecosio/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de ecosio InterCom (ecosio InterCom, a Vertex Company, https://ecosio.com/fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.ecosio-status.com/",
+          "https://hello.ecosio.com/changelog",
+          "https://ecosio.com/en/products/monitor/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "edicom",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by EDICOM (EDICOM France, https://edicomgroup.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://edicomgroup.fr/edicom-global-platform",
+          "https://edicomgroup.fr/edi-international",
+          "https://edicomgroup.fr/edi-integration",
+          "https://edicomgroup.fr/edicom-managed-services",
+          "https://www.upguard.com/security-report/edicom"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de EDICOM (EDICOM France, https://edicomgroup.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://edicomgroup.fr/edicom-global-platform",
+          "https://edicomgroup.fr/edicom-managed-services",
+          "https://edicomgroup.fr/compliance-internationale"
+        ]
+      }
+    },
+    {
+      "platformSlug": "edicom-group",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by EDICOM Group (EDICOM Group, https://edicomgroup.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.upguard.com/security-report/edicom",
+          "https://edicomgroup.com/",
+          "https://edicomgroup.com/blog/category/trust-services",
+          "https://edicomgroup.com/blog",
+          "https://edicomgroup.com/electronic-invoicing"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de EDICOM Group (EDICOM Group, https://edicomgroup.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://edicomgroup.com/fr/edicom-global-platform",
+          "https://edicomgroup.com/edicom-managed-services",
+          "https://edicomgroup.fr/edicom-managed-services"
+        ]
+      }
+    },
+    {
+      "platformSlug": "edics",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by EDiCSpro (EDICS France, https://edics.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://edics.fr/wp-content/uploads/2025/10/ISO-IEC_27001-FRE-C743753-0-20251006.pdf",
+          "https://edics.fr/notre-plateforme/",
+          "https://edics.fr/certifications/",
+          "https://edics.fr/",
+          "https://edics.fr/edicspro-pdp/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de EDiCSpro (EDICS France, https://edics.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://edics.fr/actualites/",
+          "https://edics.fr/edicspro-pdp/",
+          "https://edics.fr/notre-plateforme/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "edieyes",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by EdiEyes Vision Care (EdiEyes Vision Care, https://www.edieyes.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.edieyes.fr/renouvellement-certifications-iso27001-et-hds2/",
+          "https://www.edieyes.fr/en/news/",
+          "https://fr.linkedin.com/posts/edieyes-vision-care_edieyes-hds-cybers%C3%A9curit%C3%A9-activity-7487816633655263232-artv",
+          "https://www.edieyes.fr/category/securite/",
+          "https://fr.linkedin.com/posts/edieyes-vision-care_s%C3%A9curit%C3%A9desdonn%C3%A9es-protectiondesdonn%C3%A9es-activity-7470059641717141504-hhBa"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de EdiEyes Vision Care (EdiEyes Vision Care, https://www.edieyes.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.edieyes.fr/actualites/",
+          "https://www.edieyes.fr/renouvellement-certifications-iso27001-et-hds2/",
+          "https://www.edieyes.fr/hebergement/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "edt",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by EDT EIMA (EDT, https://www.group-edt.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.group-edt.fr/nos-solutions/e-invoice-eima/",
+          "https://www.group-edt.fr/",
+          "https://www.group-edt.fr/facture-electronique/",
+          "https://www.group-edt.fr/offre-essential/",
+          "https://guidefacturation.com/logiciels/edt/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de EDT EIMA (EDT, https://www.group-edt.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.group-edt.fr/nos-solutions/e-invoice-eima/",
+          "https://www.group-edt.fr/facture-electronique/",
+          "https://guidefacturation.com/logiciels/edt/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "eezi",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by eezi (EEZI powered by VAT IT, https://eezi.io/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://eezi.io/legal/terms/",
+          "https://eezi.io/legal/privacy/",
+          "https://vatit.com/wp-content/uploads/2026/05/6.-260513-Terms-and-Conditions-e-Invoicing-Specific.pdf",
+          "https://vatit.com/eezi/",
+          "https://eezi.io/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de eezi (EEZI powered by VAT IT, https://eezi.io/) en septembre 2026.",
+        "resultUrls": [
+          "https://eezi.instatus.com/",
+          "https://eezi.instatus.com/public-api",
+          "https://eezi.io/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "effinum",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Effinum (Effinum by SPEE, https://www.effinum.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://effinum.fr/",
+          "https://effinum.fr/mentions-legales/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/effinum-by-spee/",
+          "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/effinum/",
+          "https://effinum.com/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Effinum (Effinum by SPEE, https://www.effinum.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://effinum.fr/",
+          "https://effinum.com/",
+          "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/effinum/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "enerj",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by ENERJ (ENERJ, https://www.enerj.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.enerj.fr/",
+          "https://www.enerj.fr/entreprise",
+          "https://www.enerj.fr/llms.txt",
+          "https://www.enerj.fr/ressources",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/enerj/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de ENERJ (ENERJ, https://www.enerj.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.enerj.fr/llms.txt",
+          "https://www.enerj.fr/",
+          "https://www.enerj.fr/entreprise"
+        ]
+      }
+    },
+    {
+      "platformSlug": "esalink",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by EsaLink Hubtimize (ESALINK, https://www.esalink.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.esalink.com/blog/hubtimize-einvoicing-pa/",
+          "https://www.esalink.com/index/",
+          "https://www.esalink.com/blog/hubtimize-einvoicing-pdp/",
+          "https://www.esalink.com/blog/hubtimize-einvoicing-api-afnor/",
+          "https://www.esalink.com/blog/reforme2026-erp/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de EsaLink Hubtimize (ESALINK, https://www.esalink.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.esalink.com/index/",
+          "https://www.esalink.com/blog/pourquoi-confier-votre-tma-edi-a-un-partenaire-comme-esalink/",
+          "https://www.esalink.com/solutions/hubtimize/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "esi",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by ESI (ESI, https://www.esi-groupe.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.upguard.com/security-report/esi-group",
+          "https://www.esi-groupe.com/normes",
+          "https://fntc-numerique.com/membre/esi-groupe/",
+          "https://www.esi-telecom.be/wp-content/uploads/2026/06/politique-de-confidentialite-esi.pdf",
+          "https://frenchbreaches.com/alertes/snexi-mtndjyfm1p926jbh30z"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de ESI (ESI, https://www.esi-groupe.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.esi-groupe.com/",
+          "https://www.esi-groupe.com/normes",
+          "https://status.esi-bru.be/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "esker",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Esker (ESKER, https://www.esker.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "http://www.esker.com/blog/esker-news-and-culture/salesloft-and-drift-oauth-incident-affecting-salesforce-data-what/",
+          "https://www.esker.com/sso-certificates-renewal-k/",
+          "https://www.upguard.com/blog/salesloft-drift-breach",
+          "https://flowwa.io/blog/dgfip-et-cybersecurite-comment-esker-securise-sa-plateforme-agreee/",
+          "https://www.rankiteo.com/company/esker"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Esker (ESKER, https://www.esker.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.trustesker.com/?env=F",
+          "https://www.esker.com/fr/accompagnement-client/support/",
+          "https://www.trustesker.com/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "facnote",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Facnote PDP (FACNOTE PDP, https://www.facnote.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://groupefacnote.com/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/facnote-pdp/",
+          "https://guidefacturation.com/logiciels/facnote-pdp/",
+          "https://www.linkedin.com/posts/facnote_activity-7493305463565107200-uEuc",
+          "https://fr.linkedin.com/posts/facnote_activity-7499073111078912000-GRck"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Facnote PDP (FACNOTE PDP, https://www.facnote.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://groupefacnote.com/pdp/",
+          "https://groupefacnote.com/",
+          "https://erp-csmart.com/csmart-pdp/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "fiducial-cloud",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by FIDUCIAL Cloud Facilia (FIDUCIAL CLOUD, https://www.fiducial.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.fiducial.fr/facilia",
+          "https://www.fiducial.fr/facturation-electronique/actualites-conseils/pourquoi-utiliser-plateforme-agreee-PA-FIDUCIAL-facturation-electronique",
+          "https://phishing.fiducialcloud.fr/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/fiducial-cloud/",
+          "https://www.infos-pa.com/plateformes/facilia"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de FIDUCIAL Cloud Facilia (FIDUCIAL CLOUD, https://www.fiducial.fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.fiducial.fr/facilia",
+          "https://www.fiducial.fr/facturation-electronique/actualites-conseils/pourquoi-utiliser-plateforme-agreee-PA-FIDUCIAL-facturation-electronique",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/fiducial-cloud/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "fiskaltrust",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by fiskaltrust (FISKALTRUST, https://fiskaltrust.eu/fr-fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://fiskaltrust.eu/en-fr/privacy-policy/",
+          "https://docs.fiskaltrust.cloud/changelog/docs/einvoicing-documentation",
+          "https://docs.fiskaltrust.cloud/changelog/middleware/1.3.82",
+          "https://docs.fiskaltrust.cloud/changelog/middleware/1.3.81",
+          "https://fiskaltrust.eu/fr-be/privacy-policy/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de fiskaltrust (FISKALTRUST, https://fiskaltrust.eu/fr-fr/) en septembre 2026.",
+        "resultUrls": [
+          "https://status.fiskaltrust.eu/",
+          "https://status.fiskaltrust.eu/incidents",
+          "https://fiskaltrust.eu/fr-fr/partner/product/notifications/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "flowie",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Flowie (FLOWIE, https://www.get-flowie.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://get-flowie.com/trust",
+          "https://get-flowie.com/security",
+          "https://get-flowie.com/",
+          "https://get-flowie.com/solutions/enterprise",
+          "https://get-flowie.com/legal/privacy"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Flowie (FLOWIE, https://www.get-flowie.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://flowie.betteruptime.com/",
+          "https://get-flowie.com/sla",
+          "https://get-flowie.com/security"
+        ]
+      }
+    },
+    {
+      "platformSlug": "fonoa",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Fonoa (Fonoa Technologies Limited, https://www.fonoa.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.fonoa.com/resources/security",
+          "https://apis.io/security/fonoa/fonoa-trust-center/",
+          "https://www.fonoa.com/legal/amendment-no1-to-the-standard-contract-marketplaces",
+          "https://www.fonoa.com/resources/news",
+          "https://www.fonoa.com/legal/privacy-notice"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Fonoa (Fonoa Technologies Limited, https://www.fonoa.com/) en septembre 2026.",
+        "resultUrls": [
+          "https://www.entireweb.com/status/fonoa",
+          "https://www.entireweb.com/fr-ca/status/fonoa",
+          "https://www.entireweb.com/fr/status/fonoa/map"
+        ]
+      }
+    },
+    {
+      "platformSlug": "freedz",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Freedz (DOCOON IMMO / FREEDZ, https://docoon.immo/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://freedz.io/en/politique-de-confidentialite/",
+          "https://freedz.io/en/mentions-legales/",
+          "https://freedz.io/mentions-legales/",
+          "https://freedz.io/en/freedz-definitivement-immatriculee-pa-par-la-dgfip/",
+          "https://docoon.immo/solutions/plateforme-de-dematerialisation-partenaire/"
+        ]
+      },
+      "availability": {
+        "query": "Page officielle de suivi des incidents, disponibilité des services, historique des interruptions et alertes de sécurité de Freedz (DOCOON IMMO / FREEDZ, https://docoon.immo/) en septembre 2026.",
+        "resultUrls": [
+          "https://freedz.io/",
+          "https://freedz.io/plateforme-dematerialisation-partenaire/",
+          "https://docoon.immo/solutions/plateforme-numerique/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "fulll",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by fulll (FULLL, https://www.fulll.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.fulll.fr/securite",
+          "https://www.fulll.fr/",
+          "https://auth.deloitte.direct/fulll-privacy-policy-en.pdf",
+          "https://www.fulll.fr/blllog/fulll-certifiee-iso-27001",
+          "https://www.fulll.fr/?gad_campaignid=20513734966"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for fulll (FULLL, https://www.fulll.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.fulll.fr/securite",
+          "https://www.fulll.fr/",
+          "https://www.fulll.fr/accompagnement"
+        ]
+      }
+    },
+    {
+      "platformSlug": "generix",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Generix (GENERIX Group, https://www.generixgroup.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.generixgroup.com/fr/annexe-client-dcp",
+          "https://www.upguard.com/security-report/generix-group",
+          "https://www.generixgroup.com/en/press-release/generix-renews-iso-27001-certification",
+          "https://www.generixgroup.com/en/privacy-policy",
+          "https://www.generixgroup.com/fr/communiques-de-presse/generix-renouvelle-sa-certification-iso-27001"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Generix (GENERIX Group, https://www.generixgroup.com/fr), September 2026.",
+        "resultUrls": [
+          "https://www.generixgroup.com/wp-content/uploads/2025/10/Services-Levels-SLA-and-Associated-Services-KEY.pdf",
+          "https://www.generixgroup.com/fr",
+          "https://www.generixgroup.com/fr/communiques-de-presse/generix-renouvelle-sa-certification-iso-27001"
+        ]
+      }
+    },
+    {
+      "platformSlug": "gep",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by GEP E-Invoice Automation (GEP, https://www.gep.com/software/e-invoicing), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.upguard.com/security-report/gep-com",
+          "https://www.rankiteo.com/company/gep-worldwide",
+          "https://www.gep.com/software/e-invoicing",
+          "https://security-profiles.nudgesecurity.com/app/gep-com",
+          "https://www.gep.com/software/e-invoicing/e-invoice-network"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for GEP E-Invoice Automation (GEP, https://www.gep.com/software/e-invoicing), September 2026.",
+        "resultUrls": [
+          "https://statusgator.com/services/gep",
+          "https://isdown.app/status/gep",
+          "https://www.gep.com/software/e-invoicing"
+        ]
+      }
+    },
+    {
+      "platformSlug": "gestav",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Gestav (GESTAV, https://gestav.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://gestav.com/confidentialite",
+          "https://gestav.com/cgv",
+          "https://gestav.com/conditions-categorielles-taxis",
+          "https://gestav.com/faq",
+          "https://gestav.com/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Gestav (GESTAV, https://gestav.com/), September 2026.",
+        "resultUrls": [
+          "https://gestav.com/",
+          "https://gestav.com/faq",
+          "https://gestav.com/conditions-categorielles-taxis"
+        ]
+      }
+    },
+    {
+      "platformSlug": "gurusoft",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by GuruSoft eDoc (GURUSOFT, https://guru-soft.com/fr/france/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://guru-soft.com/fr/france/",
+          "https://guru-soft.com/fr/france/support/",
+          "https://guru-soft.com/fr/france/nous/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/gurusoft/",
+          "https://guru-soft.com/en/france/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for GuruSoft eDoc (GURUSOFT, https://guru-soft.com/fr/france/), September 2026.",
+        "resultUrls": [
+          "https://guru-soft.com/en/france/",
+          "https://guru-soft.com/fr/france/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/gurusoft/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "euro-information",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by HBS e-factures (EURO INFORMATION, https://www.e-i.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://www.epithete.com/fr/plateformeagreee-euro-information.html",
+          "https://www.epithete.com/fr/professionnels-et-entreprises/hbs-e-factures.html",
+          "https://www.compta-online.com/hbs-efactures-solution-facture-electronique-ao7348",
+          "https://www.epithete.com/fr/experts-comptables/hbs-e-factures.html"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for HBS e-factures (EURO INFORMATION, https://www.e-i.com/fr), September 2026.",
+        "resultUrls": [
+          "https://www.epithete.com/fr/plateformeagreee-euro-information.html",
+          "https://www.e-i.com/fr/index.html",
+          "https://www.epithete.com/fr/professionnels-et-entreprises/hbs-e-factures.html"
+        ]
+      }
+    },
+    {
+      "platformSlug": "iaf",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by IAF (IAF, https://www.assistances.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "http://www.assistances.fr/",
+          "https://www.iaf.fr/",
+          "https://www.assistances.fr/developpement.html",
+          "https://agences.io/agence/iaf-informatique-assistances-fr/",
+          "https://www.assistances.fr/contact.html?category=telecom"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for IAF (IAF, https://www.assistances.fr/), September 2026.",
+        "resultUrls": [
+          "http://www.assistances.fr/",
+          "https://www.iaf.fr/",
+          "https://www.iaf.fr/cybersecurite.html"
+        ]
+      }
+    },
+    {
+      "platformSlug": "iedi",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by iEDI (iEDI ApS, https://www.iedi.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://iedi.com/job-opening-information-security-regulatory-compliance-manager",
+          "https://www.iedi.com/hubfs/iEDi%20ApS%20ISO%2027001%202022%20FINAS%20ENG%202025.pdf?hsLang=en",
+          "https://iedi.com/en/resources",
+          "https://iedi.com/peppol",
+          "https://www.linkedin.com/posts/iedi%2Ecom_hiring-activity-7492909841523556352-BCpy"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for iEDI (iEDI ApS, https://www.iedi.com/), September 2026.",
+        "resultUrls": [
+          "https://iedi.com/",
+          "https://iedi.com/en/fully-managed-edi",
+          "https://iedi.com/en/pdf2edi"
+        ]
+      }
+    },
+    {
+      "platformSlug": "iga-assurance",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by IGA Assurance (IGA ASSURANCE, https://www.iga-assurance.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://insurtechlist.com/companies/iga/",
+          "https://insurtechlist.com/companies/iga-assurance/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/iga-assurance/",
+          "https://linkedin.com/company/iga",
+          "https://undercodenews.com/french-mutual-insurance-federation-hit-by-alleged-server-compromise-and-website-defacement-video/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for IGA Assurance (IGA ASSURANCE, https://www.iga-assurance.fr/), September 2026.",
+        "resultUrls": [
+          "https://linkedin.com/company/iga",
+          "https://insurtechlist.com/companies/iga-assurance/",
+          "https://insurtechlist.com/companies/iga/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "indicom",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Indicom (INDICOM, https://www.indicom.eu/en/idc-home), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://indicom.eu/en/information-security-policy-2/",
+          "https://indicom.eu/en/certifications-and-recognitions/",
+          "https://indicom.eu/en/privacy-policy/",
+          "https://indicom.eu/en/who-we-are/",
+          "https://indicom.eu/en/informative-privacy-2/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Indicom (INDICOM, https://www.indicom.eu/en/idc-home), September 2026.",
+        "resultUrls": [
+          "https://indicom.eu/en/information-security-policy-2/",
+          "https://indicom.eu/en/indicom-services/",
+          "https://indicom.eu/en/certifications-and-recognitions/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "indy",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Indy (INDY, https://www.indy.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://wikicompta.indy.fr/fr/articles/14077841-que-faire-en-cas-de-fraude-sur-mon-compte-pro",
+          "https://www.indy.fr/securite/",
+          "https://jobs.indy.fr/jobs/7660482-head-of-security-h-f",
+          "https://www.indy.fr/mentions-legales/",
+          "https://www.indy.fr/compte-pro/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Indy (INDY, https://www.indy.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.indy.fr/securite/",
+          "https://www.indy.fr/",
+          "https://www.indy.fr/presse/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "intesa",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Intesa (In.Te.S.A. spa, https://www.intesa.it/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://imi.intesasanpaolo.com/en/notices/",
+          "https://www.ilfattoquotidiano.it/2026/09/15/spionaggio-bancario-intesa-sanpaolo-3572-conti-notizie/8506901/",
+          "https://www.trmtv.it/cronaca/2026_09_15/571579.html/amp",
+          "https://www.reuters.com/sustainability/boards-policy-regulation/italy-data-protection-agency-fines-intesa-sanpaolo-36-mln-over-data-breach-2026-03-30/",
+          "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10235001"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Intesa (In.Te.S.A. spa, https://www.intesa.it/), September 2026.",
+        "resultUrls": [
+          "https://losclouds.com/incidents/intesasanpaolo/20260907-4e0211d2",
+          "https://tinkitaly.statuspage.io/",
+          "https://www.intesa.it/media/comunicati-stampa/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "paragon",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Invoice Paragon Platform (PARAGON, https://www.paragon.world/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "https://www.breachsense.com/breaches/paragon-data-breach/",
+          "https://www.paragon.world/fr/solutions/plateforme-agreee-ipp",
+          "https://www.paragon.world/fr/solutions/order-to-cash",
+          "http://global.paragon.world/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Invoice Paragon Platform (PARAGON, https://www.paragon.world/fr), September 2026.",
+        "resultUrls": [
+          "https://status.useparagon.com/",
+          "https://www.paragon.world/fr/solutions/plateforme-agreee-ipp",
+          "https://uptime.qodex.ai/paragon/incidents"
+        ]
+      }
+    },
+    {
+      "platformSlug": "invopop",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Invopop (INVOPOP, https://www.invopop.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.invopop.com/legal-documents",
+          "https://www.invopop.com/changelog",
+          "https://docs.invopop.com/changelog/overview",
+          "https://github.com/invopop/popapp/commit/708adfdadf76f5d2a917b945b6a7f8a3aa2ef994",
+          "https://www.linkedin.com/posts/invopop_tomorrow-september-1st-e-invoicing-and-activity-7500120127535996928-qdga"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Invopop (INVOPOP, https://www.invopop.com/), September 2026.",
+        "resultUrls": [
+          "https://status.invopop.com/",
+          "https://www.invopop.com/changelog",
+          "https://community.invopop.com/c/applications/error-403-smart-receipt"
+        ]
+      }
+    },
+    {
+      "platformSlug": "iopole",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Iopole (IOPOLE, https://www.iopole.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://release.iopole.com/",
+          "https://www.iopole.com/en",
+          "https://www.iopole.com/",
+          "https://www.iopole.com/en/developpeurs",
+          "https://linkedin.com/company/iopole"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Iopole (IOPOLE, https://www.iopole.com/), September 2026.",
+        "resultUrls": [
+          "https://uptime.com/statuspage/iopole.com-api-sla",
+          "https://release.iopole.com/",
+          "https://www.iopole.com/en/developpeurs"
+        ]
+      }
+    },
+    {
+      "platformSlug": "ipaidthat",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by iPaidThat (iPaidThat, https://ipaidthat.io/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://app.ipaidthat.io/fr/securite/",
+          "https://help.ipaidthat.io/fr/articles/5170201-la-securite-ipaidthat",
+          "https://app.ipaidthat.io/fr/facturation-electronique-pdp/",
+          "https://app.ipaidthat.io/mag/e-facture/immatriculation-definitive-plateforme-agreee-ipaidthat-valide-par-la-dgfip/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/ipt-technologie-ipaidthat/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for iPaidThat (iPaidThat, https://ipaidthat.io/fr), September 2026.",
+        "resultUrls": [
+          "https://app.ipaidthat.io/fr/conditions-generales-dutilisation-cgu/",
+          "https://help.ipaidthat.io/fr/articles/5170201-la-securite-ipaidthat",
+          "https://app.ipaidthat.io/fr/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "itesoft",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by ITESOFT (ITESOFT, https://www.itesoft.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.itesoft.com/hubfs/2021-ITESOFT-CMS-THEME/9.4%20-%20Presse/Communiques%20de%20presse/FR_2023_CP_ITESOFT_Certifie_ISO_27001_LI.pdf",
+          "https://itsocial.fr/cybersecurite/cybersecurite-actualites/itesoft-generalise-la-certification-iso-270012022-a-tous-ses-services-saas-avec-lappui-de-fidens/",
+          "https://www.riskassur-hebdo.com/actu01/actu_auto.php?adr=701261051",
+          "https://www.itesoft.com/fr/blog/certification-iso-27001-service-saas-securite/",
+          "https://www.itesoft.com/en-gb/your-profession/information-systems-and-business-process-automation-solutions/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for ITESOFT (ITESOFT, https://www.itesoft.com/fr), September 2026.",
+        "resultUrls": [
+          "https://www.itesoft.com/fr/vous-etes/direction-systemes-information-solutions-automatisation",
+          "https://www.itesoft.com/fr/",
+          "https://www.itesoft.com/your-profession/information-systems-and-business-process-automation-solutions/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "jefacture",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by jefacture.com (jefacture.com, https://www.ecma-solutions.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://ecma-solutions.com/produits-expert-comptable/jefacture",
+          "https://ecma-solutions.com/produits-entreprise/jefacture",
+          "https://support.jefacture.com/fr/articles/676754-nouveautes-avril-2026-espace-entreprise",
+          "https://ecma-solutions.com/actualites/facture-electronique-immatriculation-pdp-jefacture-ecma",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/jefacturecom-ecma/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for jefacture.com (jefacture.com, https://www.ecma-solutions.com/), September 2026.",
+        "resultUrls": [
+          "https://support.jefacture.com/fr/articles/676754-nouveautes-avril-2026-espace-entreprise",
+          "https://ecma-solutions.com/produits-entreprise/jefacture",
+          "https://ecma-solutions.com/produits-expert-comptable/jefacture"
+        ]
+      }
+    },
+    {
+      "platformSlug": "klekoon",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Klekoon (KLEKOON, https://www.klekoon.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.rankiteo.com/company/klekoon",
+          "https://www.klekoon.com/politique-de-confidentialite",
+          "https://www.klekoon.com/qui-sommes-nous",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/klekoon/",
+          "https://linkedin.com/company/klekoon"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Klekoon (KLEKOON, https://www.klekoon.com/), September 2026.",
+        "resultUrls": [
+          "https://www.rankiteo.com/company/klekoon",
+          "https://www.klekoon.com/rechercher-une-annonce-ou-un-dce-dematerialise-sur-klekoon",
+          "https://www.comparateur-facturation-electronique.fr/produit/klekoon/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "kolecto",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Kolecto (KOLECTO PA, https://www.kolecto.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.kolecto.fr/legal/politique-de-protection-des-donnees-personnelles",
+          "https://www.kolecto.fr/",
+          "https://lescdf.fr/articles-et-doc/exercice/facturation-electronique-kolecto/",
+          "https://www.kolecto.fr/legal/cgu",
+          "https://openbase.fr/entreprise/kolecto-pa-993109024"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Kolecto (KOLECTO PA, https://www.kolecto.fr/), September 2026.",
+        "resultUrls": [
+          "https://support.kolecto.fr/fr/",
+          "https://support.kolecto.fr/fr/articles/503058-plateforme-agreee-de-kolecto",
+          "https://www.kolecto.fr/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "kolecto-pdp",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Kolecto PDP (KOLECTO PDP, https://www.kolecto.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.kolecto.fr/legal/politique-de-protection-des-donnees-personnelles",
+          "https://support.kolecto.fr/fr/articles/503058-plateforme-agreee-de-kolecto",
+          "https://lescdf.fr/articles-et-doc/exercice/facturation-electronique-kolecto/",
+          "https://www.kolecto.fr/legal/cgu",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/kolecto-pdp/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Kolecto PDP (KOLECTO PDP, https://www.kolecto.fr/), September 2026.",
+        "resultUrls": [
+          "https://support.kolecto.fr/fr/",
+          "https://support.kolecto.fr/fr/articles/503058-plateforme-agreee-de-kolecto",
+          "https://www.kolecto.fr/legal/cgu"
+        ]
+      }
+    },
+    {
+      "platformSlug": "village-connecte",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Le Village Connecté (LE VILLAGE CONNECTE, https://village-connecte.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://village-connecte.fr/politique-de-protection-des-donnees-personnelles/",
+          "https://village-connecte.fr/ressources/plateforme-agree/",
+          "https://fr.linkedin.com/posts/le-village-connecte_s%C3%A9curit%C3%A9-et-souverainet%C3%A9-lvc-activity-7392100939697909761-rgvd",
+          "https://village-connecte.fr/le-village-connecte/",
+          "https://village-connecte.fr/nos-ressources/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Le Village Connecté (LE VILLAGE CONNECTE, https://village-connecte.fr/), September 2026.",
+        "resultUrls": [
+          "https://village-connecte.fr/journal-de-bord-pa/",
+          "https://village-connecte.fr/politique-de-protection-des-donnees-personnelles/",
+          "https://village-connecte.fr/ressources/plateforme-agree/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "legalinvoice",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by LegalInvoice (Legalinvoice by Tinexta Infocert, https://www.infocert.it/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://infocert.digital/legalinvoice/",
+          "https://help.infocert.it/Home/LeggiNews/aggiornamento-sicurezza-legalmail?lang=it",
+          "https://www.infocert.it/pdf/fatturazione/allegato-tecnico-legalinvoice-start.pdf",
+          "https://infocert.digital/press-releases/",
+          "https://infocert.digital/consumer/legalinvoice-pro-electronic-invoicing/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for LegalInvoice (Legalinvoice by Tinexta Infocert, https://www.infocert.it/), September 2026.",
+        "resultUrls": [
+          "https://help.infocert.it/Home/LeggiNews/comunicazione-di-servizio-invio-multiplo-di-notifiche-scadenza-spid?lang=it",
+          "https://www.infocert.it/documentazione",
+          "https://statusgator.com/services/infocert"
+        ]
+      }
+    },
+    {
+      "platformSlug": "logilec",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by LOGILEC (LOGILEC, https://www.logilec.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.logilec.leclerc/mentions-legales/",
+          "https://linkedin.com/company/logilec",
+          "https://www.logilec.leclerc/logistique/",
+          "https://openbase.fr/entreprise/logilec-423793785",
+          "https://infonet.fr/entreprises/42379378500035-logilec/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for LOGILEC (LOGILEC, https://www.logilec.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.logilec.leclerc/",
+          "https://www.logilec.leclerc/mentions-legales/",
+          "https://linkedin.com/company/logilec"
+        ]
+      }
+    },
+    {
+      "platformSlug": "lucca",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Lucca Factures (LUCCA, https://www.lucca.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://gcr.fr/include/pdf/21/Lucca_Securite_des_donnees_informatiques.pdf",
+          "https://support.luccasoftware.com/s/article/renseigner-le-contact-des-responsables-s%C3%A9curit%C3%A9-et-rgpd-de-mon-entreprise",
+          "https://support.luccasoftware.com/s/article/Identifier-les-communications-officielles-de-Lucca",
+          "https://www.lucca.fr/rgpd/",
+          "https://status.lucca.fr/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Lucca Factures (LUCCA, https://www.lucca.fr/), September 2026.",
+        "resultUrls": [
+          "https://status.lucca.fr/",
+          "https://support.luccasoftware.com/s/article/Identifier-les-communications-officielles-de-Lucca",
+          "https://support.luccasoftware.com/s/article/news-feed-for-information-on-lucca-products?language=en_US"
+        ]
+      }
+    },
+    {
+      "platformSlug": "lundi-matin",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Lundi Matin (LUNDI MATIN, https://www.lundimatin.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.lundimatin.fr/communiques-de-presse",
+          "https://www.lundimatin.fr/conditions-particulieres-de-services-lundi-matin",
+          "https://www.lundimatin.fr/conditions-generales-de-vente-et-de-services-lundi-matin",
+          "https://www.lundimatin.fr/",
+          "https://www.lundimatin.co.uk/security"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Lundi Matin (LUNDI MATIN, https://www.lundimatin.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.lundimatin.fr/conditions-particulieres-de-services-lundi-matin",
+          "https://www.lundimatin.fr/",
+          "https://www.lundimatin.co.uk/security"
+        ]
+      }
+    },
+    {
+      "platformSlug": "macompta",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by macompta.fr (MACOMPTA.FR, https://www.macompta.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://help.macompta.fr/fr/articles/124846-comment-est-assuree-la-securite-de-mes-donnees",
+          "https://investisseurs.macompta.fr/en/press-releases/",
+          "https://blog.macompta.fr/a-la-une/macompta-fr-certifie-iso-27001-votre-gestion-en-toute-confiance/",
+          "https://blog.macompta.fr/wp-content/uploads/2026/01/CP-Norme-ISO27001-1.pdf",
+          "https://www.macompta.fr/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for macompta.fr (MACOMPTA.FR, https://www.macompta.fr/), September 2026.",
+        "resultUrls": [
+          "https://investisseurs.macompta.fr/en/press-releases/",
+          "https://blog.macompta.fr/a-la-une/macompta-fr-certifie-iso-27001-votre-gestion-en-toute-confiance/",
+          "https://www.macompta.fr/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "marosa",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Marosa VATify (MAROSA, https://marosavat.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://marosavat.com/company/about-marosa",
+          "https://marosavat.com/vat-news/marosa-wolters-kluwer-acquisition",
+          "https://marosavat.com/",
+          "https://260-marosa.webflow.io/privacy-policy",
+          "https://marosavat.com/product/vatify"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Marosa VATify (MAROSA, https://marosavat.com/), September 2026.",
+        "resultUrls": [
+          "https://marosavat.com/vat-news",
+          "https://marosavat.com/",
+          "https://marosavat.com/vat-news/vatify-product-update-april-2026"
+        ]
+      }
+    },
+    {
+      "platformSlug": "medius",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Medius (MEDIUS, https://www.medius.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.medius.com/media/2cecj4qy/medius-data-processing-addendum-17-august-2026.pdf",
+          "https://www.medius.com/media/55je133s/medius-data-processing-addendum-19-january-2026.pdf",
+          "https://www.medius.com/media/uipfi23f/annexe-accord-de-traitement-des-donn%C3%A9es-medius-19-janvier-2026.pdf",
+          "https://www.medius.com/legal/privacy/",
+          "https://www.upguard.com/security-report/medius"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Medius (MEDIUS, https://www.medius.com/fr), September 2026.",
+        "resultUrls": [
+          "https://www.medius.com/trust-center/",
+          "https://statusgator.com/services/medius",
+          "https://isdown.app/status/medius"
+        ]
+      }
+    },
+    {
+      "platformSlug": "my-fiteco",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by MyFiteco (MY FITECO, https://myfiteco.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://myfiteco.com/",
+          "https://myfiteco.fiteco.com/",
+          "https://www.comparateur-facturation-electronique.fr/produit/my-fiteco/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/my-fiteco/",
+          "https://myfiteco.fiteco.com/wp-content/themes/myfiteco/doc/Plaquette_MY_FITECO.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for MyFiteco (MY FITECO, https://myfiteco.com/), September 2026.",
+        "resultUrls": [
+          "https://myfiteco.com/",
+          "https://myfiteco.fiteco.com/",
+          "https://www.fiteco.com/facturation-electronique/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "mykinexo",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by MyKinexo PDP (MyKinexo PDP, https://www.kinexo.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.kinexo.fr/my-cgu/",
+          "https://www.kinexo.fr/actualites/",
+          "https://www.kinexo.fr/facture-electronique-mykinexo-rejoint-la-liste-officielle-des-pdp-immatriculees/",
+          "https://guidefacturation.com/logiciels/mykinexo-pdp/",
+          "https://www.kinexo.fr/CGU_Mykinexo.html"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for MyKinexo PDP (MyKinexo PDP, https://www.kinexo.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.kinexo.fr/my-cgu/",
+          "https://www.kinexo.fr/actualites/",
+          "https://www.kinexo.fr/mykinexo/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "mysupply",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by MySupply (MySupply Aps, https://mysupply.dk/en), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://mysupply.dk/en/privacy-policy/",
+          "https://mysupply.dk/privatlivspolitik/",
+          "https://mysupply.dk/en/about-mysupply/news-center/",
+          "https://www.linkedin.com/posts/mysupply-aps_one-month-to-go-since-the-announcement-activity-7500515370567376896-B3KU",
+          "https://www.linkedin.com/posts/mysupply-aps_france-is-live-is-your-pa-as-well-france-activity-7501542155778256896-DyZL"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for MySupply (MySupply Aps, https://mysupply.dk/en), September 2026.",
+        "resultUrls": [
+          "https://mysupply.dk/support/driftstatus/",
+          "https://mysupply.dk/no/service-level-agreement-sla/",
+          "https://mysupply.dk/en/support/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "myunisoft",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by MyUnisoft (MY UNISOFT, https://myunisoft.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://myu.fr/politique-confidentialite/",
+          "https://fr.linkedin.com/posts/myunisoft_chez-myunisoft-on-aime-les-d%C3%A9fis-et-celui-ci-activity-7404829399549624320-1U_6",
+          "https://myu.fr/tpe-pme/ressources/articles/facture-electronique-plateforme-agreee-pdp-myunisoft/",
+          "https://fr.linkedin.com/posts/myunisoft_factureelectronique-reformefacturation-activity-7500442467964456960-My21",
+          "https://www.eurotribune.fr/articles/57488/france-congres-des-experts-comptables-myunisoft-accelere-sa-strategie-ia-et-devoile-deux-innovations"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for MyUnisoft (MY UNISOFT, https://myunisoft.fr/), September 2026.",
+        "resultUrls": [
+          "https://meteo.myunisoft.fr/",
+          "https://maintenance.myunisoft.fr/",
+          "https://www.statut-services.fr/service/myunisoft"
+        ]
+      }
+    },
+    {
+      "platformSlug": "n2f",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by N2F (N2F PDP, https://www.n2f.com/fr/note-de-frais/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.n2f.com/de/tos/",
+          "https://www.n2f.com/fr/note-de-frais/",
+          "https://www.n2f.com/blog/n2f-est-desormais-certifie-plateforme-agreee-pdp/",
+          "https://www.n2f.com/en/privacy/",
+          "https://sandbox.n2f.com/blog/application-gestion-notes-de-frais-securite-donnees/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for N2F (N2F PDP, https://www.n2f.com/fr/note-de-frais/), September 2026.",
+        "resultUrls": [
+          "https://status.n2f.com/fr",
+          "https://status.n2f.com/en/incidents",
+          "https://status.n2f.com/en"
+        ]
+      }
+    },
+    {
+      "platformSlug": "neotimo",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Neotimo (NEOTIMO, https://neotimo.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://neotimo.com/legal/notices",
+          "https://neotimo.com/legal/privacypolicy",
+          "https://neotimo.com/",
+          "https://neotimo.com/certificates",
+          "https://neotimo.com/neo-actu"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Neotimo (NEOTIMO, https://neotimo.com/), September 2026.",
+        "resultUrls": [
+          "https://neotimo.com/legal/notices",
+          "https://www.neotimo.fr/",
+          "https://neotimo.com/neo-actu"
+        ]
+      }
+    },
+    {
+      "platformSlug": "ntt-data",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by NTT DATA e-Invoicing (NTT DATA Business Solutions, https://fr.nttdata.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://ago.vermont.gov/document/2026-02-12-ntt-data-data-breach-notice-consumers",
+          "https://www.board-cybersecurity.com/incidents/tracker/ntt-data-americas-cybersecurity-incident-4e232b32",
+          "https://www.upguard.com/security-report/nttdata-solutions",
+          "https://nttdata-solutions.com/id-en/about-us/compliance/",
+          "https://www.nttdata.com/global/en/about-us/sustainability/security"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for NTT DATA e-Invoicing (NTT DATA Business Solutions, https://fr.nttdata.com/), September 2026.",
+        "resultUrls": [
+          "https://www.nttdata.com/global/en/news",
+          "https://www.nttdata.com/global/en/contact-us",
+          "https://support.ntt.com/en/supportTopInfo/detail/pid2500002gnu/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "odoo",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Odoo (ODOO, https://www.odoo.com/fr_FR), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.odoo.com/fr_FR/security-report",
+          "https://www.odoo.com/security-report",
+          "https://www.cyberattaque.org/accent-rouge-cyberattaque-odoo/",
+          "https://www.odoo.com/security",
+          "https://gbhackers.com/odoo-database-allegedly-exposed/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Odoo (ODOO, https://www.odoo.com/fr_FR), September 2026.",
+        "resultUrls": [
+          "https://status.odoo.com/",
+          "https://www.odoo.com/cloud-sla",
+          "https://www.odoo.com/fr_FR/cloud-sla"
+        ]
+      }
+    },
+    {
+      "platformSlug": "darva",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Ofeli by DARVA (DARVA, https://www.darva.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/darva/",
+          "https://www.darva.com/fr/actualites/immatriculation-definitive-pour-ofeli-plateforme-agreee/",
+          "https://www.darva.com/en/personal-data-protection/",
+          "https://www.darva.com/fr/actualites/peppol-et-facture-electronique-ofeli-darva-raccordee/",
+          "https://www.darva.com/fr/actualites/darva-officiellement-immatriculee-comme-plateforme-de-dematerialisation-partenaire-avec-ofeli/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Ofeli by DARVA (DARVA, https://www.darva.com/), September 2026.",
+        "resultUrls": [
+          "https://www.darva.com/fr/actualites/immatriculation-definitive-pour-ofeli-plateforme-agreee/",
+          "https://www.darva.com/fr/actualites/peppol-et-facture-electronique-ofeli-darva-raccordee/",
+          "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/darva/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "officein",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by OfficeIn (OfficeIn, https://officein.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://officein.fr/",
+          "https://fr.linkedin.com/posts/office%C2%ACin_officein-iso27001-cybers%C3%A9curit%C3%A9-activity-7467470115932889088-U8lp",
+          "https://fr.linkedin.com/posts/office%C2%ACin_officein-iso27001-cybers%C3%A9curit%C3%A9-activity-7487764114296061952-3cY8",
+          "https://officein.fr/mentions-legales",
+          "https://fr.linkedin.com/posts/office%C2%ACin_officein-pharmacie-pharmacien-activity-7495742962597990401-JwOx"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for OfficeIn (OfficeIn, https://officein.fr/), September 2026.",
+        "resultUrls": [
+          "https://officein.fr/",
+          "https://linkedin.com/company/office%C2%ACin",
+          "https://fr.linkedin.com/posts/office%C2%ACin_officein-iso27001-cybers%C3%A9curit%C3%A9-activity-7467470115932889088-U8lp"
+        ]
+      }
+    },
+    {
+      "platformSlug": "pagero",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by ONESOURCE Pagero (PAGERO, https://www.pagero.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.pagero.com/uk/trust-center/information-security",
+          "https://www.pagero.com/it/trust-center/information-security",
+          "https://europe.thomsonreuters.com/es/trust-center",
+          "https://pagero.github.io/privacy-notice/",
+          "https://isdown.app/status/pagero/incidents/616260-pagero-online-degraded-performance"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for ONESOURCE Pagero (PAGERO, https://www.pagero.com/fr), September 2026.",
+        "resultUrls": [
+          "https://status.pagero.com/",
+          "https://status.pagero.com/history",
+          "https://status.pagero.com/uptime"
+        ]
+      }
+    },
+    {
+      "platformSlug": "one-up",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by OneUp (ONE UP, https://smallbusiness.oneup.com/fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://smallbusiness.oneup.com/fr/a-propos",
+          "https://oneupsales.com/legal/dpa",
+          "https://smallbusiness.oneup.com/about",
+          "https://smallbusiness.oneup.com/fr/contactez-nous",
+          "https://www.comparateur-facturation-electronique.fr/produit/oneup/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for OneUp (ONE UP, https://smallbusiness.oneup.com/fr/), September 2026.",
+        "resultUrls": [
+          "https://smallbusiness.oneup.com/fr/contactez-nous",
+          "https://support.oneup.com/hc/en-us/articles/217620377-OneUp-Security",
+          "https://eliteai.tools/tool/oneup.com/uptime-status"
+        ]
+      }
+    },
+    {
+      "platformSlug": "open-bee",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Open Bee (OPEN BEE, https://www.openbee.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.openbee.com/en/use-case/eu-gdpr-compliance/",
+          "https://www.openbee.com/en/article-en/iso-27001-certification-open-bee/",
+          "https://www.openbee.com/en/news/secure-dms/",
+          "https://www.openbee.com/en/news/security-infographic/",
+          "https://www.openbee.com/en/news/make-document-management-security-a-top-priority/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Open Bee (OPEN BEE, https://www.openbee.com/), September 2026.",
+        "resultUrls": [
+          "https://www.saashub.com/open-bee-status",
+          "https://www.openbee.com/en/news/",
+          "https://www.openbee.com/en/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "opentext",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by OpenText (OPENTEXT, https://www.opentext.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.opentext.com/about/opentext-privacy-center",
+          "https://www.opentext.com/ca/media/documentation/information-security-terms-and-conditions-documentation-en.pdf",
+          "https://www.opentext.com/assets/documents/en-US/pdf/opentext-data-processing-addendum-en.pdf",
+          "https://www.opentext.com/assets/documents/en-US/pdf/opentext-technical-and-organizational-measures-en.pdf",
+          "https://www.opentext.com/uk/about/opentext-privacy-center"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for OpenText (OPENTEXT, https://www.opentext.fr/), September 2026.",
+        "resultUrls": [
+          "https://support.opentext.com/csm/en?id=ot_kb_unauthenticated&sysparm_article=KB0544210",
+          "https://www.pulsapi.com/services/opentext",
+          "https://isdown.app/status/opentext"
+        ]
+      }
+    },
+    {
+      "platformSlug": "infologic",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by PA Copilote (INFOLOGIC, https://www.infologic-copilote.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.infologic-copilote.fr/revue-presse/plateforme-edi-copilote/",
+          "https://www.infologic-copilote.fr/infos-erp-copilote/pdp-copilote/",
+          "https://www.infologic-copilote.fr/infos-erp-copilote/infologic-facturation-electronique-2026/",
+          "https://www.infologic-copilote.fr/revue-presse/infologic-obtient-limmatriculation-definitive-pour-sa-pa-copilote/",
+          "https://www.infologic-copilote.fr/solutions-erp/maintien-en-conditions-de-securite-infologic-mcsi/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for PA Copilote (INFOLOGIC, https://www.infologic-copilote.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.infologic-copilote.fr/revue-presse/plateforme-edi-copilote/",
+          "https://www.infologic-copilote.fr/infos-erp-copilote/plateforme-agreee-pa-copilote/",
+          "https://www.infologic-copilote.fr/revue-presse/infologic-obtient-limmatriculation-definitive-pour-sa-pa-copilote/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "payflows",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Payflows Athena (PAYFLOWS, https://payflows.io/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.payflows.io/athena",
+          "https://www.payflows.io/privacy-policy",
+          "https://strike.fyi/c/payflows-io",
+          "https://www.payflows.io/it-security-teams",
+          "https://apis.io/providers/payflows/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Payflows Athena (PAYFLOWS, https://payflows.io/), September 2026.",
+        "resultUrls": [
+          "https://www.payflows.io/athena",
+          "https://payflows.io/athena-pf",
+          "https://www.payflows.io/it-security-teams"
+        ]
+      }
+    },
+    {
+      "platformSlug": "pennylane",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Pennylane (PENNYLANE, https://www.pennylane.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.pennylane.com/fr/securite",
+          "https://assets.ctfassets.net/b76knntgaaiu/7Y97y2SFCTKpwAaX1QhQf/bbee205a184e57b40deb2aabd2716fe8/Pennylane_-_Incident_response_plan.pdf",
+          "https://assets.ctfassets.net/b76knntgaaiu/4OnsHFZJsRKrLXd6BWj1YO/21f9ff9eac2c224ce91846f34e0945df/Pennylane_-_Security_Whitepaper_v2.0.pdf",
+          "https://www.donneespersonnelles.fr/pennylane-rgpd",
+          "https://assets.ctfassets.net/b76knntgaaiu/1xf9YuGD9OH4GUvTHBVO4s/9a766eb1d751bcaea8dfbf5d0db391cb/Pennylane_-_Security_Whitepaper.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Pennylane (PENNYLANE, https://www.pennylane.com/fr), September 2026.",
+        "resultUrls": [
+          "https://community.pennylane.com/discussions/forum-parametre/est-ce-que-status-pennylane-com-fonctionne-/31923",
+          "https://www.pennylane.com/fr/securite",
+          "https://community.pennylane.com/discussions/compte-pennylane-et-parame/erreur-503/3376"
+        ]
+      }
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Pitney Bowes Invoice Services (PITNEY BOWES, https://www.pitneybowes.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.teiss.co.uk/news/pitney-bowes-confirms-cyber-intrusion-as-shinyhunters-claims-breach-of-millions-of-records-17436",
+          "https://www.inspect-data.com/exposure-report/pitney-bowes-data-breach-2026/",
+          "https://lunarcyber.com/breach-catalog/pitneybowes-com/",
+          "https://haveibeenpwned.com/Breach/PitneyBowes",
+          "https://www.pitneybowes.com/fr/blog/pitney-bowes-est-plateforme-agreee.html"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Pitney Bowes Invoice Services (PITNEY BOWES, https://www.pitneybowes.com/fr), September 2026.",
+        "resultUrls": [
+          "https://status.pitneybowes.com/history",
+          "https://status.pitneybowes.com/",
+          "https://status.pitneybowes.com/uptime"
+        ]
+      }
+    },
+    {
+      "platformSlug": "qonto",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Qonto Facturation (QONTO, https://qonto.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://apis.io/security/qonto/qonto-vulnerability-disclosure/",
+          "https://qonto.com/fr/security",
+          "https://docs.qonto.com/security-and-compliance/security-measures",
+          "https://qonto.com/en/security",
+          "https://www.avis-des-pros.com/ressources-b2b/qonto-facturation-electronique-compte-pro-comparatif-2026"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Qonto Facturation (QONTO, https://qonto.com/fr), September 2026.",
+        "resultUrls": [
+          "https://status.qonto.com/",
+          "https://status.qonto.com/view/events?incident_type=MAINTENANCE",
+          "https://status.qonto.com/incidents/June-2026"
+        ]
+      }
+    },
+    {
+      "platformSlug": "qweeby",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Qweeby (QWEEBY, https://www.qweeby.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.qweeby.fr/conditions-generales-de-vente",
+          "https://www.qweeby.fr/l-actualite-qweeby",
+          "https://www.qweeby.fr/actualite-2026",
+          "https://www.qweeby.fr/",
+          "https://www.qweeby.fr/reforme-2026"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Qweeby (QWEEBY, https://www.qweeby.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.qweeby.fr/conditions-generales-de-vente",
+          "https://www.qweeby.fr/l-actualite-qweeby",
+          "https://www.qweeby.fr/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "sage",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Sage (SAGE, https://www.sage.com/fr-fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.sage.com/fr-fr/informations-legales/conditions-generales/accord-traitement-donnees-personnel/",
+          "https://fr-kb.sage.com/portal/app/portlets/results/view2.jsp?k2dockey=220713161417090",
+          "https://www.sage.com/fr-ca/informations-legales/conditions-generales/produits-et-de-services/sage-intacct/programme-de-management-de-la-securite/",
+          "https://www.sage.com/fr-fr/confiance-securite/securite/technique/",
+          "https://www.imago.com.ar/fr/actualidad/40621/alerte-cybersecurite-un-groupe-de-hackers-affirme-avoir-pirate-la-plateforme-editoriale-sage"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Sage (SAGE, https://www.sage.com/fr-fr/), September 2026.",
+        "resultUrls": [
+          "https://status.sage.com/",
+          "https://status.sage.com/history",
+          "https://fr-kb.sage.com/portal/app/portlets/results/viewsolution.jsp?solutionid=250513124317477"
+        ]
+      }
+    },
+    {
+      "platformSlug": "sap",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by SAP (SAP, https://www.sap.com/france/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://support.sap.com/en/my-support/knowledge-base/security-notes-news/september-2026.html",
+          "https://support.sap.com/en/my-support/knowledge-base/security-notes-news/september-2026.html?isu_page=1",
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1134/",
+          "https://cert.europa.eu/publications/security-advisories/2026-011/",
+          "https://www.sap.com/about/trust-center/security/incident-management.html"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for SAP (SAP, https://www.sap.com/france/), September 2026.",
+        "resultUrls": [
+          "https://www.sap.com/about/trust-center/cloud-service-status.html",
+          "https://status.me.sap.com/",
+          "https://support.sap.com/en/my-support/knowledge-base/security-notes-news/september-2026.html"
+        ]
+      }
+    },
+    {
+      "platformSlug": "scribee",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Scribee (SCRIBEE, https://www.scribee.tech/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.scribee.tech/mentions-legales",
+          "https://linkedin.com/company/scribee-tech",
+          "https://fr.linkedin.com/posts/scribee-tech_une-plateforme-utile-cest-aussi-une-plateforme-activity-7493592250925486080-X40j",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/scribee/",
+          "https://fr.linkedin.com/posts/scribee-tech_moins-de-ressaisie-cest-d%C3%A9j%C3%A0-un-gain-de-activity-7491055469747261440-94-H"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Scribee (SCRIBEE, https://www.scribee.tech/), September 2026.",
+        "resultUrls": [
+          "https://www.scribee.tech/mentions-legales",
+          "https://linkedin.com/company/scribee-tech",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/scribee/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "seeburger",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by SEEBURGER E-Invoicing Hub (SEEBURGER, https://www.seeburger.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.upguard.com/security-report/seeburger",
+          "https://www.seeburger.com/resources/brochures/seeburger-e-invoicing-hub",
+          "https://github.com/seeburger-ag/.github/blob/main/SECURITY.md",
+          "https://www.seeburger.com/resources/press-release/2026-06-19-peppol-au-nz",
+          "https://www.seeburger.com/fileadmin/pdf/press-release/20260116-SEEBURGER-PR-PA-France-EN.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for SEEBURGER E-Invoicing Hub (SEEBURGER, https://www.seeburger.com/), September 2026.",
+        "resultUrls": [
+          "https://www.seeburger.com/fileadmin/pdf/brochure/SEEBURGER-Brochure-E-Invoicing-Peppol-Access-Point1-EN.pdf",
+          "https://www.seeburger.com/resources/brochures/seeburger-e-invoicing-hub",
+          "https://help.cloud.seeburger.com/apps/12/sections/D20211111T145439"
+        ]
+      }
+    },
+    {
+      "platformSlug": "sellsy",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Sellsy (TeamSystem Sellsy, https://go.sellsy.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://go.sellsy.com/en/legal-information/general-terms-and-conditions",
+          "https://help.sellsy.com/fr/articles/12927826-acces-confidentialite-et-mesures-organisationnelles",
+          "https://help.sellsy.com/fr/articles/12691085-les-bons-reflexes-a-adopter-en-cas-de-piratage",
+          "https://go.sellsy.com/en/legal-information/data-security",
+          "https://go.sellsy.com/en/legal-information/vulnerability-disclosure-policy"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Sellsy (TeamSystem Sellsy, https://go.sellsy.com/), September 2026.",
+        "resultUrls": [
+          "https://help.sellsy.com/fr/articles/12927828-sauvegarde-continuite-de-service-et-prevention-des-intrusions",
+          "https://go.sellsy.com/informations-legales/securite-des-donnees",
+          "https://go.sellsy.com/informations-legales/politique-de-divulgation-de-vulnerabilite"
+        ]
+      }
+    },
+    {
+      "platformSlug": "septeo",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Septeo Ingeneo (SEPTEO, https://www.septeopdp.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://radar.offseq.com/threat/cve-2026-75135-cleartext-storage-of-sensitive-information-in-memory-in-septeo-it-solutions-upsignon-19250fd05baee22c",
+          "https://www.ingeneo.septeo.com/pa-septeo",
+          "https://www.septeo.com/fr/articles/ingeneo-suite-conforme-facturation-electronique",
+          "https://www.septeo.com/en/products-and-services/chartered-accountant-pdp-electronic-invoicing-software",
+          "https://www.septeo.com/fr/articles/septeo-ingeneo-pdp"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Septeo Ingeneo (SEPTEO, https://www.septeopdp.com/), September 2026.",
+        "resultUrls": [
+          "https://www.ingeneo.septeo.com/plateforme-agreee-facturation-electronique",
+          "https://app.opencve.io/cve/?vendor=septeo_it_solutions",
+          "https://www.ingeneo.septeo.com/pa-septeo"
+        ]
+      }
+    },
+    {
+      "platformSlug": "seqino",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by SEQINO (SEQINO, https://seqino.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://seqino.com/",
+          "https://seqino.com/articles-blog/seqino-est-officiellement-immatriculee-plateforme-agreee/",
+          "https://seqino.com/qui-sommes-nous/",
+          "https://press-center.rivierao.com/en/communiques/seqino-obtient-son-immatriculation-definitive-en-tant-que-plateforme-agreee",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/seqino/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for SEQINO (SEQINO, https://seqino.com/), September 2026.",
+        "resultUrls": [
+          "https://www.francenum.gouv.fr/activateurs/seqino",
+          "https://seqino.com/",
+          "https://seqino.com/articles-blog/seqino-est-officiellement-immatriculee-plateforme-agreee/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "serensia",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Serensia (SERENSIA by Quadient, https://www.serensia.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://lesechos-comfi.lesechos.fr/press-release/quadient-epa-qdt-quadient-and-its-partners-support-more-than-800000-entities-as-frances-first-phase-of-e-invoicing-reform-takes-effect-bvfjCkgCAVB",
+          "https://www.finanzwire.com/article/quadient-epa-qdt-quadient-supports-over-800000-entities-in-frances-e-invoicing-reform-XO4qlxYYoNV",
+          "https://datatech.disruptsmedia.com/enterprise-software/quadient-registers-800k-entities-france-e-invoicing-kicks",
+          "https://www.ideal-investisseur.fr/en/stock-news/electronic-invoicing-quadient-surpasses-800-000-entities-via-serensia/24211.html",
+          "https://www.quadient.com/en-gb/blog/serensia-over-215-million-invoices-annually-by-leader-in-french-e-invoicing-market"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Serensia (SERENSIA by Quadient, https://www.serensia.com/), September 2026.",
+        "resultUrls": [
+          "https://linkedin.com/company/serensia",
+          "https://www.quadient.com/en-ca/news/quadient-and-its-partners-support-more-than-800-000-entities-as-frances-first-phase-of-e-invoicing-reform-takes-effect",
+          "https://www.quadient.com/en-int/news/e-invoicing-the-serensia-by-quadient-platform-receives-final-accreditation-by-the-french-tax-authority"
+        ]
+      }
+    },
+    {
+      "platformSlug": "seres",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Seres e-Facture PA (SERES, https://www.seres.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.docaposte.com/presse/communique-de-presse/seres-immatriculation-plateforme-agreee-pa",
+          "https://seres.fr/fr/2025/12/11/obtention-du-numero-dimmatriculation-definitif-pour-e-facture-pa/",
+          "https://www.infos-pa.com/plateformes/seres",
+          "https://www.mon.expert/plateformes-agreees/seres",
+          "https://seres.fr/fr/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Seres e-Facture PA (SERES, https://www.seres.fr/), September 2026.",
+        "resultUrls": [
+          "https://seres.fr/fr/facture-electronique/",
+          "https://seres.fr/fr/",
+          "https://seres.fr/fr/2025/12/11/obtention-du-numero-dimmatriculation-definitif-pour-e-facture-pa/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "shine",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Shine Facture (Shine, https://www.shine.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.shine.fr/blog/shine-facture-plateforme-agreee/",
+          "https://www.shine.fr/experts-comptables/plateforme-agreee-shine/",
+          "https://www.shine.fr/shine-facture/",
+          "https://www.shine.fr/facturation-electronique/",
+          "https://www.shine.fr/facturation/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Shine Facture (Shine, https://www.shine.fr/), September 2026.",
+        "resultUrls": [
+          "https://help.shine.fr/shine-facture/fr/",
+          "https://help.shine.fr/shine-facture/fr/collections/19702827-suivre-les-nouveautes-de-l-outil",
+          "https://www.shine.fr/blog/shine-facture-plateforme-agreee/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "groupe-sigma",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Sigma Lixa PA (GROUPE SIGMA, https://www.sigma.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.breachsense.com/breaches/sigma-informatique-data-breach/",
+          "https://www.sigma.fr/services-solutions/cybersecurite/resilience-si/",
+          "https://www.sigma.fr/services-solutions/edition-integration/gestion-entreprise/erp-lixa/lixa-pdp/",
+          "https://www.sigma.fr/confidentialite/",
+          "https://fr.linkedin.com/posts/sigma-informatique_facturation%C3%A9lectronique-plateformeagr%C3%A9%C3%A9e-activity-7417913546467962880-79Sd"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Sigma Lixa PA (GROUPE SIGMA, https://www.sigma.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.sigma.fr/services-solutions/edition-integration/gestion-entreprise/erp-lixa/",
+          "https://www.sigma.fr/services-solutions/edition-integration/gestion-entreprise/erp-lixa/lixa-pdp/",
+          "https://fr.linkedin.com/posts/sigma-informatique_facturation%C3%A9lectronique-plateformeagr%C3%A9%C3%A9e-activity-7417913546467962880-79Sd"
+        ]
+      }
+    },
+    {
+      "platformSlug": "sni",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by SNI (SNI, https://snitechnology.net/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://snitechnology.net/category/news/",
+          "https://snitechnology.net/fr/confidentialite-des-donnees/",
+          "https://snitechnology.net/wp-content/uploads/2021/06/1.The-Policy-on-the-Protection-of-Personal-Data-and-Privacy.pdf",
+          "https://snitechnology.net/gdpr/",
+          "https://snitechnology.net/wp-content/uploads/2021/09/1.The-Policy-on-the-Protection-of-Personal-Data-and-Privacy-1.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for SNI (SNI, https://snitechnology.net/fr), September 2026.",
+        "resultUrls": [
+          "https://support.snitechnology.net/?lang=en-US",
+          "https://snitechnology.net/blog/",
+          "https://snitechnology.net/category/news/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "solo",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Solo (SOLO, https://www.solo.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.solo.fr/ressources/fiscalite",
+          "https://frenchbreaches.com/alertes/colisexpat-mtli3y3saqaoiaimmgd",
+          "https://www.frandroid.com/culture-tech/securite-applications/3220725_770-000-iban-pirates-et-mis-en-vente-apres-une-cyberattaque-contre-une-mutuelle-en-france",
+          "https://ctipilot.ch/entries/2026-09-06/amf-france-sql-injection-plaintext-passwords-breach/",
+          "https://frenchbreaches.com/alertes/les-curistes-mtp0o5mfdnfk170tt2f"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Solo (SOLO, https://www.solo.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.solo.fr/",
+          "https://www.solo.fr/conditions-generales",
+          "https://www.francenum.gouv.fr/activateurs/solo"
+        ]
+      }
+    },
+    {
+      "platformSlug": "sovos",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Sovos (SOVOS, https://www.saphety.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.iowaattorneygeneral.gov/media/cms/8232023_Sovos_Compliance_LLC_996DAE195713B.pdf",
+          "https://oag.ca.gov/system/files/Exhibit%20A%20-%20B%20CA%20Sovos%20Entities%20and%20Individual%20Notice%208.23.2023.pdf",
+          "https://www.iowaattorneygeneral.gov/media/cms/9222023_Sovos_Compliance_LLC_additi_0044681CEA3FE.pdf",
+          "https://www.mass.gov/doc/assigned-data-breach-number-30000-sovos-compliance-llc/download",
+          "https://oag.ca.gov/system/files/Sovos%20Sample%20Individual%20Notice%20%2807%2012%2023%29.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Sovos (SOVOS, https://www.saphety.com/fr), September 2026.",
+        "resultUrls": [
+          "https://servicestatus.sovos.com/",
+          "https://status.sovos.com/",
+          "https://us-canada.status.sovos.com/history"
+        ]
+      }
+    },
+    {
+      "platformSlug": "spendesk",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Spendesk (SPENDESK, https://www.spendesk.com/fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.spendesk.com/legals/terms/dora-addendum/",
+          "https://www.spendesk.com/fr/legals/terms/dora-addendum/",
+          "https://status.spendesk.com/history",
+          "https://status.spendesk.com/",
+          "https://www.spendesk.com/fr/spendesk-security/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Spendesk (SPENDESK, https://www.spendesk.com/fr/), September 2026.",
+        "resultUrls": [
+          "https://status.spendesk.com/history",
+          "https://status.spendesk.com/",
+          "https://status.spendesk.com/uptime"
+        ]
+      }
+    },
+    {
+      "platformSlug": "sps-commerce",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by SPS Commerce (SPS COMMERCE, https://tiekinetix.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.upguard.com/security-report/sps-commerce",
+          "https://www.spscommerce.com/about/privacy-policy/",
+          "https://trust.spscommerce.com/",
+          "https://www.hudsonrock.com/search/domain/spscommerce.com",
+          "https://isdown.app/status/sps-commerce/incidents/640526-as2-communications"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for SPS Commerce (SPS COMMERCE, https://tiekinetix.com/fr), September 2026.",
+        "resultUrls": [
+          "https://statusfield.com/services/sps-commerce",
+          "https://statusfield.com/services/sps-commerce/incidents",
+          "https://statussight.com/status/sps-commerce"
+        ]
+      }
+    },
+    {
+      "platformSlug": "srci",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by SRCI iXFacture (SRCI, https://solutions.srci.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://solutions.srci.fr/facture-electronique-operateur-dematerialisation/",
+          "https://solutions.srci.fr/srci-pa-facturation-electronique/",
+          "https://solutions.srci.fr/srci-plateforme-agreee-facturation-electronique/",
+          "https://catalogue.numeriquedeconfiance.fr/solutions/srci-facture-electronique",
+          "https://www.francenum.gouv.fr/activateurs/srci"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for SRCI iXFacture (SRCI, https://solutions.srci.fr/), September 2026.",
+        "resultUrls": [
+          "https://solutions.srci.fr/facture-electronique-operateur-dematerialisation/",
+          "https://solutions.srci.fr/srci-pa-facturation-electronique/",
+          "https://solutions.srci.fr/le-blog/blog-actualites/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "storecove",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Storecove (STORECOVE, https://www.storecove.com/fr/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.storecove.com/fr/fr/mystorecove/faq/",
+          "https://www.storecove.com/fileadmin/editors-filemount/documents/Data_Privacy_Policy_Storecove_final_website.pdf",
+          "https://www.storecove.com/fileadmin/editors-filemount/documents/Security_Principals_2023.pdf",
+          "https://www.storecove.com/fr/fr/conditions-generales/?setLang=",
+          "https://www.storecove.com/fileadmin/user_upload/achievements/Security_Principals_2023.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Storecove (STORECOVE, https://www.storecove.com/fr/fr), September 2026.",
+        "resultUrls": [
+          "https://storecove.statuspage.io/",
+          "https://storecove.statuspage.io/history",
+          "https://www.storecove.com/fr/fr/mystorecove/faq"
+        ]
+      }
+    },
+    {
+      "platformSlug": "superpdp",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by SuperPDP (SUPER PDP, https://www.superpdp.tech/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.superpdp.tech/",
+          "https://www.superpdp.tech/fonctionnalites/",
+          "https://www.superpdp.tech/documentation/",
+          "https://www.cabinetdigital.fr/plateformes-dematerialisation/super-pdp/",
+          "https://github.com/bluerocktel/SuperPDP-PHP-Api-Client"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for SuperPDP (SUPER PDP, https://www.superpdp.tech/), September 2026.",
+        "resultUrls": [
+          "https://status.superpdp.tech/",
+          "https://www.superpdp.tech/actualites/",
+          "https://www.superpdp.tech/actualites/2026-05-04-super-pdp-ouvre-son-service-en-production/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "symtrax",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Symtrax Compleo (SYMTRAX, https://www.symtrax.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.symtrax.com/en-us/resources/news/",
+          "https://www.symtrax.com/en-us/news/compleo-suite-to-become-compleo-hybrid/",
+          "https://www.symtrax.com/en-uk/news/sign-your-business-documents-online-with-our-new-saas-offering/",
+          "https://www.compleo-charging.com/en/products/document-centre/security-advisory-1",
+          "https://www.symtrax.com/en-us/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Symtrax Compleo (SYMTRAX, https://www.symtrax.com/fr), September 2026.",
+        "resultUrls": [
+          "https://www.symtrax.com/en-us/saas/",
+          "https://www.symtrax.com/en-us/resources/news/",
+          "https://www.symtrax.com/fr/solutions/modernisez-les-processus-de-reception-de-documents-b2b-ou-b2c/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "taxera",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Taxera (TAXERA, https://taxera.tech/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://taxera.tech/privacy",
+          "https://taxera.tech/platform",
+          "https://taxera.tech/",
+          "https://taxera.tech/terms",
+          "https://taxera.tech/products"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Taxera (TAXERA, https://taxera.tech/), September 2026.",
+        "resultUrls": [
+          "https://taxera.tech/platform",
+          "https://taxera.tech/",
+          "https://taxera.tech/blog"
+        ]
+      }
+    },
+    {
+      "platformSlug": "tenor",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Tenor eDemat (TENOR, https://tenorsolutions.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://tenorsolutions.com/plateforme-agreee-dgfip-immatriculation-definitive/",
+          "https://tenorsolutions.com/en/tenor-obtains-iso-27001-certification/",
+          "https://tenorsolutions.com/en/solutions/e-invoicing-solution/",
+          "https://tenorsolutions.com/en/solutions/pdp/",
+          "https://tenorsolutions.com/immatriculation-pdp/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Tenor eDemat (TENOR, https://tenorsolutions.com/), September 2026.",
+        "resultUrls": [
+          "https://tenorsolutions.com/en/home/",
+          "https://tenorsolutions.com/en/tenor-obtains-iso-27001-certification/",
+          "https://tenorsolutions.com/en/solutions/e-invoicing-solution/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "tesisquare",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by TESISQUARE (TESISQUARE SPA, https://www.tesisquare.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.breachsense.com/breaches/tesisquare-data-breach/",
+          "https://www.tesisquare.com/wp-content/uploads/2026/07/EN_Tesisquare-GDPR_Compliance-Statement_Officialdoc_21_03_2024.pdf",
+          "https://www.tesisquare.com/wp-content/uploads/2026/07/68e779265dbcb32d53f79e64_Information-Security-Policy_EN_01_10_2025.pdf",
+          "https://pro.ransomware.live/id/VEVTSVNRVUFSRS5DT01AY2xvcA",
+          "https://www.tesisquare.com/wp-content/uploads/2026/07/68e779269dbf61cd351ddeeb_Politica-per-la-Sicurezza-delle-Informazioni_IT_-01_10_2025.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for TESISQUARE (TESISQUARE SPA, https://www.tesisquare.com/fr), September 2026.",
+        "resultUrls": [
+          "https://www.tesisquare.com/fr/news/communiques-de-presse/",
+          "https://www.tesisquare.com/fr/news/",
+          "https://www.tesisquare.com/en/customer-support/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "tiime",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Tiime (TIIME PDP, https://www.tiime.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.tiime.fr/hubfs/Tiime%202025/Documents/tiime-gestion-donnees%20personnelles-03-02-2026.pdf",
+          "https://support.tiime.fr/fr/articles/26342-la-securite-avant-tout",
+          "https://support.tiime.fr/fr/articles/522862-securiser-votre-compte-tiime-avec-la-sca",
+          "https://www.tiime.fr/soustraitants",
+          "https://www.tiime.fr/plateforme-dematerialisation-partenaire-pdp"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Tiime (TIIME PDP, https://www.tiime.fr/), September 2026.",
+        "resultUrls": [
+          "https://status.tiime.fr/",
+          "https://support.tiime.fr/fr/articles/26342-la-securite-avant-tout",
+          "https://support.tiime.fr/fr/articles/522862-securiser-votre-compte-tiime-avec-la-sca"
+        ]
+      }
+    },
+    {
+      "platformSlug": "tradeshift",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Tradeshift Babelway (TRADESHIFT BABELWAY, https://tradeshift.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.babelway.com/legal/data-processing-attachment/",
+          "https://tradeshift.com/security/",
+          "https://www.upguard.com/security-report/tradeshift",
+          "https://www.babelway.com/legal/data-policy/",
+          "https://support.tradeshift.com/knowledgebase/article/360016860940"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Tradeshift Babelway (TRADESHIFT BABELWAY, https://tradeshift.com/fr), September 2026.",
+        "resultUrls": [
+          "https://integrate.support.tradeshift.com/knowledgebase/section/201300944",
+          "https://www.pulsapi.com/services/tradeshift",
+          "https://support.tradeshift.com/knowledgebase/article/360018909920"
+        ]
+      }
+    },
+    {
+      "platformSlug": "transalis",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Transalis (Transalis Limited, https://www.transalis.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.transalis.com/information-security-policy",
+          "https://www.transalis.com/our-accreditations/",
+          "https://www.transalis.com/accreditations/information-security-management-iso-27001/",
+          "https://www.transalis.com/privacy-policy",
+          "https://www.transalis.com/faq/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Transalis (Transalis Limited, https://www.transalis.com/), September 2026.",
+        "resultUrls": [
+          "https://status.transalis.com/",
+          "https://status.transalis.com/incidents-history",
+          "https://transalis.freshstatus.io/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "treso2",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Treso2 (TRESO2, http://www.treso2.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.treso2.com/solutions/services/securite-des-donnees",
+          "https://www.treso2.com/",
+          "https://www.treso2.com/solution-treso2-payment-funding/",
+          "https://www.treso2.com/solutions/fonctionnalites/automatisation-des-processus",
+          "https://www.treso2.com/cas-dusage/conformite-2026-2027"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Treso2 (TRESO2, http://www.treso2.com/), September 2026.",
+        "resultUrls": [
+          "https://www.treso2.com/cgu",
+          "https://www.treso2.com/solutions/services/securite-des-donnees",
+          "https://www.treso2.com/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "tungsten",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Tungsten e-Invoice Connect (TUNGSTEN AUTOMATION FRANCE, https://www.tungstenautomation.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://ago.vermont.gov/document/2025-08-22-tungsten-automation-corporation-data-breach-notice-consumers",
+          "https://www.claimdepot.com/data-breach/kofax-2025",
+          "https://securityledger.com/2025/08/tungsten-automation-data-breach-what-you-need-to-know/",
+          "https://www.federmanlaw.com/blog/tungsten-automation-corporation-formerly-kofax-inc-data-breach-investigated-by-federman-sherwood/",
+          "https://www.tungstenautomation.com/products/invoiceagility/invoicing-compliance/country-updates/country/france"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Tungsten e-Invoice Connect (TUNGSTEN AUTOMATION FRANCE, https://www.tungstenautomation.fr/), September 2026.",
+        "resultUrls": [
+          "https://status.tungstencloud.com/",
+          "https://status.tungstencloud.com/americas/history",
+          "https://isdown.app/status/tungsten-automation-emea/incidents/531482-einvoice-connect-slow-performance"
+        ]
+      }
+    },
+    {
+      "platformSlug": "tx2",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by TX2 Concept (TX2 Concept, https://tx2.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://fr.linkedin.com/posts/tx2-concept_securite-iso27001-pas-activity-7498724440856289280-f6r-",
+          "https://linkedin.com/company/tx2-concept",
+          "https://www.tx2.fr/en/security/",
+          "https://www.tx2.fr/en/2025/07/24/migration-certification-iso-27001-2022-committed-to-data-security/",
+          "https://www.tx2.fr/securite/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for TX2 Concept (TX2 Concept, https://tx2.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.tx2.fr/service-support/",
+          "https://www.tx2.fr/en/blog/",
+          "https://fr.linkedin.com/posts/tx2-concept_securite-iso27001-pas-activity-7498724440856289280-f6r-"
+        ]
+      }
+    },
+    {
+      "platformSlug": "ventya",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Ventya (VENTYA, https://www.ventya.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://undercodenews.com/more-than-400-french-businesses-exposed-in-underground-database-sale-turning-ordinary-software-data-into-a-cybercrime-weapon-video/",
+          "https://www.claimdepot.com/data-breach/bain-capital-2026",
+          "https://undercodenews.com/vexy-ransomware-claims-two-new-victims-annapurna-fashion-and-palsana-enviro-added-to-the-threat-list-video/",
+          "https://www.brightdefense.com/resources/recent-data-breaches/",
+          "https://linkedin.com/company/ventya"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Ventya (VENTYA, https://www.ventya.fr/), September 2026.",
+        "resultUrls": [
+          "https://www.ventya.fr/actualites/",
+          "https://www.ventya.fr/nos-resources/actualites/",
+          "https://www.ventya.fr/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "veryswing",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Veryswing (VERYSWING, https://veryswing.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://veryswing.com/en/iso-certification",
+          "https://veryswing.com/certification-iso",
+          "https://veryswing.com/en",
+          "https://veryswing.com/en/rgpd-gdpr.html",
+          "https://veryswing.com/veryswing-renouvelle-sa-certification-iso-27001-en-2024.html"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Veryswing (VERYSWING, https://veryswing.com/), September 2026.",
+        "resultUrls": [
+          "https://status.veryswing.com/",
+          "https://status.veryswing.com/subscribe",
+          "https://status.veryswing.com/?start_date=2022-04-11"
+        ]
+      }
+    },
+    {
+      "platformSlug": "vosfactures",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by VosFactures (VosFactures, https://vosfactures.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://vosfactures.fr/securite",
+          "https://vosfactures.fr/article/nouvelles-options-facturation-electronique",
+          "https://vosfactures.fr/conditions-utilisation",
+          "https://vosfactures.fr/",
+          "https://vosfactures.fr/pa"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for VosFactures (VosFactures, https://vosfactures.fr/), September 2026.",
+        "resultUrls": [
+          "https://vosfactures.fr/conditions-utilisation",
+          "https://vosfactures.fr/securite",
+          "https://sugester.vosfactures.fr/124604346-probleme-generation-de-factures"
+        ]
+      }
+    },
+    {
+      "platformSlug": "voxel",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Voxel Bavel (VOXEL, an Amadeus company, https://www.voxelgroup.net/facture-electronique/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.voxelgroup.net/press-room/",
+          "https://www.voxelgroup.net/bavel-platform/",
+          "https://www.linkedin.com/posts/voxelgroup-net_facturationelectronique-einvoicefrance-activity-7500836735573061633-ZhL7",
+          "https://www.voxelgroup.net/",
+          "https://www.voxelgroup.net/bavel-billing-solution/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Voxel Bavel (VOXEL, an Amadeus company, https://www.voxelgroup.net/facture-electronique/), September 2026.",
+        "resultUrls": [
+          "https://www.voxelgroup.net/",
+          "https://www.voxelgroup.net/bavel-platform/",
+          "https://www.voxelgroup.net/press-room/press-release/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "weproc",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by WeInvoice by WeProc (WEPROC, https://www.weproc.com/fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://status.weinvoice.fr/incident/1044756",
+          "https://weinvoice.fr/",
+          "https://weinvoice.fr/integrations/weproc",
+          "https://www.weproc.com/fr/securite/",
+          "https://blog.weproc.com/en/invoice/weproc-state-approved-platform-electronic-invoicing/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for WeInvoice by WeProc (WEPROC, https://www.weproc.com/fr/), September 2026.",
+        "resultUrls": [
+          "https://status.weinvoice.fr/incidents",
+          "https://status.weinvoice.fr/incident/1044756",
+          "https://status.weinvoice.fr/incident/1032255"
+        ]
+      }
+    },
+    {
+      "platformSlug": "ags-records",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by WiDOFACT by AGS (AGS RECORDS MANAGEMENT, https://www.ags-recordsmanagement.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://staging.ags-recordsmanagement.com/news/facturation-electronique-widofact-plateforme-agreee-immatriculee-ags-records-management/",
+          "https://www.ags-recordsmanagement.com/fr/reforme-facturation-electronique/plateforme-pa-e-facturation/",
+          "https://staging.ags-recordsmanagement.com/wp-content/uploads/2025/11/PA-WiDOFACT-Fiche-produit.pdf",
+          "https://www.ags-recordsmanagement.com/fr/digitalisation-des-processus-documentaires/solutions-de-dematerialisation/",
+          "https://www.ags-recordsmanagement.com/news/data-security-compliant-archiving/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for WiDOFACT by AGS (AGS RECORDS MANAGEMENT, https://www.ags-recordsmanagement.com/), September 2026.",
+        "resultUrls": [
+          "https://www.ags-recordsmanagement.com/fr/reforme-facturation-electronique/plateforme-pa-e-facturation/",
+          "https://www.ags-recordsmanagement.com/fr/news/facturation-electronique-widofact-plateforme-agreee-immatriculee-ags-records-management/",
+          "https://www.ags-recordsmanagement.com/fr/digitalisation-des-processus-documentaires/solutions-de-dematerialisation/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "wisetech",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by WiseTech Global (WiseTech GLOBAL, https://www.wisetechglobal.com/fr-fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.wisetechglobal.com/media/pw5ngfnd/wtg-data-processing-addendum-english-6-march-2026.pdf",
+          "https://www.upguard.com/security-report/wisetech-global",
+          "https://www.wisetechglobal.com/legal/dpa/",
+          "https://announcements.asx.com.au/asxpdf/20260819/pdf/072xyvmscn59y7.pdf",
+          "https://www.wisetechglobal.com/gdpr/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for WiseTech Global (WiseTech GLOBAL, https://www.wisetechglobal.com/fr-fr/), September 2026.",
+        "resultUrls": [
+          "https://www.wisetechglobal.com/news/company-news/",
+          "https://www.wisetechglobal.com/media/ihvndig3/fy25-wtg-cargowise-soc-3-type-2-report.pdf",
+          "https://theloadstar.com/exclusive-cargowise-users-hit-by-global-outage-affecting-deployments/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "xelya",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Xelya (XELYA, https://www.xelya.com/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.xelya.com/hebergement-des-donnees-de-sante/",
+          "https://www.xelya.com/actualites/xelya-renouvelle-sa-quadruple-certification-un-gage-de-qualite-et-de-securite/",
+          "https://www.xelya.com/",
+          "https://www.xelya.com/espace-presse/une-quadrule-certification-pour-xelya/",
+          "https://www.xelya.com/espace-presse/xelya-et-afigec-lancent-afilya-pour-que-ladministratif-cesse-detre-un-frein/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Xelya (XELYA, https://www.xelya.com/), September 2026.",
+        "resultUrls": [
+          "https://www.xelya.com/",
+          "https://www.xelya.com/hebergement-des-donnees-de-sante/",
+          "https://www.xelya.com/actualites/xelya-renouvelle-sa-quadruple-certification-un-gage-de-qualite-et-de-securite/"
+        ]
+      }
+    },
+    {
+      "platformSlug": "yooz",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Yooz (YOOZ PDP, https://www.getyooz.com/fr), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://www.upguard.com/security-report/yooz",
+          "https://www.getyooz.com/fr/securite",
+          "https://www.getyooz.com/fr/yooz-conditions-generales",
+          "https://www.getyooz.com/fr/blog/cybersecurite-et-facturation-electronique",
+          "https://www.getyooz.com/hubfs/YOOZ_TERMS_CONDITIONS_DPA.pdf"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Yooz (YOOZ PDP, https://www.getyooz.com/fr), September 2026.",
+        "resultUrls": [
+          "https://statusgator.com/services/yooz",
+          "https://www.getyooz.com/fr/securite",
+          "https://www.getyooz.com/fr/yooz-conditions-generales"
+        ]
+      }
+    },
+    {
+      "platformSlug": "ytems",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by Ytems (YTEMS, https://com.ytems.app/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://com.ytems.app/blog/ytems-certification-iso-27001-securite-bnc",
+          "https://com.ytems.app/blog?categorie_equal=Profession+lib%C3%A9rale",
+          "https://com.ytems.app/",
+          "https://com.ytems.app/faq",
+          "https://play.google.com/store/apps/details?id=com.ytems&hl=en_GB"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for Ytems (YTEMS, https://com.ytems.app/), September 2026.",
+        "resultUrls": [
+          "https://com.ytems.app/",
+          "https://com.ytems.app/blog/ytems-certification-iso-27001-securite-bnc",
+          "https://com.ytems.app/blog?categorie_equal=Profession+lib%C3%A9rale"
+        ]
+      }
+    },
+    {
+      "platformSlug": "entropics",
+      "security": {
+        "query": "Security incident disclosure or data breach notice by ZenOnline (ENTROPICS, https://entropics.fr/), published September 1–16, 2026.",
+        "resultUrls": [
+          "https://entropics.fr/zensolutions/",
+          "https://zensolutions.fr/",
+          "https://zensolutions.fr/notre-ged-zenonline-obtient-la-prestigieuse-certification-iso-90012015/",
+          "https://entropics.fr/fonctionnalites/",
+          "https://entropics.fr/entropics-revolutionne-le-logiciel-de-ged-avec-lintelligence-artificielle/"
+        ]
+      },
+      "availability": {
+        "query": "Official status page service outage history security notifications RSS feed for ZenOnline (ENTROPICS, https://entropics.fr/), September 2026.",
+        "resultUrls": [
+          "https://entropics.fr/",
+          "https://entropics.fr/zensolutions/",
+          "https://zensolutions.fr/"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+[
+  {
+    "id": "sage",
+    "platformSlugs": [
+      "sage"
+    ],
+    "name": "Sage",
+    "url": "https://status.sage.com/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.sage.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "sage-status-2026-09"
+  },
+  {
+    "id": "pennylane",
+    "platformSlugs": [
+      "pennylane"
+    ],
+    "name": "Pennylane",
+    "url": "https://status.pennylane.com/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.pennylane.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "pennylane-status-2026-09"
+  },
+  {
+    "id": "esker",
+    "platformSlugs": [
+      "esker"
+    ],
+    "name": "Esker",
+    "url": "https://www.trustesker.com/?env=G",
+    "kind": "esker",
+    "profile": "esker",
+    "pageUrl": "https://www.trustesker.com/?env=G",
+    "checkedAt": "2026-09-16",
+    "note": "Page par environnement ; lecture automatique des messages visibles, historique limité.",
+    "sourceId": "esker-status-2026-09"
+  },
+  {
+    "id": "avalara",
+    "platformSlugs": [
+      "avalara"
+    ],
+    "name": "Avalara",
+    "url": "https://status.avalara.com/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.avalara.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "avalara-watch-2026-09"
+  },
+  {
+    "id": "axway",
+    "platformSlugs": [
+      "axway"
+    ],
+    "name": "Axway eInvoicing",
+    "url": "https://status.axway.com/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.axway.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "axway-watch-2026-09"
+  },
+  {
+    "id": "blg",
+    "platformSlugs": [
+      "blg"
+    ],
+    "name": "blgCloud",
+    "url": "https://status.blgcloud.com/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.blgcloud.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "blg-watch-2026-09"
+  },
+  {
+    "id": "docoon",
+    "platformSlugs": [
+      "docoon"
+    ],
+    "name": "Docoon Invoice",
+    "url": "https://docoonmessaging.statuspage.io/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://docoonmessaging.statuspage.io/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "docoon-watch-2026-09"
+  },
+  {
+    "id": "dokapi",
+    "platformSlugs": [
+      "dokapi"
+    ],
+    "name": "Dokapi",
+    "url": "https://dokapi.statuspage.io/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://dokapi.statuspage.io/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "dokapi-watch-2026-09"
+  },
+  {
+    "id": "ecosio-intercom",
+    "platformSlugs": [
+      "ecosio-intercom"
+    ],
+    "name": "ecosio InterCom",
+    "url": "https://www.ecosio-status.com/feed.rss",
+    "kind": "rss",
+    "profile": "statuspal",
+    "pageUrl": "https://www.ecosio-status.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "ecosio-intercom-watch-2026-09"
+  },
+  {
+    "id": "fiskaltrust",
+    "platformSlugs": [
+      "fiskaltrust"
+    ],
+    "name": "fiskaltrust",
+    "url": "https://status.fiskaltrust.eu/feed",
+    "kind": "rss",
+    "profile": "betterstack",
+    "pageUrl": "https://status.fiskaltrust.eu/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "fiskaltrust-watch-2026-09"
+  },
+  {
+    "id": "flowie",
+    "platformSlugs": [
+      "flowie"
+    ],
+    "name": "Flowie",
+    "url": "https://flowie.betteruptime.com/feed",
+    "kind": "rss",
+    "profile": "betterstack",
+    "pageUrl": "https://flowie.betteruptime.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "flowie-watch-2026-09"
+  },
+  {
+    "id": "invopop",
+    "platformSlugs": [
+      "invopop"
+    ],
+    "name": "Invopop",
+    "url": "https://status.invopop.com/feed.rss",
+    "kind": "rss",
+    "profile": "statuspal",
+    "pageUrl": "https://status.invopop.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "invopop-watch-2026-09"
+  },
+  {
+    "id": "lucca",
+    "platformSlugs": [
+      "lucca"
+    ],
+    "name": "Lucca Factures",
+    "url": "https://status.lucca.fr/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.lucca.fr/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "lucca-watch-2026-09"
+  },
+  {
+    "id": "n2f",
+    "platformSlugs": [
+      "n2f"
+    ],
+    "name": "N2F",
+    "url": "https://status.n2f.com/fr/feed",
+    "kind": "rss",
+    "profile": "betterstack",
+    "pageUrl": "https://status.n2f.com/fr",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "n2f-watch-2026-09"
+  },
+  {
+    "id": "pitney-bowes",
+    "platformSlugs": [
+      "pitney-bowes"
+    ],
+    "name": "Pitney Bowes Invoice Services",
+    "url": "https://status.pitneybowes.com/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.pitneybowes.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "pitney-bowes-watch-2026-09"
+  },
+  {
+    "id": "spendesk",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "name": "Spendesk",
+    "url": "https://status.spendesk.com/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.spendesk.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "spendesk-watch-2026-09"
+  },
+  {
+    "id": "storecove",
+    "platformSlugs": [
+      "storecove"
+    ],
+    "name": "Storecove",
+    "url": "https://storecove.statuspage.io/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://storecove.statuspage.io/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "storecove-watch-2026-09"
+  },
+  {
+    "id": "superpdp",
+    "platformSlugs": [
+      "superpdp"
+    ],
+    "name": "SuperPDP",
+    "url": "https://status.superpdp.tech/rss",
+    "kind": "rss",
+    "profile": "ohdear",
+    "pageUrl": "https://status.superpdp.tech/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "superpdp-watch-2026-09"
+  },
+  {
+    "id": "weproc",
+    "platformSlugs": [
+      "weproc"
+    ],
+    "name": "WeInvoice by WeProc",
+    "url": "https://status.weinvoice.fr/feed",
+    "kind": "rss",
+    "profile": "betterstack",
+    "pageUrl": "https://status.weinvoice.fr/incidents",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "weproc-watch-2026-09"
+  },
+  {
+    "id": "veryswing",
+    "platformSlugs": [
+      "veryswing"
+    ],
+    "name": "Veryswing",
+    "url": "https://status.veryswing.com/atom",
+    "kind": "atom",
+    "profile": "cachet",
+    "pageUrl": "https://status.veryswing.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "veryswing-watch-2026-09"
+  },
+  {
+    "id": "eezi",
+    "platformSlugs": [
+      "eezi"
+    ],
+    "name": "eezi",
+    "url": "https://eezi.instatus.com/af-na/history.rss",
+    "kind": "rss",
+    "profile": "instatus",
+    "pageUrl": "https://eezi.instatus.com/",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "eezi-watch-2026-09"
+  },
+  {
+    "id": "tungsten",
+    "platformSlugs": [
+      "tungsten"
+    ],
+    "name": "Tungsten e-Invoice Connect",
+    "url": "https://status.tungstencloud.com/europe/feed.rss",
+    "kind": "rss",
+    "profile": "incident-io",
+    "pageUrl": "https://status.tungstencloud.com/europe",
+    "checkedAt": "2026-09-16",
+    "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
+    "sourceId": "tungsten-watch-2026-09"
+  },
+  {
+    "id": "myunisoft",
+    "platformSlugs": [
+      "myunisoft"
+    ],
+    "name": "MyUnisoft",
+    "url": "https://meteo.myunisoft.fr/api/incidents.json",
+    "kind": "json",
+    "profile": "myunisoft",
+    "pageUrl": "https://meteo.myunisoft.fr/",
+    "checkedAt": "2026-09-16",
+    "note": "Calendrier JSON officiel. Les échanges de la chronologie détaillée se lisent sur chaque avis.",
+    "sourceId": "myunisoft-watch-2026-09"
+  },
+  {
+    "id": "tiime",
+    "platformSlugs": [
+      "tiime"
+    ],
+    "name": "Tiime",
+    "url": "https://status.tiime.fr/api/getEventFeed/KoA7Nf881q",
+    "kind": "json",
+    "profile": "uptimerobot-events",
+    "pageUrl": "https://status.tiime.fr/",
+    "checkedAt": "2026-09-16",
+    "note": "API publique des événements, liée depuis la page d’état. Fenêtre glissante de 30 jours.",
+    "sourceId": "tiime-watch-2026-09"
+  },
+  {
+    "id": "ademico",
+    "platformSlugs": [
+      "ademico"
+    ],
+    "name": "Ademico Software",
+    "url": "https://status.ademico-software.com/api/getEventFeed/kME5WtnQZ0",
+    "kind": "json",
+    "profile": "uptimerobot-events",
+    "pageUrl": "https://status.ademico-software.com/",
+    "checkedAt": "2026-09-16",
+    "note": "API publique des événements, liée depuis la page d’état. Fenêtre glissante de 30 jours.",
+    "sourceId": "ademico-watch-2026-09"
+  },
+  {
+    "id": "cert-fr",
+    "platformSlugs": [],
+    "name": "CERT-FR",
+    "url": "https://www.cert.ssi.gouv.fr/feed/",
+    "kind": "rss",
+    "profile": "cert-fr",
+    "pageUrl": "https://www.cert.ssi.gouv.fr/",
+    "checkedAt": "2026-09-16",
+    "note": "Bulletins, alertes et avis de vulnérabilité. Le rattachement à une PA demande une vérification du produit concerné.",
+    "sourceId": "cert-fr-watch-2026-09"
+  }
+]

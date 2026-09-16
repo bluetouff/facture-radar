@@ -2430,5 +2430,365 @@
     "url": "https://status.pennylane.com/incidents/zfpsp7z9wn1z",
     "type": "documentation",
     "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "avalara-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Avalara",
+    "url": "https://status.avalara.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "axway-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Axway eInvoicing",
+    "url": "https://status.axway.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "blg-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "blgCloud",
+    "url": "https://status.blgcloud.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "docoon-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Docoon Invoice",
+    "url": "https://docoonmessaging.statuspage.io/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "dokapi-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Dokapi",
+    "url": "https://dokapi.statuspage.io/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "ecosio-intercom-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "ecosio InterCom",
+    "url": "https://www.ecosio-status.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "fiskaltrust-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "fiskaltrust",
+    "url": "https://status.fiskaltrust.eu/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "flowie-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Flowie",
+    "url": "https://flowie.betteruptime.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "invopop-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Invopop",
+    "url": "https://status.invopop.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "lucca-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Lucca Factures",
+    "url": "https://status.lucca.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "n2f-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "N2F",
+    "url": "https://status.n2f.com/fr",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "pitney-bowes-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Pitney Bowes Invoice Services",
+    "url": "https://status.pitneybowes.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "spendesk-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "storecove-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Storecove",
+    "url": "https://storecove.statuspage.io/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "superpdp-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "SuperPDP",
+    "url": "https://status.superpdp.tech/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "weproc-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "WeInvoice by WeProc",
+    "url": "https://status.weinvoice.fr/incidents",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "veryswing-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Veryswing",
+    "url": "https://status.veryswing.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "eezi-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "eezi",
+    "url": "https://eezi.instatus.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "tungsten-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Tungsten e-Invoice Connect",
+    "url": "https://status.tungstencloud.com/europe",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "myunisoft-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "MyUnisoft",
+    "url": "https://meteo.myunisoft.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "tiime-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Tiime",
+    "url": "https://status.tiime.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "ademico-watch-2026-09",
+    "title": "Publications de disponibilité",
+    "publisher": "Ademico Software",
+    "url": "https://status.ademico-software.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "cert-fr-watch-2026-09",
+    "title": "Flux des avis et alertes CERT-FR",
+    "publisher": "CERT-FR",
+    "url": "https://www.cert.ssi.gouv.fr/",
+    "type": "institutional",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "weproc-peppol-20260901-source",
+    "title": "Échecs d’envoi sur le point d’accès Peppol",
+    "publisher": "WeInvoice by WeProc",
+    "url": "https://status.weinvoice.fr/incident/1044756",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "weproc-piste-20260901-source",
+    "title": "Appels à l’annuaire PISTE en échec, selon WeInvoice",
+    "publisher": "WeInvoice by WeProc",
+    "url": "https://status.weinvoice.fr/incident/1044543",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "dokapi-emails-20260916-source",
+    "title": "Envoi des e-mails interrompu",
+    "publisher": "Dokapi",
+    "url": "https://dokapi.statuspage.io/incidents/hx6xfwqj64k9",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "spendesk-einvoice-20260904-source",
+    "title": "Traitement des factures électroniques perturbé en France et en Belgique",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/7v0rjf4x41br",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "spendesk-access-20260902-source",
+    "title": "Accès à Spendesk et performances dégradés",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/t2xb9nmwz5s6",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "spendesk-microsoft-20260904-source",
+    "title": "Notifications vers les messageries Microsoft perturbées",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/b2hlvjc2kzn5",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "spendesk-transfers-20260916-source",
+    "title": "Virements internationaux indisponibles pour certains clients de l’EEE",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/0dkn55v5wcqg",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "invopop-console-20260910-source",
+    "title": "Ouverture des documents instable dans la console",
+    "publisher": "Invopop",
+    "url": "https://status.invopop.com/incidents/01M25ZQ2HQW967V65TSSFH91HM",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "invopop-peppol-sml-20260902-source",
+    "title": "Inscriptions et recherches Peppol perturbées pendant une migration",
+    "publisher": "Invopop",
+    "url": "https://status.invopop.com/incidents/01M1GK0Q19JRJ5ZSHXWEAF0HW1",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "myunisoft-connection-20260916-source",
+    "title": "Accès à la production comptable et fiscale perturbé",
+    "publisher": "MyUnisoft",
+    "url": "https://meteo.myunisoft.fr/incident/02da09f4-55ea-4a25-9b80-779a7eef0939/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "myunisoft-display-20260915-source",
+    "title": "Affichage de certains menus perturbé",
+    "publisher": "MyUnisoft",
+    "url": "https://meteo.myunisoft.fr/incident/21de5fdd-7d59-4b36-9790-8f63c9976523/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "tungsten-support-20260916-source",
+    "title": "Centre d’assistance eInvoice Network perturbé",
+    "publisher": "Tungsten e-Invoice Connect",
+    "url": "https://status.tungstencloud.com/europe/incidents/01M2MVH4FXXX66TJXA9ZHDV5XJ",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "atgp-status-2026-09",
+    "title": "Information sur les incidents en cours",
+    "publisher": "ATGP",
+    "url": "https://www.atgp.net/info-incidents/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "cert-fr-sap-20260908",
+    "title": "Multiples vulnérabilités dans les produits SAP",
+    "publisher": "CERT-FR",
+    "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1134/",
+    "type": "institutional",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "blg-security-20260810",
+    "title": "Notification d’incident de sécurité et mesures de protection",
+    "publisher": "blgCloud",
+    "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/notification-d-incident-de-securite-et-mesures-de-protection-blgcloud-545",
+    "type": "security",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "aruba-manual-status-2026-09",
+    "title": "Page publique de suivi des services",
+    "publisher": "Aruba",
+    "url": "https://guide.aruba.it/fr/alertes",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "docuware-manual-status-2026-09",
+    "title": "Page publique de suivi des services",
+    "publisher": "DocuWare",
+    "url": "https://statusportal.docuware.cloud/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "iopole-manual-status-2026-09",
+    "title": "Page publique de suivi des services",
+    "publisher": "Iopole",
+    "url": "https://uptime.com/statuspage/iopole.com-api-sla",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "mysupply-manual-status-2026-09",
+    "title": "Page publique de suivi des services",
+    "publisher": "mySupply",
+    "url": "https://mysupply.dk/support/driftstatus/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "odoo-manual-status-2026-09",
+    "title": "Page publique de suivi des services",
+    "publisher": "Odoo",
+    "url": "https://status.odoo.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "pagero-manual-status-2026-09",
+    "title": "Page publique de suivi des services",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sovos-manual-status-2026-09",
+    "title": "Page publique de suivi des services",
+    "publisher": "Sovos",
+    "url": "https://status.sovos.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
   }
 ]

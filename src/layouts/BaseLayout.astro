@@ -84,6 +84,7 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
 <!doctype html>
 <html lang="fr" itemscope={isHome || undefined} itemtype={isHome ? "https://schema.org/WebSite" : undefined}>
   <head>
+    {Astro.url.pathname === "/incidents/" && <link rel="alternate" type="application/rss+xml" title="PA Check : avis d’incident" href="https://pa.l0g.fr/incidents.xml" />}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />

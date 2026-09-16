@@ -1,0 +1,94 @@
+---
+import Pagination from "./Pagination.astro";
+import InterfaceIcon from "./InterfaceIcon.astro";
+import { incidentResearch, incidentFeeds, incidentCoverage } from "../data/incident-watch";
+import { platforms } from "../data/platforms";
+---
+<section class="shell research" id="recherche" aria-labelledby="research-title">
+  <header><div><span class="mono-label">La couverture en détail</span><h2 id="research-title" tabindex="-1">Les 149 plateformes recherchées.</h2></div><span class="research-total"><InterfaceIcon name="check" /> Recherches du 16 septembre</span></header>
+  <p>Deux recherches par nom : signalements de sécurité et sources de disponibilité. Retrouvez la portée du contrôle et les flux disponibles pour chaque plateforme.</p>
+  <form id="research-filter" hidden><label for="research-query">Rechercher une plateforme</label><input id="research-query" type="search" placeholder="Nom de la plateforme…" autocomplete="off" /></form>
+  <p id="research-count" role="status" aria-live="polite">{incidentResearch.length} plateformes</p>
+  <div id="research-list">{incidentResearch.map(item => {
+    const platform = platforms.find(platform => platform.slug === item.platformSlug)!;
+    const feeds = incidentFeeds.filter(feed => item.feedIds.includes(feed.id));
+    const coverage = incidentCoverage.find(coverage => coverage.platformSlug === item.platformSlug);
+    return <article class="research-row" data-name={platform.displayName} id={`recherche-${item.platformSlug}`}>
+      <div class="research-name"><a href={`/plateformes/${item.platformSlug}/`}>{platform.displayName}</a><span>Recherche publique effectuée</span></div>
+      <div><span class:list={["feed-badge", { connected: feeds.length > 0 }]}><InterfaceIcon name={feeds.length ? "route" : "search"} />{feeds.length ? "Collecte quotidienne" : "Suivi manuel"}</span><p>{coverage?.note ?? "Historique de disponibilité non documenté dans les sources retenues."}</p></div>
+      <details><summary>Détail de la recherche</summary><p>{item.note}</p>{feeds.map(feed => <a href={feed.url} rel="noopener noreferrer">{feed.kind === "esker" ? "Page d’état" : feed.kind.toUpperCase()} · {feed.name} ↗</a>)}</details>
+    </article>;
+  })}</div>
+  <Pagination id="research-pagination" label="Pages de la couverture des plateformes" total={incidentResearch.length} pageSize={10} controls="research-list" />
+</section>
+<script>
+  import { paginate } from "../lib/pagination";
+  const rows = [...document.querySelectorAll<HTMLElement>(".research-row")];
+  const form = document.querySelector<HTMLFormElement>("#research-filter")!;
+  const input = document.querySelector<HTMLInputElement>("#research-query")!;
+  const nav = document.querySelector<HTMLElement>("#research-pagination")!;
+  const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("fr");
+  let page = 1;
+  function render() {
+    const filtered = rows.filter(row => normalize(row.dataset.name ?? "").includes(normalize(input.value.trim())));
+    const state = paginate(filtered, page, 10);
+    page = state.page;
+    rows.forEach(row => row.hidden = !state.items.includes(row));
+    document.querySelector("#research-count")!.textContent = `${state.total} plateforme${state.total > 1 ? "s" : ""} · page ${page} sur ${state.totalPages}`;
+    nav.hidden = state.totalPages <= 1;
+    nav.querySelectorAll<HTMLButtonElement>("[data-page]").forEach(button => {
+      const value = Number(button.dataset.page);
+      button.hidden = value > state.totalPages || (value !== 1 && value !== state.totalPages && Math.abs(value - page) > 1);
+      if (value === page) button.setAttribute("aria-current", "page");
+      else button.removeAttribute("aria-current");
+    });
+    nav.querySelector<HTMLButtonElement>('[data-step="-1"]')!.disabled = page === 1;
+    nav.querySelector<HTMLButtonElement>('[data-step="1"]')!.disabled = page === state.totalPages;
+  }
+  function reveal() {
+    let target: HTMLElement | null = null;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+    if (target && rows.includes(target)) {
+      input.value = "";
+      page = Math.floor(rows.indexOf(target) / 10) + 1;
+      render();
+      requestAnimationFrame(() => target!.scrollIntoView());
+    }
+  }
+  form.hidden = false;
+  form.addEventListener("submit", event => event.preventDefault());
+  input.addEventListener("input", () => { page = 1; render(); });
+  nav.addEventListener("click", event => {
+    const button = event.target instanceof Element ? event.target.closest<HTMLButtonElement>("button") : null;
+    if (!button || button.disabled) return;
+    page = button.dataset.page ? Number(button.dataset.page) : page + Number(button.dataset.step);
+    render();
+    document.querySelector<HTMLElement>("#research-title")!.focus();
+  });
+  window.addEventListener("hashchange", reveal);
+  render(); reveal();
+</script>
+<style>
+  .research { padding-block: 2.5rem; border-top: 1px solid var(--line); }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  h2 { font-family: var(--font-title); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2rem); margin: .7rem 0; color: var(--bright); }
+  .research > p { font-size: .84rem; line-height: 1.75; max-width: 48rem; }
+  .research-total, .feed-badge { display: inline-flex; gap: .4rem; align-items: center; font-size: .73rem; color: #37604b; }
+  .research-total :global(svg), .feed-badge :global(svg) { width: 1rem; height: 1rem; flex: none; }
+  form { margin-block: 1.2rem; max-width: 28rem; }
+  label { display: block; font-size: .75rem; margin-bottom: .5rem; }
+  input { width: 100%; border: 1px solid var(--line); border-radius: .5rem; color: var(--bright); background: #fffdf8; padding: .8rem; font: inherit; font-size: .85rem; }
+  #research-list { border: 1px solid var(--line); border-radius: .75rem; overflow: clip; }
+  .research-row { display: grid; grid-template-columns: minmax(10rem, .8fr) minmax(0, 2fr); gap: .7rem 1.6rem; padding: 1.2rem; background: #fffdf8; }
+  .research-row + .research-row { border-top: 1px solid var(--line); }
+  .research-row:target { box-shadow: inset 3px 0 var(--signal); }
+  .research-name a { display: block; font-size: .9rem; font-weight: 550; color: var(--bright); }
+  .research-name span { display: block; font-size: .67rem; color: var(--muted); margin-top: .4rem; }
+  .feed-badge { color: var(--muted); padding: .3rem .5rem; border-radius: .3rem; background: #efede6; }
+  .feed-badge.connected { color: #37604b; background: #e9f0eb; }
+  .research-row p { margin: .5rem 0 0; font-size: .77rem; line-height: 1.7; }
+  details { grid-column: 2; min-width: 0; font-size: .75rem; }
+  summary { cursor: pointer; color: var(--signal); min-height: 2.75rem; align-content: center; }
+  details a { display: inline-block; padding-block: .6rem; color: var(--signal); }
+  @media(max-width: 600px) { .research-row { grid-template-columns: 1fr; } details { grid-column: 1; } }
+</style>

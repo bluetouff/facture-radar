@@ -218,5 +218,245 @@
       "esker-status-2026-09"
     ],
     "limitations": "Périmètre limité à l’environnement G. Surveillance après correctif annoncée à 09 h 50 UTC ; résolution complète à confirmer."
+  },
+  {
+    "id": "weproc-peppol-20260901",
+    "platformSlugs": [
+      "weproc"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "Échecs d’envoi sur le point d’accès Peppol",
+    "summary": "WeInvoice signale des erreurs réseau lors de l’envoi de documents vers plusieurs destinataires Peppol. La page d’état annonce ensuite le rétablissement.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-01T09:51:27Z",
+    "resolutionReportedAt": "2026-09-01T11:31:26Z",
+    "updatedAt": "2026-09-01T11:31:26Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "weproc-peppol-20260901-source"
+    ],
+    "limitations": "L’alerte porte sur les envois observés par WeInvoice. Le nombre de clients touchés et le début réel restent à préciser."
+  },
+  {
+    "id": "weproc-piste-20260901",
+    "platformSlugs": [
+      "weproc"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "title": "Appels à l’annuaire PISTE en échec, selon WeInvoice",
+    "summary": "WeInvoice publie une alerte sur des appels à l’annuaire PISTE en échec, puis annonce leur rétablissement.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-01T07:29:28Z",
+    "resolutionReportedAt": "2026-09-01T07:34:28Z",
+    "updatedAt": "2026-09-01T07:34:28Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "weproc-piste-20260901-source"
+    ],
+    "limitations": "Observation publiée par WeInvoice. Le périmètre global de l’annuaire et la cause exacte demandent une confirmation de son opérateur."
+  },
+  {
+    "id": "dokapi-emails-20260916",
+    "platformSlugs": [
+      "dokapi"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Envoi des e-mails interrompu",
+    "summary": "Dokapi signale l’arrêt de l’envoi des e-mails, puis leur reprise. L’éditeur indique examiner la réexpédition des messages en échec avant de clore l’avis.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-16T06:58:00Z",
+    "resolutionReportedAt": "2026-09-16T09:14:18Z",
+    "updatedAt": "2026-09-16T09:14:18Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "dokapi-emails-20260916-source"
+    ],
+    "limitations": "Le périmètre décrit est celui de l’application citée. L’impact sur les flux PA français reste à préciser."
+  },
+  {
+    "id": "spendesk-einvoice-20260904",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "Traitement des factures électroniques perturbé en France et en Belgique",
+    "summary": "Spendesk signale des retards de traitement des factures électroniques et des difficultés d’inscription de certains clients français. L’éditeur attribue les redémarrages du service à un manque de mémoire, puis annonce une résolution.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-04T07:59:00Z",
+    "resolutionReportedAt": "2026-09-04T09:52:12Z",
+    "updatedAt": "2026-09-04T09:52:12Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "spendesk-einvoice-20260904-source"
+    ],
+    "limitations": "L’éditeur situe le rétablissement à 11 h 51, heure de Paris ; l’avis de résolution est publié à 11 h 52. La chronologie affichée suit les notifications."
+  },
+  {
+    "id": "spendesk-access-20260902",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Accès à Spendesk et performances dégradés",
+    "summary": "Spendesk signale des erreurs de connexion et de fortes latences sur mobile et ordinateur, puis annonce le rétablissement du service.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-02T08:12:00Z",
+    "resolutionReportedAt": "2026-09-02T09:59:21Z",
+    "updatedAt": "2026-09-02T09:59:21Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "spendesk-access-20260902-source"
+    ],
+    "limitations": "Le périmètre décrit est celui de l’application citée. L’impact sur les flux PA français reste à préciser."
+  },
+  {
+    "id": "spendesk-microsoft-20260904",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "title": "Notifications vers les messageries Microsoft perturbées",
+    "summary": "Spendesk rapporte une perturbation chez son prestataire affectant les e-mails vers les messageries Microsoft et certaines fonctions associées. L’éditeur annonce ensuite la résolution.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-04T11:10:00Z",
+    "resolutionReportedAt": "2026-09-04T14:03:30Z",
+    "updatedAt": "2026-09-04T14:03:30Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "spendesk-microsoft-20260904-source"
+    ],
+    "limitations": "Source : Spendesk. Le texte laisse l’heure exacte du rétablissement sous forme de champ vide ; seule l’heure de publication de la résolution est retenue."
+  },
+  {
+    "id": "spendesk-transfers-20260916",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Virements internationaux indisponibles pour certains clients de l’EEE",
+    "summary": "Spendesk signale une indisponibilité des virements internationaux et d’autres opérations Wise dans l’Espace économique européen. Une intervention sur la connexion à Wise est suivie d’une phase de surveillance.",
+    "status": "monitoring",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-16T10:05:00Z",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-16T12:34:31Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "spendesk-transfers-20260916-source"
+    ],
+    "limitations": "L’avis concerne les paiements. Son périmètre ne décrit pas le traitement des factures électroniques."
+  },
+  {
+    "id": "invopop-console-20260910",
+    "platformSlugs": [
+      "invopop"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Ouverture des documents instable dans la console",
+    "summary": "Invopop signale des plantages intermittents de l’interface à l’ouverture des documents, puis publie un correctif et annonce le retour à la normale.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-10T15:41:53.079Z",
+    "resolutionReportedAt": "2026-09-10T16:36:54.418Z",
+    "updatedAt": "2026-09-10T16:36:54.418Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "invopop-console-20260910-source"
+    ],
+    "limitations": "Le périmètre décrit est celui de l’application citée. L’impact sur les flux PA français reste à préciser."
+  },
+  {
+    "id": "invopop-peppol-sml-20260902",
+    "platformSlugs": [
+      "invopop"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "title": "Inscriptions et recherches Peppol perturbées pendant une migration",
+    "summary": "Invopop indique que les inscriptions et recherches Peppol peuvent échouer pendant la migration du SML par OpenPeppol. L’avis est clos après l’annonce de la fin de migration.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-02T08:15:54.409Z",
+    "resolutionReportedAt": "2026-09-02T10:26:25.372Z",
+    "updatedAt": "2026-09-02T10:26:25.372Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "invopop-peppol-sml-20260902-source"
+    ],
+    "limitations": "Avis publié par Invopop sur une dépendance externe. L’étendue des échecs effectivement rencontrés par ses clients reste à préciser."
+  },
+  {
+    "id": "myunisoft-connection-20260916",
+    "platformSlugs": [
+      "myunisoft"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Accès à la production comptable et fiscale perturbé",
+    "summary": "MyUnisoft publie un avis sur des difficultés d’accès à son application de production comptable et fiscale. La fiche indique ensuite une résolution.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-16T13:10:31Z",
+    "resolutionReportedAt": "2026-09-16T13:18:36Z",
+    "updatedAt": "2026-09-16T13:18:36Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "myunisoft-connection-20260916-source"
+    ],
+    "limitations": "Le périmètre décrit est celui de l’application citée. L’impact sur les flux PA français reste à préciser."
+  },
+  {
+    "id": "myunisoft-display-20260915",
+    "platformSlugs": [
+      "myunisoft"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Affichage de certains menus perturbé",
+    "summary": "MyUnisoft signale des problèmes d’affichage dans certains menus de son application de production comptable et fiscale, puis indique une résolution.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-15T09:48:15Z",
+    "resolutionReportedAt": "2026-09-15T10:00:05Z",
+    "updatedAt": "2026-09-15T10:00:05Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "myunisoft-display-20260915-source"
+    ],
+    "limitations": "Le périmètre décrit est celui de l’application citée. L’impact sur les flux PA français reste à préciser."
+  },
+  {
+    "id": "tungsten-support-20260916",
+    "platformSlugs": [
+      "tungsten"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "title": "Centre d’assistance eInvoice Network perturbé",
+    "summary": "Tungsten signale une indisponibilité possible du centre d’assistance et de la création de tickets. L’éditeur attribue cette perturbation à un incident Salesforce.",
+    "status": "identified",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-16T10:17:20.636Z",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-16T10:17:20.636Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "tungsten-support-20260916-source"
+    ],
+    "limitations": "L’avis porte sur le support technique. Le composant eInvoice Network est mentionné sur la page, mais le texte décrit l’accès à l’assistance."
   }
 ]

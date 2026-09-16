@@ -8,8 +8,9 @@ const watch = incidentsForPlatform(slug);
   <span class="mono-label">Disponibilité & sécurité</span>
   <h2 id="incident-summary-title">Les incidents documentés</h2>
   <p>{watch.coverage.note}</p>
+  <p>Recherche de sécurité du {watch.security.checkedAt?.split("-").reverse().join("/")}. {watch.security.note}</p>
   {watch.incidents.length > 0 && <ul>{watch.incidents.slice(0, 3).map(event => <li><a href={`/incidents/#${event.id}`}>{event.title}</a><span>{incidentScopeLabels[event.scope]} · {incidentStatusLabels[event.status]}</span></li>)}</ul>}
-  {watch.coverage.checkedAt && <small>Revue du {watch.coverage.checkedAt.split("-").reverse().join("/")}. Évaluation de sécurité à compléter.</small>}
+  {watch.feeds.length > 0 && <small>{watch.feeds.length} source publique raccordée à la collecte quotidienne.</small>}
   <a class="incident-link" href={`/incidents/?plateforme=${slug}`}>Voir la veille et ses limites →</a>
 </section>
 <style>

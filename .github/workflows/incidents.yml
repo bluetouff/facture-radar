@@ -1,0 +1,65 @@
+name: Incident watch
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: incident-watch
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci --ignore-scripts
+      - name: Find preceding collection
+        id: previous
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          prior_run=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=incident-watch-state&per_page=100" --jq '[.artifacts[] | select(.expired == false and .workflow_run.head_branch == "main")] | sort_by(.created_at) | last | .workflow_run.id // empty')
+          echo "run_id=$prior_run" >> "$GITHUB_OUTPUT"
+      - name: Restore observations and pending review queue
+        if: steps.previous.outputs.run_id != ''
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
+        with:
+          name: incident-watch-state
+          path: tmp/incident-watch
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.previous.outputs.run_id }}
+      - name: Collect official public feeds
+        id: collect
+        run: npm run incidents:collect
+      - name: Preserve state, including after a source failure
+        if: always() && steps.collect.outcome != 'skipped'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: incident-watch-state
+          path: |
+            tmp/incident-watch/state.json
+            tmp/incident-watch/latest.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Archive source responses and review report
+        if: always() && steps.collect.outcome != 'skipped'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: incident-watch-evidence
+          path: tmp/incident-watch/20*/
+          if-no-files-found: error
+          retention-days: 30

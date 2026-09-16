@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
 import Pagination from "../components/Pagination.astro";
+import IncidentResearch from "../components/IncidentResearch.astro";
 import { platforms } from "../data/platforms";
 import { incidentWatchCorpus, incidentScopeLabels, incidentStatusLabels, incidentsForPlatform } from "../data/incident-watch";
 const watch = incidentWatchCorpus();
@@ -19,7 +20,7 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
       <span class="eyebrow"><InterfaceIcon name="target" /> L’observatoire des PA</span>
       <h1>Incidents &<br/>disponibilité.</h1>
       <p>Les signalements des éditeurs, leur évolution et les services concernés, réunis dans un journal sourcé.</p>
-      <div class="cover-actions"><a class="journal-link" href="#journal">Consulter les avis <InterfaceIcon name="arrow" /></a><a href="#sources">Explorer les sources</a></div>
+      <div class="cover-actions"><a class="journal-link" href="#journal">Consulter les avis <InterfaceIcon name="arrow" /></a><a href="#sources">Explorer les sources</a><a href="/incidents.xml">S’abonner au flux RSS ↗</a></div>
       <span class="watch-period">Depuis le 1er septembre 2026 · heures de Paris</span>
     </div>
     <aside class="watch-board" aria-labelledby="situation-title">
@@ -32,7 +33,7 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   <section class="shell watch-metrics" aria-label="Périmètre publié">
     <div><span class="metric-icon"><InterfaceIcon name="proof" /></span><strong>{watch.incidents.length}</strong><span>avis documentés<small>Certains avis se recoupent</small></span></div>
     <div><span class="metric-icon"><InterfaceIcon name="invoice" /></span><strong>{watch.incidents.filter(event => event.scope === "pa").length}</strong><span>avis sur les flux PA<small>Périmètre précisé par la source</small></span></div>
-    <div><span class="metric-icon"><InterfaceIcon name="search" /></span><strong>{reviewed.length}<em> / {platforms.length}</em></strong><span>plateformes revues<small>Disponibilité · couverture partielle</small></span></div>
+    <div><span class="metric-icon"><InterfaceIcon name="search" /></span><strong>{watch.research.length}</strong><span>PA recherchées<small><a href="#recherche">{reviewed.length} sources de disponibilité relues ↗</a></small></span></div>
   </section>
   <section class="shell watch-journal" id="journal" aria-labelledby="journal-title">
     <div class="section-head"><div><span class="mono-label">Le journal des incidents</span><h2 id="journal-title" tabindex="-1">Les derniers avis.</h2></div><a href="/api/incidents.json"><InterfaceIcon name="download" /> Données et sources JSON</a></div>
@@ -60,17 +61,19 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   </section>
   <section class="shell watch-sources" id="sources" aria-labelledby="sources-title">
     <div class="section-head"><div><span class="mono-label">Les sources</span><h2 id="sources-title" tabindex="-1">Les publications suivies.</h2></div><p>Pages d’état et historiques des éditeurs.<br/>Le détail de la revue figure sur chaque carte.</p></div>
+    <div class="collection-note"><InterfaceIcon name="route" /><div><strong>{new Set(watch.collection.feeds.flatMap(feed => feed.platformSlugs)).size} PA en collecte automatique sur {platforms.length}</strong><p>{watch.collection.feeds.length} sources au total, dont le CERT-FR, relevées une fois par jour. Les nouveaux avis et leurs modifications rejoignent une file de vérification. Les publications retenues alimentent ce journal et son <a href="/incidents.xml">flux RSS commun</a>.</p></div></div>
     <p class="result-count" id="source-count" role="status" aria-live="polite">{reviewed.length} sources de disponibilité consultées</p>
     <div class="coverage-list" id="source-list">{reviewed.map(item => <article class="source-card" id={`source-${item.platformSlug}`}>
       <div class="source-card-head"><span class="source-mark" aria-hidden="true">{name(item.platformSlug).slice(0, 1)}</span><div><h3><a href={`/plateformes/${item.platformSlug}/`}>{name(item.platformSlug)}</a></h3><span class="coverage-status" data-coverage={item.status}>{item.status === "partial" ? "Revue limitée" : "Historique relu"}</span></div><InterfaceIcon name="proof" /></div>
       <p>{item.note}</p><footer>{item.sourceIds.map(id => <a href={watch.sources.find(source => source.id === id)!.url} rel="noopener noreferrer">Consulter la source ↗</a>)}<small>Revue du {shortDate(item.checkedAt!)}</small></footer>
     </article>)}</div>
     <Pagination id="source-pagination" label="Pages des sources de disponibilité" total={reviewed.length} pageSize={3} controls="source-list" />
-    <p class="coverage-remaining"><InterfaceIcon name="search" /><span>La revue de l’historique reste à faire pour les <strong>{platforms.length - reviewed.length} autres plateformes</strong>.</span></p>
+    <p class="coverage-remaining"><InterfaceIcon name="search" /><span>La recherche couvre les 149 noms. Pour {platforms.length - reviewed.length} plateformes, l’historique de disponibilité demeure non documenté dans les sources retenues. <a href="#recherche">Consulter le détail par plateforme ↗</a></span></p>
   </section>
+  <IncidentResearch />
   <section class="shell watch-method" id="couverture" aria-labelledby="method-title">
     <div><span class="method-icon"><InterfaceIcon name="target" /></span><span class="mono-label">Périmètre de la veille</span><h2 id="method-title">Notre méthode de lecture.</h2><p>{watch.limit}</p><p>Chaque incident est rattaché au service décrit par la source : flux PA, application ou prestataire externe. Les informations sur un prestataire restent attribuées à l’éditeur qui les rapporte. Les horaires affichés sont ceux des notifications ; le début réel et la durée de l’interruption restent à préciser lorsque l’avis les omet.</p></div>
-    <div class="security-note"><span class="method-icon"><InterfaceIcon name="lock" /></span><span class="mono-label">Sécurité</span><h2>Une recherche distincte.</h2><p>{watch.securityReview.note}</p><p>Chaque signalement est vérifié avant publication. Nous distinguons les vulnérabilités, les campagnes de phishing et les revendications des compromissions confirmées.</p><a href="/contribuer/">Signaler une source ou demander une correction →</a></div>
+    <div class="security-note"><span class="method-icon"><InterfaceIcon name="lock" /></span><span class="mono-label">Sécurité</span><h2>Résultats de la recherche.</h2><p>{watch.securityReview.note}</p>{watch.securityReview.findings.map(finding => <details><summary>{finding.title}</summary><p>{finding.note}</p>{finding.sourceIds.map(id => <a href={watch.sources.find(source => source.id === id)!.url} rel="noopener noreferrer">Lire la source originale ↗</a>)}</details>)}<p>Les signalements encore à recouper restent dans le dossier de recherche. Les vulnérabilités et événements antérieurs sont présentés séparément des incidents de septembre.</p><a href="/contribuer/">Signaler une source ou demander une correction →</a></div>
   </section>
   <div id="coverage-data" hidden>{platforms.map(platform => <span data-slug={platform.slug}>{incidentsForPlatform(platform.slug).coverage.note}</span>)}</div>
 </BaseLayout>
@@ -157,6 +160,11 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   .event-sources ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; list-style: none; padding: 0; margin: 0; }
   .event-sources small { margin-left: auto; font-size: .65rem; color: var(--muted); }
   .watch-sources { border-top: 1px solid var(--line); }
+  .collection-note { display: flex; gap: 1rem; padding: 1.2rem; margin-block: 1rem; border: 1px solid #c4d3c7; border-radius: .65rem; background: #eaf0e8; }
+  .collection-note > :global(svg) { flex: none; color: #37604b; }
+  .collection-note strong { font-size: .85rem; color: #294734; font-weight: 550; }
+  .collection-note p { margin: .5rem 0 0; font-size: .77rem; line-height: 1.7; }
+  .collection-note a { text-decoration: underline; text-underline-offset: .2em; }
   .coverage-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
   .source-card { display: flex; flex-direction: column; padding: 1.3rem; background: #fffcf5; border: 1px solid var(--line); border-radius: .75rem; }
   .source-card-head { display: flex; align-items: center; gap: .8rem; }
