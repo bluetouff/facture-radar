@@ -1,0 +1,22 @@
+---
+import InterfaceIcon from "./InterfaceIcon.astro";
+interface Props { id: string; label: string; total: number; pageSize: number; controls: string }
+const { id, label, total, pageSize, controls } = Astro.props;
+const pages = Math.ceil(total / pageSize);
+---
+<nav class="pagination" id={id} aria-label={label} data-page-size={pageSize} hidden>
+  <button type="button" data-step="-1" aria-controls={controls}><span class="back"><InterfaceIcon name="arrow" /></span><span>Précédent</span></button>
+  <div class="page-numbers">{Array.from({ length: pages }, (_, index) => <button type="button" data-page={index + 1} aria-label={`Page ${index + 1}`} aria-controls={controls}>{index + 1}</button>)}</div>
+  <button type="button" data-step="1" aria-controls={controls}><span>Suivant</span><InterfaceIcon name="arrow" /></button>
+</nav>
+<style>
+  .pagination { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .6rem; margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+  button { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-width: 2.75rem; min-height: 2.75rem; padding: .6rem .8rem; border: 1px solid transparent; border-radius: .5rem; background: transparent; color: var(--bright); font-size: .8rem; cursor: pointer; }
+  button:hover:not(:disabled) { background: var(--surface-2); border-color: var(--line); }
+  button[aria-current="page"] { background: var(--bright); color: var(--ink); }
+  button[aria-current="page"]:hover { background: var(--bright); }
+  button:disabled { color: var(--muted); opacity: .5; cursor: default; }
+  .page-numbers { display: flex; flex-wrap: wrap; justify-content: center; gap: .25rem; }
+  .back { transform: rotate(180deg); }
+  @media(max-width: 400px) { .pagination { gap: .2rem; } button { padding-inline: .4rem; } button[data-step] > span:not(.back) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } }
+</style>

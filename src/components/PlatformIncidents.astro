@@ -9,7 +9,7 @@ const watch = incidentsForPlatform(slug);
   <h2 id="incident-summary-title">Les incidents documentés</h2>
   <p>{watch.coverage.note}</p>
   {watch.incidents.length > 0 && <ul>{watch.incidents.slice(0, 3).map(event => <li><a href={`/incidents/#${event.id}`}>{event.title}</a><span>{incidentScopeLabels[event.scope]} · {incidentStatusLabels[event.status]}</span></li>)}</ul>}
-  {watch.coverage.checkedAt && <small>Revue du {watch.coverage.checkedAt.split("-").reverse().join("/")}. Aucun bilan de sécurité exhaustif établi.</small>}
+  {watch.coverage.checkedAt && <small>Revue du {watch.coverage.checkedAt.split("-").reverse().join("/")}. Évaluation de sécurité à compléter.</small>}
   <a class="incident-link" href={`/incidents/?plateforme=${slug}`}>Voir la veille et ses limites →</a>
 </section>
 <style>

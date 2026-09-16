@@ -55,7 +55,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
       <span class="file-chip" data-file-name></span>
     </header>
 
-    <div class="scope-note"><InterfaceIcon name="shield" /><p><strong>Ce contrôle porte sur la structure du fichier.</strong> Il ne confirme ni son authenticité, ni toute sa conformité juridique, ni son acceptation finale par une plateforme.</p></div>
+    <div class="scope-note"><InterfaceIcon name="shield" /><p><strong>Ce contrôle porte sur la structure du fichier.</strong> L’authenticité et la conformité juridique exigent des vérifications complémentaires. La plateforme destinataire décide de l’acceptation finale.</p></div>
 
     <dl class="invoice-metadata" aria-label="Informations lues dans la facture">
       <div><dt>Format</dt><dd data-meta="format">-</dd></div>
@@ -70,7 +70,7 @@ const verifierSources = invoiceVerifierSourceIds.map((id) => {
 
     <div class="result-columns">
       <section class="check-panel" aria-labelledby="checks-title">
-        <div class="panel-heading"><span>01</span><div><small>Points contrôlés</small><h4 id="checks-title">Ce que contient le fichier</h4></div></div>
+        <div class="panel-heading"><span>01</span><div><small>Points contrôlés</small><h4 id="checks-title">Le contenu du fichier</h4></div></div>
         <ul class="check-list" data-checks></ul>
       </section>
       <section class="action-panel" aria-labelledby="actions-title">

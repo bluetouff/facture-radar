@@ -25,7 +25,7 @@ const tools = [
       <div class="agent-intro">
         <span class="eyebrow">MCP public · lecture seule</span>
         <h1>Les agents accèdent aux mêmes réponses que les humains.</h1>
-        <p>Un point d’entrée, cinq outils simples et tout le corpus public, dont la veille des incidents avec ses sources et ses limites. L’agent peut répondre, retrouver une fiche ou vérifier l’annuaire sans inventer ce qui manque.</p>
+        <p>Un point d’entrée, cinq outils simples et tout le corpus public, dont la veille des incidents avec ses sources et ses limites. L’agent peut répondre, retrouver une fiche ou vérifier l’annuaire en signalant les informations manquantes.</p>
         <div class="endpoint-card">
           <span><InterfaceIcon name="route" /> Endpoint Streamable HTTP</span>
           <code>{MCP_ENDPOINT}</code>
@@ -96,10 +96,10 @@ const tools = [
       </div>
 
       <p class="usage-method">
-        <strong>Ce que ces chiffres ne disent pas.</strong> Un appel n’est pas une personne.
+        <strong>Portée des statistiques.</strong> Les compteurs mesurent des appels.
         « Jours actifs répétés » compte les jours avec au moins un appel d’outil après le premier
-        jour observé ; sans identifiant persistant, PA Check ne compte ni clients uniques ni
-        intégrations récurrentes. Les séries quotidiennes et familles client sous le seuil
+        jour observé. Le nombre de clients uniques et d’intégrations récurrentes reste inconnu :
+        la mesure fonctionne sans identifiant persistant. Les séries quotidiennes et familles client sous le seuil
         de confidentialité k=5 restent masquées. <a href="/confidentialite/">Détail de la mesure</a>.
       </p>
     </div>
@@ -108,7 +108,7 @@ const tools = [
   <section class="shell agent-tools section" aria-labelledby="agent-tools-title">
     <header>
       <div><p class="mono-label">les outils</p><h2 id="agent-tools-title">Une intention par outil.</h2></div>
-      <p>Pas de boîte noire qui improvise une recommandation. Chaque appel lit des données déjà publiées et renvoie les documents associés.</p>
+      <p>Chaque appel lit les données publiées et renvoie les documents associés à sa réponse.</p>
     </header>
     <div class="tool-ledger">
       {tools.map((tool, index) => (

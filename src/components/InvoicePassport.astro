@@ -23,7 +23,7 @@ const routeSources = (sourceIds: string[]) => [...new Set(sourceIds)]
     <div>
       <p class="passport-kicker"><span>OPTIONS D'ENVOI</span> {PASSPORT_VERSION}</p>
       <h3 id="passport-title">Où envoyer votre facture ensuite&nbsp;?</h3>
-      <p>Choisissez une plateforme pour voir ce qu'elle publie et le point à vérifier avant de vous engager.</p>
+      <p>Choisissez une plateforme pour consulter sa documentation et le point à vérifier avant de vous engager.</p>
     </div>
     <div class="passport-date"><small>Données contrôlées</small><strong>{PASSPORT_CHECKED_AT.split("-").reverse().join("/")}</strong></div>
   </header>
@@ -45,7 +45,7 @@ const routeSources = (sourceIds: string[]) => [...new Set(sourceIds)]
     <div class="route-picker-copy">
       <p class="mono-label">plateformes renseignées</p>
       <h4>Quelle plateforme voulez-vous examiner&nbsp;?</h4>
-      <p>Choisissez-en une pour voir son mode d'envoi, son coût connu et ce qu'il reste à vérifier.</p>
+      <p>Choisissez-en une pour voir son mode d'envoi, son coût connu et les points à vérifier.</p>
     </div>
     <div class="route-tabs" role="tablist" aria-label="Plateformes documentées">
       {passportRoutes.map((route, index) => (

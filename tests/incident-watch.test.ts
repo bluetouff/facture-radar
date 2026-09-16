@@ -17,7 +17,7 @@ test("les avis distinguent PA, application et dépendance sans durée inventée"
   assert.ok(platformIncidents.every(event => event.startedAt === null));
   assert.equal(incidentsForPlatform("abby").coverage.status, "not_reviewed");
   assert.equal(incidentsForPlatform("qonto").incidents.length, 0);
-  assert.match(incidentsForPlatform("qonto").coverage.note, /ne démontre pas/);
+  assert.match(incidentsForPlatform("qonto").coverage.note, /reste à vérifier séparément/);
   assert.equal(incidentWatchCorpus().coverage.length, 149);
 });
 test("chronologies et preuves d’incident invalides sont refusées", () => {

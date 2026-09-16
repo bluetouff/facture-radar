@@ -8,13 +8,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 >
   <section class="shell page-hero compact-hero">
     <span class="eyebrow">confidentialité · version du 15 septembre 2026</span>
-    <h1>Ce que PA Check reçoit, et ce qu’il ne reçoit pas.</h1>
+    <h1>Vos données, du navigateur au serveur.</h1>
     <p>Le site fonctionne sans compte et sans traceur publicitaire. Les outils interactifs ont été conçus pour limiter les données transmises au strict nécessaire.</p>
   </section>
   <section class="shell policy-layout">
     <article class="prose">
       <h2>Vérifier une facture</h2>
-      <p>Le PDF Factur-X ou le XML sélectionné reste dans votre navigateur. Le fichier n’est ni téléversé, ni enregistré, ni envoyé au serveur MCP. Fermer ou recharger la page efface le résultat du contrôle.</p>
+      <p>Le PDF Factur-X ou le XML sélectionné reste dans votre navigateur. Le contrôle s’effectue localement, sans transfert du fichier ni conservation après la session. Fermer ou recharger la page efface le résultat du contrôle.</p>
 
       <h2>Utiliser les parcours</h2>
       <p>Les réponses du diagnostic et du vérificateur d’outil restent dans votre navigateur. Le diagnostic peut placer des critères non personnels dans le fragment de l’URL afin de permettre un partage ; ce fragment n’est pas transmis au serveur.</p>
@@ -26,10 +26,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <h2>Statistiques MCP anonymisées</h2>
       <p>PA Check conserve pendant 91 jours des compteurs agrégés par jour : requêtes MCP, appels d’outils, lectures de ressources, résultat du transport et latence dans des tranches bornées. Lors de l’initialisation, le nom déclaré par le client est immédiatement ramené à une famille stable ; aucun nom libre ni chaîne user-agent n’est conservé.</p>
-      <p>Cette mesure ne stocke ni adresse IP, ni contenu de requête ou de réponse, ni cookie, session, empreinte ou identifiant persistant. Les sondes internes sont exclues avant agrégation. Les séries quotidiennes, la date du dernier appel et les familles client sous le seuil de confidentialité k=5 ne sont pas publiées. PA Check peut mesurer des jours d’usage répété, mais pas des personnes, clients ou intégrations uniques.</p>
+      <p>Seuls les compteurs agrégés sont conservés. Adresses IP, contenus des échanges, cookies, sessions, empreintes et identifiants persistants sont exclus de ces statistiques. Les sondes internes sont exclues avant agrégation. Les séries quotidiennes, la date du dernier appel et les familles client sous le seuil de confidentialité k=5 ne sont pas publiées. La mesure porte sur des jours d’usage répété. Le nombre de personnes, de clients et d’intégrations uniques reste inconnu.</p>
 
       <h2>Journaux techniques</h2>
-      <p>Comme la plupart des services web, l’hébergement produit des journaux techniques pouvant contenir l’adresse IP, la date, l’URL demandée, le code de réponse et le navigateur déclaré. Ils servent à la sécurité, au diagnostic et à la mesure technique du service. Ils ne sont ni enrichis avec un profil commercial, ni vendus.</p>
+      <p>Comme la plupart des services web, l’hébergement produit des journaux techniques pouvant contenir l’adresse IP, la date, l’URL demandée, le code de réponse et le navigateur déclaré. Ils servent à la sécurité, au diagnostic et à la mesure technique du service. Leur usage est strictement technique, sans profilage commercial ni revente.</p>
 
       <h2>Liens externes et contact</h2>
       <p>Les liens vers les sources et les plateformes mènent à des sites tiers qui appliquent leurs propres règles. Pour une question relative aux données ou demander l’examen d’un journal vous concernant, écrivez à <a href="mailto:olivier@l0g.fr">olivier@l0g.fr</a>. Les informations légales de l’éditeur sont disponibles sur <a href="https://l0g.fr/rgpd/">l0g.fr</a>.</p>

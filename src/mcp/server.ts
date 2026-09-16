@@ -69,8 +69,8 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
       "Répondez d'abord à la question concrète de l'utilisateur.",
       "N'inventez jamais une fonction, un tarif ou une compatibilité absent du corpus.",
       "Lorsque le corpus indique qu'un point reste à confirmer, conservez cette limite.",
-      "Une observation du site public ne décrit ni l'application, ni l'hébergement des factures, et ne doit jamais devenir un score.",
-      "Ne demandez ni facture, ni SIREN, ni identifiant de compte. Le serveur ne traite que des informations publiques.",
+      "L’observation porte uniquement sur le site public. L’application et l’hébergement des factures exigent des sources distinctes. Toute conversion de cette observation en score est interdite.",
+      "Utilisez uniquement les informations publiques du corpus. Les factures, SIREN et identifiants de compte sont exclus des entrées acceptées.",
       "Pour contrôler un fichier Factur-X ou XML, renvoyez l'utilisateur vers https://pa.l0g.fr/verifier-une-facture/ : le fichier y reste dans son navigateur.",
       "Conditions d'utilisation : https://pa.l0g.fr/conditions-utilisation/. Confidentialité : https://pa.l0g.fr/confidentialite/. Sécurité : https://pa.l0g.fr/securite/.",
     ].join(" "),
@@ -120,7 +120,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
 
   server.registerTool("get_platform", {
     title: "Lire une fiche plateforme",
-    description: "Renvoie une fiche enrichie par son nom ou son identifiant : prix public, volume, fonctions, conditions, informations manquantes et documents liés. N'accepte ni URL ni récupération distante.",
+    description: "Renvoie une fiche enrichie par son nom ou son identifiant : prix public, volume, fonctions, conditions, informations manquantes et documents liés. Recherche limitée au corpus local ; les URL et récupérations distantes sont exclues.",
     inputSchema: z.object({
       name: z.string().trim().min(2).max(80).describe("Nom ou identifiant exact de la plateforme"),
     }).strict(),

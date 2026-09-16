@@ -926,7 +926,7 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
       baseMonthlyFrom: 99,
       paMonthlySurcharge: null,
       label: "Yooz Business Edition est affichée à partir de 99 € par mois.",
-      caveat: "Le prix d'appel ne précise ni le volume inclus ni le surcoût propre à la PA. Un devis reste nécessaire.",
+      caveat: "Le volume inclus et le surcoût propre à la PA restent à préciser dans un devis.",
       sourceIds: ["yooz-pricing-2026"],
     }),
     afterActivationActions: [testReceipt("Yooz")],

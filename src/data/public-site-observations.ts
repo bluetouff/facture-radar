@@ -27,7 +27,7 @@ const observed = (override: ObservedOverride): PublicSiteObservation => ({
   checkedAt: TRACKER_OBSERVATION_CHECKED_AT,
   consentState: "before-choice",
   methodologyVersion: "1.0",
-  note: "Chargement unique de la page publique dans un profil Chrome neuf, sans accepter ni refuser le bandeau. Observation ponctuelle du site vitrine, sans conclusion sur l'application ni sur l'hébergement des factures.",
+  note: "Chargement unique de la page publique dans un profil Chrome neuf, avant tout choix dans le bandeau. Observation ponctuelle limitée au site vitrine ; l’application et l’hébergement des factures demandent une étude distincte.",
   ...override,
 });
 

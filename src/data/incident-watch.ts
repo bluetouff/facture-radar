@@ -56,25 +56,25 @@ export const incidentStatusLabels = { investigating: "Investigation annoncée", 
 // A reviewed public page does not establish full historical or PA coverage.
 export const incidentCoverage = [
   { platformSlug: "sage", sourceIds: ["sage-status-2026-09"], checkedAt: "2026-09-16", status: "reviewed", note: "Historique public du 1er au 16 septembre : avis de facturation française et services citant la France. Autres pays et maintenances exclus." },
-  { platformSlug: "pennylane", sourceIds: ["pennylane-status-2026-09"], checkedAt: "2026-09-16", status: "reviewed", note: "Historique public du 1er au 16 septembre relu. Le service Application est décrit ; le périmètre PA n’est pas isolé." },
-  { platformSlug: "qonto", sourceIds: ["qonto-status-2026-09"], checkedAt: "2026-09-16", status: "reviewed", note: "La page officielle de septembre n’affiche pas d’incident lors du contrôle. Cela ne démontre pas l’absence d’incident PA ou bancaire." },
-  { platformSlug: "esker", sourceIds: ["esker-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Avis visibles par environnement consultés. L’environnement G est explicitement concerné ; l’historique complet depuis le 1er septembre n’est pas établi." },
-  { platformSlug: "sellsy", sourceIds: ["sellsy-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "État courant public consulté. Historique depuis le 1er septembre et disponibilité de la PA non établis ; collecte automatique refusée par le site." },
-  { platformSlug: "dext", sourceIds: ["dext-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Rapport HTTP de Dext Prepare consulté. La fenêtre affichée ne couvre pas toute la période et ne mesure pas la PA française." },
+  { platformSlug: "pennylane", sourceIds: ["pennylane-status-2026-09"], checkedAt: "2026-09-16", status: "reviewed", note: "Historique public du 1er au 16 septembre relu. Les avis portent sur l’application. Leur impact éventuel sur les flux PA reste à documenter." },
+  { platformSlug: "qonto", sourceIds: ["qonto-status-2026-09"], checkedAt: "2026-09-16", status: "reviewed", note: "L’historique officiel de septembre était vide lors du contrôle. La disponibilité de la PA et des services bancaires reste à vérifier séparément." },
+  { platformSlug: "esker", sourceIds: ["esker-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Revue des avis affichés par environnement, dont celui concernant l’environnement G. L’historique depuis le 1er septembre reste à compléter." },
+  { platformSlug: "sellsy", sourceIds: ["sellsy-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "État courant consulté. L’historique depuis le 1er septembre et la disponibilité de la PA restent à documenter. Le site refuse notre collecte automatique." },
+  { platformSlug: "dext", sourceIds: ["dext-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Le rapport HTTP de Dext Prepare couvre une partie de la période. Un suivi propre à la PA française reste à documenter." },
 ] as const;
-export const incidentWatchLimit = "Veille de publications publiques, sans test des flux de facturation. Une absence d’avis ne prouve ni la disponibilité ni la sécurité. Les avis peuvent se recouper : aucun classement ni taux de disponibilité n’en est déduit.";
+export const incidentWatchLimit = "Ce journal repose sur les communications des éditeurs. Certains avis concernent le même incident. Leur nombre reflète les informations publiées, avec une couverture variable selon les plateformes. L’évaluation de la disponibilité et de la sécurité exige aussi des mesures techniques et des audits.";
 export const securityReview = {
   checkedAt: "2026-09-16",
   status: "partial" as const,
-  note: "Recherche publique ciblée sur Sage, Pennylane, Qonto, Cegid, Tiime, Abby, Indy, Sellsy, Doxallia, SuperPDP, Esker et Yooz, dont les publications CERT-FR. Aucun incident de sécurité confirmé retenu dans cette première revue. Elle n’est pas exhaustive et ne vaut pas constat d’absence d’incident pour les 149 PA.",
+  note: "La première recherche porte sur Sage, Pennylane, Qonto, Cegid, Tiime, Abby, Indy, Sellsy, Doxallia, SuperPDP, Esker et Yooz, ainsi que sur les publications CERT-FR. À ce stade, les éléments recueillis restent insuffisants pour confirmer un incident de sécurité. La couverture des 149 PA reste à compléter.",
 };
 export function incidentsForPlatform(slug: string) {
   return {
     since: INCIDENT_WATCH_SINCE,
-    coverage: incidentCoverage.find(item => item.platformSlug === slug) ?? { platformSlug: slug, status: "not_reviewed", checkedAt: null, sourceIds: [], note: "L’historique public des incidents de cette plateforme n’a pas encore fait l’objet d’une revue publiée." },
+    coverage: incidentCoverage.find(item => item.platformSlug === slug) ?? { platformSlug: slug, status: "not_reviewed", checkedAt: null, sourceIds: [], note: "Cette fiche attend une revue de son historique d’incidents." },
     incidents: platformIncidents.filter(event => event.platformSlugs.includes(slug)),
     limit: incidentWatchLimit,
-    security: { status: "not_established", note: "Aucun bilan de sécurité exhaustif de cette plateforme n’est établi par PA Check." },
+    security: { status: "not_established", note: "L’évaluation de sécurité de cette plateforme reste à établir." },
   };
 }
 export function incidentWatchCorpus() {

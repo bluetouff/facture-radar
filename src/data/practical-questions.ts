@@ -708,7 +708,7 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
     title: "Comment vérifier mon Factur-X avant de l'envoyer ?",
     description: "Un premier contrôle local permet de repérer un PDF sans XML, un format inattendu ou des informations essentielles absentes.",
     shortAnswer: "Commencez par contrôler le fichier sur votre appareil, puis vérifiez le parcours d'envoi de votre plateforme.",
-    answerDetail: "PA Check lit localement le PDF ou le XML et signale ce qu'il reconnaît. Ce contrôle ne remplace pas la validation complète de la plateforme destinataire, mais il évite de découvrir trop tard un fichier ordinaire ou incomplet.",
+    answerDetail: "PA Check lit localement le PDF ou le XML, identifie les éléments structurés et relève les anomalies. La plateforme destinataire effectue ensuite sa propre validation.",
     recommendations: [
       {
         label: "Contrôle local du fichier",
@@ -1003,8 +1003,8 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
         sourceIds: [],
       },
       {
-        label: "Ne complétez pas avec le DNS",
-        detail: "Le fournisseur qui sert le site vitrine ne prouve ni le stockage des factures, ni l'accès aux données de la plateforme.",
+        label: "Demandez un document sur l’hébergement",
+        detail: "Le site vitrine et la plateforme peuvent utiliser des infrastructures différentes. Le stockage des factures et les accès aux données doivent être documentés pour le service concerné.",
         state: "confirm",
         platformSlug: null,
         href: "/methodologie/",
@@ -1030,7 +1030,7 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
     title: "Quels traceurs le site public de la plateforme charge-t-il ?",
     description: "PA Check observe une page publique dans un navigateur neuf, avant tout choix dans le bandeau de consentement.",
     shortAnswer: "La fiche montre une observation datée du site vitrine, jamais une note de sécurité de la plateforme.",
-    answerDetail: "Les domaines tiers chargés sont rapprochés d'une version figée de DuckDuckGo Tracker Radar. Seuls les domaines classés dans une catégorie de suivi sont affichés. L'observation ne décrit ni l'application connectée, ni les factures, ni l'hébergement.",
+    answerDetail: "Les domaines tiers chargés sont rapprochés d'une version figée de DuckDuckGo Tracker Radar. Seuls les domaines classés dans une catégorie de suivi sont affichés. L’observation se limite à la page publique chargée. L’application connectée, les factures et leur hébergement demandent une étude distincte.",
     recommendations: [
       {
         label: "Lire la date et l'URL finale",

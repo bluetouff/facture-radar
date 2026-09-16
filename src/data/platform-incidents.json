@@ -17,7 +17,7 @@
     "sourceIds": [
       "sage-incident-w04d6drd7g3n"
     ],
-    "limitations": "Le début réel et le nombre de clients touchés ne sont pas publiés."
+    "limitations": "Début réel et nombre de clients touchés : informations à préciser."
   },
   {
     "id": "sage-fjh6wx81xg1p",
@@ -37,7 +37,7 @@
     "sourceIds": [
       "sage-incident-fjh6wx81xg1p"
     ],
-    "limitations": "Plusieurs phases de rétablissement et de surveillance. La période entre les notifications ne mesure pas une panne continue. Le volet raccordement recoupe l’avis du 5 septembre."
+    "limitations": "L’avis décrit plusieurs phases de rétablissement et de surveillance, avec un volet raccordement également évoqué le 5 septembre. La durée totale d’interruption reste à préciser."
   },
   {
     "id": "sage-rhf8nv5dd1rq",
@@ -57,7 +57,7 @@
     "sourceIds": [
       "sage-incident-rhf8nv5dd1rq"
     ],
-    "limitations": "Avis distinct publié par Sage, avec un chevauchement thématique avec celui du 2 septembre. Ne pas additionner leurs durées."
+    "limitations": "Cet avis recoupe le volet raccordement de celui du 2 septembre. Leur chevauchement empêche de calculer une durée cumulée fiable."
   },
   {
     "id": "sage-qgr9wjcbs466",
@@ -77,7 +77,7 @@
     "sourceIds": [
       "sage-incident-qgr9wjcbs466"
     ],
-    "limitations": "Information attribuée à Sage. Confirmation directe de l’AIFE non archivée ; cet avis ne désigne pas une défaillance de l’infrastructure Sage."
+    "limitations": "Sage attribue le ralentissement au PPF. Une confirmation directe de l’AIFE reste à obtenir."
   },
   {
     "id": "sage-9zgm55t360kp",
@@ -137,7 +137,7 @@
     "sourceIds": [
       "sage-incident-yh0mj6qwrmcy"
     ],
-    "limitations": "L’avis mentionne aussi d’autres pays. Il ne précise pas d’impact sur les flux PA français."
+    "limitations": "L’avis couvre plusieurs pays. L’impact sur les flux PA français reste à préciser."
   },
   {
     "id": "sage-2xx8jjz4pxfz",
@@ -177,7 +177,7 @@
     "sourceIds": [
       "sage-incident-v9p9p0xfp5qj"
     ],
-    "limitations": "L’avis ne vise pas explicitement le raccordement à la PA."
+    "limitations": "L’avis porte sur la création de comptes Sage Active. L’impact éventuel sur le raccordement PA reste à préciser."
   },
   {
     "id": "pennylane-zfpsp7z9wn1z",
@@ -197,7 +197,7 @@
     "sourceIds": [
       "pennylane-incident-zfpsp7z9wn1z"
     ],
-    "limitations": "L’avis ne précise pas d’impact sur les échanges PA. 11 h 15 est l’heure de la première notification, pas une preuve du début de l’incident."
+    "limitations": "11 h 15 correspond à la première notification. Le début réel de l’incident et son impact sur les échanges PA restent à préciser."
   },
   {
     "id": "esker-french-b2b-20260915",
@@ -217,6 +217,6 @@
     "sourceIds": [
       "esker-status-2026-09"
     ],
-    "limitations": "Périmètre limité à l’environnement G. La notification indique une surveillance après correctif à 09 h 50 UTC, pas une résolution complète."
+    "limitations": "Périmètre limité à l’environnement G. Surveillance après correctif annoncée à 09 h 50 UTC ; résolution complète à confirmer."
   }
 ]

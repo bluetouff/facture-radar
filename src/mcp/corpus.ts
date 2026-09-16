@@ -327,7 +327,7 @@ export function findPlatforms(input: PlatformSearchInput) {
     })),
     note: eligible.length > 0
       ? `Toutes les options confirmées ont le même statut. ${isTruncated ? `La réponse affiche les ${selected.length} premières par ordre alphabétique sur ${eligible.length}. ` : ""}Aucun score ni classement caché. Vérifiez le contrat et l'activation correspondant à votre offre.`
-      : `Aucune fiche ne répond à tous les critères documentés. ${isTruncated ? `La réponse affiche les ${selected.length} premières fiches par ordre alphabétique. ` : ""}Les options indiquent ce qui bloque ou reste à confirmer, sans classement.`,
+      : `Aucune fiche ne répond à tous les critères documentés. ${isTruncated ? `La réponse affiche les ${selected.length} premières fiches par ordre alphabétique. ` : ""}Les options détaillent les critères bloquants et les points à confirmer, sans classement.`,
   };
 }
 
@@ -392,7 +392,7 @@ export function corpusManifest(revision: CorpusRevision) {
     limits: [
       "Le corpus reprend des informations publiques datées.",
       "Une information absente reste à confirmer et n'est pas transformée en oui.",
-      "Le serveur ne reçoit ni facture, ni SIREN, ni donnée de compte.",
+      "Le serveur accepte uniquement des questions et critères sur le corpus public ; factures, SIREN et données de compte sont exclus.",
       "Le contrôle de fichier reste exclusivement dans le navigateur du site.",
     ],
   };

@@ -185,7 +185,7 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       receivesInvoices: available("Qonto Facturation, avec ou sans compte professionnel", ["qonto-invoicing-2026", "qonto-flow-2026"]),
       eReporting: documented({ stage: "beta", scope: "Certaines organisations éligibles" }, ["qonto-ereporting-2026"], "L’aide relue le 14 septembre limite toujours l’accès à une bêta pour certaines organisations françaises et les transactions B2B transfrontalières, sur le web.", "2026-09-14"),
     },
-    terminationTerms: documented("Le changement de PA est initié par la nouvelle plateforme et confirmé par le client par courriel. Qonto annonce un transfert effectif sous cinq jours ouvrés après confirmation. Cette portabilité ne prouve pas l’export de tout l’historique des factures.", ["qonto-formats-portability-2026-09"], undefined, "2026-09-16"),
+    terminationTerms: documented("Le changement de PA est initié par la nouvelle plateforme et confirmé par le client par courriel. Qonto annonce un transfert effectif sous cinq jours ouvrés après confirmation. L’export complet de l’historique des factures reste à documenter séparément.", ["qonto-formats-portability-2026-09"], undefined, "2026-09-16"),
   },
   sellsy: {
     availability: {

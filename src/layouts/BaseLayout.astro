@@ -46,7 +46,7 @@ const resourceNav = [
   { href: "/a-propos/", label: "Pourquoi PA Check ?", hint: "De l’enquête l0g à l’outil", icon: "route" },
   { href: "/contribuer/", label: "Mettre à jour une fiche", hint: "Pour les plateformes agréées", icon: "action" },
   { href: "/agents/", label: "Accès pour les agents", hint: "MCP public et corpus complet", icon: "route" },
-  { href: "/methodologie/", label: "Sources et méthode", hint: "Ce qui est vérifié, déclaré ou inconnu", icon: "shield" },
+  { href: "/methodologie/", label: "Sources et méthode", hint: "Documents, vérifications et points à confirmer", icon: "shield" },
 ] as const;
 const footerGroups = [
   {
@@ -214,7 +214,7 @@ const resourceIsCurrent = resourceNav.some(({ href }) => isCurrent(href));
           <div class="footer-investigation-copy">
             <p class="footer-kicker"><span>l0g</span> L’enquête à l’origine de PA Check</p>
             <h2>Le grand péage<br />de la facture</h2>
-            <p>Cinq volets pour comprendre ce que la réforme change concrètement : l’architecture, le marché, les prix, les données et la continuité.</p>
+            <p>Cinq volets pour comprendre les effets concrets de la réforme : l’architecture, le marché, les prix, les données et la continuité.</p>
             <strong>Lire l’enquête sur l0g.fr <InterfaceIcon name="arrow" /></strong>
           </div>
           <FolioArt variant="publication" />

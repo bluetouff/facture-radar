@@ -4,13 +4,13 @@ Première revue : 16 septembre 2026. Période : depuis le 1er septembre 2026, he
 
 ## Publication
 
-- `/incidents/` présente les avis, filtres, chronologies et limites de couverture.
+- `/incidents/` présente les avis, filtres, chronologies et limites de couverture. Le journal affiche cinq avis par page ; les sources de disponibilité ont une pagination indépendante de trois cartes. Les filtres et pages sont conservés dans l’URL. Un lien direct révèle la page de son avis, y compris si les filtres de l’URL sont incompatibles. Sans JavaScript, tous les avis et sources restent accessibles.
 - Chaque fiche PA contient une section et un lien vers son historique filtré.
 - `/api/incidents.json`, `/api/corpus.json`, `llms-full.txt`, la ressource MCP `pacheck://corpus/incidents` et `get_platform` utilisent le même corpus.
 - Les onze premières entrées sont des **avis**, pas onze pannes indépendantes. Les deux avis Sage sur le raccordement se recoupent. Aucun classement, score de sécurité ou taux de disponibilité ne découle du nombre d’avis.
 - Les six sources de disponibilité relues sont Sage, Pennylane, Qonto, Esker, Sellsy et Dext. Les 143 autres PA ont explicitement un historique non revu. Même parmi les six, la couverture PA ou historique peut être partielle.
 
-## Ce qu’un avis établit
+## Portée des avis
 
 `platform-incidents.json` est une sélection éditoriale de sources primaires, validée dans `incident-watch.ts`. Distinguer systématiquement :
 
@@ -21,6 +21,10 @@ Première revue : 16 septembre 2026. Période : depuis le 1er septembre 2026, he
 5. Lien original, auteur, périmètre et limites. Pour le PPF, la source est Sage, et non une confirmation archivée de l’AIFE.
 
 Une fenêtre entre deux notifications n’est jamais présentée comme une durée de panne. Une rubrique vide ne signifie ni zéro incident ni absence de fuite. La recherche de sécurité est distincte de la lecture des pages de disponibilité, et demeure partielle.
+
+## Rédaction des textes publics
+
+Écrire des phrases courtes et directes. Présenter le fait observé, le service concerné et les informations qui restent à obtenir. Les réserves doivent préciser la portée de la source ; éviter les séries de négations et les formules répétées comme « ne prouve ni… ni… ». Préférer des intitulés précis aux constructions répétées « ce qui… », « ce que… » et aux slogans en phrases miroirs.
 
 ## Collecte et revue quotidiennes
 

@@ -151,7 +151,7 @@ export const directRoutingOptions: DirectRoutingOption[] = [
     },
     priceSourceIds: ["dext-send-electronic-2026"],
     decisiveUnknown: "Les pages d'aide relient bien les factures importées au suivi PA, mais elles décrivent surtout le Factur-X créé dans Dext, pas la conservation d'un Factur-X produit ailleurs.",
-    nextStep: "Faites confirmer par Dext que l'import d'une vente conserve l'XML embarqué d'origine et n'impose ni recréation ni conversion OCR.",
+    nextStep: "Faites confirmer par Dext que l'import d'une vente conserve l'XML embarqué d'origine et permet la transmission directe, sans recréation du document ni conversion OCR.",
     profileHref: null,
   },
 ];

@@ -1,88 +1,182 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InterfaceIcon from "../components/InterfaceIcon.astro";
+import Pagination from "../components/Pagination.astro";
 import { platforms } from "../data/platforms";
 import { incidentWatchCorpus, incidentScopeLabels, incidentStatusLabels, incidentsForPlatform } from "../data/incident-watch";
 const watch = incidentWatchCorpus();
 const reviewed = watch.coverage.filter(item => item.status !== "not_reviewed");
 const open = watch.incidents.filter(event => event.status !== "resolved");
+const resolved = watch.incidents.filter(event => event.status === "resolved");
 const date = (value: string) => new Intl.DateTimeFormat("fr-FR", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Paris" }).format(new Date(value));
+const shortDate = (value: string) => value.split("-").reverse().join("/");
 const name = (slug: string) => platforms.find(platform => platform.slug === slug)!.displayName;
+const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route" } as const;
 ---
-<BaseLayout title="Incidents des PA : disponibilité et sécurité | PA Check" description="Avis d’incident sourcés depuis le 1er septembre 2026 : services touchés, chronologie, résolution et limites de la couverture des plateformes agréées.">
+<BaseLayout title="Incidents des PA : disponibilité et sécurité | PA Check" description="Avis d’incident sourcés depuis le 1er septembre 2026 : services touchés, chronologie, résolution et couverture des plateformes agréées.">
   <section class="shell watch-cover">
-    <div><span class="eyebrow">L’observatoire · depuis le 1er septembre 2026</span><h1>Quand le service<br/>ne suit plus.</h1><p>Ce qui a été signalé. Ce qui est rétabli.<br/>Et ce que l’on ne sait pas encore.</p><a href="#journal">Consulter les avis <span aria-hidden="true">↓</span></a></div>
-    <aside class="watch-note"><InterfaceIcon name="shield" /><span class="mono-label">Point de situation</span><h2>{open.length} avis<br/>à suivre</h2><p>Selon les dernières publications relues, au <time datetime={watch.checkedAt}>{watch.checkedAt.split("-").reverse().join("/")}</time>.</p><a href="#couverture">Voir le périmètre de la veille →</a><small>Ce relevé n’est pas une mesure en temps réel.</small></aside>
+    <div class="watch-intro">
+      <span class="eyebrow"><InterfaceIcon name="target" /> L’observatoire des PA</span>
+      <h1>Incidents &<br/>disponibilité.</h1>
+      <p>Les signalements des éditeurs, leur évolution et les services concernés, réunis dans un journal sourcé.</p>
+      <div class="cover-actions"><a class="journal-link" href="#journal">Consulter les avis <InterfaceIcon name="arrow" /></a><a href="#sources">Explorer les sources</a></div>
+      <span class="watch-period">Depuis le 1er septembre 2026 · heures de Paris</span>
+    </div>
+    <aside class="watch-board" aria-labelledby="situation-title">
+      <div class="board-heading"><span id="situation-title">Le point de situation</span><span class="review-date">Revue du <time datetime={watch.checkedAt}>{shortDate(watch.checkedAt)}</time></span></div>
+      <div class="board-counts"><div><span class="board-label"><span class="status-dot"></span> À suivre</span><strong>{open.length.toString().padStart(2, "0")}</strong><small>avis encore ouverts</small></div><div><span class="board-label"><InterfaceIcon name="check" /> Résolution annoncée</span><strong>{resolved.length.toString().padStart(2, "0")}</strong><small>avis clos par leur auteur</small></div></div>
+      {open.length > 0 ? <a class="board-event" href={`#${open[0]!.id}`}><span><small>{name(open[0]!.platformSlugs[0]!)} · {incidentStatusLabels[open[0]!.status]}</small><span>{open[0]!.title}</span></span><InterfaceIcon name="arrow" /></a> : <p class="board-event">Tous les avis publiés annoncent une résolution.</p>}
+      <p class="board-footnote">État des avis à la date de revue. <a href="#couverture">Périmètre de la veille ↗</a></p>
+    </aside>
   </section>
-  <section class="shell watch-metrics" aria-label="Périmètre publié"><div><strong>{watch.incidents.length}</strong><span>avis documentés<small>Des avis peuvent se recouper</small></span></div><div><strong>{reviewed.length}<em> / {platforms.length}</em></strong><span>sources de disponibilité relues<small>Couverture encore partielle</small></span></div><div><InterfaceIcon name="proof" /><span>Chaque avis a une source<small>Aucun score de fiabilité déduit</small></span></div></section>
+  <section class="shell watch-metrics" aria-label="Périmètre publié">
+    <div><span class="metric-icon"><InterfaceIcon name="proof" /></span><strong>{watch.incidents.length}</strong><span>avis documentés<small>Certains avis se recoupent</small></span></div>
+    <div><span class="metric-icon"><InterfaceIcon name="invoice" /></span><strong>{watch.incidents.filter(event => event.scope === "pa").length}</strong><span>avis sur les flux PA<small>Périmètre précisé par la source</small></span></div>
+    <div><span class="metric-icon"><InterfaceIcon name="search" /></span><strong>{reviewed.length}<em> / {platforms.length}</em></strong><span>plateformes revues<small>Disponibilité · couverture partielle</small></span></div>
+  </section>
   <section class="shell watch-journal" id="journal" aria-labelledby="journal-title">
-    <div class="journal-head"><div><span class="mono-label">Le journal des incidents</span><h2 id="journal-title">Le périmètre compte autant que le signal.</h2></div><a href="/api/incidents.json">Données et sources JSON ↗</a></div>
+    <div class="section-head"><div><span class="mono-label">Le journal des incidents</span><h2 id="journal-title" tabindex="-1">Les derniers avis.</h2></div><a href="/api/incidents.json"><InterfaceIcon name="download" /> Données et sources JSON</a></div>
     <form class="watch-filters" id="watch-filters" hidden>
       <label>Plateforme<select name="plateforme"><option value="">Toutes les plateformes</option>{platforms.map(platform => <option value={platform.slug}>{platform.displayName}</option>)}</select></label>
       <label>Nature<select name="nature"><option value="">Toutes</option><option value="availability">Disponibilité</option><option value="security">Sécurité</option></select></label>
-      <label>Périmètre<select name="perimetre"><option value="">Tous</option>{Object.entries(incidentScopeLabels).map(([value,label]) => <option value={value}>{label}</option>)}</select></label>
+      <label>Périmètre<select name="perimetre"><option value="">Tous les services</option>{Object.entries(incidentScopeLabels).map(([value,label]) => <option value={value}>{label}</option>)}</select></label>
+      <label>État<select name="statut"><option value="">Tous les états</option><option value="open">À suivre</option><option value="resolved">Résolution annoncée</option></select></label>
       <button type="reset">Effacer les filtres</button>
     </form>
     <p class="filter-coverage" id="filter-coverage" hidden></p>
-    <p class="result-count" id="incident-count" role="status" aria-live="polite">{watch.incidents.length} avis publiés · heures de Paris · classés par dernière mise à jour de la source</p>
-    <noscript><p>Tous les avis et leur couverture sont affichés ci-dessous. Les filtres nécessitent JavaScript.</p></noscript>
-    <div class="incident-list">{watch.incidents.map(event => <article class="incident-card" id={event.id} data-platforms={event.platformSlugs.join(" ")} data-kind={event.kind} data-scope={event.scope}>
-      <div class="incident-date"><time datetime={event.updatedAt}>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "short", timeZone: "Europe/Paris" }).format(new Date(event.updatedAt))}</time><span>{event.platformSlugs.map(name).join(", ")}</span></div>
-      <div class="incident-content"><div class="incident-tags"><span>{incidentScopeLabels[event.scope]}</span><span data-status={event.status}>{incidentStatusLabels[event.status]}</span></div><h3>{event.title}</h3><p>{event.summary}</p>
-        <details><summary>Chronologie, source et limites</summary><dl><div><dt>Premier signalement public</dt><dd><time datetime={event.firstReportedAt}>{date(event.firstReportedAt)}</time></dd></div><div><dt>Début réel</dt><dd>{event.startedAt ? date(event.startedAt) : "Non précisé dans la source"}</dd></div><div><dt>{event.resolutionReportedAt ? "Résolution annoncée" : "Dernière mise à jour de la source"}</dt><dd>{date(event.resolutionReportedAt ?? event.updatedAt)}</dd></div></dl><p class="event-limits">{event.limitations}</p><ul class="event-sources">{event.sourceIds.map(id => { const source = watch.sources.find(source => source.id === id)!; return <li><a href={source.url} rel="noopener noreferrer">{source.publisher} : avis original ↗</a> · consulté le {event.checkedAt.split("-").reverse().join("/")}</li>; })}</ul><a href={`/plateformes/${event.platformSlugs[0]}/`}>Voir la fiche de {name(event.platformSlugs[0]!)} →</a></details>
+    <p class="result-count" id="incident-count" role="status" aria-live="polite">{watch.incidents.length} avis publiés · classés par dernière mise à jour de la source</p>
+    <noscript><p>Tous les avis et toutes les sources sont affichés ci-dessous. Activez JavaScript pour les filtres et la pagination.</p></noscript>
+    <div class="incident-list" id="incident-list">{watch.incidents.map(event => <article class="incident-card" id={event.id} data-platforms={event.platformSlugs.join(" ")} data-kind={event.kind} data-scope={event.scope} data-status={event.status}>
+      <div class="incident-date"><time datetime={event.updatedAt}><strong>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", timeZone: "Europe/Paris" }).format(new Date(event.updatedAt))}</strong><span>{new Intl.DateTimeFormat("fr-FR", { month: "short", timeZone: "Europe/Paris" }).format(new Date(event.updatedAt))}</span></time><span>{event.platformSlugs.map(name).join(", ")}</span></div>
+      <div class="incident-content">
+        <div class="incident-tags"><span class="scope-tag"><InterfaceIcon name={scopeIcons[event.scope]} />{incidentScopeLabels[event.scope]}</span><span class="status-tag" data-status={event.status}><InterfaceIcon name={event.status === "resolved" ? "check" : event.status === "unknown" ? "question" : "alert"} />{incidentStatusLabels[event.status]}</span></div>
+        <h3><a href={`#${event.id}`}>{event.title}</a></h3><p>{event.summary}</p>
+        <details><summary>Chronologie et précisions <InterfaceIcon name="chevron" /></summary><dl><div><dt>Premier signalement public</dt><dd><time datetime={event.firstReportedAt}>{date(event.firstReportedAt)}</time></dd></div><div><dt>Début réel</dt><dd>{event.startedAt ? date(event.startedAt) : "À préciser par l’éditeur"}</dd></div><div><dt>{event.resolutionReportedAt ? "Résolution annoncée" : "Dernière mise à jour de la source"}</dt><dd>{date(event.resolutionReportedAt ?? event.updatedAt)}</dd></div></dl><p class="event-limits">{event.limitations}</p><a class="profile-link" href={`/plateformes/${event.platformSlugs[0]}/`}>Voir la fiche de {name(event.platformSlugs[0]!)} →</a></details>
+        <footer class="event-sources"><span class="source-label"><InterfaceIcon name="proof" /> Source</span><ul>{event.sourceIds.map(id => { const source = watch.sources.find(source => source.id === id)!; return <li><a href={source.url} rel="noopener noreferrer">{source.publisher} · avis original ↗</a></li>; })}</ul><small>Relu le {shortDate(event.checkedAt)}</small></footer>
       </div>
     </article>)}</div>
-    <p class="empty-state" id="no-incidents" hidden>Aucun avis publié ne correspond à ces filtres. Cela ne signifie pas qu’aucun incident n’a eu lieu. Consultez la couverture ci-dessous.</p>
+    <p class="empty-state" id="no-incidents" hidden>Aucun résultat pour ces filtres. Le détail de la couverture ci-dessous indique les plateformes et les périodes examinées.</p>
+    <Pagination id="incident-pagination" label="Pages du journal des incidents" total={watch.incidents.length} pageSize={5} controls="incident-list" />
   </section>
-  <section class="shell watch-method" id="couverture"><div><span class="mono-label">Lire les silences aussi</span><h2>Pas d’avis ne veut pas dire<br/>pas d’incident.</h2><p>{watch.limit}</p><p>Un incident de l’application n’est rattaché aux flux PA que si la source le précise. Un avis sur une dépendance externe reste attribué à son auteur. Les dates de notification ne servent pas à calculer une durée de panne.</p><h3>Et la sécurité ?</h3><p>{watch.securityReview.note}</p><p>Une vulnérabilité, une campagne de phishing ou une revendication non corroborée ne suffit pas à établir une compromission. Les signalements sont vérifiés avant publication.</p><a href="/contribuer/">Signaler une source ou demander une correction →</a></div>
-    <div class="coverage-list"><h3>Sources de disponibilité consultées</h3>{reviewed.map(item => <article><h4><a href={`/plateformes/${item.platformSlug}/`}>{name(item.platformSlug)}</a><span>{item.status === "partial" ? "Revue limitée" : "Historique relu"}</span></h4><p>{item.note}</p>{item.sourceIds.map(id => <a href={watch.sources.find(source => source.id === id)!.url} rel="noopener noreferrer">Source publique ↗</a>)}<small>Consultation : {item.checkedAt}</small></article>)}<p>Les {platforms.length - reviewed.length} autres fiches restent marquées « historique non revu ». Aucun feu vert ne leur est attribué.</p></div>
+  <section class="shell watch-sources" id="sources" aria-labelledby="sources-title">
+    <div class="section-head"><div><span class="mono-label">Les sources</span><h2 id="sources-title" tabindex="-1">Les publications suivies.</h2></div><p>Pages d’état et historiques des éditeurs.<br/>Le détail de la revue figure sur chaque carte.</p></div>
+    <p class="result-count" id="source-count" role="status" aria-live="polite">{reviewed.length} sources de disponibilité consultées</p>
+    <div class="coverage-list" id="source-list">{reviewed.map(item => <article class="source-card" id={`source-${item.platformSlug}`}>
+      <div class="source-card-head"><span class="source-mark" aria-hidden="true">{name(item.platformSlug).slice(0, 1)}</span><div><h3><a href={`/plateformes/${item.platformSlug}/`}>{name(item.platformSlug)}</a></h3><span class="coverage-status" data-coverage={item.status}>{item.status === "partial" ? "Revue limitée" : "Historique relu"}</span></div><InterfaceIcon name="proof" /></div>
+      <p>{item.note}</p><footer>{item.sourceIds.map(id => <a href={watch.sources.find(source => source.id === id)!.url} rel="noopener noreferrer">Consulter la source ↗</a>)}<small>Revue du {shortDate(item.checkedAt!)}</small></footer>
+    </article>)}</div>
+    <Pagination id="source-pagination" label="Pages des sources de disponibilité" total={reviewed.length} pageSize={3} controls="source-list" />
+    <p class="coverage-remaining"><InterfaceIcon name="search" /><span>La revue de l’historique reste à faire pour les <strong>{platforms.length - reviewed.length} autres plateformes</strong>.</span></p>
+  </section>
+  <section class="shell watch-method" id="couverture" aria-labelledby="method-title">
+    <div><span class="method-icon"><InterfaceIcon name="target" /></span><span class="mono-label">Périmètre de la veille</span><h2 id="method-title">Notre méthode de lecture.</h2><p>{watch.limit}</p><p>Chaque incident est rattaché au service décrit par la source : flux PA, application ou prestataire externe. Les informations sur un prestataire restent attribuées à l’éditeur qui les rapporte. Les horaires affichés sont ceux des notifications ; le début réel et la durée de l’interruption restent à préciser lorsque l’avis les omet.</p></div>
+    <div class="security-note"><span class="method-icon"><InterfaceIcon name="lock" /></span><span class="mono-label">Sécurité</span><h2>Une recherche distincte.</h2><p>{watch.securityReview.note}</p><p>Chaque signalement est vérifié avant publication. Nous distinguons les vulnérabilités, les campagnes de phishing et les revendications des compromissions confirmées.</p><a href="/contribuer/">Signaler une source ou demander une correction →</a></div>
   </section>
   <div id="coverage-data" hidden>{platforms.map(platform => <span data-slug={platform.slug}>{incidentsForPlatform(platform.slug).coverage.note}</span>)}</div>
 </BaseLayout>
 <script>
-  const form = document.querySelector<HTMLFormElement>("#watch-filters")!;
-  const cards = [...document.querySelectorAll<HTMLElement>(".incident-card")];
-  const coverage = document.querySelector<HTMLElement>("#filter-coverage")!;
-  const filters = ["plateforme", "nature", "perimetre"] as const;
-  const inputs = filters.map(key => form.elements.namedItem(key) as HTMLSelectElement);
-  const query = new URLSearchParams(location.search);
-  inputs.forEach((input, index) => { const value = query.get(filters[index]!); if (value && [...input.options].some(option => option.value === value)) input.value = value; });
-  function apply() {
-    const [platform, kind, scope] = inputs.map(input => input.value);
-    let count = 0;
-    for (const card of cards) {
-      const show = (!platform || card.dataset.platforms?.split(" ").includes(platform)) && (!kind || card.dataset.kind === kind) && (!scope || card.dataset.scope === scope);
-      card.hidden = !show;
-      if (show) count++;
-    }
-    document.querySelector("#incident-count")!.textContent = `${count} avis affiché${count > 1 ? "s" : ""} · heures de Paris · classés par dernière mise à jour`;
-    document.querySelector<HTMLElement>("#no-incidents")!.hidden = count !== 0;
-    coverage.textContent = [...document.querySelectorAll<HTMLElement>("#coverage-data [data-slug]")].find(item => item.dataset.slug === platform)?.textContent ?? "";
-    coverage.hidden = !platform;
-    const url = new URL(location.href);
-    inputs.forEach((input, index) => { if (input.value) url.searchParams.set(filters[index]!, input.value); else url.searchParams.delete(filters[index]!); });
-    history.replaceState(null, "", url);
-  }
-  form.hidden = false;
-  form.addEventListener("change", apply);
-  form.addEventListener("submit", event => event.preventDefault());
-  form.addEventListener("reset", () => { inputs.forEach(input => input.value = ""); apply(); });
-  apply();
+  import "../scripts/incident-journal";
 </script>
 <style>
-  .watch-cover { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; padding-block: 4rem 3rem; align-items: center; }
-  h1 { font-family: var(--font-title); font-size: clamp(2.25rem, 4vw, 3.5rem); font-weight: 400; letter-spacing: -.025em; line-height: 1.1; margin: 1rem 0; }
-  .watch-cover > div > p { color: var(--muted); font-size: 1.1rem; line-height: 1.65; } .watch-cover a, .watch-method a, details a, .journal-head > a { color: var(--signal); text-underline-offset: .2em; }
-  .watch-note { border: 1px solid var(--line); border-top: 2px solid var(--signal); padding: 1.8rem; background: #fffcf5; position: relative; } .watch-note :global(svg) { width: 1.7rem; height: 1.7rem; position: absolute; right: 1.5rem; top: 1.4rem; color: var(--signal); }
-  .watch-note h2 { font-size: 1.8rem; line-height: 1.2; font-weight: 400; margin-block: 1rem; } .watch-note p, .watch-note small { color: var(--muted); font-size: .82rem; line-height: 1.65; } .watch-note small { display: block; margin-top: 1.1rem; }
-  .watch-metrics { display: grid; grid-template-columns: repeat(3,1fr); border-block: 1px solid var(--line); } .watch-metrics > div { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 1rem; } .watch-metrics strong { font-size: 2.1rem; font-weight: 400; } .watch-metrics em { font-size: .85rem; font-style: normal; color: var(--muted); } .watch-metrics span { font-size: .85rem; } .watch-metrics small { display: block; margin-top: .3rem; color: var(--muted); font-size: .72rem; } .watch-metrics :global(svg) { width: 2rem; height: 2rem; flex: none; }
-  .watch-journal { padding-block: 3rem; scroll-margin-top: 7rem; } .journal-head { display: flex; justify-content: space-between; align-items: end; gap: 1rem; } h2 { font-weight: 400; font-size: 1.7rem; letter-spacing: -.025em; line-height: 1.25; } .journal-head > a { flex-shrink: 0; font-size: .8rem; padding-bottom: 1.5rem; }
-  .watch-filters { display: grid; grid-template-columns: 1.2fr .8fr 1fr auto; gap: 1rem; align-items: end; background: #eae5da; padding: 1rem; margin-block: 1rem; border-radius: .4rem; } label { display: grid; gap: .4rem; font-size: .75rem; } select { max-width: 100%; width: 100%; min-width: 0; background: #fffcf5; color: var(--bright); border: 1px solid #c9c5b9; border-radius: .3rem; padding: .75rem .5rem; font: inherit; font-size: .85rem; } button { background: transparent; border: 0; padding: .8rem; color: var(--signal); cursor: pointer; font: inherit; font-size: .8rem; }
-  .result-count { color: var(--muted); font-size: .76rem; margin-block: 1.2rem; } .filter-coverage,.empty-state { border-left: 2px solid var(--signal); padding: 1rem; background: #fffcf5; font-size: .85rem; line-height: 1.6; }
-  .incident-card { display: grid; grid-template-columns: 9rem minmax(0,1fr); gap: 2rem; padding: 1.8rem 0; border-top: 1px solid var(--line); scroll-margin-top: 7rem; } .incident-date time { font-size: 1.2rem; } .incident-date > span { display: block; margin-top: .5rem; color: var(--muted); font-size: .8rem; } .incident-content { max-width: 58rem; } .incident-tags { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .7rem; color: #575c52; } .incident-tags span { background: #e8e7df; padding: .3rem .55rem; border-radius: .2rem; } .incident-tags [data-status="monitoring"] { color: #84420b; background: #f6e6cc; } h3 { font-weight: 500; font-size: 1.2rem; line-height: 1.4; } .incident-content > p { color: var(--paper); font-size: .9rem; line-height: 1.7; }
-  details { font-size: .82rem; } summary { cursor: pointer; color: var(--signal); padding-block: .6rem; } dl { display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding-top: .5rem; } dt { color: var(--muted); font-size: .72rem; } dd { margin: .3rem 0; } .event-limits { padding: .8rem 1rem; border-left: 2px solid #b2af9e; background: #eae7de; line-height: 1.65; } .event-sources { padding-left: 1rem; line-height: 1.8; color: var(--muted); }
-  .watch-method { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-block: 2rem 4rem; border-top: 1px solid var(--line); scroll-margin-top: 7rem; } .watch-method p { color: var(--muted); font-size: .86rem; line-height: 1.8; } .watch-method > div > h3 { margin-top: 2rem; } .coverage-list > h3 { margin-top: 0 !important; } .coverage-list article { padding: 1rem 0; border-top: 1px solid var(--line); } h4 { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; margin: 0; font-size: .9rem; } h4 span { font-size: .68rem; color: var(--muted); font-weight: 400; } .coverage-list a { font-size: .78rem; } .coverage-list small { display: block; font-size: .7rem; color: var(--muted); margin-top: .5rem; }
-  [hidden] { display: none !important; } a, p, dd { overflow-wrap: anywhere; }
-  @media(max-width: 760px) { .watch-cover, .watch-method { grid-template-columns: 1fr; gap: 2rem; } .watch-cover { padding-top: 2.5rem; } .watch-metrics { grid-template-columns: 1fr; } .watch-metrics > div { padding: .8rem 0; } .journal-head { display: block; } .journal-head > a { display: inline-block; padding-bottom: .5rem; } .watch-filters { grid-template-columns: 1fr 1fr; gap: .8rem; } .incident-card { grid-template-columns: 1fr; gap: .8rem; } .incident-date { display: flex; gap: 1rem; align-items: center; } .incident-date > span { margin: 0; } }
-  @media(max-width: 380px) { .watch-filters { grid-template-columns: 1fr; } }
+  h1, h2 { font-family: var(--font-title); font-weight: 400; color: var(--bright); letter-spacing: -.02em; }
+  h1 { font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: 1.13; margin: 1.2rem 0; }
+  h2 { font-size: clamp(1.65rem, 2.6vw, 2rem); line-height: 1.25; margin: .85rem 0; }
+  a, p, dd { overflow-wrap: anywhere; }
+  .watch-cover { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); padding-block: 3.8rem 3rem; align-items: center; }
+  .eyebrow { gap: .5rem; }
+  .watch-intro > p { max-width: 32rem; font-size: 1.04rem; line-height: 1.75; }
+  .cover-actions { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; margin-top: 1.6rem; font-size: .85rem; }
+  .journal-link { display: inline-flex; align-items: center; gap: 1.5rem; background: var(--signal); color: #fff; padding: .85rem 1.15rem; border-radius: .5rem; }
+  .journal-link:hover { background: #9c2b15; color: #fff; }
+  .watch-period { display: block; margin-top: 1.4rem; font-size: .74rem; color: var(--muted); }
+  .watch-board { border: 1px solid #3b4035; padding: 1.5rem; color: #f6f3ec; background: #272c25; border-radius: .9rem; box-shadow: 0 1.5rem 3rem -2rem #23251f80; }
+  .board-heading { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; font-size: .82rem; border-bottom: 1px solid #ffffff20; padding-bottom: 1rem; }
+  .review-date { color: #c6cabe; font-size: .7rem; }
+  .board-counts { display: grid; grid-template-columns: 1fr 1fr; padding-block: 1.4rem; gap: 1rem; }
+  .board-counts > div + div { border-left: 1px solid #ffffff20; padding-left: 1.4rem; }
+  .board-label { display: flex; min-height: 2.4rem; align-items: center; gap: .5rem; font-size: .72rem; color: #e7d4b1; }
+  .board-counts > div + div .board-label { color: #b4d3c1; }
+  .board-label :global(svg) { width: 1rem; height: 1rem; flex: none; }
+  .status-dot { width: .5rem; height: .5rem; flex: none; border-radius: 50%; background: #dfb96f; box-shadow: 0 0 0 4px #dfb96f15; }
+  .board-counts strong { display: block; font-family: var(--font-title); font-weight: 400; font-size: 3.4rem; line-height: 1.3; font-variant-numeric: tabular-nums; }
+  .board-counts small { display: block; font-size: .7rem; color: #c6cabe; }
+  .board-event { display: flex; gap: 1rem; align-items: center; justify-content: space-between; border: 1px solid #dfb96f45; border-radius: .5rem; padding: 1rem; background: #dfb96f0a; font-size: .82rem; line-height: 1.55; }
+  .board-event:hover { color: #fff; border-color: #dfb96f; }
+  .board-event small { display: block; color: #e7c98e; font-size: .68rem; margin-bottom: .3rem; }
+  .board-event :global(svg) { flex: none; }
+  .board-footnote { font-size: .65rem; line-height: 1.8; margin: 1rem 0 0; color: #c6cabe; }
+  .board-footnote a { color: #f4e2bc; text-decoration: underline; text-underline-offset: .2em; }
+  .watch-metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-block: 1px solid var(--line); }
+  .watch-metrics > div { display: flex; align-items: center; gap: .9rem; padding: 1.4rem .8rem; }
+  .metric-icon { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; flex: none; border: 1px solid var(--line); border-radius: .75rem; background: #fffcf5; color: var(--signal); }
+  .watch-metrics strong { font-family: var(--font-title); font-size: 2rem; font-weight: 400; color: var(--bright); white-space: nowrap; }
+  .watch-metrics em { font-size: .8rem; font-style: normal; color: var(--muted); }
+  .watch-metrics span:not(.metric-icon) { font-size: .8rem; }
+  .watch-metrics small { display: block; margin-top: .25rem; color: var(--muted); font-size: .67rem; }
+  .watch-journal, .watch-sources { padding-block: 3rem; }
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1.3rem; }
+  .section-head > a { display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; color: var(--signal); margin-bottom: .9rem; }
+  .section-head > p { font-size: .8rem; color: var(--muted); line-height: 1.7; }
+  .watch-filters { display: grid; grid-template-columns: 1.1fr .8fr 1fr 1fr auto; gap: .75rem; align-items: end; padding: 1rem; background: #eae5da; border: 1px solid var(--line); border-radius: .65rem; }
+  label { display: grid; gap: .4rem; font-size: .73rem; color: var(--bright); }
+  select { width: 100%; min-width: 0; max-width: 100%; background: #fffcf5; color: var(--bright); border: 1px solid #c9c5b9; border-radius: .35rem; padding: .8rem .5rem; font-size: .8rem; }
+  button { background: transparent; border: 0; min-height: 2.75rem; padding: .8rem .25rem; color: var(--signal); cursor: pointer; font: inherit; font-size: .75rem; }
+  .result-count { color: var(--muted); font-size: .76rem; margin-block: 1.2rem; }
+  .filter-coverage, .empty-state { border-left: 2px solid var(--signal); padding: 1rem; background: #fffcf5; font-size: .85rem; line-height: 1.6; }
+  .incident-list { display: grid; gap: 1rem; }
+  .incident-card { display: grid; grid-template-columns: 6.5rem minmax(0,1fr); background: #fffdf8; border: 1px solid var(--line); border-radius: .75rem; overflow: clip; }
+  .incident-card:target { outline: 2px solid var(--signal); outline-offset: 3px; }
+  .incident-date { padding: 1.3rem .8rem; border-right: 1px solid var(--line); background: #f0ede5; text-align: center; }
+  .incident-date time { display: block; color: var(--bright); }
+  .incident-date strong { display: block; font-family: var(--font-title); font-weight: 400; font-size: 2.05rem; line-height: 1.15; }
+  .incident-date time span { font-size: .76rem; }
+  .incident-date > span { display: block; margin-top: .8rem; color: var(--muted); font-size: .72rem; overflow-wrap: anywhere; }
+  .incident-content { min-width: 0; padding: 1.25rem 1.5rem 0; }
+  .incident-tags { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .68rem; }
+  .incident-tags > span { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; padding: .3rem .6rem; }
+  .incident-tags :global(svg) { width: 1rem; height: 1rem; flex: none; }
+  .scope-tag { background: #efede6; color: #585c52; }
+  .status-tag { background: #fff1d8; color: #81500b; }
+  .status-tag[data-status="resolved"] { background: #e9f0eb; color: #37604b; }
+  .status-tag[data-status="unknown"] { background: #efede6; color: #585c52; }
+  .incident-content h3 { margin: .85rem 0 .5rem; color: var(--bright); font-size: 1.02rem; line-height: 1.5; font-weight: 550; }
+  .incident-content > p { margin: 0 0 .6rem; font-size: .85rem; line-height: 1.75; }
+  details { font-size: .8rem; }
+  summary { display: flex; align-items: center; gap: .5rem; width: fit-content; list-style: none; cursor: pointer; color: var(--signal); padding-block: .6rem; min-height: 2.75rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary :global(svg) { width: 1rem; height: 1rem; transition: transform .15s ease; }
+  details[open] summary :global(svg) { transform: rotate(180deg); }
+  dl { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; padding: 1rem; margin: .3rem 0; background: #f4f1ea; border-radius: .4rem; }
+  dt { color: var(--muted); font-size: .69rem; } dd { margin: .35rem 0 0; color: var(--bright); font-size: .77rem; }
+  .event-limits { padding-left: .8rem; border-left: 2px solid #b9b2a1; line-height: 1.75; }
+  .profile-link, .event-sources a, .source-card a, .watch-method a { color: var(--signal); text-underline-offset: .2em; }
+  .profile-link { display: inline-block; padding-block: .4rem 1rem; }
+  .event-sources { display: flex; align-items: center; gap: .6rem 1rem; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: .6rem; padding-block: .8rem; font-size: .72rem; }
+  .source-label { display: inline-flex; gap: .35rem; align-items: center; color: var(--muted); }
+  .source-label :global(svg) { width: 1rem; height: 1rem; }
+  .event-sources ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; list-style: none; padding: 0; margin: 0; }
+  .event-sources small { margin-left: auto; font-size: .65rem; color: var(--muted); }
+  .watch-sources { border-top: 1px solid var(--line); }
+  .coverage-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+  .source-card { display: flex; flex-direction: column; padding: 1.3rem; background: #fffcf5; border: 1px solid var(--line); border-radius: .75rem; }
+  .source-card-head { display: flex; align-items: center; gap: .8rem; }
+  .source-mark { display: grid; place-items: center; flex: none; width: 2.6rem; height: 2.6rem; border-radius: .6rem; border: 1px solid var(--line); color: var(--signal); background: #f2ebdf; font-family: var(--font-title); font-size: 1.3rem; }
+  .source-card-head > :global(svg) { margin-left: auto; color: #898c7f; flex: none; }
+  .source-card h3 { margin: 0; font-size: .97rem; font-weight: 550; } .source-card h3 a { color: var(--bright); }
+  .coverage-status { font-size: .65rem; color: var(--muted); }
+  .coverage-status[data-coverage="partial"] { color: #895612; }
+  .source-card > p { margin-block: 1.2rem; font-size: .8rem; line-height: 1.8; }
+  .source-card footer { margin-top: auto; border-top: 1px solid var(--line); padding-top: .8rem; }
+  .source-card footer a { display: block; font-size: .76rem; padding-block: .35rem; }
+  .source-card footer small { color: var(--muted); font-size: .65rem; }
+  .coverage-remaining { display: flex; gap: .65rem; align-items: start; font-size: .75rem; color: var(--muted); margin: 1.5rem 0 0; } .coverage-remaining :global(svg) { flex: none; }
+  .watch-method { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding-block: 2.5rem 4rem; border-top: 1px solid var(--line); }
+  .watch-method > div { position: relative; }
+  .watch-method p { font-size: .8rem; line-height: 1.85; color: var(--muted); }
+  .watch-method a { font-size: .8rem; }
+  .method-icon { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; margin-bottom: 1rem; color: var(--signal); border: 1px solid var(--line); border-radius: .7rem; }
+  .security-note { border-left: 1px solid var(--line); padding-left: 3rem; }
+  @media(max-width: 1000px) { .watch-filters { grid-template-columns: 1fr 1fr; } .watch-filters button { justify-self: start; } .watch-metrics > div { flex-wrap: wrap; gap: .6rem; } .watch-metrics > div > span:last-child { flex-basis: 100%; } .coverage-list { gap: .7rem; } .source-card { padding: 1rem; } }
+  @media(max-width: 760px) { .watch-cover, .watch-method { grid-template-columns: 1fr; gap: 2rem; } .watch-cover { padding-top: 2.5rem; } .watch-metrics { grid-template-columns: 1fr; } .watch-metrics > div { flex-wrap: nowrap; padding: .85rem 0; } .watch-metrics > div > span:last-child { flex-basis: auto; } .metric-icon { width: 2.4rem; height: 2.4rem; } .watch-metrics > div + div { border-top: 1px solid var(--line); } .section-head { display: block; } .section-head > a { margin-top: .5rem; } .coverage-list { grid-template-columns: 1fr; } .watch-journal, .watch-sources { padding-block: 2rem; } .security-note { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 2rem; } .incident-card { grid-template-columns: 1fr; } .incident-date { display: flex; gap: 1rem; justify-content: space-between; align-items: center; padding: .65rem 1rem; border-right: 0; border-bottom: 1px solid var(--line); text-align: left; } .incident-date time { display: flex; align-items: baseline; gap: .4rem; } .incident-date strong { font-size: 1.1rem; } .incident-date > span { margin: 0; } .incident-content { padding: 1rem 1rem 0; } .incident-tags { justify-content: start; } dl { grid-template-columns: 1fr; gap: .8rem; } .event-sources small { width: 100%; margin-left: 0; } }
+  @media(max-width: 380px) { .watch-filters { grid-template-columns: 1fr; } .watch-board { padding: 1.1rem; } .board-counts > div + div { padding-left: .9rem; } }
 </style>

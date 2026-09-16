@@ -7,7 +7,7 @@ const { slug, limit = 5 } = Astro.props;
 const updates = (slug ? updatesForPlatform(slug) : platformUpdates).slice(0, limit);
 ---
 {updates.length > 0 && <section class="platform-updates" aria-label={slug ? "Évolutions de cette fiche" : "Évolutions des fiches"}>
-  <header><span class="mono-label">Les fiches évoluent</span><h2>{slug ? "Ce qui a changé dans cette fiche" : "Les dernières informations ajoutées"}</h2><p>Changements vérifiés et datés, avec les documents utilisés.</p></header>
+  <header><span class="mono-label">Les fiches évoluent</span><h2>{slug ? "Les mises à jour de cette fiche" : "Les dernières informations ajoutées"}</h2><p>Changements vérifiés et datés, avec les documents utilisés.</p></header>
   <div class="updates-grid">{updates.map(update => <article id={`update-${update.id}`}>
     <div class="update-meta"><span>{update.label}</span><time datetime={update.date}>{update.date.split("-").reverse().join("/")}</time></div>
     <h3>{update.title}</h3><p>{update.detail}</p>
