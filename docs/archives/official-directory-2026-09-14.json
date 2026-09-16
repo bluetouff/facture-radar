@@ -1,10 +1,10 @@
 {
-  "snapshotDate": "2026-09-16",
+  "snapshotDate": "2026-09-10",
   "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
   "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
   "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
-  "approvedSha256": "e9a417ab2fdbc865c3b89b6ebbb60b3c9ada89996c20c982fabe57376d794b51",
-  "pendingSha256": "79cacd06be0d7da6500e481717f68050e29ee632a76d86d92dacc220f07cf23a",
+  "approvedSha256": "a5e60af6d52993f5dab763176d898f2568d1ee69565c1f0d79ca3fb921387c07",
+  "pendingSha256": "a5708e01a195f99bc53f9943d7d9ee278a896fec0db490af8a104b8b2853999d",
   "approved": [
     {
       "name": "A-Cube",
@@ -372,7 +372,7 @@
       "postalCode": "2800",
       "city": "Belgique",
       "website": "https://www.dokapi.io/",
-      "contact": "support_pa@dokapi.io",
+      "contact": "katrien.dewolf@dokapi.io",
       "registeredAt": "2026-07-08"
     },
     {
@@ -1422,6 +1422,14 @@
       "contact": "m.cure@my-eddy.fr"
     },
     {
+      "name": "NUMERIA",
+      "street": "5 allée Rosa Luxembourg",
+      "postalCode": "95610",
+      "city": "Eragny",
+      "website": "https://www.numeria.fr/",
+      "contact": "info@numeria.fr"
+    },
+    {
       "name": "RATIOO",
       "street": "300 Rue du Noir Debout",
       "postalCode": "59242",
@@ -1446,6 +1454,14 @@
       "contact": "support.pdp@taxilla.com"
     },
     {
+      "name": "WAKASTELLAR",
+      "street": "17 Rue de la Guillauderie",
+      "postalCode": "44118",
+      "city": "La Chevrolière",
+      "website": "https://www.wakastellar.com/",
+      "contact": "pdp@wakastellar.com"
+    },
+    {
       "name": "YUMAN",
       "street": "Square de Meuûs 35",
       "postalCode": "1000",
@@ -1461,6 +1477,5 @@
       "website": "https://www.zefyr.net/",
       "contact": "facturation-electronique@zefyr.net"
     }
-  ],
-  "sourcePageUpdatedAt": "2026-09-10"
+  ]
 }

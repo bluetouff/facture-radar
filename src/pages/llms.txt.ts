@@ -15,6 +15,7 @@ PA Check ne propose aucun classement sponsorisé. Les informations absentes rest
 - Questions pratiques : https://pa.l0g.fr/api/questions.json
 - Fiches enrichies : https://pa.l0g.fr/api/platforms.json
 - Annuaire officiel : https://pa.l0g.fr/api/official-directory.json
+- Incidents, couverture et sources : https://pa.l0g.fr/api/incidents.json
 - Révision déployée : https://pa.l0g.fr/DEPLOYED_SHA
 
 ## Pages principales
@@ -26,6 +27,7 @@ PA Check ne propose aucun classement sponsorisé. Les informations absentes rest
 - Fiches plateformes : https://pa.l0g.fr/plateformes/
 - Annuaire officiel : https://pa.l0g.fr/annuaire/
 - Méthodologie : https://pa.l0g.fr/methodologie/
+- Veille des incidents : https://pa.l0g.fr/incidents/
 - Journal des changements : https://pa.l0g.fr/changements/
 
 ## Règles d'utilisation

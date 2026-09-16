@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InterfaceIcon from "../components/InterfaceIcon.astro";
+import { platforms } from "../data/platforms";
+import { incidentWatchCorpus, incidentScopeLabels, incidentStatusLabels, incidentsForPlatform } from "../data/incident-watch";
+const watch = incidentWatchCorpus();
+const reviewed = watch.coverage.filter(item => item.status !== "not_reviewed");
+const open = watch.incidents.filter(event => event.status !== "resolved");
+const date = (value: string) => new Intl.DateTimeFormat("fr-FR", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Paris" }).format(new Date(value));
+const name = (slug: string) => platforms.find(platform => platform.slug === slug)!.displayName;
+---
+<BaseLayout title="Incidents des PA : disponibilité et sécurité | PA Check" description="Avis d’incident sourcés depuis le 1er septembre 2026 : services touchés, chronologie, résolution et limites de la couverture des plateformes agréées.">
+  <section class="shell watch-cover">
+    <div><span class="eyebrow">L’observatoire · depuis le 1er septembre 2026</span><h1>Quand le service<br/>ne suit plus.</h1><p>Ce qui a été signalé. Ce qui est rétabli.<br/>Et ce que l’on ne sait pas encore.</p><a href="#journal">Consulter les avis <span aria-hidden="true">↓</span></a></div>
+    <aside class="watch-note"><InterfaceIcon name="shield" /><span class="mono-label">Point de situation</span><h2>{open.length} avis<br/>à suivre</h2><p>Selon les dernières publications relues, au <time datetime={watch.checkedAt}>{watch.checkedAt.split("-").reverse().join("/")}</time>.</p><a href="#couverture">Voir le périmètre de la veille →</a><small>Ce relevé n’est pas une mesure en temps réel.</small></aside>
+  </section>
+  <section class="shell watch-metrics" aria-label="Périmètre publié"><div><strong>{watch.incidents.length}</strong><span>avis documentés<small>Des avis peuvent se recouper</small></span></div><div><strong>{reviewed.length}<em> / {platforms.length}</em></strong><span>sources de disponibilité relues<small>Couverture encore partielle</small></span></div><div><InterfaceIcon name="proof" /><span>Chaque avis a une source<small>Aucun score de fiabilité déduit</small></span></div></section>
+  <section class="shell watch-journal" id="journal" aria-labelledby="journal-title">
+    <div class="journal-head"><div><span class="mono-label">Le journal des incidents</span><h2 id="journal-title">Le périmètre compte autant que le signal.</h2></div><a href="/api/incidents.json">Données et sources JSON ↗</a></div>
+    <form class="watch-filters" id="watch-filters" hidden>
+      <label>Plateforme<select name="plateforme"><option value="">Toutes les plateformes</option>{platforms.map(platform => <option value={platform.slug}>{platform.displayName}</option>)}</select></label>
+      <label>Nature<select name="nature"><option value="">Toutes</option><option value="availability">Disponibilité</option><option value="security">Sécurité</option></select></label>
+      <label>Périmètre<select name="perimetre"><option value="">Tous</option>{Object.entries(incidentScopeLabels).map(([value,label]) => <option value={value}>{label}</option>)}</select></label>
+      <button type="reset">Effacer les filtres</button>
+    </form>
+    <p class="filter-coverage" id="filter-coverage" hidden></p>
+    <p class="result-count" id="incident-count" role="status" aria-live="polite">{watch.incidents.length} avis publiés · heures de Paris · classés par dernière mise à jour de la source</p>
+    <noscript><p>Tous les avis et leur couverture sont affichés ci-dessous. Les filtres nécessitent JavaScript.</p></noscript>
+    <div class="incident-list">{watch.incidents.map(event => <article class="incident-card" id={event.id} data-platforms={event.platformSlugs.join(" ")} data-kind={event.kind} data-scope={event.scope}>
+      <div class="incident-date"><time datetime={event.updatedAt}>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "short", timeZone: "Europe/Paris" }).format(new Date(event.updatedAt))}</time><span>{event.platformSlugs.map(name).join(", ")}</span></div>
+      <div class="incident-content"><div class="incident-tags"><span>{incidentScopeLabels[event.scope]}</span><span data-status={event.status}>{incidentStatusLabels[event.status]}</span></div><h3>{event.title}</h3><p>{event.summary}</p>
+        <details><summary>Chronologie, source et limites</summary><dl><div><dt>Premier signalement public</dt><dd><time datetime={event.firstReportedAt}>{date(event.firstReportedAt)}</time></dd></div><div><dt>Début réel</dt><dd>{event.startedAt ? date(event.startedAt) : "Non précisé dans la source"}</dd></div><div><dt>{event.resolutionReportedAt ? "Résolution annoncée" : "Dernière mise à jour de la source"}</dt><dd>{date(event.resolutionReportedAt ?? event.updatedAt)}</dd></div></dl><p class="event-limits">{event.limitations}</p><ul class="event-sources">{event.sourceIds.map(id => { const source = watch.sources.find(source => source.id === id)!; return <li><a href={source.url} rel="noopener noreferrer">{source.publisher} : avis original ↗</a> · consulté le {event.checkedAt.split("-").reverse().join("/")}</li>; })}</ul><a href={`/plateformes/${event.platformSlugs[0]}/`}>Voir la fiche de {name(event.platformSlugs[0]!)} →</a></details>
+      </div>
+    </article>)}</div>
+    <p class="empty-state" id="no-incidents" hidden>Aucun avis publié ne correspond à ces filtres. Cela ne signifie pas qu’aucun incident n’a eu lieu. Consultez la couverture ci-dessous.</p>
+  </section>
+  <section class="shell watch-method" id="couverture"><div><span class="mono-label">Lire les silences aussi</span><h2>Pas d’avis ne veut pas dire<br/>pas d’incident.</h2><p>{watch.limit}</p><p>Un incident de l’application n’est rattaché aux flux PA que si la source le précise. Un avis sur une dépendance externe reste attribué à son auteur. Les dates de notification ne servent pas à calculer une durée de panne.</p><h3>Et la sécurité ?</h3><p>{watch.securityReview.note}</p><p>Une vulnérabilité, une campagne de phishing ou une revendication non corroborée ne suffit pas à établir une compromission. Les signalements sont vérifiés avant publication.</p><a href="/contribuer/">Signaler une source ou demander une correction →</a></div>
+    <div class="coverage-list"><h3>Sources de disponibilité consultées</h3>{reviewed.map(item => <article><h4><a href={`/plateformes/${item.platformSlug}/`}>{name(item.platformSlug)}</a><span>{item.status === "partial" ? "Revue limitée" : "Historique relu"}</span></h4><p>{item.note}</p>{item.sourceIds.map(id => <a href={watch.sources.find(source => source.id === id)!.url} rel="noopener noreferrer">Source publique ↗</a>)}<small>Consultation : {item.checkedAt}</small></article>)}<p>Les {platforms.length - reviewed.length} autres fiches restent marquées « historique non revu ». Aucun feu vert ne leur est attribué.</p></div>
+  </section>
+  <div id="coverage-data" hidden>{platforms.map(platform => <span data-slug={platform.slug}>{incidentsForPlatform(platform.slug).coverage.note}</span>)}</div>
+</BaseLayout>
+<script>
+  const form = document.querySelector<HTMLFormElement>("#watch-filters")!;
+  const cards = [...document.querySelectorAll<HTMLElement>(".incident-card")];
+  const coverage = document.querySelector<HTMLElement>("#filter-coverage")!;
+  const filters = ["plateforme", "nature", "perimetre"] as const;
+  const inputs = filters.map(key => form.elements.namedItem(key) as HTMLSelectElement);
+  const query = new URLSearchParams(location.search);
+  inputs.forEach((input, index) => { const value = query.get(filters[index]!); if (value && [...input.options].some(option => option.value === value)) input.value = value; });
+  function apply() {
+    const [platform, kind, scope] = inputs.map(input => input.value);
+    let count = 0;
+    for (const card of cards) {
+      const show = (!platform || card.dataset.platforms?.split(" ").includes(platform)) && (!kind || card.dataset.kind === kind) && (!scope || card.dataset.scope === scope);
+      card.hidden = !show;
+      if (show) count++;
+    }
+    document.querySelector("#incident-count")!.textContent = `${count} avis affiché${count > 1 ? "s" : ""} · heures de Paris · classés par dernière mise à jour`;
+    document.querySelector<HTMLElement>("#no-incidents")!.hidden = count !== 0;
+    coverage.textContent = [...document.querySelectorAll<HTMLElement>("#coverage-data [data-slug]")].find(item => item.dataset.slug === platform)?.textContent ?? "";
+    coverage.hidden = !platform;
+    const url = new URL(location.href);
+    inputs.forEach((input, index) => { if (input.value) url.searchParams.set(filters[index]!, input.value); else url.searchParams.delete(filters[index]!); });
+    history.replaceState(null, "", url);
+  }
+  form.hidden = false;
+  form.addEventListener("change", apply);
+  form.addEventListener("submit", event => event.preventDefault());
+  form.addEventListener("reset", () => { inputs.forEach(input => input.value = ""); apply(); });
+  apply();
+</script>
+<style>
+  .watch-cover { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; padding-block: 4rem 3rem; align-items: center; }
+  h1 { font-family: var(--font-title); font-size: clamp(2.25rem, 4vw, 3.5rem); font-weight: 400; letter-spacing: -.025em; line-height: 1.1; margin: 1rem 0; }
+  .watch-cover > div > p { color: var(--muted); font-size: 1.1rem; line-height: 1.65; } .watch-cover a, .watch-method a, details a, .journal-head > a { color: var(--signal); text-underline-offset: .2em; }
+  .watch-note { border: 1px solid var(--line); border-top: 2px solid var(--signal); padding: 1.8rem; background: #fffcf5; position: relative; } .watch-note :global(svg) { width: 1.7rem; height: 1.7rem; position: absolute; right: 1.5rem; top: 1.4rem; color: var(--signal); }
+  .watch-note h2 { font-size: 1.8rem; line-height: 1.2; font-weight: 400; margin-block: 1rem; } .watch-note p, .watch-note small { color: var(--muted); font-size: .82rem; line-height: 1.65; } .watch-note small { display: block; margin-top: 1.1rem; }
+  .watch-metrics { display: grid; grid-template-columns: repeat(3,1fr); border-block: 1px solid var(--line); } .watch-metrics > div { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 1rem; } .watch-metrics strong { font-size: 2.1rem; font-weight: 400; } .watch-metrics em { font-size: .85rem; font-style: normal; color: var(--muted); } .watch-metrics span { font-size: .85rem; } .watch-metrics small { display: block; margin-top: .3rem; color: var(--muted); font-size: .72rem; } .watch-metrics :global(svg) { width: 2rem; height: 2rem; flex: none; }
+  .watch-journal { padding-block: 3rem; scroll-margin-top: 7rem; } .journal-head { display: flex; justify-content: space-between; align-items: end; gap: 1rem; } h2 { font-weight: 400; font-size: 1.7rem; letter-spacing: -.025em; line-height: 1.25; } .journal-head > a { flex-shrink: 0; font-size: .8rem; padding-bottom: 1.5rem; }
+  .watch-filters { display: grid; grid-template-columns: 1.2fr .8fr 1fr auto; gap: 1rem; align-items: end; background: #eae5da; padding: 1rem; margin-block: 1rem; border-radius: .4rem; } label { display: grid; gap: .4rem; font-size: .75rem; } select { max-width: 100%; width: 100%; min-width: 0; background: #fffcf5; color: var(--bright); border: 1px solid #c9c5b9; border-radius: .3rem; padding: .75rem .5rem; font: inherit; font-size: .85rem; } button { background: transparent; border: 0; padding: .8rem; color: var(--signal); cursor: pointer; font: inherit; font-size: .8rem; }
+  .result-count { color: var(--muted); font-size: .76rem; margin-block: 1.2rem; } .filter-coverage,.empty-state { border-left: 2px solid var(--signal); padding: 1rem; background: #fffcf5; font-size: .85rem; line-height: 1.6; }
+  .incident-card { display: grid; grid-template-columns: 9rem minmax(0,1fr); gap: 2rem; padding: 1.8rem 0; border-top: 1px solid var(--line); scroll-margin-top: 7rem; } .incident-date time { font-size: 1.2rem; } .incident-date > span { display: block; margin-top: .5rem; color: var(--muted); font-size: .8rem; } .incident-content { max-width: 58rem; } .incident-tags { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .7rem; color: #575c52; } .incident-tags span { background: #e8e7df; padding: .3rem .55rem; border-radius: .2rem; } .incident-tags [data-status="monitoring"] { color: #84420b; background: #f6e6cc; } h3 { font-weight: 500; font-size: 1.2rem; line-height: 1.4; } .incident-content > p { color: var(--paper); font-size: .9rem; line-height: 1.7; }
+  details { font-size: .82rem; } summary { cursor: pointer; color: var(--signal); padding-block: .6rem; } dl { display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding-top: .5rem; } dt { color: var(--muted); font-size: .72rem; } dd { margin: .3rem 0; } .event-limits { padding: .8rem 1rem; border-left: 2px solid #b2af9e; background: #eae7de; line-height: 1.65; } .event-sources { padding-left: 1rem; line-height: 1.8; color: var(--muted); }
+  .watch-method { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-block: 2rem 4rem; border-top: 1px solid var(--line); scroll-margin-top: 7rem; } .watch-method p { color: var(--muted); font-size: .86rem; line-height: 1.8; } .watch-method > div > h3 { margin-top: 2rem; } .coverage-list > h3 { margin-top: 0 !important; } .coverage-list article { padding: 1rem 0; border-top: 1px solid var(--line); } h4 { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; margin: 0; font-size: .9rem; } h4 span { font-size: .68rem; color: var(--muted); font-weight: 400; } .coverage-list a { font-size: .78rem; } .coverage-list small { display: block; font-size: .7rem; color: var(--muted); margin-top: .5rem; }
+  [hidden] { display: none !important; } a, p, dd { overflow-wrap: anywhere; }
+  @media(max-width: 760px) { .watch-cover, .watch-method { grid-template-columns: 1fr; gap: 2rem; } .watch-cover { padding-top: 2.5rem; } .watch-metrics { grid-template-columns: 1fr; } .watch-metrics > div { padding: .8rem 0; } .journal-head { display: block; } .journal-head > a { display: inline-block; padding-bottom: .5rem; } .watch-filters { grid-template-columns: 1fr 1fr; gap: .8rem; } .incident-card { grid-template-columns: 1fr; gap: .8rem; } .incident-date { display: flex; gap: 1rem; align-items: center; } .incident-date > span { margin: 0; } }
+  @media(max-width: 380px) { .watch-filters { grid-template-columns: 1fr; } }
+</style>

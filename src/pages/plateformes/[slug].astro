@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CompareButton from "../../components/CompareButton.astro";
+import PlatformIncidents from "../../components/PlatformIncidents.astro";
 import PlatformUpdates from "../../components/PlatformUpdates.astro";
 import EvidenceBadge from "../../components/EvidenceBadge.astro";
 import EvidenceRow from "../../components/EvidenceRow.astro";
@@ -265,12 +266,13 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
   <section class="shell profile-layout">
     <details class="profile-mobile-toc">
       <summary>Dans cette fiche <span aria-hidden="true">⌄</span></summary>
-      <nav aria-label="Sommaire mobile du dossier">{documentationSections.map(section => <a href={`#${section.id}`}>{section.label}</a>)}<a href="#site-public">Site public</a><a href="#sources-reliees">Sources</a></nav>
+      <nav aria-label="Sommaire mobile du dossier">{documentationSections.map(section => <a href={`#${section.id}`}>{section.label}</a>)}<a href="#incidents">Incidents</a><a href="#site-public">Site public</a><a href="#sources-reliees">Sources</a></nav>
     </details>
     <nav class="profile-toc" aria-label="Sommaire du dossier">
       <p>Dans ce dossier</p>
       {documentationSections.map((section, index) => <a href={`#${section.id}`}><span>{String(index + 1).padStart(2, "0")}</span>{section.eyebrow}</a>)}
       <a href="#site-public"><span>05</span>Site public</a>
+      <a href="#incidents"><InterfaceIcon name="shield" />Incidents</a>
       <a href="#sources-reliees"><InterfaceIcon name="proof" />Sources</a>
       <a class="toc-compare" data-compare-open={platform.slug} href={`/comparer/?ids=${platform.slug}`}>Comparer<InterfaceIcon name="arrow" /></a>
     </nav>
@@ -353,6 +355,7 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
         {contractRows.map(([label, evidence]) => <EvidenceRow label={label} evidence={evidence} />)}
       </div>
 
+      <PlatformIncidents slug={platform.slug} />
       <section class="site-observation" id="site-public" aria-labelledby="site-observation-title">
         <header>
           <div><p class="mono-label">site public observé</p><span>05</span></div>

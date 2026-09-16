@@ -110,6 +110,8 @@ required = {
     "api/corpus.json",
     "api/platforms.json",
     "api/questions.json",
+    "api/incidents.json",
+    "incidents/index.html",
     "llms.txt",
     "llms-full.txt",
     "og/pa-check-facturation-electronique-v3.png",
@@ -195,8 +197,10 @@ if counts.get("enrichedPlatforms") != 149:
     raise SystemExit("Nombre de fiches enrichies inattendu")
 if counts.get("questions") != 25:
     raise SystemExit("Nombre de questions inattendu")
-if counts.get("sources") != 283:
+if counts.get("sources") != 304:
     raise SystemExit("Nombre de sources inattendu")
+if len(corpus["incidents"]["incidents"]) != counts.get("incidentNotices"):
+    raise SystemExit("Avis d’incident incoherents")
 if len(corpus["officialDirectory"]["approved"]) != counts.get("approvedPlatforms"):
     raise SystemExit("Annuaire approuve incoherent")
 if len(corpus["officialDirectory"]["pending"]) != counts.get("pendingPlatforms"):
@@ -242,7 +246,7 @@ if counts.get("enrichedPlatforms") != 149:
     raise SystemExit("Nombre de fiches live inattendu")
 if counts.get("questions") != 25:
     raise SystemExit("Nombre de questions live inattendu")
-if counts.get("sources") != 283:
+if counts.get("sources") != 304:
     raise SystemExit("Nombre de sources live inattendu")
 ' <<<"${LIVE_CORPUS}"
 

@@ -139,14 +139,14 @@ export const platforms: Platform[] = [
     eReporting: documented(true, ["abby-electronic-invoicing-2026"]),
     bankAccountRequired: documented(false, ["abby-pricing-2026"], "La connexion bancaire est réservée à une offre payante, tandis que la facturation électronique est incluse dans l'offre gratuite."),
     accountantAccess: unknown("Le niveau d'accès accordé à un comptable externe reste à confirmer."),
-    publicApi: unknown("Le site renvoie vers une API. Ses conditions d'accès et son utilisation avec la plateforme restent à confirmer."),
-    exportDocumented: unknown("Les formats et les conditions d'export complet après résiliation restent à confirmer."),
+    publicApi: documented({ available: true, includedInFree: false }, ["abby-api-2026-09"], "API de facturation réservée aux offres Pro et Business. Le périmètre des échanges PA via API reste à confirmer.", "2026-09-16"),
+    exportDocumented: documented(true, ["abby-export-2026-09"], "Documents de facturation en PDF ; contacts, articles et livres en CSV ou Excel selon le type. Au-delà de 90 jours, Pro ou Business est requis. Restitution PA complète après résiliation non documentée.", "2026-09-16"),
     integrations: documented(["Make", "Zapier"], ["abby-home-2026"]),
     formats: documented(["Factur-X"], ["abby-electronic-invoicing-2026"], "Les pages générales présentent aussi UBL et CII. La page de l'offre étudiée confirme uniquement Factur-X."),
     hostingCountries: unknown("Le lieu d'hébergement de la plateforme et les sous-traitants restent à confirmer."),
     iso27001: declared(true, ["abby-home-2026"], "Certification annoncée par l'éditeur. Le certificat public et son périmètre doivent encore être archivés."),
     commitmentMonths: documented(0, ["abby-pricing-2026"]),
-    importantUnknowns: ["Accès pour un comptable externe", "Conditions d'accès à l'API", "Hébergement et sous-traitants", "Récupération des données après résiliation"]
+    importantUnknowns: ["Accès pour un comptable externe", "Périmètre PA de l’API Pro et Business", "Hébergement et sous-traitants", "Récupération des données après résiliation"]
   },
   {
     slug: "myunisoft",
@@ -217,11 +217,11 @@ export const platforms: Platform[] = [
     publicApi: unknown("L'accès à l'API avec l'offre de facturation gratuite reste à confirmer."),
     exportDocumented: unknown("Les formats et les conditions d'export restent à confirmer."),
     integrations: documented(["comptes bancaires externes", "outils de production comptable"], ["qonto-billing-2026", "qonto-invoicing-2026"]),
-    formats: unknown("Les formats précis d'émission et de réception ne sont pas détaillés dans les sources consultées."),
+    formats: documented(["Factur-X", "UBL", "CII"], ["qonto-formats-portability-2026-09"], "L’aide mentionne UBL 2.1. Certaines factures UBL/CII reçues ne disposent pas encore d’aperçu PDF.", "2026-09-16"),
     hostingCountries: unknown("Le lieu d'hébergement de la plateforme et les sous-traitants restent à confirmer."),
     iso27001: unknown("Le certificat applicable à la plateforme et sa portée restent à confirmer."),
     commitmentMonths: documented(0, ["qonto-billing-2026"]),
-    importantUnknowns: ["Disponibilité générale de l'e-reporting", "Export complet des données", "API de l'offre gratuite", "Formats de facture pris en charge"]
+    importantUnknowns: ["Disponibilité générale de l'e-reporting", "Export complet des données", "API de l’offre gratuite", "Aperçu PDF de certains fichiers UBL/CII"]
   },
   {
     slug: "sellsy",
@@ -236,7 +236,7 @@ export const platforms: Platform[] = [
     allowance: unknown("Les volumes de factures inclus et les éventuels paliers ne sont pas publiés dans les sources consultées."),
     sendsInvoices: documented(true, ["sellsy-invoicing-2026", "sellsy-pa-2026"]),
     receivesInvoices: documented(true, ["sellsy-invoicing-2026", "sellsy-pa-2026"]),
-    eReporting: documented(true, ["sellsy-invoicing-2026", "sellsy-pa-2026"], "Les pages Sellsy indiquent que la plateforme couvre l'e-reporting. Son activation exacte dépend de l'offre souscrite."),
+    eReporting: documented(false, ["sellsy-rollout-2026-09"], "L’aide opérationnelle indique que l’e-reporting n’est pas encore disponible et vise la fin de l’année. Cette précision prévaut sur les annonces générales de l’offre.", "2026-09-16"),
     bankAccountRequired: unknown("Les conditions d'utilisation de la plateforme sans autre module Sellsy restent à confirmer dans le contrat."),
     accountantAccess: documented(true, ["sellsy-accountants-2026"], "L'accès expert-comptable est annoncé gratuit, sans surcoût ni limite."),
     publicApi: documented({ available: true, includedInFree: false }, ["sellsy-pricing-2026"], "Des quotas API sont indiqués dans les offres payantes."),

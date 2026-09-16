@@ -8,10 +8,10 @@ import { matchPlatform } from "../src/lib/matcher.ts";
 import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 import { passportRoutes } from "../src/data/passport-routes.ts";
 
-test("le relevé du 10 septembre distingue admissions, disparition et dates corrigées", async () => {
-  assert.equal(directory.snapshotDate, "2026-09-10");
+test("le relevé courant conserve les admissions et corrections documentées en septembre", async () => {
+  assert.equal(directory.snapshotDate, "2026-09-16");
   assert.equal(directory.approved.length, 149);
-  assert.equal(directory.pending.length, 16);
+  assert.equal(directory.pending.length, 14);
   const expected = new Map([
     ["BLG", "2026-08-26"], ["FISKALTRUST", "2026-08-28"],
     ["CYCLOPE", "2026-08-25"], ["LUNDI MATIN", "2026-08-24"], ["VENTYA", "2025-12-18"],

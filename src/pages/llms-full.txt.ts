@@ -1,4 +1,5 @@
 import type { APIRoute } from "astro";
+import { incidentWatchCorpus } from "../data/incident-watch.ts";
 import officialDirectory from "../data/official-directory.json" with { type: "json" };
 import sources from "../data/sources.json" with { type: "json" };
 import { platforms } from "../data/platforms.ts";
@@ -120,6 +121,10 @@ Révision déployée : https://pa.l0g.fr/DEPLOYED_SHA
 Méthodologie : https://pa.l0g.fr/methodologie/
 
 Ce document reprend les réponses, les 149 fiches enrichies, l'annuaire DGFiP et l'index des sources. Une information marquée « À confirmer » ne doit pas être transformée en oui.
+
+# Veille des incidents
+
+${JSON.stringify(incidentWatchCorpus(), null, 2)}
 
 # Questions pratiques
 

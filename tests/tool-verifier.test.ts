@@ -20,8 +20,8 @@ test("un alias de produit reste rattaché à une valeur contrôlée", () => {
   assert.equal(findKnownTool("TeamSystem Sellsy")?.id, "sellsy");
 });
 
-test("Abby, Sellsy et SuperPDP disposent d'un noyau réglementaire documenté", () => {
-  for (const tool of ["Abby", "Sellsy", "SuperPDP"]) {
+test("Abby et SuperPDP disposent d'un noyau réglementaire documenté", () => {
+  for (const tool of ["Abby", "SuperPDP"]) {
     const result = verifyKnownTool(platforms, tool);
     assert.equal(result.verdict, "keep", `${tool} ne devrait pas être bloqué`);
     assert.ok(result.lines.every((line) => line.state === "yes"), `${tool} contient une preuve réglementaire insuffisante`);
@@ -105,4 +105,10 @@ test("un outil hors corpus reste une inconnue, jamais une non-conformité", () =
   assert.equal(result.platform, null);
   assert.equal(result.tool, null);
   assert.match(result.explanation, /ne signifie pas qu'il faut en changer/i);
+});
+
+test("Sellsy ne reçoit pas de feu vert tant que l’e-reporting est annoncé", () => {
+  const result = verifyKnownTool(platforms, "Sellsy");
+  assert.equal(result.verdict, "act");
+  assert.ok(result.lines.some(line => line.state === "no"));
 });

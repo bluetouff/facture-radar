@@ -52,7 +52,7 @@ const chapters = [
     <div class="register-label"><span>Votre choix,<br /><strong>pièces à l’appui.</strong></span></div>
     <a href="/annuaire/"><strong>{platforms.length}</strong><span>fiches de plateformes<small>Une couverture variable, rendue visible sur chaque fiche.</small></span><InterfaceIcon name="arrow" /></a>
     <a href="/methodologie/"><strong>{sources.length}</strong><span>sources consultables<small>Retrouvez les documents derrière chaque information.</small></span><InterfaceIcon name="arrow" /></a>
-    <a href="/annuaire/" class="register-date"><span>La référence officielle<strong>{directory.approved.length} PA recensées par la DGFiP</strong><small>Relevé du 10 septembre 2026</small></span><InterfaceIcon name="arrow" /></a>
+    <a href="/annuaire/" class="register-date"><span>La référence officielle<strong>{directory.approved.length} PA recensées par la DGFiP</strong><small>Relevé du {new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeZone: "UTC" }).format(new Date(`${directory.snapshotDate}T00:00:00Z`))}</small></span><InterfaceIcon name="arrow" /></a>
   </section>
 
   <div class="shell home-updates"><PlatformUpdates limit={3} /></div>

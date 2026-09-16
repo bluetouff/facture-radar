@@ -57,7 +57,11 @@ async function inspectClient(versionNegotiation) {
     assert.ok(tools.tools.every((tool) => tool.annotations?.readOnlyHint === true));
 
     const resources = await client.listResources();
-    assert.equal(resources.resources.length, 7);
+    assert.equal(resources.resources.length, 8);
+    const incidentsResource = await client.readResource({ uri: "pacheck://corpus/incidents" });
+    const incidentData = JSON.parse(incidentsResource.contents[0].text);
+    assert.equal(incidentData.coverage.length, 149);
+    assert.equal(incidentData.incidents.length, 11);
     assert.ok(resources.resources.some((resource) => resource.uri === "pacheck://corpus/official-directory"));
 
     const answer = await client.callTool({
@@ -83,7 +87,7 @@ try {
 
   const health = await fetch(new URL("/healthz", endpoint));
   assert.equal(health.status, 200);
-  assert.equal((await health.json()).counts.sources, 283);
+  assert.equal((await health.json()).counts.sources, 304);
 
   const missing = await fetch(new URL("/not-found", endpoint));
   assert.equal(missing.status, 404);
@@ -139,7 +143,7 @@ try {
   assert.equal(measuredUsage.totals.initializations, 1);
   assert.deepEqual(measuredUsage.clients, []);
 
-  process.stdout.write("MCP_SMOKE_OK legacy+2026 tools=5 resources=7 boundaries=ok usage=private\n");
+  process.stdout.write("MCP_SMOKE_OK legacy+2026 tools=5 resources=8 boundaries=ok usage=private\n");
 } finally {
   child.kill("SIGTERM");
   await Promise.race([once(child, "exit"), new Promise((resolvePromise) => setTimeout(resolvePromise, 2_000))]);

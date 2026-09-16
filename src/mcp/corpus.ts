@@ -1,3 +1,4 @@
+import { incidentWatchCorpus, incidentsForPlatform, platformIncidents } from "../data/incident-watch.ts";
 import officialDirectory from "../data/official-directory.json" with { type: "json" };
 import sources from "../data/sources.json" with { type: "json" };
 import { directRoutingOptions } from "../data/direct-routing-options.ts";
@@ -20,7 +21,7 @@ export const MCP_ENDPOINT = "https://pa.l0g.fr/api/mcp";
 export const MCP_SERVER_NAME = "io.github.bluetouff/pa-check";
 export const MCP_SERVER_TITLE = "PA Check";
 export const MCP_SERVER_VERSION = "0.2.0";
-export const MCP_CORPUS_CHECKED_AT = "2026-09-14";
+export const MCP_CORPUS_CHECKED_AT = "2026-09-16";
 
 const sourceRecords = sources as SourceRecord[];
 const sourcesById = new Map(sourceRecords.map((source) => [source.id, source]));
@@ -201,10 +202,11 @@ export function presentPlatform(platform: Platform) {
       hostingProviders: presentEvidence(research.hostingProviders),
       subprocessors: presentEvidence(research.declaredSubprocessors),
     },
+    incidentWatch: incidentsForPlatform(platform.slug),
     publicWebsiteObservation: publicSiteObservation,
     pointsToConfirm: platform.importantUnknowns,
     sources: expandSources([
-      ...uniqueSourceIds({ platform, research }),
+      ...uniqueSourceIds({ platform, research, incidentWatch: incidentsForPlatform(platform.slug) }),
       ...(publicSiteObservation.status === "observed" ? TRACKER_OBSERVATION_SOURCE_IDS : []),
     ]),
   };
@@ -377,12 +379,14 @@ export function corpusManifest(revision: CorpusRevision) {
       invoiceRoutes: passportRoutes.length,
       directRoutingOptions: directRoutingOptions.length,
       sources: sourceRecords.length,
+      incidentNotices: platformIncidents.length,
       observedPublicSites: publicSiteObservations.filter((observation) => observation.status === "observed").length,
     },
     canonical: {
       site: "https://pa.l0g.fr/",
       methodology: "https://pa.l0g.fr/methodologie/",
       changes: "https://pa.l0g.fr/changements/",
+      incidents: "https://pa.l0g.fr/incidents/",
       repository: "https://github.com/bluetouff/facture-radar",
     },
     limits: [
@@ -398,7 +402,7 @@ export function corpusResources(revision: CorpusRevision) {
   return {
     manifest: corpusManifest(revision),
     questions: {
-      checkedAt: QUESTIONS_CHECKED_AT,
+      checkedAt: practicalQuestions.map(question => question.checkedAt).sort().at(-1) ?? QUESTIONS_CHECKED_AT,
       questions: practicalQuestions,
       sources: expandSources(uniqueSourceIds(practicalQuestions)),
     },
@@ -411,6 +415,7 @@ export function corpusResources(revision: CorpusRevision) {
       sources: expandSources([...uniqueSourceIds({ platforms, platformResearchProfiles }), ...TRACKER_OBSERVATION_SOURCE_IDS]),
     },
     officialDirectory,
+    incidents: incidentWatchCorpus(),
     journeys: {
       checkedAt: MCP_CORPUS_CHECKED_AT,
       journeys: journeyProfiles,
@@ -436,6 +441,7 @@ export function getResourceByUri(uri: string, revision: CorpusRevision): unknown
     ["pacheck://corpus/journeys", resources.journeys],
     ["pacheck://corpus/invoice-routes", resources.invoiceRoutes],
     ["pacheck://corpus/sources", resources.sources],
+    ["pacheck://corpus/incidents", resources.incidents],
   ]);
   const staticResult = staticResources.get(uri);
   if (staticResult !== undefined) return staticResult;

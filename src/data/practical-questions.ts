@@ -819,12 +819,12 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
         sourceIds: ["superpdp-production-2026", "superpdp-features-2026"],
       },
       {
-        label: "Sellsy : vérifier l'offre activée",
-        detail: "Les fonctions sont documentées, mais l'activation et le périmètre dépendent de l'offre Sellsy concernée.",
+        label: "Sellsy : e-reporting encore annoncé",
+        detail: "L’aide opérationnelle indique que l’e-reporting n’est pas disponible et vise la fin de l’année. Cette fonction ne doit pas être présentée comme active.",
         state: "confirm",
         platformSlug: "sellsy",
         href: "/plateformes/sellsy/",
-        sourceIds: ["sellsy-invoicing-2026", "sellsy-activation-2026"],
+        sourceIds: ["sellsy-rollout-2026-09"],
       },
     ],
     checks: [
@@ -834,10 +834,10 @@ export const practicalQuestions: readonly PracticalQuestion[] = [
       "Le statut affiché dans votre compte confirme que l'activation est terminée.",
     ],
     nextAction: { label: "Vérifier mon outil et son parcours", href: "/verifier-mon-outil/" },
-    sourceIds: ["qonto-ereporting-2026", "superpdp-production-2026", "sellsy-activation-2026"],
+    sourceIds: ["qonto-ereporting-2026", "superpdp-production-2026", "sellsy-rollout-2026-09"],
     tone: "violet",
     icon: "route",
-    checkedAt: QUESTIONS_CHECKED_AT,
+    checkedAt: "2026-09-16",
   },
   {
     slug: "depassements-quotas-factures",

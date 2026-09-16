@@ -2262,5 +2262,173 @@
     "url": "https://www.lundimatin.fr/plateforme-agreee-facture-electronique",
     "type": "pricing",
     "accessedAt": "2026-09-14"
+  },
+  {
+    "id": "dgfip-list-2026-09-16",
+    "title": "Liste DGFiP : fichiers relevés le 16 septembre 2026",
+    "publisher": "DGFiP",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "abby-api-2026-09",
+    "title": "API Abby : accès Pro et Business",
+    "publisher": "Abby",
+    "url": "https://aide.abby.fr/fr/articles/15272375-comment-utiliser-l-api-abby-pour-automatiser-ma-facturation",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "abby-export-2026-09",
+    "title": "Exporter ses données Abby : formats et historique",
+    "publisher": "Abby",
+    "url": "https://aide.abby.fr/fr/articles/6899224-comment-exporter-ses-donnees-sur-abby",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "qonto-formats-portability-2026-09",
+    "title": "Electronic invoicing : formats et changement de plateforme",
+    "publisher": "Qonto",
+    "url": "https://support-fr.qonto.com/hc/en-us/articles/27885538176913-What-is-electronic-invoicing-and-how-does-it-work",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sellsy-rollout-2026-09",
+    "title": "Fonctionnalités en cours de déploiement : e-reporting non disponible",
+    "publisher": "Sellsy",
+    "url": "https://help.sellsy.com/fr/articles/16815816-fonctionnalites-en-cours-de-deploiement",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-status-2026-09",
+    "title": "État et historique des services Sage",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "pennylane-status-2026-09",
+    "title": "État et historique de Pennylane",
+    "publisher": "Pennylane",
+    "url": "https://status.pennylane.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "qonto-status-2026-09",
+    "title": "Historique Qonto : septembre 2026",
+    "publisher": "Qonto",
+    "url": "https://status.qonto.com/incidents/September-2026",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "esker-status-2026-09",
+    "title": "TrustEsker : état des environnements",
+    "publisher": "Esker",
+    "url": "https://www.trustesker.com/?env=G",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sellsy-status-2026-09",
+    "title": "État des services Sellsy",
+    "publisher": "Sellsy",
+    "url": "https://sellsy.betteruptime.com/",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "dext-status-2026-09",
+    "title": "Dext Prepare Web App : disponibilité HTTP",
+    "publisher": "Dext",
+    "url": "https://status.dext.com/389219",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-w04d6drd7g3n",
+    "title": "Retards de réception, statuts et e-reporting",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/w04d6drd7g3n",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-fjh6wx81xg1p",
+    "title": "Livraison des factures et raccordement perturbés",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/fjh6wx81xg1p",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-rhf8nv5dd1rq",
+    "title": "Création de certains points de réception bloquée",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/rhf8nv5dd1rq",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-qgr9wjcbs466",
+    "title": "Ralentissement du PPF signalé par Sage",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/qgr9wjcbs466",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-9zgm55t360kp",
+    "title": "Accès à certains dossiers du portail collaboratif",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/9zgm55t360kp",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-ldq4kg4q8htj",
+    "title": "Comptabilisation des achats dans Sage Active",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/ldq4kg4q8htj",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-yh0mj6qwrmcy",
+    "title": "Accès à Sage Online perturbé",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/yh0mj6qwrmcy",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-2xx8jjz4pxfz",
+    "title": "Chargement du portail collaboratif Sage Connect",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/2xx8jjz4pxfz",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "sage-incident-v9p9p0xfp5qj",
+    "title": "Activation de nouveaux clients Sage Active ralentie",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/v9p9p0xfp5qj",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "pennylane-incident-zfpsp7z9wn1z",
+    "title": "Ralentissements de l’application Pennylane",
+    "publisher": "Pennylane",
+    "url": "https://status.pennylane.com/incidents/zfpsp7z9wn1z",
+    "type": "documentation",
+    "accessedAt": "2026-09-16"
   }
 ]

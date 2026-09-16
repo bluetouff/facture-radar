@@ -1,0 +1,21 @@
+---
+import { incidentsForPlatform, incidentScopeLabels, incidentStatusLabels } from "../data/incident-watch";
+interface Props { slug: string }
+const { slug } = Astro.props;
+const watch = incidentsForPlatform(slug);
+---
+<section class="incident-summary" id="incidents" aria-labelledby="incident-summary-title">
+  <span class="mono-label">Disponibilité & sécurité</span>
+  <h2 id="incident-summary-title">Les incidents documentés</h2>
+  <p>{watch.coverage.note}</p>
+  {watch.incidents.length > 0 && <ul>{watch.incidents.slice(0, 3).map(event => <li><a href={`/incidents/#${event.id}`}>{event.title}</a><span>{incidentScopeLabels[event.scope]} · {incidentStatusLabels[event.status]}</span></li>)}</ul>}
+  {watch.coverage.checkedAt && <small>Revue du {watch.coverage.checkedAt.split("-").reverse().join("/")}. Aucun bilan de sécurité exhaustif établi.</small>}
+  <a class="incident-link" href={`/incidents/?plateforme=${slug}`}>Voir la veille et ses limites →</a>
+</section>
+<style>
+  .incident-summary { margin-block: 2rem; padding: 1.4rem; border: 1px solid var(--line); border-left: 3px solid var(--signal); background: #fffcf5; scroll-margin-top: 7rem; }
+  h2 { margin: .65rem 0; font-size: 1.6rem; font-weight: 400; }
+  p, small { color: var(--muted); line-height: 1.65; font-size: .84rem; }
+  ul { padding-left: 1.1rem; } li { margin-block: 1rem; } li a { color: var(--bright); text-decoration: underline; text-underline-offset: .2em; } li span { display: block; margin-top: .3rem; font-size: .73rem; color: var(--muted); }
+  .incident-link { display: block; margin-top: 1rem; color: var(--signal); font-size: .84rem; } a { overflow-wrap: anywhere; }
+</style>

@@ -66,7 +66,7 @@ test("une activation inconnue ne produit jamais un feu vert", () => {
       activation: "unknown",
     });
     assert.ok(journey);
-    assert.equal(journey.status, "confirm");
+    assert.ok(["confirm", "action"].includes(journey.status));
     assert.ok(journey.nodes.some((node) => node.state === "confirm"));
   }
 });

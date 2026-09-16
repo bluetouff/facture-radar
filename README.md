@@ -12,7 +12,7 @@ L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte et san
 - trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
 - 149 fiches détaillées, chacune reliée à des sources publiques et datées ;
 - une sélection explicite couvrant les indépendants, TPE, PME, cabinets comptables, ETI et grandes entreprises ;
-- l'annuaire officiel complet, soit 149 plateformes approuvées et 16 en attente dans le relevé DGFiP du 10 septembre 2026 ;
+- l'annuaire officiel complet, soit 149 plateformes approuvées et 14 en attente dans les fichiers DGFiP relevés le 16 septembre 2026 ;
 - un comparateur point par point ;
 - des exports JSON publics et un corpus consolidé pour permettre la vérification et la réutilisation ;
 - un serveur MCP public en lecture seule, pour donner les mêmes réponses aux agents sans compte ni clé d'API ;
@@ -92,3 +92,9 @@ Ouvrez une issue en indiquant le champ contesté, l'entité et le périmètre co
 ## Sécurité
 
 La politique de signalement est décrite dans [SECURITY.md](SECURITY.md). Ne publiez pas de vulnérabilité exploitable dans une issue publique.
+
+## Veille des incidents
+
+La rubrique `/incidents/` relie les avis depuis le 1er septembre 2026 aux fiches PA, avec périmètre, chronologie, sources et couverture explicitement partielle. Données JSON : `/api/incidents.json`. MCP : `pacheck://corpus/incidents`.
+
+`npm run incidents:collect` produit une file locale de candidats à relire, sans publication automatique. Voir [le protocole de veille](docs/veille-incidents.md) et [la revue du 16 septembre](docs/revue-pa-2026-09-16.md).

@@ -1,3 +1,4 @@
+import { incidentWatchCorpus } from "../src/data/incident-watch.ts";
 import officialDirectory from "../src/data/official-directory.json" with { type: "json" };
 import corpusSelectionData from "../src/data/corpus-selection.json" with { type: "json" };
 import sourcesData from "../src/data/sources.json" with { type: "json" };
@@ -300,6 +301,9 @@ for (const sourceId of practicalQuestionSourceIds) {
   referencedSourceIds.add(sourceId);
 }
 
+referencedSourceIds.add("dgfip-list-2026-09-16");
+for (const source of incidentWatchCorpus().sources) referencedSourceIds.add(source.id);
+
 for (const source of checkedSources) {
   if (!referencedSourceIds.has(source.id)) throw new Error(`Source orpheline non liée au corpus : ${source.id}`);
 }
@@ -307,8 +311,8 @@ for (const source of checkedSources) {
 if (officialDirectory.approved.length !== 149) {
   throw new Error(`La liste approuvée doit contenir 149 opérateurs, reçu ${officialDirectory.approved.length}`);
 }
-if (officialDirectory.pending.length !== 16) {
-  throw new Error(`La liste en attente doit contenir 16 opérateurs, reçu ${officialDirectory.pending.length}`);
+if (officialDirectory.pending.length !== 14) {
+  throw new Error(`La liste en attente doit contenir 14 opérateurs, reçu ${officialDirectory.pending.length}`);
 }
 
 console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${checkedPassportRoutes.length} routes Passeport, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);

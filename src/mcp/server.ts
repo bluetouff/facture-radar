@@ -84,6 +84,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
     ["official-directory", "pacheck://corpus/official-directory", "Annuaire officiel complet de la DGFiP", resources.officialDirectory],
     ["journeys", "pacheck://corpus/journeys", "Parcours d'activation des outils étudiés", resources.journeys],
     ["invoice-routes", "pacheck://corpus/invoice-routes", "Options publiques d'envoi d'un fichier déjà produit", resources.invoiceRoutes],
+    ["incidents", "pacheck://corpus/incidents", "Avis d’incident, couverture et limites de la veille", resources.incidents],
     ["sources", "pacheck://corpus/sources", "Documents publics reliés au corpus", resources.sources],
   ] as const;
 

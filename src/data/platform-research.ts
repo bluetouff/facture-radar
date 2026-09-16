@@ -48,6 +48,7 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       receivesInvoices: available("Offre de facturation électronique Abby", ["abby-electronic-invoicing-2026"]),
       eReporting: available("Offre de facturation électronique Abby", ["abby-electronic-invoicing-2026"]),
     },
+    exitTerms: documented<ExitTerms>({ bulkExport: null, formats: ["PDF", "CSV", "Excel"], postTerminationAccess: null, fees: null }, ["abby-export-2026-09"], "Exports par type de document. Historique au-delà de 90 jours réservé à Pro/Business. La conservation du XML des factures et l’accès après clôture ne sont pas établis.", "2026-09-16"),
     terminationTerms: documented("Offre Basique annoncée gratuite et sans engagement.", ["abby-pricing-2026"]),
   },
   b2brouter: {
@@ -184,13 +185,13 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       receivesInvoices: available("Qonto Facturation, avec ou sans compte professionnel", ["qonto-invoicing-2026", "qonto-flow-2026"]),
       eReporting: documented({ stage: "beta", scope: "Certaines organisations éligibles" }, ["qonto-ereporting-2026"], "L’aide relue le 14 septembre limite toujours l’accès à une bêta pour certaines organisations françaises et les transactions B2B transfrontalières, sur le web.", "2026-09-14"),
     },
-    terminationTerms: documented("L'outil de facturation gratuit ne comporte pas d'engagement minimal annoncé.", ["qonto-billing-2026"]),
+    terminationTerms: documented("Le changement de PA est initié par la nouvelle plateforme et confirmé par le client par courriel. Qonto annonce un transfert effectif sous cinq jours ouvrés après confirmation. Cette portabilité ne prouve pas l’export de tout l’historique des factures.", ["qonto-formats-portability-2026-09"], undefined, "2026-09-16"),
   },
   sellsy: {
     availability: {
       sendsInvoices: available("Sellsy PA, selon l'offre activée", ["sellsy-invoicing-2026", "sellsy-activation-2026"]),
       receivesInvoices: available("Sellsy PA de réception", ["sellsy-invoicing-2026", "sellsy-reception-2026"]),
-      eReporting: available("Selon l'offre Sellsy souscrite", ["sellsy-invoicing-2026", "sellsy-pa-2026"]),
+      eReporting: documented({ stage: "announced", scope: "Fonction en développement, objectif annoncé : fin 2026" }, ["sellsy-rollout-2026-09"], "L’aide indique l’absence de transmission e-reporting à ce stade. L’échéance annoncée n’est pas une disponibilité acquise.", "2026-09-16"),
     },
     exitTerms: documented<ExitTerms>({
       bulkExport: null,

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "sage-w04d6drd7g3n",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "Retards de réception, statuts et e-reporting",
+    "summary": "Sage signale des retards de traitement des factures entrantes, de mise à jour de leurs statuts et de transmission des soumissions d’e-reporting.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-10T10:40:00Z",
+    "resolutionReportedAt": "2026-09-10T14:33:00Z",
+    "updatedAt": "2026-09-10T14:33:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-w04d6drd7g3n"
+    ],
+    "limitations": "Le début réel et le nombre de clients touchés ne sont pas publiés."
+  },
+  {
+    "id": "sage-fjh6wx81xg1p",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "Livraison des factures et raccordement perturbés",
+    "summary": "Avis initial sur des factures non livrées en France. Les mises à jour portent ensuite sur les statuts de cycle de vie et la création des points de réception.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-02T00:40:00Z",
+    "resolutionReportedAt": "2026-09-10T13:14:00Z",
+    "updatedAt": "2026-09-10T13:14:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-fjh6wx81xg1p"
+    ],
+    "limitations": "Plusieurs phases de rétablissement et de surveillance. La période entre les notifications ne mesure pas une panne continue. Le volet raccordement recoupe l’avis du 5 septembre."
+  },
+  {
+    "id": "sage-rhf8nv5dd1rq",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "Création de certains points de réception bloquée",
+    "summary": "Certaines entreprises sont créées mais leurs points de réception ne le sont pas. Sage indique que la majorité des demandes aboutissent et qu’un prestataire tiers participe à l’investigation.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-05T02:02:00Z",
+    "resolutionReportedAt": "2026-09-07T09:13:00Z",
+    "updatedAt": "2026-09-07T09:13:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-rhf8nv5dd1rq"
+    ],
+    "limitations": "Avis distinct publié par Sage, avec un chevauchement thématique avec celui du 2 septembre. Ne pas additionner leurs durées."
+  },
+  {
+    "id": "sage-qgr9wjcbs466",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "title": "Ralentissement du PPF signalé par Sage",
+    "summary": "Sage rapporte des temps de réponse élevés du Portail public de facturation, susceptibles de retarder le traitement et la livraison des documents.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-11T14:45:00Z",
+    "resolutionReportedAt": "2026-09-15T18:57:00Z",
+    "updatedAt": "2026-09-15T18:57:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-qgr9wjcbs466"
+    ],
+    "limitations": "Information attribuée à Sage. Confirmation directe de l’AIFE non archivée ; cet avis ne désigne pas une défaillance de l’infrastructure Sage."
+  },
+  {
+    "id": "sage-9zgm55t360kp",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Accès à certains dossiers du portail collaboratif",
+    "summary": "Certains clients français ne peuvent pas accéder à des dossiers du portail collaboratif de Sage Network.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-14T12:15:00Z",
+    "resolutionReportedAt": "2026-09-15T10:12:00Z",
+    "updatedAt": "2026-09-15T10:12:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-9zgm55t360kp"
+    ],
+    "limitations": "Impact sur les flux PA non précisé. Le rétablissement annoncé sous surveillance le 14 septembre précède la clôture de l’avis."
+  },
+  {
+    "id": "sage-ldq4kg4q8htj",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Comptabilisation des achats dans Sage Active",
+    "summary": "Sage décrit un problème de comptabilisation des factures d’achat en France et une interruption temporaire de la synchronisation GE pendant la remédiation.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-14T09:50:00Z",
+    "resolutionReportedAt": "2026-09-14T22:10:00Z",
+    "updatedAt": "2026-09-14T22:10:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-ldq4kg4q8htj"
+    ],
+    "limitations": "Impact sur les échanges entre PA non précisé."
+  },
+  {
+    "id": "sage-yh0mj6qwrmcy",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Accès à Sage Online perturbé",
+    "summary": "Des clients de Sage 100 Online et Partner Cloud en France rencontrent des difficultés d’accès.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-13T18:57:00Z",
+    "resolutionReportedAt": "2026-09-14T07:06:00Z",
+    "updatedAt": "2026-09-14T07:06:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-yh0mj6qwrmcy"
+    ],
+    "limitations": "L’avis mentionne aussi d’autres pays. Il ne précise pas d’impact sur les flux PA français."
+  },
+  {
+    "id": "sage-2xx8jjz4pxfz",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Chargement du portail collaboratif Sage Connect",
+    "summary": "Certains clients en France et en Amérique du Nord ne peuvent pas charger le portail collaboratif.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-11T08:18:00Z",
+    "resolutionReportedAt": "2026-09-11T14:06:00Z",
+    "updatedAt": "2026-09-11T14:06:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-2xx8jjz4pxfz"
+    ],
+    "limitations": "Impact sur la PA non précisé. Plusieurs produits Sage sont cités par l’éditeur."
+  },
+  {
+    "id": "sage-v9p9p0xfp5qj",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Activation de nouveaux clients Sage Active ralentie",
+    "summary": "Sage signale des retards de création de nouveaux comptes Sage Active en France. Les autres fonctions sont annoncées opérationnelles.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-01T11:41:00Z",
+    "resolutionReportedAt": "2026-09-02T12:01:00Z",
+    "updatedAt": "2026-09-02T12:01:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "sage-incident-v9p9p0xfp5qj"
+    ],
+    "limitations": "L’avis ne vise pas explicitement le raccordement à la PA."
+  },
+  {
+    "id": "pennylane-zfpsp7z9wn1z",
+    "platformSlugs": [
+      "pennylane"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Ralentissements de l’application Pennylane",
+    "summary": "Pennylane annonce des ralentissements de son application, puis leur résolution le même jour.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-14T11:15:00+02:00",
+    "resolutionReportedAt": "2026-09-14T12:06:00+02:00",
+    "updatedAt": "2026-09-14T12:06:00+02:00",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "pennylane-incident-zfpsp7z9wn1z"
+    ],
+    "limitations": "L’avis ne précise pas d’impact sur les échanges PA. 11 h 15 est l’heure de la première notification, pas une preuve du début de l’incident."
+  },
+  {
+    "id": "esker-french-b2b-20260915",
+    "platformSlugs": [
+      "esker"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "Erreurs sur les factures B2B françaises",
+    "summary": "L’environnement G d’Esker on Demand signale des erreurs sur les factures clients du processus B2B français. Un correctif est annoncé ; les enregistrements affectés restent à traiter dans l’avis consulté.",
+    "status": "monitoring",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-15T08:00:00Z",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-15T12:15:00Z",
+    "checkedAt": "2026-09-16",
+    "sourceIds": [
+      "esker-status-2026-09"
+    ],
+    "limitations": "Périmètre limité à l’environnement G. La notification indique une surveillance après correctif à 09 h 50 UTC, pas une résolution complète."
+  }
+]
