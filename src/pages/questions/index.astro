@@ -78,7 +78,7 @@ const checkedAtLabel = QUESTIONS_CHECKED_AT.split("-").reverse().join(".");
   .back-home { display: inline-flex; gap: .45rem; align-items: center; color: rgba(226,233,247,.62); font-size: .78rem; }
   .back-home :global(svg) { width: .85rem; rotate: 180deg; }
   .questions-kicker { margin: 2rem 0 0; color: #ffaf89; font: 680 .76rem/1 var(--font-mono); letter-spacing: .055em; text-transform: uppercase; }
-  .questions-intro h1 { max-width: 13ch; margin: .85rem 0 0; color: #fff; font-size: clamp(2.3rem,4.8vw,3.7rem); font-weight: 560; line-height: 1.04; letter-spacing: -.052em; text-wrap: balance; }
+  .questions-intro h1 { max-width: 21ch; margin: .85rem 0 0; color: #fff; font-family: var(--font-title); font-size: var(--title-size); font-weight: 400; line-height: 1.2; letter-spacing: -.015em; text-wrap: balance; }
   .questions-intro > p:last-of-type { max-width: 44rem; margin: 1.2rem 0 0; color: #cccbbf; font-size: 1rem; line-height: 1.72; }
   .cover-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin-top: 1.6rem; }
   .cover-actions a { display: inline-flex; gap: .55rem; align-items: center; border-radius: .75rem; padding: .75rem .9rem; background: #fff; color: var(--bright); font-size: .78rem; font-weight: 720; }
@@ -126,5 +126,5 @@ const checkedAtLabel = QUESTIONS_CHECKED_AT.split("-").reverse().join(".");
   .questions-bridge > div:last-child { display: flex; gap: .55rem; }
   @media (max-width: 900px) { .questions-cover-layout { grid-template-columns: 1fr; gap: 2rem; } .question-console { max-width: 34rem; } .questions-bridge { grid-template-columns: 1fr; } }
   @media (max-width: 700px) { .directory-head,.question-grid { grid-template-columns: 1fr; } .question-card { min-height: 15rem; } }
-  @media (max-width: 520px) { .questions-intro h1 { font-size: 2.3rem; } .question-console footer { flex-wrap: wrap; } .questions-bridge > div:last-child { display: grid; } }
+  @media (max-width: 520px) { .question-console footer { flex-wrap: wrap; } .questions-bridge > div:last-child { display: grid; } }
 </style>

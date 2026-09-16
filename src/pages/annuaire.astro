@@ -52,7 +52,7 @@ const facets = [
         <div class="directory-intro">
           <div class="directory-copy">
             <span class="directory-kicker"><InterfaceIcon name="directory" /> L’annuaire complet des plateformes agréées</span>
-            <h1>Tout le marché.<br /><em>Votre choix.</em></h1>
+            <h1>Tout le marché.<br />Votre choix.</h1>
             <p>Un point de départ pour explorer les PA, consulter leurs tarifs et retrouver les sources. Toutes les fiches, au même endroit.</p>
             <a class="directory-help" href="/diagnostic/">Besoin d’aide pour choisir ? <InterfaceIcon name="arrow" /></a>
           </div>
@@ -134,8 +134,7 @@ const facets = [
   .directory-intro { display: grid; grid-template-columns: minmax(0,1fr) 23rem; gap: 4rem; align-items: center; }
   .directory-kicker { display: inline-flex; align-items: center; gap: .45rem; color: var(--signal); font-size: .77rem; font-weight: 550; }
   .directory-kicker :global(svg) { width: 1.1rem; height: 1.1rem; }
-  h1 { margin: 1rem 0; color: var(--bright); font: 620 clamp(3rem,5.7vw,5rem)/1.04 var(--font-sans); letter-spacing: -.05em; }
-  h1 em { color: var(--signal); font: italic 450 1.15em/1 var(--font-serif); }
+  h1 { margin: 1rem 0; color: var(--bright); font: 400 var(--title-size)/1.2 var(--font-title); letter-spacing: -.015em; }
   .directory-copy > p { max-width: 39rem; color: var(--paper); font-size: 1rem; line-height: 1.8; }
   .directory-help { display: inline-flex; align-items: center; gap: .55rem; margin-top: .55rem; font-size: .82rem; font-weight: 600; color: var(--signal); }
   .directory-help :global(svg) { width: 1rem; }
@@ -256,5 +255,5 @@ const facets = [
     .directory-alphabet button { flex: 0 0 2.1rem; }
     .directory-alphabet button:first-child { flex-basis: 2.6rem; }
   }
-  @media (max-width: 520px) { .directory-list { grid-template-columns: 1fr; } .directory-controls { padding: .8rem; } .hash-grid { grid-template-columns: 1fr; } h1 { font-size: clamp(2rem,7.4vw,2.7rem); } .directory-row { padding: 1rem; } }
+  @media (max-width: 520px) { .directory-list { grid-template-columns: 1fr; } .directory-controls { padding: .8rem; } .hash-grid { grid-template-columns: 1fr; } .directory-row { padding: 1rem; } }
 </style>

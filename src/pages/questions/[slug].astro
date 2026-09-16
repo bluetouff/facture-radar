@@ -132,7 +132,7 @@ const stateLabels = { start: "Point de départ", consider: "À examiner", confir
   .breadcrumb-current { overflow: hidden; max-width: 20rem; text-overflow: ellipsis; white-space: nowrap; }
   .answer-reference { display: flex; gap: .7rem; align-items: center; margin: 1.8rem 0 0; color: var(--soft); font: 680 .69rem/1 var(--font-mono); letter-spacing: .055em; text-transform: uppercase; }
   .answer-reference i { width: 3rem; height: 1px; background: linear-gradient(90deg,var(--tone),var(--soft)); }
-  .answer-intro h1 { max-width: 19ch; margin: .8rem 0 0; color: #fff; font-size: clamp(2.1rem,4.2vw,3.25rem); font-weight: 560; line-height: 1.07; letter-spacing: -.048em; text-wrap: balance; }
+  .answer-intro h1 { max-width: 19ch; margin: .8rem 0 0; color: #fff; font-family: var(--font-title); font-size: var(--title-size); font-weight: 400; line-height: 1.2; letter-spacing: -.015em; text-wrap: balance; }
   .answer-intro > p:last-child { max-width: 49rem; margin: 1.1rem 0 0; color: #cccbbf; font-size: .96rem; line-height: 1.7; }
   .answer-map { overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: .6rem; background: rgba(255,255,255,.97); box-shadow: 0 1.7rem 4.5rem rgba(0,0,0,.22); }
   .answer-map header { display: flex; justify-content: space-between; gap: .6rem; border-bottom: 1px solid var(--line); padding: .85rem .9rem; color: var(--muted); font: 660 .7rem/1 var(--font-mono); letter-spacing: .05em; }
@@ -206,5 +206,5 @@ const stateLabels = { start: "Point de départ", consider: "À examiner", confir
   .related-questions strong { margin-top: .1rem; color: var(--bright); font-size: .78rem; line-height: 1.35; }
   @media (max-width: 950px) { .answer-cover-layout,.answer-layout { grid-template-columns: 1fr; } .answer-map { max-width: 28rem; } .answer-aside { grid-template-columns: repeat(2,1fr); } }
   @media (max-width: 750px) { .recommendation-grid,.checks ol,.related-questions > div { grid-template-columns: 1fr; } .recommendation { min-height: auto; padding-bottom: 1rem; } .recommendation a { position: static; margin-top: .8rem; } }
-  @media (max-width: 560px) { .answer-intro h1 { font-size: 2.15rem; } .answer-map { display: none; } .answer-aside { grid-template-columns: 1fr; } .short-answer { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .answer-map { display: none; } .answer-aside { grid-template-columns: 1fr; } .short-answer { grid-template-columns: 1fr; } }
 </style>

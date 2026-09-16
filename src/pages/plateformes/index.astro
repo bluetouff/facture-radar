@@ -43,7 +43,7 @@ let dossierIndex = 0;
       <div class="atlas-hero-copy">
         <span class="atlas-edition">sélection par usage · annuaire complet disponible</span>
         <p class="atlas-kicker">l'atlas PA Check</p>
-        <h1>Les plateformes agréées de facturation électronique, <em>sans podium.</em></h1>
+        <h1>Les plateformes agréées de facturation électronique, sans podium.</h1>
         <p>Commencez par votre façon de travailler. Chaque dossier rassemble ce qui est public, ce qui change réellement votre choix et ce que vous devrez encore demander.</p>
         <div class="atlas-legend">
           <span><i class="known"></i> information documentée</span>
@@ -113,8 +113,7 @@ let dossierIndex = 0;
   .atlas-hero-layout { position: relative; display: grid; grid-template-columns: minmax(0,1fr) 21rem; gap: clamp(3rem,8vw,8rem); align-items: center; }
   .atlas-edition { display: inline-block; color: rgba(255,255,255,.52); font: 610 .75rem/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
   .atlas-kicker { margin: 1.2rem 0 0; color: #76dcc8; font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-  .atlas-hero h1 { max-width: 16ch; margin: .8rem 0 0; color: #fff; font-size: clamp(2.3rem,4.7vw,3.7rem); font-weight: 480; line-height: 1.05; letter-spacing: -.05em; }
-  .atlas-hero h1 em { color: #aeb8ff; font-weight: 430; }
+  .atlas-hero h1 { max-width: 24ch; margin: .8rem 0 0; color: #fff; font-family: var(--font-title); font-size: var(--title-size); font-weight: 400; line-height: 1.2; letter-spacing: -.015em; }
   .atlas-hero-copy > p:last-of-type { max-width: 45rem; margin: 1.25rem 0 0; color: rgba(239,244,255,.7); font-size: 1rem; line-height: 1.72; }
   .atlas-legend { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; margin-top: 1.5rem; }
   .atlas-legend span { display: inline-flex; gap: .42rem; align-items: center; color: rgba(255,255,255,.68); font-size: .76rem; }
@@ -158,5 +157,5 @@ let dossierIndex = 0;
   .atlas-afterword .button { flex: 0 0 auto; gap: .5rem; }
   .atlas-afterword .button :global(svg) { width: 1rem; height: 1rem; }
   @media (max-width: 900px) { .atlas-hero-layout { grid-template-columns: 1fr; } .atlas-visual { display: none; } .atlas-orientation { grid-template-columns: 1fr; } .atlas-section > header { grid-template-columns: 2rem 1fr; } .atlas-section > header > p { grid-column: 2; } }
-  @media (max-width: 620px) { .atlas-hero { padding-top: 2.7rem; } .atlas-hero h1 { font-size: 2.35rem; } .atlas-orientation { margin-top: -1rem; } .atlas-afterword { display: grid; } .atlas-afterword .button { width: 100%; } }
+  @media (max-width: 620px) { .atlas-hero { padding-top: 2.7rem; } .atlas-orientation { margin-top: -1rem; } .atlas-afterword { display: grid; } .atlas-afterword .button { width: 100%; } }
 </style>
