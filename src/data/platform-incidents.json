@@ -347,13 +347,13 @@
     "kind": "availability",
     "scope": "publisher_service",
     "title": "Virements internationaux indisponibles pour certains clients de l’EEE",
-    "summary": "Spendesk signale une indisponibilité des virements internationaux et d’autres opérations Wise dans l’Espace économique européen. Une intervention sur la connexion à Wise est suivie d’une phase de surveillance.",
-    "status": "monitoring",
+    "summary": "Spendesk signale une indisponibilité des virements internationaux et d’autres opérations Wise pour certains clients de l’Espace économique européen. Après une intervention sur la connexion à Wise, l’éditeur annonce la résolution le 17 septembre.",
+    "status": "resolved",
     "startedAt": null,
     "firstReportedAt": "2026-09-16T10:05:00Z",
-    "resolutionReportedAt": null,
-    "updatedAt": "2026-09-16T12:34:31Z",
-    "checkedAt": "2026-09-16",
+    "resolutionReportedAt": "2026-09-17T08:06:12Z",
+    "updatedAt": "2026-09-17T08:06:12Z",
+    "checkedAt": "2026-09-20",
     "sourceIds": [
       "spendesk-transfers-20260916-source"
     ],
@@ -447,13 +447,13 @@
     "kind": "availability",
     "scope": "upstream",
     "title": "Centre d’assistance eInvoice Network perturbé",
-    "summary": "Tungsten signale une indisponibilité possible du centre d’assistance et de la création de tickets. L’éditeur attribue cette perturbation à un incident Salesforce.",
-    "status": "identified",
+    "summary": "Tungsten annonce le rétablissement de son centre d’assistance, de la consultation des articles et de la création de tickets. L’éditeur attribue la perturbation à Salesforce.",
+    "status": "resolved",
     "startedAt": null,
     "firstReportedAt": "2026-09-16T10:17:20.636Z",
-    "resolutionReportedAt": null,
-    "updatedAt": "2026-09-16T10:17:20.636Z",
-    "checkedAt": "2026-09-16",
+    "resolutionReportedAt": "2026-09-17T07:58:23Z",
+    "updatedAt": "2026-09-17T07:58:23Z",
+    "checkedAt": "2026-09-20",
     "sourceIds": [
       "tungsten-support-20260916-source"
     ],
@@ -478,7 +478,7 @@
     "firstReportedAt": "2026-09-14",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-14",
-    "checkedAt": "2026-09-16",
+    "checkedAt": "2026-09-20",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -507,7 +507,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-09-16",
+    "checkedAt": "2026-09-20",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -545,5 +545,73 @@
     "summary": "FrenchBreaches relaie le 15 septembre une notification de fuite détectée le 1er septembre. Elle concerne un composant lié à Welyb / AGIRIS CONNECT : coordonnées, identifiants d’entreprise et mots de passe hachés sont cités.",
     "status": "unknown",
     "limitations": "Notification consultée par l’intermédiaire de FrenchBreaches ; confirmation directe de l’éditeur à obtenir. L’impact sur la PA Cecurity et sur les factures reste non établi."
+  },
+  {
+    "id": "superpdp-directory-20260918",
+    "platformSlugs": [
+      "superpdp"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "SuperPDP : inscriptions et recherches dans l’annuaire perturbées",
+    "summary": "SuperPDP signale un incident de chargement de l’annuaire le 18 septembre. Les nouvelles inscriptions ont été bloquées, puis une sauvegarde a été rechargée. L’éditeur annonce le rétablissement des recherches de SIREN, des adresses de facturation et des inscriptions. Il prévoit de contacter les clients touchés par un problème de transmission de données au PPF.",
+    "status": "resolved",
+    "startedAt": "2026-09-18",
+    "firstReportedAt": "2026-09-18",
+    "resolutionReportedAt": "2026-09-18",
+    "updatedAt": "2026-09-18",
+    "checkedAt": "2026-09-20",
+    "sourceIds": [
+      "superpdp-directory-20260918-source"
+    ],
+    "limitations": "Le flux RSS et la page affichent les mêmes heures avec des fuseaux différents. Les dates sont donc conservées au jour près. Le début exact et la durée de la perturbation restent à préciser."
+  },
+  {
+    "id": "spendesk-amazon-20260916",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "affectedService": "Cartes Spendesk sur Amazon",
+    "title": "Ajout de cartes Spendesk sur Amazon perturbé",
+    "summary": "Spendesk rapporte un échec de la tokenisation des cartes lors de leur ajout sur Amazon. Au 17 septembre, l’équipe bancaire indique échanger avec Visa pour déterminer la cause.",
+    "status": "investigating",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-16T14:52:00Z",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-17T08:09:51Z",
+    "checkedAt": "2026-09-20",
+    "sourceIds": [
+      "spendesk-amazon-20260916-source"
+    ],
+    "limitations": "Le service concerné est le paiement par carte. L’avis consulté ne décrit pas d’impact sur les flux PA et laisse la cause en cours d’investigation."
+  },
+  {
+    "id": "zenfirst-claim-20260917",
+    "platformSlugs": [],
+    "kind": "security",
+    "scope": "ecosystem_service",
+    "verification": "reported_claim",
+    "affectedService": "Zenfirst",
+    "relationship": {
+      "note": "Zenfirst documente une connexion comptable à iSuite (ACD). Cette documentation ne nomme pas la PA partenaire : le rattachement reste à établir.",
+      "sourceIds": [
+        "zenfirst-integration-20260920"
+      ]
+    },
+    "title": "Zenfirst : revendication de fuite de données à confirmer",
+    "summary": "FrenchBreaches rapporte le 17 septembre une revendication visant des données d’utilisateurs, de prospects et de factures de Zenfirst. Zenfirst est un éditeur de logiciels de facturation et de trésorerie, absent de la liste des PA agréées consultée le 20 septembre.",
+    "status": "unknown",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-09-17",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-17",
+    "checkedAt": "2026-09-20",
+    "sourceIds": [
+      "frenchbreaches-zenfirst-20260917"
+    ],
+    "limitations": "La date d’accès, l’étendue et la cause technique restent à établir. L’impact sur une PA est non documenté ; cet avis est attribué uniquement à Zenfirst."
   }
 ]

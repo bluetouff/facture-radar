@@ -29,7 +29,7 @@ function incidentUrl(source, value) {
     betterstack: /^(?:\/fr)?\/incident\/\d+$/,
     cachet: /^\/incident\/\d+\/$/,
     instatus: /^\/incident\/[a-z0-9]+$/,
-    ohdear: /^\/(?:updates|incidents)\/[a-z0-9-]+\/?$/,
+    ohdear: /^(?:\/|\/(?:updates|incidents)\/[a-z0-9-]+\/?)$/,
     "cert-fr": /^\/(?:avis|alerte|actualite|cti|ioc|dur)\/CERTFR-\d{4}-[A-Z]+-\d+\/$/,
     myunisoft: /^\/incident\/[a-f0-9-]{36}\/$/,
   };
@@ -40,7 +40,12 @@ function candidate(source, item, now) {
   const url = incidentUrl(source, item.url);
   if (typeof item.title !== "string" || !item.title.trim() || item.title.length > 1000 || typeof item.content !== "string" || item.content.length > 100_000) throw new Error("Contenu de flux invalide");
   const publishedAt = timestamp(item.publishedAt, now);
-  return { id: `${source.id}-${new URL(url).pathname.split("/").filter(Boolean).at(-1)}`, sourceId: source.id, url, title: item.title, publishedAt, content: item.content, fingerprint: digest(JSON.stringify([item.title, publishedAt, item.content])) };
+  // Oh Dear publishes separate updates pointing to the status-page root.
+  // Keep each dated notice; a shared link must not merge unrelated incidents.
+  const key = source.profile === "ohdear" && new URL(url).pathname === "/"
+    ? `notice-${digest(JSON.stringify([item.title, publishedAt])).slice(0, 24)}`
+    : new URL(url).pathname.split("/").filter(Boolean).at(-1);
+  return { id: `${source.id}-${key}`, sourceId: source.id, url, title: item.title, publishedAt, content: item.content, fingerprint: digest(JSON.stringify([item.title, publishedAt, item.content])) };
 }
 function parseJson(source, body, now) {
   const parsed = JSON.parse(body);

@@ -1,15 +1,15 @@
 # Veille publique des incidents PA
 
-Revue du 16 septembre 2026. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
+Revue du 20 septembre 2026. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
 
 ## Recherche initiale et publications
 
-- Les **149 PA** ont fait l’objet de deux recherches nominatives : sécurité et sources de disponibilité. Les requêtes et URL trouvées sont archivées dans `docs/archives/incident-research-2026-09-16.json`. Ces résultats de recherche sont des pistes, pas des preuves de compromission. `src/data/incident-research.json` conserve la date et le périmètre par PA.
+- Les **149 PA** ont fait l’objet de deux recherches nominatives le 16 septembre, puis d’une recherche nominative d’actualisation le 20 septembre. Les requêtes et URL trouvées sont archivées dans `docs/archives/incident-research-2026-09-16.json` et `docs/archives/incident-research-2026-09-20.json`. Ces résultats de recherche sont des pistes, pas des preuves de compromission. `src/data/incident-research.json` conserve la date et le périmètre par PA.
 - **37 sources de disponibilité** ont été examinées, avec des limites propres à chaque source : flux glissant, historique vide, page dynamique, ancien portail désactivé. La recherche des 149 noms et la lecture d’un historique sont deux contrôles différents.
-- **26 avis** sont publiés, dont **6 portant explicitement sur les flux PA** et **3 concernant le service connecté Welyb/eFacture ou Welyb/AGIRIS CONNECT**. Parmi ces trois ajouts, la notification de sécurité est relayée par FrenchBreaches et attend une confirmation directe de l’éditeur. Certains avis se recoupent. Aucun classement ou taux de disponibilité n’est calculé.
+- **29 avis** sont publiés, dont **7 portant explicitement sur les flux PA** et **3 concernant le service connecté Welyb/eFacture ou Welyb/AGIRIS CONNECT**. Parmi ces trois ajouts, la notification de sécurité est relayée par FrenchBreaches et attend une confirmation directe de l’éditeur. Zenfirst est publié comme revendication non confirmée d’un logiciel hors annuaire PA. Certains avis se recoupent. Aucun classement ou taux de disponibilité n’est calculé.
 - `/incidents/` propose filtres, cinq avis par page, trois sources par page et dix plateformes par page dans la couverture. Sans JavaScript, tous les éléments restent affichés. Les liens directs révèlent l’avis ou la plateforme recherchée.
 - `/incidents.xml` est le flux RSS commun des **avis relus et publiés**. Il conserve l’identifiant de chaque avis lors des mises à jour et affiche la date de modification de la source lorsqu’elle est publiée. Une date connue au jour près reste dans la description ; `pubDate` est omis pour éviter d’inventer une heure.
-- Les fiches, `/api/incidents.json`, `/api/corpus.json`, `llms-full.txt`, la ressource MCP `pacheck://corpus/incidents` et `get_platform` utilisent le même corpus. La version 2.0 du corpus incidents expose le niveau de confirmation (`verification`), le service concerné (`affectedService`) et le lien documenté avec une PA (`relationship`). Les dates acceptent un horodatage, une date calendaire ou `null`. `detectedAt` distingue détection et début réel ; `checkedAt` reste la date de consultation. La résolution peut être annoncée avec une date inconnue. Les consommateurs doivent conserver ces incertitudes.
+- Les fiches, `/api/incidents.json`, `/api/corpus.json`, `llms-full.txt`, la ressource MCP `pacheck://corpus/incidents` et `get_platform` utilisent le même corpus. La version 2.1 du corpus incidents expose le niveau de confirmation (`verification`), le service concerné (`affectedService`) et le lien documenté avec une PA (`relationship`). Un logiciel hors PA possède `platformSlugs: []` et un `affectedService` obligatoire. Il apparaît dans le journal mais dans aucune fiche PA. Les consommateurs doivent gérer cette liste vide. Les dates acceptent un horodatage, une date calendaire ou `null`. `detectedAt` distingue détection et début réel ; `checkedAt` reste la date de consultation. La résolution peut être annoncée avec une date inconnue. Les consommateurs doivent conserver ces incertitudes.
 
 ## Collecte légère
 
@@ -32,7 +32,7 @@ Localement, les fichiers sont dans `tmp/incident-watch/`, exclu de Git. Un verro
 
 Chaque source utilise TLS vérifié, une adresse DNS publique épinglée, une URL autorisée, un délai de 20 secondes et une limite de 2 Mio. Les redirections sont refusées. Saxes contrôle le XML ; DTD et entités externes sont refusées. Liens, origines, formats et dates sont contrôlés avant la mise en file. Les contenus externes sont des données non fiables, jamais du code ou des instructions à exécuter.
 
-Le collecteur compare les empreintes et conserve les avis sortis des flux glissants. Better Stack publie plusieurs entrées pour un même avis : la dernière version est retenue indépendamment de l’ordre. Un retrait de message TrustEsker déclenche une revue, jamais une résolution automatique. Une liste vide dans une API dont le schéma ou la fenêtre est invalide produit un échec.
+Le collecteur compare les empreintes et conserve les avis sortis des flux glissants. Better Stack publie plusieurs entrées pour un même avis : la dernière version est retenue indépendamment de l’ordre. Oh Dear peut donner le même lien racine à plusieurs avis. Chaque couple titre/date reçoit un identifiant stable ; les mises à jour de texte sont détectées sans fusionner les avis. Le lien reste limité à l’origine autorisée. Un retrait de message TrustEsker déclenche une revue, jamais une résolution automatique. Une liste vide dans une API dont le schéma ou la fenêtre est invalide produit un échec.
 
 Les nouveaux éléments restent dans la file de revue même après un relevé sans changement. La conservation des données précède la publication : **la collecte est automatique, la qualification et la mise en production suivent la revue**. Le flux CERT-FR fournit des pistes de vulnérabilités ; ses avis ne deviennent pas automatiquement des incidents de PA.
 
@@ -41,15 +41,15 @@ Les nouveaux éléments restent dans la file de revue même après un relevé sa
 Le réveil automatique Codex est **en pause** pour éviter la consommation automatique de tokens. Le workflow GitHub est un script déterministe, sans appel à un modèle. À la demande de l’utilisateur, lire d’abord les artifacts existants et examiner les changements utiles. Une recherche web supplémentaire répond à un signal concret ; la recherche générale des 149 PA n’est pas répétée chaque jour.
 
 1. Lire la source originale et identifier l’entreprise, le produit, les pays et les services effectivement concernés.
-2. Recontrôler les avis ouverts : Esker environnement G, Spendesk virements et Tungsten assistance au 16 septembre. La disparition d’une entrée du flux n’est pas une preuve de résolution.
+2. Recontrôler les avis ouverts : Esker environnement G, raccordement Welyb/eFacture et Spendesk cartes Amazon au 20 septembre. Spendesk virements et Tungsten assistance annoncent désormais une résolution. La disparition d’une entrée du flux n’est pas une preuve de résolution.
 3. Vérifier les dates : début réel nullable, premier signalement, publication de résolution, dernière mise à jour et date de notre contrôle. Un intervalle entre notifications n’est pas une durée de panne.
-4. Distinguer facturation électronique (`pa`), application (`publisher_service`) dépendance (`upstream`) et service connecté (`connected_service`). Une notification de vulnérabilité, de phishing ou une revendication demande une qualification distincte d’un incident confirmé.
+4. Distinguer facturation électronique (`pa`), application (`publisher_service`) dépendance (`upstream`) service connecté (`connected_service`) et logiciel hors annuaire PA (`ecosystem_service`). Une revendication utilise `verification: reported_claim` et `status: unknown`. Le rattachement à une PA exige sa propre source ; un incident chez un partenaire ne démontre pas une atteinte à la PA.
 5. Ajouter les faits relus aux sources et au corpus, conserver les incertitudes et mettre à jour les contrôles de livraison. Exécuter `npm run build` et `npm run mcp:smoke`, puis vérifier les surfaces modifiées.
 6. Signaler seulement une information utile : nouvel incident confirmé, évolution importante, résolution ou nouveau défaut de veille nécessitant une action. Un défaut inchangé ne produit pas une nouvelle alerte quotidienne. Les notifications relayées suffisamment documentées sont publiées avec leur attribution et leur niveau de confirmation, même sans flux automatique.
 
 Les notifications privées, espaces clients et données de facturation restent hors du périmètre. Aucune disponibilité ou garantie de sécurité ne découle d’un flux vide.
 
-## Résultats et pistes au 16 septembre
+## Résultats historiques au 16 septembre
 
 - Douze avis supplémentaires relus : WeInvoice (2), Spendesk (4), Dokapi (1), Invopop (2), MyUnisoft (2), Tungsten (1). Les perturbations d’application et de support conservent leur périmètre.
 - SAP : le bulletin primaire CERTFR-2026-AVI-1134 du 8 septembre décrit des vulnérabilités. Il est présenté séparément des incidents.
@@ -66,3 +66,7 @@ Les notifications privées, espaces clients et données de facturation restent h
 ## Rédaction
 
 Présenter le fait observé, le service concerné et l’information à obtenir. Éviter les séries de négations, les slogans en phrases miroirs et les constructions répétées « ce qui… », « ce que… ». Les réserves portent sur une source précise, pas sur une déclaration générique répétée partout.
+
+## Actualisation du 20 septembre
+
+Voir `docs/revue-pa-2026-09-20.md` pour les ajouts, corrections, exclusions et empreintes de collecte. Le flux Docoon Invoice remplace celui de Docoon Messaging. La correction Oh Dear rétablit SuperPDP après les échecs du 18 au 20 septembre ; le contrôle local collecte 26 sources sur 26. La fréquence quotidienne et le nombre de sources sont conservés.

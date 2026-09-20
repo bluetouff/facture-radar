@@ -94,7 +94,7 @@ export const platforms: Platform[] = [
     integrations: documented(["API Entreprise V2", "expert-comptable"], ["pennylane-free-2026", "pennylane-formats-2026"]),
     formats: documented(["Factur-X", "UBL", "CII"], ["pennylane-formats-2026"]),
     hostingCountries: declared(["France"], ["pennylane-subprocessors-2026-09", "pennylane-security-2026-09"], "Périmètre PA uniquement. La liste nomme Outscale, S3NS et Scalingo ; les autres données Pennylane ont un hébergement distinct dans l’Union européenne.", "2026-09-14"),
-    iso27001: documented(true, ["pennylane-iso27001-2026-09"], "Certificat BSI IS 786660, ISO/IEC 27001:2022, valable jusqu’au 19 septembre 2026. Périmètre SaaS comptable et gestion financière ; la PA n’est pas nommée séparément.", "2026-09-14"),
+    iso27001: declared(true, ["pennylane-security-20260920", "pennylane-iso27001-2026-09"], "Pennylane revendique sa certification. Le PDF BSI IS 786660 lié sur sa page sécurité expire le 19 septembre 2026. Au 20 septembre, le renouvellement documentaire reste à obtenir ; la PA n’est pas nommée séparément dans ce certificat.", "2026-09-20"),
     commitmentMonths: documented(0, ["pennylane-free-2026"]),
     importantUnknowns: ["Répartition des traitements entre hébergeurs PA", "Renouvellement ISO après le 19 septembre 2026", "Coût de sortie", "Conservation après résiliation"]
   },
@@ -134,19 +134,19 @@ export const platforms: Platform[] = [
     registeredAt: official("2026-01-29"),
     pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["micro", "tpe"], promotionalPriceExcluded: true, label: "Offre Basique gratuite, sans engagement, avec facturation électronique incluse" }, ["abby-pricing-2026", "abby-electronic-invoicing-2026"]),
     allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: true, label: "Factures, devis et fonctions de facturation électronique annoncés sans limitation" }, ["abby-pricing-2026", "abby-electronic-invoicing-2026"]),
-    sendsInvoices: documented(true, ["abby-electronic-invoicing-2026"]),
+    sendsInvoices: documented(false, ["abby-emission-20260920"], "L’aide dédiée indique que l’émission électronique reste indisponible et l’annonce pour septembre 2027. La création de factures PDF est un service distinct.", "2026-09-20"),
     receivesInvoices: documented(true, ["abby-electronic-invoicing-2026"]),
-    eReporting: documented(true, ["abby-electronic-invoicing-2026"]),
+    eReporting: { value: null, status: "non_documented", sourceIds: [], checkedAt: "2026-09-20", note: "Service annoncé dans l’offre. Sa disponibilité actuelle en production reste à confirmer." },
     bankAccountRequired: documented(false, ["abby-pricing-2026"], "La connexion bancaire est réservée à une offre payante, tandis que la facturation électronique est incluse dans l'offre gratuite."),
     accountantAccess: unknown("Le niveau d'accès accordé à un comptable externe reste à confirmer."),
     publicApi: documented({ available: true, includedInFree: false }, ["abby-api-2026-09"], "API de facturation réservée aux offres Pro et Business. Le périmètre des échanges PA via API reste à confirmer.", "2026-09-16"),
     exportDocumented: documented(true, ["abby-export-2026-09"], "Documents de facturation en PDF ; contacts, articles et livres en CSV ou Excel selon le type. Au-delà de 90 jours, Pro ou Business est requis. Restitution PA complète après résiliation non documentée.", "2026-09-16"),
     integrations: documented(["Make", "Zapier"], ["abby-home-2026"]),
-    formats: documented(["Factur-X"], ["abby-electronic-invoicing-2026"], "Les pages générales présentent aussi UBL et CII. La page de l'offre étudiée confirme uniquement Factur-X."),
+    formats: declared(["Factur-X"], ["abby-formats-20260920"], "Format annoncé. L’aide décrit encore la génération du XML embarqué comme étant en cours de déploiement.", "2026-09-20"),
     hostingCountries: unknown("Le lieu d'hébergement de la plateforme et les sous-traitants restent à confirmer."),
     iso27001: declared(true, ["abby-home-2026"], "Certification annoncée par l'éditeur. Le certificat public et son périmètre doivent encore être archivés."),
     commitmentMonths: documented(0, ["abby-pricing-2026"]),
-    importantUnknowns: ["Accès pour un comptable externe", "Périmètre PA de l’API Pro et Business", "Hébergement et sous-traitants", "Récupération des données après résiliation"]
+    importantUnknowns: ["Déploiement de l’émission et du Factur-X complet", "Disponibilité opérationnelle du e-reporting", "Périmètre PA de l’API Pro et Business", "Hébergement et restitution des données"]
   },
   {
     slug: "myunisoft",

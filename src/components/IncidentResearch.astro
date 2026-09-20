@@ -5,8 +5,8 @@ import { incidentResearch, incidentFeeds, incidentCoverage } from "../data/incid
 import { platforms } from "../data/platforms";
 ---
 <section class="shell research" id="recherche" aria-labelledby="research-title">
-  <header><div><span class="mono-label">La couverture en détail</span><h2 id="research-title" tabindex="-1">Les 149 plateformes recherchées.</h2></div><span class="research-total"><InterfaceIcon name="check" /> Recherches du 16 septembre</span></header>
-  <p>Deux recherches par nom : signalements de sécurité et sources de disponibilité. Retrouvez la portée du contrôle et les flux disponibles pour chaque plateforme.</p>
+  <header><div><span class="mono-label">La couverture en détail</span><h2 id="research-title" tabindex="-1">Les 149 plateformes recherchées.</h2></div><span class="research-total"><InterfaceIcon name="check" /> Recherches du 20 septembre</span></header>
+  <p>Recherche nominative actualisée le 20 septembre, complétée par la relecture des flux et pages d’état disponibles. Retrouvez la portée du contrôle et les flux disponibles pour chaque plateforme.</p>
   <form id="research-filter" hidden><label for="research-query">Rechercher une plateforme</label><input id="research-query" type="search" placeholder="Nom de la plateforme…" autocomplete="off" /></form>
   <p id="research-count" role="status" aria-live="polite">{incidentResearch.length} plateformes</p>
   <div id="research-list">{incidentResearch.map(item => {

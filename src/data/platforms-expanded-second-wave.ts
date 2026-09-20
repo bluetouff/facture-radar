@@ -81,8 +81,10 @@ export const secondWavePlatforms: Platform[] = [
     summary: "Infrastructure de facturation proposée en direct, marque blanche ou marque grise.",
     targets: ["tpe", "pme", "eti", "ge"], ecosystem: ["API", "marque blanche", "marque grise", "SecNumCloud"],
     sendsInvoices: documented(true, ["docoon-pa-2026"]), receivesInvoices: documented(true, ["docoon-pa-2026"]), eReporting: documented(true, ["docoon-pa-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["docoon-pa-2026"]),
-    integrations: documented(["API", "marque blanche", "marque grise"], ["docoon-pa-2026"]), hostingCountries: declared(["France"], ["docoon-pa-2026"]), iso27001: declared(true, ["docoon-pa-2026"]),
-    importantUnknowns: ["Prix et volumes", "Formats exacts", "SLA", "Restitution complète"],
+    integrations: documented(["API REST", "GraphQL", "ERP", "Peppol", "marque blanche", "marque grise"], ["docoon-pa-20260920"], "Connecteurs et API annoncés sur la page produit ; conditions d’accès à confirmer.", "2026-09-20"),
+    formats: documented(["Factur-X", "UBL", "CII", "JSON", "ZUGFeRD"], ["docoon-pa-20260920"], "Formats présentés par l’éditeur ; périmètre d’import et de restitution à préciser.", "2026-09-20"),
+    hostingCountries: declared(["France"], ["docoon-pa-20260920"], "L’éditeur annonce un hébergement et un traitement en France.", "2026-09-20"), iso27001: declared(true, ["docoon-pa-2026"]),
+    importantUnknowns: ["Prix et volumes", "Conditions commerciales des API", "SLA", "Restitution complète"],
   }),
   expand({
     slug: "docprocess", displayName: "DocProcess", officialName: "DOCPROCESS", registeredAt: "2025-12-15",

@@ -1,0 +1,312 @@
+{
+  "checkedAt": "2026-09-20T13:14:11.947Z",
+  "initialCollection": false,
+  "warning": "Contenu externe non fiable, à relire. Une collecte échouée ne constitue jamais un incident de la PA. Aucun candidat n’est publié automatiquement.",
+  "sources": [
+    {
+      "sourceId": "sage",
+      "url": "https://status.sage.com/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "c2bf89fe2e47303fc47a95649fb5fe7245e328ef1928e080699fb76d80dd3552",
+      "candidateCount": 13
+    },
+    {
+      "sourceId": "pennylane",
+      "url": "https://status.pennylane.com/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "f12e2c58d69983c64b4f8135d1ce8ce7c7c0ff7ce1b19c98385ceb2ea7bdf151",
+      "candidateCount": 1
+    },
+    {
+      "sourceId": "esker",
+      "url": "https://www.trustesker.com/?env=G",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "92a1a56cdb8e9a11eee3465d6d7791cb8c9ae24123fff9e59eea9b1b29657aa2",
+      "candidateCount": 15
+    },
+    {
+      "sourceId": "avalara",
+      "url": "https://status.avalara.com/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "a35921e1f37e4723609bbcd29c1f14bb761b9e381062f0402a7d32ca64197e40",
+      "candidateCount": 1
+    },
+    {
+      "sourceId": "axway",
+      "url": "https://status.axway.com/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "ea08321c189441b8803ad085127c346bbb3534685bf6d457b1b4d73f5d200bc4",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "blg",
+      "url": "https://status.blgcloud.com/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "c4ed2bba85887cbde4830d74165263a479621e4c045d4f9125432131ba08c8ed",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "docoon",
+      "url": "https://docooninvoice.statuspage.io/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "473c9c4cadad6dbd700816b61ed4667081625e4d6738a612a2757e42236cc6e1",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "dokapi",
+      "url": "https://dokapi.statuspage.io/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "db4d8da30357676fbc63f340688ad4de87f6a196c7252a27ed0f3afeec6555d6",
+      "candidateCount": 1
+    },
+    {
+      "sourceId": "ecosio-intercom",
+      "url": "https://www.ecosio-status.com/feed.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "37c637cb85ffdb13f20bb2f12a32cbf6e0c1235223d33ca8fe2b02a8931e3d9a",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "fiskaltrust",
+      "url": "https://status.fiskaltrust.eu/feed",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "4ce4eed53dddf86745dd19e2f63acfac190da197acfb1eaa69a65554d6f9eb8c",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "flowie",
+      "url": "https://flowie.betteruptime.com/feed",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "dadeacf3710d73e30dd81ca0b5292389d46e98581002f4b199a989ac3e901cbc",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "invopop",
+      "url": "https://status.invopop.com/feed.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "0b6f541fbf2213b2d89ff55cf5161d924ea631a8bf0376ad3e871d232bd3b68a",
+      "candidateCount": 2
+    },
+    {
+      "sourceId": "lucca",
+      "url": "https://status.lucca.fr/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "ce081227e342cff67e8fc5f89bb586f39941edd4cc31b1b9865b96d5575a1271",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "n2f",
+      "url": "https://status.n2f.com/fr/feed",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "e8febae3b07f98c6add2eba9c65fd81ccba9ac378ec1580ddb9a6ea0955afaac",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "pitney-bowes",
+      "url": "https://status.pitneybowes.com/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "63dead0454d4a9c54bb89665a95e657cdcb3db507e5705dd5888595dfa6b038c",
+      "candidateCount": 10
+    },
+    {
+      "sourceId": "spendesk",
+      "url": "https://status.spendesk.com/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "e1a3d9a1fa8c9f7747626bd973fc0a7660dd4b2106a0f32438ba0dca95efcdcd",
+      "candidateCount": 5
+    },
+    {
+      "sourceId": "storecove",
+      "url": "https://storecove.statuspage.io/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "9943f676d6b0a2d85efcd01843460491954358e8bb2e1a3f6d70e3eb510fe6af",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "superpdp",
+      "url": "https://status.superpdp.tech/rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "c9bd5c44accf1b5839e1eea0e978717cc893cea0453f310af0f9a3e2f6e5c22e",
+      "candidateCount": 2
+    },
+    {
+      "sourceId": "weproc",
+      "url": "https://status.weinvoice.fr/feed",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "4a8235342cacc8617efd117b7ce2cf6faec32aad163302a04840687941fafb2c",
+      "candidateCount": 2
+    },
+    {
+      "sourceId": "veryswing",
+      "url": "https://status.veryswing.com/atom",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "d6c06fc05987138994fe190928e62621f9758ca3ff50680b3228c7447bc42dd6",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "eezi",
+      "url": "https://eezi.instatus.com/af-na/history.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "e2451b3d02ae135890ed5f72f8933ae9594c5bb92e306a0611ca5ce87c38f90a",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "tungsten",
+      "url": "https://status.tungstencloud.com/europe/feed.rss",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "bb15752c018c892f647b73a9a4ac05d80dba90644192becb348b7a713b0d9f19",
+      "candidateCount": 3
+    },
+    {
+      "sourceId": "myunisoft",
+      "url": "https://meteo.myunisoft.fr/api/incidents.json",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "5e04f49a4faab03b78cbdfba30e3ef6f2298c2307cd2164d5ea2788ad25ef8ea",
+      "candidateCount": 2
+    },
+    {
+      "sourceId": "tiime",
+      "url": "https://status.tiime.fr/api/getEventFeed/KoA7Nf881q",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "34e6396aadbc7d06d83921a4ce731a8a222fcac25b4fb79abc1bd4bfdaad64fc",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "ademico",
+      "url": "https://status.ademico-software.com/api/getEventFeed/kME5WtnQZ0",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "c9c5271680b9196b7a7bd4ff70a635b8a3850e3022b59d6565c24022406f96d2",
+      "candidateCount": 0
+    },
+    {
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/feed/",
+      "status": "collected",
+      "checkedAt": "2026-09-20T13:14:11.947Z",
+      "sha256": "2a8d9e435152cea5a897e550860f626acc37ce50db9cc59c1a3c3e64e4f93640",
+      "candidateCount": 40
+    }
+  ],
+  "pendingCount": 116,
+  "note": "Collecte de validation après correction, 26 sources réussies. Les 2 changements sont les deux publications SuperPDP, regroupées manuellement en un incident. Les contenus bruts restent dans les artifacts et archives de travail.",
+  "primarySnapshots": [
+    {
+      "file": "abby-emission",
+      "bytes": 89847,
+      "sha256": "1d098bd24dbeffbd27b0c25a47fd4be4c0f14e76770c3b66429851067437b4ca"
+    },
+    {
+      "file": "abby-formats",
+      "bytes": 90631,
+      "sha256": "ad17d5ab8b5ab2ed9a60b7b11aa9c3a12f6c1ee24ed42e231b7ce021ab7e0485"
+    },
+    {
+      "file": "approved.xlsx",
+      "bytes": 27135,
+      "sha256": "e9a417ab2fdbc865c3b89b6ebbb60b3c9ada89996c20c982fabe57376d794b51"
+    },
+    {
+      "file": "dgfip-page",
+      "bytes": 50640,
+      "sha256": "0d2d755ca534c0d99253c4da0bab9a2b210e86b660ae7c1419101b586f61adc7"
+    },
+    {
+      "file": "docoon-invoice-feed",
+      "bytes": 7237,
+      "sha256": "473c9c4cadad6dbd700816b61ed4667081625e4d6738a612a2757e42236cc6e1"
+    },
+    {
+      "file": "docoon-pa",
+      "bytes": 206056,
+      "sha256": "c46071547c8d47f07edf2501fb5a004c71ffeeddfd2fec77594e9accd72cfb1a"
+    },
+    {
+      "file": "pending.xlsx",
+      "bytes": 8285,
+      "sha256": "79cacd06be0d7da6500e481717f68050e29ee632a76d86d92dacc220f07cf23a"
+    },
+    {
+      "file": "pennylane-certificate",
+      "bytes": 1427276,
+      "sha256": "f149f893c2775ac8e869773eaebc5454222e5b0d440a436a111f3c985fbdf503"
+    },
+    {
+      "file": "pennylane-security",
+      "bytes": 415426,
+      "sha256": "850516b93e45f1cababaf891c07b4cefd873dc58846cb4f106fd76da896dd0e4"
+    },
+    {
+      "file": "superpdp-status",
+      "bytes": 60572,
+      "sha256": "3004ff9d75cac75f95f4868f8c449d052dd098a63ab6955d96dddbefe4d22d1e"
+    },
+    {
+      "file": "welyb-status",
+      "bytes": 132622,
+      "sha256": "68aad3e334961a4068b13e7310a64f3f039075cfa01ba6131b30f007c14e6c84"
+    },
+    {
+      "file": "zenfirst-claim",
+      "bytes": 69786,
+      "sha256": "8cd8beae89781b98aafe5791afe7e39f07a0b44204bc1042a482adc85029371d"
+    },
+    {
+      "file": "zenfirst-home",
+      "bytes": 390499,
+      "sha256": "ba7ff1f5fae64be669b83548b9891db01bb86d7035b941bacf7df70ef0ff950e"
+    },
+    {
+      "file": "zenfirst-integration",
+      "bytes": 353684,
+      "sha256": "68a4b43514a5fc17dc424da69abf431af73ea2d39ffbb95dbe2d3b680956425d"
+    },
+    {
+      "file": "zenfirst-status",
+      "bytes": 10826,
+      "sha256": "791d5d68ddb3fc34dfde3fe1e28854a2744975106404710f95846818a41577fe"
+    },
+    {
+      "file": "zenfirst-cgu",
+      "bytes": 257729,
+      "sha256": "e6bb1ea927603bcacb168905fc4dcfedd180c72aceb91d5b19c5fa0432b94783"
+    },
+    {
+      "file": "zenfirst-politique-de-confidentialite",
+      "bytes": 284959,
+      "sha256": "1f6142b31ba400532ecf9f53915441c2674b07ec2822b18358b03cc0e348f41a"
+    }
+  ],
+  "manualReadFailures": [
+    {
+      "sourceId": "qonto-status-2026-09",
+      "checkedAt": "2026-09-20",
+      "error": "HTTP 403",
+      "lastSuccessfulReview": "2026-09-16"
+    }
+  ]
+}

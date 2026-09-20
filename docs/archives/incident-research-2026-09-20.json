@@ -1,0 +1,1338 @@
+{
+  "checkedAt": "2026-09-20",
+  "since": "2026-09-01",
+  "method": "Une recherche nominative par PA actualise la revue du 16 septembre. Recoupements ciblés, contrôle des homonymes et relecture des 26 sources automatiques. Les URL sont des pistes, pas des preuves d'incident. Le rapport de revue précise les inclusions, exclusions et limites.",
+  "platforms": [
+    {
+      "platformSlug": "a-cube",
+      "query": "\"A-Cube\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://comparer-pa.fr/plateformes/a-cube",
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://www.acubeapi.com/fr/blog/a-cube-officially-accredited-in-france-by-dgfip-our-api-infrastructure-is-ready-for-french-e-invoicing"
+      ]
+    },
+    {
+      "platformSlug": "abby",
+      "query": "\"Abby\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.lagazettefrance.fr/article/nancy-abby-entend-capter-les-entreprises-n-ayant-pas-encore-migre-vers-la-facturation-electronique",
+        "https://community.abby.fr/t/facturation-electronique-garanties-rgpd/1885",
+        "https://community.abby.fr/t/je-ne-peux-pas-telecharger-mes-factures/1836"
+      ]
+    },
+    {
+      "platformSlug": "accenture",
+      "query": "\"Accenture eComply & Verify\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-ECV-Service-Levels-and-Support-Policy-07-24.pdf",
+        "https://www.comparateur-facturation-electronique.fr/produit/accenture/",
+        "https://www.linkedin.com/posts/pfkaltenbach_einvoicing-pdp-continuoustransactioncontrol-activity-7252195204697395200-sHKO"
+      ]
+    },
+    {
+      "platformSlug": "ademico",
+      "query": "\"Ademico Software\" \"ADEMICO SOFTWARE\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/ademico-software/",
+        "https://ademico-software.com/peppol/france-e-invoicing/"
+      ]
+    },
+    {
+      "platformSlug": "agena3000",
+      "query": "\"AGENA3000\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.agena3000.com/en/confidentiality-privacy-policy",
+        "https://www.agena3000.com/fr/nos-solutions/a3-e-invoicing",
+        "https://www.ouest-france.fr/pays-de-la-loire/cholet-49300/creee-et-installee-a-cholet-lentreprise-de-traitement-de-donnees-agena3000-surfe-sur-la-facture-electronique-1b69300e-55ea-11f1-b3d6-3bcc124ee9cc"
+      ]
+    },
+    {
+      "platformSlug": "agicap",
+      "query": "\"Agicap\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.daf-mag.fr/bi-1244/transformation-processus-2133/facturation-electronique-non-la-fuite-de-donnees-a-la-dgfip-nimpacte-pas-la-reforme-27066",
+        "https://agicap.com/fr/fonctionnalites/plateforme-agreee-facturation-electronique/",
+        "https://agicap.com/fr/article/e-reporting-definition-utilisation/"
+      ]
+    },
+    {
+      "platformSlug": "ags-records",
+      "query": "\"WiDOFACT by AGS\" \"AGS RECORDS MANAGEMENT\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.ags-recordsmanagement.com/fr/news/guide-complet-reforme-facturation-electronique-2026/"
+      ]
+    },
+    {
+      "platformSlug": "arratech",
+      "query": "\"Arratech Connect\" \"Arratech\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://docs.arratech.com/technical-brief",
+        "https://docs.arratech.com/capability-brief",
+        "https://www.linkedin.com/posts/hberg_what-an-effort-by-our-incredible-team-thanks-activity-7478780500678111232-77ei"
+      ]
+    },
+    {
+      "platformSlug": "arteva",
+      "query": "\"Artéva Orchestrade\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.arteva.fr/orchestrade/",
+        "https://www.arteva.fr/en/orchestrade/",
+        "https://www.arteva.fr/orchestrade/edi/"
+      ]
+    },
+    {
+      "platformSlug": "aruba",
+      "query": "\"Aruba OneSuite\" \"Aruba S.p.A.\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.arubaonesuite.fr/",
+        "https://www.modulyx.fr/plateformes-agreees",
+        "https://www.comparateur-facturation-electronique.fr/choisir-pdp/"
+      ]
+    },
+    {
+      "platformSlug": "atgp",
+      "query": "\"BEE.FACT\" \"ATGP\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://comparer-pa.fr/plateformes/gp",
+        "https://www.atgp.net/nos-solutions/facture-electronique/",
+        "https://www.atgp.net/"
+      ]
+    },
+    {
+      "platformSlug": "avalara",
+      "query": "\"Avalara\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://status.avalara.com/",
+        "https://www.brinztech.com/breach-alerts/brinztech-alert-data-of-avalara-are-on-sale/",
+        "https://dailydarkweb.net/avalara-inc-data-breach-exposes-customer-and-api-data/"
+      ]
+    },
+    {
+      "platformSlug": "axelor",
+      "query": "\"Axelor\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://axelor.com/fr/logiciel-facturation-electronique/",
+        "https://axelor.com/fr/facturation-electronique-2026-calendrier-sanctions-erp/",
+        "https://axelor.com/fr/axelor-est-desormais-officiellement-plateforme-agreee/"
+      ]
+    },
+    {
+      "platformSlug": "axonaut",
+      "query": "\"Axonaut\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.cyberattaque.org/axonaut-8-bases-clients-revendiquees-plusieurs-milliers-de-factures-exposees/",
+        "https://frenchbreaches.com/alertes/axonaut-mqygp4ygl2o4wc6v2i",
+        "https://www.carnetdebord.info/axonaut-confirme-sa-croissance-et-s-impose-parmi-les-solutions-de-gestion-pour-tpe/"
+      ]
+    },
+    {
+      "platformSlug": "axway",
+      "query": "\"Axway eInvoicing\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://blog.axway.com/product-insights/b2b-integration/einvoicing/france-e-invoicing-reform-2026",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/axway/",
+        "https://www.axway.com/fr/produits/b2b-integration/einvoice"
+      ]
+    },
+    {
+      "platformSlug": "azopio",
+      "query": "\"Azopio\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.azopio.com/fr/security-policy/",
+        "https://www.azopio.com/fr/cgu-service-fr/",
+        "https://blog.azopio.com/rgpd-pre-comptabilite-comment-azopio-garantit-la-conformite-des-donnees-financieres/"
+      ]
+    },
+    {
+      "platformSlug": "b2brouter",
+      "query": "\"B2BRouter\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.publicsenat.fr/actualites/economie/facturation-electronique-apres-le-piratage-du-fisc-le-gouvernement-veut-rassurer-les-entreprises-sur-les-standards-de-securite",
+        "https://www.sudouest.fr/economie/cybersecurite/cybersecurite-l-attaque-subie-par-la-dgfip-inquiete-les-entreprises-quelques-jours-avant-le-deploiement-de-la-facturation-electronique-30312562.php",
+        "https://comptaverse.fr/posts/fuite-donnees-dgfip-entreprises-aout-2026/"
+      ]
+    },
+    {
+      "platformSlug": "b4value",
+      "query": "\"b4value.net\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.northdata.de/b4%20value%C2%B7net%20GmbH,%20Kaiserslautern/HRB%204024",
+        "https://comparer-pa.fr/plateformes/b4value-net",
+        "https://guidefacturation.com/logiciels/b4value-net/"
+      ]
+    },
+    {
+      "platformSlug": "basware",
+      "query": "\"Basware\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.centralcharts.com/fr/147483-basware-oyj-chix/news/5696613-les-clients-de-basware-passent-la-facturation-lectronique-en-france-avec-deux-mois-d-avance-sur-la-date-butoir-du-1er-septembre",
+        "https://www.erpimplementation.eu/pdp-ppf-facture-electronique-france-etat-lieux-mi-2026/",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/basware/"
+      ]
+    },
+    {
+      "platformSlug": "bc-solutions",
+      "query": "\"eas'Invoice\" \"BC SOLUTIONS\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://bcsolutions.fr/easinvoice/",
+        "https://bcsolutions.fr/en/immatriculation-definitive/",
+        "https://guidefacturation.com/logiciels/bc-solutions/"
+      ]
+    },
+    {
+      "platformSlug": "billit",
+      "query": "\"Billit\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.billit.eu/fr-lu/qui-sommes-nous/conformite-et-confiance/",
+        "https://comparer-pa.fr/plateformes/billit",
+        "https://facture-obligatoire.fr/plateformes/billit/"
+      ]
+    },
+    {
+      "platformSlug": "blg",
+      "query": "\"blgCloud\" \"BLG\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.blgcloud.com/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545",
+        "https://www.zataz.com/deux-pirates-revendiquent-le-piratage-de-pro-du-cloud/",
+        "https://frenchbreaches.com/alertes/roussel-agri-62-blgcloud-mskjsgirjuladgvz0sj"
+      ]
+    },
+    {
+      "platformSlug": "cbs",
+      "query": "\"cbs e-world.cloud\" \"CBS Corporate Business Solutions\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://e-world.cloud/",
+        "https://www.cbs-consulting.com/us/update/cbs-e-world-cloud-new-name-for-the-all-in-one-compliance-platform/",
+        "https://www.verband-e-rechnung.org/loesungen/cbs/"
+      ]
+    },
+    {
+      "platformSlug": "cecurity",
+      "query": "\"Cecurity eFacture\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://guidefacturation.com/logiciels/cecurity/",
+        "https://www.comparateur-facturation-electronique.fr/produit/cecurity/",
+        "https://solune.com/anticipez-la-reforme-de-la-facturation-electronique-grace-a-solune-erp-connecte-a-la-plateforme-agreee-de-cecurity-efacture/"
+      ]
+    },
+    {
+      "platformSlug": "cegedim",
+      "query": "\"Cegedim SY business\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.infos-pa.com/plateformes/cegedim",
+        "https://comparepdp.com/articles/sy-by-cegedim-avis",
+        "https://www.comparateur-facturation-electronique.fr/produit/cegedim/"
+      ]
+    },
+    {
+      "platformSlug": "cegi-alfa",
+      "query": "\"Cegi Alfa\" \"CEGI ALFA\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://numbers.finance/entreprise/cegi-alfa-319960142",
+        "https://www.comparateur-facturation-electronique.fr/produit/cegi-alfa/",
+        "https://www.cegi.fr/nos-solutions/services/hebergement/"
+      ]
+    },
+    {
+      "platformSlug": "cegid",
+      "query": "\"Cegid\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fuitesinfos.fr/article/2026-02-24-cegid",
+        "http://direct.lemondeduchiffre.fr/a-la-une/80545-facturation-electronique-la-reforme-entre-en-vigueur-les-questionnements-s-intensifient.html",
+        "https://x-pression.media/facturation-electronique-le-piratage-de-la-dgfip-nourrit-la-fronde"
+      ]
+    },
+    {
+      "platformSlug": "chaintrust",
+      "query": "\"Chaintrust\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.chaintrust.io/plateforme-agreee-chaintrust/",
+        "https://www.modulyx.fr/plateformes-agreees/chaintrust-by-visma",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/chaintrust/"
+      ]
+    },
+    {
+      "platformSlug": "cleartax",
+      "query": "\"ClearTax\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.upguard.com/security-report/cleartax",
+        "https://www.cleartax.com/global/trust-center",
+        "https://fiknow.in/income-tax/is-cleartax-safe/"
+      ]
+    },
+    {
+      "platformSlug": "comarch",
+      "query": "\"Comarch\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.linkedin.com/posts/comarch-e-invoicing_comarch-einvoicing-cybersecurity-activity-7499100266454151168-Rspp",
+        "https://www.comarch.fr/solutions-it/plateforme-echange-et-de-gestion-des-documents/facturation-electronique/facturation-electronique-b2b-obligatoire-en-france/",
+        "https://www.techno-finance.fr/facturation-electronique-comarch-arrive-sur-le-marche-francais-pour-accompagner-les-pme/"
+      ]
+    },
+    {
+      "platformSlug": "cyclope",
+      "query": "\"Cyclope\" \"CYCLOPE\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.cssf.lu/fr/2026/09/avertissement-concernant-des-activites-frauduleuses-par-des-personnes-utilisant-abusivement-lidentite-de-la-societe-cyclope-investissements/",
+        "https://zerohour.day/item/f801c710cfd253fad2737500be9253e6d7154773",
+        "https://cybersecurity-see.com/sandworm-linked-cyclops-blink-reemerges-with-network-scanning-and-packet-sniffing-features/"
+      ]
+    },
+    {
+      "platformSlug": "darva",
+      "query": "\"Ofeli by DARVA\" \"DARVA\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/darva/",
+        "https://www.darva.com/fr/actualites/immatriculation-definitive-pour-ofeli-plateforme-agreee/",
+        "https://www.darva.com/fr/actualites/presentations-clients-ofeli-loutil-de-facturation-electronique-de-darva/"
+      ]
+    },
+    {
+      "platformSlug": "dext",
+      "query": "\"Dext\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://help.dext.com/fr/articles/724700-comment-se-preparer-a-recevoir-des-factures-electroniques",
+        "https://www.compta-online.com/dext-au-81-congres-ordre-ao8862",
+        "https://help.dext.com/fr/articles/692764-la-reforme-de-la-facture-electronique-avec-dext"
+      ]
+    },
+    {
+      "platformSlug": "digipharmacie",
+      "query": "\"DigiPA\" \"DIGIPHARMACIE\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://digipharmacie.fr/digipa-la-facturation-electronique-en-officine-en-clair",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/digipharmacie/",
+        "https://www.extencia.fr/outils/academy-clients/digipharmacie/index.html"
+      ]
+    },
+    {
+      "platformSlug": "digital-technologies",
+      "query": "\"Digital Technologies\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/digital-technologies-france-namirial-company_einvoicing-france-compliance-activity-7500467712976945154-NuQb",
+        "https://facture-electronique-en-ligne.fr/avis-logiciel/digital-tech",
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/"
+      ]
+    },
+    {
+      "platformSlug": "docnova",
+      "query": "\"Docnova\" \"Docnova, MELASOFT GmbH\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://docnova.ai/fr/facturation-electronique-en-france-conformite-de-la-cybersecurite/",
+        "https://docnova.ai/fr/logiciel-de-facturation-electronique-en-marque-blanche/",
+        "https://docnova.ai/fr/categorie/non-classe/"
+      ]
+    },
+    {
+      "platformSlug": "docoon",
+      "query": "\"Docoon Invoice\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://presseagence.fr/paris-facturation-electronique-docoon-choisit-le-cloud-souverain-doutscale-pour-sa-plateforme-agreee/",
+        "https://communiques.categorynet.com/ntic/524831-docoon-pret-a-gerer-5-a-10-des-factures-apres-la-reforme/",
+        "https://docoon.com/qualite-de-service/"
+      ]
+    },
+    {
+      "platformSlug": "docprocess",
+      "query": "\"DocProcess\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://doc-process.com/fr/solutions-security/",
+        "https://doc-process.com/fr/bea-platform/",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/docprocess/"
+      ]
+    },
+    {
+      "platformSlug": "docuware",
+      "query": "\"DocuWare\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://start.docuware.com/fr/espace-presse/docuware-immatriculee-definitivement-plateforme-agree-pa-une",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/docuware/",
+        "https://start.docuware.com/fr/factures-electroniques-avec-docuware"
+      ]
+    },
+    {
+      "platformSlug": "dokapi",
+      "query": "\"Dokapi\" \"DOKAPI\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.dokapi.io/fr-be/terms-and-conditions",
+        "https://www.dokapi.io/fr-be/security",
+        "https://www.dokapi.io/security"
+      ]
+    },
+    {
+      "platformSlug": "dougs",
+      "query": "\"Dougs\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.dougs.fr/blog/e-invoicing/",
+        "https://www.dougs.fr/logiciel-facturation-gratuit/",
+        "https://logicielcomptable.net/dougs-plateforme-agreee-tarifs-et-statut-dgfip/"
+      ]
+    },
+    {
+      "platformSlug": "doxallia",
+      "query": "\"Doxallia Invox-IA\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/doxallia/",
+        "https://www.mon.expert/plateformes-agreees",
+        "https://www.comparateur-facturation-electronique.fr/produit/doxallia/"
+      ]
+    },
+    {
+      "platformSlug": "ecosio-intercom",
+      "query": "\"ecosio InterCom\" \"ecosio InterCom, a Vertex Company\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://ecosio.com/en/data-protection/",
+        "https://explore.openli.com/privacy/ecosio",
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/"
+      ]
+    },
+    {
+      "platformSlug": "edicom",
+      "query": "\"EDICOM\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/edicom-group/",
+        "https://edicomgroup.com/fr/blog/comment-fonctionne-le-nouveau-systeme-de-e-reporting-en-france",
+        "https://facture-obligatoire.fr/plateformes/edicom-france/"
+      ]
+    },
+    {
+      "platformSlug": "edicom-group",
+      "query": "\"EDICOM Group\" \"EDICOM Group\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://edicomgroup.com/edicom-global-platform",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/edicom-group/",
+        "https://bourseinside.fr/economie/facturation-electronique-au-1er-septembre-cette-obligation-change-tout-pour-votre-entreprise-voici-les-149-plateformes-agreees/"
+      ]
+    },
+    {
+      "platformSlug": "edics",
+      "query": "\"EDiCSpro\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://edics.fr/",
+        "https://guidefacturation.com/logiciels/edics-france/",
+        "https://edics.fr/wp-content/uploads/2025/10/ISO-IEC_27001-FRE-C743753-0-20251006.pdf"
+      ]
+    },
+    {
+      "platformSlug": "edieyes",
+      "query": "\"EdiEyes Vision Care\" \"EdiEyes Vision Care\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://fr.linkedin.com/posts/edieyes-vision-care_s%C3%A9curit%C3%A9desdonn%C3%A9es-protectiondesdonn%C3%A9es-activity-7470059641717141504-hhBa",
+        "https://www.comparateur-facturation-electronique.fr/produit/edieyes/"
+      ]
+    },
+    {
+      "platformSlug": "edt",
+      "query": "\"EDT EIMA\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://guidefacturation.com/logiciels/edt/",
+        "https://www.group-edt.fr/nos-solutions/e-invoice-eima/",
+        "https://www.group-edt.co.uk/client-hub-solutions/e-invoice-eima/"
+      ]
+    },
+    {
+      "platformSlug": "eezi",
+      "query": "\"eezi\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/tevearfconsulting_plateformeagr%C3%A9%C3%A9e-facturation%C3%A9lectronique-activity-7499082829599797249-jqsl",
+        "https://www.linkedin.com/posts/pascal-andre-40282813_plateformeagr%C3%A9%C3%A9e-facturation%C3%A9lectronique-activity-7499082900278263808-l5De",
+        "https://kevytyrittajat.eezy.fi/uutiset/palvelunestohyokkays-on-saatu-torjuttua-nopeasti/"
+      ]
+    },
+    {
+      "platformSlug": "effinum",
+      "query": "\"Effinum\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://loire-atlantique.cerfrance.fr/actualites/effinum-la-plateforme-agreee-de-cerfrance-officiellement-ouverte",
+        "https://normandie-ouest.cerfrance.fr/expertises/facture-electronique",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/effinum/"
+      ]
+    },
+    {
+      "platformSlug": "enerj",
+      "query": "\"ENERJ\" \"ENERJ\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.enerj.fr/entreprise",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/enerj/",
+        "https://www.enerj.fr/solutions/conservation-numerique-reglementaire"
+      ]
+    },
+    {
+      "platformSlug": "entropics",
+      "query": "\"ZenOnline\" \"ENTROPICS\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://zensolutions.fr/lutte-contre-la-fraude-documentaire/",
+        "https://zensolutions.fr/",
+        "https://zensolutions.fr/gestion-electronique-de-documents/"
+      ]
+    },
+    {
+      "platformSlug": "esalink",
+      "query": "\"EsaLink Hubtimize\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.esalink.com/pdp/",
+        "https://www.esalink.com/blog/rfe-non-assujetti/",
+        "https://www.infos-pa.com/plateformes/esalink"
+      ]
+    },
+    {
+      "platformSlug": "esi",
+      "query": "\"ESI\" \"ESI\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.breachsense.com/breaches/esi-data-breach/",
+        "https://www.esi.dz/alerte-de-securite-decouverte-dune-breche-informatique-sur-les-comptes-messagerie-appelee-comb-compilation-of-many-breaches/",
+        "https://fr.linkedin.com/posts/esi-technologies_ia-cybers%C3%A9curit%C3%A9-cyberr%C3%A9silience-activity-7500640608030511105-N_Bs"
+      ]
+    },
+    {
+      "platformSlug": "esker",
+      "query": "\"Esker\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://flowwa.io/blog/dgfip-et-cybersecurite-comment-esker-securise-sa-plateforme-agreee/",
+        "https://www.esker.com/fr/a-propos-esker/communiques-de-presse/immatriculation-pa/",
+        "https://www.mon.expert/plateformes-agreees/esker"
+      ]
+    },
+    {
+      "platformSlug": "euro-information",
+      "query": "\"HBS e-factures\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.compta-online.com/plateforme-agreee-cybersecurite-ao8858",
+        "https://www.cic.fr/fr/entreprises/comptes/e-factures.html",
+        "https://www.epithete.com/fr/plateformeagreee-euro-information.html"
+      ]
+    },
+    {
+      "platformSlug": "facnote",
+      "query": "\"Facnote PDP\" \"FACNOTE PDP\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://groupefacnote.com/",
+        "https://groupefacnote.com/pdp/"
+      ]
+    },
+    {
+      "platformSlug": "fiducial-cloud",
+      "query": "\"FIDUCIAL Cloud Facilia\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.fiducial.fr/facturation-electronique/actualites-conseils/comment-faire-e-reporting-guide-etape-par-etape",
+        "https://www.fiducial.fr/facilia/tarifs",
+        "https://www.linkedin.com/in/ga%C3%ABl-hamon-b159ba222"
+      ]
+    },
+    {
+      "platformSlug": "fiskaltrust",
+      "query": "\"fiskaltrust\" \"FISKALTRUST\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fiskaltrust.eu/fr-fr/partner/product/notifications/",
+        "https://github.com/fiskaltrust/interface-doc/blob/master/doc/middleware-at-rksv/cash-register-integration/cash-register-integration.md",
+        "https://fiskaltrust.eu/fr-fr/developer/open-source/"
+      ]
+    },
+    {
+      "platformSlug": "flowie",
+      "query": "\"Flowie\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://get-flowie.com/fr/facturation-electronique",
+        "https://facture-obligatoire.fr/plateformes/flowie/",
+        "https://fr.linkedin.com/posts/get-flowie_cest-officiel-flowie-est-certifi%C3%A9e-activity-7416482166622265344-vmEA"
+      ]
+    },
+    {
+      "platformSlug": "fonoa",
+      "query": "\"Fonoa\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.fonoa.com/resources/security",
+        "https://apis.io/providers/fonoa/",
+        "https://strike.fyi/c/fonoa-com"
+      ]
+    },
+    {
+      "platformSlug": "freedz",
+      "query": "\"Freedz\" \"DOCOON IMMO / FREEDZ\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://freedz.io/plateforme-dematerialisation-partenaire/",
+        "https://freedz.io/freedz-la-solution-de-validation-des-factures-fournisseurs/",
+        "https://www.batipole.com/articles/reforme-2026-et-nouvelles-fonctionnalites-freedz-prepare-les-usages"
+      ]
+    },
+    {
+      "platformSlug": "fulll",
+      "query": "\"fulll\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.fulll.fr/securite",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/fulll/",
+        "https://www.fulll.fr/facturation-electronique"
+      ]
+    },
+    {
+      "platformSlug": "generix",
+      "query": "\"Generix\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.lemondeinformatique.fr/actualites/lire-souverainete-numerique-le-choc-des-realites-face-aux-illusions-de-l-autonomie-100796.html",
+        "https://www.generixgroup.com/fr/communiques-de-presse/reforme-de-la-facturation-electronique-une-illusion-de-preparation",
+        "https://www.generixgroup.com/fr/edi-services-facturation-electronique/pdp-dematerialisation-factures"
+      ]
+    },
+    {
+      "platformSlug": "gep",
+      "query": "\"GEP E-Invoice Automation\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.gep.com/software/e-invoicing"
+      ]
+    },
+    {
+      "platformSlug": "gestav",
+      "query": "\"Gestav\" \"GESTAV\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://gestav.com/confidentialite",
+        "https://gestav.com/conditions-categorielles-taxis",
+        "https://gestav.com/faq"
+      ]
+    },
+    {
+      "platformSlug": "groupe-sigma",
+      "query": "\"Sigma Lixa PA\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.sigma.fr/services-solutions/edition-integration/gestion-entreprise/erp-lixa/lixa-pdp/",
+        "https://fr.linkedin.com/posts/sigma-informatique_facturation%C3%A9lectronique-plateformeagr%C3%A9%C3%A9e-activity-7417913546467962880-79Sd"
+      ]
+    },
+    {
+      "platformSlug": "gurusoft",
+      "query": "\"GuruSoft eDoc\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://guru-soft.com/puntos-claves-del-seminario-internacional-de-la-dian-5-anos-del-sistema-de-factura-electronica/",
+        "https://guru-soft.com/es/blog/general/edoc-empresarial-solucionando-la-vida-a-los-empresarios-bolivianos/"
+      ]
+    },
+    {
+      "platformSlug": "iaf",
+      "query": "\"IAF\" \"IAF\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.seqrite.com/fr/blog/advisory-pahalgam-attack-themed-decoys-used-by-apt36-to-target-the-indian-government/",
+        "https://www.zonearmee.com/lequipe-cyber-pakistanaise-a-surveille-les-reseaux-sociaux-indiens-pour-suivre-les-jets-de-liaf/",
+        "https://air-cosmos.com/article/s-400-en-inde-une-fuite-d-informations-donne-le-nombre-exact-des-materiels-et-missiles-achetes-a-la-russie-69179"
+      ]
+    },
+    {
+      "platformSlug": "icd",
+      "query": "\"DEMATRUST Light\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.icdint.fr/dematrust-light",
+        "https://fr.linkedin.com/posts/icd-international-icdsc_facturationelectronique-conformit%C3%A9-dgfip-activity-7498620512596676608-ii3k",
+        "https://www.comparatif-facture-electronique.fr/icd-international-facturation-electronique-avis/"
+      ]
+    },
+    {
+      "platformSlug": "iedi",
+      "query": "\"iEDI\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://iedi.com/articles/the-case-for-european-data-sovereignty",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/iedi-aps/",
+        "https://iedi.com/"
+      ]
+    },
+    {
+      "platformSlug": "iga-assurance",
+      "query": "\"IGA Assurance\" \"IGA ASSURANCE\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://insurtechlist.com/companies/iga/",
+        "https://www.societe.com/societe/iga-assurances-433931235.html",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/iga-assurance/"
+      ]
+    },
+    {
+      "platformSlug": "indicom",
+      "query": "\"Indicom\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/indicom-srl_france-facturation%C3%A9lectronique-ereporting-activity-7500907222047207424-UVK4",
+        "https://comparer-pa.fr/plateformes/indicom",
+        "https://fr.linkedin.com/posts/indicom-srl_facturation%C3%A9lectronique-einvoicing-france-activity-7463591578662543361-kM7z"
+      ]
+    },
+    {
+      "platformSlug": "indy",
+      "query": "\"Indy\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.latribune.fr/article/economie/18180285437943/facturation-electronique-le-lyonnais-indy-surfe-sur-la-reforme",
+        "https://www.indy.fr/facturation-electronique/",
+        "https://journal-du-palais.fr/au-sommaire/hommes-et-chiffres/barometre/facturation-electronique-une-acceleration-encore-insuffisante"
+      ]
+    },
+    {
+      "platformSlug": "infologic",
+      "query": "\"PA Copilote\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.infologic-copilote.fr/infos-erp-copilote/plateforme-agreee-pa-copilote/",
+        "https://www.infologic-copilote.fr/infos-erp-copilote/infologic-facturation-electronique-2026/",
+        "https://www.infologic-copilote.fr/revue-presse/infologic-obtient-limmatriculation-definitive-pour-sa-pa-copilote/"
+      ]
+    },
+    {
+      "platformSlug": "intesa",
+      "query": "\"Intesa\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.ansa.it/puglia/notizie/2026/09/15/archiviata-indagine-su-intesa-sanpaolo-banca-danneggiata-dallo-spionaggio_6010a288-64b0-43c3-9823-8d13f396b1b3.html",
+        "https://www.ilfattoquotidiano.it/2026/09/15/spionaggio-bancario-intesa-sanpaolo-3572-conti-notizie/8506901/",
+        "https://ilglobo.com/news/conti-spiati-chiuse-le-indagini-su-coviello-nel-mirino-3572-persone-151602/"
+      ]
+    },
+    {
+      "platformSlug": "invopop",
+      "query": "\"Invopop\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://comparer-pa.fr/plateformes/invopop",
+        "https://docs.invopop.com/compliance/france",
+        "https://invopop.mintlify.app/guides/fr-pa"
+      ]
+    },
+    {
+      "platformSlug": "iopole",
+      "query": "\"Iopole\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.iopole.com/",
+        "https://www.initiatives-nouvelles.com/facturation-electronique-iopole-accompagne-la-transformation-des-logiciels/",
+        "https://fr.linkedin.com/posts/iopole_iopole-activity-7500405845915070464-jLKd"
+      ]
+    },
+    {
+      "platformSlug": "ipaidthat",
+      "query": "\"iPaidThat\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://app.ipaidthat.io/fr/facturation-electronique-pdp/",
+        "https://app.ipaidthat.io/fr/securite/",
+        "https://app.ipaidthat.io/mag/e-facture/kit-durgence-plateforme-agreee-ipaidthat/"
+      ]
+    },
+    {
+      "platformSlug": "itesoft",
+      "query": "\"ITESOFT\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/itesoft_r%C3%A9forme-de-la-facture-%C3%A9lectronique-activity-7496204214906421248-wCTL",
+        "https://guidefacturation.com/logiciels/itesoft/",
+        "https://www.itesoft.com/fr/besoins/dematerialisation-factures/"
+      ]
+    },
+    {
+      "platformSlug": "jefacture",
+      "query": "\"jefacture.com\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.commentcamarche.net/securite/piratage/38871-fuite-piratage-facturation-electronique/",
+        "https://support.jefacture.com/fr/articles/396924-connecteur-facturation-electronique",
+        "https://support.jefacture.com/fr/articles/740624-nouveautes-juin-2026-espace-entreprise"
+      ]
+    },
+    {
+      "platformSlug": "klekoon",
+      "query": "\"Klekoon\" \"KLEKOON\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.rankiteo.com/company/klekoon",
+        "https://www.klekoon.com/",
+        "https://annuaire-entreprises.data.gouv.fr/entreprise/klekoon-klekoon-421401803"
+      ]
+    },
+    {
+      "platformSlug": "kolecto",
+      "query": "\"Kolecto\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://support.kolecto.fr/fr/articles/503058-plateforme-agreee-de-kolecto",
+        "https://www.kolecto.fr/fonctionnalites/facturation-electronique",
+        "https://support.kolecto.fr/fr/articles/150554-la-conformite-de-kolecto-a-la-reforme-de-la-facturation-electronique"
+      ]
+    },
+    {
+      "platformSlug": "kolecto-pdp",
+      "query": "\"Kolecto PDP\" \"KOLECTO PDP\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://annonces-legales.lesechos.fr/annonces/a953e255-3b68-4c72-be88-33306ff0325e-form-instance/",
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://www.data.gouv.fr/datasets/plateformes-agreees-pa-facturation-electronique-liste-dgfip-structuree-datee-convention-de-decompte-publiee"
+      ]
+    },
+    {
+      "platformSlug": "legalinvoice",
+      "query": "\"LegalInvoice\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.certeurope.fr/communiques-de-presse/la-solution-legalinvoice-accreditee-plateforme-agreee-en-france-un-renforcement-de-son-leadership-international-en-matiere-de-facturation-electronique/",
+        "https://www.certeurope.fr/facturation-electronique-legalinvoice/",
+        "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.pdf"
+      ]
+    },
+    {
+      "platformSlug": "logilec",
+      "query": "\"LOGILEC\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.logilec.leclerc/dematerialisation/",
+        "https://www.logilec.leclerc/mentions-legales/",
+        "https://guidefacturation.com/logiciels/logilec/"
+      ]
+    },
+    {
+      "platformSlug": "lucca",
+      "query": "\"Lucca Factures\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.lucca.fr/finance/achats/",
+        "https://support.luccasoftware.com/s/article/facturation-%C3%A9lectronique-tout-ce-que-vous-devez-savoir-pour-%C3%AAtre-pr%C3%AAt",
+        "https://support.luccasoftware.com/s/article/Facturation-%C3%A9lectronique-comprendre-les-adresses-de-r%C3%A9ception-de-factures"
+      ]
+    },
+    {
+      "platformSlug": "lundi-matin",
+      "query": "\"Lundi Matin\" \"LUNDI MATIN\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.oisehebdo.fr/2026/07/17/beauvais-avant-passage-tribunal-attendu-salaries-lundi-matin-ex-dispeo-inquiets/",
+        "https://www.leparisien.fr/oise-60/on-est-en-plein-cauchemar-la-colere-des-salaries-de-lundi-matin-logistics-a-beauvais-28-01-2026-EQO6ZZPQ5FDYBPH3N44WX5WDE4.php",
+        "https://www.courrier-picard.fr/id733902/article/2026-07-20/lundi-matin-ex-dispeo-au-tribunal-si-est-licencies-sans-indemnites-les-salaries"
+      ]
+    },
+    {
+      "platformSlug": "macompta",
+      "query": "\"macompta.fr\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://help.macompta.fr/fr/articles/715896-reponses-a-vos-questions-sur-la-plateforme-agreee-macompta-fr",
+        "https://www.macompta.fr/comprendre-facturation-electronique",
+        "https://blog.macompta.fr/facturationelectronique/reponses-a-vos-questions-sur-la-pa-macompta-fr/"
+      ]
+    },
+    {
+      "platformSlug": "marosa",
+      "query": "\"Marosa VATify\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://marosavat.com/vat-news/e-invoicing-france",
+        "https://www.linkedin.com/posts/taxtech-500_e-invoicing-tax-compliance-software-monthly-activity-7501953903245115392-cDYx",
+        "https://www.merca2.es/2026/08/12/exit-startup-espanola-marosa-2434703/"
+      ]
+    },
+    {
+      "platformSlug": "medius",
+      "query": "\"Medius\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.medius.com/fr/trust-center/",
+        "https://www.medius.com/media/qx4doxea/contrat-cadre-dabonnement-et-de-services-cloud-medius-19-janvier-2026.pdf",
+        "https://www.medius.com/media/rjhnmx43/medius-politique-de-confidentialite-18-mai-2026.pdf"
+      ]
+    },
+    {
+      "platformSlug": "my-fiteco",
+      "query": "\"MyFiteco\" \"MY FITECO\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/emma-vidal-a71696172_rgpd-myfiteco-activity-7422247692376096769-LkND",
+        "https://myfiteco.fiteco.com/wp-content/themes/myfiteco/doc/Plaquette_MY_FITECO.pdf",
+        "https://fr.linkedin.com/posts/fabienleroypatrimoine_facture%C3%A9lectronique-myfiteco-s%C3%A9curit%C3%A9-activity-7434516791478915072-Nb_-"
+      ]
+    },
+    {
+      "platformSlug": "mykinexo",
+      "query": "\"MyKinexo PDP\" \"MyKinexo PDP\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/mykinexo/",
+        "https://guide-plateforme-agreee.fr/plateforme/mykinexo/"
+      ]
+    },
+    {
+      "platformSlug": "mysupply",
+      "query": "\"MySupply\" \"MySupply Aps\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.linkedin.com/posts/mysupply-aps_france-is-live-is-your-pa-as-well-france-activity-7501542155778256896-DyZL",
+        "https://mysupply.dk/en/privacy-policy/",
+        "https://mysupply.dk/en/mysupply-is-now-officially-certified-as-a-french-pa-service-provider/"
+      ]
+    },
+    {
+      "platformSlug": "myunisoft",
+      "query": "\"MyUnisoft\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.informatiquenews.fr/facture-electronique-la-cybersecurite-change-dechelle-jean-baptiste-haentjens-myunisoft-113555",
+        "https://myu.fr/cabinet-comptable/ressources/thematiques/reforme-facturation-electronique/",
+        "https://support.myunisoft.fr/facture-%C3%A9lectronique-et-pa-myunisoft"
+      ]
+    },
+    {
+      "platformSlug": "n2f",
+      "query": "\"N2F\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.n2f.com/fr/logiciel-factures-fournisseurs/plateforme-agreee-facturation-electronique/",
+        "https://www.n2f.com/fr/certifications/",
+        "https://n2f.freshdesk.com/fr/support/solutions/articles/44002786070-que-faire-en-cas-d-erreur-d-envoi-d-une-e-facture-"
+      ]
+    },
+    {
+      "platformSlug": "neotimo",
+      "query": "\"Neotimo\" \"NEOTIMO\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://neotimo.com/certificates",
+        "https://neotimo.com/legal/termsofuse",
+        "https://neotimo.com/legal/privacypolicy"
+      ]
+    },
+    {
+      "platformSlug": "ntt-data",
+      "query": "\"NTT DATA e-Invoicing\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://de.nttdata-solutions.com/ntt-data-e-invoicing-forum",
+        "https://de.linkedin.com/posts/ntt-data-business-solutions_ntt-data-e-invoicing-forum-2026-in-z%C3%BCrich-activity-7431956209819316224-QmBD",
+        "https://de.linkedin.com/posts/thomas-schmidt-2ba3091b4_e-invoicing-forum-2026-activity-7464934647416737792-grAK"
+      ]
+    },
+    {
+      "platformSlug": "odoo",
+      "query": "\"Odoo\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.odoo.com/fr_FR/blog/actualites-d-odoo-5/odoo-plateforme-agreee-pa-immatriculee-en-france-pour-la-facturation-electronique-2193",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/odoo/",
+        "https://cybercriminalite.blog/2026/03/07/un-odoo-pour-pirates-demantele-pres-de-100-000-victimes-dont-des-ecoles/"
+      ]
+    },
+    {
+      "platformSlug": "officein",
+      "query": "\"OfficeIn\" \"OfficeIn\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://officein.fr/",
+        "https://fr.linkedin.com/posts/office%C2%ACin_officein-iso27001-cybers%C3%A9curit%C3%A9-activity-7487764114296061952-3cY8",
+        "https://www.comparateur-facturation-electronique.fr/produit/officein/"
+      ]
+    },
+    {
+      "platformSlug": "one-up",
+      "query": "\"OneUp\" \"ONE UP\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://comparateur-efacturation.fr/plateforme/oneup",
+        "https://www.doctrine.fr/d/TA/Paris/2026/TAA008E057B85A89678198",
+        "https://societeco.com/entreprises/oneup-399838101"
+      ]
+    },
+    {
+      "platformSlug": "open-bee",
+      "query": "\"Open Bee\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://techforbusiness.eu/actualites/konica-minolta-reprend-les-fonds-de-commerce-openbee-et-doxense",
+        "https://www.openbee.com/articles/communique-de-presse-km/",
+        "https://www.lagazettefrance.fr/annonce-legale/20260812235507-729587-000010698375"
+      ]
+    },
+    {
+      "platformSlug": "opentext",
+      "query": "\"OpenText\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/opentext/",
+        "https://guidefacturation.com/logiciels/opentext/",
+        "https://www.opentext.com/ca-fr/products/trading-grid-e-invoicing"
+      ]
+    },
+    {
+      "platformSlug": "pagero",
+      "query": "\"ONESOURCE Pagero\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://isdown.app/status/pagero/incidents/530265-disturbances-in-the-connection-from-ksef",
+        "https://europe.thomsonreuters.com/fr/service-conformite/solutions/mandat-de-facturation-electronique-france",
+        "https://tax.thomsonreuters.com/en/insights/white-papers/a-guide-to-global-e-invoicing-for-onesource-customers"
+      ]
+    },
+    {
+      "platformSlug": "paragon",
+      "query": "\"Invoice Paragon Platform\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.paragon.world/fr/solutions/plateforme-agreee-ipp",
+        "https://www.paragon-pa.com/",
+        "https://ntic-infos.fr/intelcia-it-solutions-accompagne-paragon-pour-le-lancement-de-sa-plateforme-de-dematerialisation-partenaires-pdp/"
+      ]
+    },
+    {
+      "platformSlug": "payflows",
+      "query": "\"Payflows Athena\" \"PAYFLOWS\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.linkedin.com/posts/anthony-alcaraz-b80763155_were-paying-a-lot-of-attention-to-architecture-activity-7439990449429315584-qHC-"
+      ]
+    },
+    {
+      "platformSlug": "pennylane",
+      "query": "\"Pennylane\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.compta-online.com/facturation-electronique-plateforme-agreee-ao8861",
+        "https://blc-conseil.com/blog/facturation-electronique-problemes-apres-1-septembre-2026/",
+        "https://community.pennylane.com/discussions/forum-parametre/affichage-de-la-facture-impossible/38831"
+      ]
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "query": "\"Pitney Bowes Invoice Services\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.pitneybowes.com/fr/blog/pitney-bowes-est-plateforme-agreee.html",
+        "https://comparer-pa.fr/plateformes/pitney-bowes",
+        "https://www.pitneybowes.com/fr/transformation-digitale/facturation-electronique/plateforme-agreee.html"
+      ]
+    },
+    {
+      "platformSlug": "qonto",
+      "query": "\"Qonto Facturation\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://qonto.com/fr/invoicing/e-invoicing",
+        "https://www.bfmtv.com/economie/professionnels/agree-par-l-etat-cet-outil-avec-ia-integre-s-occupe-de-votre-facturation-electronique-automatiquement_AB-202608250001.html",
+        "https://qonto.com/fr/blog/gestion-entreprise/facturation/plateforme-dematerialisation-partenaire"
+      ]
+    },
+    {
+      "platformSlug": "qweeby",
+      "query": "\"Qweeby\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.qweeby.fr/actualite-2026",
+        "https://www.qweeby.fr/peppol-2026",
+        "https://www.qweeby.fr/levees-des-reserves-pilote-des-obligations-dgfip"
+      ]
+    },
+    {
+      "platformSlug": "sage",
+      "query": "\"Sage\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://blc-conseil.com/blog/facturation-electronique-problemes-apres-1-septembre-2026/",
+        "https://www.lindependant.fr/2026/08/22/cyberattaque-manque-de-temps-ou-de-ressources-a-cinq-jours-de-lecheance-seules-66-des-millions-dentreprises-concernees-sont-pretes-pour-la-facturation-13518360.php",
+        "https://frenchbreaches.com/blog/facturation-electronique-une-societe-acquise-par-sage-au-coeur-dune-fuite-massive-de-donnees"
+      ]
+    },
+    {
+      "platformSlug": "sap",
+      "query": "\"SAP\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1134",
+        "https://www.doxis.com/fr/blog/facturation-electronique-sap",
+        "https://ettayeb.fr/securite/sap-overpass-s4get-cvss-10-2026/"
+      ]
+    },
+    {
+      "platformSlug": "scribee",
+      "query": "\"Scribee\" \"SCRIBEE\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.comparateur-facturation-electronique.fr/produit/scribee/",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/scribee/",
+        "https://www.scribee.tech/entreprises"
+      ]
+    },
+    {
+      "platformSlug": "seeburger",
+      "query": "\"SEEBURGER E-Invoicing Hub\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.seeburger.com/resources/good-to-know/ksef-in-poland",
+        "https://www.seeburger.com/resources/brochures/seeburger-e-invoicing-hub",
+        "https://www.seeburger.com/de/ressourcen/wissenswertes/ksef-in-polen"
+      ]
+    },
+    {
+      "platformSlug": "sellsy",
+      "query": "\"Sellsy\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://help.sellsy.com/fr/articles/12927828-sauvegarde-continuite-de-service-et-prevention-des-intrusions",
+        "https://go.sellsy.com/logiciel-facturation-electronique",
+        "https://go.sellsy.com/informations-legales/securite-des-donnees"
+      ]
+    },
+    {
+      "platformSlug": "septeo",
+      "query": "\"Septeo Ingeneo\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.comparateur-facturation-electronique.fr/produit/septeo-pdp/",
+        "https://www.cgano.org/facturation-electronique/",
+        "https://factureinfo.com/list/les-solutions-de-facturation-electronique-pour-les-cabinets-comptables/v"
+      ]
+    },
+    {
+      "platformSlug": "seqino",
+      "query": "\"SEQINO\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://comparer-pa.fr/plateformes/seqino",
+        "https://www.archimag.com/demat-cloud/2026/03/16/seqino-facturation-electronique-innovation-francaise-confiance-bancaire",
+        "https://www.francenum.gouv.fr/activateurs/seqino"
+      ]
+    },
+    {
+      "platformSlug": "serensia",
+      "query": "\"Serensia\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://peppolstatus.com/providers/serensia/",
+        "https://serensia.com/politique-de-confidentialite/",
+        "https://serensia.com/"
+      ]
+    },
+    {
+      "platformSlug": "seres",
+      "query": "\"Seres e-Facture PA\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.mon.expert/plateformes-agreees/seres"
+      ]
+    },
+    {
+      "platformSlug": "shine",
+      "query": "\"Shine Facture\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.shine.fr/blog/shine-facture-plateforme-agreee/",
+        "https://shine.co/fr/legal/terms",
+        "https://www.shine.fr/facturation-electronique/"
+      ]
+    },
+    {
+      "platformSlug": "sni",
+      "query": "\"SNI\" \"SNI\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://proxycove.com/fr/blog/ech-shifrovanie-sni-kak-proverit-2026",
+        "https://thecybersecguru.com/news/netdna-ssl-com-takeover-supply-chain-risk/",
+        "https://cyberveille.ch/posts/2026-02-16-analyse-de-rustyrocket-loutil-dexfiltration-multi-couches-de-worldleaks/"
+      ]
+    },
+    {
+      "platformSlug": "solo",
+      "query": "\"Solo\" \"SOLO\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://it.euronews.com/my-europe/2026/09/16/revolut-subisce-una-truffa-via-pec-in-italia-e-consegna-dati-personali-di-centinaia-di-cli",
+        "https://www.adslzone.net/noticias/fintech/revolut-fallo-seguridad-datos-filtrados/",
+        "https://araintel.com/articulos/brecha-de-datos-en-revolut-una-cuenta-de-una-institucion-publica-italiana-comprometida-obtiene-datos-de-680-clientes/"
+      ]
+    },
+    {
+      "platformSlug": "sovos",
+      "query": "\"Sovos\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://us-canada.status.sovos.com/history?locale=fr",
+        "https://us-canada.status.sovos.com/",
+        "https://us-canada.status.sovos.com/history?locale=en"
+      ]
+    },
+    {
+      "platformSlug": "spendesk",
+      "query": "\"Spendesk\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.spendesk.com/fr/blog/obligation-facture-electronique-2026/",
+        "https://www.spendesk.com/fr/legals/terms/dora-addendum/",
+        "https://helpcenter.spendesk.com/fr/articles/15277558-facturation-electronique-ce-qui-change-dans-vos-usages-de-spendesk"
+      ]
+    },
+    {
+      "platformSlug": "sps-commerce",
+      "query": "\"SPS Commerce\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://statusfield.com/services/sps-commerce/incidents",
+        "https://www.upguard.com/security-report/sps-commerce",
+        "https://uptime.com/spscommerce.com"
+      ]
+    },
+    {
+      "platformSlug": "srci",
+      "query": "\"SRCI iXFacture\" \"SRCI\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://guidefacturation.com/logiciel-facturation-association/",
+        "https://catalogue.numeriquedeconfiance.fr/solutions/srci-facture-electronique",
+        "https://guidefacturation.com/comparateur/"
+      ]
+    },
+    {
+      "platformSlug": "storecove",
+      "query": "\"Storecove\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.storecove.com/fr/fr/mystorecove/faq",
+        "https://www.storecove.com/fr/fr/conformite/france/",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/storecove/"
+      ]
+    },
+    {
+      "platformSlug": "superpdp",
+      "query": "\"SuperPDP\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/super-pdp_aujourdhui-l%C3%A9quipe-technique-de-qonto-activity-7468332829756567554-At6e",
+        "https://community.ovhcloud.com/t/factures-electroniques-ovh-sas-schemeid-0002-sur-bt-34-provoque-un-rejet-b2bint-chez-superpdp/53843",
+        "https://fr.linkedin.com/posts/mas-informatique_facturationelectronique-superpdp-entreprise-activity-7502709962314358784-wPwR"
+      ]
+    },
+    {
+      "platformSlug": "symtrax",
+      "query": "\"Symtrax Compleo\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.symtrax.com/en-uk/document-management/compleo-supervisor/",
+        "https://www.symtrax.com/en-us/news/compleo-suite-to-become-compleo-hybrid/",
+        "https://sogest.re/gestion-documentaire-via-symtrax-compleo/"
+      ]
+    },
+    {
+      "platformSlug": "taxera",
+      "query": "\"Taxera\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://taxera.tech/",
+        "https://guidefacturation.com/logiciels/taxera/"
+      ]
+    },
+    {
+      "platformSlug": "tenor",
+      "query": "\"Tenor eDemat\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://tenorsolutions.com/solutions/chorus-pro/",
+        "https://www.dimo-dematerialisation.com/tenor-data-solutions/",
+        "https://tenorsolutions.com/partenaires-facturation-electronique-erp-tenor/"
+      ]
+    },
+    {
+      "platformSlug": "tesisquare",
+      "query": "\"TESISQUARE\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.breachsense.com/breaches/tesisquare-data-breach/",
+        "https://pro.ransomware.live/id/VEVTSVNRVUFSRS5DT01AY2xvcA",
+        "https://www.tesisquare.com/fr/event/supply-chain-village-visibilite-transport/"
+      ]
+    },
+    {
+      "platformSlug": "tessi",
+      "query": "\"Digital Invoice by Tessi\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.tessi.eu/fr/facture-electronique-la-direction-generale-des-finances-publiques-dgfip-confirme-limmatriculation-definitive-de-la-plateforme-agreee-digital-invoice-by-tessi/",
+        "https://www.tessi.eu/fr/digital-invoice-by-tessi/blog/cycle-vie-facture-electronique/",
+        "https://www.tessi.eu/fr/digital-invoice-by-tessi/blog/facturation-electronique-obligations-et-enjeux/"
+      ]
+    },
+    {
+      "platformSlug": "tiime",
+      "query": "\"Tiime\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.tiime.fr/faq-facturation-electronique",
+        "https://actu.fr/infoconso/facturation-electronique-obligatoire-tiime-simplifie-la-vie-des-entreprises_64741274.html",
+        "https://www.tiime.fr/facturation-electronique"
+      ]
+    },
+    {
+      "platformSlug": "tradeshift",
+      "query": "\"Tradeshift Babelway\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://comparer-pa.fr/plateformes/tradeshift-babelway",
+        "https://www.legifiscal.fr/creation-entreprise/facturation-electronique-plateformes-agreees.html"
+      ]
+    },
+    {
+      "platformSlug": "transalis",
+      "query": "\"Transalis\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/transalis-limited/",
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://www.transalis.com/faq/"
+      ]
+    },
+    {
+      "platformSlug": "treso2",
+      "query": "\"Treso2\" \"TRESO2\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/treso2-pytheas_facturation%C3%A9lectronique-cybers%C3%A9curit%C3%A9-activity-7498999894599311361-Bbz-",
+        "https://www.treso2.com/ressources/faq",
+        "https://www.treso2.com/solutions/services/securite-des-donnees"
+      ]
+    },
+    {
+      "platformSlug": "tungsten",
+      "query": "\"Tungsten e-Invoice Connect\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "http://docshield.tungstenautomation.com/eInvoiceConnect/en_US/help/eInvoiceConnect_help/eInvoiceConnect_help/c_whatsnew.html",
+        "https://docshield.tungstenautomation.com/eInvoiceConnect/en_US/help/RN/eInvoiceConnect_releasenotes/c_resolvedissues.html",
+        "https://docshield.tungstenautomation.com/eInvoiceConnect/en_US/help/RN/eInvoiceConnect_releasenotes/c_whatsnew.html"
+      ]
+    },
+    {
+      "platformSlug": "tx2",
+      "query": "\"TX2 Concept\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/tx2-concept_securite-iso27001-pas-activity-7498724440856289280-f6r-",
+        "https://www.tx2.fr/securite/",
+        "https://fr.linkedin.com/posts/tx2-concept_rfe2026-einvoicing-facture%C3%A9lectronique-activity-7500832451187937281-VkoZ"
+      ]
+    },
+    {
+      "platformSlug": "ventya",
+      "query": "\"Ventya\" \"VENTYA\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/ventya_facturationelectronique-rfe2026-towsoft-activity-7467473867100508161-7mXi",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/ventya/",
+        "https://linkedin.com/company/ventya"
+      ]
+    },
+    {
+      "platformSlug": "veryswing",
+      "query": "\"Veryswing\" \"VERYSWING\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://veryswing.com/protegez-les-donnees-de-vos-clients.html",
+        "https://fr.linkedin.com/posts/veryswing_le-compte-%C3%A0-rebours-a-commenc%C3%A9-vous-le-activity-7454786760275890176-Q53j",
+        "https://allovs.veryswing.com/support/solutions/articles/103000345069-la-facturation-%C3%A9lectronique"
+      ]
+    },
+    {
+      "platformSlug": "village-connecte",
+      "query": "\"Le Village Connecté\" \"LE VILLAGE CONNECTE\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://village-connecte.fr/le-village-connecte/",
+        "https://village-connecte.fr/ressources/plateforme-agree/",
+        "https://www.infos-pa.com/plateformes/lvc"
+      ]
+    },
+    {
+      "platformSlug": "vosfactures",
+      "query": "\"VosFactures\" \"VosFactures\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/vos-factures_facturation-%C3%A9lectronique-pas-de-panique-activity-7497995653126447104-iraP",
+        "https://vosfactures.fr/conditions-utilisation",
+        "https://vosfactures.fr/pa"
+      ]
+    },
+    {
+      "platformSlug": "voxel",
+      "query": "\"Voxel Bavel\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://travel.economictimes.indiatimes.com/news/technology/amadeus-expands-payment-solutions-with-acquisition-of-voxel/108443697",
+        "https://www.exploretech.io/en/product/voxel-bavelpay",
+        "https://www.voxelgroup.net/get-paid-faster-with-invoice-automation/"
+      ]
+    },
+    {
+      "platformSlug": "weproc",
+      "query": "\"WeInvoice by WeProc\" \"WEPROC\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://weinvoice.fr/cgu",
+        "https://weinvoice.fr/blog/1er-septembre-2026-facturation-electronique-entre-en-vigueur",
+        "https://weinvoice.fr/"
+      ]
+    },
+    {
+      "platformSlug": "wisetech",
+      "query": "\"WiseTech Global\" \"WiseTech GLOBAL\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://theloadstar.com/exclusive-cargowise-users-hit-by-global-outage-affecting-deployments/",
+        "https://theloadstar.com/cargowise-outage-reignites-debate-over-software-quality-support-and-updates/",
+        "https://www.upguard.com/security-report/wisetech-global"
+      ]
+    },
+    {
+      "platformSlug": "xelya",
+      "query": "\"Xelya\" \"XELYA\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.xelya.com/hebergement-des-donnees-de-sante/",
+        "https://www.xelya.com/actualites/xelya-renouvelle-sa-quadruple-certification-un-gage-de-qualite-et-de-securite/",
+        "https://www.xelya.com/"
+      ]
+    },
+    {
+      "platformSlug": "yooz",
+      "query": "\"Yooz\" facturation électronique incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://www.getyooz.com/fr/yooz-conditions-generales",
+        "https://www.getyooz.com/fr/blog/cybersecurite-et-facturation-electronique",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/yooz/"
+      ]
+    },
+    {
+      "platformSlug": "ytems",
+      "query": "\"Ytems\" \"YTEMS\" incident panne cyberattaque fuite données septembre 2026",
+      "resultUrls": [
+        "https://com.ytems.app/blog/ytems-certification-iso-27001-securite-bnc",
+        "https://fr.linkedin.com/posts/ytems_expertcomptable-bnc-iso27001-activity-7454809171373412353-sziO",
+        "https://com.ytems.app/blog/pourquoi-ics-et-talenz-alteis-ont-choisi-ytems-pour-leurs-clients-bnc"
+      ]
+    }
+  ]
+}

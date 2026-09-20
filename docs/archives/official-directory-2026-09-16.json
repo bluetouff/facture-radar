@@ -1,5 +1,5 @@
 {
-  "snapshotDate": "2026-09-20",
+  "snapshotDate": "2026-09-16",
   "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
   "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
   "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
@@ -1462,5 +1462,5 @@
       "contact": "facturation-electronique@zefyr.net"
     }
   ],
-  "sourcePageUpdatedAt": "2026-09-17"
+  "sourcePageUpdatedAt": "2026-09-10"
 }

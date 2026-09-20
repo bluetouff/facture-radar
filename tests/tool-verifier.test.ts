@@ -20,12 +20,14 @@ test("un alias de produit reste rattaché à une valeur contrôlée", () => {
   assert.equal(findKnownTool("TeamSystem Sellsy")?.id, "sellsy");
 });
 
-test("Abby et SuperPDP disposent d'un noyau réglementaire documenté", () => {
-  for (const tool of ["Abby", "SuperPDP"]) {
-    const result = verifyKnownTool(platforms, tool);
-    assert.equal(result.verdict, "keep", `${tool} ne devrait pas être bloqué`);
-    assert.ok(result.lines.every((line) => line.state === "yes"), `${tool} contient une preuve réglementaire insuffisante`);
-  }
+test("SuperPDP conserve ses preuves ; Abby attend le déploiement de l’émission", () => {
+  const superpdp = verifyKnownTool(platforms, "SuperPDP");
+  assert.equal(superpdp.verdict, "keep");
+  assert.ok(superpdp.lines.every(line => line.state === "yes"));
+  const abby = verifyKnownTool(platforms, "Abby");
+  assert.equal(abby.verdict, "act");
+  assert.ok(abby.lines.some(line => line.state === "no" && line.evidence?.sourceIds.includes("abby-emission-20260920")));
+  assert.ok(abby.lines.some(line => line.label === "E-reporting" && line.state === "unknown"));
 });
 
 test("un raccordement EBP dépendant de l'édition demande une confirmation", () => {

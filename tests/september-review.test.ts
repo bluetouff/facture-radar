@@ -9,7 +9,7 @@ import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 import { passportRoutes } from "../src/data/passport-routes.ts";
 
 test("le relevé courant conserve les admissions et corrections documentées en septembre", async () => {
-  assert.equal(directory.snapshotDate, "2026-09-16");
+  assert.equal(directory.snapshotDate, "2026-09-20");
   assert.equal(directory.approved.length, 149);
   assert.equal(directory.pending.length, 14);
   const expected = new Map([

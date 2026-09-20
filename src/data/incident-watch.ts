@@ -7,14 +7,14 @@ import rawResearch from "./incident-research.json" with { type: "json" };
 import { incidentDateAfter } from "../lib/incident-dates.ts";
 
 export const INCIDENT_WATCH_SINCE = "2026-09-01";
-export const INCIDENT_WATCH_CHECKED_AT = "2026-09-16";
+export const INCIDENT_WATCH_CHECKED_AT = "2026-09-20";
 const timestamp = z.union([z.iso.datetime({ offset: true }), z.iso.date()]);
 export const incidentSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
-  platformSlugs: z.array(z.string()).min(1),
+  platformSlugs: z.array(z.string()),
   kind: z.enum(["availability", "security"]),
-  scope: z.enum(["pa", "publisher_service", "upstream", "connected_service"]),
-  verification: z.enum(["primary_notice", "relayed_notice"]).default("primary_notice"),
+  scope: z.enum(["pa", "publisher_service", "upstream", "connected_service", "ecosystem_service"]),
+  verification: z.enum(["primary_notice", "relayed_notice", "reported_claim"]).default("primary_notice"),
   affectedService: z.string().min(1).optional(),
   relationship: z.object({ note: z.string().min(1), sourceIds: z.array(z.string()).min(1) }).strict().optional(),
   title: z.string().min(1),
@@ -39,6 +39,10 @@ export const incidentSchema = z.object({
   if (resolved && ((first && incidentDateAfter(first, resolved)) || (updated && incidentDateAfter(resolved, updated)) || (start && incidentDateAfter(start, resolved)))) context.addIssue({ code: "custom", message: "Date de résolution incohérente" });
   if (!dates.length || dates.every(date => incidentDateAfter(INCIDENT_WATCH_SINCE, date))) context.addIssue({ code: "custom", message: "Avis hors période ou période indéterminée" });
   if (event.scope === "connected_service" && (!event.affectedService || !event.relationship)) context.addIssue({ code: "custom", message: "Service connecté sans attribution documentée" });
+  if (event.scope === "ecosystem_service") {
+    if (event.platformSlugs.length || !event.affectedService) context.addIssue({ code: "custom", message: "Acteur hors PA sans nom ou indûment rattaché à une PA" });
+  } else if (!event.platformSlugs.length) context.addIssue({ code: "custom", message: "PA concernée manquante" });
+  if (event.verification === "reported_claim" && (event.kind !== "security" || event.status !== "unknown" || resolved)) context.addIssue({ code: "custom", message: "Revendication présentée comme un état confirmé" });
 });
 export type PlatformIncident = z.infer<typeof incidentSchema>;
 
@@ -53,8 +57,8 @@ export function validateIncidents(input: unknown): PlatformIncident[] {
     for (const id of event.sourceIds) {
       const source = sources.find(candidate => candidate.id === id);
       if (!source || source.accessedAt > event.checkedAt || !["documentation", "security", "institutional", "press"].includes(source.type)) throw new Error(`Preuve d’incident invalide : ${id}`);
-      if (source.type === "press" && event.verification !== "relayed_notice") throw new Error("Source de presse présentée comme un avis primaire");
-      if (event.kind === "security" && !["security", "institutional", ...(event.verification === "relayed_notice" ? ["press"] : [])].includes(source.type)) throw new Error("Incident de sécurité sans source qualifiée");
+      if (source.type === "press" && event.verification === "primary_notice") throw new Error("Source de presse présentée comme un avis primaire");
+      if (event.kind === "security" && !["security", "institutional", ...(event.verification !== "primary_notice" ? ["press"] : [])].includes(source.type)) throw new Error("Incident de sécurité sans source qualifiée");
     }
     for (const id of event.relationship?.sourceIds ?? []) {
       const source = sources.find(candidate => candidate.id === id);
@@ -64,8 +68,8 @@ export function validateIncidents(input: unknown): PlatformIncident[] {
   return events.sort((a, b) => Date.parse(b.updatedAt ?? b.firstReportedAt ?? b.checkedAt) - Date.parse(a.updatedAt ?? a.firstReportedAt ?? a.checkedAt));
 }
 export const platformIncidents = validateIncidents(rawIncidents);
-export const incidentScopeLabels = { pa: "Facturation électronique", publisher_service: "Application de l’éditeur", upstream: "Dépendance externe", connected_service: "Service connecté à la PA" } as const;
-export const incidentVerificationLabels = { primary_notice: "Avis de l’éditeur", relayed_notice: "Notification relayée" } as const;
+export const incidentScopeLabels = { pa: "Facturation électronique", publisher_service: "Application de l’éditeur", upstream: "Dépendance externe", connected_service: "Service connecté à la PA", ecosystem_service: "Logiciel hors annuaire PA" } as const;
+export const incidentVerificationLabels = { primary_notice: "Avis de l’éditeur", relayed_notice: "Notification relayée", reported_claim: "Revendication non confirmée" } as const;
 export const incidentStatusLabels = { investigating: "Investigation annoncée", identified: "Cause identifiée", monitoring: "Sous surveillance", resolved: "Résolution annoncée", unknown: "État non précisé" } as const;
 
 const httpsUrl = z.url().refine(value => new URL(value).protocol === "https:" && !new URL(value).username && !new URL(value).password);
@@ -93,17 +97,19 @@ for (const feed of incidentFeeds) {
 
 // A reviewed public page does not establish full historical or PA coverage.
 const initialIncidentCoverage = [
-  { platformSlug: "cecurity", sourceIds: ["welyb-status-20260916"], checkedAt: "2026-09-16", status: "partial", note: "Page Welyb relue : connexion de nouveaux dossiers à eFacture perturbée le 14 septembre, consultation des factures rétablie après une difficulté depuis le 4. Ces avis concernent le service connecté Welyb/eFacture." },
-  { platformSlug: "sage", sourceIds: ["sage-status-2026-09"], checkedAt: "2026-09-16", status: "reviewed", note: "Historique public du 1er au 16 septembre : avis de facturation française et services citant la France. Autres pays et maintenances exclus." },
-  { platformSlug: "pennylane", sourceIds: ["pennylane-status-2026-09"], checkedAt: "2026-09-16", status: "reviewed", note: "Historique public du 1er au 16 septembre relu. Les avis portent sur l’application. Leur impact éventuel sur les flux PA reste à documenter." },
-  { platformSlug: "qonto", sourceIds: ["qonto-status-2026-09"], checkedAt: "2026-09-16", status: "reviewed", note: "L’historique officiel de septembre était vide lors du contrôle. La disponibilité de la PA et des services bancaires reste à vérifier séparément." },
-  { platformSlug: "esker", sourceIds: ["esker-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Revue des avis affichés par environnement, dont celui concernant l’environnement G. L’historique depuis le 1er septembre reste à compléter." },
+  { platformSlug: "cecurity", sourceIds: ["welyb-status-20260916"], checkedAt: "2026-09-20", status: "partial", note: "Page Welyb relue : connexion de nouveaux dossiers à eFacture perturbée le 14 septembre, consultation des factures rétablie après une difficulté depuis le 4. Ces avis concernent le service connecté Welyb/eFacture." },
+  { platformSlug: "sage", sourceIds: ["sage-status-2026-09"], checkedAt: "2026-09-20", status: "reviewed", note: "Historique public du 1er au 20 septembre : avis de facturation française et services citant la France. Autres pays et maintenances exclus." },
+  { platformSlug: "pennylane", sourceIds: ["pennylane-status-2026-09"], checkedAt: "2026-09-20", status: "reviewed", note: "Historique public du 1er au 20 septembre relu. Les avis portent sur l’application. Leur impact éventuel sur les flux PA reste à documenter." },
+  { platformSlug: "qonto", sourceIds: ["qonto-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Historique vide lors de la lecture du 16 septembre. La nouvelle consultation du 20 septembre a été refusée (HTTP 403). La disponibilité de la PA et des services bancaires reste à vérifier séparément." },
+  { platformSlug: "esker", sourceIds: ["esker-status-2026-09"], checkedAt: "2026-09-20", status: "partial", note: "Revue des avis affichés par environnement, dont celui concernant l’environnement G. L’historique depuis le 1er septembre reste à compléter." },
   { platformSlug: "sellsy", sourceIds: ["sellsy-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "État courant consulté. L’historique depuis le 1er septembre et la disponibilité de la PA restent à documenter. Le site refuse notre collecte automatique." },
   { platformSlug: "dext", sourceIds: ["dext-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Le rapport HTTP de Dext Prepare couvre une partie de la période. Un suivi propre à la PA française reste à documenter." },
 ] as const;
 const feedNotes: Record<string, string> = {
-  weproc: "Historique WeInvoice et flux relus du 1er au 16 septembre. Deux avis sur Peppol et l’annuaire PISTE, attribués à leur auteur.",
-  spendesk: "Historique et flux relus du 1er au 16 septembre : facturation française, accès à l’application, e-mails et virements internationaux.",
+  docoon: "Flux Docoon Invoice relu le 20 septembre. Les entrées disponibles sont antérieures à septembre. Le flux Messaging précédemment raccordé a été remplacé.",
+  superpdp: "Flux et page relus le 20 septembre. Incident de chargement de l’annuaire du 18 septembre publié, avec résolution annoncée. Horaires limités au jour en raison des fuseaux contradictoires.",
+  weproc: "Historique WeInvoice et flux relus du 1er au 20 septembre. Deux avis sur Peppol et l’annuaire PISTE, attribués à leur auteur.",
+  spendesk: "Historique et flux relus du 1er au 20 septembre : facturation française, accès à l’application, e-mails et virements internationaux.",
   myunisoft: "Calendrier public et deux avis de septembre relus. Le périmètre cité est la production comptable et fiscale.",
   dokapi: "Flux et avis du 16 septembre relus. La perturbation publiée concerne l’envoi des e-mails.",
   invopop: "Flux et deux avis de septembre relus : interface de la console et migration du SML Peppol.",
@@ -116,7 +122,7 @@ export const incidentCoverage = [
   ...initialIncidentCoverage,
   ...incidentFeeds.filter(feed => feed.platformSlugs.length && !initialIncidentCoverage.some(item => feed.platformSlugs.includes(item.platformSlug))).flatMap(feed => feed.platformSlugs.map(platformSlug => ({
     platformSlug, sourceIds: [feed.sourceId], checkedAt: feed.checkedAt, status: "partial" as const,
-    note: feedNotes[platformSlug] ?? "Flux officiel relu le 16 septembre. Les publications disponibles portent sur les services de l’éditeur ; la profondeur historique dépend du flux fourni.",
+    note: feedNotes[platformSlug] ?? "Flux officiel relu le 20 septembre. Les publications disponibles portent sur les services de l’éditeur ; la profondeur historique dépend du flux fourni.",
   }))),
   {"platformSlug": "aruba", "sourceIds": ["aruba-manual-status-2026-09"], "checkedAt": "2026-09-16", "status": "partial", "note": "Page d’alertes consultée. La rubrique de service était vide ; les exemples de phishing visibles étaient antérieurs à septembre."},
   {"platformSlug": "docuware", "sourceIds": ["docuware-manual-status-2026-09"], "checkedAt": "2026-09-16", "status": "partial", "note": "Portail d’état identifié. L’extraction publique présente des informations anciennes ; la chronologie de septembre demande un contrôle dans le portail interactif."},
@@ -127,13 +133,13 @@ export const incidentCoverage = [
   {"platformSlug": "sovos", "sourceIds": ["sovos-manual-status-2026-09"], "checkedAt": "2026-09-16", "status": "partial", "note": "Ancien flux servicestatus désactivé. Le nouveau portail répartit les services par région ; le suivi européen demande un nouveau raccordement."},
   { platformSlug: "atgp", sourceIds: ["atgp-status-2026-09"], checkedAt: "2026-09-16", status: "partial" as const, note: "La page ATGP indique les anomalies en cours. Lors de la revue, elle affiche « Aucune anomalie recensée actuellement ». Historique antérieur à documenter." },
 ];
-export const incidentWatchLimit = "Ce journal réunit les avis des éditeurs et les notifications relayées par des sources identifiées. Chaque signalement précise son niveau de confirmation et le service concerné. Certains avis se recoupent. La couverture reste partielle ; l’évaluation de la disponibilité et de la sécurité exige aussi des mesures techniques et des audits.";
+export const incidentWatchLimit = "Ce journal réunit les avis des éditeurs, les notifications relayées et les revendications à confirmer. Chaque signalement précise son niveau de confirmation et le service concerné. Certains avis se recoupent. La couverture reste partielle ; l’évaluation de la disponibilité et de la sécurité exige aussi des mesures techniques et des audits.";
 export const securityReview = {
-  checkedAt: "2026-09-16",
+  checkedAt: "2026-09-20",
   status: "public_search_completed" as const,
   platformCount: incidentResearch.length,
-  note: "Les 149 PA ont fait l’objet d’une recherche publique le 16 septembre. Le journal comprend un signalement de sécurité Welyb / AGIRIS CONNECT, associé à Cecurity comme service connecté. La notification est relayée par FrenchBreaches ; l’impact sur la PA reste non établi. La recherche se complète à mesure que de nouvelles sources sont identifiées.",
-  sourceIds: ["cert-fr-sap-20260908", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration"],
+  note: "Recherches nominatives actualisées le 20 septembre pour les 149 PA. Deux signalements de sécurité sont publiés : une notification Welyb / AGIRIS CONNECT relayée par la presse, et une revendication visant Zenfirst. Zenfirst figure comme logiciel hors annuaire PA. Pour ces deux avis, l’impact sur une PA reste non documenté.",
+  sourceIds: ["cert-fr-sap-20260908", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration", "frenchbreaches-zenfirst-20260917", "zenfirst-integration-20260920"],
   findings: [
     { platformSlug: "sap", type: "vulnerability_advisory" as const, title: "SAP : bulletin de correctifs du 8 septembre", note: "Le CERT-FR recense des vulnérabilités dans plusieurs produits SAP. Ce bulletin appelle une vérification des produits et versions utilisés ; il décrit des failles logicielles, sans signaler de compromission d’une PA.", sourceIds: ["cert-fr-sap-20260908"] },
     { platformSlug: "blg", type: "outside_period" as const, title: "blgCloud : notification antérieure à la période", note: "La notification officielle du 10 août décrit une attaque de juillet. Elle est conservée comme contexte et exclue du compteur des incidents de septembre. Les nouvelles mentions de presse demandent un recoupement.", sourceIds: ["blg-security-20260810"] },
@@ -142,7 +148,7 @@ export const securityReview = {
 export function incidentsForPlatform(slug: string) {
   return {
     since: INCIDENT_WATCH_SINCE,
-    coverage: incidentCoverage.find(item => item.platformSlug === slug) ?? { platformSlug: slug, status: "not_reviewed", checkedAt: null, sourceIds: [], note: "Recherche de sources effectuée le 16 septembre. Historique de disponibilité non documenté dans les sources retenues." },
+    coverage: incidentCoverage.find(item => item.platformSlug === slug) ?? { platformSlug: slug, status: "not_reviewed", checkedAt: null, sourceIds: [], note: "Recherche de sources actualisée le 20 septembre. Historique de disponibilité non documenté dans les sources retenues." },
     incidents: platformIncidents.filter(event => event.platformSlugs.includes(slug)),
     limit: incidentWatchLimit,
     security: { ...incidentResearch.find(item => item.platformSlug === slug), status: "public_search_completed" },
@@ -151,5 +157,5 @@ export function incidentsForPlatform(slug: string) {
 }
 export function incidentWatchCorpus() {
   const sourceIds = new Set([...platformIncidents.flatMap(event => [...event.sourceIds, ...(event.relationship?.sourceIds ?? [])]), ...incidentCoverage.flatMap(item => [...item.sourceIds]), ...incidentFeeds.map(feed => feed.sourceId), ...securityReview.sourceIds]);
-  return { schemaVersion: "2.0", since: INCIDENT_WATCH_SINCE, checkedAt: INCIDENT_WATCH_CHECKED_AT, limit: incidentWatchLimit, securityReview, research: incidentResearch, collection: { intervalMinutes: 1440, publication: "reviewed", feeds: incidentFeeds }, coverage: platforms.map(platform => incidentsForPlatform(platform.slug).coverage), incidents: platformIncidents, sources: sources.filter(source => sourceIds.has(source.id)) };
+  return { schemaVersion: "2.1", since: INCIDENT_WATCH_SINCE, checkedAt: INCIDENT_WATCH_CHECKED_AT, limit: incidentWatchLimit, securityReview, research: incidentResearch, collection: { intervalMinutes: 1440, publication: "reviewed", feeds: incidentFeeds }, coverage: platforms.map(platform => incidentsForPlatform(platform.slug).coverage), incidents: platformIncidents, sources: sources.filter(source => sourceIds.has(source.id)) };
 }

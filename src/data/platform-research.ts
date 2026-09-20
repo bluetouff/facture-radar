@@ -44,9 +44,9 @@ type ResearchOverride = Partial<Omit<PlatformResearchProfile, "platformSlug" | "
 const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
   abby: {
     availability: {
-      sendsInvoices: available("Offre de facturation électronique Abby", ["abby-electronic-invoicing-2026"]),
+      sendsInvoices: documented({ stage: "announced", scope: "Émission électronique depuis Abby" }, ["abby-emission-20260920"], "L’aide annonce septembre 2027 et précise que la fonction reste indisponible lors de la consultation.", "2026-09-20"),
       receivesInvoices: available("Offre de facturation électronique Abby", ["abby-electronic-invoicing-2026"]),
-      eReporting: available("Offre de facturation électronique Abby", ["abby-electronic-invoicing-2026"]),
+      eReporting: declared({ stage: "announced", scope: "Offre de facturation électronique Abby" }, ["abby-electronic-invoicing-2026"], "La documentation commerciale annonce le service. Sa disponibilité en production au 20 septembre reste à confirmer séparément de l’émission.", "2026-09-20"),
     },
     exitTerms: documented<ExitTerms>({ bulkExport: null, formats: ["PDF", "CSV", "Excel"], postTerminationAccess: null, fees: null }, ["abby-export-2026-09"], "Exports par type de document. Historique au-delà de 90 jours réservé à Pro/Business. La conservation du XML des factures et l’accès après clôture ne sont pas établis.", "2026-09-16"),
     terminationTerms: documented("Offre Basique annoncée gratuite et sans engagement.", ["abby-pricing-2026"]),
@@ -158,8 +158,8 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       statementOfApplicability: "DDA v1.2 du 25 février 2025",
       scopeText: "Services SaaS de production comptable et de gestion financière, sans exclusions.",
       platformRelation: "service_family",
-      validity: "valid",
-    }, ["pennylane-iso27001-2026-09"], "Périmètre résumé du certificat public ; la PA n’est pas nommée séparément. Validité documentaire contrôlée le 14 septembre, renouvellement après le 19 septembre à vérifier.", "2026-09-14"),
+      validity: "expired",
+    }, ["pennylane-iso27001-2026-09", "pennylane-security-20260920"], "Le certificat public est arrivé à échéance le 19 septembre. La page sécurité continue de revendiquer une certification ; le document renouvelé reste à obtenir. Ce constat porte sur le PDF disponible, pas sur une décision de retrait de certification.", "2026-09-20"),
     availability: {
       sendsInvoices: available("Offre gratuite micro-entreprise et offres Pennylane", ["pennylane-free-2026"]),
       receivesInvoices: available("Offre gratuite micro-entreprise et offres Pennylane", ["pennylane-free-2026"]),

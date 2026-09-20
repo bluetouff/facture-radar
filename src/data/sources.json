@@ -2237,7 +2237,7 @@
     "publisher": "BSI / Pennylane",
     "url": "https://assets.ctfassets.net/b76knntgaaiu/1ZoQOqZDrK32aeBHsQPrb6/49b971c8886615ebf3577371a182773a/Pennylane_ISO27001_certificate_FR_EN_2025.pdf",
     "type": "security",
-    "accessedAt": "2026-09-14"
+    "accessedAt": "2026-09-20"
   },
   {
     "id": "b2brouter-pricing-2026-09",
@@ -2456,14 +2456,6 @@
     "accessedAt": "2026-09-16"
   },
   {
-    "id": "docoon-watch-2026-09",
-    "title": "Publications de disponibilité",
-    "publisher": "Docoon Invoice",
-    "url": "https://docoonmessaging.statuspage.io/",
-    "type": "documentation",
-    "accessedAt": "2026-09-16"
-  },
-  {
     "id": "dokapi-watch-2026-09",
     "title": "Publications de disponibilité",
     "publisher": "Dokapi",
@@ -2669,7 +2661,7 @@
     "publisher": "Spendesk",
     "url": "https://status.spendesk.com/incidents/0dkn55v5wcqg",
     "type": "documentation",
-    "accessedAt": "2026-09-16"
+    "accessedAt": "2026-09-20"
   },
   {
     "id": "invopop-console-20260910-source",
@@ -2709,7 +2701,7 @@
     "publisher": "Tungsten e-Invoice Connect",
     "url": "https://status.tungstencloud.com/europe/incidents/01M2MVH4FXXX66TJXA9ZHDV5XJ",
     "type": "documentation",
-    "accessedAt": "2026-09-16"
+    "accessedAt": "2026-09-20"
   },
   {
     "id": "atgp-status-2026-09",
@@ -2814,5 +2806,77 @@
     "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
     "type": "press",
     "accessedAt": "2026-09-16"
+  },
+  {
+    "id": "frenchbreaches-zenfirst-20260917",
+    "title": "Zenfirst : revendication de fuite de données du 17 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+    "type": "press",
+    "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "zenfirst-integration-20260920",
+    "title": "Zenfirst Gesco : connexion comptable iSuite (ACD)",
+    "publisher": "Zenfirst",
+    "url": "https://www.zenfirst.fr/logiciels-gestion-de-tresorerie-et-facturation-zenfirst/",
+    "type": "documentation",
+    "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "abby-emission-20260920",
+    "title": "Disponibilité de l’émission de factures électroniques",
+    "publisher": "Abby",
+    "url": "https://aide.abby.fr/fr/articles/14893805-est-il-possible-d-emettre-des-factures-electroniques-des-maintenant-sur-abby",
+    "type": "documentation",
+    "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "abby-formats-20260920",
+    "title": "Déploiement du Factur-X complet",
+    "publisher": "Abby",
+    "url": "https://aide.abby.fr/fr/articles/11137316-est-ce-qu-abby-respecte-les-formats-imposes-par-la-facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "docoon-pa-20260920",
+    "title": "Docoon Invoice : formats, API et hébergement",
+    "publisher": "Docoon",
+    "url": "https://docoon.com/plateforme-agreee/",
+    "type": "documentation",
+    "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "docoon-invoice-watch-20260920",
+    "title": "Historique de disponibilité Docoon Invoice",
+    "publisher": "Docoon",
+    "url": "https://docooninvoice.statuspage.io/",
+    "type": "documentation",
+    "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "spendesk-amazon-20260916-source",
+    "title": "Ajout de cartes Spendesk sur Amazon",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+    "type": "documentation",
+    "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "superpdp-directory-20260918-source",
+    "title": "Chargement de l’annuaire : incident du 18 septembre",
+    "publisher": "SuperPDP",
+    "url": "https://status.superpdp.tech/",
+    "type": "documentation",
+    "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "pennylane-security-20260920",
+    "title": "Page sécurité et certificat public consultés le 20 septembre",
+    "publisher": "Pennylane",
+    "url": "https://www.pennylane.com/fr/securite",
+    "type": "security",
+    "accessedAt": "2026-09-20"
   }
 ]
