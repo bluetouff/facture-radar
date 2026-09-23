@@ -2325,7 +2325,7 @@
     "publisher": "Qonto",
     "url": "https://status.qonto.com/incidents/September-2026",
     "type": "documentation",
-    "accessedAt": "2026-09-16"
+    "accessedAt": "2026-09-23"
   },
   {
     "id": "esker-status-2026-09",
@@ -2333,7 +2333,7 @@
     "publisher": "Esker",
     "url": "https://www.trustesker.com/?env=G",
     "type": "documentation",
-    "accessedAt": "2026-09-16"
+    "accessedAt": "2026-09-23"
   },
   {
     "id": "sellsy-status-2026-09",
@@ -2789,7 +2789,7 @@
     "publisher": "Welyb",
     "url": "https://support.welyb.fr/statut-plateforme",
     "type": "documentation",
-    "accessedAt": "2026-09-16"
+    "accessedAt": "2026-09-23"
   },
   {
     "id": "welyb-cecurity-integration",
@@ -2805,7 +2805,7 @@
     "publisher": "FrenchBreaches",
     "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
     "type": "press",
-    "accessedAt": "2026-09-16"
+    "accessedAt": "2026-09-23"
   },
   {
     "id": "frenchbreaches-zenfirst-20260917",
@@ -2813,7 +2813,7 @@
     "publisher": "FrenchBreaches",
     "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
     "type": "press",
-    "accessedAt": "2026-09-20"
+    "accessedAt": "2026-09-23"
   },
   {
     "id": "zenfirst-integration-20260920",
@@ -2861,7 +2861,7 @@
     "publisher": "Spendesk",
     "url": "https://status.spendesk.com/incidents/9rz9sjd4npml",
     "type": "documentation",
-    "accessedAt": "2026-09-20"
+    "accessedAt": "2026-09-23"
   },
   {
     "id": "superpdp-directory-20260918-source",
@@ -2878,5 +2878,85 @@
     "url": "https://www.pennylane.com/fr/securite",
     "type": "security",
     "accessedAt": "2026-09-20"
+  },
+  {
+    "id": "dgfip-list-20260923",
+    "title": "Listes DGFiP relues le 23 septembre 2026",
+    "publisher": "DGFiP",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "ecosio-france-20260921-source",
+    "title": "Retards de traitement des factures françaises, 21 septembre",
+    "publisher": "ecosio",
+    "url": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+    "type": "documentation",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "spendesk-france-20260922-source",
+    "title": "Réception des factures électroniques françaises, 22 septembre",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+    "type": "documentation",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "spendesk-ios-20260921-source",
+    "title": "Connexion iOS par lien e-mail, 21 au 23 septembre",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+    "type": "documentation",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "eezi-dashboard-20260922-source",
+    "title": "Perturbation du tableau de bord, 22 septembre",
+    "publisher": "eezi",
+    "url": "https://eezi.instatus.com/cmucut4ft1um81npccbw9inh5",
+    "type": "documentation",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "frenchbreaches-altagem-20260921",
+    "title": "Altagem : revendication d’accès aux données",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+    "type": "press",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "cyberattaque-altagem-20260921",
+    "title": "Altagem : revendication visant clients et données opérationnelles",
+    "publisher": "Cyberattaque.org",
+    "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+    "type": "press",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "altagem-iopole-integration-20260923",
+    "title": "Facturation électronique : partenariat Altagem et Iopole",
+    "publisher": "Altagem",
+    "url": "https://altagem.com/facturation-%C3%A9lectronique",
+    "type": "documentation",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "frenchbreaches-faktus-20260919",
+    "title": "Faktus : revendication de fuite de données, mise à jour du 20 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+    "type": "press",
+    "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "faktus-financement-20260923",
+    "title": "Service de financement de factures du BTP",
+    "publisher": "Faktus",
+    "url": "https://faktus.eu/produits/financementdefactures",
+    "type": "documentation",
+    "accessedAt": "2026-09-23"
   }
 ]

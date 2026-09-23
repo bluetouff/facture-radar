@@ -1,0 +1,479 @@
+{
+  "checkedAt": "2026-09-23",
+  "periodSince": "2026-09-20",
+  "scope": "Revue des 26 sources collectées, recherche thématique et recherches ciblées. Les 149 recherches nominatives du 20 septembre ne sont pas redatées.",
+  "searches": [
+    {
+      "key": "official",
+      "numResults": 6,
+      "results": [
+        {
+          "title": "Je consulte la liste des plateformes agréées",
+          "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+          "published": "2024-07-30T00:00:00.000Z"
+        },
+        {
+          "title": "Jeu de données - Plateformes Agréées (PA / ex-PDP) pour la Facturation Électronique — Liste DGFiP enrichie 2026 | data.gouv.fr",
+          "url": "https://www.data.gouv.fr/datasets/plateformes-agreees-pa-ex-pdp-pour-la-facturation-electronique-liste-dgfip-enrichie-2026",
+          "published": "N/A"
+        },
+        {
+          "title": "Jeu de données - Plateformes agréées (PA) — facturation électronique : liste DGFiP structurée, datée, convention de décompte publiée | data.gouv.fr",
+          "url": "https://www.data.gouv.fr/datasets/plateformes-agreees-pa-facturation-electronique-liste-dgfip-structuree-datee-convention-de-decompte-publiee",
+          "published": "N/A"
+        },
+        {
+          "title": "Plateformes agréées : la liste officielle DGFiP 2026",
+          "url": "https://logicielcomptable.net/liste-des-plateformes-agreees-pour-la-facturation-electronique/",
+          "published": "2026-08-20T06:02:31.000Z"
+        },
+        {
+          "title": "Facturation électronique et plateformes agréées | impots.gouv.fr",
+          "url": "https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees",
+          "published": "N/A"
+        },
+        {
+          "title": "Liste des plateformes agréées (PDP) 2026 : annuaire",
+          "url": "https://guide-plateforme-agreee.fr/plateformes-agreees/",
+          "published": "N/A"
+        }
+      ],
+      "query": "Nouvelles plateformes agréées DGFiP facturation électronique liste mise à jour 21 22 23 septembre 2026"
+    },
+    {
+      "key": "security",
+      "numResults": 12,
+      "results": [
+        {
+          "title": "Facturation électronique : une fuite de données frappe une plateforme comptable en pleine réforme",
+          "url": "https://www.01net.com/actualites/facturation-electronique-fuite-donnees-frappe-plateforme-comptable-pleine-reforme.html",
+          "published": "2026-09-16T16:01:52.000Z"
+        },
+        {
+          "title": "Welyb (AGIRIS) : une faille expose les données de clients de cabinets comptables",
+          "url": "https://www.cyberattaque.org/cyberattaque-welyb-agiris-une-faille-expose-les-donnees-de-clients-de-cabinets-comptables/",
+          "published": "2026-09-15T13:03:51.000Z"
+        },
+        {
+          "title": "Facturation électronique : une plateforme piratée dès le lancement de la réforme",
+          "url": "https://www.commentcamarche.net/securite/piratage/38871-fuite-piratage-facturation-electronique/",
+          "published": "2026-09-17T13:40:18.000Z"
+        },
+        {
+          "title": "La facturation électronique démarre avec une fuite de données dans son écosystème | FranceSoir",
+          "url": "https://www.francesoir.fr/societe-faits-divers/la-facturation-electronique-demarre-avec-une-fuite-de-donnees-dans-son",
+          "published": "2026-09-22T13:20:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : fuite de données sur une plateforme ...",
+          "url": "https://www.epochtimes.fr/facturation-electronique-fuite-de-donnees-chez-une-plateforme-comptable-au-lancement-de-la-reforme-en-france-3352230.html",
+          "published": "2026-09-21T10:22:05.522Z"
+        },
+        {
+          "title": "Une fuite de données touche le monde comptable en pleine réforme",
+          "url": "https://www.generation-nt.com/actualites/welyb-agiris-fuite-donnees-facturation-electronique-cybersecurite-2081379",
+          "published": "2026-09-17T15:10:01.000Z"
+        },
+        {
+          "title": "Facturation électronique : une fuite de données touche un cador de l’écosystème comptable au pire des moments",
+          "url": "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "published": "2026-09-16T10:30:40.000Z"
+        },
+        {
+          "title": "Fuite de données depuis la plate-forme Welyb - Annonces & actualités - Forum Dolibarr france",
+          "url": "https://www.dolibarr.fr/forum/t/fuite-de-donnees-depuis-la-plate-forme-welyb/51938",
+          "published": "2026-09-17T04:28:18.000Z"
+        },
+        {
+          "title": "Une plateforme d'experts-comptables touchée par ...",
+          "url": "https://imazpress.com/toute-l-actu/une-plateforme-d-experts-comptables-touchee-par-une-cyberattaque-le-jour-de-la-reforme-de-la-facturation-electronique",
+          "published": "2026-09-17T10:22:05.522Z"
+        },
+        {
+          "title": "Fuite de données Zenfirst : des informations clients et factures divulguées",
+          "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+          "published": "2026-09-17T00:00:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : les Daf, une nouvelle cible des hackeurs",
+          "url": "https://www.daf-mag.fr/bi-1244/outils-si-2132/facturation-electronique-les-daf-nouvelles-cibles-des-risques-cyber-27195",
+          "published": "2026-09-07T14:04:50.000Z"
+        },
+        {
+          "title": "Facturation électronique : une fuite de données frappe une plateforme comptable en pleine réforme - TNTIC",
+          "url": "https://www.tntic.com/2026/09/17/facturation-electronique-une-fuite-de-donnees-frappe-une-plateforme-comptable-en-pleine-reforme/",
+          "published": "2026-09-17T00:00:00.000Z"
+        }
+      ],
+      "query": "Cyberattaque fuite de données facturation comptabilité plateforme agréée France 20 21 22 23 septembre 2026"
+    },
+    {
+      "key": "zenfirst-welyb",
+      "numResults": 8,
+      "results": [
+        {
+          "title": "Fuite de données Zenfirst : des informations clients et factures divulguées",
+          "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+          "published": "2026-09-17T00:00:00.000Z"
+        },
+        {
+          "title": "Welyb (AGIRIS) : une faille expose les données de clients de cabinets comptables",
+          "url": "https://www.cyberattaque.org/cyberattaque-welyb-agiris-une-faille-expose-les-donnees-de-clients-de-cabinets-comptables/",
+          "published": "2026-09-15T13:03:51.000Z"
+        },
+        {
+          "title": "Zenfirst Dataset Claim Includes User, Lead and Invoice Records",
+          "url": "https://darkwebinformer.com/zenfirst-dataset-claim-includes-user-lead-and-invoice-records/",
+          "published": "2026-09-17T00:00:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : une plateforme piratée dès le lancement de la réforme",
+          "url": "https://www.commentcamarche.net/securite/piratage/38871-fuite-piratage-facturation-electronique/",
+          "published": "2026-09-17T13:40:18.000Z"
+        },
+        {
+          "title": "Facturation électronique : une fuite de données frappe une plateforme comptable en pleine réforme",
+          "url": "https://www.01net.com/actualites/facturation-electronique-fuite-donnees-frappe-plateforme-comptable-pleine-reforme.html",
+          "published": "2026-09-16T16:01:52.000Z"
+        },
+        {
+          "title": "Facturation électronique : fuite de données chez Agiris Connect",
+          "url": "https://reinformation.tv/facturation-electronique-fuite-donnees-vite/",
+          "published": "2026-09-18T10:04:11.000Z"
+        },
+        {
+          "title": "Une plateforme d'experts-comptables touchée par une cyberattaque le jour de la réforme de la facturation électronique",
+          "url": "https://imazpress.com/toute-l-actu/une-plateforme-d-experts-comptables-touchee-par-une-cyberattaque-le-jour-de-la-reforme-de-la-facturation-electronique",
+          "published": "2026-09-17T11:03:00.000Z"
+        },
+        {
+          "title": "Une fuite de données touche le monde comptable en pleine réforme",
+          "url": "https://www.generation-nt.com/actualites/welyb-agiris-fuite-donnees-facturation-electronique-cybersecurite-2081379",
+          "published": "2026-09-17T15:10:01.000Z"
+        }
+      ],
+      "query": "Zenfirst Welyb AGIRIS Cecurity fuite données incident sécurité confirmation septembre 2026"
+    },
+    {
+      "key": "primary-security",
+      "query": "Communication officielle incident sécurité fuite données septembre 2026 Welyb AGIRIS CONNECT Zenfirst Cecurity",
+      "numResults": 8,
+      "results": [
+        {
+          "title": "Welyb (AGIRIS) : une faille expose les données de clients de cabinets comptables",
+          "url": "https://www.cyberattaque.org/cyberattaque-welyb-agiris-une-faille-expose-les-donnees-de-clients-de-cabinets-comptables/",
+          "published": "2026-09-15T13:03:51.000Z"
+        },
+        {
+          "title": "Fuite de données Zenfirst : des informations clients et factures divulguées",
+          "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+          "published": "2026-09-17T00:00:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : une plateforme piratée dès le lancement de la réforme",
+          "url": "https://www.commentcamarche.net/securite/piratage/38871-fuite-piratage-facturation-electronique/",
+          "published": "2026-09-17T13:40:18.000Z"
+        },
+        {
+          "title": "Facturation électronique : une fuite de données frappe une plateforme comptable en pleine réforme",
+          "url": "https://www.01net.com/actualites/facturation-electronique-fuite-donnees-frappe-plateforme-comptable-pleine-reforme.html",
+          "published": "2026-09-16T16:01:52.000Z"
+        },
+        {
+          "title": "Facturation électronique : fuite de données chez Agiris Connect",
+          "url": "https://reinformation.tv/facturation-electronique-fuite-donnees-vite/",
+          "published": "2026-09-18T10:04:11.000Z"
+        },
+        {
+          "title": "Une fuite de données touche le monde comptable en pleine réforme",
+          "url": "https://www.generation-nt.com/actualites/welyb-agiris-fuite-donnees-facturation-electronique-cybersecurite-2081379",
+          "published": "2026-09-17T15:10:01.000Z"
+        },
+        {
+          "title": "La facturation électronique démarre avec une fuite de données dans son écosystème | FranceSoir",
+          "url": "https://www.francesoir.fr/societe-faits-divers/la-facturation-electronique-demarre-avec-une-fuite-de-donnees-dans-son",
+          "published": "2026-09-22T13:20:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : Welyb piraté le jour J, la réforme sous tension | Mediaterranee ! L'actualité au quotidien",
+          "url": "https://www.mediaterranee.com/1852026-facturation-electronique-welyb-pirate-le-jour-j-la-reforme-sous-tension.html",
+          "published": "2026-09-18T18:00:19.000Z"
+        }
+      ]
+    },
+    {
+      "key": "security-discovery",
+      "query": "Alerte fuite données cyberattaque septembre 2026 Pennylane Qonto Sage Cegid Tiime Abby Indy Sellsy Doxallia SuperPDP Esker Yooz",
+      "numResults": 10,
+      "results": [
+        {
+          "title": "Une fuite de données touche le monde comptable en pleine réforme",
+          "url": "https://www.generation-nt.com/actualites/welyb-agiris-fuite-donnees-facturation-electronique-cybersecurite-2081379",
+          "published": "2026-09-17T15:10:01.000Z"
+        },
+        {
+          "title": "Faktus : 53,7 Go de données financières et documents sensibles publiés",
+          "url": "https://www.cyberattaque.org/faktus-cyberattaque-facture/",
+          "published": "2026-09-19T19:00:00.000Z"
+        },
+        {
+          "title": "Altagem : clients, équipes et données opérationnelles exposés après une cyberattaque",
+          "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+          "published": "2026-09-21T16:59:48.000Z"
+        },
+        {
+          "title": "Répar’stores piraté : 340 Go de données et 1,86 million de personnes...",
+          "url": "https://frenchbreaches.com/alertes/r-par-store-mubj46abrs6i9ywytt7",
+          "published": "2026-09-21T17:42:00.000Z"
+        },
+        {
+          "title": "L’Orange bleue : 732 000 fiches d’adhérents et 440 000 IBAN dans une fuite massive après une cyberattaque",
+          "url": "https://www.cyberattaque.org/lorange-bleue-732-000-fiches-dadherents-et-440-000-iban-dans-une-fuite-massive-apres-une-cyberattaque/",
+          "published": "2026-09-17T00:00:00.000Z"
+        },
+        {
+          "title": "WayToMe piraté : plus de 600 000 données liées au covoiturage revendiquées",
+          "url": "https://frenchbreaches.com/alertes/waytome-muaf8bf677nfxz6peuh",
+          "published": "2026-09-20T22:58:00.000Z"
+        },
+        {
+          "title": "GreenGo victime d’une cyberattaque, des données personnelles...",
+          "url": "https://frenchbreaches.com/alertes/greengo-mtwzey831kyjkwc99r",
+          "published": "2026-09-11T13:20:00.000Z"
+        },
+        {
+          "title": "Cryptomonnaies : des données personnelles de clients de Paymium exposées après une cyberattaque - Blog FrenchBreaches",
+          "url": "https://frenchbreaches.com/blog/cryptomonnaies-des-donnees-personnelles-de-clients-de-paymium-exposees-apres-une-cyberattaque",
+          "published": "2026-09-22T22:17:00.000Z"
+        },
+        {
+          "title": "FrenchBreaches: Fuite de données en France 2026",
+          "url": "https://frenchbreaches.com/",
+          "published": "N/A"
+        },
+        {
+          "title": "Comparatif des logiciels de facturation électronique : la méthode pour choisir sans se tromper en 2026 - Ma facture électronique",
+          "url": "https://ma-facture-electronique.org/logiciels/comparatif/",
+          "published": "2026-06-23T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "key": "availability-discovery",
+      "query": "Incident indisponibilité facturation électronique plateforme agréée annuaire PPF 21 22 23 septembre 2026",
+      "numResults": 8,
+      "results": [
+        {
+          "title": "Facturation électronique et plateformes agréées | impots.gouv.fr",
+          "url": "https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees",
+          "published": "N/A"
+        },
+        {
+          "title": "Ouverture de l'annuaire dédié à la facturation électronique",
+          "url": "https://entreprendre.service-public.gouv.fr/actualites/A18462",
+          "published": "2025-09-19T00:00:00.000Z"
+        },
+        {
+          "title": "Plateforme agréée (PA, ex-PDP) : le guide complet de la facturation électronique - Ma facture électronique",
+          "url": "https://ma-facture-electronique.org/plateforme-agreee/",
+          "published": "2026-04-21T00:00:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : impacts du décret du 27 juillet 2026 | EY Société d'Avocats",
+          "url": "https://www.avocats.ey.com/fr_fr/fiscalite/facturation-electronique-impacts-du-decret-du-27-juillet-2026",
+          "published": "2026-09-16T00:00:00.000Z"
+        },
+        {
+          "title": "La facturation électronique démarre avec une fuite de données dans son écosystème | FranceSoir",
+          "url": "https://www.francesoir.fr/societe-faits-divers/la-facturation-electronique-demarre-avec-une-fuite-de-donnees-dans-son",
+          "published": "2026-09-22T13:20:00.000Z"
+        },
+        {
+          "title": "Réforme de la facture électronique : l'annuaire du PPF au ...",
+          "url": "https://www.laposte.fr/entreprise-collectivites/actualites/reforme-facture-electronique-annuaire-ppf-au-coeur-dispositif",
+          "published": "2026-08-31T00:00:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : les erreurs qui risquent de bloquer vos ventes dès le déploiement - Lyon Entreprises [LE]",
+          "url": "https://www.lyon-entreprises.com/entreprise/info/facturation-electronique-les-erreurs-qui-risquent-de-bloquer-vos-ventes-des-le-deploiement",
+          "published": "2026-09-22T09:28:16.000Z"
+        },
+        {
+          "title": "FAQ – FACTURATION ELECTRONIQUE",
+          "url": "https://doc.cncc.fr/docs/foire-aux-questions-faq-relative/attachments/faq-facturation-electronique",
+          "published": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "altagem",
+      "query": "Altagem cyberattaque 21 septembre 2026 communiqué clients plateforme agréée facturation électronique partenariat",
+      "numResults": 6,
+      "results": [
+        {
+          "title": "Altagem : clients, équipes et données opérationnelles ...",
+          "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+          "published": "2026-09-21T10:23:54.266Z"
+        },
+        {
+          "title": "Facturation électronique",
+          "url": "https://altagem.com/facturation-%C3%A9lectronique",
+          "published": "N/A"
+        },
+        {
+          "title": "Facturation électronique : tout comprendre en 5 minutes",
+          "url": "https://altagem.com/blog/facturation-%C3%A9lectronique-tout-comprendre-en-5-minutes",
+          "published": "2026-07-16T00:00:00.000Z"
+        },
+        {
+          "title": "Altagen piraté : des hackers revendiquent une intrusion et l’accès aux...",
+          "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+          "published": "2026-09-21T16:29:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : une fuite de données frappe une plateforme comptable en pleine réforme",
+          "url": "https://www.01net.com/actualites/facturation-electronique-fuite-donnees-frappe-plateforme-comptable-pleine-reforme.html",
+          "published": "2026-09-16T16:01:52.000Z"
+        },
+        {
+          "title": "Question n°16899 : Risques cyber liés à la généralisation de la facturation électroniques - Assemblée nationale",
+          "url": "https://questions.assemblee-nationale.fr/q17/17-16899QE.htm",
+          "published": "2026-08-04T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "key": "faktus",
+      "query": "Faktus fuite données cyberattaque 19 septembre 2026 notification officielle financement factures",
+      "numResults": 6,
+      "results": [
+        {
+          "title": "Faktus victime d'une fuite de données : 53,7 Go et des ...",
+          "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+          "published": "2026-09-19T10:23:53.510Z"
+        },
+        {
+          "title": "Faktus : 53,7 Go de données financières et documents ...",
+          "url": "https://www.cyberattaque.org/faktus-cyberattaque-facture/",
+          "published": "2026-09-19T10:23:53.510Z"
+        },
+        {
+          "title": "Facturation électronique : une plateforme piratée dès le lancement de la réforme",
+          "url": "https://www.commentcamarche.net/securite/piratage/38871-fuite-piratage-facturation-electronique/",
+          "published": "2026-09-17T13:40:18.000Z"
+        },
+        {
+          "title": "Facturation électronique : une fuite de données frappe une plateforme comptable en pleine réforme",
+          "url": "https://www.01net.com/actualites/facturation-electronique-fuite-donnees-frappe-plateforme-comptable-pleine-reforme.html",
+          "published": "2026-09-16T16:01:52.000Z"
+        },
+        {
+          "title": "Facturation électronique : une fuite de données touche un cador de l’écosystème comptable au pire des moments",
+          "url": "https://www.presse-citron.net/facturation-electronique-une-fuite-de-donnees-touche-un-cador-de-lecosysteme-comptable-au-pire-des-moments/",
+          "published": "2026-09-16T10:30:40.000Z"
+        },
+        {
+          "title": "La facturation électronique démarre avec une fuite de données dans son écosystème | FranceSoir",
+          "url": "https://www.francesoir.fr/societe-faits-divers/la-facturation-electronique-demarre-avec-une-fuite-de-donnees-dans-son",
+          "published": "2026-09-22T13:20:00.000Z"
+        }
+      ]
+    },
+    {
+      "key": "primary-notices",
+      "query": "Zenfirst Welyb AGIRIS site officiel communiqué sécurité violation données septembre 2026",
+      "numResults": 5,
+      "results": [
+        {
+          "title": "Fuite de données Zenfirst : des informations clients et factures divulguées",
+          "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+          "published": "2026-09-17T00:00:00.000Z"
+        },
+        {
+          "title": "Sécurité des données - Zenfirst",
+          "url": "https://www.zenfirst.fr/securite-des-donnees/",
+          "published": "2023-06-07T00:00:00.000Z"
+        },
+        {
+          "title": "Welyb (AGIRIS) : une faille expose les données de clients de cabinets comptables",
+          "url": "https://www.cyberattaque.org/cyberattaque-welyb-agiris-une-faille-expose-les-donnees-de-clients-de-cabinets-comptables/",
+          "published": "2026-09-15T13:03:51.000Z"
+        },
+        {
+          "title": "Zenfirst Dataset Claim Includes User, Lead and Invoice Records",
+          "url": "https://darkwebinformer.com/zenfirst-dataset-claim-includes-user-lead-and-invoice-records/",
+          "published": "2026-09-17T00:00:00.000Z"
+        },
+        {
+          "title": "Facturation électronique : une plateforme piratée dès le lancement de la réforme",
+          "url": "https://www.commentcamarche.net/securite/piratage/38871-fuite-piratage-facturation-electronique/",
+          "published": "2026-09-17T13:40:18.000Z"
+        }
+      ]
+    },
+    {
+      "key": "altagem-response",
+      "query": "Altagem 22 23 septembre 2026 incident sécurité communiqué réponse cyberattaque",
+      "numResults": 5,
+      "results": [
+        {
+          "title": "Altagem : clients, équipes et données opérationnelles ...",
+          "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+          "published": "2026-09-21T10:26:10.626Z"
+        },
+        {
+          "title": "Altagen piraté : des hackers revendiquent une intrusion et l’accès aux...",
+          "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+          "published": "2026-09-21T16:29:00.000Z"
+        },
+        {
+          "title": "CGV",
+          "url": "https://altagem.com/cgv",
+          "published": "N/A"
+        },
+        {
+          "title": "Qui sommes-nous",
+          "url": "https://altagem.com/qui-sommes-nous",
+          "published": "N/A"
+        },
+        {
+          "title": "Mentions légales",
+          "url": "https://altagem.com/mentions-legales",
+          "published": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "faktus-official",
+      "query": "Faktus site officiel financement factures affacturage 2026 incident sécurité",
+      "numResults": 5,
+      "results": [
+        {
+          "title": "Affacturage pour le BTP",
+          "url": "https://faktus.eu/produits/financementdefactures",
+          "published": "N/A"
+        },
+        {
+          "title": "La néobanque du BTP qui libère votre trésorerie, chantier par chantier",
+          "url": "https://faktus.eu/?gad_campaignid=21697572140",
+          "published": "N/A"
+        },
+        {
+          "title": "faktus",
+          "url": "https://linkedin.com/company/faktus-b%C3%A2tissez-nous-finan%C3%A7ons",
+          "published": "2026-06-10T00:00:00.000Z"
+        },
+        {
+          "title": "N/A",
+          "url": "https://faktus.eu/en/",
+          "published": "N/A"
+        },
+        {
+          "title": "Faktus : 53,7 Go de données financières et documents ...",
+          "url": "https://www.cyberattaque.org/faktus-cyberattaque-facture/",
+          "published": "2026-09-19T10:26:09.873Z"
+        }
+      ]
+    }
+  ]
+}

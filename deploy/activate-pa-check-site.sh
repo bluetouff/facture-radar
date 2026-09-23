@@ -197,7 +197,7 @@ if counts.get("enrichedPlatforms") != 149:
     raise SystemExit("Nombre de fiches enrichies inattendu")
 if counts.get("questions") != 25:
     raise SystemExit("Nombre de questions inattendu")
-if counts.get("sources") != 360:
+if counts.get("sources") != 370:
     raise SystemExit("Nombre de sources inattendu")
 if len(corpus["incidents"]["incidents"]) != counts.get("incidentNotices"):
     raise SystemExit("Avis d’incident incoherents")
@@ -290,7 +290,7 @@ if counts.get("enrichedPlatforms") != 149:
     raise SystemExit("Nombre de fiches live inattendu")
 if counts.get("questions") != 25:
     raise SystemExit("Nombre de questions live inattendu")
-if counts.get("sources") != 360:
+if counts.get("sources") != 370:
     raise SystemExit("Nombre de sources live inattendu")
 ' <<<"${LIVE_CORPUS}"
 

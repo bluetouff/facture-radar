@@ -1,9 +1,9 @@
 {
-  "snapshotDate": "2026-09-23",
+  "snapshotDate": "2026-09-20",
   "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
   "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
   "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
-  "approvedSha256": "8b90543cedade74969f8c8f41ef2196b1d4802adec092b289ef1df9d6a40f640",
+  "approvedSha256": "e9a417ab2fdbc865c3b89b6ebbb60b3c9ada89996c20c982fabe57376d794b51",
   "pendingSha256": "79cacd06be0d7da6500e481717f68050e29ee632a76d86d92dacc220f07cf23a",
   "approved": [
     {
@@ -1083,7 +1083,7 @@
       "postalCode": "1171",
       "city": "Danemark",
       "website": "https://www.shine.fr/",
-      "contact": "pa@shine.co",
+      "contact": "contact@shine.co",
       "registeredAt": "2026-05-21"
     },
     {
@@ -1462,5 +1462,5 @@
       "contact": "facturation-electronique@zefyr.net"
     }
   ],
-  "sourcePageUpdatedAt": "2026-09-22"
+  "sourcePageUpdatedAt": "2026-09-17"
 }

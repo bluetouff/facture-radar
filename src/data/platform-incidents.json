@@ -207,17 +207,17 @@
     "kind": "availability",
     "scope": "pa",
     "title": "Erreurs sur les factures B2B françaises",
-    "summary": "L’environnement G d’Esker on Demand signale des erreurs sur les factures clients du processus B2B français. Un correctif est annoncé ; les enregistrements affectés restent à traiter dans l’avis consulté.",
-    "status": "monitoring",
+    "summary": "Le 15 septembre, Esker signalait des erreurs sur les factures clients du processus B2B français dans l’environnement G. Le message a disparu de la page lors du relevé du 22 septembre ; aucune annonce de résolution n’a été retrouvée lors du contrôle du 23.",
+    "status": "unknown",
     "startedAt": null,
     "firstReportedAt": "2026-09-15T08:00:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15T12:15:00Z",
-    "checkedAt": "2026-09-16",
+    "checkedAt": "2026-09-23",
     "sourceIds": [
       "esker-status-2026-09"
     ],
-    "limitations": "Périmètre limité à l’environnement G. Surveillance après correctif annoncée à 09 h 50 UTC ; résolution complète à confirmer."
+    "limitations": "Dernière mise à jour datée conservée : 15 septembre. La disparition du message laisse la date et l’état final du rétablissement à confirmer auprès d’Esker."
   },
   {
     "id": "weproc-peppol-20260901",
@@ -478,7 +478,7 @@
     "firstReportedAt": "2026-09-14",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-14",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -486,7 +486,7 @@
     "title": "Welyb / eFacture : connexion des nouveaux dossiers perturbée",
     "summary": "Welyb signale des erreurs lors du raccordement de nouveaux dossiers à eFacture/Cecurity. Un correctif est annoncé en cours de déploiement.",
     "status": "identified",
-    "limitations": "Avis toujours ouvert lors de la consultation du 16 septembre. Périmètre : connexion des nouveaux dossiers depuis Welyb. Étendue et durée de la perturbation à préciser."
+    "limitations": "Avis encore affiché parmi les perturbations le 23 septembre. Périmètre : connexion de nouveaux dossiers depuis Welyb vers eFacture. Étendue et durée de la perturbation à préciser."
   },
   {
     "platformSlugs": [
@@ -507,7 +507,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -536,7 +536,7 @@
     "firstReportedAt": "2026-09-15",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15",
-    "checkedAt": "2026-09-16",
+    "checkedAt": "2026-09-23",
     "sourceIds": [
       "frenchbreaches-welyb-20260915"
     ],
@@ -573,19 +573,19 @@
     ],
     "kind": "availability",
     "scope": "publisher_service",
-    "affectedService": "Cartes Spendesk sur Amazon",
-    "title": "Ajout de cartes Spendesk sur Amazon perturbé",
-    "summary": "Spendesk rapporte un échec de la tokenisation des cartes lors de leur ajout sur Amazon. Au 17 septembre, l’équipe bancaire indique échanger avec Visa pour déterminer la cause.",
+    "affectedService": "Paiements et enregistrement des cartes Spendesk en ligne",
+    "title": "Paiements et enregistrement des cartes chez plusieurs commerçants",
+    "summary": "Initialement limité à l’ajout de cartes sur Amazon, l’avis couvre désormais plusieurs commerçants en ligne. Spendesk signale des refus lorsque le commerçant ne demande pas d’authentification forte et recommande un nouvel essai avec 3D Secure ou un autre moyen de paiement.",
     "status": "investigating",
     "startedAt": null,
     "firstReportedAt": "2026-09-16T14:52:00Z",
     "resolutionReportedAt": null,
-    "updatedAt": "2026-09-17T08:09:51Z",
-    "checkedAt": "2026-09-20",
+    "updatedAt": "2026-09-22T10:51:46Z",
+    "checkedAt": "2026-09-23",
     "sourceIds": [
       "spendesk-amazon-20260916-source"
     ],
-    "limitations": "Le service concerné est le paiement par carte. L’avis consulté ne décrit pas d’impact sur les flux PA et laisse la cause en cours d’investigation."
+    "limitations": "L’investigation reste en cours avec les partenaires bancaires. Cet avis concerne les paiements par carte ; un impact sur les flux PA reste non documenté."
   },
   {
     "id": "zenfirst-claim-20260917",
@@ -608,10 +608,183 @@
     "firstReportedAt": "2026-09-17",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-17",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "sourceIds": [
       "frenchbreaches-zenfirst-20260917"
     ],
     "limitations": "La date d’accès, l’étendue et la cause technique restent à établir. L’impact sur une PA est non documenté ; cet avis est attribué uniquement à Zenfirst."
+  },
+  {
+    "id": "ecosio-france-20260921",
+    "platformSlugs": [
+      "ecosio-intercom"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "Traitement des factures françaises retardé chez ecosio",
+    "summary": "ecosio signale une perturbation de sa file de facturation française le 21 septembre. Les messages bloqués ont été retraités ; l’éditeur annonce que la reprise du stock était terminée à 14 h 06 CEST.",
+    "status": "resolved",
+    "startedAt": "2026-09-21T09:38:00Z",
+    "firstReportedAt": "2026-09-21T10:27:53Z",
+    "resolutionReportedAt": "2026-09-21T12:13:23Z",
+    "updatedAt": "2026-09-21T12:13:23Z",
+    "checkedAt": "2026-09-23",
+    "sourceIds": [
+      "ecosio-france-20260921-source"
+    ],
+    "limitations": "L’éditeur situe le début de la perturbation à 11 h 38 CEST. Le nombre de clients concernés reste à préciser ; les horaires de publication ne constituent pas une mesure de disponibilité."
+  },
+  {
+    "id": "spendesk-france-20260922",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "title": "Réception de nouvelles factures électroniques françaises interrompue",
+    "summary": "Spendesk indique qu’une mise à jour de la plateforme de son prestataire de facturation a interrompu la livraison de nouvelles factures à certains clients français. La réception a repris ; l’éditeur vérifie encore les éventuelles factures manquantes et leur récupération.",
+    "status": "monitoring",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-22T14:44:00Z",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-22T14:46:10Z",
+    "checkedAt": "2026-09-23",
+    "sourceIds": [
+      "spendesk-france-20260922-source"
+    ],
+    "limitations": "Le prestataire est cité sans être nommé. L’avis reste sous surveillance et ne confirme pas la récupération de toutes les factures. Début réel et volume touché à préciser."
+  },
+  {
+    "id": "spendesk-ios-20260921",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Connexion iOS par lien e-mail perturbée puis rétablie",
+    "summary": "Certains utilisateurs iOS ne parvenaient plus à terminer leur connexion via le lien reçu par e-mail. Spendesk relie le problème à une version de l’application et annonce le 23 septembre une version corrigée disponible dans l’App Store.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-21T15:14:00Z",
+    "resolutionReportedAt": "2026-09-23T07:20:49Z",
+    "updatedAt": "2026-09-23T07:20:49Z",
+    "checkedAt": "2026-09-23",
+    "sourceIds": [
+      "spendesk-ios-20260921-source"
+    ],
+    "limitations": "Périmètre : connexion à l’application iOS. L’impact éventuel sur les échanges de factures entre PA reste non documenté."
+  },
+  {
+    "id": "eezi-dashboard-20260922",
+    "platformSlugs": [
+      "eezi"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Tableau de bord eezi perturbé",
+    "summary": "eezi publie un avis sur son tableau de bord le 22 septembre puis annonce un correctif et un rétablissement. L’éditeur précise que les API et les transferts de données ont continué à fonctionner.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-22T15:53:40Z",
+    "resolutionReportedAt": "2026-09-22T15:55:53Z",
+    "updatedAt": "2026-09-22T15:55:53Z",
+    "checkedAt": "2026-09-23",
+    "sourceIds": [
+      "eezi-dashboard-20260922-source"
+    ],
+    "limitations": "Le périmètre publié porte sur l’interface. La courte succession des notifications n’est pas utilisée pour calculer une durée de panne."
+  },
+  {
+    "id": "altagem-claim-20260921",
+    "platformSlugs": [
+      "iopole"
+    ],
+    "kind": "security",
+    "scope": "connected_service",
+    "title": "Altagem : revendication d’accès aux données à confirmer",
+    "summary": "FrenchBreaches et Cyberattaque.org rapportent le 21 septembre une revendication visant Altagem, logiciel de gestion et de facturation. Les données revendiquées concernent des clients, des comptes et des activités opérationnelles.",
+    "status": "unknown",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-21",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-21",
+    "checkedAt": "2026-09-23",
+    "sourceIds": [
+      "frenchbreaches-altagem-20260921",
+      "cyberattaque-altagem-20260921"
+    ],
+    "limitations": "La confirmation directe d’Altagem, l’étendue et la date réelle de l’accès restent à obtenir. L’impact sur la PA Iopole et sur les flux de facturation est non établi.",
+    "verification": "reported_claim",
+    "affectedService": "Altagem",
+    "relationship": {
+      "note": "Altagem documente un partenariat et une connexion de facturation électronique avec Iopole. Ce lien explique la présence de cet avis sur la fiche Iopole ; la revendication vise Altagem.",
+      "sourceIds": [
+        "altagem-iopole-integration-20260923"
+      ]
+    }
+  },
+  {
+    "id": "faktus-claim-20260919",
+    "platformSlugs": [],
+    "kind": "security",
+    "scope": "ecosystem_service",
+    "title": "Faktus : revendication de fuite de données à confirmer",
+    "summary": "FrenchBreaches rapporte une revendication visant des données clients, financières et des documents attribués à Faktus, service de financement de factures du BTP. L’article du 19 septembre est complété le 20 avec des éléments revendiqués sur ses outils de relation client.",
+    "status": "unknown",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-19",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
+    "sourceIds": [
+      "frenchbreaches-faktus-20260919"
+    ],
+    "limitations": "La date d’accès et les volumes avancés reposent sur la revendication. Confirmation de l’entreprise et périmètre complet à établir. Aucun impact sur une PA n’est documenté.",
+    "verification": "reported_claim",
+    "affectedService": "Faktus",
+    "relationship": {
+      "note": "Faktus présente un service de financement de factures. L’entreprise est absente de la liste DGFiP consultée le 23 septembre ; cet avis reste hors des fiches PA.",
+      "sourceIds": [
+        "faktus-financement-20260923"
+      ]
+    }
+  },
+  {
+    "id": "welyb-cloture-20260922",
+    "platformSlugs": [],
+    "kind": "availability",
+    "scope": "ecosystem_service",
+    "title": "Welyb : clôture des exercices indisponible",
+    "summary": "Welyb signale le 22 septembre que la clôture des exercices est indisponible et qu’un correctif est en cours de déploiement. La suppression des dépôts rapides associés dépend du retour de cette fonction.",
+    "status": "identified",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-22",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-22",
+    "checkedAt": "2026-09-23",
+    "sourceIds": [
+      "welyb-status-20260916"
+    ],
+    "limitations": "L’avis concerne une fonction de gestion dans Welyb. L’impact sur les échanges de factures d’une PA reste non documenté.",
+    "affectedService": "Welyb / Portail AGIRIS CONNECT"
+  },
+  {
+    "id": "welyb-bobbee-20260916",
+    "platformSlugs": [],
+    "kind": "availability",
+    "scope": "ecosystem_service",
+    "title": "Bobbee vers Welyb : dépôts de documents rétablis",
+    "summary": "Welyb signalait le 16 septembre un arrêt du dépôt de documents depuis Bobbee. Le 22 septembre, Welyb annonce la connexion de nouveau fonctionnelle et le rattrapage des documents.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-16",
+    "resolutionReportedAt": "2026-09-22",
+    "updatedAt": "2026-09-22",
+    "checkedAt": "2026-09-23",
+    "sourceIds": [
+      "welyb-status-20260916"
+    ],
+    "limitations": "Avis publié par Welyb sur une connexion applicative. La fin du rattrapage et un éventuel impact sur des flux PA restent à préciser.",
+    "affectedService": "Connexion Bobbee vers Welyb / PAC"
   }
 ]

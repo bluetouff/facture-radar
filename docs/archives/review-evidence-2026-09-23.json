@@ -1,0 +1,444 @@
+{
+  "checkedAt": "2026-09-23T10:23:10.228Z",
+  "previousRun": 35723304862,
+  "collection": {
+    "sourceCount": 26,
+    "sources": [
+      {
+        "sourceId": "sage",
+        "url": "https://status.sage.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "7a2087fe5c24af5b6d30cb8292ba12b7d04982a217117f714e50b016f7c295b5",
+        "candidateCount": 12
+      },
+      {
+        "sourceId": "pennylane",
+        "url": "https://status.pennylane.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "82a1cb826ee341677bdab1274d576074ca267e3c5171adeef76529ffa0a55b60",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "esker",
+        "url": "https://www.trustesker.com/?env=G",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "bef9155e9174f01982e2f4aca989f998a9b3d55d3edc6c39a651c6e294943e65",
+        "candidateCount": 15
+      },
+      {
+        "sourceId": "avalara",
+        "url": "https://status.avalara.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "f4548bf0e41b35712caa003e41f75cc53239e2464899ad8fd95600354a3ddaa9",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "axway",
+        "url": "https://status.axway.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "51a97efe4b4d3ec0c155a0426bf08407470abb5daf1ae492c3e978f3f0e2e520",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "blg",
+        "url": "https://status.blgcloud.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "6e7df299f5f1c85df095c58bdb46fda3c6ad2cdf14c4bb0b00ceea17e27552c4",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "docoon",
+        "url": "https://docooninvoice.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "6390c506ced46988a34c645ca53f3df477fdef2c1e69397b61cc7c4951e94e95",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "dokapi",
+        "url": "https://dokapi.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "db4d8da30357676fbc63f340688ad4de87f6a196c7252a27ed0f3afeec6555d6",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "ecosio-intercom",
+        "url": "https://www.ecosio-status.com/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "26e6a0b2583f769e80c33136dff730c74ee25dc2c37709719fb6a87c3130ddd1",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "fiskaltrust",
+        "url": "https://status.fiskaltrust.eu/feed",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "4ce4eed53dddf86745dd19e2f63acfac190da197acfb1eaa69a65554d6f9eb8c",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "flowie",
+        "url": "https://flowie.betteruptime.com/feed",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "dadeacf3710d73e30dd81ca0b5292389d46e98581002f4b199a989ac3e901cbc",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "invopop",
+        "url": "https://status.invopop.com/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "282cfe5cbcc6f2654091ac36cfc4334ee1f0c105172eb607e511bfd4e3800616",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "lucca",
+        "url": "https://status.lucca.fr/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "3d5e410848abd6919b93a1b2725960d70d0a96cd8fc2c06120d9db606037d767",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "n2f",
+        "url": "https://status.n2f.com/fr/feed",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "e8febae3b07f98c6add2eba9c65fd81ccba9ac378ec1580ddb9a6ea0955afaac",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "pitney-bowes",
+        "url": "https://status.pitneybowes.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "58b98aa463cf3429d6b1bfa2bafe4f99055ad8f5804cbe3e262733833e2b681c",
+        "candidateCount": 13
+      },
+      {
+        "sourceId": "spendesk",
+        "url": "https://status.spendesk.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "650314b7bbd4705cc118c2d486c535bdd9aac515a79f1005abc8923ebeec7258",
+        "candidateCount": 7
+      },
+      {
+        "sourceId": "storecove",
+        "url": "https://storecove.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "64028d2f97da2d179ed1a22301f6c98c2cb4042ef8def7db9acb65c6c137ba3c",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "superpdp",
+        "url": "https://status.superpdp.tech/rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "c9bd5c44accf1b5839e1eea0e978717cc893cea0453f310af0f9a3e2f6e5c22e",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "weproc",
+        "url": "https://status.weinvoice.fr/feed",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "4a8235342cacc8617efd117b7ce2cf6faec32aad163302a04840687941fafb2c",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "veryswing",
+        "url": "https://status.veryswing.com/atom",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "2599f4f8f9d8af415f761651775af72f09df398920ddbe29b7493222fcdb53c8",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "eezi",
+        "url": "https://eezi.instatus.com/af-na/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "8e4db77f456b970bc4c8e39758f8eb4111ed08f0a610acf172626a732a953245",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "tungsten",
+        "url": "https://status.tungstencloud.com/europe/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "1ea1f326a82ed1be33004a1379fade778f10dfe41c45b49d5e1d428a7ab871a9",
+        "candidateCount": 5
+      },
+      {
+        "sourceId": "myunisoft",
+        "url": "https://meteo.myunisoft.fr/api/incidents.json",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "5e04f49a4faab03b78cbdfba30e3ef6f2298c2307cd2164d5ea2788ad25ef8ea",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "tiime",
+        "url": "https://status.tiime.fr/api/getEventFeed/KoA7Nf881q",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "58cceec782490980d84d7c086034e683ddd1ded64b970d2f3ffe9bc1adc778e6",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "ademico",
+        "url": "https://status.ademico-software.com/api/getEventFeed/kME5WtnQZ0",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "03edac2726d3a5777f01f28482c39db84445e4afe84842881107491726eb40e6",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "cert-fr",
+        "url": "https://www.cert.ssi.gouv.fr/feed/",
+        "status": "collected",
+        "checkedAt": "2026-09-23T10:23:10.228Z",
+        "sha256": "5c38f2129df177bc20ccd95a2846fecbbc8bdb29d0c1470beb0fff0e3f449d62",
+        "candidateCount": 39
+      }
+    ]
+  },
+  "official": [
+    {
+      "file": "approved.xlsx",
+      "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+      "sha256": "8b90543cedade74969f8c8f41ef2196b1d4802adec092b289ef1df9d6a40f640",
+      "bytes": 27134
+    },
+    {
+      "file": "pending.xlsx",
+      "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+      "sha256": "79cacd06be0d7da6500e481717f68050e29ee632a76d86d92dacc220f07cf23a",
+      "bytes": 8285
+    },
+    {
+      "file": "dgfip.html",
+      "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+      "sha256": "9c5c0bba622f7fdd44c7cd02a849345165048758f8609c05c4b4b8a786acd839",
+      "bytes": 50824
+    }
+  ],
+  "targetedPages": [
+    {
+      "id": "ecosio-incident",
+      "url": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+      "finalUrl": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+      "sha256": "eb1d1964a684e4a394ebd8808c673ca0da7aa3a8f4976f7280c82515fdc02e53",
+      "bytes": 130474
+    },
+    {
+      "id": "spendesk-france",
+      "url": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+      "finalUrl": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+      "sha256": "5ca390a6fc6c6889d3fbdfd3bed8f7646c4ac4c9b4076517527bc01ba2778bf7",
+      "bytes": 71537
+    },
+    {
+      "id": "spendesk-ios",
+      "url": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+      "finalUrl": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+      "sha256": "8b868391af4e7370086f165fe44f186d5a50fe6ae867cc47c4f73ece782410bd",
+      "bytes": 72079
+    },
+    {
+      "id": "spendesk-cards",
+      "url": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+      "finalUrl": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+      "sha256": "fc7c0fc91fb8d022086bd9ce544775ee6cc7e5fb835987a1cc8542575e963bdf",
+      "bytes": 73518
+    },
+    {
+      "id": "eezi-dashboard",
+      "url": "https://eezi.instatus.com/incident/cmucut4ft1um81npccbw9inh5",
+      "finalUrl": "https://eezi.instatus.com/cmucut4ft1um81npccbw9inh5",
+      "sha256": "ff61f7195d34333c504ea3052ccdfaecfd059001081f165bec1ace55a5c1c9e9",
+      "bytes": 112026
+    },
+    {
+      "id": "alta-claim",
+      "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "finalUrl": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "sha256": "f584cac5fa1f8281cc5f0b0eff34cace9c4bfacdeb940848e0d0036185ea7019",
+      "bytes": 86704
+    },
+    {
+      "id": "alta-press",
+      "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "finalUrl": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "sha256": "2cce49c7776868fed3b2ad651dbc28a52e73909f467bd2f5019adc4116e0e6b7",
+      "bytes": 75027
+    },
+    {
+      "id": "alta-integration",
+      "url": "https://altagem.com/facturation-%C3%A9lectronique",
+      "finalUrl": "https://altagem.com/facturation-%C3%A9lectronique",
+      "sha256": "c2c81020a23b9e4aa2dd13394fa0d1466e90002086e0f748c42717ff74d293ab",
+      "bytes": 104415
+    },
+    {
+      "id": "alta-blog",
+      "url": "https://altagem.com/blog/facturation-%C3%A9lectronique-tout-comprendre-en-5-minutes",
+      "finalUrl": "https://altagem.com/blog/facturation-%C3%A9lectronique-tout-comprendre-en-5-minutes",
+      "sha256": "a0a06fa453d6cc163772f2497d93f551605160812d476e6c6973baea70659546",
+      "bytes": 55848
+    },
+    {
+      "id": "faktus-claim",
+      "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "finalUrl": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "sha256": "a7ec632f68c0bdf4e53529c2f84b9e235d22b2ef54d6a5c7ba8ecf9d8e0f6df8",
+      "bytes": 89141
+    },
+    {
+      "id": "welyb-status",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "finalUrl": "https://support.welyb.fr/statut-plateforme",
+      "sha256": "226ba3639966275c9fea5e3c795641bb33b577cb46870702c1f44db2c9e4fc28",
+      "bytes": 136549
+    },
+    {
+      "id": "zenfirst-claim",
+      "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "finalUrl": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "sha256": "be3197dc17301a197fc9d82eb87ce3e4a9cba8e2b2e9c4a9d2f099ef6f65a5e7",
+      "bytes": 77860
+    },
+    {
+      "id": "zenfirst-security",
+      "url": "https://www.zenfirst.fr/securite-des-donnees/",
+      "finalUrl": "https://www.zenfirst.fr/securite-des-donnees/",
+      "sha256": "7e4ee3835245a14283714601715a0290bbfe263b85e6ee785450a94264847f29",
+      "bytes": 281892
+    },
+    {
+      "id": "welyb-claim",
+      "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "finalUrl": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "sha256": "a7122097d52b9ae541c7f49a16ce12d3f2a9152c4ae3a4e77d46156205ace5aa",
+      "bytes": 79644
+    },
+    {
+      "id": "qonto-status",
+      "url": "https://status.qonto.com/incidents/September-2026",
+      "finalUrl": "https://status.qonto.com/incidents/September-2026",
+      "sha256": "aa56a24a56cbae16f70d19ed23376d3bda600b139fc8ce58d130e84eb9ba4f9f",
+      "bytes": 18930
+    },
+    {
+      "id": "iopole-status",
+      "url": "https://uptime.com/statuspage/iopole.com-api-sla",
+      "finalUrl": "https://uptime.com/statuspage/iopole.com-api-sla",
+      "sha256": "0ef0be96929f19f3b43848011995b972907d7e045a285a645c75fa35873983cb",
+      "bytes": 11901
+    },
+    {
+      "id": "faktus-official",
+      "url": "https://faktus.eu/produits/financementdefactures",
+      "method": "Exa full-page extraction",
+      "sha256": "2184f9f436406d52bf676f70caba3a25f4aa98fc820a93d9f5e2e4df7dcf4ca1"
+    }
+  ],
+  "selectedNotices": [
+    {
+      "id": "ecosio-intercom-01M31QYCZABKK6JASKJRP9RJR9",
+      "sourceId": "ecosio-intercom",
+      "url": "https://www.ecosio-status.com//incidents/01M31QYCZABKK6JASKJRP9RJR9",
+      "title": "E-Invoice France Queue",
+      "publishedAt": "2026-09-21T12:13:23.000Z",
+      "fingerprint": "b4013d0e27db556aa318192bc54955a7e19ba006121538a35afbff7683fb1286",
+      "platformSlugs": [
+        "ecosio-intercom"
+      ],
+      "classification": "publisher_notice_to_review",
+      "firstObservedAt": "2026-09-21T12:57:05.834Z",
+      "lastObservedAt": "2026-09-23T10:23:10.228Z"
+    },
+    {
+      "id": "spendesk-l38cjk9k2spy",
+      "sourceId": "spendesk",
+      "url": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+      "title": "Invoices : New French E-Invoices Not Received",
+      "publishedAt": "2026-09-22T14:46:10.000Z",
+      "fingerprint": "320928085391504895399784b27b3dcaaaec3678225934949abd139e19233d42",
+      "platformSlugs": [
+        "spendesk"
+      ],
+      "classification": "publisher_notice_to_review",
+      "firstObservedAt": "2026-09-23T10:23:10.228Z",
+      "lastObservedAt": "2026-09-23T10:23:10.228Z"
+    },
+    {
+      "id": "spendesk-4gndfyrx7ndj",
+      "sourceId": "spendesk",
+      "url": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+      "title": "Login : iOS Email Links Not Completing Sign-In",
+      "publishedAt": "2026-09-23T07:20:49.000Z",
+      "fingerprint": "1af7128f62fac3e961460ebeabe95543cbe1067cb8f94e4b9287f4079bc179b3",
+      "platformSlugs": [
+        "spendesk"
+      ],
+      "classification": "publisher_notice_to_review",
+      "firstObservedAt": "2026-09-22T11:46:24.646Z",
+      "lastObservedAt": "2026-09-23T10:23:10.228Z"
+    },
+    {
+      "id": "spendesk-9rz9sjd4npml",
+      "sourceId": "spendesk",
+      "url": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+      "title": "Amazon Payments – Card Tokenisation Failure",
+      "publishedAt": "2026-09-22T10:51:46.000Z",
+      "fingerprint": "aee9f6cd69399f132fac4d9e35808c1b04bc07b15b3b19f9a9061ce97a03dcf8",
+      "platformSlugs": [
+        "spendesk"
+      ],
+      "classification": "publisher_notice_to_review",
+      "firstObservedAt": "2026-09-17T11:49:00.288Z",
+      "lastObservedAt": "2026-09-23T10:23:10.228Z"
+    },
+    {
+      "id": "eezi-cmucut4ft1um81npccbw9inh5",
+      "sourceId": "eezi",
+      "url": "https://eezi.instatus.com/incident/cmucut4ft1um81npccbw9inh5",
+      "title": "eezi Dashboard",
+      "publishedAt": "2026-09-22T15:53:40.000Z",
+      "fingerprint": "de4f0e4afba32a02146e052892dcdf7f0c0b62eab409f445c84d849192bcfe8d",
+      "platformSlugs": [
+        "eezi"
+      ],
+      "classification": "publisher_notice_to_review",
+      "firstObservedAt": "2026-09-23T10:23:10.228Z",
+      "lastObservedAt": "2026-09-23T10:23:10.228Z"
+    },
+    {
+      "id": "esker-environment-G",
+      "url": "https://www.trustesker.com/?env=G",
+      "title": "TrustEsker environnement G",
+      "publishedAt": null,
+      "noticeVisible": false,
+      "fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceId": "esker",
+      "platformSlugs": [
+        "esker"
+      ],
+      "classification": "publisher_notice_to_review",
+      "firstObservedAt": "2026-09-16T14:12:02.061Z",
+      "lastObservedAt": "2026-09-23T10:23:10.228Z"
+    }
+  ]
+}

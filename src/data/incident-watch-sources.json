@@ -9,7 +9,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://status.sage.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "sage-status-2026-09"
   },
@@ -23,7 +23,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://status.pennylane.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "pennylane-status-2026-09"
   },
@@ -37,7 +37,7 @@
     "kind": "esker",
     "profile": "esker",
     "pageUrl": "https://www.trustesker.com/?env=G",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Page par environnement ; lecture automatique des messages visibles, historique limité.",
     "sourceId": "esker-status-2026-09"
   },
@@ -51,7 +51,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://status.avalara.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "avalara-watch-2026-09"
   },
@@ -65,7 +65,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://status.axway.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "axway-watch-2026-09"
   },
@@ -79,7 +79,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://status.blgcloud.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "blg-watch-2026-09"
   },
@@ -93,7 +93,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://docooninvoice.statuspage.io/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux propre à Docoon Invoice, identifié depuis le site officiel. Il remplace le flux Docoon Messaging, dont le périmètre est différent.",
     "sourceId": "docoon-invoice-watch-20260920"
   },
@@ -107,7 +107,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://dokapi.statuspage.io/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "dokapi-watch-2026-09"
   },
@@ -121,7 +121,7 @@
     "kind": "rss",
     "profile": "statuspal",
     "pageUrl": "https://www.ecosio-status.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "ecosio-intercom-watch-2026-09"
   },
@@ -135,7 +135,7 @@
     "kind": "rss",
     "profile": "betterstack",
     "pageUrl": "https://status.fiskaltrust.eu/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "fiskaltrust-watch-2026-09"
   },
@@ -149,7 +149,7 @@
     "kind": "rss",
     "profile": "betterstack",
     "pageUrl": "https://flowie.betteruptime.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "flowie-watch-2026-09"
   },
@@ -163,7 +163,7 @@
     "kind": "rss",
     "profile": "statuspal",
     "pageUrl": "https://status.invopop.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "invopop-watch-2026-09"
   },
@@ -177,7 +177,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://status.lucca.fr/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "lucca-watch-2026-09"
   },
@@ -191,7 +191,7 @@
     "kind": "rss",
     "profile": "betterstack",
     "pageUrl": "https://status.n2f.com/fr",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "n2f-watch-2026-09"
   },
@@ -205,7 +205,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://status.pitneybowes.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "pitney-bowes-watch-2026-09"
   },
@@ -219,7 +219,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://status.spendesk.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "spendesk-watch-2026-09"
   },
@@ -233,7 +233,7 @@
     "kind": "rss",
     "profile": "statuspage",
     "pageUrl": "https://storecove.statuspage.io/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "storecove-watch-2026-09"
   },
@@ -247,7 +247,7 @@
     "kind": "rss",
     "profile": "ohdear",
     "pageUrl": "https://status.superpdp.tech/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "superpdp-watch-2026-09"
   },
@@ -261,7 +261,7 @@
     "kind": "rss",
     "profile": "betterstack",
     "pageUrl": "https://status.weinvoice.fr/incidents",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "weproc-watch-2026-09"
   },
@@ -275,7 +275,7 @@
     "kind": "atom",
     "profile": "cachet",
     "pageUrl": "https://status.veryswing.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "veryswing-watch-2026-09"
   },
@@ -289,7 +289,7 @@
     "kind": "rss",
     "profile": "instatus",
     "pageUrl": "https://eezi.instatus.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "eezi-watch-2026-09"
   },
@@ -303,7 +303,7 @@
     "kind": "rss",
     "profile": "incident-io",
     "pageUrl": "https://status.tungstencloud.com/europe",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Flux public de l’éditeur. Les services et pays concernés sont précisés dans chaque avis.",
     "sourceId": "tungsten-watch-2026-09"
   },
@@ -317,7 +317,7 @@
     "kind": "json",
     "profile": "myunisoft",
     "pageUrl": "https://meteo.myunisoft.fr/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Calendrier JSON officiel. Les échanges de la chronologie détaillée se lisent sur chaque avis.",
     "sourceId": "myunisoft-watch-2026-09"
   },
@@ -331,7 +331,7 @@
     "kind": "json",
     "profile": "uptimerobot-events",
     "pageUrl": "https://status.tiime.fr/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "API publique des événements, liée depuis la page d’état. Fenêtre glissante de 30 jours.",
     "sourceId": "tiime-watch-2026-09"
   },
@@ -345,7 +345,7 @@
     "kind": "json",
     "profile": "uptimerobot-events",
     "pageUrl": "https://status.ademico-software.com/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "API publique des événements, liée depuis la page d’état. Fenêtre glissante de 30 jours.",
     "sourceId": "ademico-watch-2026-09"
   },
@@ -357,7 +357,7 @@
     "kind": "rss",
     "profile": "cert-fr",
     "pageUrl": "https://www.cert.ssi.gouv.fr/",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-09-23",
     "note": "Bulletins, alertes et avis de vulnérabilité. Le rattachement à une PA demande une vérification du produit concerné.",
     "sourceId": "cert-fr-watch-2026-09"
   }

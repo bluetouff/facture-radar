@@ -7,7 +7,7 @@ import rawResearch from "./incident-research.json" with { type: "json" };
 import { incidentDateAfter } from "../lib/incident-dates.ts";
 
 export const INCIDENT_WATCH_SINCE = "2026-09-01";
-export const INCIDENT_WATCH_CHECKED_AT = "2026-09-20";
+export const INCIDENT_WATCH_CHECKED_AT = "2026-09-23";
 const timestamp = z.union([z.iso.datetime({ offset: true }), z.iso.date()]);
 export const incidentSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
@@ -68,7 +68,7 @@ export function validateIncidents(input: unknown): PlatformIncident[] {
   return events.sort((a, b) => Date.parse(b.updatedAt ?? b.firstReportedAt ?? b.checkedAt) - Date.parse(a.updatedAt ?? a.firstReportedAt ?? a.checkedAt));
 }
 export const platformIncidents = validateIncidents(rawIncidents);
-export const incidentScopeLabels = { pa: "Facturation électronique", publisher_service: "Application de l’éditeur", upstream: "Dépendance externe", connected_service: "Service connecté à la PA", ecosystem_service: "Logiciel hors annuaire PA" } as const;
+export const incidentScopeLabels = { pa: "Facturation électronique", publisher_service: "Application de l’éditeur", upstream: "Dépendance externe", connected_service: "Service connecté à la PA", ecosystem_service: "Service hors annuaire PA" } as const;
 export const incidentVerificationLabels = { primary_notice: "Avis de l’éditeur", relayed_notice: "Notification relayée", reported_claim: "Revendication non confirmée" } as const;
 export const incidentStatusLabels = { investigating: "Investigation annoncée", identified: "Cause identifiée", monitoring: "Sous surveillance", resolved: "Résolution annoncée", unknown: "État non précisé" } as const;
 
@@ -97,23 +97,23 @@ for (const feed of incidentFeeds) {
 
 // A reviewed public page does not establish full historical or PA coverage.
 const initialIncidentCoverage = [
-  { platformSlug: "cecurity", sourceIds: ["welyb-status-20260916"], checkedAt: "2026-09-20", status: "partial", note: "Page Welyb relue : connexion de nouveaux dossiers à eFacture perturbée le 14 septembre, consultation des factures rétablie après une difficulté depuis le 4. Ces avis concernent le service connecté Welyb/eFacture." },
-  { platformSlug: "sage", sourceIds: ["sage-status-2026-09"], checkedAt: "2026-09-20", status: "reviewed", note: "Historique public du 1er au 20 septembre : avis de facturation française et services citant la France. Autres pays et maintenances exclus." },
-  { platformSlug: "pennylane", sourceIds: ["pennylane-status-2026-09"], checkedAt: "2026-09-20", status: "reviewed", note: "Historique public du 1er au 20 septembre relu. Les avis portent sur l’application. Leur impact éventuel sur les flux PA reste à documenter." },
-  { platformSlug: "qonto", sourceIds: ["qonto-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Historique vide lors de la lecture du 16 septembre. La nouvelle consultation du 20 septembre a été refusée (HTTP 403). La disponibilité de la PA et des services bancaires reste à vérifier séparément." },
-  { platformSlug: "esker", sourceIds: ["esker-status-2026-09"], checkedAt: "2026-09-20", status: "partial", note: "Revue des avis affichés par environnement, dont celui concernant l’environnement G. L’historique depuis le 1er septembre reste à compléter." },
+  { platformSlug: "cecurity", sourceIds: ["welyb-status-20260916"], checkedAt: "2026-09-23", status: "partial", note: "Page Welyb relue le 23 septembre : la connexion de nouveaux dossiers à eFacture reste signalée comme perturbée. Les nouveaux avis sur la clôture des exercices et le dépôt Bobbee sont publiés séparément, hors attribution à Cecurity." },
+  { platformSlug: "sage", sourceIds: ["sage-status-2026-09"], checkedAt: "2026-09-23", status: "reviewed", note: "Flux relu le 23 septembre après les précédentes revues : les nouveaux avis décrivent d’autres produits ou pays. Les maintenances et avis sans périmètre français établi restent hors du journal." },
+  { platformSlug: "pennylane", sourceIds: ["pennylane-status-2026-09"], checkedAt: "2026-09-23", status: "reviewed", note: "Flux relu le 23 septembre. L’avis de septembre connu porte sur l’application ; son impact éventuel sur les flux PA reste à documenter." },
+  { platformSlug: "qonto", sourceIds: ["qonto-status-2026-09"], checkedAt: "2026-09-23", status: "partial", note: "La page d’historique de septembre est de nouveau lisible et affiche une liste vide au 23 septembre. La disponibilité de la PA et des services bancaires reste à vérifier séparément." },
+  { platformSlug: "esker", sourceIds: ["esker-status-2026-09"], checkedAt: "2026-09-23", status: "partial", note: "Environnement G relu le 23 septembre. L’avis du 15 a disparu au relevé du 22 ; son état final reste à confirmer, faute d’annonce de résolution retrouvée." },
   { platformSlug: "sellsy", sourceIds: ["sellsy-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "État courant consulté. L’historique depuis le 1er septembre et la disponibilité de la PA restent à documenter. Le site refuse notre collecte automatique." },
   { platformSlug: "dext", sourceIds: ["dext-status-2026-09"], checkedAt: "2026-09-16", status: "partial", note: "Le rapport HTTP de Dext Prepare couvre une partie de la période. Un suivi propre à la PA française reste à documenter." },
 ] as const;
 const feedNotes: Record<string, string> = {
-  docoon: "Flux Docoon Invoice relu le 20 septembre. Les entrées disponibles sont antérieures à septembre. Le flux Messaging précédemment raccordé a été remplacé.",
-  superpdp: "Flux et page relus le 20 septembre. Incident de chargement de l’annuaire du 18 septembre publié, avec résolution annoncée. Horaires limités au jour en raison des fuseaux contradictoires.",
-  weproc: "Historique WeInvoice et flux relus du 1er au 20 septembre. Deux avis sur Peppol et l’annuaire PISTE, attribués à leur auteur.",
-  spendesk: "Historique et flux relus du 1er au 20 septembre : facturation française, accès à l’application, e-mails et virements internationaux.",
+  docoon: "Flux Docoon Invoice relu le 23 septembre. Les entrées disponibles sont antérieures à septembre. Le flux Messaging précédemment raccordé a été remplacé.",
+  superpdp: "Flux relu le 23 septembre, après la lecture de la page le 20. Incident de chargement de l’annuaire du 18 septembre publié, avec résolution annoncée. Horaires limités au jour en raison des fuseaux contradictoires.",
+  weproc: "Flux WeInvoice relu le 23 septembre, après la revue de son historique. Deux avis sur Peppol et l’annuaire PISTE, attribués à leur auteur.",
+  spendesk: "Flux et avis relus le 23 septembre : nouvel incident de réception des factures françaises le 22, connexion iOS rétablie le 23, paiements par carte toujours en investigation.",
   myunisoft: "Calendrier public et deux avis de septembre relus. Le périmètre cité est la production comptable et fiscale.",
   dokapi: "Flux et avis du 16 septembre relus. La perturbation publiée concerne l’envoi des e-mails.",
   invopop: "Flux et deux avis de septembre relus : interface de la console et migration du SML Peppol.",
-  tungsten: "Flux Europe relu. Avis d’assistance eInvoice Network retenu. Les avis propres à la Pologne, la Roumanie, la Croatie et à Printix restent hors du périmètre français de ce journal.",
+  tungsten: "Flux Europe relu le 23 septembre. Les nouveaux avis concernent les échanges KSeF en Pologne et AP Essentials. Leur impact sur la PA française reste non documenté ; ils sont conservés dans les preuves de revue.",
   "pitney-bowes": "Flux public relu : les avis de septembre concernent les API d’expédition et les transporteurs. Leur impact sur la PA française reste à documenter.",
   tiime: "API publique consultée : liste d’événements vide dans la fenêtre de 30 jours fournie par l’éditeur.",
   ademico: "API publique consultée : liste d’événements vide dans la fenêtre de 30 jours fournie par l’éditeur.",
@@ -122,7 +122,7 @@ export const incidentCoverage = [
   ...initialIncidentCoverage,
   ...incidentFeeds.filter(feed => feed.platformSlugs.length && !initialIncidentCoverage.some(item => feed.platformSlugs.includes(item.platformSlug))).flatMap(feed => feed.platformSlugs.map(platformSlug => ({
     platformSlug, sourceIds: [feed.sourceId], checkedAt: feed.checkedAt, status: "partial" as const,
-    note: feedNotes[platformSlug] ?? "Flux officiel relu le 20 septembre. Les publications disponibles portent sur les services de l’éditeur ; la profondeur historique dépend du flux fourni.",
+    note: feedNotes[platformSlug] ?? "Flux officiel relu le 23 septembre. Les publications disponibles portent sur les services de l’éditeur ; la profondeur historique dépend du flux fourni.",
   }))),
   {"platformSlug": "aruba", "sourceIds": ["aruba-manual-status-2026-09"], "checkedAt": "2026-09-16", "status": "partial", "note": "Page d’alertes consultée. La rubrique de service était vide ; les exemples de phishing visibles étaient antérieurs à septembre."},
   {"platformSlug": "docuware", "sourceIds": ["docuware-manual-status-2026-09"], "checkedAt": "2026-09-16", "status": "partial", "note": "Portail d’état identifié. L’extraction publique présente des informations anciennes ; la chronologie de septembre demande un contrôle dans le portail interactif."},
@@ -135,11 +135,11 @@ export const incidentCoverage = [
 ];
 export const incidentWatchLimit = "Ce journal réunit les avis des éditeurs, les notifications relayées et les revendications à confirmer. Chaque signalement précise son niveau de confirmation et le service concerné. Certains avis se recoupent. La couverture reste partielle ; l’évaluation de la disponibilité et de la sécurité exige aussi des mesures techniques et des audits.";
 export const securityReview = {
-  checkedAt: "2026-09-20",
+  checkedAt: "2026-09-23",
   status: "public_search_completed" as const,
   platformCount: incidentResearch.length,
-  note: "Recherches nominatives actualisées le 20 septembre pour les 149 PA. Deux signalements de sécurité sont publiés : une notification Welyb / AGIRIS CONNECT relayée par la presse, et une revendication visant Zenfirst. Zenfirst figure comme logiciel hors annuaire PA. Pour ces deux avis, l’impact sur une PA reste non documenté.",
-  sourceIds: ["cert-fr-sap-20260908", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration", "frenchbreaches-zenfirst-20260917", "zenfirst-integration-20260920"],
+  note: "La recherche nominative des 149 PA du 20 septembre est complétée le 23 par la revue des flux et des recherches ciblées. Quatre signalements de sécurité sont publiés : Welyb / AGIRIS CONNECT, Zenfirst, Altagem et Faktus. La connexion Altagem-Iopole est documentée séparément de la revendication. L’impact sur les PA partenaires reste non établi.",
+  sourceIds: ["cert-fr-sap-20260908", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration", "frenchbreaches-zenfirst-20260917", "zenfirst-integration-20260920", "frenchbreaches-altagem-20260921", "altagem-iopole-integration-20260923", "frenchbreaches-faktus-20260919", "faktus-financement-20260923"],
   findings: [
     { platformSlug: "sap", type: "vulnerability_advisory" as const, title: "SAP : bulletin de correctifs du 8 septembre", note: "Le CERT-FR recense des vulnérabilités dans plusieurs produits SAP. Ce bulletin appelle une vérification des produits et versions utilisés ; il décrit des failles logicielles, sans signaler de compromission d’une PA.", sourceIds: ["cert-fr-sap-20260908"] },
     { platformSlug: "blg", type: "outside_period" as const, title: "blgCloud : notification antérieure à la période", note: "La notification officielle du 10 août décrit une attaque de juillet. Elle est conservée comme contexte et exclue du compteur des incidents de septembre. Les nouvelles mentions de presse demandent un recoupement.", sourceIds: ["blg-security-20260810"] },

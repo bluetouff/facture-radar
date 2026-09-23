@@ -302,6 +302,7 @@ for (const sourceId of practicalQuestionSourceIds) {
 }
 
 referencedSourceIds.add("dgfip-list-2026-09-16");
+referencedSourceIds.add("dgfip-list-20260923");
 for (const source of incidentWatchCorpus().sources) referencedSourceIds.add(source.id);
 
 for (const source of checkedSources) {
