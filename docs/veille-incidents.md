@@ -34,6 +34,8 @@ Chaque source utilise TLS vérifié, une adresse DNS publique épinglée, une UR
 
 Le collecteur compare les empreintes et conserve les avis sortis des flux glissants. Better Stack publie plusieurs entrées pour un même avis : la dernière version est retenue indépendamment de l’ordre. Oh Dear peut donner le même lien racine à plusieurs avis. Chaque couple titre/date reçoit un identifiant stable ; les mises à jour de texte sont détectées sans fusionner les avis. Le lien reste limité à l’origine autorisée. Un retrait de message TrustEsker déclenche une revue, jamais une résolution automatique. Une liste vide dans une API dont le schéma ou la fenêtre est invalide produit un échec.
 
+Les maintenances Statuspage sont reconnues par leur champ `maintenanceEndDate`, y compris avec un titre libre. Leur `pubDate` peut représenter le début prévu, parfois futur, ou une mise à jour après la fin de maintenance. Les deux dates, leur fuseau et le lien sont validés avant exclusion de la file d’incidents. Les avis de maintenance restent dans les réponses brutes archivées. Les incidents ordinaires conservent le contrôle interdisant une date future. Cette distinction corrige les échecs Axway et Pitney Bowes des collectes des 24 et 25 septembre 2026.
+
 Les nouveaux éléments restent dans la file de revue même après un relevé sans changement. La conservation des données précède la publication : **la collecte est automatique, la qualification et la mise en production suivent la revue**. Le flux CERT-FR fournit des pistes de vulnérabilités ; ses avis ne deviennent pas automatiquement des incidents de PA.
 
 ## Revue utile, sans travail répété

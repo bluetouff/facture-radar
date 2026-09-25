@@ -96,6 +96,14 @@ export function parseWatchSource(source, body, now = Date.now()) {
   const grouped = new Map();
   for (const item of items) {
     const title = xmlText(item.title);
+    if (source.profile === "statuspage" && item.maintenanceEndDate !== undefined) {
+      // Statuspage pubDate can be a future scheduled start or a later completion update.
+      // The explicit end field identifies maintenance even when its title is free-form.
+      incidentUrl(source, item.link);
+      timestamp(item.pubDate, Infinity);
+      timestamp(item.maintenanceEndDate, Infinity);
+      continue;
+    }
     if (item.category === "Maintenance" || (typeof item.description === "string" && /^Type:\s*Maintenance\b/.test(item.description)) || (typeof title === "string" && /(?:^Maintenance\b|\bScheduled\s+Maint(?:enance|anance)\b|\bMaintenance\s*[-:])/i.test(title))) continue;
     const atom = source.kind === "atom";
     const row = candidate(source, {

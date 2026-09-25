@@ -78,6 +78,45 @@ const source = watchSources[0];
 const item = (link = "https://status.sage.com/incidents/abc123", date = "Tue, 15 Sep 2026 10:00:00 +0000") => `<item><title>Service</title><link>${link}</link><pubDate>${date}</pubDate><description><![CDATA[<p>Update</p>]]></description></item>`;
 const rss = (body: string) => `<rss><channel>${body}</channel></rss>`;
 const now = Date.parse("2026-09-16T12:00:00Z");
+test("Statuspage : les maintenances explicites restent hors des incidents, même avec un titre libre", () => {
+  // Reduced entries from the failing GitHub collection of 24 September 2026.
+  const schedules = [
+    { sourceId: "axway", title: "AMPLIFY FUSION &amp; STUDIO — UPGRADE TO 1.18 (EU Region)", url: "https://status.axway.com/incidents/kj65th1wdrdj", start: "Wed, 07 Oct 2026 17:00:00 +0000", end: "Wed, 07 Oct 2026 19:00:00 +0000" },
+    { sourceId: "pitney-bowes", title: "USPS APIs Maintenance", url: "https://status.pitneybowes.com/incidents/wqws4q2vk9cv", start: "Thu, 24 Sep 2026 21:00:00 -0400", end: "Fri, 25 Sep 2026 01:00:00 -0400" },
+    // The next day's completed notice uses pubDate for an update after maintenanceEndDate.
+    { sourceId: "pitney-bowes", title: "USPS APIs Maintenance", url: "https://status.pitneybowes.com/incidents/wqws4q2vk9cv", start: "Fri, 25 Sep 2026 01:00:15 -0400", end: "Fri, 25 Sep 2026 01:00:00 -0400" },
+  ];
+  for (const schedule of schedules) {
+    const feed = watchSources.find(feed => feed.id === schedule.sourceId)!;
+    const maintenance = `<item><title>${schedule.title}</title><link>${schedule.url}</link><pubDate>${schedule.start}</pubDate><maintenanceEndDate>${schedule.end}</maintenanceEndDate><description>Planned upgrade</description></item>`;
+    const incident = item(new URL("/incidents/real123", feed.url).href);
+    for (const date of ["2026-09-24T11:54:50.173Z", "2026-10-08T12:00:00Z"]) {
+      const checkedAt = Date.parse(date);
+      const expected = parseWatchSource(feed, rss(incident), checkedAt);
+      assert.equal(expected.length, 1);
+      assert.deepEqual(parseWatchSource(feed, rss(maintenance), checkedAt), []);
+      assert.deepEqual(parseWatchSource(feed, rss(maintenance + incident), checkedAt), expected);
+      assert.deepEqual(parseWatchSource(feed, rss(incident + maintenance), checkedAt), expected);
+    }
+  }
+});
+
+test("Statuspage : un incident futur ou une maintenance mal formée restent des erreurs", () => {
+  const future = item(undefined, "Wed, 07 Oct 2026 17:00:00 +0000");
+  const marked = (end: string) => future.replace("</item>", `<maintenanceEndDate>${end}</maintenanceEndDate></item>`);
+  assert.throws(() => parseWatchSource(source, rss(future), now), /Date de flux invalide/);
+  for (const end of ["", "not-a-date UTC", "2026-10-07T19:00:00"]) {
+    assert.throws(() => parseWatchSource(source, rss(marked(end)), now));
+  }
+  const valid = marked("Wed, 07 Oct 2026 19:00:00 +0000");
+  assert.throws(() => parseWatchSource(source, rss(valid.replace("Wed, 07 Oct 2026 17:00:00 +0000", "not-a-date UTC")), now));
+  assert.throws(() => parseWatchSource(source, rss(valid.replace("status.sage.com", "localhost")), now));
+  assert.throws(() => parseWatchSource(source, rss(valid.replace("</item>", "<maintenanceEndDate>Wed, 07 Oct 2026 19:00:00 +0000</maintenanceEndDate></item>")), now));
+  // A Statuspage-specific field cannot suppress incidents from another provider.
+  const other = watchSources.find(feed => feed.id === "weproc")!;
+  assert.throws(() => parseWatchSource(other, rss(valid.replace("https://status.sage.com/incidents/abc123", "https://status.weinvoice.fr/incident/123")), now), /Date de flux invalide/);
+});
+
 test("Oh Dear conserve les avis distincts ayant le même lien racine", () => {
   const feed = watchSources.find(feed => feed.id === "superpdp")!;
   const opened = item("https://status.superpdp.tech", "2026-09-18T11:32:00+00:00");
