@@ -15,6 +15,7 @@ export function renderIncidentRss(events: readonly PlatformIncident[]) {
       event.relationship?.note ?? "",
       event.limitations,
       `Publication : ${formatIncidentDate(event.firstReportedAt)}. Mise à jour : ${formatIncidentDate(event.updatedAt)}. Consulté le ${formatIncidentDate(event.checkedAt)}.`,
+      event.firstObservedAt ? `Première observation par PA Check : ${formatIncidentDate(event.firstObservedAt)}.` : "",
       `Sources : ${sourceUrls.join(" ; ")}`,
     ].filter(Boolean).join("\n");
     // RSS pubDate requires a time; omit it when the source only gives a day.

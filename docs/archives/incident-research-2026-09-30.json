@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-09-30",
+  "since": "2026-09-23",
+  "method": "Recherches thématiques et ciblées, puis relecture des sources. La recherche nominative des 149 PA conserve la date du 20 septembre.",
+  "queries": [
+    "\"plateforme agréée\" \"septembre 2026\" cyberattaque incident",
+    "\"Zenfirst\" cyberattaque septembre 2026",
+    "\"Altagem\" cyberattaque septembre 2026",
+    "\"Cecurity\" septembre 2026 incident sécurité",
+    "(cyberattaque OR \"fuite de données\") (\"facturation\" OR comptabilité OR \"plateforme agréée\") after:2026-09-23 before:2026-10-01 -site:pa.l0g.fr",
+    "(\"Sage\" OR \"Cegid\" OR \"Pennylane\" OR \"Qonto\" OR \"Tiime\" OR \"Indy\") (cyberattaque OR incident sécurité) septembre 2026",
+    "(\"Welyb\" OR \"Zenfirst\" OR \"Altagem\" OR \"Faktus\") cyberattaque septembre 2026 after:2026-09-23",
+    "\"plateforme agréée\" (\"septembre 2026\") (\"nouvelle\" OR \"immatriculation\") after:2026-09-23",
+    "site:frenchbreaches.com/alertes (facturation OR comptabilité OR plateforme) after:2026-09-23",
+    "site:cert.ssi.gouv.fr (Sage OR Cegid OR Pennylane OR Esker OR Cecurity OR SAP) after:2026-09-23",
+    "Welyb cyberattaque septembre 2026 confirmation",
+    "Zenfirst cyberattaque septembre 2026 communiqué",
+    "Altagem cyberattaque septembre 2026 communiqué",
+    "Faktus cyberattaque septembre 2026 communiqué"
+  ],
+  "findings": [
+    {
+      "url": "https://barry-louison-audit.com/logiciel-gestion-financiere-revendication-fuite-donnees-comptables/",
+      "decision": "Reprise de la revendication Zenfirst du 17 septembre ; pas de nouveau cas ni de confirmation primaire."
+    },
+    {
+      "url": "https://digitiz.fr/fuite-donnees-welyb/",
+      "decision": "Reprise du signalement Welyb déjà publié ; pas de nouvel incident."
+    },
+    {
+      "url": "https://support.welyb.fr/comment-sont-s%C3%A9curis%C3%A9es-les-donn%C3%A9es-sur-la-plateforme",
+      "decision": "Documentation générale datée du 20 août, pas une notification du présent incident."
+    }
+  ],
+  "additionalSearch": {
+    "provider": "Exa",
+    "queriesAttempted": 3,
+    "successfulQueries": 0,
+    "error": "HTTP 402, crédits épuisés"
+  },
+  "conclusion": "Aucun nouveau signalement de sécurité suffisamment documenté pour publication retenu. Les quatre qualifications précédentes sont conservées. Couverture partielle."
+}

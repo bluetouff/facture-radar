@@ -2333,7 +2333,7 @@
     "publisher": "Esker",
     "url": "https://www.trustesker.com/?env=G",
     "type": "documentation",
-    "accessedAt": "2026-09-23"
+    "accessedAt": "2026-09-30"
   },
   {
     "id": "sellsy-status-2026-09",
@@ -2789,7 +2789,7 @@
     "publisher": "Welyb",
     "url": "https://support.welyb.fr/statut-plateforme",
     "type": "documentation",
-    "accessedAt": "2026-09-23"
+    "accessedAt": "2026-09-30"
   },
   {
     "id": "welyb-cecurity-integration",
@@ -2805,7 +2805,7 @@
     "publisher": "FrenchBreaches",
     "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
     "type": "press",
-    "accessedAt": "2026-09-23"
+    "accessedAt": "2026-09-30"
   },
   {
     "id": "frenchbreaches-zenfirst-20260917",
@@ -2813,7 +2813,7 @@
     "publisher": "FrenchBreaches",
     "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
     "type": "press",
-    "accessedAt": "2026-09-23"
+    "accessedAt": "2026-09-30"
   },
   {
     "id": "zenfirst-integration-20260920",
@@ -2861,7 +2861,7 @@
     "publisher": "Spendesk",
     "url": "https://status.spendesk.com/incidents/9rz9sjd4npml",
     "type": "documentation",
-    "accessedAt": "2026-09-23"
+    "accessedAt": "2026-09-30"
   },
   {
     "id": "superpdp-directory-20260918-source",
@@ -2901,7 +2901,7 @@
     "publisher": "Spendesk",
     "url": "https://status.spendesk.com/incidents/l38cjk9k2spy",
     "type": "documentation",
-    "accessedAt": "2026-09-23"
+    "accessedAt": "2026-09-30"
   },
   {
     "id": "spendesk-ios-20260921-source",
@@ -2925,7 +2925,7 @@
     "publisher": "FrenchBreaches",
     "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
     "type": "press",
-    "accessedAt": "2026-09-23"
+    "accessedAt": "2026-09-30"
   },
   {
     "id": "cyberattaque-altagem-20260921",
@@ -2949,7 +2949,7 @@
     "publisher": "FrenchBreaches",
     "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
     "type": "press",
-    "accessedAt": "2026-09-23"
+    "accessedAt": "2026-09-30"
   },
   {
     "id": "faktus-financement-20260923",
@@ -2958,5 +2958,61 @@
     "url": "https://faktus.eu/produits/financementdefactures",
     "type": "documentation",
     "accessedAt": "2026-09-23"
+  },
+  {
+    "id": "dgfip-list-20260930",
+    "title": "Listes DGFiP relues le 30 septembre 2026",
+    "publisher": "DGFiP",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-09-30"
+  },
+  {
+    "id": "pennylane-incident-s9lkgtlw03s2",
+    "title": "Pennylane : instabilité de l’application le 25 septembre",
+    "publisher": "Pennylane",
+    "url": "https://status.pennylane.com/incidents/s9lkgtlw03s2",
+    "type": "documentation",
+    "accessedAt": "2026-09-30"
+  },
+  {
+    "id": "weproc-incident-1073900",
+    "title": "WeInvoice : appels à l’annuaire PISTE perturbés le 25 septembre",
+    "publisher": "Weproc",
+    "url": "https://status.weinvoice.fr/incident/1073900",
+    "type": "documentation",
+    "accessedAt": "2026-09-30"
+  },
+  {
+    "id": "lucca-incident-nfx98d4xggmb",
+    "title": "Lucca : service dégradé sur certaines applications le 28 septembre",
+    "publisher": "Lucca",
+    "url": "https://status.lucca.fr/incidents/nfx98d4xggmb",
+    "type": "documentation",
+    "accessedAt": "2026-09-30"
+  },
+  {
+    "id": "sage-incident-mc2p8blsm281",
+    "title": "Sage Identity : difficultés de connexion le 28 septembre",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/mc2p8blsm281",
+    "type": "documentation",
+    "accessedAt": "2026-09-30"
+  },
+  {
+    "id": "sage-incident-4r3t9stk544k",
+    "title": "Sage Connect : accès rétabli le 28 septembre",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/4r3t9stk544k",
+    "type": "documentation",
+    "accessedAt": "2026-09-30"
+  },
+  {
+    "id": "spendesk-incident-qs6rjc37fr6l",
+    "title": "Spendesk : connexion à l’application rétablie après l’incident du 29 septembre",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/qs6rjc37fr6l",
+    "type": "documentation",
+    "accessedAt": "2026-09-30"
   }
 ]

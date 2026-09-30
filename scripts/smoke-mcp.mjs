@@ -61,8 +61,8 @@ async function inspectClient(versionNegotiation) {
     const incidentsResource = await client.readResource({ uri: "pacheck://corpus/incidents" });
     const incidentData = JSON.parse(incidentsResource.contents[0].text);
     assert.equal(incidentData.coverage.length, 149);
-    assert.equal(incidentData.incidents.length, 37);
-    assert.equal(incidentData.schemaVersion, "2.1");
+    assert.equal(incidentData.incidents.length, 46);
+    assert.equal(incidentData.schemaVersion, "2.2");
     const zenfirst = incidentData.incidents.find(incident => incident.id === "zenfirst-claim-20260917");
     assert.equal(zenfirst.verification, "reported_claim");
     assert.equal(zenfirst.scope, "ecosystem_service");
@@ -99,7 +99,7 @@ try {
 
   const health = await fetch(new URL("/healthz", endpoint));
   assert.equal(health.status, 200);
-  assert.equal((await health.json()).counts.sources, 370);
+  assert.equal((await health.json()).counts.sources, 377);
 
   const missing = await fetch(new URL("/not-found", endpoint));
   assert.equal(missing.status, 404);

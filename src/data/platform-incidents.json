@@ -207,13 +207,13 @@
     "kind": "availability",
     "scope": "pa",
     "title": "Erreurs sur les factures B2B françaises",
-    "summary": "Le 15 septembre, Esker signalait des erreurs sur les factures clients du processus B2B français dans l’environnement G. Le message a disparu de la page lors du relevé du 22 septembre ; aucune annonce de résolution n’a été retrouvée lors du contrôle du 23.",
+    "summary": "Le 15 septembre, Esker signalait des erreurs sur les factures clients du processus B2B français dans l’environnement G. Le message a disparu au relevé du 22 septembre. Le contrôle du 30 laisse la résolution à confirmer auprès de l’éditeur.",
     "status": "unknown",
     "startedAt": null,
     "firstReportedAt": "2026-09-15T08:00:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15T12:15:00Z",
-    "checkedAt": "2026-09-23",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "esker-status-2026-09"
     ],
@@ -478,7 +478,7 @@
     "firstReportedAt": "2026-09-14",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-14",
-    "checkedAt": "2026-09-23",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -486,7 +486,7 @@
     "title": "Welyb / eFacture : connexion des nouveaux dossiers perturbée",
     "summary": "Welyb signale des erreurs lors du raccordement de nouveaux dossiers à eFacture/Cecurity. Un correctif est annoncé en cours de déploiement.",
     "status": "identified",
-    "limitations": "Avis encore affiché parmi les perturbations le 23 septembre. Périmètre : connexion de nouveaux dossiers depuis Welyb vers eFacture. Étendue et durée de la perturbation à préciser."
+    "limitations": "Avis encore affiché parmi les perturbations le 30 septembre. Périmètre : connexion de nouveaux dossiers depuis Welyb vers eFacture. Étendue et durée de la perturbation à préciser."
   },
   {
     "platformSlugs": [
@@ -507,7 +507,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-09-23",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -536,7 +536,7 @@
     "firstReportedAt": "2026-09-15",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15",
-    "checkedAt": "2026-09-23",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "frenchbreaches-welyb-20260915"
     ],
@@ -575,17 +575,17 @@
     "scope": "publisher_service",
     "affectedService": "Paiements et enregistrement des cartes Spendesk en ligne",
     "title": "Paiements et enregistrement des cartes chez plusieurs commerçants",
-    "summary": "Initialement limité à l’ajout de cartes sur Amazon, l’avis couvre désormais plusieurs commerçants en ligne. Spendesk signale des refus lorsque le commerçant ne demande pas d’authentification forte et recommande un nouvel essai avec 3D Secure ou un autre moyen de paiement.",
-    "status": "investigating",
+    "summary": "Spendesk signale des refus de paiements ou d’enregistrement de cartes chez plusieurs commerçants en ligne. Le 28 septembre, l’éditeur annonce un service stabilisé et une cause potentielle identifiée ; la résolution reste sous surveillance.",
+    "status": "monitoring",
     "startedAt": null,
     "firstReportedAt": "2026-09-16T14:52:00Z",
     "resolutionReportedAt": null,
-    "updatedAt": "2026-09-22T10:51:46Z",
-    "checkedAt": "2026-09-23",
+    "updatedAt": "2026-09-28T06:44:19Z",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "spendesk-amazon-20260916-source"
     ],
-    "limitations": "L’investigation reste en cours avec les partenaires bancaires. Cet avis concerne les paiements par carte ; un impact sur les flux PA reste non documenté."
+    "limitations": "La validation de la résolution est toujours en cours lors de la revue du 30 septembre. Le périmètre publié concerne les cartes, avec un impact sur les flux PA non documenté."
   },
   {
     "id": "zenfirst-claim-20260917",
@@ -608,7 +608,7 @@
     "firstReportedAt": "2026-09-17",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-17",
-    "checkedAt": "2026-09-23",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "frenchbreaches-zenfirst-20260917"
     ],
@@ -642,17 +642,17 @@
     "kind": "availability",
     "scope": "pa",
     "title": "Réception de nouvelles factures électroniques françaises interrompue",
-    "summary": "Spendesk indique qu’une mise à jour de la plateforme de son prestataire de facturation a interrompu la livraison de nouvelles factures à certains clients français. La réception a repris ; l’éditeur vérifie encore les éventuelles factures manquantes et leur récupération.",
-    "status": "monitoring",
+    "summary": "Spendesk confirme le rétablissement de la livraison des nouvelles factures électroniques françaises et la réception de toutes les factures concernées. L’éditeur attribue l’interruption à une mise à jour de la plateforme de son prestataire de facturation.",
+    "status": "resolved",
     "startedAt": null,
     "firstReportedAt": "2026-09-22T14:44:00Z",
-    "resolutionReportedAt": null,
-    "updatedAt": "2026-09-22T14:46:10Z",
-    "checkedAt": "2026-09-23",
+    "resolutionReportedAt": "2026-09-23T10:34:08Z",
+    "updatedAt": "2026-09-23T10:34:08Z",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "spendesk-france-20260922-source"
     ],
-    "limitations": "Le prestataire est cité sans être nommé. L’avis reste sous surveillance et ne confirme pas la récupération de toutes les factures. Début réel et volume touché à préciser."
+    "limitations": "Le prestataire reste non nommé. L’éditeur indique environ 18 minutes d’interruption et une reprise à 02 h 56 CEST, sans préciser le jour dans cette phrase. La date de publication du bilan est conservée séparément ; aucune heure de début n’est déduite."
   },
   {
     "id": "spendesk-ios-20260921",
@@ -708,7 +708,7 @@
     "firstReportedAt": "2026-09-21",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-21",
-    "checkedAt": "2026-09-23",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "frenchbreaches-altagem-20260921",
       "cyberattaque-altagem-20260921"
@@ -735,7 +735,7 @@
     "firstReportedAt": "2026-09-19",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-20",
-    "checkedAt": "2026-09-23",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "frenchbreaches-faktus-20260919"
     ],
@@ -754,18 +754,18 @@
     "platformSlugs": [],
     "kind": "availability",
     "scope": "ecosystem_service",
-    "title": "Welyb : clôture des exercices indisponible",
-    "summary": "Welyb signale le 22 septembre que la clôture des exercices est indisponible et qu’un correctif est en cours de déploiement. La suppression des dépôts rapides associés dépend du retour de cette fonction.",
-    "status": "identified",
+    "title": "Welyb : clôture des exercices rétablie",
+    "summary": "Le 24 septembre, Welyb annonce le retour de la clôture des exercices, avec suppression des dépôts rapides associés. Cette fonction était signalée indisponible depuis l’avis du 22.",
+    "status": "resolved",
     "startedAt": null,
     "firstReportedAt": "2026-09-22",
-    "resolutionReportedAt": null,
-    "updatedAt": "2026-09-22",
-    "checkedAt": "2026-09-23",
+    "resolutionReportedAt": "2026-09-24",
+    "updatedAt": "2026-09-24",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "welyb-status-20260916"
     ],
-    "limitations": "L’avis concerne une fonction de gestion dans Welyb. L’impact sur les échanges de factures d’une PA reste non documenté.",
+    "limitations": "Avis sur une fonction de gestion de Welyb. La source indique les jours des notifications ; les heures de début et de rétablissement restent inconnues.",
     "affectedService": "Welyb / Portail AGIRIS CONNECT"
   },
   {
@@ -780,11 +780,199 @@
     "firstReportedAt": "2026-09-16",
     "resolutionReportedAt": "2026-09-22",
     "updatedAt": "2026-09-22",
-    "checkedAt": "2026-09-23",
+    "checkedAt": "2026-09-30",
     "sourceIds": [
       "welyb-status-20260916"
     ],
     "limitations": "Avis publié par Welyb sur une connexion applicative. La fin du rattrapage et un éventuel impact sur des flux PA restent à préciser.",
     "affectedService": "Connexion Bobbee vers Welyb / PAC"
+  },
+  {
+    "id": "pennylane-application-20260925",
+    "platformSlugs": [
+      "pennylane"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Pennylane : erreurs dans l’application, service rétabli",
+    "summary": "Pennylane signale une instabilité provoquant des erreurs lors de l’utilisation de l’application le 25 septembre, puis publie une résolution le même jour.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-25T14:25:00Z",
+    "resolutionReportedAt": "2026-09-25T15:02:06Z",
+    "updatedAt": "2026-09-25T15:02:06Z",
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "pennylane-incident-s9lkgtlw03s2"
+    ],
+    "limitations": "La source porte sur l’application. Le début réel et l’impact sur les échanges de factures de la PA restent à préciser."
+  },
+  {
+    "id": "weproc-piste-20260925",
+    "platformSlugs": [
+      "weproc"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "title": "WeInvoice : appels à l’annuaire PISTE perturbés",
+    "summary": "WeInvoice signale des échecs sur ses appels à l’annuaire PISTE, puis un retour à la normale le 25 septembre. Son alerte distingue ces erreurs des refus causés par son propre mécanisme de limitation des requêtes.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-25T13:28:00Z",
+    "resolutionReportedAt": "2026-09-25T15:13:28Z",
+    "updatedAt": "2026-09-25T15:13:28Z",
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "weproc-incident-1073900"
+    ],
+    "limitations": "L’attribution à PISTE ou au réseau provient de WeInvoice. Une confirmation directe de l’AIFE reste à obtenir. Les dates des notifications ne mesurent pas la durée de panne."
+  },
+  {
+    "id": "lucca-applications-20260928",
+    "platformSlugs": [
+      "lucca"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Lucca : certaines applications perturbées puis rétablies",
+    "summary": "Lucca signale un service dégradé sur certaines applications le 28 septembre. Un correctif est placé sous surveillance, puis l’incident est déclaré résolu.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-28T07:14:00Z",
+    "resolutionReportedAt": "2026-09-28T10:02:49Z",
+    "updatedAt": "2026-09-28T10:02:49Z",
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "lucca-incident-nfx98d4xggmb"
+    ],
+    "limitations": "Les applications et clients touchés sont peu détaillés. L’avis ne précise pas d’impact sur les flux de la PA."
+  },
+  {
+    "id": "sage-identity-20260928",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Sage Identity : connexion à plusieurs produits perturbée",
+    "summary": "Sage annonce des difficultés d’authentification à plusieurs produits dans différentes régions, dont l’Europe. Le service est annoncé rétabli après une phase de surveillance le 28 septembre.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-28T07:59:00Z",
+    "resolutionReportedAt": "2026-09-28T12:03:30Z",
+    "updatedAt": "2026-09-28T12:03:30Z",
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "sage-incident-mc2p8blsm281"
+    ],
+    "limitations": "L’avis concerne des services applicatifs et d’authentification. La PA française et ses échanges de factures ne sont pas cités. Un éventuel lien avec l’avis Sage Connect reste à établir."
+  },
+  {
+    "id": "sage-connect-20260928",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Sage Connect : chargement du portail rétabli",
+    "summary": "Sage indique qu’une erreur empêchait le chargement de Sage Connect dans les régions concernées, dont l’Europe. L’unique notification visible annonce le rétablissement le 28 septembre.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-28T10:10:08Z",
+    "resolutionReportedAt": "2026-09-28T10:10:08Z",
+    "updatedAt": "2026-09-28T10:10:08Z",
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "sage-incident-4r3t9stk544k"
+    ],
+    "limitations": "La source situe le problème plus tôt le même jour, sans heure de début publiée. L’impact sur les flux PA et le lien éventuel avec l’incident Sage Identity restent à préciser."
+  },
+  {
+    "id": "spendesk-login-20260929",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Spendesk : connexion à l’application rétablie",
+    "summary": "Spendesk signale des utilisateurs bloqués à la connexion le 29 septembre. Un retour à la version précédente rétablit l’accès. Le bilan du 30 situe le rétablissement complet au 29 à 18 h 49 CEST.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-29T15:57:00Z",
+    "resolutionReportedAt": "2026-09-30T07:17:30Z",
+    "updatedAt": "2026-09-30T07:17:30Z",
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "spendesk-incident-qs6rjc37fr6l"
+    ],
+    "limitations": "L’éditeur évoque environ 59 minutes d’interruption ; le début réel reste non daté. La date de publication de la résolution est distincte du rétablissement décrit. Impact sur les échanges PA non précisé."
+  },
+  {
+    "id": "esker-documents-j-20260929",
+    "platformSlugs": [
+      "esker"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Esker : traitement de documents perturbé dans l’environnement J",
+    "summary": "Esker signale le 29 septembre un problème de traitement de certains documents dans l’environnement J, encore en investigation lors de sa mise à jour à 21 h 38 UTC. Le message est présent dans la collecte du 30 à 12 h 43 UTC, puis absent lors de la lecture du soir.",
+    "status": "unknown",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-29T19:54:00Z",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-29T21:38:00Z",
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "esker-status-2026-09"
+    ],
+    "limitations": "Le service concerné est Esker on Demand. Le périmètre français de la PA reste non précisé. La disparition du message laisse la résolution et sa date à confirmer.",
+    "affectedService": "Esker on Demand, environnement J"
+  },
+  {
+    "id": "welyb-envois-20260925",
+    "platformSlugs": [],
+    "kind": "availability",
+    "scope": "ecosystem_service",
+    "title": "Welyb : transmission de documents aux outils tiers perturbée",
+    "summary": "Welyb signale le 25 septembre que des documents reçus par e-mails de collecte ou certaines connexions cessent d’être transmis aux outils tiers. Un correctif et un rattrapage sont annoncés.",
+    "status": "identified",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-25",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-09-25",
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "welyb-status-20260916"
+    ],
+    "limitations": "Avis encore ouvert le 30 septembre. Qonto et Dematbox sont cités comme connexions d’entrée ; cette mention ne leur attribue pas la panne. Le périmètre de l’avis reste celui de Welyb.",
+    "affectedService": "Welyb, envoi vers les applications tierces"
+  },
+  {
+    "id": "welyb-jefacture-statuts-20260930",
+    "platformSlugs": [
+      "jefacture"
+    ],
+    "kind": "availability",
+    "scope": "connected_service",
+    "title": "Welyb / jefacture.com : modification des statuts perturbée",
+    "summary": "Welyb signale des difficultés pour modifier depuis son interface le statut de factures connectées à jefacture.com. Le contournement publié consiste à modifier le statut dans jefacture.com, puis à le retrouver dans Welyb.",
+    "status": "unknown",
+    "startedAt": null,
+    "firstReportedAt": null,
+    "resolutionReportedAt": null,
+    "updatedAt": null,
+    "checkedAt": "2026-09-30",
+    "sourceIds": [
+      "welyb-status-20260916"
+    ],
+    "limitations": "Avis sans date propre, observé le 30 septembre et absent de la copie du 23. La date générale de mise à jour de la page ne date pas cet incident. Le dysfonctionnement signalé concerne le sens Welyb vers jefacture.com.",
+    "affectedService": "Welyb ↔ jefacture.com",
+    "firstObservedAt": "2026-09-30",
+    "relationship": {
+      "note": "La page d’état Welyb décrit explicitement la connexion à jefacture.com et le contournement fonctionnel dans la PA. Cette attribution porte sur le service connecté.",
+      "sourceIds": [
+        "welyb-status-20260916"
+      ]
+    }
   }
 ]
