@@ -3016,11 +3016,27 @@
     "accessedAt": "2026-09-30"
   },
   {
-    "id": "vosfactures-security-review-20261001",
-    "title": "VosFactures : page publique de sécurité, revue ciblée du 1er octobre",
-    "publisher": "VosFactures / FACTUALI",
-    "url": "https://vosfactures.fr/securite",
+    "id": "fakturownia-security-20260929",
+    "title": "Fakturownia : communiqué officiel du 29 septembre sur l’accès non autorisé",
+    "publisher": "Fakturownia",
+    "url": "https://fakturownia.pl/incydent",
     "type": "security",
+    "accessedAt": "2026-10-01"
+  },
+  {
+    "id": "factuali-notification-relayed-20261001",
+    "title": "Notification Factuali / VosFactures : capture publiée par Fuites Infos",
+    "publisher": "Factuali, notification reproduite par Fuites Infos",
+    "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+    "type": "press",
+    "accessedAt": "2026-10-01"
+  },
+  {
+    "id": "fuitesinfos-vosfactures-20261001",
+    "title": "VosFactures : cyberattaque chez le prestataire Fakturownia et notification aux utilisateurs",
+    "publisher": "Fuites Infos / Christophe Boutry",
+    "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+    "type": "press",
     "accessedAt": "2026-10-01"
   }
 ]

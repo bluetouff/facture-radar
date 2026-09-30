@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-10-01",
+  "timezone": "Europe/Paris",
+  "incidentId": "vosfactures-fakturownia-20260929",
+  "discovery": "Captures utilisateur de la publication Christophe Boutry, puis lecture de la publication et de ses sources dans le navigateur.",
+  "publicPost": "https://x.com/Ced_haurus/status/2105427903869571180",
+  "sources": [
+    {
+      "url": "https://fakturownia.pl/incydent",
+      "kind": "provider_primary_notice",
+      "httpStatus": 200,
+      "sha256": "132c0a3b127c7ed47a80d829247a4ea5884ce97973694f8618ded590cb4a6938",
+      "publishedDate": "2026-09-29",
+      "detectionDate": "2026-09-28",
+      "scope": "Fakturownia. Le communiqué ne cite pas VosFactures ; ses catégories de données et bornes historiques restent propres à son service."
+    },
+    {
+      "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "kind": "publisher_notification_reproduced_by_press",
+      "readMethod": "Lecture visuelle dans le navigateur, image 866 × 919",
+      "notifiedPublisherDate": "2026-09-29",
+      "originalPublicationDate": null,
+      "scope": "Factuali confirme un accès non autorisé à certaines données VosFactures traitées par Fakturownia et distingue son environnement de facturation électronique."
+    },
+    {
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "kind": "press",
+      "readMethod": "Navigateur, texte de l’article et liens de sources",
+      "publishedDate": "2026-10-01",
+      "scope": "Complément français et courriel annonçant la rotation des codes API le 1er octobre. Exécution technique non contrôlée."
+    }
+  ],
+  "decision": {
+    "publish": true,
+    "verification": "relayed_notice",
+    "scope": "upstream",
+    "platformSlugs": [
+      "vosfactures"
+    ],
+    "resolutionAnnounced": false
+  },
+  "unknowns": [
+    "Date de début de l’accès",
+    "Date d’affichage initial de la notification Factuali",
+    "Volume et détails des données françaises",
+    "Extraction effective des données VosFactures",
+    "Clôture des investigations"
+  ]
+}

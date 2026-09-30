@@ -12,6 +12,34 @@ import { researchForPlatform } from "../src/data/platform-research.ts";
 import { matchPlatform } from "../src/lib/matcher.ts";
 import { formatIncidentDate, incidentDateAfter } from "../src/lib/incident-dates.ts";
 
+test("VosFactures : la notification relayée reste attribuée au prestataire", () => {
+  const watch = incidentsForPlatform("vosfactures");
+  assert.equal(watch.feeds.length, 0);
+  assert.equal(watch.incidents.length, 1);
+  const event = watch.incidents[0]!;
+  assert.equal(event.kind, "security");
+  assert.equal(event.scope, "upstream");
+  assert.equal(event.verification, "relayed_notice");
+  assert.equal(event.status, "investigating");
+  assert.equal(event.startedAt, null);
+  assert.equal(event.detectedAt, "2026-09-28");
+  assert.equal(event.firstReportedAt, "2026-10-01");
+  assert.equal(event.resolutionReportedAt, null);
+  assert.match(event.affectedService!, /VosFactures.*Fakturownia/);
+  assert.match(event.summary, /Factuali déclare épargnés les services de facturation électronique/);
+  assert.match(event.summary, /invalidation des codes API est annoncée pour le 1er octobre/);
+  assert.match(event.limitations, /bornes historiques des données polonaises/);
+  assert.equal(platformIncidents.filter(item => item.scope === "pa").length, 9);
+  assert.throws(() => validateIncidents([{ ...event, verification: "primary_notice" }]));
+  for (const id of event.sourceIds) assert.ok(incidentWatchCorpus().sources.some(source => source.id === id));
+  assert.deepEqual(getPlatform("vosfactures")!.incidentWatch.incidents, watch.incidents);
+  const rss = renderIncidentRss([event]);
+  assert.match(rss, /Notification relayée/);
+  assert.match(rss, /Dépendance externe/);
+  assert.match(rss, /Factuali déclare épargnés/);
+  assert.ok(!rss.includes("<pubDate>"));
+});
+
 test("les avis manuels sont publiés pour Cecurity malgré l’absence de flux", () => {
   const watch = incidentsForPlatform("cecurity");
   assert.equal(watch.feeds.length, 0);
@@ -57,7 +85,7 @@ test("dates au jour près, détection et résolution sans date restent fidèles 
 });
 
 test("les avis distinguent PA, application et dépendance sans durée inventée", () => {
-  assert.equal(platformIncidents.length, 46);
+  assert.equal(platformIncidents.length, 47);
   assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 9);
   assert.equal(platformIncidents.find(event => event.id === "esker-french-b2b-20260915")!.status, "unknown");
   assert.equal(incidentsForPlatform("pennylane").incidents[0]!.scope, "publisher_service");
@@ -182,7 +210,7 @@ test("une mise à jour est détectée sans répéter un avis inchangé", () => {
 });
 test("API et MCP présentent incidents, couverture et mêmes sources", () => {
   const result = getResourceByUri("pacheck://corpus/incidents", {revision:"test",builtAt:"2026-09-16"}) as ReturnType<typeof incidentWatchCorpus>;
-  assert.equal(result.incidents.length, 46);
+  assert.equal(result.incidents.length, 47);
   assert.deepEqual(getPlatform("esker")!.incidentWatch.incidents, incidentsForPlatform("esker").incidents);
 });
 
@@ -261,7 +289,7 @@ test("chaque PA a une recherche datée ; collecte et incidents restent distincts
   assert.equal(incidentsForPlatform("abby").security.status, "public_search_completed");
   assert.equal(incidentsForPlatform("weproc").incidents.length, 3);
   assert.equal(incidentsForPlatform("spendesk").incidents.filter(event => event.scope === "pa").length, 2);
-  assert.equal(platformIncidents.filter(event => event.kind === "security").length, 4);
+  assert.equal(platformIncidents.filter(event => event.kind === "security").length, 5);
   assert.ok(incidentWatchCorpus().securityReview.findings.every(finding => ["outside_period", "vulnerability_advisory"].includes(finding.type)));
 });
 

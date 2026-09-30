@@ -974,5 +974,30 @@
         "welyb-status-20260916"
       ]
     }
+  },
+  {
+    "id": "vosfactures-fakturownia-20260929",
+    "platformSlugs": [
+      "vosfactures"
+    ],
+    "kind": "security",
+    "scope": "upstream",
+    "verification": "relayed_notice",
+    "affectedService": "Données du logiciel VosFactures traitées par Fakturownia",
+    "title": "VosFactures : accès non autorisé à des données chez Fakturownia",
+    "summary": "Factuali, informée le 29 septembre, confirme un accès non autorisé à des données de comptes VosFactures, de clients et fournisseurs et à une partie des documents chez son prestataire Fakturownia. Sa notification, reproduite par Fuites Infos, décrit une faille de génération PDF donnant accès à des clés techniques puis à une copie de la base de production. Factuali déclare épargnés les services de facturation électronique directement opérés dans son propre environnement et les données de cartes de paiement. L’invalidation des codes API est annoncée pour le 1er octobre ; les intégrations nécessitent de nouveaux codes.",
+    "status": "investigating",
+    "startedAt": null,
+    "detectedAt": "2026-09-28",
+    "firstReportedAt": "2026-10-01",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-10-01",
+    "checkedAt": "2026-10-01",
+    "sourceIds": [
+      "factuali-notification-relayed-20261001",
+      "fuitesinfos-vosfactures-20261001",
+      "fakturownia-security-20260929"
+    ],
+    "limitations": "La détection du 28 septembre est celle du prestataire ; le 29 correspond à l’information de Factuali. Le début de l’intrusion, le volume et le détail des données françaises ainsi que leur extraction effective restent à préciser. Les bornes historiques des données polonaises ne sont pas transposées à VosFactures. Fakturownia poursuit ses investigations."
   }
 ]

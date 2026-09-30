@@ -1032,7 +1032,7 @@
     "checkedAt": "2026-10-01",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche ciblée du 1er octobre : page de sécurité, aide et blog de VosFactures consultés, puis recherche nominative dans FrenchBreaches. Ces pages présentent des dispositifs de protection et des conseils ; la recherche reste sans notification datée exploitable sur la période. L’historique des incidents et les éventuels avis envoyés aux clients restent à documenter."
+    "note": "Notification Factuali retrouvée le 1er octobre dans la capture publiée par Fuites Infos, puis recoupée avec le communiqué officiel de Fakturownia du 29 septembre. Un avis de sécurité est publié pour les données VosFactures traitées chez ce prestataire. Factuali déclare épargnés les services de facturation électronique opérés dans son propre environnement."
   },
   {
     "platformSlug": "voxel",
