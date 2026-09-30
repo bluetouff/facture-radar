@@ -1,6 +1,6 @@
 # Veille publique des incidents PA
 
-Revue du 30 septembre 2026. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
+Revue du 30 septembre 2026, complétée le 1er octobre pour VosFactures. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
 
 ## Recherche initiale et publications
 
@@ -80,3 +80,7 @@ Voir `docs/revue-pa-2026-09-23.md` : annuaire stable, contact Shine corrigé, hu
 ## Actualisation du 30 septembre
 
 Voir `docs/revue-pa-2026-09-30.md` : listes DGFiP inchangées, neuf avis ajoutés, résolutions Spendesk et Welyb intégrées. Le corpus comporte 46 avis. La date de première observation permet de présenter l’avis Welyb/jefacture.com sans lui inventer une date de publication. La revue de sécurité reste ciblée et conserve les qualifications précédentes.
+
+## Complément du 1er octobre
+
+Voir `docs/revue-vosfactures-2026-10-01.md`. La recherche VosFactures est datée et sourcée ; la notification originale reste à obtenir. Le corpus conserve 46 avis. Les autres plateformes gardent leurs dates de contrôle propres.

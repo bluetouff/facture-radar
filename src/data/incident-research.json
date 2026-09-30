@@ -1029,10 +1029,10 @@
   },
   {
     "platformSlug": "vosfactures",
-    "checkedAt": "2026-09-20",
+    "checkedAt": "2026-10-01",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative publique du 20 septembre sur les incidents depuis le 1er septembre, complétée par les sources déjà identifiées. Les résultats pertinents sont recoupés avant publication. Les notifications privées restent hors du périmètre."
+    "note": "Recherche ciblée du 1er octobre : page de sécurité, aide et blog de VosFactures consultés, puis recherche nominative dans FrenchBreaches. Ces pages présentent des dispositifs de protection et des conseils ; la recherche reste sans notification datée exploitable sur la période. L’historique des incidents et les éventuels avis envoyés aux clients restent à documenter."
   },
   {
     "platformSlug": "voxel",

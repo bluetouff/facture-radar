@@ -7,7 +7,7 @@ import rawResearch from "./incident-research.json" with { type: "json" };
 import { incidentDateAfter } from "../lib/incident-dates.ts";
 
 export const INCIDENT_WATCH_SINCE = "2026-09-01";
-export const INCIDENT_WATCH_CHECKED_AT = "2026-09-30";
+export const INCIDENT_WATCH_CHECKED_AT = "2026-10-01";
 const timestamp = z.union([z.iso.datetime({ offset: true }), z.iso.date()]);
 export const incidentSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
@@ -141,11 +141,11 @@ export const incidentCoverage = [
 ];
 export const incidentWatchLimit = "Ce journal réunit les avis des éditeurs, les notifications relayées et les revendications à confirmer. Chaque signalement précise son niveau de confirmation et le service concerné. Certains avis se recoupent. La couverture reste partielle ; l’évaluation de la disponibilité et de la sécurité exige aussi des mesures techniques et des audits.";
 export const securityReview = {
-  checkedAt: "2026-09-30",
+  checkedAt: "2026-10-01",
   status: "public_search_completed" as const,
   platformCount: incidentResearch.length,
-  note: "Revue ciblée du 30 septembre : flux CERT-FR, recherches publiques et relecture des quatre signalements Welyb / AGIRIS CONNECT, Zenfirst, Altagem et Faktus. Les éléments consultés conservent leurs qualifications précédentes. Aucun nouvel avis de sécurité suffisamment documenté pour ce journal n’a été retenu. La recherche nominative des 149 PA reste datée du 20 septembre ; cette actualisation ne couvre pas les notifications privées.",
-  sourceIds: ["cert-fr-sap-20260908", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration", "frenchbreaches-zenfirst-20260917", "zenfirst-integration-20260920", "frenchbreaches-altagem-20260921", "altagem-iopole-integration-20260923", "frenchbreaches-faktus-20260919", "faktus-financement-20260923"],
+  note: "Complément du 1er octobre limité à VosFactures : pages publiques et aide consultées, recherche nominative dans FrenchBreaches. La notification nécessaire pour documenter un incident reste à obtenir. La revue du 30 septembre conserve les qualifications des quatre signalements Welyb / AGIRIS CONNECT, Zenfirst, Altagem et Faktus. La recherche nominative des 149 PA date du 20 septembre. Les notifications privées restent hors du périmètre.",
+  sourceIds: ["vosfactures-security-review-20261001", "cert-fr-sap-20260908", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration", "frenchbreaches-zenfirst-20260917", "zenfirst-integration-20260920", "frenchbreaches-altagem-20260921", "altagem-iopole-integration-20260923", "frenchbreaches-faktus-20260919", "faktus-financement-20260923"],
   findings: [
     { platformSlug: "sap", type: "vulnerability_advisory" as const, title: "SAP : bulletin de correctifs du 8 septembre", note: "Le CERT-FR recense des vulnérabilités dans plusieurs produits SAP. Ce bulletin appelle une vérification des produits et versions utilisés ; il décrit des failles logicielles, sans signaler de compromission d’une PA.", sourceIds: ["cert-fr-sap-20260908"] },
     { platformSlug: "blg", type: "outside_period" as const, title: "blgCloud : notification antérieure à la période", note: "La notification officielle du 10 août décrit une attaque de juillet. Elle est conservée comme contexte et exclue du compteur des incidents de septembre. Les nouvelles mentions de presse demandent un recoupement.", sourceIds: ["blg-security-20260810"] },

@@ -3014,5 +3014,13 @@
     "url": "https://status.spendesk.com/incidents/qs6rjc37fr6l",
     "type": "documentation",
     "accessedAt": "2026-09-30"
+  },
+  {
+    "id": "vosfactures-security-review-20261001",
+    "title": "VosFactures : page publique de sécurité, revue ciblée du 1er octobre",
+    "publisher": "VosFactures / FACTUALI",
+    "url": "https://vosfactures.fr/securite",
+    "type": "security",
+    "accessedAt": "2026-10-01"
   }
 ]

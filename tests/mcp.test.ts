@@ -108,7 +108,7 @@ test("le manifeste et les ressources couvrent tout le corpus public", () => {
     journeys: 149,
     invoiceRoutes: 6,
     directRoutingOptions: 3,
-    sources: 377,
+    sources: 378,
     incidentNotices: 46,
     observedPublicSites: 11,
   });
