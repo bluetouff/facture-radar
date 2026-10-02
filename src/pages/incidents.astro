@@ -9,6 +9,8 @@ import { formatIncidentDate } from "../lib/incident-dates";
 const watch = incidentWatchCorpus();
 const relayedCount = watch.incidents.filter(event => event.verification === "relayed_notice").length;
 const claimCount = watch.incidents.filter(event => event.verification === "reported_claim").length;
+const availabilityCount = watch.incidents.filter(event => event.kind === "availability").length;
+const securityCount = watch.incidents.filter(event => event.kind === "security").length;
 const reviewed = watch.coverage.filter(item => item.status !== "not_reviewed");
 const open = watch.incidents.filter(event => event.status !== "resolved");
 const resolved = watch.incidents.filter(event => event.status === "resolved");
@@ -39,7 +41,17 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
     <div><span class="metric-icon"><InterfaceIcon name="search" /></span><strong>{watch.research.length}</strong><span>PA recherchées<small><a href="#recherche">{reviewed.length} sources de disponibilité relues ↗</a></small></span></div>
   </section>
   <section class="shell watch-journal" id="journal" aria-labelledby="journal-title">
-    <div class="section-head"><div><span class="mono-label">Le journal des incidents</span><h2 id="journal-title" tabindex="-1">Les derniers avis.</h2></div><a href="/api/incidents.json"><InterfaceIcon name="download" /> Données et sources JSON</a></div>
+    <div class="section-head journal-head">
+      <div><span class="mono-label">Le journal des incidents</span><h2 id="journal-title" tabindex="-1">Les derniers avis.</h2></div>
+      <div class="journal-counts">
+        <dl class="kind-counts" aria-label="Avis par nature pour la sélection" aria-describedby="kind-count-note" aria-live="polite" aria-atomic="true">
+          <div class="kind-counter availability-counter"><dt><InterfaceIcon name="route" /> Disponibilité</dt><dd><strong data-incident-kind-count="availability">{availabilityCount}</strong><span>avis</span><InterfaceIcon name="route" class="counter-emblem" /></dd></div>
+          <div class="kind-counter security-counter"><dt><InterfaceIcon name="lock" /> Sécurité</dt><dd><strong data-incident-kind-count="security">{securityCount}</strong><span>avis</span><InterfaceIcon name="lock" class="counter-emblem" /></dd></div>
+        </dl>
+        <p id="kind-count-note">Avis publiés, selon les filtres.</p>
+      </div>
+      <a href="/api/incidents.json"><InterfaceIcon name="download" /> Données et sources JSON</a>
+    </div>
     <form class="watch-filters" id="watch-filters" hidden>
       <label>Plateforme<select name="plateforme"><option value="">Toutes les plateformes</option>{platforms.map(platform => <option value={platform.slug}>{platform.displayName}</option>)}</select></label>
       <label>Nature<select name="nature"><option value="">Toutes</option><option value="availability">Disponibilité</option><option value="security">Sécurité</option></select></label>
@@ -131,6 +143,18 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   .section-head { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1.3rem; }
   .section-head > a { display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; color: var(--signal); margin-bottom: .9rem; }
   .section-head > p { font-size: .8rem; color: var(--muted); line-height: 1.7; }
+  .journal-head { display: grid; grid-template-columns: minmax(14rem, 1fr) minmax(20rem, 1fr) auto; align-items: center; gap: 1.75rem; }
+  .kind-counts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: 0; padding: 0; background: none; }
+  .kind-counter { position: relative; isolation: isolate; overflow: hidden; min-width: 0; padding: .9rem 1.1rem; border: 1px solid #4b675b; border-radius: .75rem; background: linear-gradient(135deg, #34574a, #233a31); color: #fff8ec; box-shadow: 0 .6rem 1.2rem -.9rem #233a3180, inset 0 1px 0 #ffffff12; }
+  .security-counter { border-color: #a1593e; background: linear-gradient(135deg, #a5482f, #713424); box-shadow: 0 .6rem 1.2rem -.9rem #71342480, inset 0 1px 0 #ffffff12; }
+  .kind-counter::before { content: ""; position: absolute; z-index: -1; width: 8rem; height: 8rem; top: -4.4rem; right: -2rem; border: 1px solid #ffffff18; border-radius: 50%; box-shadow: 0 0 0 1rem #ffffff04, 0 0 0 2rem #ffffff03; pointer-events: none; }
+  .kind-counter dt { display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: inherit; }
+  .kind-counter dt :global(svg) { width: 1.1rem; height: 1.1rem; flex: none; }
+  .kind-counter dd { display: flex; align-items: baseline; gap: .5rem; margin: .35rem 0 0; color: inherit; }
+  .kind-counter strong { font-family: var(--font-title); font-size: 3.1rem; font-weight: 400; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .kind-counter dd span { font-size: .75rem; opacity: .85; }
+  .kind-counter :global(.counter-emblem) { position: absolute; z-index: -1; right: .7rem; bottom: .5rem; width: 3.6rem; height: 3.6rem; stroke-width: 1; opacity: .17; pointer-events: none; }
+  #kind-count-note { margin: .4rem 0 0; color: var(--muted); font-size: .65rem; text-align: center; }
   .watch-filters { display: grid; grid-template-columns: 1.1fr .8fr 1fr 1fr auto; gap: .75rem; align-items: end; padding: 1rem; background: #eae5da; border: 1px solid var(--line); border-radius: .65rem; }
   label { display: grid; gap: .4rem; font-size: .73rem; color: var(--bright); }
   select { width: 100%; min-width: 0; max-width: 100%; background: #fffcf5; color: var(--bright); border: 1px solid #c9c5b9; border-radius: .35rem; padding: .8rem .5rem; font-size: .8rem; }
@@ -198,4 +222,7 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   @media(max-width: 1000px) { .watch-filters { grid-template-columns: 1fr 1fr; } .watch-filters button { justify-self: start; } .watch-metrics > div { flex-wrap: wrap; gap: .6rem; } .watch-metrics > div > span:last-child { flex-basis: 100%; } .coverage-list { gap: .7rem; } .source-card { padding: 1rem; } }
   @media(max-width: 760px) { .watch-cover, .watch-method { grid-template-columns: 1fr; gap: 2rem; } .watch-cover { padding-top: 2.5rem; } .watch-metrics { grid-template-columns: 1fr; } .watch-metrics > div { flex-wrap: nowrap; padding: .85rem 0; } .watch-metrics > div > span:last-child { flex-basis: auto; } .metric-icon { width: 2.4rem; height: 2.4rem; } .watch-metrics > div + div { border-top: 1px solid var(--line); } .section-head { display: block; } .section-head > a { margin-top: .5rem; } .coverage-list { grid-template-columns: 1fr; } .watch-journal, .watch-sources { padding-block: 2rem; } .security-note { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 2rem; } .incident-card { grid-template-columns: 1fr; } .incident-date { display: flex; gap: 1rem; justify-content: space-between; align-items: center; padding: .65rem 1rem; border-right: 0; border-bottom: 1px solid var(--line); text-align: left; } .incident-date time { display: flex; align-items: baseline; gap: .4rem; } .incident-date strong { font-size: 1.1rem; } .incident-date > span { margin: 0; } .incident-content { padding: 1rem 1rem 0; } .incident-tags { justify-content: start; } dl { grid-template-columns: 1fr; gap: .8rem; } .event-sources small { width: 100%; margin-left: 0; } }
   @media(max-width: 380px) { .watch-filters { grid-template-columns: 1fr; } .watch-board { padding: 1.1rem; } .board-counts > div + div { padding-left: .9rem; } }
+  @media(max-width: 1000px) { .journal-head { grid-template-columns: minmax(0, 1fr) auto; } .journal-counts { grid-column: 1 / -1; grid-row: 2; } .journal-head > a { grid-column: 2; grid-row: 1; } }
+  @media(max-width: 760px) { .journal-head { display: flex; flex-direction: column; align-items: stretch; gap: 1rem; } .journal-head > a { width: fit-content; margin: 0; } .kind-counter { padding: .85rem; } }
+  @media(max-width: 380px) { .kind-counter { padding: .75rem; } .kind-counter dt { font-size: .72rem; } }
 </style>

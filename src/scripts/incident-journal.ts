@@ -5,6 +5,7 @@ const cards = [...document.querySelectorAll<HTMLElement>(".incident-card")];
 const sources = [...document.querySelectorAll<HTMLElement>(".source-card")];
 const coverage = document.querySelector<HTMLElement>("#filter-coverage")!;
 const coverageNotes = [...document.querySelectorAll<HTMLElement>("#coverage-data [data-slug]")];
+const kindCounts = [...document.querySelectorAll<HTMLElement>("[data-incident-kind-count]")];
 const filters = ["plateforme", "nature", "perimetre", "statut"] as const;
 const inputs = filters.map(key => form.elements.namedItem(key) as HTMLSelectElement);
 const incidentNav = document.querySelector<HTMLElement>("#incident-pagination")!;
@@ -48,6 +49,9 @@ function updateNav(nav: HTMLElement, page: number, pages: number, total: number)
 }
 function render() {
   const selected = cards.filter(matches);
+  kindCounts.forEach(counter => {
+    counter.textContent = String(selected.filter(card => card.dataset.kind === counter.dataset.incidentKindCount).length);
+  });
   const incidents = paginate(selected, incidentPage, incidentPageSize);
   const publications = paginate(sources, sourcePage, sourcePageSize);
   incidentPage = incidents.page;
