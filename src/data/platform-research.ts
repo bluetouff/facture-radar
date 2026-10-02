@@ -44,7 +44,7 @@ type ResearchOverride = Partial<Omit<PlatformResearchProfile, "platformSlug" | "
 const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
   abby: {
     availability: {
-      sendsInvoices: documented({ stage: "announced", scope: "Émission électronique depuis Abby" }, ["abby-emission-20260920"], "L’aide annonce septembre 2027 et précise que la fonction reste indisponible lors de la consultation.", "2026-09-20"),
+      sendsInvoices: documented({ stage: "announced", scope: "Émission électronique depuis Abby" }, ["abby-emission-20260920"], "L’aide annonce septembre 2027 et précise que la fonction reste indisponible lors de la consultation.", "2026-10-02"),
       receivesInvoices: available("Offre de facturation électronique Abby", ["abby-electronic-invoicing-2026"]),
       eReporting: declared({ stage: "announced", scope: "Offre de facturation électronique Abby" }, ["abby-electronic-invoicing-2026"], "La documentation commerciale annonce le service. Sa disponibilité en production au 20 septembre reste à confirmer séparément de l’émission.", "2026-09-20"),
     },
@@ -123,6 +123,22 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
     }, ["fiducial-pricing-2026"], "Un export des données financières est publié, sans inventaire complet des fichiers remis au départ."),
     terminationTerms: documented("Abonnement mensuel sans engagement, reconduit tacitement chaque mois et résiliable à tout moment.", ["fiducial-pricing-2026"]),
   },
+  flowie: {
+    hostingProviders: declared(["S3NS"], ["flowie-security-20261002"], "Flowie déclare un site primaire à Paris et une reprise d’activité en Belgique. Les lieux et conditions des traitements chez les autres sous-traitants restent à contrôler dans le contrat.", "2026-10-02"),
+    iso27001Scope: declared<Iso27001ScopeDetail>({
+      evidenceKind: "renewal_statement",
+      legalEntity: null,
+      standard: "ISO/IEC 27001:2022",
+      certificateNumber: "122245",
+      certificationBody: "Prescient Security LLC",
+      validFrom: null,
+      validUntil: null,
+      statementOfApplicability: null,
+      scopeText: null,
+      platformRelation: "not_established",
+      validity: "not_published",
+    }, ["flowie-security-20261002"], "La page mentionne un renouvellement en cours et publie le numéro 122245 tout en renvoyant le certificat courant sous NDA. Dates, titulaire et périmètre certifié restent à vérifier sur le document. Ses déclarations sur la résidence UE et les transferts des sous-traitants demandent un recoupement contractuel.", "2026-10-02"),
+  },
   fulll: {
     availability: {
       sendsInvoices: available("Conformité Flash et environnement fulll", ["fulll-pa-2026"]),
@@ -153,13 +169,13 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       standard: "ISO/IEC 27001:2022",
       certificateNumber: "IS 786660",
       certificationBody: "BSI",
-      validFrom: "2024-09-10",
-      validUntil: "2026-09-19",
-      statementOfApplicability: "DDA v1.2 du 25 février 2025",
+      validFrom: "2026-09-20",
+      validUntil: "2029-09-19",
+      statementOfApplicability: "DDA v2.0 du 24 juin 2026",
       scopeText: "Services SaaS de production comptable et de gestion financière, sans exclusions.",
       platformRelation: "service_family",
-      validity: "expired",
-    }, ["pennylane-iso27001-2026-09", "pennylane-security-20260920"], "Le certificat public est arrivé à échéance le 19 septembre. La page sécurité continue de revendiquer une certification ; le document renouvelé reste à obtenir. Ce constat porte sur le PDF disponible, pas sur une décision de retrait de certification.", "2026-09-20"),
+      validity: "valid",
+    }, ["pennylane-iso27001-20261002", "pennylane-iso27001-2026-09", "pennylane-security-20260920"], "Le PDF renouvelé, émis le 23 juillet 2026, remplace le document précédemment arrivé à échéance. Le certificat couvre le SMSI des activités SaaS ; sa portée reste distincte d’une certification de produit PA.", "2026-10-02"),
     availability: {
       sendsInvoices: available("Offre gratuite micro-entreprise et offres Pennylane", ["pennylane-free-2026"]),
       receivesInvoices: available("Offre gratuite micro-entreprise et offres Pennylane", ["pennylane-free-2026"]),

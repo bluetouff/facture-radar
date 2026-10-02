@@ -1,0 +1,988 @@
+{
+  "checkedAt": "2026-10-02",
+  "since": "2026-09-01",
+  "platformCount": 149,
+  "method": "Recherche nominative dans les résultats publics indexés, par groupes de quatre requêtes indépendantes. Les pistes pertinentes sont relues dans les avis des auteurs avant publication. Une recherche sans résultat pertinent laisse l’état de sécurité inconnu. Les notifications privées et les ressources non indexées restent hors de ce contrôle.",
+  "queryGroups": [
+    {
+      "platformSlugs": [
+        "a-cube",
+        "abby",
+        "accenture",
+        "ademico"
+      ],
+      "queries": [
+        "\"A-Cube\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Abby\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Accenture eComply & Verify\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Ademico Software\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/in/vincent-pecquerie",
+        "https://abby.fr/legals/confidentiality",
+        "https://alonepc.com/plateforme-agreee-septembre-2026.html",
+        "https://fr.linkedin.com/posts/alexborto_facturation-%C3%A9lectronique-vous-en-%C3%AAtes-o%C3%B9-activity-7497636225722384385-6vHQ",
+        "https://www.journaldequebec.com/archives/2026/09",
+        "https://fr.linkedin.com/posts/laurent-gouz%C3%A8nes_pour-bien-comprendre-la-s%C3%A9curit%C3%A9-du-nouveau-activity-7494056343587328001-RaGk",
+        "https://repha.fr/facturation-electronique-2026-3/",
+        "https://www.bourse.fr/hebdo-bourse-plus/1308/hebdo-index.html",
+        "https://le-bon.contact/blog/facturation-electronique-protection-donnees-personnelles-rgpd",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1u7dzfm/pourquoi_on_a_tous_peur_de_la_facturation/",
+        "https://abby.fr/blog/5-erreurs-de-facturation-courantes/",
+        "https://www.untempspourvoyager.fr/politique-de-confidentialite/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "agena3000",
+        "agicap",
+        "ags-records",
+        "arratech"
+      ],
+      "queries": [
+        "\"AGENA3000\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Agicap\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"WiDOFACT by AGS\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Arratech Connect\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/sebastien-morel_la-facturation-%C3%A9lectronique-nest-pas-une-activity-7500151389096972288-5OCn",
+        "https://fr.linkedin.com/posts/damien-g-97527734_facturationelectronique-pa-cybers%C3%A9curit%C3%A9-activity-7498393179428212736-Xuz_",
+        "https://www.daf-mag.fr/bi-1244/transformation-processus-2133/facturation-electronique-non-la-fuite-de-donnees-a-la-dgfip-nimpacte-pas-la-reforme-27066",
+        "https://fr.linkedin.com/in/danika-matheron-64783717/en",
+        "https://fr.linkedin.com/in/sebastien-morel",
+        "https://www.augea.fr/blog/integration-de-chatgpt-ou-claude-avec-agicap-pennylane-et-qonto-opportunites-et/",
+        "https://fr.linkedin.com/in/hamdanitoufic",
+        "https://onlynnov.com/assurance-par-secteur/telecoms-cloud/",
+        "https://agicap.com/fr/article/tresorerie-2030-ia-transformation-table-ronde/",
+        "https://onlynnov.com/guide-assurance/fintech/",
+        "https://rssamplifier.com/daf-mag-fr",
+        "https://fr.linkedin.com/in/veroc33"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "arteva",
+        "aruba",
+        "atgp",
+        "avalara"
+      ],
+      "queries": [
+        "\"Artéva Orchestrade\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Aruba OneSuite\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"BEE.FACT\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Avalara\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.linkedin.com/company/comarch-sas/",
+        "https://microcosmworks.com/fr/blueprints/multi-tenant-billing-subscription",
+        "https://www.zuora.com/fr/glossary/saas-billing/",
+        "https://www.g2.com/fr/categories/billing?open_modal_url=%2Fproducts%2Fworketc%2Fwishlists%3Fhost_path%3D%252Fcategories%252Fbilling%26source%3Dcategory&order=g2_score&page=15",
+        "https://fr.linkedin.com/in/sylvain-thomas-payments",
+        "https://www.marketresearchintellect.com/fr/product/billing-invoice-system-market/",
+        "https://www.g2.com/fr/categories/subscription-billing/free?page=3",
+        "https://fr.linkedin.com/pulse/introduction-revenue-lifecycle-management-rlm-4cecloud-labs-51xfc?tl=fr",
+        "https://www.houseblend.io/articles/fr/netsuite-next-guide-interface-ask-oracle-ai"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "axelor",
+        "axonaut",
+        "axway",
+        "azopio"
+      ],
+      "queries": [
+        "\"Axelor\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Axonaut\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Axway eInvoicing\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Azopio\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/in/jean-baptiste-garin-bb5a5715",
+        "https://alonepc.com/plateforme-agreee-septembre-2026.html",
+        "https://www.nelis.fr/ressources/blog/meilleur-crm-rgpd-france",
+        "https://fr.linkedin.com/in/alina-valentina-r%C3%A9unif",
+        "https://www.kolecto.fr/legal/cgv",
+        "https://fr.linkedin.com/in/veroc33"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "b2brouter",
+        "b4value",
+        "basware",
+        "bc-solutions"
+      ],
+      "queries": [
+        "\"B2BRouter\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"b4value.net\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Basware\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"eas'Invoice\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.linkedin.com/company/comarch-sas/",
+        "https://onbehalf.ai/",
+        "https://fr.scribd.com/document/626732950/view",
+        "https://www.carnetdebord.info/totalenergies-s-allie-a-mistral-pour-booster-l-exploitation-petroliere-grace-a-l-intelligence-artificielle/",
+        "https://parseur.com/fr/blog/facturation-electronique",
+        "https://fr.scribd.com/document/628810994/Fonction-Finance-140-Innovations-Au-Service-de-La-Croissance-2",
+        "https://www.futuremarketreport.com/fr/industry-report/tail-spend-management-solutions-market"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "billit",
+        "blg",
+        "cbs",
+        "cecurity"
+      ],
+      "queries": [
+        "\"Billit\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"blgCloud\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"cbs e-world.cloud\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Cecurity eFacture\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://conforme2026.fr/guides/cyberattaque-welyb-agiris-fuite-donnees-facturation-electronique",
+        "https://www.ixemelis.fr/en/blog/news-3/fuite-de-donnees-blgcloud-les-mecanismes-de-l-attaque-et-comment-s-en-premunir-avec-odoo-12",
+        "https://www.commentcamarche.net/securite/piratage/38871-fuite-piratage-facturation-electronique/",
+        "https://fr.linkedin.com/company/cecurity-com",
+        "https://www.dolibarr.fr/forum/t/fuite-de-donnees-depuis-la-plate-forme-welyb/51938/5",
+        "https://ayinedjimi-consultants.fr/news/fuite-donnees-roussel-agri-62-2026",
+        "https://www.synapsepicardie.fr/article/fuite-blgcloud-erp-saas-aout-2026-dron-seclin-decompte-publications-pme-hauts-de-france",
+        "https://ayinedjimi-consultants.fr/news/fuite-donnees-leroch-distribution-2026"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "cegedim",
+        "cegi-alfa",
+        "cegid",
+        "chaintrust"
+      ],
+      "queries": [
+        "\"Cegedim SY business\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Cegi Alfa\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Cegid\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Chaintrust\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.cegid.com/fr/cgv/?slugFileName=iso-fr-cegid-dda",
+        "https://www.optionfinance.fr/entreprise-finance.html",
+        "https://fr.linkedin.com/pulse/cegid-et-silae-anatomie-%C3%A9conomique-dun-rapprochement-tonti-bernard-ymq8f",
+        "https://alonepc.com/plateforme-agreee-septembre-2026.html",
+        "https://go.cegid.com/rs/818-MJH-876/images/HD_FicheChecklist_Finance_CegidXRPFlex_FR_210x297_0226.pdf?version=0",
+        "https://www.cegid.com/fr/blog/5-signaux-critiques-tresorerie-bridee-par-excel/",
+        "https://www.linkedin.com/company/comarch-sas/",
+        "https://www.daf-mag.fr/bi-1244/transformation-processus-2133/facturation-electronique-et-e-reporting-definitions-calendrier-et-acteurs-de-la-reforme-francaise-25861",
+        "https://kohenavocats.fr/2026/09/08/fuite-dgfip-plateformes-entreprises-partenaires-decisions/",
+        "https://ochyro.net/assets/checklist-it-securite.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "cleartax",
+        "comarch",
+        "cyclope",
+        "darva"
+      ],
+      "queries": [
+        "\"ClearTax\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Comarch\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Cyclope\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Ofeli by DARVA\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/comarch-sas_suite-%C3%A0-lactualit%C3%A9-r%C3%A9cente-en-termes-activity-7499089263813238784-o23j",
+        "https://www.linkedin.com/company/comarch-sas/",
+        "https://lesyeuxducyclope.fr/mentions-legales",
+        "https://www.comarch.fr/blog/le-paysage-de-la-fraude-a-la-fidelite/",
+        "https://www.comarch.fr/blog/comment-prevenir-et-lutter-contre-les-fraudes-a-la-fidelite-etude-des-good-practices/",
+        "https://wikiland.org/wiki/Timeline_of_computer_security_hacker_history",
+        "https://fr.linkedin.com/in/veroc33",
+        "https://robot1er.fr/es/chapitres/18",
+        "https://www.marvel-world.com/encyclopedie-1390-fiche-maggott-biographie.html"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "dext",
+        "digipharmacie",
+        "digital-technologies",
+        "docnova"
+      ],
+      "queries": [
+        "\"Dext\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"DigiPA\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Digital Technologies\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Docnova\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.compta-online.com/dext-au-81-congres-ordre-ao8862",
+        "https://docnova.ai/fr/fondateurs-saas-de-facturation-electronique-en-marque-blanche/",
+        "https://whatismyip.live/fr/isp/multifi-multicraft-digital-technologies-private-limited",
+        "https://rssamplifier.com/daf-mag-fr",
+        "https://www.linkedin.com/company/entreprise-partitio/",
+        "https://fr.scribd.com/document/982560404/E-tude-de-marche-2026-IA-et-Experts-Comptables-France-Europe",
+        "https://podtail.com/podcast/decideo-data-science-big-data-intelligence-augment/",
+        "https://fr.linkedin.com/in/zakaria-teguia-411aba61",
+        "https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-eng.html?fchrcrdnm=87&i=&index=enb&lang=eng&sg_kp_wet=2007694&srchtxt=STORE",
+        "https://mobile.twstalker.com/argevise",
+        "https://nep.repec.org/nep-acc/2026-07-13",
+        "https://ca.linkedin.com/in/zakariae-dinar/en"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "docoon",
+        "docprocess",
+        "docuware",
+        "dokapi"
+      ],
+      "queries": [
+        "\"Docoon Invoice\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"DocProcess\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"DocuWare\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Dokapi\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/in/manuel--haas",
+        "https://fr.linkedin.com/in/jeremy-simeone-1060b0167",
+        "https://fr.linkedin.com/in/malaury-loeuillet-64033216a",
+        "https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/de_ladaptation_de_letat_de_droit_aux_defis_du_numerique_0.pdf",
+        "https://fr.linkedin.com/company/d-d-destruction-et-digitalisation",
+        "https://www.solutions-numeriques.com/newsletters/hebdo/1473/",
+        "https://www.linkedin.com/company/comarch-sas/",
+        "https://fr.linkedin.com/company/am-connectonsvosidees",
+        "https://mq.linkedin.com/company/acelys",
+        "https://www.solutions-numeriques.com/newsletters/hebdo/1354/",
+        "https://fr.linkedin.com/in/c%C3%A9dric-chanson-b6b583117"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "dougs",
+        "doxallia",
+        "ecosio-intercom",
+        "edicom"
+      ],
+      "queries": [
+        "\"Dougs\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Doxallia Invox-IA\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"ecosio InterCom\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"EDICOM\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.dougs.fr/blog/cyberattaque-proteger-vos-donnees-comptables/",
+        "https://fr.linkedin.com/posts/eric-le-ven-86b70939_facture%C3%A9lectronique-cybers%C3%A9curit%C3%A9-gestiondesrisques-activity-7426987197465272321-Cns2",
+        "https://www.dougs.fr/blog/rc-pro-ecommerce/",
+        "https://fr.linkedin.com/in/alina-valentina-r%C3%A9unif",
+        "https://www.dougs.fr/blog/rgpd-e-commerce/",
+        "https://www.professioncgp.com/article/paroles-dexperts/actu/la-matinale-du-pole-finance-du-groupe-ficade-du-8-avril-2025.html",
+        "https://www.linkedin.com/company/comarch-sas/",
+        "https://fliphtml5.com/vfgrn/gplo/",
+        "https://www.pappers.fr/entreprise/smart-public-851356568",
+        "https://www.lesbonsfreelances.com/freelance/simonl6",
+        "https://fr.linkedin.com/in/veroc33"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "edicom-group",
+        "edics",
+        "edieyes",
+        "edt"
+      ],
+      "queries": [
+        "\"EDICOM Group\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"EDiCSpro\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"EdiEyes Vision Care\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"EDT EIMA\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fliphtml5.com/vfgrn/gplo/",
+        "https://www.linkedin.com/company/comarch-sas/",
+        "https://fr.linkedin.com/in/veroc33",
+        "https://fr.linkedin.com/in/romain-chartrain",
+        "https://fr.linkedin.com/in/yvan-perez-b2409567",
+        "https://financialfilings.com/filings/cegedim/annual-report-esef/2022/882286/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "eezi",
+        "effinum",
+        "enerj",
+        "entropics"
+      ],
+      "queries": [
+        "\"eezi\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Effinum\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"ENERJ\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"ZenOnline\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/in/jean-marie-b%C3%A9nion",
+        "https://fr.scribd.com/document/800584986/N-728-01-07-2024",
+        "https://sti.eduscol.education.fr/actualites/formation/all",
+        "https://fr.linkedin.com/directory/articles/e-4"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "esalink",
+        "esi",
+        "esker",
+        "euro-information"
+      ],
+      "queries": [
+        "\"EsaLink Hubtimize\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"ESI\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Esker\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"HBS e-factures\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://flowwa.io/blog/dgfip-et-cybersecurite-comment-esker-securise-sa-plateforme-agreee/",
+        "https://www.leprogres.fr/archives/2026/07-09",
+        "https://cloud.esker.com/fm/others/esker-impact-report-dpef-2024-fr.pdf",
+        "https://fr.linkedin.com/in/alexandre-buffy-99355282/en",
+        "https://cloud.esker.com/fm/others/code%20d%27%C3%A9thique_esker_2025.pdf",
+        "https://fr.linkedin.com/posts/flowwa-io_facturationelectronique-cybers%C3%A9curit%C3%A9-plateformeagr%C3%A9%C3%A9e-activity-7500908722727059456-XWut",
+        "https://www.linkedin.com/company/flowwa-io",
+        "https://www.cnpp.com/formations/risques-chimiques/devenir-equipier-qualifie-de-seconde-intervention-face-une-fuite-et-deversement-de-produits-dangereux-1ere-partie",
+        "https://www.eskernature.com/fr/confidentialite/",
+        "https://www.daf-mag.fr/bi-1244/transformation-processus-2133/facturation-electronique-et-e-reporting-definitions-calendrier-et-acteurs-de-la-reforme-francaise-25861",
+        "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-X.1331-201803-I%21%21PDF-F&lang=e&type=items",
+        "https://fr.linkedin.com/posts/patrick-chemla-3525326a_ce-qui-%C3%A9tait-pr%C3%A9visible-et-anticip%C3%A9-vient-activity-7506069695033253888-nNO-",
+        "https://onlynnov.com/assurance-par-secteur/telecoms-cloud/",
+        "https://fr.linkedin.com/in/audrey-disset-849ba0158",
+        "https://fr.linkedin.com/in/florianbedeau",
+        "https://www.cgtfinancespubliques.fr/IMG/pdf/dl_gt_ssi_du_10_mars_26.pdf",
+        "https://www.expoprotection.com/content/dam/sitebuilder/ref/expoprotection/images/presse/EXPOPROTECTION%20-%20CP%20PACA.pdf.coredownload.320294081.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "facnote",
+        "fiducial-cloud",
+        "fiskaltrust",
+        "flowie"
+      ],
+      "queries": [
+        "\"Facnote PDP\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"FIDUCIAL Cloud Facilia\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"fiskaltrust\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Flowie\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.get-flowie.com/fr/security",
+        "https://get-flowie.com/fr/security",
+        "https://get-flowie.com/fr/plateforme/agents-ia",
+        "https://financialfilings.com/filings/seche-environnement-sa/annual-report-esef/2026/32995397/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "fonoa",
+        "freedz",
+        "fulll",
+        "generix"
+      ],
+      "queries": [
+        "\"Fonoa\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Freedz\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"fulll\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Generix\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/in/rachel-hourlier-9a145b125",
+        "https://www.daf-mag.fr/bi-1244/transformation-processus-2133/facturation-electronique-et-e-reporting-definitions-calendrier-et-acteurs-de-la-reforme-francaise-25861",
+        "https://fr.linkedin.com/directory/posts/f-2",
+        "https://fr.linkedin.com/in/lo%C3%AFc-piernot-206853156",
+        "https://fr.linkedin.com/in/sebastien-morel",
+        "https://congresifec2026.fr/",
+        "https://fr.linkedin.com/in/herv%C3%A9-leboucher-98457330",
+        "https://synel-france.com/gestion-du-temps/",
+        "https://www.infflux.com/media/files/content_prv/DossierSCM-StrategiesLogistique-mars16.pdf",
+        "https://www.generixgroup.com/fr/blog/guide-fiabilite-prevision-ia-mape-wmape-biais-seuil",
+        "https://fr.linkedin.com/posts/cedricneve_facturationelectronique-fintech-transformationdigitale-activity-7435737321095725058-i-1m",
+        "https://blog-cy4t-b34ddf.frama.io/france/page/3/",
+        "https://www.infflux.eu/media/files/content_prv/DossierSCM-StrategiesLogistique-mars16.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "gep",
+        "gestav",
+        "groupe-sigma",
+        "gurusoft"
+      ],
+      "queries": [
+        "\"GEP E-Invoice Automation\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Gestav\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Sigma Lixa PA\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"GuruSoft eDoc\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://pt.scribd.com/doc/175330690/LexiqueAutomobile-francais-anglais-1"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "iaf",
+        "icd",
+        "iedi",
+        "iga-assurance"
+      ],
+      "queries": [
+        "\"IAF\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"DEMATRUST Light\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"iEDI\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"IGA Assurance\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.polyfact.com/sources/442e1d4a-6dfa-4ff9-b644-1bf9afbb2bf7",
+        "https://www.free-work.com/fr/tech-it/jobs/azure-active-directory/paris",
+        "https://ariovis.fr/cas-d-usage/prevenir-fuites-donnees/exemples-incidents",
+        "https://tc.canada.ca/fr/aviation/centre-reference/circulaires-information/circulaire-information-ci-no-100-001",
+        "https://bureauveritas2025.fr.digital-report.net/rapport/5275__%3B%21%21NslPjgbbnDqexg%21ME_FFC1G1u4NN_U7SxTq2DnpIL1-KjWqIexUeWfrEH2M_h5Ybbj_ikOLhtgiBEZcS-p8etW-aNFI0fKp8z5PLYh6a4-iwewrol5DOw%24",
+        "https://fr.scribd.com/document/498438585/9756-p4-cons-fr-Manuel-OACI-d-enquetes-sur-les-accidents-et-incidents-d-aviation",
+        "https://www.rsa.com/fr/products/governance-lifecycle/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "indicom",
+        "indy",
+        "infologic",
+        "intesa"
+      ],
+      "queries": [
+        "\"Indicom\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Indy\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"PA Copilote\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Intesa\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.signal-arnaques.com/scam/view/947628",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1w7x34b/le_fisc_sest_fait_pirater_cet_%C3%A9t%C3%A9_la_facturation/",
+        "https://alonepc.com/plateforme-agreee-septembre-2026.html",
+        "https://thedpo.eu/fr/decisions/2744e8bd-96fc-4199-9571-4d5c2c634d95",
+        "https://fr.linkedin.com/in/theophile-bellintani",
+        "https://vigie24.info/themes/ingenierie-sociale",
+        "https://dcod.ch/2026/09/29/ransomwares-piratages-17-cyberattaques-dampleur-du-29-septembre-2026-dont-bitget/",
+        "https://synoptia.fr/qualiptia/veille",
+        "https://jobs.indy.fr/privacy-policy",
+        "https://donneespersonnelles.fr/actualite-rgpd-2026",
+        "https://www.webrankinfo.com/forum/t/facturation-electronique-obligatoire-meme-pour-auto-entrepreneurs.200613/",
+        "https://lyon-ia.com/blog/facturation-electronique-2026-le-point-cybersecurite-que-vous-oubliez"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "invopop",
+        "iopole",
+        "ipaidthat",
+        "itesoft"
+      ],
+      "queries": [
+        "\"Invopop\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Iopole\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"iPaidThat\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"ITESOFT\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://app.ipaidthat.io/mag/entrepreneur/logiciel-espion-et-hacker-la-protection-en-ligne-doit-devenir-votre-priorite/",
+        "https://matot-braine.fr/IMG/pdf/8166fmato.pdf",
+        "https://boudier.tech/index.cfm",
+        "https://www.meolya.com/legal?page=cgu",
+        "https://fr.linkedin.com/in/florianbedeau",
+        "https://jt.linkedin.com/company/vaadata",
+        "https://fr.linkedin.com/in/laurent-olier",
+        "https://www.webdisclosure.fr/press-release/credit-cooperatif-epa-rapport-annuel-bpaca-exercice-2024-KtLUSBtwRMy",
+        "https://fr.linkedin.com/directory/posts/more",
+        "https://fr.linkedin.com/in/ruben-t-b2ba92296"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "jefacture",
+        "klekoon",
+        "kolecto",
+        "kolecto-pdp"
+      ],
+      "queries": [
+        "\"jefacture.com\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Klekoon\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Kolecto\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Kolecto PDP\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://conforme2026.fr/guides/cyberattaque-welyb-agiris-fuite-donnees-facturation-electronique",
+        "https://www.kolecto.fr/legal/politique-de-protection-des-donnees-personnelles",
+        "https://www.dolibarr.fr/forum/t/fuite-de-donnees-depuis-la-plate-forme-welyb/51938/5",
+        "https://www.kolecto.fr/legal/cgv",
+        "https://fr.linkedin.com/in/fabiennehubert/de",
+        "https://www.commentcamarche.net/securite/piratage/38871-fuite-piratage-facturation-electronique/",
+        "https://assets-global.website-files.com/6373b53b7e4adf70ce44cbd5/661656228aa757146b26df9e_20240401-%20Conditions%20Ge%CC%81ne%CC%81rales%20de%20Vente.pdf",
+        "https://kohenavocats.fr/2026/09/23/welyb-cyberattaque-cabinets-entreprises-facturation-decisions-2026/",
+        "https://fr.linkedin.com/pulse/newsletter-expert-comptable-septembre-valentin-tonti-bernard-fm7ye",
+        "https://www.alvinet.com/similaires/facturation-electronique-et-piratage-le-ministere-du-budget-veut-rassurer/71328711",
+        "https://www.generation-nt.com/actualites/welyb-agiris-fuite-donnees-facturation-electronique-cybersecurite-2081379"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "legalinvoice",
+        "logilec",
+        "lucca",
+        "lundi-matin"
+      ],
+      "queries": [
+        "\"LegalInvoice\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"LOGILEC\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Lucca Factures\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Lundi Matin\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.insurio.fr/blog/commerce-de-gros-de-la-droguerie-couleurs-vernis-et-papiers--cyberattaque-blocage-commandes-edi-portail",
+        "https://www.wardyn.fr/blog/situations-urgence/",
+        "https://www.analy.fr/blog/cybersecurite-web-pme-2026",
+        "https://www.insurio.fr/blog/expert-comptable-cyberattaque-rancongiciel-donnees-clients",
+        "https://www.bearingpoint.com/files/L_instant_RSSI_avec_Florence_Patenne.pdf?download=0&itemId=1026872",
+        "https://elmarq.fr/journal/communication-crise-fuite-donnees-pme-ants-2026",
+        "https://monmedecin.org/",
+        "https://www.influenth.com/piratage-des-impots-voici-comment-verifier-si-vous-etes-touche-par-la-fuite-de-donnees/",
+        "https://fr.linkedin.com/in/lenny-clv-88351b39a",
+        "https://kohenavocats.fr/2026/09/28/fuite-donnees-clients-notifier-cnil-72h-informer-eviter-sanction-free-2026/",
+        "https://kohenavocats.fr/2026/09/16/fuite-donnees-entreprise-notifier-cnil-72-heures-informer-recours-2026/",
+        "https://egidecyber.com/verifier-fuite-donnees-mairie",
+        "https://www.afgc.fr/data/AFGC%20DP%2009-16%20-%20Transport%20stockage%20de%20bouteilles%20acetylene%20-%20oxygene%20-%20gaz%20inflammables.pdf",
+        "https://fliphtml5.com/elnda/ebrq/DCI_RGPD/",
+        "https://www.un.org/fr/ethics/pdf/2023_FRE_LD-PGM.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "macompta",
+        "marosa",
+        "medius",
+        "my-fiteco"
+      ],
+      "queries": [
+        "\"macompta.fr\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Marosa VATify\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Medius\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"MyFiteco\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://blog.macompta.fr/associations/rgpd-en-association/",
+        "https://www.medius.com/fr/blog/comment-lautomatisation-de-la-comptabilite-fournisseurs-ameliore-l-auditabilite-et-la-conformite-reglementaire/",
+        "https://www.linkedin.com/company/comarch-sas/",
+        "https://logicielfrance.com/tous-les-logiciels",
+        "https://fairmi.fr/supprimer/macompta-fr/",
+        "https://www.swissmedicinfo-pro.ch/showText.aspx?authNr=67463&lang=FR&supportMultipleResults=1&textType=FI",
+        "https://newsstand.world/source/agefi"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "mykinexo",
+        "mysupply",
+        "myunisoft",
+        "n2f"
+      ],
+      "queries": [
+        "\"MyKinexo PDP\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"MySupply\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"MyUnisoft\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"N2F\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.auditra.fr/",
+        "https://www.n2f.com/blog/rpa-robotic-process-automation/",
+        "https://fr.linkedin.com/directory/posts/m-4",
+        "https://infodsi.com/articles/209387/experts-comptables-chatgpt-dans-un-cabinet-sur-deux-la-souverainete-des-donnees-dans-toutes-les-tetes.html",
+        "https://www.altaroc.pe/societes",
+        "https://www.kolecto.fr/legal/cgv",
+        "https://fr.linkedin.com/in/jessie-freoa-a3816420",
+        "https://ecole-futee.com/pourquoi-nous/souverainete",
+        "https://logicielfrance.com/tous-les-logiciels",
+        "https://creation-site-pro.fr/blog",
+        "https://fr.linkedin.com/in/veroc33",
+        "https://congresifec2026.fr/",
+        "https://www.ffhandball.fr/wp-content/uploads/2023/05/doc_2023_CR_COC_n_19_reunion_du_24_janvier.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "neotimo",
+        "ntt-data",
+        "odoo",
+        "officein"
+      ],
+      "queries": [
+        "\"Neotimo\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"NTT DATA e-Invoicing\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Odoo\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"OfficeIn\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.ixemelis.fr/en/blog/news-3/fuite-de-donnees-blgcloud-les-mecanismes-de-l-attaque-et-comment-s-en-premunir-avec-odoo-12",
+        "https://www.ixemelis.fr/blog/actualites-3",
+        "https://www.secunews.org/recherche-logiciels.html",
+        "https://guideiadigitale.odoo.com/blog/actualites-2/cybersecurite-en-entreprise-le-guide-11",
+        "https://hodi.host/re/cgs/",
+        "https://www.expertise-prestashop.fr/2026/09/09/connecteur-prestashop-odoo-configuration-webservice-webhooks-signes-et-securite/",
+        "https://ai.underside.be/actualites",
+        "https://www.mons.be/fr/ma-commune/vie-politique/intercommunales/imio-1/imio/ag-du-10-juin-2025/publiable-point-1-rapport-de-gestion-2024.pdf/%40%40download/file/Publiable%20-%20Point%201%20-%20Rapport%20de%20gestion%202024.pdf",
+        "https://cataloguebibliotheque.ichec.be/doc_num.php?explnum_id=754",
+        "https://www.mons.be/fr/ma-commune/vie-politique/intercommunales/imio-1/fichiers-imio/ag-du-28-juin-2024/rapport-de-gestion-2023.pdf/%40%40download/file/Rapport%2520de%2520gestion%25202023.pdf",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1u7dzfm/pourquoi_on_a_tous_peur_de_la_facturation/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "one-up",
+        "open-bee",
+        "opentext",
+        "pagero"
+      ],
+      "queries": [
+        "\"OneUp\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Open Bee\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"OpenText\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"ONESOURCE Pagero\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://contenu.openbee.com/plezi_file/5c74021654067a4162170136/note-securite-hebergement-donnees-open-bee.pdf",
+        "https://www.openbee.com/articles/securite-zero-trust/",
+        "https://www.openbee.com/articles/ged-vs-stockage-cloud-simple/",
+        "https://www.opentext.com/fr/solutions/emerging-technologies",
+        "https://www.opentext.com/fr/media/white-paper/conquering-the-non-human-identity-explosion-wp-en.pdf",
+        "https://www.openbee.com/articles/envoyer-document-securise/",
+        "https://www.opentext.com/ca-fr/innovations/cybersecurity-cloud",
+        "https://fr.linkedin.com/in/veroc33",
+        "https://www.opentext.com/fr/what-is/generative-ai-security",
+        "https://www.microfocus.com/documentation/filr/filr-23.4/lang/fr-fr/pdfdoc/filr-user-access-faq/filr-user-access-faq.pdf",
+        "https://docs.citrix.com/fr-fr/citrix-virtual-apps-desktops/2402-ltsr/whats-new/cumulative-update-1/fixed-issues.html",
+        "https://dawap.fr/projets/developpement-web/1up-cockpit-commercial-comptes-b2b",
+        "https://www.opentext.com/fr/media/ebook/enterprise-artificial-intelligence-building-trusted-ai-with-secure-data-ebook-fr.pdf",
+        "https://www.microfocus.com/documentation/filr/filr-23.4/lang/fr-fr/filr-user-access-faq/filr-user-access-faq.html",
+        "https://community.opentext.com/it-ops-cloud/b/it-ops-cloud-blog/posts/comment-gerer-le-multicloud",
+        "https://www.emjaconseil.fr/projet-transition-numerique/",
+        "https://www.microfocus.com/fr-fr/media/flyer/top_mobile_communications_risks_and_concerns_for_legal_organizations_flyer_fr.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "paragon",
+        "payflows",
+        "pennylane",
+        "pitney-bowes"
+      ],
+      "queries": [
+        "\"Invoice Paragon Platform\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Payflows Athena\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Pennylane\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Pitney Bowes Invoice Services\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://help.pennylane.com/fr/articles/473193-identifier-les-menaces-de-fraude-ciblant-les-utilisateurs-pennylane",
+        "https://help.pennylane.com/fr/articles/473231-se-proteger-de-la-fraude-a-la-carte-de-paiement",
+        "https://www.grafe.fr/",
+        "https://reaction19.fr/",
+        "https://www.grafe.fr/actualites/",
+        "https://tw.linkedin.com/company/compta-online",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1w7x34b/le_fisc_sest_fait_pirater_cet_%C3%A9t%C3%A9_la_facturation/",
+        "https://acesso.kissmyscore.com/?_=%2Fin%2Fboubou-yatera-16b61861%23xybe3UUSZzb91jTiFy%2BzMMs7xINVRyU%3D&trk=org-employees",
+        "https://help.pennylane.com/fr/articles/819033-automatiser-la-recuperation-des-exports-de-fichiers-plats",
+        "https://www.reddit.com/r/france/comments/1wpy0t6/nouvelle_fuite_de_donn%C3%A9es_%C3%A0_l%C3%A9tat_les_iban_de_143/",
+        "https://alonepc.com/plateforme-agreee-septembre-2026.html",
+        "https://fr.linkedin.com/posts/alexborto_facturation-%C3%A9lectronique-vous-en-%C3%AAtes-o%C3%B9-activity-7497636225722384385-6vHQ",
+        "https://fr.linkedin.com/posts/patrick-chemla-3525326a_ce-qui-%C3%A9tait-pr%C3%A9visible-et-anticip%C3%A9-vient-activity-7506069695033253888-nNO-",
+        "https://www.daf-mag.fr/bi-1244/transformation-processus-2133/facturation-electronique-et-e-reporting-definitions-calendrier-et-acteurs-de-la-reforme-francaise-25861",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1uyzyoa/facturation_%C3%A9lectronique_danger/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "qonto",
+        "qweeby",
+        "sage",
+        "sap"
+      ],
+      "queries": [
+        "\"Qonto Facturation\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Qweeby\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Sage\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"SAP\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://community.qonto.com/fr/articles",
+        "https://news.sap.com/france/2026/09/selon-oxford-economics-les-entreprises-francaises-doublent-quasiment-leur-roi-mais-seules-3-se-disent-pleinement-pretes-a-deployer-lia-agentique-a-grande-echelle/",
+        "https://www.grafe.fr/actualites/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1w7x34b/le_fisc_sest_fait_pirater_cet_%C3%A9t%C3%A9_la_facturation/",
+        "https://www.yad.fr/cyberattaque-dgfip-entreprises-que-faire/",
+        "https://forum.hardware.fr/hfr/Discussions/politique/horizons-politique-bagarre-sujet_113751_38570.htm",
+        "https://www.datasecuritybreach.fr/2026/09/30/",
+        "https://urgencecyber-regionsud.fr/cyberactu-du-15-09-2026/",
+        "https://www.secunews.org/recherche-donn%C3%A9es.html",
+        "https://www.sage.com/fr-be/confiance-securite/2fa/",
+        "https://www.courdecassation.fr/decision/62ac1be0440e6d05e516a667",
+        "https://www.newsd.admin.ch/newsd/message/attachments/47967.pdf",
+        "https://www.georisques.gouv.fr/webappReport/ws/installations/inspection/DIHDBP3RIaZVm777XpH4qmKGRJxYrolx",
+        "https://cdn.financialreports.eu/financialreports/media/filings/3933/2021/10-K/3933_10-k_2021-04-09_39070826-4439-4dc7-a256-68f1576ff7c2.pdf",
+        "https://knd.law/wp-content/uploads/2025/12/Benefits-Plan-French.pdf",
+        "https://plan-vigilance.org/wp-content/uploads/vigilance-pdf/6b53dfdffcd1be42bec48fef15362f5c.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "scribee",
+        "seeburger",
+        "sellsy",
+        "septeo"
+      ],
+      "queries": [
+        "\"Scribee\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"SEEBURGER E-Invoicing Hub\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Sellsy\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Septeo Ingeneo\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://alonepc.com/plateforme-agreee-septembre-2026.html",
+        "https://www.jobijoba.com/fr/annonce/54/d48889555cbae5d0198baede173fdc49",
+        "https://fr.linkedin.com/posts/patrick-chemla-3525326a_ce-qui-%C3%A9tait-pr%C3%A9visible-et-anticip%C3%A9-vient-activity-7506069695033253888-nNO-",
+        "https://www.nelis.fr/ressources/blog/meilleur-crm-rgpd-france",
+        "https://fr.linkedin.com/in/alina-valentina-r%C3%A9unif",
+        "https://www.just-use-ai.com/agence-automatisation-ia-marseille",
+        "https://jobera.com/job/sellsy-alternant-e-it-et-cybersecurite-h-f-4fc07c10/",
+        "https://www.clubic.com/pro/",
+        "https://www.lemondeinformatique.fr/recherche/index.html?search=IT",
+        "https://logicielfrance.com/categorie/erp",
+        "https://www.wearedevelopers.com/jobs/ext/434704-alternant-e-it-et-cybersecurite-h-f"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "seqino",
+        "serensia",
+        "seres",
+        "shine"
+      ],
+      "queries": [
+        "\"SEQINO\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Serensia\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Seres e-Facture PA\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Shine Facture\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/in/herv%C3%A9-leboucher-98457330",
+        "https://www.optionfinance.fr/entreprise-finance.html",
+        "https://congresifec2026.fr/",
+        "https://www.latribune.fr/partenaires-603/page-4/",
+        "https://societegenerale.fr.digital-report.net/rapport/24",
+        "https://fr.scribd.com/document/921306613/lmnd-23-09-2025",
+        "https://www.alvinet.com/similaires/facturation-electronique-obligatoire-en-2026-voici-l-outil-incontournable-qui-fait-tout-a-votre-place/71058566",
+        "https://www.thesiteoueb.net/actualite/",
+        "https://www.alvinet.com/similaires/facturation-electronique-et-piratage-le-ministere-du-budget-veut-rassurer/71328711"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "sni",
+        "solo",
+        "sovos",
+        "spendesk"
+      ],
+      "queries": [
+        "\"SNI\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Solo\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Sovos\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Spendesk\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://sanstrace.fr/",
+        "https://www.lemondeinformatique.fr/intrusion-hacking-pare-feu-36-page-1.html",
+        "https://webologie.me/facturation-electronique-cybersecurite/",
+        "https://www.numerama.com/cyberguerre/726307-fuite-de-donnees-chez-le-francais-spliiit-la-communication-a-limite-les-degats.html",
+        "https://folia.unifr.ch/documents/333285/files/VALOT_Stephen_TB_2025.pdf",
+        "https://fr.linkedin.com/pulse/newsletter-expert-comptable-septembre-valentin-tonti-bernard-fm7ye",
+        "https://www6.twstalker.com/arkoviaFR",
+        "https://www.spendesk.com/fr/blog/plafonds-et-controle-des-cartes-entreprise/",
+        "https://www.zdnet.fr/actualites/la-societe-de-cybersecurite-francaise-stormshield-victime-d-une-fuite-de-donnees-39917483.htm",
+        "https://journalducoin.com/economie/yggtorrent-scandale-financier-fuite-donnees/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1u7dzfm/pourquoi_on_a_tous_peur_de_la_facturation/",
+        "https://cyber-news.fr/guide/cybersecurite-pour-les-pme-le-guide-complet-2026-pour-proteger-votre-entreprise/",
+        "https://www.donneespersonnelles.fr/actualite-cybersecurite-2026",
+        "https://www.decision-achats.fr/Thematique/strategie-achats-1236/performance-2266/Breves/ia-achats-quels-risques-cyber-473472.htm/amp"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "sps-commerce",
+        "srci",
+        "storecove",
+        "superpdp"
+      ],
+      "queries": [
+        "\"SPS Commerce\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"SRCI iXFacture\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Storecove\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"SuperPDP\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://alonepc.com/plateforme-agreee-septembre-2026.html",
+        "https://www.sotwe.com/hashtag/Peppol?lang=en",
+        "https://www.sotwe.com/hashtag/Peppol",
+        "https://openconcerto.org/forum/viewtopic.php?f=9&sid=1db8e2359801192f93b94baefcb3ab14&t=3875",
+        "https://www.manuel.gestan.fr/fr/wiki/facturation/client/facturx",
+        "https://www.sotwe.com/kevinb6e?lang=en",
+        "https://www.infoforma.fr/",
+        "https://www.sotwe.com/hashtag/Einvoicing",
+        "https://fr.linkedin.com/posts/anne-sagnet_facturation-%C3%A9lectronique-pour-quelle-activity-7496915923136778240-Dysg"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "symtrax",
+        "taxera",
+        "tenor",
+        "tesisquare"
+      ],
+      "queries": [
+        "\"Symtrax Compleo\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Taxera\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Tenor eDemat\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"TESISQUARE\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.lemonde.fr/impots/",
+        "https://lepoli.media/poliactu.html"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "tessi",
+        "tiime",
+        "tradeshift",
+        "transalis"
+      ],
+      "queries": [
+        "\"Digital Invoice by Tessi\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Tiime\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Tradeshift Babelway\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Transalis\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://blog.tiime.fr/plateforme-agreee-securite-donnees",
+        "https://vigie24.info/themes/facturation-electronique",
+        "https://orthogestion.blogspot.com/2026/09/",
+        "https://orthogestion.blogspot.com/2026/09/newsletter-du-030926-les-sujets-pratico.html",
+        "https://alonepc.com/plateforme-agreee-septembre-2026.html",
+        "https://orthogestion.blogspot.com/",
+        "https://fr.linkedin.com/in/alina-valentina-r%C3%A9unif",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1uv6l6k/plateforme_agr%C3%A9e_et_s%C3%A9curit%C3%A9_des_donn%C3%A9es/",
+        "https://www.daf-mag.fr/bi-1244/transformation-processus-2133/facturation-electronique-et-e-reporting-definitions-calendrier-et-acteurs-de-la-reforme-francaise-25861",
+        "https://mafactureok.com/blog",
+        "https://www.reddit.com/r/vosfinances/comments/1r9r0x1/facturation_%C3%A9lectronique_obligatoire_en_sept_2026/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1uyzyoa/facturation_%C3%A9lectronique_danger/",
+        "https://www.alvinet.com/similaires/facturation-electronique-la-presidente-de-la-chambre-des-metiers-et-de-l-artisanat-de-la-somme-veut-rassurer/71359065",
+        "https://www.in-business.fr/tolerance-facturation-electronique-obligations-1er-septembre/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1u7dzfm/pourquoi_on_a_tous_peur_de_la_facturation/",
+        "https://www.reddit.com/r/SaaS/comments/1s0gl8b/les_expertscomptables_nourrissent_gratuitement/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "treso2",
+        "tungsten",
+        "tx2",
+        "ventya"
+      ],
+      "queries": [
+        "\"Treso2\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Tungsten e-Invoice Connect\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"TX2 Concept\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Ventya\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/directory/posts/r",
+        "https://www.cm-arkea.com/banque/assurance/credit/upload/docs/application/pdf/2023-05/declaration_performance_extra-financiere_avril2023.pdf",
+        "https://www.cm-arkea.com/arkea/banque/upload/docs/application/pdf/2023-11/document-enregistrement-universel-2022-rapport-financier-annuel_investisseurs_14042023.pdf",
+        "https://fr.linkedin.com/in/veroc33",
+        "https://fr.linkedin.com/in/florence-valle-435879196",
+        "https://www.gazdetect.com/detecteurs-gaz-portables/detecteurs-multigaz/",
+        "https://www.channelnews.fr/news/page/1753"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "veryswing",
+        "village-connecte",
+        "vosfactures",
+        "voxel"
+      ],
+      "queries": [
+        "\"Veryswing\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Le Village Connecté\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"VosFactures\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Voxel Bavel\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.clubic.com/actualite-632179-un-mois-apres-la-reforme-vosfactures-subit-deja-une-fuite-de-donnees-l-etat-prend-une-decision-radicale.html",
+        "https://www.commentcamarche.net/securite/piratage/38965-piratage-vosfactures/",
+        "https://fr.linkedin.com/posts/christophe-boutry_vosfactures-fuite-de-donn%C3%A9es-apr%C3%A8s-une-activity-7511195571051978752-8Hto",
+        "https://www.reddit.com/r/france/comments/1wuw1fm/un_mois_apr%C3%A8s_la_r%C3%A9forme_de_la_facturation/",
+        "https://vigie24.info/themes/cybercriminalite",
+        "https://www.tinynews.be/vosfactures-pirate-cloud/amp/",
+        "https://www.thesiteoueb.net/actualite/article-9706-vosfactures-piratee-30-jours-apres-la-reforme-la-plateforme-agreee-touchee-via-son-prestataire-polonais.html",
+        "https://fr.linkedin.com/posts/seblatombe_apr%C3%A8s-la-fuite-de-donn%C3%A9es-chez-vosfactures-activity-7511384668269699073-AbWd"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "weproc",
+        "wisetech",
+        "xelya",
+        "yooz"
+      ],
+      "queries": [
+        "\"WeInvoice by WeProc\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"WiseTech Global\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Xelya\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr",
+        "\"Yooz\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://www.getyooz.com/fr/blog/cybersecurite-et-facturation-electronique",
+        "https://www.elan-retrouve.org/wp-content/uploads/2025/12/Rapport-dactivite-2024-de-la-Fondation-lElan-Retrouve.pdf",
+        "https://acesso.kissmyscore.com/?_=%2Fin%2Fmarieangemonard%23xybe3UUSZzb91jTiFy%2BzMMs7xINVRyU%3D",
+        "https://fr.linkedin.com/in/sophie-kuoch",
+        "https://www.getyooz.com/fr/blog/automatiser-factures-sap-ecc6",
+        "https://fr.linkedin.com/in/l%C3%A9o-dubois-098424170",
+        "https://www.getyooz.com/fr/blog/automatiser-factures-sap-business-one",
+        "https://fr.linkedin.com/posts/patrick-chemla-3525326a_ce-qui-%C3%A9tait-pr%C3%A9visible-et-anticip%C3%A9-vient-activity-7506069695033253888-nNO-",
+        "https://www.daf-mag.fr/bi-1244/transformation-processus-2133/facturation-electronique-et-e-reporting-definitions-calendrier-et-acteurs-de-la-reforme-francaise-25861",
+        "https://www.auditra.fr/",
+        "https://www.getyooz.com/fr/blog/automatiser-factures-pennylane",
+        "https://www.free-work.com/fr/tech-it/forum/t/facturation-electronique-01-rappel-du-calendrier?p=262387",
+        "https://www.getyooz.com/fr/blog/automatiser-processus-factures-fournisseurs-sage-bob-50",
+        "https://www.ximi.fr/wp-content/uploads/2018/04/Livre-blanc-Ximi-RGPD_final_20180424.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "ytems"
+      ],
+      "queries": [
+        "\"Ytems\" facturation (incident OR cyberattaque OR \"fuite de données\" OR breach) septembre octobre 2026 -site:pa.l0g.fr"
+      ],
+      "resultUrls": [
+        "https://com.ytems.app/blog/interview-compta-online---comment-ytems-transforme-la-gestion-des-bnc",
+        "https://com.ytems.app/blog"
+      ]
+    }
+  ]
+}

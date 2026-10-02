@@ -9,7 +9,7 @@ import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 import { passportRoutes } from "../src/data/passport-routes.ts";
 
 test("le relevé courant conserve les admissions et corrections documentées en septembre", async () => {
-  assert.equal(directory.snapshotDate, "2026-09-30");
+  assert.equal(directory.snapshotDate, "2026-10-02");
   assert.equal(directory.approved.length, 149);
   assert.equal(directory.pending.length, 14);
   const expected = new Map([
@@ -61,7 +61,10 @@ test("hébergement PA et certificats conservent leurs périmètres et dates prop
   assert.deepEqual(pennylane.hostingProviders.value, ["Outscale", "S3NS", "Scalingo"]);
   assert.equal(pennylane.hostingProviders.status, "declared");
   assert.equal(pennylane.iso27001Scope.value?.platformRelation, "service_family");
-  assert.equal(pennylane.iso27001Scope.value?.validUntil, "2026-09-19");
+  assert.equal(pennylane.iso27001Scope.value?.validUntil, "2029-09-19");
+  assert.equal(pennylane.iso27001Scope.value?.validFrom, "2026-09-20");
+  assert.equal(pennylane.iso27001Scope.value?.validity, "valid");
+  assert.ok(pennylane.iso27001Scope.sourceIds.includes("pennylane-iso27001-20261002"));
   const doxallia = researchForPlatform("doxallia").iso27001Scope;
   assert.equal(doxallia.value?.validity, "expired");
   assert.notEqual(doxallia.value?.validUntil, "2029-06-19");
@@ -69,6 +72,17 @@ test("hébergement PA et certificats conservent leurs périmètres et dates prop
   assert.equal(researchForPlatform("qonto").availability.eReporting.value?.stage, "beta");
   assert.equal(researchForPlatform("qonto").availability.eReporting.checkedAt, "2026-09-14");
   assert.equal(platforms.find((platform) => platform.slug === "sage")!.pricing.checkedAt, "2026-08-25");
+});
+
+test("les déclarations Flowie laissent les dates et le périmètre ISO à confirmer", () => {
+  const flowie = researchForPlatform("flowie");
+  assert.equal(flowie.hostingProviders.status, "declared");
+  assert.deepEqual(flowie.hostingProviders.value, ["S3NS"]);
+  assert.equal(flowie.iso27001Scope.status, "declared");
+  assert.equal(flowie.iso27001Scope.value?.evidenceKind, "renewal_statement");
+  assert.equal(flowie.iso27001Scope.value?.validUntil, null);
+  assert.equal(flowie.iso27001Scope.value?.validity, "not_published");
+  assert.equal(flowie.iso27001Scope.value?.platformRelation, "not_established");
 });
 
 

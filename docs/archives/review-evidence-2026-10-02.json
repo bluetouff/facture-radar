@@ -1,0 +1,1023 @@
+{
+  "checkedAt": "2026-10-02",
+  "previousSuccessfulCollectionRun": 36868752537,
+  "collection": {
+    "checkedAt": "2026-10-02T05:46:17.591Z",
+    "initialCollection": false,
+    "warning": "Contenu externe non fiable, à relire. Une collecte échouée ne constitue jamais un incident de la PA. Aucun candidat n’est publié automatiquement.",
+    "sources": [
+      {
+        "sourceId": "sage",
+        "url": "https://status.sage.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "300fcfe543327213730ec6d701c9320d579ddffe4106db1625efde1d709149c0",
+        "candidateCount": 11
+      },
+      {
+        "sourceId": "pennylane",
+        "url": "https://status.pennylane.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "9b7ef64a02c6c816f1ba45eb362d118475411542c4c25ab72b15a9fbf4652442",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "esker",
+        "url": "https://www.trustesker.com/?env=G",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "1f95e16bce3e387c13001e45385225f298e436bfa0b317d51399a3df5d7ed265",
+        "candidateCount": 15
+      },
+      {
+        "sourceId": "avalara",
+        "url": "https://status.avalara.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "0e110f6c2219516a82aef35387414778621f5b148d4dc8c2af472e9db0b91d85",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "axway",
+        "url": "https://status.axway.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "6b8b45905aaad4837184b5d00bdfbd624784ba1effcb476fb85fccda1b5dea18",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "blg",
+        "url": "https://status.blgcloud.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "f0a18c812d0eb854979ea5fd68ddfbe8f59730c629de1a41b84e34c2b8ab404b",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "docoon",
+        "url": "https://docooninvoice.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "6390c506ced46988a34c645ca53f3df477fdef2c1e69397b61cc7c4951e94e95",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "dokapi",
+        "url": "https://dokapi.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "db4d8da30357676fbc63f340688ad4de87f6a196c7252a27ed0f3afeec6555d6",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "ecosio-intercom",
+        "url": "https://www.ecosio-status.com/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "c4ff5c0ee94bbdb1f74094c7fdfae9cb75c3859e10e36170c6c7efb8f590e47b",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "fiskaltrust",
+        "url": "https://status.fiskaltrust.eu/feed",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "4ce4eed53dddf86745dd19e2f63acfac190da197acfb1eaa69a65554d6f9eb8c",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "flowie",
+        "url": "https://flowie.betteruptime.com/feed",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "dadeacf3710d73e30dd81ca0b5292389d46e98581002f4b199a989ac3e901cbc",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "invopop",
+        "url": "https://status.invopop.com/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "c2750a644f3a79c144ce4a7ffd024e71a8c0837737c4f2c6d8e20f6d94987079",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "lucca",
+        "url": "https://status.lucca.fr/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "ea28f17403ac4d877cf83a64f59c9f23dcd9eff147eae0e253a2719b5dee09e8",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "n2f",
+        "url": "https://status.n2f.com/fr/feed",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "e8febae3b07f98c6add2eba9c65fd81ccba9ac378ec1580ddb9a6ea0955afaac",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "pitney-bowes",
+        "url": "https://status.pitneybowes.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "d4360934faed860a7e73db1192fc5bc5de7244eabc1125f45d7c467580874eb6",
+        "candidateCount": 15
+      },
+      {
+        "sourceId": "spendesk",
+        "url": "https://status.spendesk.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "0802a54b85550912770c9f97cbfb36d78641c4d35cfcf9ecd44ca9184df62697",
+        "candidateCount": 8
+      },
+      {
+        "sourceId": "storecove",
+        "url": "https://storecove.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "64028d2f97da2d179ed1a22301f6c98c2cb4042ef8def7db9acb65c6c137ba3c",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "superpdp",
+        "url": "https://status.superpdp.tech/rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "aa2c201340b144608209aec9e513be0c1b905adf47935bae39b06d5243f3ef3b",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "weproc",
+        "url": "https://status.weinvoice.fr/feed",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "dbb39086b1cc15fca80b71c4374cefa6e2756108b57ea378392fbd7533fc1c91",
+        "candidateCount": 3
+      },
+      {
+        "sourceId": "veryswing",
+        "url": "https://status.veryswing.com/atom",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "3b9ee35f1dde6d3cd697d67b7cf45b4d9703073195ff4fe0225ce62c6f875d95",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "eezi",
+        "url": "https://eezi.instatus.com/af-na/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "8e4db77f456b970bc4c8e39758f8eb4111ed08f0a610acf172626a732a953245",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "tungsten",
+        "url": "https://status.tungstencloud.com/europe/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "5fdffd53a13ab4fd59574275c67cbc6ad5cf2543702f081a82f40fb84ec5132b",
+        "candidateCount": 7
+      },
+      {
+        "sourceId": "myunisoft",
+        "url": "https://meteo.myunisoft.fr/api/incidents.json",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "5e04f49a4faab03b78cbdfba30e3ef6f2298c2307cd2164d5ea2788ad25ef8ea",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "tiime",
+        "url": "https://status.tiime.fr/api/getEventFeed/KoA7Nf881q",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "24e44d656e962ab6239ff9491cc0814759ca1e54cd1ebe8d471897e7017950b5",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "ademico",
+        "url": "https://status.ademico-software.com/api/getEventFeed/kME5WtnQZ0",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "ebe4ea822d5be6123c4dbcb35bb3c0675f66dcd91b13edd94436d084eaeb2ab4",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "cert-fr",
+        "url": "https://www.cert.ssi.gouv.fr/feed/",
+        "status": "collected",
+        "checkedAt": "2026-10-02T05:46:17.591Z",
+        "sha256": "25f54b7ef8592c3f9045964f700d00a9d61884d4dcc49fd058f8844c8fa8c9cc",
+        "candidateCount": 35
+      }
+    ],
+    "changes": [
+      {
+        "id": "sage-twgzgkzc6hr4",
+        "sourceId": "sage",
+        "url": "https://status.sage.com/incidents/twgzgkzc6hr4",
+        "title": "Brightpearl - Partial Outage",
+        "publishedAt": "2026-10-01T18:14:19.000Z",
+        "content": "&lt;p&gt; &lt;small&gt;Oct &lt;var data-var=&apos;date&apos;&gt; 1&lt;/var&gt;, &lt;var data-var=&apos;time&apos;&gt;18:14&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Update&lt;/strong&gt; - We have identified a global issue preventing customer from using all functionality in the eBay integration. All other product functionalities are performing as expected.&lt;br /&gt;We are currently investigating. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Oct &lt;var data-var=&apos;date&apos;&gt; 1&lt;/var&gt;, &lt;var data-var=&apos;time&apos;&gt;18:04&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are investigating a potential issue with the service. An update will be provided within 30 minutes. &lt;/p&gt;",
+        "fingerprint": "b16a620c8839d7393af4303122092ee0c2e0ef2c10e241aa9e0b9b0b6f2e1d03",
+        "platformSlugs": [
+          "sage"
+        ],
+        "classification": "publisher_notice_to_review",
+        "change": "new"
+      },
+      {
+        "id": "esker-environment-E",
+        "url": "https://www.trustesker.com/?env=E",
+        "title": "TrustEsker environnement E",
+        "publishedAt": null,
+        "noticeVisible": true,
+        "content": "<div class='message message_ProductionIncident_orange'><div class='icon'></div><div class='txt'><ul><li><b>2026-10-01 16:18 UTC</b>: &nbsp;<p><em><strong>Investigating</strong> - Esker on Demand response time degradation - 4:14pm UTC</em><br>Platform performance has improved and processing times are currently closer to expected levels.<br>Our investigation remains ongoing to determine the root cause of the issue. Although the overall impact has decreased, some intermittent slowdowns may still be observed while the situation continues to be monitored.<br>We will share further updates as soon as more information becomes available.</p>\n\n<p><br><em><strong>Investigating</strong> - Esker on Demand response time degradation - 1:17pm UTC</em><br>Our R&D team continues to analyze the situation and work toward restoring nominal performance.<br>We will provide further updates as soon as additional information becomes available.<br> </p>\n\n<p><em><strong>Investigating</strong> - Esker on Demand response time degradation - 10:17am UTC</em><br>We are currently experiencing an issue with our Esker on Demand platform which may result in processing delays.<br>Our emergency team is working to fix the problem. We apologize for any inconvenience this may cause.</p></li></ul></div></div>\t\t\t\n\t",
+        "fingerprint": "62e035a082ee873530ff79b02aedaa2cdfef00b380697898a67a540080cb1036",
+        "sourceId": "esker",
+        "platformSlugs": [
+          "esker"
+        ],
+        "classification": "publisher_notice_to_review",
+        "change": "updated"
+      }
+    ],
+    "pendingCount": 197
+  },
+  "primaryReads": [
+    {
+      "id": "approved.xlsx",
+      "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+      "finalUrl": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+      "sha256": "8b90543cedade74969f8c8f41ef2196b1d4802adec092b289ef1df9d6a40f640",
+      "bytes": 27134,
+      "checkedAt": "2026-10-02T05:46:23.165581+00:00"
+    },
+    {
+      "id": "pending.xlsx",
+      "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+      "finalUrl": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+      "sha256": "79cacd06be0d7da6500e481717f68050e29ee632a76d86d92dacc220f07cf23a",
+      "bytes": 8285,
+      "checkedAt": "2026-10-02T05:46:23.156328+00:00"
+    },
+    {
+      "id": "dgfip",
+      "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+      "finalUrl": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+      "sha256": "1d8ec6585e1e716296f02c743455e2feb3c3d4365e06ee2399d6ae9b282d3c5e",
+      "bytes": 51233,
+      "checkedAt": "2026-10-02T05:46:23.148979+00:00"
+    },
+    {
+      "id": "welyb-status",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "finalUrl": "https://support.welyb.fr/statut-plateforme",
+      "sha256": "02dddcc93f3c8afc46eb2e2fdecad76daaab3d253a8cc14463a22ce3920c05c4",
+      "bytes": 145276,
+      "checkedAt": "2026-10-02T05:46:23.223867+00:00"
+    },
+    {
+      "id": "qonto-status",
+      "url": "https://status.qonto.com/incidents/September-2026",
+      "finalUrl": "https://status.qonto.com/incidents/September-2026",
+      "sha256": "bd7083621ab7b27f58313358fdcda4ef449b78d6d2c1fe4baaa86d0197323f26",
+      "bytes": 18930,
+      "checkedAt": "2026-10-02T05:46:23.260567+00:00"
+    },
+    {
+      "id": "esker-status",
+      "url": "https://www.trustesker.com/?env=G",
+      "finalUrl": "https://www.trustesker.com/?env=G",
+      "sha256": "1f95e16bce3e387c13001e45385225f298e436bfa0b317d51399a3df5d7ed265",
+      "bytes": 61112,
+      "checkedAt": "2026-10-02T05:46:23.241454+00:00"
+    },
+    {
+      "id": "pennylane-iso27001-2026-09",
+      "url": "https://assets.ctfassets.net/b76knntgaaiu/1ZoQOqZDrK32aeBHsQPrb6/49b971c8886615ebf3577371a182773a/Pennylane_ISO27001_certificate_FR_EN_2025.pdf",
+      "finalUrl": "https://assets.ctfassets.net/b76knntgaaiu/1ZoQOqZDrK32aeBHsQPrb6/49b971c8886615ebf3577371a182773a/Pennylane_ISO27001_certificate_FR_EN_2025.pdf",
+      "sha256": "f149f893c2775ac8e869773eaebc5454222e5b0d440a436a111f3c985fbdf503",
+      "bytes": 1427276,
+      "checkedAt": "2026-10-02T05:46:23.837712+00:00"
+    },
+    {
+      "id": "doxallia-hds-2026-09",
+      "url": "https://www.doxallia.com/wp-content/uploads/2026/06/Certificate-DOXALLIA-30808728-HDS.pdf",
+      "finalUrl": "https://www.doxallia.com/wp-content/uploads/2026/06/Certificate-DOXALLIA-30808728-HDS.pdf",
+      "sha256": "3423022b6d593e36fe73c6d924e8f53cc2a3f7f6276b9d29de754c88ae66364a",
+      "bytes": 212160,
+      "checkedAt": "2026-10-02T05:46:23.418823+00:00"
+    },
+    {
+      "id": "qonto-formats-portability-2026-09",
+      "url": "https://support-fr.qonto.com/hc/en-us/articles/27885538176913-What-is-electronic-invoicing-and-how-does-it-work",
+      "finalUrl": "https://support-fr.qonto.com/hc/en-us/articles/27885538176913-What-is-electronic-invoicing-and-how-does-it-work",
+      "sha256": "43c7bd0ded8484b8f1de4ab413202ecadbd3508172afb2e31be5f31eb4a35bd5",
+      "bytes": 65334,
+      "checkedAt": "2026-10-02T05:46:23.469819+00:00"
+    },
+    {
+      "id": "sellsy-rollout-2026-09",
+      "url": "https://help.sellsy.com/fr/articles/16815816-fonctionnalites-en-cours-de-deploiement",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "id": "esker-status-2026-09",
+      "url": "https://www.trustesker.com/?env=G",
+      "finalUrl": "https://www.trustesker.com/?env=G",
+      "sha256": "bf68db1908ccb9b9809b12fd6e2d57367b5d81daf7fced0cf81df0fb1c73c403",
+      "bytes": 61112,
+      "checkedAt": "2026-10-02T05:46:23.518555+00:00"
+    },
+    {
+      "id": "sage-incident-w04d6drd7g3n",
+      "url": "https://status.sage.com/incidents/w04d6drd7g3n",
+      "finalUrl": "https://status.sage.com/incidents/w04d6drd7g3n",
+      "sha256": "5da0029d9d5aa5720ec4b2d6681776251bcea6ca95def4e885e1068f7a859d1f",
+      "bytes": 85066,
+      "checkedAt": "2026-10-02T05:46:24.185363+00:00"
+    },
+    {
+      "id": "sage-incident-fjh6wx81xg1p",
+      "url": "https://status.sage.com/incidents/fjh6wx81xg1p",
+      "finalUrl": "https://status.sage.com/incidents/fjh6wx81xg1p",
+      "sha256": "ed0026748e2c6fcf571ddf6c679a1d5ee3ab1e3541cb0815e7e5615a12a78d10",
+      "bytes": 100131,
+      "checkedAt": "2026-10-02T05:46:24.432931+00:00"
+    },
+    {
+      "id": "sage-incident-rhf8nv5dd1rq",
+      "url": "https://status.sage.com/incidents/rhf8nv5dd1rq",
+      "finalUrl": "https://status.sage.com/incidents/rhf8nv5dd1rq",
+      "sha256": "16ea1770a310a8ff2745c7fb6885a23ea35a47579177dd814b6463f141e08d98",
+      "bytes": 86705,
+      "checkedAt": "2026-10-02T05:46:24.524640+00:00"
+    },
+    {
+      "id": "sage-incident-qgr9wjcbs466",
+      "url": "https://status.sage.com/incidents/qgr9wjcbs466",
+      "finalUrl": "https://status.sage.com/incidents/qgr9wjcbs466",
+      "sha256": "a3c6b5cfdb92f1cc55d9cbae305d7db5584905c0be9f79495c7dd0f63148a6c6",
+      "bytes": 85009,
+      "checkedAt": "2026-10-02T05:46:24.985211+00:00"
+    },
+    {
+      "id": "sage-incident-9zgm55t360kp",
+      "url": "https://status.sage.com/incidents/9zgm55t360kp",
+      "finalUrl": "https://status.sage.com/incidents/9zgm55t360kp",
+      "sha256": "45ac9a82cae57f34be673b7208268e5b4ee8ff220caae1dd1c92e8aa8d465f39",
+      "bytes": 85639,
+      "checkedAt": "2026-10-02T05:46:25.084995+00:00"
+    },
+    {
+      "id": "sage-incident-ldq4kg4q8htj",
+      "url": "https://status.sage.com/incidents/ldq4kg4q8htj",
+      "finalUrl": "https://status.sage.com/incidents/ldq4kg4q8htj",
+      "sha256": "471fb18f58059e36c698c08ea975e938ef50f06ba72ee0474e5872a39172744f",
+      "bytes": 86038,
+      "checkedAt": "2026-10-02T05:46:25.329387+00:00"
+    },
+    {
+      "id": "sage-incident-yh0mj6qwrmcy",
+      "url": "https://status.sage.com/incidents/yh0mj6qwrmcy",
+      "finalUrl": "https://status.sage.com/incidents/yh0mj6qwrmcy",
+      "sha256": "b26408e31ecbe2ed3dfed5c6cdabf2fe9dd5b5535452ad8b44d9129df49a8be8",
+      "bytes": 86125,
+      "checkedAt": "2026-10-02T05:46:25.464438+00:00"
+    },
+    {
+      "id": "sage-incident-2xx8jjz4pxfz",
+      "url": "https://status.sage.com/incidents/2xx8jjz4pxfz",
+      "finalUrl": "https://status.sage.com/incidents/2xx8jjz4pxfz",
+      "sha256": "708648bc4097e592ccb81bdc600ae03d51f0b6a9391b9c19f0572e83cf90c3bb",
+      "bytes": 85558,
+      "checkedAt": "2026-10-02T05:46:25.642112+00:00"
+    },
+    {
+      "id": "sage-incident-v9p9p0xfp5qj",
+      "url": "https://status.sage.com/incidents/v9p9p0xfp5qj",
+      "finalUrl": "https://status.sage.com/incidents/v9p9p0xfp5qj",
+      "sha256": "c893d406821f5cb042802afb529831a12c7261d8ae3296708b1d212befb4afbb",
+      "bytes": 85123,
+      "checkedAt": "2026-10-02T05:46:25.712523+00:00"
+    },
+    {
+      "id": "pennylane-incident-zfpsp7z9wn1z",
+      "url": "https://status.pennylane.com/incidents/zfpsp7z9wn1z",
+      "finalUrl": "https://status.pennylane.com/incidents/zfpsp7z9wn1z",
+      "sha256": "f1a134167bca7714dcbaa3ef74b2298fe3e788164fee3440d96b8c7629b08557",
+      "bytes": 72839,
+      "checkedAt": "2026-10-02T05:46:25.827062+00:00"
+    },
+    {
+      "id": "weproc-peppol-20260901-source",
+      "url": "https://status.weinvoice.fr/incident/1044756",
+      "finalUrl": "https://status.weinvoice.fr/incident/1044756",
+      "sha256": "240ef68de5d95508f7d69ace29462035f743a11753485d3e2778d559e48c00c4",
+      "bytes": 144531,
+      "checkedAt": "2026-10-02T05:46:25.672732+00:00"
+    },
+    {
+      "id": "weproc-piste-20260901-source",
+      "url": "https://status.weinvoice.fr/incident/1044543",
+      "finalUrl": "https://status.weinvoice.fr/incident/1044543",
+      "sha256": "9d01f4fb077ede75b977ce06468e3a3c56b62d54627177df236f2b9454155aab",
+      "bytes": 143055,
+      "checkedAt": "2026-10-02T05:46:25.840689+00:00"
+    },
+    {
+      "id": "dokapi-emails-20260916-source",
+      "url": "https://dokapi.statuspage.io/incidents/hx6xfwqj64k9",
+      "finalUrl": "https://dokapi.statuspage.io/incidents/hx6xfwqj64k9",
+      "sha256": "86578bd79df355be0f0208f37b427f922adc798f6f5e1398384e228cdd7a4ab2",
+      "bytes": 54396,
+      "checkedAt": "2026-10-02T05:46:26.252244+00:00"
+    },
+    {
+      "id": "spendesk-einvoice-20260904-source",
+      "url": "https://status.spendesk.com/incidents/7v0rjf4x41br",
+      "finalUrl": "https://status.spendesk.com/incidents/7v0rjf4x41br",
+      "sha256": "21000919b84624a04993eb9da75575851043a82f2afa571422bf04d776f23019",
+      "bytes": 73522,
+      "checkedAt": "2026-10-02T05:46:26.151930+00:00"
+    },
+    {
+      "id": "spendesk-access-20260902-source",
+      "url": "https://status.spendesk.com/incidents/t2xb9nmwz5s6",
+      "finalUrl": "https://status.spendesk.com/incidents/t2xb9nmwz5s6",
+      "sha256": "54c9f235a596d79da4f72af9e1fcde926e11a302728ec387ed0929311afd6fc9",
+      "bytes": 73264,
+      "checkedAt": "2026-10-02T05:46:26.407935+00:00"
+    },
+    {
+      "id": "spendesk-microsoft-20260904-source",
+      "url": "https://status.spendesk.com/incidents/b2hlvjc2kzn5",
+      "finalUrl": "https://status.spendesk.com/incidents/b2hlvjc2kzn5",
+      "sha256": "31cae2990813361e241b2e6883f3655688c1716225af4b6380b9912ede82bd72",
+      "bytes": 73662,
+      "checkedAt": "2026-10-02T05:46:26.252476+00:00"
+    },
+    {
+      "id": "spendesk-transfers-20260916-source",
+      "url": "https://status.spendesk.com/incidents/0dkn55v5wcqg",
+      "finalUrl": "https://status.spendesk.com/incidents/0dkn55v5wcqg",
+      "sha256": "74cf47fe60b8ff28d9b741b64523195bffef03395c7459e73f3f5ffb2816ecb3",
+      "bytes": 73382,
+      "checkedAt": "2026-10-02T05:46:26.699214+00:00"
+    },
+    {
+      "id": "invopop-console-20260910-source",
+      "url": "https://status.invopop.com/incidents/01M25ZQ2HQW967V65TSSFH91HM",
+      "finalUrl": "https://status.invopop.com/incidents/01M25ZQ2HQW967V65TSSFH91HM",
+      "sha256": "6b9d715298e1da00f0cf0b18479704214f7b0e13804dad574b6614d0b3697759",
+      "bytes": 81336,
+      "checkedAt": "2026-10-02T05:46:27.069220+00:00"
+    },
+    {
+      "id": "invopop-peppol-sml-20260902-source",
+      "url": "https://status.invopop.com/incidents/01M1GK0Q19JRJ5ZSHXWEAF0HW1",
+      "finalUrl": "https://status.invopop.com/incidents/01M1GK0Q19JRJ5ZSHXWEAF0HW1",
+      "sha256": "0014cccb7865824f9d4c8c43ad5100647a9f517bc7a526054e826a5fd60f80e6",
+      "bytes": 78809,
+      "checkedAt": "2026-10-02T05:46:26.562197+00:00"
+    },
+    {
+      "id": "myunisoft-connection-20260916-source",
+      "url": "https://meteo.myunisoft.fr/incident/02da09f4-55ea-4a25-9b80-779a7eef0939/",
+      "finalUrl": "https://meteo.myunisoft.fr/incident/02da09f4-55ea-4a25-9b80-779a7eef0939/",
+      "sha256": "0530b75cf57a1464b0fe0ac732eee30d5377cd3587958ea7191991316d297e6a",
+      "bytes": 6050,
+      "checkedAt": "2026-10-02T05:46:26.520219+00:00"
+    },
+    {
+      "id": "myunisoft-display-20260915-source",
+      "url": "https://meteo.myunisoft.fr/incident/21de5fdd-7d59-4b36-9790-8f63c9976523/",
+      "finalUrl": "https://meteo.myunisoft.fr/incident/21de5fdd-7d59-4b36-9790-8f63c9976523/",
+      "sha256": "011dcad008c885a20387b71a9a25d4f65f87a4ba2a8d81ab4e380395be181067",
+      "bytes": 6116,
+      "checkedAt": "2026-10-02T05:46:26.640990+00:00"
+    },
+    {
+      "id": "tungsten-support-20260916-source",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M2MVH4FXXX66TJXA9ZHDV5XJ",
+      "finalUrl": "https://status.tungstencloud.com/europe/incidents/01M2MVH4FXXX66TJXA9ZHDV5XJ",
+      "sha256": "678630eb34ab5520cbaec4c0a1dd005e319808be1b7622f489a5b62bf4b79e13",
+      "bytes": 252873,
+      "checkedAt": "2026-10-02T05:46:26.909197+00:00"
+    },
+    {
+      "id": "welyb-status-20260916",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "finalUrl": "https://support.welyb.fr/statut-plateforme",
+      "sha256": "02dddcc93f3c8afc46eb2e2fdecad76daaab3d253a8cc14463a22ce3920c05c4",
+      "bytes": 145276,
+      "checkedAt": "2026-10-02T05:46:26.745396+00:00"
+    },
+    {
+      "id": "frenchbreaches-welyb-20260915",
+      "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "finalUrl": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "sha256": "75edcf1dcdfdae2596bb4b69f02c587606d68c368a5c0e187ca28d2b9976c456",
+      "bytes": 79549,
+      "checkedAt": "2026-10-02T05:46:26.811406+00:00"
+    },
+    {
+      "id": "frenchbreaches-zenfirst-20260917",
+      "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "finalUrl": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "sha256": "eb1aea9d5f4f7480e929aff65cf1eea21ddfce04895e2e0406775e997999e4de",
+      "bytes": 77755,
+      "checkedAt": "2026-10-02T05:46:26.816791+00:00"
+    },
+    {
+      "id": "abby-emission-20260920",
+      "url": "https://aide.abby.fr/fr/articles/14893805-est-il-possible-d-emettre-des-factures-electroniques-des-maintenant-sur-abby",
+      "finalUrl": "https://aide.abby.fr/fr/articles/14893805-est-il-possible-d-emettre-des-factures-electroniques-des-maintenant-sur-abby",
+      "sha256": "d77bc9e69cdf3cd6eca996e3c25a10042e71b10358f49aa9d4c7d2411cf0d657",
+      "bytes": 90094,
+      "checkedAt": "2026-10-02T05:46:27.435691+00:00"
+    },
+    {
+      "id": "spendesk-amazon-20260916-source",
+      "url": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+      "finalUrl": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+      "sha256": "3bf957291edc29084f764d8c09e265360af244f4211692dab4fc52a24d4a3369",
+      "bytes": 75695,
+      "checkedAt": "2026-10-02T05:46:27.191064+00:00"
+    },
+    {
+      "id": "superpdp-directory-20260918-source",
+      "url": "https://status.superpdp.tech/",
+      "finalUrl": "https://status.superpdp.tech/",
+      "sha256": "ce3382375fc66b529a8fdf35b2883e16f2468ce33299ecd79fcebcbad6c1371e",
+      "bytes": 56586,
+      "checkedAt": "2026-10-02T05:46:27.078144+00:00"
+    },
+    {
+      "id": "pennylane-security-20260920",
+      "url": "https://www.pennylane.com/fr/securite",
+      "finalUrl": "https://www.pennylane.com/fr/securite",
+      "sha256": "7e2f049e0816ae2d756d069d68552d06c5d7f5efae82b805352ed7a3c7bd05c4",
+      "bytes": 409187,
+      "checkedAt": "2026-10-02T05:46:28.003102+00:00"
+    },
+    {
+      "id": "ecosio-france-20260921-source",
+      "url": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+      "finalUrl": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+      "sha256": "ceb4acdc7d10231fd5a3826f93c6016e5f28d83455328eef4bfd5461c13c6f4c",
+      "bytes": 130517,
+      "checkedAt": "2026-10-02T05:46:27.284376+00:00"
+    },
+    {
+      "id": "spendesk-france-20260922-source",
+      "url": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+      "finalUrl": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+      "sha256": "ebbc62186407beedb9cd334644997bd90aeef14fde58d207a7854a9b7b1da02b",
+      "bytes": 73496,
+      "checkedAt": "2026-10-02T05:46:27.696406+00:00"
+    },
+    {
+      "id": "spendesk-ios-20260921-source",
+      "url": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+      "finalUrl": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+      "sha256": "2a07b5357eab0230238a0b58987c433cb7069861f9a989add17060647a4689de",
+      "bytes": 73329,
+      "checkedAt": "2026-10-02T05:46:27.708014+00:00"
+    },
+    {
+      "id": "eezi-dashboard-20260922-source",
+      "url": "https://eezi.instatus.com/cmucut4ft1um81npccbw9inh5",
+      "finalUrl": "https://eezi.instatus.com/cmucut4ft1um81npccbw9inh5",
+      "sha256": "b3c7edabfbf329adf3f6c56d179cc9703d3ddeed28fa7dce5d45d6840b937e58",
+      "bytes": 126746,
+      "checkedAt": "2026-10-02T05:46:28.266520+00:00"
+    },
+    {
+      "id": "frenchbreaches-altagem-20260921",
+      "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "finalUrl": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "sha256": "8a7ba5207fa51a784de9836e864092441d982282cb29558b6c8ab12e3ab2fa13",
+      "bytes": 86597,
+      "checkedAt": "2026-10-02T05:46:27.777670+00:00"
+    },
+    {
+      "id": "cyberattaque-altagem-20260921",
+      "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "finalUrl": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "sha256": "2f80e5b20ff419fc49bc89e542c09cfab3c8586ded5135693eede6aca83cd79b",
+      "bytes": 75027,
+      "checkedAt": "2026-10-02T05:46:28.097136+00:00"
+    },
+    {
+      "id": "frenchbreaches-faktus-20260919",
+      "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "finalUrl": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "sha256": "74551239244b5d556165619a79350454e92eb36fa0ff4a30f7d45acd4e01d9cb",
+      "bytes": 89033,
+      "checkedAt": "2026-10-02T05:46:27.856419+00:00"
+    },
+    {
+      "id": "pennylane-incident-s9lkgtlw03s2",
+      "url": "https://status.pennylane.com/incidents/s9lkgtlw03s2",
+      "finalUrl": "https://status.pennylane.com/incidents/s9lkgtlw03s2",
+      "sha256": "ebea7c06d9e0d667de9222e68b9a0007aa1e1d6205d142da29f723a0839d41f0",
+      "bytes": 72146,
+      "checkedAt": "2026-10-02T05:46:28.478434+00:00"
+    },
+    {
+      "id": "weproc-incident-1073900",
+      "url": "https://status.weinvoice.fr/incident/1073900",
+      "finalUrl": "https://status.weinvoice.fr/incident/1073900",
+      "sha256": "b76bf9d310c0567088e7787c22f9f0a8e8c91e5d562df6383912adbc5d7a260a",
+      "bytes": 143058,
+      "checkedAt": "2026-10-02T05:46:28.204802+00:00"
+    },
+    {
+      "id": "lucca-incident-nfx98d4xggmb",
+      "url": "https://status.lucca.fr/incidents/nfx98d4xggmb",
+      "finalUrl": "https://status.lucca.fr/incidents/nfx98d4xggmb",
+      "sha256": "34eb8355f2b49dc4e4fdc815e464d3a91141e92e8eaea346eb7b71bf3df8714b",
+      "bytes": 74768,
+      "checkedAt": "2026-10-02T05:46:28.485053+00:00"
+    },
+    {
+      "id": "sage-incident-mc2p8blsm281",
+      "url": "https://status.sage.com/incidents/mc2p8blsm281",
+      "finalUrl": "https://status.sage.com/incidents/mc2p8blsm281",
+      "sha256": "7771c702f8d3dc823301218335659a78a66bd1d0ac6f420ba5970b0b517ad19d",
+      "bytes": 85738,
+      "checkedAt": "2026-10-02T05:46:28.997668+00:00"
+    },
+    {
+      "id": "sage-incident-4r3t9stk544k",
+      "url": "https://status.sage.com/incidents/4r3t9stk544k",
+      "finalUrl": "https://status.sage.com/incidents/4r3t9stk544k",
+      "sha256": "f41331452342434cc7388015876459d815c239d81058ecc450950ddb27e0e603",
+      "bytes": 83134,
+      "checkedAt": "2026-10-02T05:46:28.903111+00:00"
+    },
+    {
+      "id": "spendesk-incident-qs6rjc37fr6l",
+      "url": "https://status.spendesk.com/incidents/qs6rjc37fr6l",
+      "finalUrl": "https://status.spendesk.com/incidents/qs6rjc37fr6l",
+      "sha256": "166cb2bfeeb6aba3f4bb1a9986545c55b842a57d2c41057a6969621d43c31035",
+      "bytes": 73170,
+      "checkedAt": "2026-10-02T05:46:28.889077+00:00"
+    },
+    {
+      "id": "fakturownia-security-20260929",
+      "url": "https://fakturownia.pl/incydent",
+      "finalUrl": "https://fakturownia.pl/incydent",
+      "sha256": "14883c93134605ccbd00613e7e44b3f4f8b23bf3393866f9cc0bfef82b8c5314",
+      "bytes": 184000,
+      "checkedAt": "2026-10-02T05:46:28.728457+00:00"
+    },
+    {
+      "id": "factuali-notification-relayed-20261001",
+      "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "finalUrl": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "sha256": "b929d7f120a94cb7d1fe06eba5f6012ac98a33781dd0b58b44ee31007a5ccd11",
+      "bytes": 127712,
+      "checkedAt": "2026-10-02T05:46:28.834260+00:00"
+    },
+    {
+      "id": "fuitesinfos-vosfactures-20261001",
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "finalUrl": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "sha256": "adc4801312b530666613991c2aafd92453ec0145579d2006f28ca23f0e85f036",
+      "bytes": 49743,
+      "checkedAt": "2026-10-02T05:46:28.966209+00:00"
+    },
+    {
+      "id": "vosfactures-press",
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "finalUrl": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "sha256": "abb228287d176a2f7ac4623ca877f5d7887b34ec930b311a0878650492cfdd50",
+      "bytes": 49743,
+      "checkedAt": "2026-10-02T05:46:29.012371+00:00"
+    },
+    {
+      "id": "sage-ereporting-20260930",
+      "url": "https://status.sage.com/incidents/kt4m889tbj9p",
+      "finalUrl": "https://status.sage.com/incidents/kt4m889tbj9p",
+      "sha256": "cd674556bb3a63af4d31249d9003219b44f7c818fde04030e1a478c198eb91ca",
+      "bytes": 85213,
+      "checkedAt": "2026-10-02T06:00:15.277816+00:00"
+    },
+    {
+      "id": "esker-environment-e-20261001",
+      "url": "https://www.trustesker.com/?env=E",
+      "finalUrl": "https://www.trustesker.com/?env=E",
+      "sha256": "786bcded3bd83c84f7c18efef7165cc0b70652203bac5b5a0b8cfdfeedeb600a",
+      "bytes": 61113,
+      "checkedAt": "2026-10-02T06:00:13.610307+00:00"
+    },
+    {
+      "id": "pennylane-iso27001-20261002.pdf",
+      "url": "https://assets.ctfassets.net/b76knntgaaiu/1ZoQOqZDrK32aeBHsQPrb6/ba3bc5483f2ec42f3fb299bbb247cf62/Pennylane_ISO27001_Certificate_FR_EN_2026.pdf",
+      "finalUrl": "https://assets.ctfassets.net/b76knntgaaiu/1ZoQOqZDrK32aeBHsQPrb6/ba3bc5483f2ec42f3fb299bbb247cf62/Pennylane_ISO27001_Certificate_FR_EN_2026.pdf",
+      "sha256": "9c85a156b6f2c0c7b3b6abe2ea3bb315bf3cc0176b396d00f08870b634515408",
+      "bytes": 1578929,
+      "checkedAt": "2026-10-02T06:00:13.992854+00:00"
+    },
+    {
+      "id": "flowie-security-20261002",
+      "url": "https://get-flowie.com/fr/security",
+      "finalUrl": "https://get-flowie.com/fr/security",
+      "sha256": "f955bd6d2a63b04b6d9ff96ed0450a17e9ecfb522672ec0079853a1b6fa3b52b",
+      "bytes": 203859,
+      "checkedAt": "2026-10-02T06:00:13.749122+00:00"
+    },
+    {
+      "id": "pennylane-subprocessors-2026-09",
+      "url": "https://www.pennylane.com/fr/legal/subcontractors",
+      "finalUrl": "https://www.pennylane.com/fr/legal/subcontractors",
+      "sha256": "b129c1596a7bb13c1a8efb6e4bb697125a76c1f4ce5cd8946a23e3c94378831b",
+      "bytes": 352190,
+      "checkedAt": "2026-10-02T06:00:14.307989+00:00"
+    },
+    {
+      "id": "sellsy-ereporting-confirmation-20261002",
+      "url": "https://help.sellsy.com/fr/articles/15945281-regime-de-tva-et-frequence-d-envoi-du-e-reporting",
+      "finalUrl": "https://help.sellsy.com/fr/articles/15945281-regime-de-tva-et-frequence-d-envoi-du-e-reporting",
+      "sha256": "7b3618440b3ee955314fca4fde745213f889784bf323d0fbc4b21f34605d3db2",
+      "bytes": 107000,
+      "checkedAt": "2026-10-02T06:00:14.809714+00:00"
+    },
+    {
+      "id": "aife-vosfactures-20261002",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "finalUrl": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "sha256": "a7513abbbf01b4523e18f21047c76e29fae89f3d1779c292742bcca7128e6bbb",
+      "bytes": 307328,
+      "checkedAt": "2026-10-02T06:00:14.574672+00:00"
+    },
+    {
+      "id": "pennylane-fraud-context",
+      "url": "https://help.pennylane.com/fr/articles/473193-identifier-les-menaces-de-fraude-ciblant-les-utilisateurs-pennylane",
+      "finalUrl": "https://help.pennylane.com/fr/articles/473193-identifier-les-menaces-de-fraude-ciblant-les-utilisateurs-pennylane",
+      "sha256": "124969e3154d49110e4fd765a477c9bf3fd1f84867bde8e9fe3ab3c14eb5e6f2",
+      "bytes": 97237,
+      "checkedAt": "2026-10-02T06:00:14.613240+00:00"
+    },
+    {
+      "id": "pennylane-free-2026",
+      "url": "https://www.pennylane.com/fr/facturation-electronique-gratuite",
+      "finalUrl": "https://www.pennylane.com/fr/facturation-electronique-gratuite",
+      "sha256": "22d2763c6aa96457eea376167e1baa519f0742a6b0f0fd87d8f500b10ceadfba",
+      "bytes": 406993,
+      "checkedAt": "2026-10-02T06:00:15.086236+00:00"
+    },
+    {
+      "id": "qonto-flow-2026",
+      "url": "https://support-fr.qonto.com/hc/fr/articles/27885538176913-Comment-fonctionne-la-facturation-%C3%A9lectronique",
+      "finalUrl": "https://support-fr.qonto.com/hc/fr/articles/27885538176913-Comment-fonctionne-la-facturation-%C3%A9lectronique",
+      "sha256": "017d82939a8950327e5dc186d5be5dbf3dedfd676c86deb8c84baf70e8892001",
+      "bytes": 68969,
+      "checkedAt": "2026-10-02T06:00:14.737641+00:00"
+    },
+    {
+      "id": "qonto-ereporting-2026",
+      "url": "https://support-fr.qonto.com/hc/fr/articles/48509023125521-Comment-activer-et-utiliser-l-e-reporting-avec-Qonto",
+      "finalUrl": "https://support-fr.qonto.com/hc/fr/articles/48509023125521-Comment-activer-et-utiliser-l-e-reporting-avec-Qonto",
+      "sha256": "7dc1cf7054b0895ad0bf607c5670a0bb28586b380048a1405d0c234ea4a775d3",
+      "bytes": 44295,
+      "checkedAt": "2026-10-02T06:00:14.966514+00:00"
+    },
+    {
+      "id": "indy-invoicing-2026",
+      "url": "https://www.indy.fr/facturation-electronique/",
+      "finalUrl": "https://www.indy.fr/facturation-electronique/",
+      "sha256": "502ae142d6167abac99213b8d6010e21ddab44cfbffb4be3931af5d059fd2815",
+      "bytes": 466889,
+      "checkedAt": "2026-10-02T06:00:14.966239+00:00"
+    },
+    {
+      "id": "superpdp-pricing-2026",
+      "url": "https://www.superpdp.tech/tarifs/",
+      "finalUrl": "https://www.superpdp.tech/tarifs/",
+      "sha256": "dda03d53fcd9316f8d03e0ffbf0bc01f5730714c3fdf9593ea7d658f5e9d3b9d",
+      "bytes": 29631,
+      "checkedAt": "2026-10-02T06:00:15.075202+00:00"
+    },
+    {
+      "id": "b2brouter-pricing-2026",
+      "url": "https://www.b2brouter.net/fr/tarifs/",
+      "finalUrl": "https://www.b2brouter.net/fr/tarifs/",
+      "sha256": "2b3d72ece87df94810deaea49b35e761da567468c47f213363f26437d115047a",
+      "bytes": 124624,
+      "checkedAt": "2026-10-02T06:00:15.343836+00:00"
+    },
+    {
+      "id": "cert-fr-sap-20260908",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1134/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1134/",
+      "sha256": "8d95ae447bbef6f9623dc89136c053619e8983adc1190bc3004a7a849ffb28cf",
+      "bytes": 23779,
+      "checkedAt": "2026-10-02T06:00:15.234323+00:00"
+    },
+    {
+      "id": "blg-security-20260810",
+      "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/notification-d-incident-de-securite-et-mesures-de-protection-blgcloud-545",
+      "finalUrl": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545",
+      "sha256": "64470c26e202d2c6133b5a44c86f6e8de39298eff0b6db3a7e2db66b05d94f4c",
+      "bytes": 85007,
+      "checkedAt": "2026-10-02T06:00:15.351749+00:00"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "esker-environment-E",
+      "url": "https://www.trustesker.com/?env=E",
+      "title": "TrustEsker environnement E",
+      "publishedAt": null,
+      "decision": "published",
+      "reason": "Avis Esker on Demand, environnement E ; amélioration partielle et investigation, portée PA française non précisée."
+    },
+    {
+      "id": "esker-environment-J",
+      "url": "https://www.trustesker.com/?env=J",
+      "title": "TrustEsker environnement J",
+      "publishedAt": null,
+      "decision": "preserved_unknown",
+      "reason": "Ancien message retiré : aucune annonce de résolution retrouvée."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-ALE-011",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-011/",
+      "title": "Multiples vulnérabilités dans Citrix NetScaler ADC et Gateway (28 septembre 2026)",
+      "publishedAt": "2026-09-28T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "sage-jrlj68sdbnvm",
+      "url": "https://status.sage.com/incidents/jrlj68sdbnvm",
+      "title": "HMRC - Degraded Performance",
+      "publishedAt": "2026-10-01T09:57:27.000Z",
+      "decision": "excluded",
+      "reason": "HMRC au Royaume-Uni ; hors du périmètre français retenu."
+    },
+    {
+      "id": "sage-kt4m889tbj9p",
+      "url": "https://status.sage.com/incidents/kt4m889tbj9p",
+      "title": "E-Reporting - Partial Outage",
+      "publishedAt": "2026-10-01T09:53:03.000Z",
+      "decision": "published",
+      "reason": "Avis primaire : Sage 50 FR, Sage Online FR et composant E-Reporting ; cause identifiée, résolution non annoncée."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1238",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1238/",
+      "title": "Multiples vulnérabilités dans HPE Aruba Networking Instant On (30 septembre 2026)",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1240",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1240/",
+      "title": "Multiples vulnérabilités dans les produits Mozilla (30 septembre 2026)",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1237",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1237/",
+      "title": "Multiples vulnérabilités dans Google Chrome (30 septembre 2026)",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1241",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1241/",
+      "title": "Multiples vulnérabilités dans OpenSSL (30 septembre 2026)",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1242",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1242/",
+      "title": "Multiples vulnérabilités dans GitLab (30 septembre 2026)",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1239",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1239/",
+      "title": "Vulnérabilité dans CPython (30 septembre 2026)",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1243",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1243/",
+      "title": "Multiples vulnérabilités dans CPython (01 octobre 2026)",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1245",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1245/",
+      "title": "Multiples vulnérabilités dans Redmine (01 octobre 2026)",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1244",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1244/",
+      "title": "Multiples vulnérabilités dans Mozilla Thunderbird (01 octobre 2026)",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1246",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1246/",
+      "title": "Vulnérabilité dans Cisco Catalyst SD-WAN (01 octobre 2026)",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "decision": "excluded",
+      "reason": "Vulnérabilité ou alerte produit. La source ne décrit pas une compromission d’une PA. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "sage-twgzgkzc6hr4",
+      "url": "https://status.sage.com/incidents/twgzgkzc6hr4",
+      "title": "Brightpearl - Partial Outage",
+      "publishedAt": "2026-10-01T18:14:19.000Z",
+      "decision": "excluded",
+      "reason": "Brightpearl / intégration eBay ; impact sur les flux français de facturation électronique non documenté."
+    }
+  ],
+  "manualObservations": [
+    {
+      "id": "aife-vosfactures-20261002",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "readMethod": "Bandeau Information sécurité lu dans le navigateur sur la page Entreprise, sans authentification. Le HTML HTTP seul charge un squelette ; son empreinte ne représente pas le texte affiché.",
+      "firstObservedAt": "2026-10-02",
+      "publishedAt": null,
+      "decision": "published_availability_pa",
+      "summary": "L’AIFE suspend provisoirement les échanges FACTUALI / VosFactures par précaution. Vérifications en cours avant reprise. Elle indique qu’aucune donnée de facturation n’avait été transmise à l’administration par cette solution et exclut des sanctions fondées sur les seules conséquences de la suspension."
+    }
+  ],
+  "profileDecisions": [
+    {
+      "platformSlug": "pennylane",
+      "decision": "renewed_certificate",
+      "sourceId": "pennylane-iso27001-20261002",
+      "certificateNumber": "IS 786660",
+      "validFrom": "2026-09-20",
+      "validUntil": "2029-09-19",
+      "issuedAt": "2026-07-23",
+      "note": "Nouveau lien fourni sur la page sécurité. Le document porte sur le SMSI des activités SaaS."
+    },
+    {
+      "platformSlug": "flowie",
+      "decision": "declared_scope",
+      "sourceId": "flowie-security-20261002",
+      "note": "Hébergement primaire Paris, reprise Belgique ; renouvellement ISO déclaré. Certificat courant sous NDA, dates absentes, affirmations de résidence UE et transferts de sous-traitants à recouper."
+    },
+    {
+      "platformSlug": "abby",
+      "decision": "unchanged",
+      "note": "Émission toujours annoncée pour septembre 2027."
+    },
+    {
+      "platformSlug": "qonto",
+      "decision": "unchanged",
+      "note": "E-reporting limité à la bêta pour certaines organisations."
+    },
+    {
+      "platformSlug": "sellsy",
+      "decision": "unchanged",
+      "note": "Première URL opérationnelle : HTTP 401. Une autre aide publique, relue directement, maintient l’e-reporting en développement. La restriction actuelle est conservée."
+    },
+    {
+      "platformSlug": "superpdp",
+      "decision": "unchanged",
+      "note": "Tarifs relus : compte gratuit jusqu’à 1 000 factures/mois, API au volume."
+    },
+    {
+      "platformSlug": "b2brouter",
+      "decision": "unchanged",
+      "note": "Tarifs relus : Professional à 110 EUR HT/an, conformité française payante."
+    },
+    {
+      "platformSlug": "axonaut",
+      "decision": "not_published",
+      "note": "Une republication LinkedIn évoque une revendication visant des clients et affiche une ancienneté de deux mois. Date originale et périmètre non vérifiés ; cette piste n’est pas ajoutée aux incidents depuis septembre."
+    }
+  ]
+}
