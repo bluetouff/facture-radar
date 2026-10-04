@@ -139,6 +139,9 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       validity: "not_published",
     }, ["flowie-security-20261002"], "La page mentionne un renouvellement en cours et publie le numéro 122245 tout en renvoyant le certificat courant sous NDA. Dates, titulaire et périmètre certifié restent à vérifier sur le document. Ses déclarations sur la résidence UE et les transferts des sous-traitants demandent un recoupement contractuel.", "2026-10-02"),
   },
+  ipaidthat: {
+    exitTerms: documented<ExitTerms>({ bulkExport: null, formats: [], postTerminationAccess: null, fees: null }, ["ipaidthat-portabilite-20261004"], "L’aide décrit la portabilité entrante de la ligne d’annuaire, avec un délai minimum de 10 jours. L’historique des factures et leurs cycles restent chez la PA précédente ; la procédure transfère la ligne, sans reprendre les factures passées. Les conditions d’export complet et d’accès après résiliation restent à obtenir auprès de cette PA.", "2026-10-04"),
+  },
   fulll: {
     availability: {
       sendsInvoices: available("Conformité Flash et environnement fulll", ["fulll-pa-2026"]),

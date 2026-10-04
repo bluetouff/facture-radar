@@ -61,9 +61,12 @@ function parseJson(source, body, now) {
   if (source.profile !== "myunisoft" || !Array.isArray(parsed) || parsed.length > 500) throw new Error("Calendrier JSON invalide");
   const ids = new Set();
   return parsed.map(item => {
-    const start = timestamp(item.start, now), end = item.end == null ? null : timestamp(item.end, now);
+    // Calendar end is a display boundary and can be in the future while an incident is open.
+    // Preserve it as evidence without presenting it as a future publication or resolution.
+    const start = timestamp(item.start, now), end = item.end == null ? null : timestamp(item.end, Infinity);
     if (end && end < start) throw new Error("Chronologie JSON invalide");
-    const result = candidate(source, { url: item.url, title: item.title, publishedAt: end ?? start, content: JSON.stringify({ title: item.title, calendarStart: start, calendarEnd: end }) }, now);
+    const publishedAt = end && Date.parse(end) <= now ? end : start;
+    const result = candidate(source, { url: item.url, title: item.title, publishedAt, content: JSON.stringify({ title: item.title, calendarStart: start, calendarEnd: end }) }, now);
     if (item.id !== result.id.slice(source.id.length + 1) || ids.has(result.id)) throw new Error("Identifiant calendrier invalide");
     ids.add(result.id);
     return result;

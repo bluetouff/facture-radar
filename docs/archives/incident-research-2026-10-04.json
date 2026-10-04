@@ -1,0 +1,1450 @@
+{
+  "checkedAt": "2026-10-04",
+  "since": "2026-09-01",
+  "refreshWindowSince": "2026-10-01",
+  "platformCount": 149,
+  "method": "Recherche nominative des nouveautés depuis le 1er octobre pour les 149 PA, par groupes de quatre requêtes indépendantes. Relecture des avis déjà identifiés depuis septembre et des sources primaires pertinentes. Les URL de résultats sont archivées sans paramètres de suivi. Les notifications privées et ressources non indexées restent hors du périmètre ; un résultat absent laisse l’état de sécurité inconnu.",
+  "queryGroups": [
+    {
+      "platformSlugs": [
+        "a-cube",
+        "abby",
+        "accenture",
+        "ademico"
+      ],
+      "queries": [
+        {
+          "q": "\"A-Cube\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Abby\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Accenture eComply & Verify\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Ademico Software\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://fr.trustpilot.com/review/abby.fr",
+        "https://idees.abby.fr/fr",
+        "https://clevin.eu/france/plateformes-agreees",
+        "https://aide.abby.fr/fr/articles/9853360-comment-sont-securisees-mes-donnees-sur-abby",
+        "https://abby.fr/presse",
+        "https://aide.abby.fr/fr/articles/10959466-tout-savoir-sur-la-facturation-electronique",
+        "https://community.abby.fr/latest",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://abby.fr/qui-est-abby",
+        "https://docs.acubeapi.com/documentation/api/gov-fr/invoices",
+        "https://pa.l0g.fr/incidents/",
+        "https://fr.linkedin.com/posts/abbyfrance_abby-se-connecte-maintenant-directement-%C3%A0-activity-7463522650670321664-_FNA",
+        "https://www.cafc.uscourts.gov/opinions-orders/25-1446.OPINION.10-1-2026_2764674.pdf",
+        "https://veritaglobal.net/americansignature/document/2512105261002000000000001",
+        "https://www.nejm.org/doi/pdf/10.1056/NEJM200106143442401",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao",
+        "https://www.justice.gov/d9/osg/briefs/2015/03/17/14-556tsacunitedstates.pdf",
+        "https://public-inspection.federalregister.gov/2025-13077.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "agena3000",
+        "agicap",
+        "ags-records",
+        "arratech"
+      ],
+      "queries": [
+        {
+          "q": "\"AGENA3000\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Agicap\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"WiDOFACT by AGS\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Arratech Connect\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.agena3000.com/fr",
+        "https://fr.linkedin.com/posts/agena-3000_bahier-industriel-de-la-charcuterie-traditionnelle-activity-7158745298536693760-SipN",
+        "https://agicap.com/fr/",
+        "https://www.peppolcheck.fr/logiciels/agicap-facture-electronique",
+        "https://jfe.fnfe-mpe.org/liste-des-exposants/6968c00d7e2c5b7c290fdb7a",
+        "https://fr.linkedin.com/in/ficheproduitgdsnpim",
+        "https://www.arratech.com/faqs",
+        "https://fr.trustpilot.com/review/agicap.com",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/agicap/",
+        "https://www.cabinetdigital.fr/actualites/",
+        "https://www.societe.com/societe/agicap-823248703.html",
+        "https://fr.wikipedia.org/wiki/Agicap"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "arteva",
+        "aruba",
+        "atgp",
+        "avalara"
+      ],
+      "queries": [
+        {
+          "q": "\"Artéva Orchestrade\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Aruba OneSuite\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"BEE.FACT\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Avalara\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.atgp.net/",
+        "https://servicealert.ai/status/chargebee/history",
+        "https://status.avalara.com/",
+        "https://pingoru.io/providers/chargebee/outage-history",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/gp/",
+        "https://www.avalara.com/fr/fr/index.html",
+        "https://compafacturation.com/plateforme",
+        "https://legal.avalara.com/avalaraenduserterms.html",
+        "https://isdown.app/status/avalara/incidents/658001-avalara-exemption-certificate-management-service-degradation",
+        "https://www.bbb.org/us/wa/seattle/profile/computer-software-developers/avalara-inc-1296-22018273/complaints",
+        "https://pa.l0g.fr/incidents/",
+        "https://fr.linkedin.com/in/fr%C3%A9d%C3%A9ric-rollet-0968206a",
+        "https://veritaglobal.net/noble/document/2611369261001000000000007"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "axelor",
+        "axonaut",
+        "axway",
+        "azopio"
+      ],
+      "queries": [
+        {
+          "q": "\"Axelor\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Axonaut\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Axway eInvoicing\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Azopio\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.azopio.com/fr/security-policy/",
+        "https://axonaut.com/content/presse",
+        "https://fr.linkedin.com/posts/axonaut_ce-qui-change-dans-axonaut-juillet-2026-activity-7478361730302070785-uhwl",
+        "https://www.peppolcheck.fr/logiciels/azopio-facture-electronique",
+        "https://pa.l0g.fr/incidents/",
+        "https://support.axonaut.com/gerez-vos-factures/faire-payer-mes-factures-par-carte-via-stripe/",
+        "https://support.axonaut.com/gerez-vos-factures/gestion-des-factures/comment-creer-une-facture-davancement-dans-axonaut/",
+        "https://axelor.com/",
+        "https://support.axonaut.com/",
+        "https://axelor.com/data-security-and-processing-policy/",
+        "https://www.azopio.com/en/tc-service-en/",
+        "https://facturematch.fr/plateformes-agreees/axonaut"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "b2brouter",
+        "b4value",
+        "basware",
+        "bc-solutions"
+      ],
+      "queries": [
+        {
+          "q": "\"B2BRouter\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"b4value.net\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Basware\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"eas'Invoice\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://basware.service-now.com/bw",
+        "https://www.basware.com/fr/a-propos-de-basware",
+        "https://docs.b2brouter.net/fr/user-guide/overview/",
+        "https://news.basware.com/en",
+        "https://www.b2brouter.net/be/conditions-generales-du-service/",
+        "https://fr.linkedin.com/posts/basware_votre-facturation-est-elle-%C3%A0-jour-avec-les-activity-7245036415342850049-D7vS",
+        "https://www.b2brouter.net/fr/",
+        "https://baswaretest.service-now.com/bw",
+        "https://bcsolutions.fr/easinvoice/",
+        "https://customer.basware.com/en/features/archive/2026/03",
+        "https://www.ramsaysante.fr/basware",
+        "https://docs.b2brouter.net/fr/developers/overview/",
+        "https://fr.wikipedia.org/wiki/Basware",
+        "https://de.wikipedia.org/wiki/Basware",
+        "https://www.basware.de/",
+        "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47603/707080c4-2b5f-491a-bd27-6d68e8b7396a_518.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "billit",
+        "blg",
+        "cbs",
+        "cecurity"
+      ],
+      "queries": [
+        {
+          "q": "\"Billit\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"blgCloud\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"cbs e-world.cloud\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Cecurity eFacture\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/company/blgcloud",
+        "https://fr.trustpilot.com/review/billit.eu",
+        "https://status.billit.eu/",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.billit.eu/fr-fr/comment-fonctionne-billit/",
+        "https://conforme2026.fr/guides/cyberattaque-welyb-agiris-fuite-donnees-facturation-electronique",
+        "https://docs.billit.be/docs/general-info-on-pa",
+        "https://www.billit.eu/fr-fr/support/",
+        "https://solune.com/",
+        "https://www.payit.be/nl/release-notes",
+        "https://www.blgcloud.fr/",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/cecurity/",
+        "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47603/707080c4-2b5f-491a-bd27-6d68e8b7396a_518.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "cegedim",
+        "cegi-alfa",
+        "cegid",
+        "chaintrust"
+      ],
+      "queries": [
+        {
+          "q": "\"Cegedim SY business\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Cegi Alfa\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Cegid\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Chaintrust\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/cegedim-business-services-factures-et-achats_facturationelectronique-plateformeagreee-activity-7510949793129492481-DSco",
+        "https://fr.trustpilot.com/review/cegid.com",
+        "https://fr.linkedin.com/posts/cegid-pmi-althays_erp-cegid-support-activity-7384963188498485248-MVzu",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.cegi.fr/contact/",
+        "https://www.cegedim-business-services.com/",
+        "https://www.cegedim.com/press/release/Pages/default.aspx",
+        "https://www.cegid.com/fr/",
+        "https://www.cegedim.fr/presse/filiales/Docavenue/Pages/defaultdocavenue.aspx",
+        "https://www.cegedim.fr/solutions/Pages/Outsourcing.aspx",
+        "https://vdp.cegid.com/",
+        "https://kohenavocats.fr/2026/09/17/facture-electronique-panne-fournisseurs-clients-plateformes-decisions-2026/",
+        "https://fr.wikipedia.org/wiki/Cegid",
+        "https://en.wikipedia.org/wiki/Cegid",
+        "https://de.wikipedia.org/wiki/Cegid"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "cleartax",
+        "comarch",
+        "cyclope",
+        "darva"
+      ],
+      "queries": [
+        {
+          "q": "\"ClearTax\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Comarch\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Cyclope\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Ofeli by DARVA\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.cleartax.com/fr",
+        "https://www.comarch.fr/",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/cyclope/",
+        "https://cyclope.ai/en/tunnelwatch/",
+        "https://quelleplateforme.fr/mises-a-jour.html",
+        "https://aide.comarch.fr/standard/documentation/instruction-de-migration-processus-de-mise-a-jour/",
+        "https://www.cyclopevr.com/",
+        "https://www.comarchedi.com.ua/",
+        "https://pomoc.comarchesklep.pl/artykul/dziennik-zdarzen/",
+        "https://www.cleartax.com/global/trust-center",
+        "https://pomoc.comarch.pl/optima/pl/2026_5/dokumentacja/ksef/",
+        "https://en.wikipedia.org/wiki/Comarch"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "dext",
+        "digipharmacie",
+        "digital-technologies",
+        "docnova"
+      ],
+      "queries": [
+        {
+          "q": "\"Dext\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"DigiPA\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Digital Technologies\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Docnova\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.statut-services.fr/service/dext",
+        "https://dext.com/fr/support/contact",
+        "https://dext.com/fr/ressources/nouveautes-produit",
+        "https://dext.com/fr/ressources/facture-electronique",
+        "https://dext.com/fr/ressources/blog-actualite-comptable/single/reforme-facturation-electronique-actualite-dext",
+        "https://docnova.ai/",
+        "https://dext.com/fr",
+        "https://dext.com/fr/ressources/plateforme-agreee-pa-definition",
+        "https://info.dext.com/-comptatour2026-juin-juillet",
+        "https://help.docnova.ai/docs/next/developer-guide/country-spesific-e-invoice/france-api-docs/",
+        "https://pa.l0g.fr/incidents/",
+        "https://help.docnova.ai/docs/1.0.0/user-guide/docnova-france/e-invoicing-e-reporting-compliance/",
+        "https://bmjopen.bmj.com/content/bmjopen/16/8/e121014.full.pdf",
+        "https://investors.coca-colacompany.com/filings-reports/annual-filings-10-k/content/0000021344-20-000006/0000021344-20-000006.pdf",
+        "https://www.zamstats.gov.zm/wp-content/uploads/2026/07/National-ICT-Survey-2022.pdf",
+        "https://bmjopen.bmj.com/content/bmjopen/16/9/e120663.full.pdf",
+        "https://www150.statcan.gc.ca/n1/daily-quotidien/260330/dq260330b-eng.pdf",
+        "https://legislature.vermont.gov/Documents/2026/Workgroups/Senate%20Education/Bills/H.650/Witness%20Testimony/H.650~Faith%20Boninger~Written%20Testimony~4-21-2026.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "docoon",
+        "docprocess",
+        "docuware",
+        "dokapi"
+      ],
+      "queries": [
+        {
+          "q": "\"Docoon Invoice\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"DocProcess\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"DocuWare\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Dokapi\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://knowledgecenter.docuware.com/docs/docuware-cloud-status-page-web-client",
+        "https://support.docuware.com/fr-FR/",
+        "https://docoon.com/",
+        "https://docoon.com/cgu-docoon-invoice/",
+        "https://divalto.atlassian.net/wiki/spaces/VP/pages/13380419639/Docoon%2BInvoice%2B2.19.1",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/docprocess/",
+        "https://start.docuware.com/fr/s%C3%A9curit%C3%A9-prot%C3%A9ger-les-informations-et-continuit%C3%A9-des-activit%C3%A9s",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.comparateur-facturation-electronique.fr/2026/09/26/pannes-incidents-plateformes-agreees/",
+        "https://knowledgecenter.docuware.com/docs/fr/e-invoicing-service-statuses",
+        "https://start.docuware.com/fr/mise-en-conformit%C3%A9-et-certifications",
+        "https://www.dokapi.io/fr-be/articles/acquisition-peppoledge",
+        "https://en.wikipedia.org/wiki/DocuWare",
+        "https://es.wikipedia.org/wiki/DocuWare"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "dougs",
+        "doxallia",
+        "ecosio-intercom",
+        "edicom"
+      ],
+      "queries": [
+        {
+          "q": "\"Dougs\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Doxallia Invox-IA\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"ecosio InterCom\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"EDICOM\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://pa.l0g.fr/incidents/",
+        "https://www.dougs.fr/",
+        "https://www.dougs.fr/cgu/",
+        "https://www.dougs.fr/politique-confidentialite/",
+        "https://edicomgroup.com/fr/contenus",
+        "https://pa.l0g.fr/changements/",
+        "https://pa.l0g.fr/",
+        "https://www.dougs.fr/blog/dougs-devient-pdp/",
+        "https://www.dougs.fr/contact/",
+        "https://edicomgroup.com/fr/enterprise",
+        "https://www.dougs.fr/mentions-legales/",
+        "https://fr.linkedin.com/company/doxallia-gca",
+        "https://fr.wikipedia.org/wiki/Dougs",
+        "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "edicom-group",
+        "edics",
+        "edieyes",
+        "edt"
+      ],
+      "queries": [
+        {
+          "q": "\"EDICOM Group\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"EDiCSpro\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"EdiEyes Vision Care\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"EDT EIMA\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.edieyes.fr/",
+        "https://edicomgroup.com/fr/contenus/etudes-cas",
+        "https://peppol.org/members/peppol-certified-service-providers/",
+        "https://eucleia-sante.fr/opticien/",
+        "https://compafacturation.com/plateforme",
+        "https://www.peppol-id.eu/fr/stats/providers/edieyes/fr",
+        "https://www.malt.com/profile/alizeecopin1",
+        "https://facture-electronique-en-ligne.fr/secteurs/e-leclerc",
+        "https://edicomgroup.com/pt/recursos/casos-estudo",
+        "https://fr.linkedin.com/posts/edics_edicspro-d%C3%A9mat%C3%A9rialisation-factureelectronique-activity-7183021118750945280-BenN",
+        "https://edicomgroup.com/es/recursos",
+        "https://www.legifiscal.fr/creation-entreprise/facturation-electronique-plateformes-agreees.html"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "eezi",
+        "effinum",
+        "enerj",
+        "entropics"
+      ],
+      "queries": [
+        {
+          "q": "\"eezi\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Effinum\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"ENERJ\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"ZenOnline\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://effinum.fr/",
+        "https://eezi.instatus.com/",
+        "https://www.enerj.fr/",
+        "https://www.comparateur-facturation-electronique.fr/2026/09/26/pannes-incidents-plateformes-agreees/",
+        "https://eezi.instatus.com/subscribe/slack",
+        "https://www.comparateur-facturation-electronique.fr/produit/effinum/",
+        "https://orne.cerfrance.fr/actualites/cerfrance-connect-votre-espace-a-evolue-le-22-juin-retrouvez-toutes-les-infos-utiles",
+        "https://www.eezi.com/license-agreement/",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/effinum-by-spee/",
+        "https://www.pagesjaunes.fr/pros/50410031",
+        "https://eezi.io/",
+        "https://fr.linkedin.com/posts/cerfrance-lot_facturation%C3%A9lectronique-effinum-cerfrance-activity-7505571342608613376-hcn8"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "esalink",
+        "esi",
+        "esker",
+        "euro-information"
+      ],
+      "queries": [
+        {
+          "q": "\"EsaLink Hubtimize\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"ESI\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Esker\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"HBS e-factures\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.trustesker.com/",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.esker.com/fr/",
+        "https://www.esalink.com/",
+        "https://fr.linkedin.com/pulse/lancement-rfe-retour-en-chiffres-sur-septembre-2026-hzgae",
+        "https://esker.com/fr/a-propos-esker/communiques-de-presse/",
+        "https://quelleplateforme.fr/mises-a-jour.html",
+        "https://www.cic.fr/fr/entreprises/comptes/e-factures.html",
+        "https://www.esalink.com/blog/partenariat-esalink-diagram/",
+        "https://www.connect-compta.fr/posts/ce-qui-se-cache-derriere-les-chiffres-6",
+        "https://esker.com/fr/engagement-esker-covid-19/",
+        "https://play.google.com/store/apps/details",
+        "https://fr.wikipedia.org/wiki/Esker_%28entreprise%29",
+        "https://www2.fmc.gov/readingroom/docs/25-09/%2832%29%2025-09%20Joint%20Status%20Report%20and%20Fifth%20Motion%20to%20Extend%20Deadlines.pdf/",
+        "https://www.justice.gov/eoir/media/484621/dl",
+        "https://www.justice.gov/sites/default/files/pages/attachments/2016/02/22/raroster-orgs-reps.pdf",
+        "https://public-inspection.federalregister.gov/2024-26491.pdf",
+        "https://veritaglobal.net/sangamotherapeutics/document/2610989261002000000000005"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "facnote",
+        "fiducial-cloud",
+        "fiskaltrust",
+        "flowie"
+      ],
+      "queries": [
+        {
+          "q": "\"Facnote PDP\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"FIDUCIAL Cloud Facilia\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"fiskaltrust\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Flowie\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.get-flowie.com/sla",
+        "https://www.get-flowie.com/trust",
+        "https://compafacturation.com/plateforme",
+        "https://pa.l0g.fr/incidents/",
+        "https://fiskaltrust.eu/pt-pt/partner/product/notifications/",
+        "https://docs.get-flowie.com/compliance/fr/refusal-rejection.fr",
+        "https://www.comparateur-facturation-electronique.fr/produit/flowie-2/",
+        "https://www.comparateur-facturation-electronique.fr/journal-des-mises-a-jour/",
+        "https://docs.get-flowie.com/index.fr",
+        "https://docs.fiskaltrust.cloud/changelog/page/5",
+        "https://www.linkedin.com/showcase/fiskaltrust-company-fr",
+        "https://facturematch.fr/plateformes-agreees"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "fonoa",
+        "freedz",
+        "fulll",
+        "generix"
+      ],
+      "queries": [
+        {
+          "q": "\"Fonoa\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Freedz\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"fulll\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Generix\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.fulll.fr/",
+        "https://freedz.io/",
+        "https://www.fulll.fr/croissance-cabinet",
+        "https://assistance.fulll.help/fr/support/home",
+        "https://info.generixgroup.com/FR-202607-GTC-MV-B2B-BarometreExaegis2026_01-ContentRequestPage.html",
+        "https://assistance.lexisnexis.fr/hc/fr/articles/49126763557517-Release-Note-Septembre-2026",
+        "https://www.generixgroup.com/fr",
+        "https://play.google.com/store/apps/details",
+        "https://www.mon.expert/plateformes-agreees/fulll",
+        "https://www.fonoa.com/",
+        "https://support.kolecto.fr/fr/articles/528230-janvier-2026-les-nouveautes-kolecto",
+        "https://www.fulll.fr/production-sociale/questions-paie",
+        "https://fr.wikipedia.org/wiki/Generix_Group"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "gep",
+        "gestav",
+        "groupe-sigma",
+        "gurusoft"
+      ],
+      "queries": [
+        {
+          "q": "\"GEP E-Invoice Automation\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Gestav\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Sigma Lixa PA\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"GuruSoft eDoc\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://gestav.com/",
+        "https://labpa.pagprueba.edocpyme.com/",
+        "https://gestav.com/facturation-electronique/e-reporting",
+        "https://gestav.com/facturation-electronique/reception",
+        "https://www.gep.com/software/e-invoicing",
+        "https://www.sigma.fr/services-solutions/edition-integration/",
+        "https://www.softwarepublico.gob.ec/listado-de-software-ecuatoriano/",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://gestav.com/contact",
+        "https://comparateur-efacturation.fr/guide/liste-plateformes-agreees",
+        "https://www.infos-pa.com/plateformes/gestav",
+        "https://gestav.com/conseil/facturation-taxi"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "iaf",
+        "icd",
+        "iedi",
+        "iga-assurance"
+      ],
+      "queries": [
+        {
+          "q": "\"IAF\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"DEMATRUST Light\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"iEDI\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"IGA Assurance\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.iga-assurance.fr/",
+        "https://compafacturation.com/plateforme",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.rxnt.com/chc-updates-jan26/",
+        "https://www.iaf.fr/contact.html",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://iga-tunisie.com/",
+        "https://comparateur-efacturation.fr/guide/liste-plateformes-agreees",
+        "https://iedi.com/academy",
+        "https://iaf.nu/en/about/",
+        "https://www.bfconseils.fr/quelques-informations-supplementaires-facturation-electronique/",
+        "https://www.acedise.fr/facturation-electronique/plateformes-agreees/",
+        "https://www.leyes.congreso.gob.pe/Documentos/2016_2021/Tratados_Internacionales/TI-17820180808.pdf",
+        "https://www.mspb.gov/decisions/nonprecedential/Elliott_Roderick_O_SF-114M-23-0364-Y-2__Final%20Order.pdf",
+        "https://www.mspb.gov/decisions/nonprecedential/Nicholson_Richard_M_AT-1221-24-0550-W-1__Final%20Order.pdf",
+        "https://www.opn.ca6.uscourts.gov/opinions.pdf/17a0512n-06.pdf",
+        "https://www.mgaleg.maryland.gov/cmte_testimony/2026/ecm/1hUmbbyC1pl-ad2PuRGxyXgJNaXj3iit_.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "indicom",
+        "indy",
+        "infologic",
+        "intesa"
+      ],
+      "queries": [
+        {
+          "q": "\"Indicom\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Indy\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"PA Copilote\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Intesa\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://imi.intesasanpaolo.com/en/notices/",
+        "https://pa.l0g.fr/incidents/",
+        "https://wikicompta.indy.fr/fr/articles/17230860-je-ne-recois-pas-ma-facture-electronique-que-faire",
+        "https://www.indy.fr/guide/facturation/electronique/envoyer/",
+        "https://www.francenum.gouv.fr/activateurs/indyfr",
+        "https://www.indy.fr/guide/facturation/electronique/independants/",
+        "https://status-institutions.yapily.com/incidents/01KWCK4Z6X2SK7J6GG795R2FFF",
+        "https://fr.linkedin.com/posts/indyfr_un-mois-tout-pile-apr%C3%A8s-lentr%C3%A9e-en-vigueur-activity-7511409420829052928--UR9",
+        "https://csirt.regione.toscana.it/campagna-di-phishing-a-tema-intesa-sanpaolo-al02-260126-csirt-ita/",
+        "https://wikicompta.indy.fr/fr/articles/10054192-gerer-mon-abonnement-indy",
+        "https://uk.trustpilot.com/review/indy.fr",
+        "https://www.intesasanpaolobank.ro/bine-de-stiut/digical-downtime.html",
+        "https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/",
+        "https://www.cbbh.ba/home/GetTableAttachment",
+        "https://www.emarketstorage.it/sites/default/files/comunicati/2026-04/20260416_182246.pdf",
+        "https://www.nclhltd.com/investors/sec-filings/all-sec-filings/content/0001558370-25-010053/0001558370-25-010053.pdf",
+        "https://mayafiles.tase.co.il/rpdf/1029001-1030000/P1029828-00.pdf",
+        "https://www.in.gov/hrc/tb/files/TB_Foals_2000.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "invopop",
+        "iopole",
+        "ipaidthat",
+        "itesoft"
+      ],
+      "queries": [
+        {
+          "q": "\"Invopop\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Iopole\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"iPaidThat\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"ITESOFT\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://help.ipaidthat.io/fr/articles/16928984-juillet-aout-2026",
+        "https://help.ipaidthat.io/fr/articles/6572768-ou-trouver-ses-factures-ipaidthat-et-les-comprendre",
+        "https://app.ipaidthat.io/fr/qui-sommes-nous/",
+        "https://www.groupebpce.com/ipaidthat/",
+        "https://pa.l0g.fr/incidents/",
+        "https://app.ipaidthat.io/mag/entrepreneur/entrepreneur-une-success-story-comme-on-les-aime/",
+        "https://fr.linkedin.com/company/ipaidthat",
+        "https://apps.apple.com/ie/app/ipaidthat/id1621719695",
+        "https://invopop.com/fr/coverage/france",
+        "https://help.ipaidthat.io/fr/articles/10272711-novembre-2024",
+        "https://www.francenum.gouv.fr/activateurs/iopole",
+        "https://help.ipaidthat.io/fr/articles/17234108-effectuer-la-portabilite-entrante-de-votre-ligne-d-annuaire",
+        "https://fr.wikipedia.org/wiki/Itesoft"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "jefacture",
+        "klekoon",
+        "kolecto",
+        "kolecto-pdp"
+      ],
+      "queries": [
+        {
+          "q": "\"jefacture.com\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Klekoon\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Kolecto\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Kolecto PDP\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://support.jefacture.com/fr/articles/345483-comment-contacter-l-assistance-jefacture-com",
+        "https://fr.trustpilot.com/review/jefacture.com",
+        "https://www.klekoon.com/nous-contacter",
+        "https://www.francenum.gouv.fr/activateurs/kolecto",
+        "https://www.kolecto.fr/legal/cgv",
+        "https://www.kolecto.fr/barometre-facturation-electronique-2026",
+        "https://www.kolecto.fr/",
+        "https://www.kolecto.fr/legal/cgu",
+        "https://pa.l0g.fr/incidents/",
+        "https://pa.l0g.fr/changements/",
+        "https://support.jefacture.com/fr/",
+        "https://quelleplateforme.fr/jefacture-est-il-plateforme-agreee.html"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "legalinvoice",
+        "logilec",
+        "lucca",
+        "lundi-matin"
+      ],
+      "queries": [
+        {
+          "q": "\"LegalInvoice\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"LOGILEC\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Lucca Factures\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Lundi Matin\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://pa.l0g.fr/incidents/",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/logilec/",
+        "https://www.lundimatin.fr/",
+        "https://www.lucca.fr/accessibilite/",
+        "https://www.afub.org/cyberattaque-pme/",
+        "https://www.peppolcheck.fr/logiciels/lucca-facture-electronique",
+        "https://www.lucca.fr/cas-clients/",
+        "https://legalinvoice.infocert.it/",
+        "https://www.e-facture2026.fr/plateformes/logilec",
+        "https://fr.linkedin.com/company/logilec",
+        "https://www.lucca.fr/magazine/administration/comptabilite/enjeux-facturation-electronique",
+        "https://www.lucca.fr/tarifs/",
+        "https://www.has-sante.fr/jcms/p_3498292/fr/rapport-de-certification-cqss-31575"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "macompta",
+        "marosa",
+        "medius",
+        "my-fiteco"
+      ],
+      "queries": [
+        {
+          "q": "\"macompta.fr\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Marosa VATify\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Medius\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"MyFiteco\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://blog.macompta.fr/",
+        "https://www.medius.com/fr/",
+        "https://www.macompta.fr/notre-assistance",
+        "https://pingoru.io/providers/medius/incidents/35268",
+        "https://www.macompta.fr/conditions-generales-de-services",
+        "https://help.macompta.fr/fr/articles/739517-comment-renouveler-mon-abonnement",
+        "https://help.macompta.fr/fr/articles/836268-facturation-electronique-reponses-a-vos-questions",
+        "https://blog.macompta.fr/experts-comptables/reception-et-traitement-des-factures-electroniques-sur-la-pa-macompta-fr/",
+        "https://www.macompta.fr/",
+        "https://compafacturation.com/plateforme",
+        "https://www.medius.com/",
+        "https://help.macompta.fr/fr/",
+        "https://www.bag.admin.ch/dam/fr/sd-web/-E10UAlea4G0/Publikation%20der%20Resultate%20aus%20der%203%20JUE%202024_Umsetzungsdatum%201.12.2024%20bis%201.12.2025.pdf",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "mykinexo",
+        "mysupply",
+        "myunisoft",
+        "n2f"
+      ],
+      "queries": [
+        {
+          "q": "\"MyKinexo PDP\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"MySupply\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"MyUnisoft\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"N2F\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://support.myunisoft.fr/quels-sont-les-changements-de-la-nouvelle-application-mobile-myunisoft",
+        "https://myu.fr/services/myupdate-nouveautes-produits-juin-2026/",
+        "https://compafacturation.com/plateforme",
+        "https://peppolcheck.fr/logiciels/myunisoft-facture-electronique",
+        "https://n2f-invoice.freshdesk.com/fr/support/solutions/articles/44002809831-feuille-de-route-juin-2026",
+        "https://myu.fr/contact/",
+        "https://myu.fr/",
+        "https://support.myunisoft.fr/proc%C3%A9dure-de-connexion-centre-daide-myunisoft",
+        "https://n2f.freshdesk.com/fr/support/home",
+        "https://myu.fr/cabinet-comptable/nos-evenements/",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://pa.l0g.fr/incidents/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "neotimo",
+        "ntt-data",
+        "odoo",
+        "officein"
+      ],
+      "queries": [
+        {
+          "q": "\"Neotimo\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"NTT DATA e-Invoicing\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Odoo\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"OfficeIn\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://downdetector.fr/statut/odoo/",
+        "https://neotimo.com/",
+        "https://officein.fr/",
+        "https://www.odoo.com/fr_FR/help-form",
+        "https://neotimo.com/faq",
+        "https://my.neotimo.com/annuaire-dgfip",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/officein/",
+        "https://www.odoo.com/fr_FR/security",
+        "https://www.odoo.com/documentation/18.0/fr/administration/on_premise/update.html",
+        "https://github.com/odoo/odoo/issues/245568",
+        "https://compafacturation.com/plateforme",
+        "https://www.odoo.com/fr_FR/cloud-sla",
+        "https://fr.wikipedia.org/wiki/Odoo",
+        "https://fr.wikipedia.org/wiki/Odoo_SA",
+        "https://www.reddit.com/r/Quebec/comments/1wmmhd3/pour_ceux_qui_utilisent_loutil_comptable_dynacom/",
+        "https://www.reddit.com/r/Odoo/comments/1wp8g6l/odoo_is_becoming_corpo_garbage/",
+        "https://en.wikipedia.org/wiki/Odoo",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1wcfw1q/facturation_%C3%A9lectronique_vraiment_gratuite/",
+        "https://www.reddit.com/r/informatiqueFr/comments/1wu4me3/quel_budget_pour_une_solution_de_gestion/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "one-up",
+        "open-bee",
+        "opentext",
+        "pagero"
+      ],
+      "queries": [
+        {
+          "q": "\"OneUp\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Open Bee\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"OpenText\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"ONESOURCE Pagero\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://status.pagero.com/history",
+        "https://www.openbee.com/notre-actualite/",
+        "https://www.francenum.gouv.fr/activateurs/open-bee",
+        "https://fr.linkedin.com/company/open-bee",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.comparateur-facturation-electronique.fr/produit/oneup/",
+        "https://support.oneup.com/hc/fr/articles/217620337-Vos-rapports",
+        "https://www.openbee.com/qui-sommes-nous/",
+        "https://bnpp.zendesk.com/hc/fr-fr/articles/44204756858772-Quel-est-le-r%C3%B4le-de-la-plateforme-agr%C3%A9%C3%A9e-OneUp",
+        "https://www.opentext.com/ca-fr/support",
+        "https://smallbusiness.oneup.com/fr",
+        "https://cybersecurity.opentext.com/support/",
+        "https://en.wikipedia.org/wiki/OpenText",
+        "https://veritaglobal.net/noble/document/2611369261001000000000007",
+        "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47603/707080c4-2b5f-491a-bd27-6d68e8b7396a_518.pdf",
+        "https://bmjopen.bmj.com/content/bmjopen/10/11/e040287/DC2/embed/inline-supplementary-material-2.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "paragon",
+        "payflows",
+        "pennylane",
+        "pitney-bowes"
+      ],
+      "queries": [
+        {
+          "q": "\"Invoice Paragon Platform\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Payflows Athena\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Pennylane\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Pitney Bowes Invoice Services\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://help.pennylane.com/fr/articles/438962-comprendre-le-blocage-de-votre-compte-pennylane-pour-impayes",
+        "https://www.totalbug.com/pennylane/",
+        "https://www.pennylane.com/fr/securite",
+        "https://community.pennylane.com/tag/support",
+        "https://pa.l0g.fr/plateformes/pennylane/",
+        "https://pa.l0g.fr/incidents/",
+        "https://data-sharing.pennylane.com/docs/fr/changelog.html",
+        "https://isdown.app/status/pennylane/incidents/660745-pennylane-application-disruption",
+        "https://help.pennylane.com/fr/articles/825848-tout-savoir-sur-la-conformite-de-la-plateforme-agreee-pennylane",
+        "https://help.pennylane.com/fr/articles/18615-reconnecter-une-banque-ou-resynchroniser-des-transactions",
+        "https://community.pennylane.com/discussions/forum-facturation-electronique/pa-pennylane--comment-g%C3%A9rer-les-balises-clients-/39224/replies/42477",
+        "https://www.pennylane.com/fr/blog/pennylane-news/pennylane-certification-iso-27001",
+        "https://fr.wikipedia.org/wiki/Pennylane",
+        "https://www.reddit.com/r/EntrepreneursFR_/comments/1wo50bm/facturation_%C3%A9lectronique/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "qonto",
+        "qweeby",
+        "sage",
+        "sap"
+      ],
+      "queries": [
+        {
+          "q": "\"Qonto Facturation\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Qweeby\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Sage\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"SAP\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://status.sage.com/",
+        "https://www.qweeby.fr/",
+        "https://www.linkedin.com/company/qweeby/",
+        "https://www.sage.com/fr-fr/actualites/communiques-presse/2026/07/facture-electronique-sage-acces-pa/",
+        "https://pa.l0g.fr/incidents/",
+        "https://news.sap.com/2026/07/evolving-maintenance-support-practices-greater-flexibility-sap-customers/",
+        "https://www.sage.com/fr-fr/assistance-support/mysage/",
+        "https://www.journaldunet.com/cybersecurite/1553491-cyberattaque-sap-ce-qu-elle-coute-vraiment-a-l-entreprise/",
+        "https://fr-kb.sage.com/portal/app/portlets/results/viewsolution.jsp",
+        "https://www.qweeby.fr/cas-d-usage",
+        "https://qonto.com/fr/security",
+        "https://my.sage.fr/",
+        "https://www.reddit.com/r/EntrepreneursFR_/comments/1wo50bm/facturation_%C3%A9lectronique/",
+        "https://arxiv.org/abs/2610.01788",
+        "https://en.wikipedia.org/wiki/SAP",
+        "https://www.veritaglobal.net/ontheborder/document/2552415261001000000000001",
+        "https://data.ntsb.gov/Docket/Document/docBLOB",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1wcfw1q/facturation_%C3%A9lectronique_vraiment_gratuite/",
+        "https://ttabvue.uspto.gov/ttabvue/ttabvue-91302061-OPP-10.pdf",
+        "https://www.riigikohus.ee/sites/default/files/2026-06/Ringkonnakohtute%202012.%20a%20otsuste%20%C3%BClevaade%20tsiviilasjades.pdf",
+        "https://static.cninfo.com.cn/finalpage/2026-09-10/1225555878.PDF",
+        "https://public-inspection.federalregister.gov/2024-22463.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "scribee",
+        "seeburger",
+        "sellsy",
+        "septeo"
+      ],
+      "queries": [
+        {
+          "q": "\"Scribee\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"SEEBURGER E-Invoicing Hub\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Sellsy\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Septeo Ingeneo\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://help.sellsy.com/fr/articles/12691213-securiser-votre-compte-sellsy",
+        "https://help.sellsy.com/fr/collections/17089711-informations-sur-la-reforme-de-la-facturation-electronique",
+        "https://help.sellsy.com/fr/",
+        "https://help.sellsy.com/fr/articles/5863430-connexion-a-mon-compte-sellsy",
+        "https://developers.scribee.tech/getting-started/welcome/",
+        "https://go.sellsy.com/blog-categorie/team-sellsy",
+        "https://pa.l0g.fr/incidents/",
+        "https://docs.sellsy.com/api/v2/changelog.html",
+        "https://developers.scribee.tech/invoicing/issue-a-sales-invoice/",
+        "https://go.sellsy.com/informations-legales/mentions-legales",
+        "https://docs.sellsy.com/api/v2/",
+        "https://www.ingeneo.septeo.com/contact"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "seqino",
+        "serensia",
+        "seres",
+        "shine"
+      ],
+      "queries": [
+        {
+          "q": "\"SEQINO\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Serensia\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Seres e-Facture PA\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Shine Facture\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://serensia.com/faq-operationnelle-facturation-electronique-plateforme-agreee/",
+        "https://help.shine.fr/shine-facture/fr/articles/13419479-contacter-le-service-client-shine-facture",
+        "https://serensia.com/",
+        "https://gestionnaires.actifforum.com/t49926-indisponibilites-d-opale-annoncees",
+        "https://seqino.com/",
+        "https://www.shine.fr/contacter-shine/",
+        "https://help.seqino.com/fr/articles/765362-comment-savoir-si-la-reception-des-factures-electroniques-est-bien-activee",
+        "https://pa.l0g.fr/incidents/",
+        "https://help.shine.fr/shine-facture/fr/",
+        "https://shine.co/fr/legal/terms",
+        "https://help.seqino.com/fr/articles/765363-qu-est-ce-que-l-adresse-de-facturation-electronique-et-comment-la-personnaliser-siret-specifique-code-de-routage",
+        "https://seres.fr/fr/actualites/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1wcfw1q/facturation_%C3%A9lectronique_vraiment_gratuite/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "sni",
+        "solo",
+        "sovos",
+        "spendesk"
+      ],
+      "queries": [
+        {
+          "q": "\"SNI\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Solo\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Sovos\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Spendesk\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://status.spendesk.com/history",
+        "https://www.spendesk.com/fr/",
+        "https://helpcenter.spendesk.com/fr/",
+        "https://www.solo.fr/",
+        "https://www.spendesk.com/fr/legals/terms/customers/",
+        "https://sovos.com/support/",
+        "https://sovos.com/fr/",
+        "https://us-canada.status.sovos.com/",
+        "https://www.spendesk.com/fr/blog/spendesk-plateforme-europeenne-de-gestion-des-depenses/",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.francenum.gouv.fr/activateurs/solo",
+        "https://latam.status.sovos.com/history",
+        "https://fr.wikipedia.org/wiki/Spendesk",
+        "https://data.ntsb.gov/Docket/Document/docBLOB",
+        "https://www.justice.gov/sites/default/files/usao-ndok/legacy/2015/04/03/Information-Krueger.pdf",
+        "https://www.veritaglobal.net/fisker/document/2411390261002000000000001",
+        "https://document.epiq11.com/document/getdocumentbycode",
+        "https://1997-2001.state.gov/www/regions/nis/96nisrept.pdf",
+        "https://public-inspection.federalregister.gov/2026-20183.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "sps-commerce",
+        "srci",
+        "storecove",
+        "superpdp"
+      ],
+      "queries": [
+        {
+          "q": "\"SPS Commerce\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"SRCI iXFacture\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Storecove\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"SuperPDP\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://storecove.statuspage.io/",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.storecove.com/fr/fr/mystorecove/faq/",
+        "https://www.pulsapi.com/services/sps-commerce",
+        "https://www.storecove.com/fr/fr",
+        "https://www.spscommerce.com/fr/",
+        "https://www.storecove.com/us/en/mystorecove/faq",
+        "https://www.spscommerce.com/",
+        "https://www.pagerly.io/is-it-down/sps-commerce-status",
+        "https://www.spscommerce.com/eur/support/",
+        "https://help.zoho.com/portal/fr/community/topic/le-cauchemar-de-peppol-avec-zoho-books",
+        "https://www.free-devis-factures.com/community/aide-support/facture-electronique/",
+        "https://en.wikipedia.org/wiki/SPS_Commerce",
+        "https://www.ilga.gov/documents/legislation/104/SB/PDF/10400SB3183sam001.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "symtrax",
+        "taxera",
+        "tenor",
+        "tesisquare"
+      ],
+      "queries": [
+        {
+          "q": "\"Symtrax Compleo\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Taxera\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Tenor eDemat\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"TESISQUARE\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.symtrax.com/fr/",
+        "https://www.acedise.fr/facturation-electronique/plateformes-agreees/",
+        "https://marketplace.microsoft.com/fr-fr/product/web-apps/symtraxsa1655303182262.compleoinvoiceplatform",
+        "https://www.symtrax.com/",
+        "https://www.symtrax.com/fr/testimonials/haribo-a-la-belle-vie-grace-a-compleo-explorer-et-supervisor/",
+        "https://www.e-facture2026.fr/plateformes",
+        "https://www.symtrax.com/support/",
+        "https://taxera.do/",
+        "https://check.attestwire.com/platforms",
+        "https://www.convention-usf.fr/page-test",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.linkedin.com/company/tesisquare/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "tessi",
+        "tiime",
+        "tradeshift",
+        "transalis"
+      ],
+      "queries": [
+        {
+          "q": "\"Digital Invoice by Tessi\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Tiime\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Tradeshift Babelway\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Transalis\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.tiime.fr/presse",
+        "https://www.tiime.fr/securite",
+        "https://support.tiime.fr/fr/articles/247270-au-revoir-tiime-ae-bonjour-tiime-factures",
+        "https://www.tiime.fr/",
+        "https://www.tessi.eu/fr/digital-invoice-by-tessi/blog/piste-audit-fiable-role-facturation-electronique/",
+        "https://support.tiime.fr/fr/articles/721692-facture-electronique-apercu-de-l-emission-de-la-reception-et-de-la-gestion-sur-tiime",
+        "https://www.transalis.com/",
+        "https://www.tessi.eu/fr/decouvrir-tessi/decouvrez-lespace-presse/",
+        "https://www.tessi.eu/fr/solution/technologies/edition-de-logiciels/",
+        "https://www.acedise.fr/facturation-electronique/plateformes-agreees/",
+        "https://www.tessi-blog.com/digital-invoice-by-tessi-dematerialisez-vos-processus-order-to-cash/",
+        "https://support.transalis.com/support/home",
+        "https://en.wikipedia.org/wiki/Tradeshift",
+        "https://www.in.gov/health/reports/QAMIS/ltccr/fzb611_2567.pdf"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "treso2",
+        "tungsten",
+        "tx2",
+        "ventya"
+      ],
+      "queries": [
+        {
+          "q": "\"Treso2\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Tungsten e-Invoice Connect\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"TX2 Concept\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Ventya\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.tx2.fr/",
+        "https://www.ventya.fr/",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.francenum.gouv.fr/activateurs/treso2",
+        "https://statuspage.incident.io/tungstencloud/europe/history",
+        "https://fr.linkedin.com/company/treso2-pytheas",
+        "https://compafacturation.com/plateforme",
+        "https://www.tx2.fr/cas-clients/prevost/",
+        "https://fr.linkedin.com/posts/treso2-pytheas_big-activity-7379093199564197888-I0cH",
+        "https://check.attestwire.com/platforms",
+        "https://www.tx2.fr/nos-clients/optique/",
+        "https://fr.linkedin.com/posts/ludovicsarda_treso2fait-partie-des-premi%C3%A8res-plateformes-activity-7415010435508162562-KFCj"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "veryswing",
+        "village-connecte",
+        "vosfactures",
+        "voxel"
+      ],
+      "queries": [
+        {
+          "q": "\"Veryswing\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Le Village Connecté\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"VosFactures\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Voxel Bavel\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.clubic.com/actualite-632179-un-mois-apres-la-reforme-vosfactures-subit-deja-une-fuite-de-donnees-l-etat-prend-une-decision-radicale.html",
+        "https://veryswing.com/cas-client",
+        "https://www.commentcamarche.net/securite/piratage/38965-piratage-vosfactures/",
+        "https://allovs.veryswing.com/support/solutions/folders/103000581431",
+        "https://fr.linkedin.com/posts/veryswing_plateformeagr%C3%A9%C3%A9e-facture%C3%A9lectronique-einvoicing-activity-7373611708059246592-FmTP",
+        "https://veryswing.com/contactez-nous",
+        "https://quelle-pa.oec-paris.fr/index.php",
+        "https://fr.linkedin.com/posts/cnoec_cyberattaque-cnoec-expertscomptables-activity-7146537152829353984-2VaL",
+        "https://fr.linkedin.com/company/veryswing",
+        "https://maplateformefacturation.fr/plateformes/le-village-connecte",
+        "https://aide.vosfactures.fr/",
+        "https://www.fidacta.fr/annuaire/le-village-connecte",
+        "https://www.reddit.com/r/france/comments/1wuw1fm/un_mois_apr%C3%A8s_la_r%C3%A9forme_de_la_facturation/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "weproc",
+        "wisetech",
+        "xelya",
+        "yooz"
+      ],
+      "queries": [
+        {
+          "q": "\"WeInvoice by WeProc\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"WiseTech Global\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Xelya\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        },
+        {
+          "q": "\"Yooz\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://www.weproc.com/fr/",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.getyooz.com/fr/yooz-conditions-generales",
+        "https://wisetechglobal.com/what-we-do/information-security/",
+        "https://www.getyooz.com/fr/",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/yooz/",
+        "https://quelle-pa.oec-paris.fr/index.php",
+        "https://www.getyooz.com/",
+        "https://wikiapp.heberg-eig.fr/books/mise-a-jour-de-septembre-2026/page/facturation-commerciale",
+        "https://www.xelya.com/",
+        "https://theloadstar.com/cargowise-outage-reignites-debate-over-software-quality-support-and-updates/",
+        "https://www.xelya.com/contact/"
+      ]
+    },
+    {
+      "platformSlugs": [
+        "ytems"
+      ],
+      "queries": [
+        {
+          "q": "\"Ytems\" (incident OR panne OR fuite OR cyberattaque OR sécurité OR mise à jour facturation) after:2026-10-01 before:2026-10-05"
+        }
+      ],
+      "resultUrls": [
+        "https://com.ytems.app/blog",
+        "https://pa.l0g.fr/incidents/",
+        "https://compafacturation.com/plateforme",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://www.e-facture2026.fr/plateformes",
+        "https://quelleplateforme.fr/journal-liste-dgfip-plateformes-agreees.html",
+        "https://facturation-electronique-tpe.fr/reforme/plateforme-agreee-pdp/",
+        "https://apps.apple.com/lt/app/ytems/id1535819997",
+        "https://quelleplateforme.fr/mises-a-jour.html",
+        "https://com.ytems.app/expert-comptable/exports-avec-piece",
+        "https://logicielcomptable.net/liste-des-plateformes-agreees-pour-la-facturation-electronique/",
+        "https://www.cabinetdigital.fr/plateformes-dematerialisation/"
+      ]
+    }
+  ]
+}
