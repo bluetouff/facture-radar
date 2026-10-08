@@ -306,6 +306,7 @@ referencedSourceIds.add("dgfip-list-20260923");
 referencedSourceIds.add("dgfip-list-20260930");
 referencedSourceIds.add("dgfip-list-20261002");
 referencedSourceIds.add("dgfip-list-20261004");
+referencedSourceIds.add("dgfip-list-20261008");
 for (const source of incidentWatchCorpus().sources) referencedSourceIds.add(source.id);
 
 for (const source of checkedSources) {

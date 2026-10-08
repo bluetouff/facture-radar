@@ -12,7 +12,7 @@ L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte et san
 - trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
 - 149 fiches détaillées, chacune reliée à des sources publiques et datées ;
 - une sélection explicite couvrant les indépendants, TPE, PME, cabinets comptables, ETI et grandes entreprises ;
-- l'annuaire officiel complet, soit 149 plateformes approuvées et 14 en attente dans les fichiers DGFiP relus le 4 octobre 2026 ;
+- l'annuaire officiel complet, soit 149 plateformes approuvées et 14 en attente dans les fichiers DGFiP relus le 8 octobre 2026 ;
 - un comparateur point par point ;
 - des exports JSON publics et un corpus consolidé pour permettre la vérification et la réutilisation ;
 - un serveur MCP public en lecture seule, pour donner les mêmes réponses aux agents sans compte ni clé d'API ;
