@@ -242,10 +242,10 @@ export const secondWavePlatforms: Platform[] = [
     importantUnknowns: ["Prix et volumes", "Formats français", "Hébergement", "Réversibilité"],
   }),
   expand({
-    slug: "ntt-data", displayName: "NTT DATA e-Invoicing", officialName: "NTT DATA Business Solutions", registeredAt: "2026-05-13",
+    slug: "ntt-data", displayName: "JOUBINI by NTT DATA", officialName: "NTT DATA Business Solutions", registeredAt: "2026-05-13",
     summary: "Plateforme cloud mondiale conçue pour SAP et les organisations multi-pays.",
     targets: ["eti", "ge"], ecosystem: ["SAP", "ERP", "cloud", "international"],
-    sendsInvoices: documented(true, ["nttdata-einvoicing-2026"]), receivesInvoices: documented(true, ["nttdata-einvoicing-2026"]), integrations: documented(["SAP", "ERP", "protocoles multiples"], ["nttdata-einvoicing-2026"]),
+    sendsInvoices: documented(true, ["nttdata-einvoicing-2026"]), receivesInvoices: documented(true, ["nttdata-einvoicing-2026"]), integrations: documented(["SAP ECC", "SAP S/4HANA", "autres ERP", "protocoles multiples"], ["nttdata-einvoicing-2026", "ntt-joubini-20260615"], "Le communiqué du 15 juin présente JOUBINI comme compatible avec SAP ECC, SAP S/4HANA et les autres ERP du marché. Le raccordement précis reste à définir selon le système du client.", "2026-10-10"),
     importantUnknowns: ["E-reporting français", "Prix et volumes", "Formats France", "Hébergement de la PA"],
   }),
   expand({
@@ -343,7 +343,7 @@ export const secondWavePlatforms: Platform[] = [
     slug: "tradeshift", displayName: "Tradeshift Babelway", officialName: "TRADESHIFT BABELWAY", registeredAt: "2026-01-06",
     summary: "Plateforme mondiale multi-entités pour intégrations ERP, formats français et réseau Peppol.",
     targets: ["eti", "ge"], ecosystem: ["ERP", "Peppol", "API", "international"],
-    sendsInvoices: documented(true, ["tradeshift-france-2026"]), receivesInvoices: documented(true, ["tradeshift-france-2026"]), eReporting: documented(true, ["tradeshift-france-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["tradeshift-api-2026"]), formats: documented(["Factur-X", "UBL", "CII", "PDF enrichi", "JSON", "XML"], ["tradeshift-france-2026", "tradeshift-api-2026"]), integrations: documented(["SAP", "Oracle", "Sage", "Microsoft Dynamics", "Peppol", "REST API"], ["tradeshift-france-2026", "tradeshift-api-2026"]),
+    sendsInvoices: documented(true, ["tradeshift-france-2026"]), receivesInvoices: documented(true, ["tradeshift-france-2026"]), eReporting: documented(true, ["tradeshift-france-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["tradeshift-api-2026"]), formats: documented(["Factur-X", "UBL", "CII", "PDF enrichi", "JSON", "XML"], ["tradeshift-france-2026", "tradeshift-api-2026"]), integrations: documented(["SAP", "Oracle", "Sage", "Microsoft Dynamics", "Peppol", "REST API", "AWS S3"], ["tradeshift-france-2026", "tradeshift-api-2026", "tradeshift-release-20260922"], "La publication du 22 septembre annonce l’intégration AWS S3 pour déposer et récupérer du contenu, ainsi qu’une gestion centralisée des jetons OAuth 2 dans Babelway. Les conditions d’accès aux connecteurs restent à vérifier.", "2026-10-10"),
     importantUnknowns: ["Prix et volumes", "Hébergement France", "Engagement", "Réversibilité"],
   }),
   expand({
@@ -357,7 +357,7 @@ export const secondWavePlatforms: Platform[] = [
     slug: "tungsten", displayName: "Tungsten e-Invoice Connect", officialName: "TUNGSTEN AUTOMATION FRANCE", registeredAt: "2025-12-23",
     summary: "Réseau cloud de facturation et capture fournisseurs, avec portail en libre-service.",
     targets: ["eti", "ge"], ecosystem: ["Peppol", "EDI", "ERP", "InvoiceAgility"],
-    sendsInvoices: documented(true, ["tungsten-platform-2026"]), receivesInvoices: documented(true, ["tungsten-platform-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["tungsten-france-2026"]), integrations: documented(["Peppol", "EDI", "ERP", "portail fournisseur"], ["tungsten-platform-2026"]),
+    sendsInvoices: documented(true, ["tungsten-platform-2026", "tungsten-release-20261003"], "La version du 3 octobre prend en charge les pièces jointes françaises BG-24, de leur import à leur restitution dans les fichiers émis. L’état Non transmise, documenté le 19 septembre, distingue le traitement des données réglementaires de la livraison au destinataire ; son motif est visible dans le portail et via Get Sent Status et Notifications API.", "2026-10-10"), receivesInvoices: documented(true, ["tungsten-platform-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["tungsten-france-2026"]), integrations: documented(["Peppol", "EDI", "ERP", "portail fournisseur"], ["tungsten-platform-2026"]),
     importantUnknowns: ["E-reporting opérationnel", "Prix et volumes", "Hébergement", "Réversibilité"],
   }),
   expand({

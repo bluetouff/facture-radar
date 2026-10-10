@@ -103,7 +103,7 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "darva", displayName: "Ofeli by DARVA", officialName: "DARVA", registeredAt: "2025-12-18",
     summary: "Plateforme de facturation électronique spécialisée dans l'écosystème de l'assurance.",
     targets: ["pme", "eti", "ge"], ecosystem: ["assurance", "Ofeli", "Peppol", "EDI"],
-    sendsInvoices: documented(true, ["darva-ofeli-2026"]), receivesInvoices: documented(true, ["darva-ofeli-2026"]), eReporting: documented(true, ["darva-ofeli-2026"]), integrations: documented(["écosystème assurance", "Peppol", "EDI"], ["darva-ofeli-2026"]),
+    sendsInvoices: documented(true, ["darva-ofeli-2026"]), receivesInvoices: documented(true, ["darva-ofeli-2026"]), eReporting: documented(true, ["darva-ofeli-2026"]), integrations: documented(["écosystème assurance", "Peppol", "EDI", "Sinapps Auto"], ["darva-ofeli-2026", "darva-sinapps-20260930"], "L’intégration annoncée le 30 septembre rapproche les messages métier Sinapps Auto et les factures électroniques Ofeli, notamment par numéro de facture, année comptable et SIREN de l’émetteur. Une anomalie bloque la transmission du document et donne lieu à un commentaire destiné à l’émetteur.", "2026-10-10"),
     importantUnknowns: ["Prix et volumes", "API publique", "Formats détaillés", "Conditions de sortie"],
   }),
   expand({
@@ -142,7 +142,7 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "ecosio-intercom", displayName: "ecosio InterCom", officialName: "ecosio InterCom, a Vertex Company", registeredAt: "2026-04-30",
     summary: "Entité ecosio dédiée aux échanges EDI, Peppol et à la conformité électronique internationale.",
     targets: ["pme", "eti", "ge"], ecosystem: ["Peppol", "API", "EDI", "ERP"],
-    sendsInvoices: documented(true, ["ecosio-einvoicing-2026"]), receivesInvoices: documented(true, ["ecosio-einvoicing-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["ecosio-connectors-2026"]), integrations: documented(["Messaging API", "Management API", "SFTP", "Peppol", "ERP"], ["ecosio-einvoicing-2026", "ecosio-connectors-2026"]),
+    sendsInvoices: documented(true, ["ecosio-einvoicing-2026"]), receivesInvoices: documented(true, ["ecosio-einvoicing-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["ecosio-connectors-2026", "ecosio-fr-delivery-20261010"], "Le statut SENT peut refléter le dépôt des données réglementaires (flux 1) alors que la facture n’a pas été livrée au destinataire (flux 2). Pour vérifier la livraison, demander les détails avec includeLog=true dans Messaging API ou view=details dans Vertex Messaging API. Le motif SUBMITTED_NOT_TRANSMITTED précise l’échec ; ces détails portent sur le dernier état disponible.", "2026-10-10"), integrations: documented(["Messaging API", "Management API", "SFTP", "Peppol", "ERP"], ["ecosio-einvoicing-2026", "ecosio-connectors-2026"]),
     importantUnknowns: ["E-reporting français", "Prix et volumes", "Formats France exacts", "Hébergement"],
   }),
   expand({
@@ -296,8 +296,8 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "scribee", displayName: "Scribee", officialName: "SCRIBEE", registeredAt: "2025-12-22",
     summary: "Plateforme française connectable aux logiciels existants et pensée aussi pour les cabinets.",
     targets: ["micro", "tpe", "pme", "eti"], ecosystem: ["expert-comptable", "Peppol", "ERP", "formats multiples"],
-    sendsInvoices: documented(true, ["scribee-pa-2026"]), receivesInvoices: documented(true, ["scribee-pa-2026"]), eReporting: documented(true, ["scribee-pa-2026"]), accountantAccess: documented(true, ["scribee-pa-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["scribee-pa-2026"]), integrations: documented(["ERP", "logiciels comptables", "Peppol"], ["scribee-pa-2026"]), hostingCountries: declared(["France"], ["scribee-pa-2026"]), iso27001: declared(true, ["scribee-pa-2026"]),
-    importantUnknowns: ["Prix et volumes", "API publique", "Portée des certifications", "Conditions de sortie"],
+    sendsInvoices: documented(true, ["scribee-pa-2026"]), receivesInvoices: documented(true, ["scribee-pa-2026"]), eReporting: documented(true, ["scribee-pa-2026"]), accountantAccess: documented(true, ["scribee-pa-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["scribee-api-changes-20260930"], "La documentation publique décrit deux ruptures : depuis le 30 septembre, une remise refusée localement avant envoi au prestataire de paiement répond 422, avec la clé d’idempotence préservée. Depuis le 22 septembre, amount_without_taxes remplace amount_with_taxes pour la base HT par taux de TVA, sans alias de compatibilité. Les conditions commerciales d’accès à l’API restent à préciser.", "2026-10-10"), formats: documented(["Factur-X", "UBL", "CII"], ["scribee-pa-2026"]), integrations: documented(["ERP", "logiciels comptables", "Peppol"], ["scribee-pa-2026"]), hostingCountries: declared(["France"], ["scribee-pa-2026"]), iso27001: declared(true, ["scribee-pa-2026"]),
+    importantUnknowns: ["Prix et volumes", "Conditions d’accès à l’API", "Portée des certifications", "Conditions de sortie"],
   }),
   expand({
     slug: "sni", displayName: "SNI", officialName: "SNI", registeredAt: "2026-04-13",

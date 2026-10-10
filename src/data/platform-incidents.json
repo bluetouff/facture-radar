@@ -13,7 +13,7 @@
     "firstReportedAt": "2026-09-10T10:40:00Z",
     "resolutionReportedAt": "2026-09-10T14:33:00Z",
     "updatedAt": "2026-09-10T14:33:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-w04d6drd7g3n"
     ],
@@ -33,7 +33,7 @@
     "firstReportedAt": "2026-09-02T00:40:00Z",
     "resolutionReportedAt": "2026-09-10T13:14:00Z",
     "updatedAt": "2026-09-10T13:14:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-fjh6wx81xg1p"
     ],
@@ -53,7 +53,7 @@
     "firstReportedAt": "2026-09-05T02:02:00Z",
     "resolutionReportedAt": "2026-09-07T09:13:00Z",
     "updatedAt": "2026-09-07T09:13:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-rhf8nv5dd1rq"
     ],
@@ -73,7 +73,7 @@
     "firstReportedAt": "2026-09-11T14:45:00Z",
     "resolutionReportedAt": "2026-09-15T18:57:00Z",
     "updatedAt": "2026-09-15T18:57:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-qgr9wjcbs466"
     ],
@@ -93,7 +93,7 @@
     "firstReportedAt": "2026-09-14T12:15:00Z",
     "resolutionReportedAt": "2026-09-15T10:12:00Z",
     "updatedAt": "2026-09-15T10:12:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-9zgm55t360kp"
     ],
@@ -113,7 +113,7 @@
     "firstReportedAt": "2026-09-14T09:50:00Z",
     "resolutionReportedAt": "2026-09-14T22:10:00Z",
     "updatedAt": "2026-09-14T22:10:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-ldq4kg4q8htj"
     ],
@@ -133,7 +133,7 @@
     "firstReportedAt": "2026-09-13T18:57:00Z",
     "resolutionReportedAt": "2026-09-14T07:06:00Z",
     "updatedAt": "2026-09-14T07:06:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-yh0mj6qwrmcy"
     ],
@@ -153,7 +153,7 @@
     "firstReportedAt": "2026-09-11T08:18:00Z",
     "resolutionReportedAt": "2026-09-11T14:06:00Z",
     "updatedAt": "2026-09-11T14:06:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-2xx8jjz4pxfz"
     ],
@@ -173,7 +173,7 @@
     "firstReportedAt": "2026-09-01T11:41:00Z",
     "resolutionReportedAt": "2026-09-02T12:01:00Z",
     "updatedAt": "2026-09-02T12:01:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-v9p9p0xfp5qj"
     ],
@@ -193,7 +193,7 @@
     "firstReportedAt": "2026-09-14T11:15:00+02:00",
     "resolutionReportedAt": "2026-09-14T12:06:00+02:00",
     "updatedAt": "2026-09-14T12:06:00+02:00",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "pennylane-incident-zfpsp7z9wn1z"
     ],
@@ -213,7 +213,7 @@
     "firstReportedAt": "2026-09-15T08:00:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15T12:15:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "esker-status-2026-09"
     ],
@@ -233,7 +233,7 @@
     "firstReportedAt": "2026-09-01T09:51:27Z",
     "resolutionReportedAt": "2026-09-01T11:31:26Z",
     "updatedAt": "2026-09-01T11:31:26Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "weproc-peppol-20260901-source"
     ],
@@ -253,7 +253,7 @@
     "firstReportedAt": "2026-09-01T07:29:28Z",
     "resolutionReportedAt": "2026-09-01T07:34:28Z",
     "updatedAt": "2026-09-01T07:34:28Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "weproc-piste-20260901-source"
     ],
@@ -273,7 +273,7 @@
     "firstReportedAt": "2026-09-16T06:58:00Z",
     "resolutionReportedAt": "2026-09-16T09:14:18Z",
     "updatedAt": "2026-09-16T09:14:18Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "dokapi-emails-20260916-source"
     ],
@@ -293,7 +293,7 @@
     "firstReportedAt": "2026-09-04T07:59:00Z",
     "resolutionReportedAt": "2026-09-04T09:52:12Z",
     "updatedAt": "2026-09-04T09:52:12Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-einvoice-20260904-source"
     ],
@@ -313,7 +313,7 @@
     "firstReportedAt": "2026-09-02T08:12:00Z",
     "resolutionReportedAt": "2026-09-02T09:59:21Z",
     "updatedAt": "2026-09-02T09:59:21Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-access-20260902-source"
     ],
@@ -333,7 +333,7 @@
     "firstReportedAt": "2026-09-04T11:10:00Z",
     "resolutionReportedAt": "2026-09-04T14:03:30Z",
     "updatedAt": "2026-09-04T14:03:30Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-microsoft-20260904-source"
     ],
@@ -353,7 +353,7 @@
     "firstReportedAt": "2026-09-16T10:05:00Z",
     "resolutionReportedAt": "2026-09-17T08:06:12Z",
     "updatedAt": "2026-09-17T08:06:12Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-transfers-20260916-source"
     ],
@@ -373,7 +373,7 @@
     "firstReportedAt": "2026-09-10T15:41:53.079Z",
     "resolutionReportedAt": "2026-09-10T16:36:54.418Z",
     "updatedAt": "2026-09-10T16:36:54.418Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "invopop-console-20260910-source"
     ],
@@ -393,7 +393,7 @@
     "firstReportedAt": "2026-09-02T08:15:54.409Z",
     "resolutionReportedAt": "2026-09-02T10:26:25.372Z",
     "updatedAt": "2026-09-02T10:26:25.372Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "invopop-peppol-sml-20260902-source"
     ],
@@ -413,7 +413,7 @@
     "firstReportedAt": "2026-09-16T13:10:31Z",
     "resolutionReportedAt": "2026-09-16T13:18:36Z",
     "updatedAt": "2026-09-16T13:18:36Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "myunisoft-connection-20260916-source"
     ],
@@ -433,7 +433,7 @@
     "firstReportedAt": "2026-09-15T09:48:15Z",
     "resolutionReportedAt": "2026-09-15T10:00:05Z",
     "updatedAt": "2026-09-15T10:00:05Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "myunisoft-display-20260915-source"
     ],
@@ -453,7 +453,7 @@
     "firstReportedAt": "2026-09-16T10:17:20.636Z",
     "resolutionReportedAt": "2026-09-17T07:58:23Z",
     "updatedAt": "2026-09-17T07:58:23Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "tungsten-support-20260916-source"
     ],
@@ -478,7 +478,7 @@
     "firstReportedAt": "2026-09-14",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-14",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -507,7 +507,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -536,7 +536,7 @@
     "firstReportedAt": "2026-09-15",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "frenchbreaches-welyb-20260915"
     ],
@@ -560,7 +560,7 @@
     "firstReportedAt": "2026-09-18",
     "resolutionReportedAt": "2026-09-18",
     "updatedAt": "2026-09-18",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "superpdp-directory-20260918-source"
     ],
@@ -581,7 +581,7 @@
     "firstReportedAt": "2026-09-16T14:52:00Z",
     "resolutionReportedAt": "2026-10-07T09:09:23Z",
     "updatedAt": "2026-10-07T09:09:23Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-amazon-20260916-source"
     ],
@@ -608,7 +608,7 @@
     "firstReportedAt": "2026-09-17",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-17",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "frenchbreaches-zenfirst-20260917"
     ],
@@ -628,7 +628,7 @@
     "firstReportedAt": "2026-09-21T10:27:53Z",
     "resolutionReportedAt": "2026-09-21T12:13:23Z",
     "updatedAt": "2026-09-21T12:13:23Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "ecosio-france-20260921-source"
     ],
@@ -648,7 +648,7 @@
     "firstReportedAt": "2026-09-22T14:44:00Z",
     "resolutionReportedAt": "2026-09-23T10:34:08Z",
     "updatedAt": "2026-09-23T10:34:08Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-france-20260922-source"
     ],
@@ -668,7 +668,7 @@
     "firstReportedAt": "2026-09-21T15:14:00Z",
     "resolutionReportedAt": "2026-09-23T07:20:49Z",
     "updatedAt": "2026-09-23T07:20:49Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-ios-20260921-source"
     ],
@@ -688,7 +688,7 @@
     "firstReportedAt": "2026-09-22T15:53:40Z",
     "resolutionReportedAt": "2026-09-22T15:55:53Z",
     "updatedAt": "2026-09-22T15:55:53Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "eezi-dashboard-20260922-source"
     ],
@@ -708,7 +708,7 @@
     "firstReportedAt": "2026-09-21",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-21",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "frenchbreaches-altagem-20260921",
       "cyberattaque-altagem-20260921"
@@ -735,7 +735,7 @@
     "firstReportedAt": "2026-09-19",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-20",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "frenchbreaches-faktus-20260919"
     ],
@@ -761,7 +761,7 @@
     "firstReportedAt": "2026-09-22",
     "resolutionReportedAt": "2026-09-24",
     "updatedAt": "2026-09-24",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -780,7 +780,7 @@
     "firstReportedAt": "2026-09-16",
     "resolutionReportedAt": "2026-09-22",
     "updatedAt": "2026-09-22",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -801,7 +801,7 @@
     "firstReportedAt": "2026-09-25T14:25:00Z",
     "resolutionReportedAt": "2026-09-25T15:02:06Z",
     "updatedAt": "2026-09-25T15:02:06Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "pennylane-incident-s9lkgtlw03s2"
     ],
@@ -821,7 +821,7 @@
     "firstReportedAt": "2026-09-25T13:28:00Z",
     "resolutionReportedAt": "2026-09-25T15:13:28Z",
     "updatedAt": "2026-09-25T15:13:28Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "weproc-incident-1073900"
     ],
@@ -841,7 +841,7 @@
     "firstReportedAt": "2026-09-28T07:14:00Z",
     "resolutionReportedAt": "2026-09-28T10:02:49Z",
     "updatedAt": "2026-09-28T10:02:49Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "lucca-incident-nfx98d4xggmb"
     ],
@@ -861,7 +861,7 @@
     "firstReportedAt": "2026-09-28T07:59:00Z",
     "resolutionReportedAt": "2026-09-28T12:03:30Z",
     "updatedAt": "2026-09-28T12:03:30Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-mc2p8blsm281"
     ],
@@ -881,7 +881,7 @@
     "firstReportedAt": "2026-09-28T10:10:08Z",
     "resolutionReportedAt": "2026-09-28T10:10:08Z",
     "updatedAt": "2026-09-28T10:10:08Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-4r3t9stk544k"
     ],
@@ -901,7 +901,7 @@
     "firstReportedAt": "2026-09-29T15:57:00Z",
     "resolutionReportedAt": "2026-09-30T07:17:30Z",
     "updatedAt": "2026-09-30T07:17:30Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-incident-qs6rjc37fr6l"
     ],
@@ -921,7 +921,7 @@
     "firstReportedAt": "2026-09-29T19:54:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-29T21:38:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "esker-status-2026-09"
     ],
@@ -934,13 +934,13 @@
     "kind": "availability",
     "scope": "ecosystem_service",
     "title": "Welyb : transmission de documents aux outils tiers perturbée",
-    "summary": "Welyb décrit depuis le 25 septembre un blocage de transmission vers les outils tiers pour des documents collectés par e-mail ou certaines connexions, dont Qonto et Dematbox. L’éditeur annonce un correctif appliqué le 2 octobre et un rattrapage estimé jusqu’au 6 octobre. Lors de la relecture du 8, la page conserve ce message sans annoncer la fin du rattrapage.",
-    "status": "monitoring",
+    "summary": "Welyb décrit depuis le 25 septembre un blocage de transmission vers les outils tiers pour des documents collectés par e-mail ou certaines connexions, dont Qonto et Dematbox. Après le correctif du 2 octobre, l’éditeur annonce le 8 octobre que le rattrapage est terminé et que tous les documents ont été envoyés aux outils tiers.",
+    "status": "resolved",
     "startedAt": null,
     "firstReportedAt": "2026-09-25",
-    "resolutionReportedAt": null,
-    "updatedAt": "2026-10-02",
-    "checkedAt": "2026-10-08",
+    "resolutionReportedAt": "2026-10-08",
+    "updatedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -961,7 +961,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -992,7 +992,7 @@
     "firstReportedAt": "2026-10-01",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-01",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "factuali-notification-relayed-20261001",
       "fuitesinfos-vosfactures-20261001",
@@ -1014,7 +1014,7 @@
     "firstReportedAt": "2026-09-30T15:40:00Z",
     "resolutionReportedAt": "2026-10-05T08:56:53Z",
     "updatedAt": "2026-10-05T08:56:53Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-kt4m889tbj9p"
     ],
@@ -1035,7 +1035,7 @@
     "firstReportedAt": "2026-10-01",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-01",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "esker-environment-e-20261001"
     ],
@@ -1057,7 +1057,7 @@
     "firstObservedAt": "2026-10-02",
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "aife-vosfactures-reprise-20261004",
       "aife-vosfactures-20261002"
@@ -1078,7 +1078,7 @@
     "firstReportedAt": "2026-10-02T14:09:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-02T14:09:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "esker-pa-interconnexion-20261002"
     ],
@@ -1099,7 +1099,7 @@
     "firstReportedAt": "2026-10-03T07:40:00Z",
     "resolutionReportedAt": "2026-10-03T13:24:28Z",
     "updatedAt": "2026-10-03T13:24:28Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "weproc-incident-1080572",
       "weproc-incident-1080599",
@@ -1126,7 +1126,7 @@
     "firstReportedAt": "2026-10-02T13:55:55Z",
     "resolutionReportedAt": "2026-10-05",
     "updatedAt": "2026-10-05",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "myunisoft-incident-fba23613-5912-4c1f-a6f9-28aa0c690859",
       "myunisoft-incident-4367fb01-ec0f-4fc6-94dd-d983ed2260b7"
@@ -1146,7 +1146,7 @@
     "firstReportedAt": "2026-10-02",
     "resolutionReportedAt": "2026-10-02",
     "updatedAt": "2026-10-02",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1165,7 +1165,7 @@
     "firstReportedAt": "2026-10-01",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-01",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "fiducial-security-20261001"
     ],
@@ -1186,7 +1186,7 @@
     "firstReportedAt": "2026-10-05T14:45:25Z",
     "resolutionReportedAt": "2026-10-06T15:28:00Z",
     "updatedAt": "2026-10-06T15:28:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-grngh6q7rzc2"
     ],
@@ -1207,7 +1207,7 @@
     "firstReportedAt": "2026-10-07T12:02:00Z",
     "resolutionReportedAt": "2026-10-07T16:01:30Z",
     "updatedAt": "2026-10-07T16:01:30Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "sage-incident-j6kkplxr2ff3"
     ],
@@ -1222,13 +1222,13 @@
     "kind": "availability",
     "scope": "publisher_service",
     "title": "Spendesk : notifications d’authentification 3DS absentes sur iOS",
-    "summary": "Spendesk signale le 7 octobre que certains utilisateurs iOS ne reçoivent pas les notifications 3DS lorsqu’ils effectuent un paiement. L’éditeur poursuit son investigation lors de la relecture du 8 octobre.",
+    "summary": "Spendesk signale le 7 octobre que certains utilisateurs iOS ne reçoivent pas les notifications 3DS lorsqu’ils effectuent un paiement. L’éditeur poursuit son investigation lors de la relecture du 10 octobre.",
     "status": "investigating",
     "startedAt": null,
     "firstReportedAt": "2026-10-07T09:13:16Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-07T09:13:16Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "spendesk-3ds-20261007"
     ],
@@ -1249,7 +1249,7 @@
     "firstReportedAt": "2026-10-07T08:12:00Z",
     "resolutionReportedAt": "2026-10-07T08:17:28Z",
     "updatedAt": "2026-10-07T08:17:28Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "weproc-incident-1083848"
     ],
@@ -1270,7 +1270,7 @@
     "firstReportedAt": "2026-10-06",
     "resolutionReportedAt": "2026-10-06",
     "updatedAt": "2026-10-06",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "myunisoft-incident-8ccd8e7d-9ad4-431f-a77b-bdf5e0f68bb1"
     ],
@@ -1291,7 +1291,7 @@
     "firstReportedAt": "2026-10-05",
     "resolutionReportedAt": "2026-10-06",
     "updatedAt": "2026-10-06",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "myunisoft-incident-b74ef35b-df82-419b-aaf6-c44451d130ae"
     ],
@@ -1312,7 +1312,7 @@
     "firstReportedAt": "2026-10-03T10:49:00Z",
     "resolutionReportedAt": "2026-10-03T17:40:00Z",
     "updatedAt": "2026-10-03T17:40:00Z",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "invopop-incident-20261003",
       "invopop-postmortem-20261003"
@@ -1334,7 +1334,7 @@
     "firstReportedAt": "2026-10-05T07:42:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-05",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "esker-environment-e-20261005"
     ],
@@ -1354,7 +1354,7 @@
     "firstReportedAt": "2026-10-07",
     "resolutionReportedAt": "2026-10-07",
     "updatedAt": "2026-10-07",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1367,17 +1367,17 @@
     "kind": "availability",
     "scope": "ecosystem_service",
     "title": "Welyb : notifications quotidiennes en rattrapage",
-    "summary": "Welyb indique le 7 octobre que certains utilisateurs ne reçoivent plus les notifications quotidiennes depuis le 5 octobre. Un rattrapage est en cours, avec une échéance annoncée pour le lendemain soir. La page ne confirme pas sa fin lors de la consultation du 8 octobre.",
+    "summary": "Welyb indique dans son avis daté du 7 octobre que certains utilisateurs ne reçoivent plus les notifications quotidiennes depuis le 5 octobre. La page relue le 10 annonce un rattrapage en cours, avec une échéance estimée pour « lundi soir ». La fin des envois reste à confirmer.",
     "status": "monitoring",
     "startedAt": "2026-10-05",
     "firstReportedAt": "2026-10-07",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-07",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "welyb-status-20260916"
     ],
-    "limitations": "L’échéance annoncée reste une estimation. L’avis porte sur les e-mails du portail Welyb ; un incident des flux de la PA reste non documenté.",
+    "limitations": "L’avis conserve la date du 7 octobre ; la page globale affiche une mise à jour du 9, sans dater la révision de cette échéance. Celle-ci reste une estimation. Le service concerné est l’envoi d’e-mails Welyb ; l’impact sur les flux PA reste non documenté.",
     "affectedService": "Notifications quotidiennes Welyb"
   },
   {
@@ -1392,12 +1392,78 @@
     "firstReportedAt": "2026-10-06",
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-10",
     "sourceIds": [
       "aife-depot-pdf-20261006"
     ],
     "limitations": "L’avis concerne le dépôt PDF sur le portail public Chorus Pro. Son début et sa résolution restent inconnus. L’heure de publication affichée est sans fuseau ; date conservée au jour près. Aucun opérateur PA particulier n’est désigné.",
     "affectedService": "Dépôt PDF de factures simples dans Chorus Pro",
     "firstObservedAt": "2026-10-08"
+  },
+  {
+    "id": "sage-gs8td6mcwhwk",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Sage Intacct : accès en Europe rétabli le 9 octobre",
+    "summary": "Sage signale le 9 octobre des erreurs 503 et des lenteurs pour certains clients Intacct en Europe et en Afrique du Sud. L’éditeur annonce la résolution à 11 h 49 UTC et le retour du service au fonctionnement attendu.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-09T10:26:00Z",
+    "resolutionReportedAt": "2026-10-09T11:49:49Z",
+    "updatedAt": "2026-10-09T11:49:49Z",
+    "checkedAt": "2026-10-10",
+    "sourceIds": [
+      "sage-incident-gs8td6mcwhwk"
+    ],
+    "limitations": "L’avis concerne Sage Intacct en Europe et en Afrique du Sud. L’impact sur les clients français et les flux PA reste non précisé. Le premier signalement est publié à la minute ; les horaires de notification restent distincts du début réel de panne.",
+    "affectedService": "Application Sage Intacct, Europe et Afrique du Sud"
+  },
+  {
+    "id": "esker-affichage-20261009",
+    "platformSlugs": [
+      "esker"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "title": "Esker : affichage des tableaux de bord et files de documents perturbé",
+    "summary": "Esker signale le 9 octobre des problèmes d’affichage dans les tableaux de bord et les files de documents de ses environnements D, E, G et K. Le message de 15 h 53 UTC indique que les équipes travaillent sur un correctif. Lors de la relecture du 10, la résolution reste à confirmer.",
+    "status": "identified",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-09T13:48:00Z",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-10-09T15:53:00Z",
+    "checkedAt": "2026-10-10",
+    "sourceIds": [
+      "esker-display-d-20261009",
+      "esker-display-e-20261009",
+      "esker-display-g-20261009",
+      "esker-display-k-20261009"
+    ],
+    "limitations": "Les quatre messages ont le même contenu et la même chronologie : ils sont regroupés dans une seule entrée. L’environnement L de la PA française n’est pas cité. Cet avis ne résout pas les anciens incidents dont les messages ont disparu. Horaires de notification publiés à la minute en UTC.",
+    "affectedService": "Esker on Demand : affichage, environnements D, E, G et K",
+    "firstObservedAt": "2026-10-09"
+  },
+  {
+    "id": "welyb-neoexpert-20261007",
+    "platformSlugs": [],
+    "kind": "availability",
+    "scope": "ecosystem_service",
+    "title": "Welyb : connexion Néoexpert temporairement suspendue",
+    "summary": "Welyb décrit dans une rubrique datée du 7 octobre une suspension des connexions Néoexpert, sous l’intitulé Néoexpert / Ingénéo / Septeo. L’éditeur évoque une modification du fonctionnement de Néoexpert le 29 septembre comme origine possible et indique avoir contacté ses équipes. Les documents en attente doivent être transmis automatiquement après rétablissement.",
+    "status": "investigating",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-07",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-10-07",
+    "checkedAt": "2026-10-10",
+    "sourceIds": [
+      "welyb-status-20260916"
+    ],
+    "limitations": "Avis découvert le 10 octobre sur une page globalement mise à jour le 9. La rubrique conserve la date du 7 ; le début effectif et l’heure de publication restent inconnus. La cause évoquée est une hypothèse de Welyb. L’intitulé Septeo ne documente pas une panne de sa PA.",
+    "affectedService": "Connecteur Welyb vers Néoexpert / Ingénéo / Septeo",
+    "firstObservedAt": "2026-10-10"
   }
 ]

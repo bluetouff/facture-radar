@@ -42,6 +42,14 @@ type ResearchOverride = Partial<Omit<PlatformResearchProfile, "platformSlug" | "
 };
 
 const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
+  generix: {
+    exitTerms: documented<ExitTerms>({
+      bulkExport: null,
+      formats: [],
+      postTerminationAccess: "Accès aux archives proposé en option payante après résiliation, selon l’annexe publique GIS.",
+      fees: "Restitution numérique facturée ; assistance supplémentaire au temps passé. Conditions du contrat signé à vérifier.",
+    }, ["generix-contract-20261010"], "L’annexe prévoit une restitution des factures sur support numérique dans un format documenté et un accès optionnel aux archives. Le document ne précise pas sa date d’applicabilité ; délai, format exact de restitution et tarif applicable au dossier restent à confirmer.", "2026-10-10"),
+  },
   abby: {
     availability: {
       sendsInvoices: documented({ stage: "announced", scope: "Émission électronique depuis Abby" }, ["abby-emission-20260920"], "L’aide annonce septembre 2027 et précise que la fonction reste indisponible lors de la consultation.", "2026-10-02"),

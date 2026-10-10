@@ -21,7 +21,7 @@ export const MCP_ENDPOINT = "https://pa.l0g.fr/api/mcp";
 export const MCP_SERVER_NAME = "io.github.bluetouff/pa-check";
 export const MCP_SERVER_TITLE = "PA Check";
 export const MCP_SERVER_VERSION = "0.2.0";
-export const MCP_CORPUS_CHECKED_AT = "2026-10-08";
+export const MCP_CORPUS_CHECKED_AT = "2026-10-10";
 
 const sourceRecords = sources as SourceRecord[];
 const sourcesById = new Map(sourceRecords.map((source) => [source.id, source]));

@@ -1,0 +1,1589 @@
+{
+  "checkedAt": "2026-10-10",
+  "refreshWindowSince": "2026-10-08",
+  "collection": {
+    "checkedAt": "2026-10-10T09:16:30.792Z",
+    "initialCollection": false,
+    "warning": "Contenu externe non fiable, à relire. Une collecte échouée ne constitue jamais un incident de la PA. Aucun candidat n’est publié automatiquement.",
+    "sources": [
+      {
+        "sourceId": "sage",
+        "url": "https://status.sage.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "97114bc9c05bcaa126fc5cfc205b6a5b9d77fe7c4234bfe831b956203ddb84a6",
+        "candidateCount": 9
+      },
+      {
+        "sourceId": "pennylane",
+        "url": "https://status.pennylane.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "0f16b3db8739eaa6c34348436e4a955b54a57f9c3818ea47bb927f6869aa048e",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "esker",
+        "url": "https://www.trustesker.com/?env=G",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "5605e95da64052362736d1c93d612d994e67e98ac0dcd7670d853d2752ee1241",
+        "candidateCount": 15
+      },
+      {
+        "sourceId": "avalara",
+        "url": "https://status.avalara.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "a984acd42331a89891363947cb1a4e651b17ac439523f467cf49b692fadf7817",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "axway",
+        "url": "https://status.axway.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "b8c5e0c7be28dad611d06ba8d52a75ab76f7d29d52a946191c7447107c5ae491",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "blg",
+        "url": "https://status.blgcloud.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "d050cadb3d49f0ef1d5bfb52953133adeb0f7dbdf2cd55cb762432bd689cb58d",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "docoon",
+        "url": "https://docooninvoice.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "6390c506ced46988a34c645ca53f3df477fdef2c1e69397b61cc7c4951e94e95",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "dokapi",
+        "url": "https://dokapi.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "8b5249f9e01bc28d483345778fe62ea88b963b1102473c1f73ecf7fc53c09164",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "ecosio-intercom",
+        "url": "https://www.ecosio-status.com/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "3db64c061b18f5aac7b7f1969207c6185933cf133614fd566e61dac372de8316",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "fiskaltrust",
+        "url": "https://status.fiskaltrust.eu/feed",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "4ce4eed53dddf86745dd19e2f63acfac190da197acfb1eaa69a65554d6f9eb8c",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "flowie",
+        "url": "https://flowie.betteruptime.com/feed",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "dadeacf3710d73e30dd81ca0b5292389d46e98581002f4b199a989ac3e901cbc",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "invopop",
+        "url": "https://status.invopop.com/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "ce063ceaa571b39e75c8982407b28ec7b5061db5d8dd519a4b0574cd9d8884b3",
+        "candidateCount": 3
+      },
+      {
+        "sourceId": "lucca",
+        "url": "https://status.lucca.fr/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "54f941eb42eb59d3cb45b6ba16e7d17770c57a981ac8197ce3c9997ce6f34862",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "n2f",
+        "url": "https://status.n2f.com/fr/feed",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "e8febae3b07f98c6add2eba9c65fd81ccba9ac378ec1580ddb9a6ea0955afaac",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "pitney-bowes",
+        "url": "https://status.pitneybowes.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "89e69c4a60794da0982823d8cbced2e5391f2b14c9fe006c8b018311e0276565",
+        "candidateCount": 17
+      },
+      {
+        "sourceId": "spendesk",
+        "url": "https://status.spendesk.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "17f3cf38c68bdf19dd268117bca33a662af5b30a2af1a34a21e141d0ad46792c",
+        "candidateCount": 9
+      },
+      {
+        "sourceId": "storecove",
+        "url": "https://storecove.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "574507a1428bc6e2b499421546601597bffdb202c5c70f9d90b507e7b07ab740",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "superpdp",
+        "url": "https://status.superpdp.tech/rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "aa2c201340b144608209aec9e513be0c1b905adf47935bae39b06d5243f3ef3b",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "weproc",
+        "url": "https://status.weinvoice.fr/feed",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "06b4ec895a2666fdedee84bc1837a885f943a6d4fee263247255e12ca096f929",
+        "candidateCount": 11
+      },
+      {
+        "sourceId": "veryswing",
+        "url": "https://status.veryswing.com/atom",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "826b3622849e9292520179efaf9f0223c84e4698d3034c69a10dc3db8210cb5f",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "eezi",
+        "url": "https://eezi.instatus.com/af-na/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "7761af49df7fc1126ebc4d000b7832099f65fa4a3ec5aa4a0232c6a11d653517",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "tungsten",
+        "url": "https://status.tungstencloud.com/europe/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "48fb62ba320d11f4e2d781d59a1878ef7b942795e3afc7ed4cfbed7244026ec1",
+        "candidateCount": 7
+      },
+      {
+        "sourceId": "myunisoft",
+        "url": "https://meteo.myunisoft.fr/api/incidents.json",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "a4dc08e7d37739d21bee19a440bd4cbee0ba1a97157dae517a873be6eed4ef10",
+        "candidateCount": 6
+      },
+      {
+        "sourceId": "tiime",
+        "url": "https://status.tiime.fr/api/getEventFeed/KoA7Nf881q",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "2d0f73e9b6bf5ce181fbca7f8acdee3f6126c5a8c7cbed523cd788e7de444e09",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "ademico",
+        "url": "https://status.ademico-software.com/api/getEventFeed/kME5WtnQZ0",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "92e0e7b51531a0eda12148e414c0bf12af6d351a966e4cb2592c92689763fdea",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "cert-fr",
+        "url": "https://www.cert.ssi.gouv.fr/feed/",
+        "status": "collected",
+        "checkedAt": "2026-10-10T09:16:30.792Z",
+        "sha256": "7b052eec1c11d0b40823a5455429bda00ee1447f521e3674ff9409245d7e2b2f",
+        "candidateCount": 40
+      }
+    ],
+    "pendingCount": 270
+  },
+  "previousCollection": {
+    "runId": "37936612867",
+    "status": "success",
+    "checkedAt": "2026-10-09",
+    "note": "Collecte GitHub relue et modifications cumulées avec la collecte locale du 10."
+  },
+  "previousTransientFailure": {
+    "runId": "37785966435",
+    "source": "cert-fr",
+    "reason": "Délai de collecte dépassé après 20 secondes le 8 octobre",
+    "recoveredOn": "2026-10-09",
+    "note": "Files de candidats conservées ; échec de source distinct des incidents PA."
+  },
+  "primaryReads": [
+    {
+      "id": "esker-status-E",
+      "url": "https://www.trustesker.com/?env=E",
+      "finalUrl": "https://www.trustesker.com/?env=E",
+      "sha256": "f43ec782358852df2ada166e079f46e96678fbe058a6cbfb4e6e44b024b437c6",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:17:22.927824+00:00"
+    },
+    {
+      "id": "esker-status-L",
+      "url": "https://www.trustesker.com/?env=L",
+      "finalUrl": "https://www.trustesker.com/?env=L",
+      "sha256": "8060fd24f95dc43659a779fb9ee2a86f5d5e9c2d23e3a72e861128a432c3b5c8",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:17:22.928227+00:00"
+    },
+    {
+      "id": "esker-status-G",
+      "url": "https://www.trustesker.com/?env=G",
+      "finalUrl": "https://www.trustesker.com/?env=G",
+      "sha256": "0b936467052727832817f74c8f69441a63fbd3b839e17ec4be19cc63c1c5d083",
+      "bytes": 62338,
+      "checkedAt": "2026-10-10T09:17:22.925380+00:00"
+    },
+    {
+      "id": "esker-status-J",
+      "url": "https://www.trustesker.com/?env=J",
+      "finalUrl": "https://www.trustesker.com/?env=J",
+      "sha256": "423abd656caf909b9a4094e8d869f2aab8089e5fc9f56e68e5cb25be0613cdbe",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:17:22.932006+00:00"
+    },
+    {
+      "id": "welyb-status",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "finalUrl": "https://support.welyb.fr/statut-plateforme",
+      "sha256": "0d83d954845c06bec7fd286ca056556a95eb9afc7440c81e3ef80c24a25ba422",
+      "bytes": 149455,
+      "checkedAt": "2026-10-10T09:17:23.057734+00:00"
+    },
+    {
+      "id": "qonto-status",
+      "url": "https://status.qonto.com/incidents/October-2026",
+      "finalUrl": "https://status.qonto.com/incidents/October-2026",
+      "sha256": "a433a56655c8886de2e4f231874903613d576728339d63f1c69cad014e172edc",
+      "bytes": 18924,
+      "checkedAt": "2026-10-10T09:17:23.050671+00:00"
+    },
+    {
+      "id": "esker-status-2026-09",
+      "url": "https://www.trustesker.com/?env=G",
+      "finalUrl": "https://www.trustesker.com/?env=G",
+      "sha256": "8b96d75fd6185b855a613d47370e35cb3c08f12cc8843ac69a2bd475ed13225d",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:17:23.025793+00:00"
+    },
+    {
+      "id": "sage-incident-w04d6drd7g3n",
+      "url": "https://status.sage.com/incidents/w04d6drd7g3n",
+      "finalUrl": "https://status.sage.com/incidents/w04d6drd7g3n",
+      "sha256": "13265d3d7309e292dda76612dd062bc606978e17b9b136d39565b3a9f88e0ab3",
+      "bytes": 85066,
+      "checkedAt": "2026-10-10T09:17:23.818254+00:00"
+    },
+    {
+      "id": "sage-incident-fjh6wx81xg1p",
+      "url": "https://status.sage.com/incidents/fjh6wx81xg1p",
+      "finalUrl": "https://status.sage.com/incidents/fjh6wx81xg1p",
+      "sha256": "7212d22df2e221acb331ed5422f42cb461fa56bcdb6f5ff3b3594a1714177966",
+      "bytes": 100131,
+      "checkedAt": "2026-10-10T09:17:23.998896+00:00"
+    },
+    {
+      "id": "sage-incident-rhf8nv5dd1rq",
+      "url": "https://status.sage.com/incidents/rhf8nv5dd1rq",
+      "finalUrl": "https://status.sage.com/incidents/rhf8nv5dd1rq",
+      "sha256": "e30a434a99d4284cd1289ad3aad5c669d6cba8898359c412e721e2908c31e2d2",
+      "bytes": 86705,
+      "checkedAt": "2026-10-10T09:17:23.864283+00:00"
+    },
+    {
+      "id": "sage-incident-qgr9wjcbs466",
+      "url": "https://status.sage.com/incidents/qgr9wjcbs466",
+      "finalUrl": "https://status.sage.com/incidents/qgr9wjcbs466",
+      "sha256": "fc0e13e2891e37aea2801c89fe2a554fbc3916d65926a97f7684ef6da809008c",
+      "bytes": 85009,
+      "checkedAt": "2026-10-10T09:17:23.819790+00:00"
+    },
+    {
+      "id": "sage-incident-9zgm55t360kp",
+      "url": "https://status.sage.com/incidents/9zgm55t360kp",
+      "finalUrl": "https://status.sage.com/incidents/9zgm55t360kp",
+      "sha256": "d1e166ae998a4ee93c638d8c85fa56fb6825deae43b84a8f2585d74fcf922591",
+      "bytes": 85639,
+      "checkedAt": "2026-10-10T09:17:24.581295+00:00"
+    },
+    {
+      "id": "sage-incident-ldq4kg4q8htj",
+      "url": "https://status.sage.com/incidents/ldq4kg4q8htj",
+      "finalUrl": "https://status.sage.com/incidents/ldq4kg4q8htj",
+      "sha256": "ca54d0a9843f3c88c34c9bf5c025c00924d4db58d709a5265841428e1ff3bed8",
+      "bytes": 86038,
+      "checkedAt": "2026-10-10T09:17:24.571450+00:00"
+    },
+    {
+      "id": "sage-incident-yh0mj6qwrmcy",
+      "url": "https://status.sage.com/incidents/yh0mj6qwrmcy",
+      "finalUrl": "https://status.sage.com/incidents/yh0mj6qwrmcy",
+      "sha256": "c8b63b631b30fa4ce848a1e78d4dc48f14733cb176e7764f1586bdf6d39365a5",
+      "bytes": 86125,
+      "checkedAt": "2026-10-10T09:17:24.654454+00:00"
+    },
+    {
+      "id": "sage-incident-2xx8jjz4pxfz",
+      "url": "https://status.sage.com/incidents/2xx8jjz4pxfz",
+      "finalUrl": "https://status.sage.com/incidents/2xx8jjz4pxfz",
+      "sha256": "e80890fa77cac51d8f659763d00f7f43399cde523a206ad34818e1aa95959872",
+      "bytes": 85558,
+      "checkedAt": "2026-10-10T09:17:24.780502+00:00"
+    },
+    {
+      "id": "sage-incident-v9p9p0xfp5qj",
+      "url": "https://status.sage.com/incidents/v9p9p0xfp5qj",
+      "finalUrl": "https://status.sage.com/incidents/v9p9p0xfp5qj",
+      "sha256": "5412ddc60d883152d384f13a65bfe59f974e459b42b742230f6ad59db1ba0ba9",
+      "bytes": 85123,
+      "checkedAt": "2026-10-10T09:17:25.319999+00:00"
+    },
+    {
+      "id": "pennylane-incident-zfpsp7z9wn1z",
+      "url": "https://status.pennylane.com/incidents/zfpsp7z9wn1z",
+      "finalUrl": "https://status.pennylane.com/incidents/zfpsp7z9wn1z",
+      "sha256": "fa7098908647c7a890c0accf8eb3e02c54b72a422ec107894b836a1aa0e254b0",
+      "bytes": 72839,
+      "checkedAt": "2026-10-10T09:17:24.984534+00:00"
+    },
+    {
+      "id": "weproc-peppol-20260901-source",
+      "url": "https://status.weinvoice.fr/incident/1044756",
+      "finalUrl": "https://status.weinvoice.fr/incident/1044756",
+      "sha256": "d6de39c1a47e29c76ec0cffe216a7e82ce8fcb4723d0bc9f0df8783ec5053f27",
+      "bytes": 140757,
+      "checkedAt": "2026-10-10T09:17:24.869737+00:00"
+    },
+    {
+      "id": "weproc-piste-20260901-source",
+      "url": "https://status.weinvoice.fr/incident/1044543",
+      "finalUrl": "https://status.weinvoice.fr/incident/1044543",
+      "sha256": "243e23b36545dd8c908caae5edbf99e28fd9b0485f7d0283c6dab7ee5cf7f70c",
+      "bytes": 139281,
+      "checkedAt": "2026-10-10T09:17:24.984741+00:00"
+    },
+    {
+      "id": "dokapi-emails-20260916-source",
+      "url": "https://dokapi.statuspage.io/incidents/hx6xfwqj64k9",
+      "finalUrl": "https://dokapi.statuspage.io/incidents/hx6xfwqj64k9",
+      "sha256": "4aa7476a7af2a7616f2bdab7b55c3b76ba4429c5a2201047fdccb53e03c61596",
+      "bytes": 54396,
+      "checkedAt": "2026-10-10T09:17:25.353236+00:00"
+    },
+    {
+      "id": "spendesk-einvoice-20260904-source",
+      "url": "https://status.spendesk.com/incidents/7v0rjf4x41br",
+      "finalUrl": "https://status.spendesk.com/incidents/7v0rjf4x41br",
+      "sha256": "6fe2c3df03da397451fae1095e363f2a67ebcd988a0a3828b974eb0ae415ccd1",
+      "bytes": 73522,
+      "checkedAt": "2026-10-10T09:17:25.384701+00:00"
+    },
+    {
+      "id": "spendesk-access-20260902-source",
+      "url": "https://status.spendesk.com/incidents/t2xb9nmwz5s6",
+      "finalUrl": "https://status.spendesk.com/incidents/t2xb9nmwz5s6",
+      "sha256": "8d2e51aaa2ee2f918909284cf4aae96869fa3422e1e67fb503dbb93c31b65000",
+      "bytes": 73264,
+      "checkedAt": "2026-10-10T09:17:25.573650+00:00"
+    },
+    {
+      "id": "spendesk-microsoft-20260904-source",
+      "url": "https://status.spendesk.com/incidents/b2hlvjc2kzn5",
+      "finalUrl": "https://status.spendesk.com/incidents/b2hlvjc2kzn5",
+      "sha256": "d9968a15f6b1e6e43123589a31d128ae625d3f8936c09ae5d858a5e1937eb336",
+      "bytes": 73662,
+      "checkedAt": "2026-10-10T09:17:25.771693+00:00"
+    },
+    {
+      "id": "spendesk-transfers-20260916-source",
+      "url": "https://status.spendesk.com/incidents/0dkn55v5wcqg",
+      "finalUrl": "https://status.spendesk.com/incidents/0dkn55v5wcqg",
+      "sha256": "c9c20df13bcc52d0b799f3882e688ab89ee8da0df88361a21a31360732f0d697",
+      "bytes": 73382,
+      "checkedAt": "2026-10-10T09:17:25.926619+00:00"
+    },
+    {
+      "id": "invopop-console-20260910-source",
+      "url": "https://status.invopop.com/incidents/01M25ZQ2HQW967V65TSSFH91HM",
+      "finalUrl": "https://status.invopop.com/incidents/01M25ZQ2HQW967V65TSSFH91HM",
+      "sha256": "147b4db357eab6cce1cf39ccb654e18fea7bca130534653e11f5f73ebcd7f490",
+      "bytes": 81442,
+      "checkedAt": "2026-10-10T09:17:25.570032+00:00"
+    },
+    {
+      "id": "invopop-peppol-sml-20260902-source",
+      "url": "https://status.invopop.com/incidents/01M1GK0Q19JRJ5ZSHXWEAF0HW1",
+      "finalUrl": "https://status.invopop.com/incidents/01M1GK0Q19JRJ5ZSHXWEAF0HW1",
+      "sha256": "a90d966e3f054d5cbe5d0c9e14507181c49e0fbd667cbb65f82177dbd5dc9ac1",
+      "bytes": 78912,
+      "checkedAt": "2026-10-10T09:17:25.897576+00:00"
+    },
+    {
+      "id": "myunisoft-connection-20260916-source",
+      "url": "https://meteo.myunisoft.fr/incident/02da09f4-55ea-4a25-9b80-779a7eef0939/",
+      "finalUrl": "https://meteo.myunisoft.fr/incident/02da09f4-55ea-4a25-9b80-779a7eef0939/",
+      "sha256": "0530b75cf57a1464b0fe0ac732eee30d5377cd3587958ea7191991316d297e6a",
+      "bytes": 6050,
+      "checkedAt": "2026-10-10T09:17:25.679013+00:00"
+    },
+    {
+      "id": "myunisoft-display-20260915-source",
+      "url": "https://meteo.myunisoft.fr/incident/21de5fdd-7d59-4b36-9790-8f63c9976523/",
+      "finalUrl": "https://meteo.myunisoft.fr/incident/21de5fdd-7d59-4b36-9790-8f63c9976523/",
+      "sha256": "011dcad008c885a20387b71a9a25d4f65f87a4ba2a8d81ab4e380395be181067",
+      "bytes": 6116,
+      "checkedAt": "2026-10-10T09:17:25.774329+00:00"
+    },
+    {
+      "id": "tungsten-support-20260916-source",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M2MVH4FXXX66TJXA9ZHDV5XJ",
+      "finalUrl": "https://status.tungstencloud.com/europe/incidents/01M2MVH4FXXX66TJXA9ZHDV5XJ",
+      "sha256": "f594b9bc9ef3c80f10796ddfcab334dacf7887551ded2465ccb56f5bcc80627d",
+      "bytes": 158173,
+      "checkedAt": "2026-10-10T09:17:25.938567+00:00"
+    },
+    {
+      "id": "welyb-status-20260916",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "finalUrl": "https://support.welyb.fr/statut-plateforme",
+      "sha256": "0d83d954845c06bec7fd286ca056556a95eb9afc7440c81e3ef80c24a25ba422",
+      "bytes": 149455,
+      "checkedAt": "2026-10-10T09:17:25.850624+00:00"
+    },
+    {
+      "id": "frenchbreaches-welyb-20260915",
+      "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "finalUrl": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "sha256": "89e7002f7c5f3d03e3b270a6f3935ccebe27ba616f53a30af60a07dc04d95c33",
+      "bytes": 81563,
+      "checkedAt": "2026-10-10T09:17:25.973523+00:00"
+    },
+    {
+      "id": "frenchbreaches-zenfirst-20260917",
+      "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "finalUrl": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "sha256": "06c3dbe0d2bad872af6365960d18905405991d486b83953d77987e3c7a6eb96a",
+      "bytes": 79769,
+      "checkedAt": "2026-10-10T09:17:25.966964+00:00"
+    },
+    {
+      "id": "spendesk-amazon-20260916-source",
+      "url": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+      "finalUrl": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+      "sha256": "25a95b111dfb708bd4f242adc40107e8230a65385db9b835242e314a49b4866b",
+      "bytes": 76065,
+      "checkedAt": "2026-10-10T09:17:26.548157+00:00"
+    },
+    {
+      "id": "superpdp-directory-20260918-source",
+      "url": "https://status.superpdp.tech/",
+      "finalUrl": "https://status.superpdp.tech/",
+      "sha256": "17cf3eb8ff9691ba63f3019e9e6abbc5d821951a276cd2851bf9e1ae69959c54",
+      "bytes": 56883,
+      "checkedAt": "2026-10-10T09:17:26.210131+00:00"
+    },
+    {
+      "id": "ecosio-france-20260921-source",
+      "url": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+      "finalUrl": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+      "sha256": "a2b3cbbfc22f6e51482606ba351aec5e734236990b45be2eb2c74f28877dbc7c",
+      "bytes": 130371,
+      "checkedAt": "2026-10-10T09:17:26.183274+00:00"
+    },
+    {
+      "id": "spendesk-france-20260922-source",
+      "url": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+      "finalUrl": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+      "sha256": "904de500648b256fe40a4334419d4eb070041389ebd3869b4e4ed1836db4256d",
+      "bytes": 73496,
+      "checkedAt": "2026-10-10T09:17:26.333494+00:00"
+    },
+    {
+      "id": "spendesk-ios-20260921-source",
+      "url": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+      "finalUrl": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+      "sha256": "6b645105536594053d5a141de8de02253d47c1db87cef44ba4b228fb8ba2d8bf",
+      "bytes": 73329,
+      "checkedAt": "2026-10-10T09:17:26.692962+00:00"
+    },
+    {
+      "id": "eezi-dashboard-20260922-source",
+      "url": "https://eezi.instatus.com/cmucut4ft1um81npccbw9inh5",
+      "finalUrl": "https://eezi.instatus.com/cmucut4ft1um81npccbw9inh5",
+      "sha256": "57834573d84b94b0826e5f71e843ca462b4290a4253aff1d21dc26f8ba01b9df",
+      "bytes": 128031,
+      "checkedAt": "2026-10-10T09:17:26.528375+00:00"
+    },
+    {
+      "id": "frenchbreaches-altagem-20260921",
+      "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "finalUrl": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "sha256": "66410b72d78ea0f9d6acb7757c08fd5a97d3d177548676e94b2f4f64379c40cb",
+      "bytes": 88611,
+      "checkedAt": "2026-10-10T09:17:26.451406+00:00"
+    },
+    {
+      "id": "cyberattaque-altagem-20260921",
+      "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "finalUrl": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "sha256": "5428009561fac11d1e72a49ef6832a93ef03793c4d91ea34f933e2830d7285dd",
+      "bytes": 75027,
+      "checkedAt": "2026-10-10T09:17:26.843473+00:00"
+    },
+    {
+      "id": "frenchbreaches-faktus-20260919",
+      "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "finalUrl": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "sha256": "104fc5ede7787a1ff82eefea92001576d30c80e20870cc287ccba140bf29e835",
+      "bytes": 91047,
+      "checkedAt": "2026-10-10T09:17:26.635488+00:00"
+    },
+    {
+      "id": "pennylane-incident-s9lkgtlw03s2",
+      "url": "https://status.pennylane.com/incidents/s9lkgtlw03s2",
+      "finalUrl": "https://status.pennylane.com/incidents/s9lkgtlw03s2",
+      "sha256": "3f18099af634eabfad531774298891eb70cd4867e061501cbc868acfde8295c6",
+      "bytes": 72146,
+      "checkedAt": "2026-10-10T09:17:27.154790+00:00"
+    },
+    {
+      "id": "weproc-incident-1073900",
+      "url": "https://status.weinvoice.fr/incident/1073900",
+      "finalUrl": "https://status.weinvoice.fr/incident/1073900",
+      "sha256": "fd8bdd163eed5161487ec98360eba7284c707cd04460e9a3a0223482bebd0824",
+      "bytes": 139284,
+      "checkedAt": "2026-10-10T09:17:26.835208+00:00"
+    },
+    {
+      "id": "lucca-incident-nfx98d4xggmb",
+      "url": "https://status.lucca.fr/incidents/nfx98d4xggmb",
+      "finalUrl": "https://status.lucca.fr/incidents/nfx98d4xggmb",
+      "sha256": "ae01c64f5d41019d1a34abe92aed8afa190f311517cb2b5b81d865496ab040da",
+      "bytes": 74768,
+      "checkedAt": "2026-10-10T09:17:27.108115+00:00"
+    },
+    {
+      "id": "sage-incident-mc2p8blsm281",
+      "url": "https://status.sage.com/incidents/mc2p8blsm281",
+      "finalUrl": "https://status.sage.com/incidents/mc2p8blsm281",
+      "sha256": "86a9a621165038eb795bb72ff8e7956aa47f5fb81f7288e7df0880c4f1b0e0a4",
+      "bytes": 85738,
+      "checkedAt": "2026-10-10T09:17:27.816277+00:00"
+    },
+    {
+      "id": "sage-incident-4r3t9stk544k",
+      "url": "https://status.sage.com/incidents/4r3t9stk544k",
+      "finalUrl": "https://status.sage.com/incidents/4r3t9stk544k",
+      "sha256": "a337181641ab0d25784203753de582a27b03c746b92a33073c4e5f3530d3f903",
+      "bytes": 83134,
+      "checkedAt": "2026-10-10T09:17:27.626242+00:00"
+    },
+    {
+      "id": "spendesk-incident-qs6rjc37fr6l",
+      "url": "https://status.spendesk.com/incidents/qs6rjc37fr6l",
+      "finalUrl": "https://status.spendesk.com/incidents/qs6rjc37fr6l",
+      "sha256": "d3901b03f5dcfb277b6e7a60f059b5457f31eb102617d3d0a8800626430f6b0c",
+      "bytes": 73170,
+      "checkedAt": "2026-10-10T09:17:27.539902+00:00"
+    },
+    {
+      "id": "fakturownia-security-20260929",
+      "url": "https://fakturownia.pl/incydent",
+      "finalUrl": "https://fakturownia.pl/incydent",
+      "sha256": "b0c74914da17cd9ce40ef07bd0c664c8aa62e047cc9c2d6270948f145056f154",
+      "bytes": 215601,
+      "checkedAt": "2026-10-10T09:17:27.409902+00:00"
+    },
+    {
+      "id": "factuali-notification-relayed-20261001",
+      "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "finalUrl": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "sha256": "b929d7f120a94cb7d1fe06eba5f6012ac98a33781dd0b58b44ee31007a5ccd11",
+      "bytes": 127712,
+      "checkedAt": "2026-10-10T09:17:27.505362+00:00"
+    },
+    {
+      "id": "fuitesinfos-vosfactures-20261001",
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "finalUrl": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "sha256": "6620f4c2d950c73ac2706375355c08019b3d849f8ed4da1c84dd6c1996d90145",
+      "bytes": 50339,
+      "checkedAt": "2026-10-10T09:17:27.719868+00:00"
+    },
+    {
+      "id": "aife-vosfactures-20261002",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "finalUrl": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "sha256": "515c2025b7cbf8dd1e8161d7782d0f6082c7b5fe54c2eabb4fa1a8ba77b4c90c",
+      "bytes": 307326,
+      "checkedAt": "2026-10-10T09:17:28.236325+00:00"
+    },
+    {
+      "id": "sage-incident-kt4m889tbj9p",
+      "url": "https://status.sage.com/incidents/kt4m889tbj9p",
+      "finalUrl": "https://status.sage.com/incidents/kt4m889tbj9p",
+      "sha256": "fc53a36f2a4c89c1956385b9c0e167e9f078f6d86cda51e091534f6548ae2837",
+      "bytes": 86860,
+      "checkedAt": "2026-10-10T09:17:28.641817+00:00"
+    },
+    {
+      "id": "esker-environment-e-20261001",
+      "url": "https://www.trustesker.com/?env=E",
+      "finalUrl": "https://www.trustesker.com/?env=E",
+      "sha256": "c36402a7aa9d954e1b9991f2cdbcb4821b32b9dd3d64280def812f6cf00e01b6",
+      "bytes": 62338,
+      "checkedAt": "2026-10-10T09:17:27.837711+00:00"
+    },
+    {
+      "id": "aife-vosfactures-reprise-20261004",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "finalUrl": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "sha256": "1649e5dd8744a372d30882fdd6fde2531ca1a2593cbb18d8dc6005214c5bfa72",
+      "bytes": 307351,
+      "checkedAt": "2026-10-10T09:17:28.398010+00:00"
+    },
+    {
+      "id": "esker-pa-interconnexion-20261002",
+      "url": "https://www.trustesker.com/?env=L",
+      "finalUrl": "https://www.trustesker.com/?env=L",
+      "sha256": "90d539c2a6972a5809ed14b2db76c7d0d508d73ba99f42c000bc430ffb7c5747",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:17:27.927442+00:00"
+    },
+    {
+      "id": "weproc-incident-1080572",
+      "url": "https://status.weinvoice.fr/incident/1080572",
+      "finalUrl": "https://status.weinvoice.fr/incident/1080572",
+      "sha256": "9ce524c122b446bd2eb53943309d5c16f3c6f35773a11099b6da97b0e4af8448",
+      "bytes": 139281,
+      "checkedAt": "2026-10-10T09:17:28.109696+00:00"
+    },
+    {
+      "id": "weproc-incident-1080599",
+      "url": "https://status.weinvoice.fr/incident/1080599",
+      "finalUrl": "https://status.weinvoice.fr/incident/1080599",
+      "sha256": "1d0d828c7e0042c5dd2a48844c9c20eea464fca30cb4566088dd6e88f2406f7f",
+      "bytes": 139281,
+      "checkedAt": "2026-10-10T09:17:28.291201+00:00"
+    },
+    {
+      "id": "weproc-incident-1080609",
+      "url": "https://status.weinvoice.fr/incident/1080609",
+      "finalUrl": "https://status.weinvoice.fr/incident/1080609",
+      "sha256": "f6b718ebd45d6c45ba36484729ac99d0dd3d604cf3e6ffdde9ecc47bc2cb7df6",
+      "bytes": 139281,
+      "checkedAt": "2026-10-10T09:17:28.454114+00:00"
+    },
+    {
+      "id": "weproc-incident-1080639",
+      "url": "https://status.weinvoice.fr/incident/1080639",
+      "finalUrl": "https://status.weinvoice.fr/incident/1080639",
+      "sha256": "b43acecdcc724a444d2140f8ee1e46df868588e568fdfcc8fbdd7234ee295099",
+      "bytes": 139282,
+      "checkedAt": "2026-10-10T09:17:28.480052+00:00"
+    },
+    {
+      "id": "weproc-incident-1080650",
+      "url": "https://status.weinvoice.fr/incident/1080650",
+      "finalUrl": "https://status.weinvoice.fr/incident/1080650",
+      "sha256": "48fb8833156ca67c9de6a8b3e2627168a7c1d4814960f3f0d50534a5aaa1bd95",
+      "bytes": 139284,
+      "checkedAt": "2026-10-10T09:17:28.577769+00:00"
+    },
+    {
+      "id": "weproc-incident-1080708",
+      "url": "https://status.weinvoice.fr/incident/1080708",
+      "finalUrl": "https://status.weinvoice.fr/incident/1080708",
+      "sha256": "73d66861d64194d119f475f8de0f3fb9909466d656527b0eb7e2ef80fe020b73",
+      "bytes": 139284,
+      "checkedAt": "2026-10-10T09:17:28.654769+00:00"
+    },
+    {
+      "id": "weproc-incident-1080719",
+      "url": "https://status.weinvoice.fr/incident/1080719",
+      "finalUrl": "https://status.weinvoice.fr/incident/1080719",
+      "sha256": "ebc69af7104055fff06f4f48dcfbe5f657a270ee6183450831ffd041eab6dca8",
+      "bytes": 139283,
+      "checkedAt": "2026-10-10T09:17:28.693619+00:00"
+    },
+    {
+      "id": "myunisoft-incident-fba23613-5912-4c1f-a6f9-28aa0c690859",
+      "url": "https://meteo.myunisoft.fr/incident/fba23613-5912-4c1f-a6f9-28aa0c690859/",
+      "finalUrl": "https://meteo.myunisoft.fr/incident/fba23613-5912-4c1f-a6f9-28aa0c690859/",
+      "sha256": "65702718b6dcaafdc7deafa3b4a9194ed2543efc6db5745d93317aa86b9b76dd",
+      "bytes": 6054,
+      "checkedAt": "2026-10-10T09:17:28.678712+00:00"
+    },
+    {
+      "id": "myunisoft-incident-4367fb01-ec0f-4fc6-94dd-d983ed2260b7",
+      "url": "https://meteo.myunisoft.fr/incident/4367fb01-ec0f-4fc6-94dd-d983ed2260b7/",
+      "finalUrl": "https://meteo.myunisoft.fr/incident/4367fb01-ec0f-4fc6-94dd-d983ed2260b7/",
+      "sha256": "54046ee98adfa963d3b0f2c0437d26c8b1c88005e0ceb2d585e63498d0df3585",
+      "bytes": 6054,
+      "checkedAt": "2026-10-10T09:17:28.736430+00:00"
+    },
+    {
+      "id": "fiducial-security-20261001",
+      "url": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "finalUrl": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "sha256": "008accb4936fbba3b08ef52523a0a208dde24da9a00ea32e0b9e2d13310a2f67",
+      "bytes": 49527,
+      "checkedAt": "2026-10-10T09:17:28.795516+00:00"
+    },
+    {
+      "id": "sage-incident-j6kkplxr2ff3",
+      "url": "https://status.sage.com/incidents/j6kkplxr2ff3",
+      "finalUrl": "https://status.sage.com/incidents/j6kkplxr2ff3",
+      "sha256": "0a4a04b8f4159310f3fcb0da429b246a5f4e44b5cfd2a5ee5b452b2285238026",
+      "bytes": 85938,
+      "checkedAt": "2026-10-10T09:17:29.453404+00:00"
+    },
+    {
+      "id": "sage-incident-grngh6q7rzc2",
+      "url": "https://status.sage.com/incidents/grngh6q7rzc2",
+      "finalUrl": "https://status.sage.com/incidents/grngh6q7rzc2",
+      "sha256": "8d5a0ab42238f4ecc7e3d28bf039fc1ac407bf9bdbb6c741343798e71fe04b91",
+      "bytes": 86372,
+      "checkedAt": "2026-10-10T09:17:29.472719+00:00"
+    },
+    {
+      "id": "spendesk-3ds-20261007",
+      "url": "https://status.spendesk.com/incidents/v2rhxyvn0mqr",
+      "finalUrl": "https://status.spendesk.com/incidents/v2rhxyvn0mqr",
+      "sha256": "5463c05f8d0332d7234fc6eb865d7d5d60d9544cbd16e1d8736e286a80a60443",
+      "bytes": 71851,
+      "checkedAt": "2026-10-10T09:17:29.240513+00:00"
+    },
+    {
+      "id": "weproc-incident-1083848",
+      "url": "https://status.weinvoice.fr/incident/1083848",
+      "finalUrl": "https://status.weinvoice.fr/incident/1083848",
+      "sha256": "bf229de17b0ba45874e7cf7c58448dabd7636f36169c18eba718fc69fe637aa8",
+      "bytes": 139281,
+      "checkedAt": "2026-10-10T09:17:29.052815+00:00"
+    },
+    {
+      "id": "myunisoft-incident-8ccd8e7d-9ad4-431f-a77b-bdf5e0f68bb1",
+      "url": "https://meteo.myunisoft.fr/incident/8ccd8e7d-9ad4-431f-a77b-bdf5e0f68bb1/",
+      "finalUrl": "https://meteo.myunisoft.fr/incident/8ccd8e7d-9ad4-431f-a77b-bdf5e0f68bb1/",
+      "sha256": "764455fe66eccb66d2cc907d19af23846a27c27c0604ce2b80d24652acff2347",
+      "bytes": 6827,
+      "checkedAt": "2026-10-10T09:17:29.147411+00:00"
+    },
+    {
+      "id": "myunisoft-incident-b74ef35b-df82-419b-aaf6-c44451d130ae",
+      "url": "https://meteo.myunisoft.fr/incident/b74ef35b-df82-419b-aaf6-c44451d130ae/",
+      "finalUrl": "https://meteo.myunisoft.fr/incident/b74ef35b-df82-419b-aaf6-c44451d130ae/",
+      "sha256": "236312015f709831d9b3034841bf255387911eb96337d641e0fcf0ff20f73733",
+      "bytes": 6032,
+      "checkedAt": "2026-10-10T09:17:29.241196+00:00"
+    },
+    {
+      "id": "invopop-incident-20261003",
+      "url": "https://status.invopop.com/incidents/01M45HTD3GB1BD409X4Q6ZM0W6",
+      "finalUrl": "https://status.invopop.com/incidents/01M45HTD3GB1BD409X4Q6ZM0W6",
+      "sha256": "5d1bc8a2e75bc835b31dac11fe2e70789500f221a949aa80b6b1591f8dff6fdd",
+      "bytes": 99628,
+      "checkedAt": "2026-10-10T09:17:29.613464+00:00"
+    },
+    {
+      "id": "invopop-postmortem-20261003",
+      "url": "https://status.invopop.com/incidents/01M45HTD3GB1BD409X4Q6ZM0W6/write-up",
+      "finalUrl": "https://status.invopop.com/incidents/01M45HTD3GB1BD409X4Q6ZM0W6/write-up",
+      "sha256": "0f1c3c0ca112e4c39efd3810daf81210aec1c271a3b28dd7942245edfb75346d",
+      "bytes": 88474,
+      "checkedAt": "2026-10-10T09:17:29.437135+00:00"
+    },
+    {
+      "id": "esker-environment-e-20261005",
+      "url": "https://www.trustesker.com/?env=E",
+      "finalUrl": "https://www.trustesker.com/?env=E",
+      "sha256": "f43ec782358852df2ada166e079f46e96678fbe058a6cbfb4e6e44b024b437c6",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:17:29.529462+00:00"
+    },
+    {
+      "id": "aife-depot-pdf-20261006",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm?id=aife_publication&sys_id=ad302dc52b370b50267bff6fce91bf56",
+      "finalUrl": "https://portail.chorus-pro.gouv.fr/aife_csm?id=aife_publication&sys_id=ad302dc52b370b50267bff6fce91bf56",
+      "sha256": "04188a49d53418c91d7cb2399a65ba7ace3d43d8620bff2cf9b7000a71834ae3",
+      "bytes": 307710,
+      "checkedAt": "2026-10-10T09:17:30.003373+00:00"
+    },
+    {
+      "id": "vosfactures-press",
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "finalUrl": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "sha256": "99bb4396843ef9cb90f61df3c4cabb0596192fd3f3313021222a5232f7e6d6ff",
+      "bytes": 50339,
+      "checkedAt": "2026-10-10T09:17:29.592452+00:00"
+    },
+    {
+      "id": "sage-qm1bs54xn545",
+      "url": "https://status.sage.com/incidents/qm1bs54xn545",
+      "finalUrl": "https://status.sage.com/incidents/qm1bs54xn545",
+      "sha256": "f837a5fe765d533f32c03bdc44cb56bc784358f5d915bf2444dbdc958cf8351f",
+      "bytes": 86457,
+      "checkedAt": "2026-10-10T09:18:10.050474+00:00"
+    },
+    {
+      "id": "sage-gs8td6mcwhwk",
+      "url": "https://status.sage.com/incidents/gs8td6mcwhwk",
+      "finalUrl": "https://status.sage.com/incidents/gs8td6mcwhwk",
+      "sha256": "3bc9dc225503d52ac1f2e034bc8a610953553e012ea16c2fdd182e5f04554a92",
+      "bytes": 85218,
+      "checkedAt": "2026-10-10T09:18:10.020936+00:00"
+    },
+    {
+      "id": "sage-4lzdfp9v04j6",
+      "url": "https://status.sage.com/incidents/4lzdfp9v04j6",
+      "finalUrl": "https://status.sage.com/incidents/4lzdfp9v04j6",
+      "sha256": "72746ff3b2ba9d21b036759b2834252248c9e717bbb148d956e4a1a0dfd6125d",
+      "bytes": 86408,
+      "checkedAt": "2026-10-10T09:18:09.986699+00:00"
+    },
+    {
+      "id": "esker-environment-D",
+      "url": "https://www.trustesker.com/?env=D",
+      "finalUrl": "https://www.trustesker.com/?env=D",
+      "sha256": "82f713c3e311ed51dd7148995981d63a5fbe18aa81298a625e81ba75cb7d5386",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:18:09.476092+00:00"
+    },
+    {
+      "id": "esker-environment-E",
+      "url": "https://www.trustesker.com/?env=E",
+      "finalUrl": "https://www.trustesker.com/?env=E",
+      "sha256": "be90bcede1ad0f784035902ba522bb444542f172ad66dd9a697fb2b7ac520783",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:18:09.573903+00:00"
+    },
+    {
+      "id": "esker-environment-G",
+      "url": "https://www.trustesker.com/?env=G",
+      "finalUrl": "https://www.trustesker.com/?env=G",
+      "sha256": "49ac9847d284c84d2de16b4f4c9df012f4bb66a89546ff98d90d1ccc5712effe",
+      "bytes": 62338,
+      "checkedAt": "2026-10-10T09:18:09.663532+00:00"
+    },
+    {
+      "id": "esker-environment-K",
+      "url": "https://www.trustesker.com/?env=K",
+      "finalUrl": "https://www.trustesker.com/?env=K",
+      "sha256": "21315d75a4e97ae148f81bb9d31427df8427cd12777f707d8e2d065e2ab70453",
+      "bytes": 62339,
+      "checkedAt": "2026-10-10T09:18:09.748715+00:00"
+    },
+    {
+      "id": "pitney-bowes-lg2h2c3g6kd3",
+      "url": "https://status.pitneybowes.com/incidents/lg2h2c3g6kd3",
+      "finalUrl": "https://status.pitneybowes.com/incidents/lg2h2c3g6kd3",
+      "sha256": "0ce2e9c85633066ebe218733df7f8cf446231555e3062d0eb1271874dc6b56c2",
+      "bytes": 138870,
+      "checkedAt": "2026-10-10T09:18:10.528660+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1281",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1281/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1281/",
+      "sha256": "dc31ca4ffad2a9db5f21b39f3a3983fff6f536d99b357306ff79beab9fe525e5",
+      "bytes": 33493,
+      "checkedAt": "2026-10-10T09:18:10.063411+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1280",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1280/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1280/",
+      "sha256": "a519485b2919caa99275fee008f485af0d9fc6dc59b2e362ffee0f620c553b64",
+      "bytes": 16278,
+      "checkedAt": "2026-10-10T09:18:10.098449+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1282",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1282/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1282/",
+      "sha256": "b58d0afa10ab9e864b7c1db16620628f57d230f970536f4b6fb47e2affc5a182",
+      "bytes": 29162,
+      "checkedAt": "2026-10-10T09:18:10.124808+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1284",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1284/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1284/",
+      "sha256": "1b0794826dcbc6171582caf857222b5fa878a0637acd09c9ecb3e6351d4ee013",
+      "bytes": 16162,
+      "checkedAt": "2026-10-10T09:18:10.131383+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1286",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1286/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1286/",
+      "sha256": "457ae57cc11fdd9f58da278b638a7c9bf155109fbd215f936d9d62ecc429f650",
+      "bytes": 432828,
+      "checkedAt": "2026-10-10T09:18:10.257024+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1283",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1283/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1283/",
+      "sha256": "98ee9e849edb78e98852518c59fc1c8e6d8b1727628aa734c7e6f6268053da2a",
+      "bytes": 19955,
+      "checkedAt": "2026-10-10T09:18:10.204247+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1285",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1285/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1285/",
+      "sha256": "f70852671183347e9c77dfd2ac6232659f2ed9f5332cbca08e6a0bfbcc827df3",
+      "bytes": 16947,
+      "checkedAt": "2026-10-10T09:18:10.201379+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1291",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1291/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1291/",
+      "sha256": "75bceeb1ef404a25c864b47df30d70dce08696f8938f3411124ac5946f0d6f9f",
+      "bytes": 56474,
+      "checkedAt": "2026-10-10T09:18:10.297733+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1289",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1289/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1289/",
+      "sha256": "47ef21eecbaa5eef51fc1f3cf027d0e62f8f0301629bdffab4256f2cff09bda4",
+      "bytes": 259300,
+      "checkedAt": "2026-10-10T09:18:10.346259+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1287",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1287/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1287/",
+      "sha256": "78837a74828bfc8a4e0c2ffeb594f124f6fec3844990ab014063dea134eb26ee",
+      "bytes": 49711,
+      "checkedAt": "2026-10-10T09:18:10.331669+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1290",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1290/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1290/",
+      "sha256": "2577efde6babde951214e10b837ed21a1929eb965524947b58046fbad3f4cf60",
+      "bytes": 17993,
+      "checkedAt": "2026-10-10T09:18:10.373163+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1288",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1288/",
+      "finalUrl": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1288/",
+      "sha256": "595651a6ec944f9de018d881f312859feab265f2d2e620a491deea903d8b9a91",
+      "bytes": 56615,
+      "checkedAt": "2026-10-10T09:18:10.410450+00:00"
+    }
+  ],
+  "candidateDecisions": [
+    {
+      "id": "sage-gs8td6mcwhwk",
+      "sourceId": "sage",
+      "url": "https://status.sage.com/incidents/gs8td6mcwhwk",
+      "title": "Sage Intacct  - Major Outage",
+      "publishedAt": "2026-10-09T11:49:49.000Z",
+      "fingerprint": "52c09ba0b3f83e15c4722e9c61bf7bae75372d791af0852293cd0060de1c2bb2",
+      "decision": "published_publisher_service",
+      "reason": "Intacct Europe et Afrique du Sud : résolution annoncée le 9 octobre ; clients français et flux PA non précisés."
+    },
+    {
+      "id": "sage-4lzdfp9v04j6",
+      "sourceId": "sage",
+      "url": "https://status.sage.com/incidents/4lzdfp9v04j6",
+      "title": "Brightpearl - Partial Outage",
+      "publishedAt": "2026-10-08T16:32:32.000Z",
+      "fingerprint": "401900be5dc53a2af18f29f1bb28d4f9964539480e94028c97ab968ffd098363",
+      "decision": "excluded_scope_unconfirmed",
+      "reason": "Brightpearl : impact sur la facturation française ou les flux PA non documenté."
+    },
+    {
+      "id": "esker-environment-D",
+      "url": "https://www.trustesker.com/?env=D",
+      "title": "TrustEsker environnement D",
+      "publishedAt": null,
+      "fingerprint": "07f4d76b726af115c6257b8fe4b8344bf688bb52bafc0931e7588a16f64747f1",
+      "sourceId": "esker",
+      "decision": "grouped_publisher_service",
+      "reason": "Quatre notices identiques D/E/G/K regroupées dans esker-affichage-20261009 ; L de la PA française non cité."
+    },
+    {
+      "id": "esker-environment-E",
+      "url": "https://www.trustesker.com/?env=E",
+      "title": "TrustEsker environnement E",
+      "publishedAt": null,
+      "fingerprint": "07f4d76b726af115c6257b8fe4b8344bf688bb52bafc0931e7588a16f64747f1",
+      "sourceId": "esker",
+      "decision": "grouped_publisher_service",
+      "reason": "Quatre notices identiques D/E/G/K regroupées dans esker-affichage-20261009 ; L de la PA française non cité."
+    },
+    {
+      "id": "esker-environment-G",
+      "url": "https://www.trustesker.com/?env=G",
+      "title": "TrustEsker environnement G",
+      "publishedAt": null,
+      "fingerprint": "07f4d76b726af115c6257b8fe4b8344bf688bb52bafc0931e7588a16f64747f1",
+      "sourceId": "esker",
+      "decision": "grouped_publisher_service",
+      "reason": "Quatre notices identiques D/E/G/K regroupées dans esker-affichage-20261009 ; L de la PA française non cité."
+    },
+    {
+      "id": "esker-environment-K",
+      "url": "https://www.trustesker.com/?env=K",
+      "title": "TrustEsker environnement K",
+      "publishedAt": null,
+      "fingerprint": "07f4d76b726af115c6257b8fe4b8344bf688bb52bafc0931e7588a16f64747f1",
+      "sourceId": "esker",
+      "decision": "grouped_publisher_service",
+      "reason": "Quatre notices identiques D/E/G/K regroupées dans esker-affichage-20261009 ; L de la PA française non cité."
+    },
+    {
+      "id": "pitney-bowes-lg2h2c3g6kd3",
+      "sourceId": "pitney-bowes",
+      "url": "https://status.pitneybowes.com/incidents/lg2h2c3g6kd3",
+      "title": "Service Disruption observed for Payment Services for USA region",
+      "publishedAt": "2026-10-09T12:41:41.000Z",
+      "fingerprint": "af44132ffa75a56cc3edb35f1bfd91935f6344107442437bf42950ba5c56be72",
+      "decision": "excluded_not_france",
+      "reason": "Paiement de services USA ; impact sur la PA française non documenté."
+    },
+    {
+      "id": "tungsten-01M345Y1TB1AFGHHAD2SB5A03M",
+      "sourceId": "tungsten",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M345Y1TB1AFGHHAD2SB5A03M",
+      "title": "Poland e-Invoicing service degradation",
+      "publishedAt": "2026-09-24T08:07:57.000Z",
+      "fingerprint": "22542d468a094a32f7000bc1ac01af9955dc2fe6b2209811b07bf61d5087bd45",
+      "decision": "excluded_not_france",
+      "reason": "Pologne KSeF : impact sur la PA française non documenté."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1264",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1264/",
+      "title": "Vulnérabilité dans les produits Atlassian (06 octobre 2026)",
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "fingerprint": "7e27f7243637713cbb05d4c13aefab63a6a7b5a0d6c0cd5c6909dfc73d610d2f",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1275",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1275/",
+      "title": "Multiples vulnérabilités dans Sonicwall Secure Mobile Access (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "2d4a1bdd821eec4055b63e1fa0e9ab8ab1c4b674a828406c483475bd93a44f2f",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1276",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1276/",
+      "title": "Multiples vulnérabilités dans les produits Elastic (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "e977adfad03359e8ac53cd2cf0b49434217d95d9cefe45ed9072f600d9c23ac2",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1279",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1279/",
+      "title": "Multiples vulnérabilités dans SPIP (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "907566eb8ba8f5a0fabe1e5348691066fe9d0a5e679014ccbf015a9189372c9e",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1278",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1278/",
+      "title": "Multiples vulnérabilités dans les produits Veeam (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "46536f9975582235cfb2dffd5bcb11f311eb965d30e4cf1e6dd674ff9fde176f",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1273",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1273/",
+      "title": "Multiples vulnérabilités dans WordPress (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "f1724641310c1c5c10996ef5c4d8201c0cf79a3fb949db973dc397a9d671f004",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1267",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1267/",
+      "title": "Multiples vulnérabilités dans Microsoft Edge (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "5a04a892a3d894e4dddeb144e2d808fe41f9fa2fc8c75abcb243b1709fbec9d6",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1270",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1270/",
+      "title": "Multiples vulnérabilités dans Google Pixel (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "30294576108b9e373fe55201e8d3ead166807447c54439bcec0bb154a3c1d1fe",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1268",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1268/",
+      "title": "Multiples vulnérabilités dans Google Chrome (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "131f7b8dee554a606049527b6ecdb589c994bf8c519716005b7a081c099764e6",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1272",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1272/",
+      "title": "Vulnérabilité dans les produits Mozilla (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "f6c0d536ec5c9fe12b4777c7f75a66cf220eb79b9fb317bdee6fe4d630f3a2b4",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1277",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1277/",
+      "title": "Multiples vulnérabilités dans les produits HPE Aruba Networking (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "5cc8b8ffce92c7777607cc93596ab805eac19ca747f09380bb230f1f49e21ecd",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1274",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1274/",
+      "title": "Multiples vulnérabilités dans Traefik (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "ea6e9c861b08db03f07f3a63fb5e7c09212208a92820f6984fc1175ca7fc2c2f",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1271",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1271/",
+      "title": "Multiples vulnérabilités dans OpenSSH (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "b8529cb497f98fd8b8d0c74808aa51cdf483a46124f12894148e3f70e68a5c32",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1269",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1269/",
+      "title": "Multiples vulnérabilités dans GLPI (07 octobre 2026)",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "fingerprint": "3002bff226a0c60afee74c538ba9c532c39df4fe440f4e9a35ce6f55a43f0449",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1281",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1281/",
+      "title": "Multiples vulnérabilités dans les produits Splunk (08 octobre 2026)",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "fingerprint": "9959f8bb9d8326f8220c7fcb276be9de4d7ee7112469fdc61a4e9767eaee59b7",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1280",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1280/",
+      "title": "Vulnérabilité dans Ceph (08 octobre 2026)",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "fingerprint": "c5f18cd2dea1bb6465e1903079d489ed787f29ebd8ec02f0e44033cb497364ec",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1282",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1282/",
+      "title": "Multiples vulnérabilités dans les produits Cisco (08 octobre 2026)",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "fingerprint": "92c2694bebc8c1c5544c71cd4b58df88cd2439c544693647488457e47d5acdf2",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "sage-qm1bs54xn545",
+      "sourceId": "sage",
+      "url": "https://status.sage.com/incidents/qm1bs54xn545",
+      "title": "FR-e-Reporting - Degraded Performance",
+      "publishedAt": "2026-10-10T09:11:25.000Z",
+      "fingerprint": "5ebc27294b9bb4df4b0ac70dd96e79021c311457be3090b6b0cc3a92a3074c90",
+      "decision": "excluded_not_service_incident",
+      "reason": "Conclusion officielle du 10 à 09:11 UTC : intégration des comptes incomplète, comportement attendu, sans incident de service selon Sage."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1284",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1284/",
+      "title": "Vulnérabilité dans les produits Tenable (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "0a905a55ea18ce20ab65b56e28fe5a98208d9c2dc84f3cec24b299f2871b33e7",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1286",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1286/",
+      "title": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "d84c09a58f412b1d4abcb63e2ed464f605c4d1f55ea425a5602a82cdb1e5ae04",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1283",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1283/",
+      "title": "Multiples vulnérabilités dans les produits Nextcloud (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "af6e857cb32305fe0d1176b530a60f2695fe55cbe747e41550f76d78fd0a9478",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1285",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1285/",
+      "title": "Vulnérabilité dans Citrix NetScaler ADC et Gateway (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "6112842f4bce34c5c1355c00877250ba37d93be2a0f929953c839e0935f0843e",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1291",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1291/",
+      "title": "Multiples vulnérabilités dans les produits IBM (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "00c08f5d6621b3e87989a2bf8a2adbde8bdd37a151461685b8c1377711e4aeb8",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1289",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1289/",
+      "title": "Multiples vulnérabilités dans le noyau Linux de Debian LTS (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "d7e26179e1304302ace318eb5d321c2646ffad3034dda85feaf9bb586358e45c",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1287",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1287/",
+      "title": "Multiples vulnérabilités dans le noyau Linux de Red Hat (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "b1f06aa75be219d6abd2a2ebb1f7ae222af7fef226e40efcb4b3fe9b5a1d6014",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1290",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1290/",
+      "title": "Multiples vulnérabilités dans Apache Struts (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "7300790c0f41a0169f1946f21b8e85476ef1d2fa8f9d7047ec2d682b75b5b077",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1288",
+      "sourceId": "cert-fr",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1288/",
+      "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (09 octobre 2026)",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "fingerprint": "0eb9edb77113adb9a8c358c85158d75e723465061fa4dedd3f3b874f12300360",
+      "decision": "excluded_vulnerability_advisory",
+      "reason": "Bulletin de vulnérabilité produit : compromission d’une PA non documentée. HPE Aruba Networking est distinct de la PA Aruba."
+    }
+  ],
+  "manualObservations": [
+    {
+      "id": "aife-security-banner",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "observedAt": "2026-10-10",
+      "method": "Bandeau développé dans le navigateur",
+      "publishedAt": null,
+      "decision": "unchanged_monitoring",
+      "note": "Échanges rétablis sous surveillance ; date de reprise non publiée et ancien bandeau nommé conservé avec sa date historique."
+    },
+    {
+      "id": "chorus-pro-maintenance-20261010",
+      "decision": "excluded_planned",
+      "note": "Maintenance planifiée le 10 octobre de 9h à 17h10 : hors compteur des incidents."
+    },
+    {
+      "id": "welyb-neoexpert-20261007",
+      "decision": "published_ecosystem_service",
+      "noticeDate": "2026-10-07",
+      "observedAt": "2026-10-10",
+      "note": "Connexion Néoexpert suspendue ; début et date exacte de publication inconnus. Aucun rattachement à une PA Septeo."
+    },
+    {
+      "id": "welyb-envois-20260925",
+      "decision": "updated_resolved",
+      "resolutionReportedAt": "2026-10-08",
+      "note": "Welyb annonce le rattrapage terminé et tous les documents envoyés aux outils tiers."
+    },
+    {
+      "id": "welyb-notifications-20261005",
+      "decision": "updated_estimate",
+      "note": "Avis daté du 7 avec échéance désormais lundi soir ; publication de la révision non datée. Fin non confirmée."
+    }
+  ],
+  "actorResearchFindings": {
+    "reviewDate": "2026-10-10",
+    "range": {
+      "startIndex": 75,
+      "endIndexExclusive": 149
+    },
+    "actorsSearched": 74,
+    "searchErrors": [],
+    "periodNewPublications": {
+      "from": "2026-10-08",
+      "to": "2026-10-10"
+    },
+    "incidentWindowStart": "2026-09-01",
+    "confirmedNewIncidents": [],
+    "confirmedDatedNewPublications": [
+      {
+        "publisher": "Ministère de l'Action et des Comptes publics",
+        "publishedOn": "2026-10-09",
+        "type": "official_context",
+        "url": "https://presse.economie.gouv.fr/facturation-electronique-le-premier-comite-dresse-le-bilan-du-deploiement-et-engage-la-preparation-de-2027/",
+        "summary": "Premier comité de suivi du 8 octobre : 75 % des entreprises déclarant de la TVA ont désigné une plateforme de réception au 4 octobre ; plus de 20 millions de factures et plus de 70 milliards d'euros. Bercy reconnaît des difficultés d'interopérabilité et de transmission des statuts, annonce un guide enrichi sous deux semaines et rappelle l'accompagnement sans sanctions prononcées avant fin 2026.",
+        "scope": "Contexte institutionnel, aucune PA individuelle incriminée."
+      }
+    ],
+    "profileDocumentation": [
+      {
+        "platformSlug": "tungsten",
+        "date": "2026-10-03",
+        "type": "profile_documentation",
+        "url": "https://docshield.tungstenautomation.com/eInvoiceConnect/en_US/help/RN/eInvoiceConnect_releasenotes/c_whatsnew.html",
+        "note": "Prise en charge des pièces jointes françaises BG-24 ; statut Non transmise documenté au 19 septembre. Source nouvelle dans le corpus mais pas une nouveauté publiée du 8 au 10."
+      },
+      {
+        "platformSlug": "tungsten",
+        "date": null,
+        "type": "resolved_bug_undated",
+        "url": "https://docshield.tungstenautomation.com/eInvoiceConnect/en_US/help/RN/eInvoiceConnect_releasenotes/c_resolvedissues.html",
+        "note": "ID2267980 : erreurs HTTP500 des soumissions e-reporting françaises en production corrigées. Page cumulative sans datation de l'événement, exclue du compteur temporel."
+      },
+      {
+        "platformSlug": "scribee",
+        "date": "2026-09-30",
+        "type": "profile_documentation",
+        "url": "https://developers.scribee.tech/getting-started/api-breaking-changes/",
+        "note": "API publique ; 422 pour refus local avant remise au prestataire de paiement, renommage de base HT de TVA le 22 septembre."
+      },
+      {
+        "platformSlug": "ecosio-intercom",
+        "date": null,
+        "type": "profile_documentation",
+        "url": "https://connect.ecosio.com/reference/identify-and-resolve-e-invoice-delivery-failures-in-france",
+        "note": "Flow1 abouti et livraison Flow2 échouée : vérifier le détail du statut FLOW:SUBMITTED_NOT_TRANSMITTED. Mise à jour relative 14 jours, date absolue non établie."
+      },
+      {
+        "platformSlug": "darva",
+        "date": "2026-09-30",
+        "type": "profile_documentation",
+        "url": "https://www.darva.com/fr/actualites/ofeli-sinapps-auto-gestion-sinistres-facturation-electronique/",
+        "note": "Ofeli intégré Sinapps Auto : réconciliation du document métier et facture électronique, transformation de notes d'honoraires."
+      },
+      {
+        "platformSlug": "tradeshift",
+        "date": "2026-09-22",
+        "type": "profile_documentation",
+        "url": "https://tradeshift.com/resources/compliance-fr/fall-release-2026-e-invoicing-compliance-updates/",
+        "note": "Babelway : gestion centralisée OAuth2, connecteur AWS S3, éditeur XSLT enrichi et Flux3 optionnel. Informations préexistantes au 8 octobre."
+      },
+      {
+        "platformSlug": "ntt-data",
+        "date": "2026-06-15",
+        "type": "profile_documentation",
+        "url": "https://nttdata-solutions.com/fr/salle-de-presse/communiques-de-presse-locale/joubini-plateforme-agreee/",
+        "note": "Nom produit JOUBINI by NTT DATA, compatible SAP ECC/S4HANA et autres ERP ; formats réglementaires et intégration e-reporting annoncés."
+      }
+    ],
+    "preciseFunctionNotes": {
+      "ecosio": {
+        "url": "https://connect.ecosio.com/reference/identify-and-resolve-e-invoice-delivery-failures-in-france",
+        "publishedOn": null,
+        "observedOn": "2026-10-10",
+        "note": "Flow 1 transmet les données réglementaires ; Flow 2 livre la facture au destinataire. Une réussite du premier niveau API peut coexister avec l'échec de livraison. Interroger le détail et rechercher FLOW:SUBMITTED_NOT_TRANSMITTED.",
+        "messagingApi": {
+          "request": "GET /delivery/{messageId}?includeLog=true",
+          "topLevelStatus": "state",
+          "additionalDetails": "log",
+          "detailStatus": "log[].state",
+          "detailMessage": "log[].message"
+        },
+        "vertexApi": {
+          "request": "GET /messages/{messageId}?view=details",
+          "topLevelStatus": "messageInfo.status",
+          "additionalDetails": "history",
+          "detailStatus": "history[].status",
+          "detailMessage": "history[].message"
+        },
+        "limitation": "Les tableaux de détail ne fournissent que le statut le plus récent, pas tout l'historique. Date absolue de publication inconnue."
+      },
+      "tungsten": {
+        "url": "https://docshield.tungstenautomation.com/eInvoiceConnect/en_US/help/RN/eInvoiceConnect_releasenotes/c_whatsnew.html",
+        "notes": [
+          {
+            "date": "2026-10-03",
+            "feature": "Pièces jointes françaises BG-24",
+            "fields": {
+              "BT122": "référence",
+              "BT123": "description facultative",
+              "BT124": "lien externe facultatif",
+              "BT125": "fichier intégré facultatif"
+            },
+            "scope": "Ingestion des tags, affichage dans l'interface, propagation dans les fichiers sortants."
+          },
+          {
+            "date": "2026-09-19",
+            "feature": "Statut Non transmise",
+            "scope": "Facture traitée fiscalement mais non livrée au destinataire ; icône et filtre Cleared, not delivered ; évènement avec détails du motif RER et note d'état, surface API Get Sent Status et Notifications API."
+          }
+        ],
+        "bug": {
+          "url": "https://docshield.tungstenautomation.com/eInvoiceConnect/en_US/help/RN/eInvoiceConnect_releasenotes/c_resolvedissues.html",
+          "id": "2267980",
+          "date": null,
+          "scope": "Soumissions e-reporting françaises en production échouant HTTP 500, incompatibilité technique de connexion corrigée selon l'éditeur ; données et logique non affectées selon sa description.",
+          "counterDecision": "Exclu du compteur temporel : page cumulative sans date de début ou correction."
+        }
+      }
+    },
+    "discardedCandidates": [
+      {
+        "platformSlug": "blg",
+        "reason": "outside_period",
+        "incidentStarted": "2026-07",
+        "publication": "2026-09-10",
+        "urls": [
+          "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-09-26-notification-d-incident-de-securite-et-mesures-de-protection-547",
+          "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545"
+        ],
+        "note": "Dates du titre : 10 septembre et 10 août, pas octobre. Cyberattaque fin juillet et suivi de mesures de protection ; pas nouvel incident depuis septembre."
+      },
+      {
+        "publisher": "ANSSI",
+        "reason": "outside_period_and_unrelated",
+        "publication": "2026-09-29",
+        "incidentStarted": "2026-05",
+        "incidentEnded": "2026-08",
+        "url": "https://cyber.gouv.fr/actualites/lanssi-publie-le-rapport-dincident-sur-les-cyberattaques-ayant-touche-la-dgfip/",
+        "note": "Exfiltrations sur impots.gouv.fr et données cadastrales ; aucun rattachement explicite à l'infrastructure des flux PA."
+      },
+      {
+        "platformSlug": "aruba",
+        "reason": "external_brand_impersonation_scope_unconfirmed",
+        "publications": [
+          "2026-10-01",
+          "2026-10-05"
+        ],
+        "urls": [
+          "https://guide.aruba.it/fr/alertes/2026/phishing-email-01-10-2026",
+          "https://guide.aruba.it/avvisi/2026/phishing-email-05-10-2026-2"
+        ],
+        "note": "Phishing usurpant la marque Aruba en italien ; pas d'accès aux données confirmé, ni rattachement explicite à OneSuite France."
+      },
+      {
+        "platformSlug": "ecosio-intercom",
+        "reason": "already_published",
+        "id": "ecosio-france-20260921",
+        "url": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+        "note": "Avis du 21 septembre déjà journalisé, inchangé."
+      },
+      {
+        "platformSlug": "fiskaltrust",
+        "reason": "not_france",
+        "publication": "2026-10-06",
+        "url": "https://docs.fiskaltrust.cloud/changelog/middleware/1.3.91",
+        "note": "Ajout matériel TSE pour Allemagne ; source recommande encore Middleware 1.2 pour clients France/Autriche."
+      }
+    ],
+    "limitations": [
+      "Recherche publique indexée ; avis privés et non indexés hors périmètre.",
+      "Dates de crawl non utilisées comme dates de publication.",
+      "Symtrax : extraction statut trop pauvre pour conclure ; Veryswing bannière sans détails ne confirme pas un incident.",
+      "Les fonctionnalités déjà publiées avant le 8 octobre sont des enrichissements de corpus, pas des annonces nouvelles entre le 8 et le 10.",
+      "Aucun changement des fichiers suivis, ni commit ou déploiement par ce sous-agent."
+    ]
+  },
+  "counts": {
+    "approved": 149,
+    "pending": 14,
+    "sources": 440,
+    "incidents": 69,
+    "availability": 63,
+    "security": 6,
+    "pa": 13
+  },
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  }
+}

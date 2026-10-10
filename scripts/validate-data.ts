@@ -3,6 +3,7 @@ import officialDirectory from "../src/data/official-directory.json" with { type:
 import corpusSelectionData from "../src/data/corpus-selection.json" with { type: "json" };
 import sourcesData from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
+import { platformUpdates } from "../src/data/platform-updates.ts";
 import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-profiles.ts";
 import { directRoutingOptions, directRoutingSourceIds } from "../src/data/direct-routing-options.ts";
 import { practicalQuestions, practicalQuestionSourceIds } from "../src/data/practical-questions.ts";
@@ -307,7 +308,14 @@ referencedSourceIds.add("dgfip-list-20260930");
 referencedSourceIds.add("dgfip-list-20261002");
 referencedSourceIds.add("dgfip-list-20261004");
 referencedSourceIds.add("dgfip-list-20261008");
+referencedSourceIds.add("dgfip-list-20261010");
 for (const source of incidentWatchCorpus().sources) referencedSourceIds.add(source.id);
+for (const update of platformUpdates) {
+  for (const sourceId of update.sourceIds) {
+    if (!sourceIds.has(sourceId)) throw new Error(`Source de changement inconnue : ${sourceId}`);
+    referencedSourceIds.add(sourceId);
+  }
+}
 
 for (const source of checkedSources) {
   if (!referencedSourceIds.has(source.id)) throw new Error(`Source orpheline non liée au corpus : ${source.id}`);
