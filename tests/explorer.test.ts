@@ -47,6 +47,18 @@ test("le comparateur préserve tarifs, unités, limites et preuves", () => {
   for (const item of platforms) assert.deepEqual(comparisonFacts(item, researchForPlatform(item.slug)).map(fact => fact.key), keys);
 });
 
+test("un public inconnu reste vide dans les facettes et à confirmer dans le comparateur", () => {
+  const item = { ...platform("qonto"), targets: [] };
+  assert.equal(directoryFacts(item, researchForPlatform("qonto")).target, "");
+  const target = comparisonFacts(item, researchForPlatform("qonto")).find((fact) => fact.key === "target")!;
+  assert.equal(target.text, "À confirmer");
+  assert.equal(target.evidence.value, null);
+  assert.equal(target.evidence.status, "non_documented");
+  assert.deepEqual(target.evidence.sourceIds, []);
+  const documented = comparisonFacts(platform("qonto"), researchForPlatform("qonto")).find((fact) => fact.key === "target")!;
+  assert.equal(sameComparisonFact([target, documented]), false);
+});
+
 test("les différences incluent le statut documentaire et les réserves", () => {
   const fact = comparisonFacts(platform("tiime"), researchForPlatform("tiime"))[0]!;
   assert.equal(sameComparisonFact([fact, structuredClone(fact)]), true);

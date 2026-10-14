@@ -15,7 +15,7 @@ const sorted = [...platforms].sort((a, b) => a.displayName.localeCompare(b.displ
   <p class="compare-share-status" role="status"></p>
   <div class="compare-profile-links" aria-label="Ouvrir les fiches" hidden></div>
   <div class="compare-output" hidden></div>
-  <noscript><p>Activez JavaScript pour comparer les critères côte à côte. Les <a href="/annuaire/">149 fiches et leurs sources</a> restent consultables.</p></noscript>
+  <noscript><p>Activez JavaScript pour comparer les critères côte à côte. Les <a href="/annuaire/">{platforms.length} fiches et leurs sources</a> restent consultables.</p></noscript>
 </section>
 <script>
   import { platforms } from "../data/platforms";

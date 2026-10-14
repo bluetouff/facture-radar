@@ -195,7 +195,7 @@ const observedTrackerLabel = publicSiteObservation.status !== "observed"
         <h1>{platform.displayName}</h1>
         <span class="official-name">Nom dans la liste DGFiP : {platform.officialName}</span>
         <p>{platform.summary}</p>
-        <div class="profile-audiences">{platform.targets.map((target) => <span>{targetLabels[target]}</span>)}</div>
+        <div class="profile-audiences">{platform.targets.length ? platform.targets.map((target) => <span>{targetLabels[target]}</span>) : <span>Public visé à confirmer</span>}</div>
         <div class="profile-pick"><CompareButton slug={platform.slug} name={platform.displayName} /></div>
       </div>
 

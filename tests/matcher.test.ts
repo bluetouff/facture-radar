@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { platforms } from "../src/data/platforms.ts";
-import { partitionDiagnosticResults, runDiagnostic } from "../src/lib/matcher.ts";
+import { matchPlatform, partitionDiagnosticResults, runDiagnostic } from "../src/lib/matcher.ts";
 import type { DiagnosticInput } from "../src/data/types.ts";
 
 const base: DiagnosticInput = {
@@ -80,6 +80,27 @@ test("les inconnues obligatoires bloquent au lieu d'être assimilées à un oui"
   assert.ok(cegid);
   assert.equal(cegid.eligible, false);
   assert.ok(cegid.blockers.some((blocker) => blocker.includes("information publique à confirmer")));
+});
+
+test("un public non documenté reste à confirmer pour chaque taille sans fausse incompatibilité", () => {
+  const qonto = platforms.find((platform) => platform.slug === "qonto")!;
+  const platform = { ...qonto, targets: [] };
+  for (const size of ["micro", "tpe", "pme", "eti", "ge"] as const) {
+    const result = matchPlatform(platform, { ...base, size, freeOnly: false, noBankAccount: false });
+    assert.equal(result.eligible, false, size);
+    assert.deepEqual(result.blockers, ["Public visé à confirmer"], size);
+    assert.deepEqual(result.unknowns, ["Public visé"], size);
+    assert.ok(!result.reasons.includes("Adaptée à votre taille d'entreprise"), size);
+    assert.deepEqual(partitionDiagnosticResults([result]), { eligible: [], unconfirmed: [result] });
+  }
+});
+
+test("un public renseigné conserve une incompatibilité explicite pour une taille exclue", () => {
+  const qonto = platforms.find((platform) => platform.slug === "qonto")!;
+  const result = matchPlatform({ ...qonto, targets: ["micro"] }, { ...base, size: "ge", freeOnly: false, noBankAccount: false });
+  assert.equal(result.eligible, false);
+  assert.deepEqual(result.blockers, ["Cette offre ne vise pas votre taille d'entreprise"]);
+  assert.deepEqual(result.unknowns, []);
 });
 
 test("une valeur déclarée sans preuve forte est traitée comme inconnue", () => {

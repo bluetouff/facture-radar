@@ -5,8 +5,8 @@ import { collectJourneySourceIds, journeyProfiles } from "../src/data/journey-pr
 import { platforms } from "../src/data/platforms.ts";
 import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 
-test("les 149 plateformes étudiées ont un parcours détaillé", () => {
-  assert.equal(journeyProfiles.length, 149);
+test("les 155 plateformes étudiées ont un parcours détaillé", () => {
+  assert.equal(journeyProfiles.length, 155);
   assert.equal(findJourneyProfile("Tiime"), "tiime");
   assert.equal(findJourneyProfile("Sage50"), "sage-50");
   assert.equal(findJourneyProfile("Abby"), "abby");

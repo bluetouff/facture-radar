@@ -33,10 +33,10 @@ export const platformSchema = z.object({
   displayName: z.string().min(1),
   officialName: z.string().min(1),
   summary: z.string().min(1),
-  targets: z.array(companySize).min(1),
+  targets: z.array(companySize),
   ecosystem: z.array(z.string()),
   officialStatus: evidence(z.literal("registered")),
-  registeredAt: evidence(z.union([z.iso.date(), z.literal("à venir")])),
+  registeredAt: evidence(z.union([z.iso.date(), z.literal("à venir"), z.literal("En attente")])),
   pricing: evidence(pricing),
   allowance: evidence(allowance),
   sendsInvoices: evidence(z.boolean()),
@@ -63,7 +63,7 @@ export const sourceSchema = z.object({
   accessedAt: z.iso.date(),
 });
 
-export const platformsSchema = z.array(platformSchema).length(149);
+export const platformsSchema = z.array(platformSchema).length(155);
 export const sourcesSchema = z.array(sourceSchema).min(12);
 
 const capabilityAvailability = z.object({
@@ -111,7 +111,7 @@ export const platformResearchSchema = z.object({
   iso27001Scope: evidence(iso27001ScopeDetail),
 }).strict();
 
-export const platformResearchProfilesSchema = z.array(platformResearchSchema).length(149);
+export const platformResearchProfilesSchema = z.array(platformResearchSchema).length(155);
 
 export const publicSiteObservationSchema = z.object({
   platformSlug: z.string().regex(/^[a-z0-9-]+$/),
@@ -131,7 +131,7 @@ export const publicSiteObservationSchema = z.object({
   note: z.string().min(1),
 }).strict();
 
-export const publicSiteObservationsSchema = z.array(publicSiteObservationSchema).length(149);
+export const publicSiteObservationsSchema = z.array(publicSiteObservationSchema).length(155);
 
 const passportFactSchema = z.object({
   id: z.enum(["entry", "format", "transmission", "integrity"]),

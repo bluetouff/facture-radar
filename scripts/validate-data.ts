@@ -20,11 +20,11 @@ const corpusSelectionSchema = z.object({
   method: z.array(z.string().min(1)).min(3),
   selected: z.array(z.object({
     slug: z.string().regex(/^[a-z0-9-]+$/),
-    segment: z.enum(["cabinet-et-erp", "tpe-pme", "eti-et-grands-comptes"]),
+    segment: z.enum(["cabinet-et-erp", "tpe-pme", "eti-et-grands-comptes", "non-documente"]),
     reach: z.string().min(1),
     reachSourceIds: z.array(z.string().min(1)).min(1),
     reason: z.string().min(1),
-  })).length(149),
+  })).length(155),
   replaced: z.array(z.object({
     slug: z.string().regex(/^[a-z0-9-]+$/),
     reason: z.string().min(1),
@@ -40,6 +40,10 @@ const checkedSiteObservations = publicSiteObservationsSchema.parse(publicSiteObs
 const sourceIds = new Set(checkedSources.map((source) => source.id));
 if (sourceIds.size !== checkedSources.length) throw new Error("Un identifiant de source est dupliqué");
 const sourcesById = new Map(checkedSources.map((source) => [source.id, source]));
+const officialPlatformSourceIds = new Set(["dgfip-list-2026-09-10", "dgfip-list-20261014"]);
+const hasOfficialPlatformSource = (sourceIds: readonly string[]) => sourceIds.some((sourceId) =>
+  officialPlatformSourceIds.has(sourceId) && sourcesById.get(sourceId)?.type === "official-list",
+);
 const slugs = new Set<string>();
 const officialNames = new Set<string>();
 const approvedByName = new Map(officialDirectory.approved.map((entry) => [entry.name, entry]));
@@ -113,10 +117,10 @@ for (const platform of checkedPlatforms) {
   if (platform.officialStatus.status !== "official" || platform.officialStatus.sourceIds.length === 0) {
     throw new Error(`${platform.displayName} : le statut PA doit être relié à une preuve officielle`);
   }
-  if (!platform.officialStatus.sourceIds.includes("dgfip-list-2026-09-10")) {
+  if (!hasOfficialPlatformSource(platform.officialStatus.sourceIds)) {
     throw new Error(`${platform.displayName} : la preuve du statut PA doit inclure la liste DGFiP`);
   }
-  if (platform.registeredAt.status !== "official" || !platform.registeredAt.sourceIds.includes("dgfip-list-2026-09-10")) {
+  if (platform.registeredAt.status !== "official" || !hasOfficialPlatformSource(platform.registeredAt.sourceIds)) {
     throw new Error(`${platform.displayName} : la date d'immatriculation doit provenir de la liste DGFiP`);
   }
   if (platform.registeredAt.value !== officialEntry.registeredAt) {
@@ -309,6 +313,7 @@ referencedSourceIds.add("dgfip-list-20261002");
 referencedSourceIds.add("dgfip-list-20261004");
 referencedSourceIds.add("dgfip-list-20261008");
 referencedSourceIds.add("dgfip-list-20261010");
+referencedSourceIds.add("dgfip-list-20261014");
 for (const source of incidentWatchCorpus().sources) referencedSourceIds.add(source.id);
 for (const update of platformUpdates) {
   for (const sourceId of update.sourceIds) {
@@ -321,11 +326,11 @@ for (const source of checkedSources) {
   if (!referencedSourceIds.has(source.id)) throw new Error(`Source orpheline non liée au corpus : ${source.id}`);
 }
 
-if (officialDirectory.approved.length !== 149) {
-  throw new Error(`La liste approuvée doit contenir 149 opérateurs, reçu ${officialDirectory.approved.length}`);
+if (officialDirectory.approved.length !== 155) {
+  throw new Error(`La liste approuvée doit contenir 155 opérateurs, reçu ${officialDirectory.approved.length}`);
 }
-if (officialDirectory.pending.length !== 14) {
-  throw new Error(`La liste en attente doit contenir 14 opérateurs, reçu ${officialDirectory.pending.length}`);
+if (officialDirectory.pending.length !== 11) {
+  throw new Error(`La liste en attente doit contenir 11 opérateurs, reçu ${officialDirectory.pending.length}`);
 }
 
 console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${checkedPassportRoutes.length} routes Passeport, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);

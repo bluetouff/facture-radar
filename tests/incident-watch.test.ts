@@ -29,7 +29,7 @@ test("VosFactures : la notification relayée reste attribuée au prestataire", (
   assert.match(event.summary, /Factuali déclare épargnés les services de facturation électronique/);
   assert.match(event.summary, /invalidation des codes API est annoncée pour le 1er octobre/);
   assert.match(event.limitations, /bornes historiques des données polonaises/);
-  assert.equal(platformIncidents.filter(item => item.scope === "pa").length, 13);
+  assert.equal(platformIncidents.filter(item => item.scope === "pa").length, 15);
   assert.throws(() => validateIncidents([{ ...event, verification: "primary_notice" }]));
   for (const id of event.sourceIds) assert.ok(incidentWatchCorpus().sources.some(source => source.id === id));
   assert.deepEqual(getPlatform("vosfactures")!.incidentWatch.incidents, watch.incidents);
@@ -43,7 +43,7 @@ test("VosFactures : la notification relayée reste attribuée au prestataire", (
 test("les avis manuels sont publiés pour Cecurity malgré l’absence de flux", () => {
   const watch = incidentsForPlatform("cecurity");
   assert.equal(watch.feeds.length, 0);
-  assert.equal(watch.incidents.length, 3);
+  assert.equal(watch.incidents.length, 4);
   assert.equal(watch.coverage.status, "partial");
   assert.deepEqual(getPlatform("cecurity")!.incidentWatch.incidents, watch.incidents);
   const security = watch.incidents.find(event => event.kind === "security")!;
@@ -78,7 +78,7 @@ test("la suspension AIFE reste un avis PA distinct de la fuite chez le prestatai
   assert.equal(suspension.firstObservedAt, "2026-10-02");
   assert.equal(suspension.firstReportedAt, null);
   assert.equal(suspension.startedAt, "2026-10-01");
-  assert.equal(suspension.status, "monitoring");
+  assert.equal(suspension.status, "unknown");
   assert.equal(suspension.updatedAt, null);
   assert.equal(suspension.resolutionReportedAt, null);
   const source = incidentWatchCorpus().sources.find(source => source.id === suspension.sourceIds[0])!;
@@ -163,21 +163,21 @@ test("dates au jour près, détection et résolution sans date restent fidèles 
   const xml = renderIncidentRss([event]);
   assert.ok(!xml.includes("<pubDate>"));
   assert.match(xml, /Date non publiée/);
-  for (const change of [{ startedAt: "2026-09-31" }, { startedAt: "2026-08-01" }, { startedAt: null }, { detectedAt: "2026-09-02" }, { resolutionReportedAt: "2026-09-03" }, { updatedAt: "2026-10-11" }]) assert.throws(() => validateIncidents([{ ...event, ...change }]));
+  for (const change of [{ startedAt: "2026-09-31" }, { startedAt: "2026-08-01" }, { startedAt: null }, { detectedAt: "2026-09-02" }, { resolutionReportedAt: "2026-09-03" }, { updatedAt: "2026-10-15" }]) assert.throws(() => validateIncidents([{ ...event, ...change }]));
   const dated = platformIncidents.find(event => event.updatedAt?.includes("T"))!;
   assert.match(renderIncidentRss([dated]), /<pubDate>/);
 });
 
 test("les avis distinguent PA, application et dépendance sans durée inventée", () => {
-  assert.equal(platformIncidents.length, 69);
-  assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 13);
+  assert.equal(platformIncidents.length, 75);
+  assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 15);
   assert.equal(platformIncidents.find(event => event.id === "esker-french-b2b-20260915")!.status, "unknown");
   assert.equal(incidentsForPlatform("pennylane").incidents[0]!.scope, "publisher_service");
   assert.equal(platformIncidents.find(event => event.id === "welyb-cecurity-consultation-20260904")!.startedAt, "2026-09-04");
   assert.equal(incidentsForPlatform("abby").coverage.status, "not_reviewed");
   assert.equal(incidentsForPlatform("qonto").incidents.length, 0);
   assert.match(incidentsForPlatform("qonto").coverage.note, /reste à vérifier séparément/);
-  assert.equal(incidentWatchCorpus().coverage.length, 149);
+  assert.equal(incidentWatchCorpus().coverage.length, 155);
 });
 
 test("revue du 10 octobre : avis regroupés, onboarding et connecteur hors PA", () => {
@@ -202,6 +202,50 @@ test("revue du 10 octobre : avis regroupés, onboarding et connecteur hors PA", 
   assert.equal(catchup.status, "resolved");
   assert.equal(catchup.resolutionReportedAt, "2026-10-08");
   assert.equal(platformIncidents.filter(event => event.kind === "security").length, 6);
+});
+
+test("revue du 14 octobre : flux français, dépendance et avis sans date restent distincts", () => {
+  for (const id of ["sage-s1t694g66bw6", "tungsten-france-20261013"]) {
+    const event = platformIncidents.find(item => item.id === id)!;
+    assert.equal(event.scope, "pa");
+    assert.equal(event.kind, "availability");
+    assert.equal(event.startedAt, null);
+    assert.equal(event.resolutionReportedAt, null);
+    assert.match(event.firstReportedAt!, /^2026-10-13T/);
+    assert.notEqual(event.status, "resolved");
+  }
+  const connector = platformIncidents.find(item => item.id === "welyb-cecurity-recuperation-20261014")!;
+  assert.equal(connector.scope, "connected_service");
+  assert.deepEqual(connector.platformSlugs, ["cecurity"]);
+  const ecosystem = platformIncidents.find(item => item.id === "welyb-ami-compta-20261014")!;
+  assert.equal(ecosystem.scope, "ecosystem_service");
+  assert.deepEqual(ecosystem.platformSlugs, []);
+  for (const event of [connector, ecosystem]) {
+    assert.equal(event.firstObservedAt, "2026-10-14");
+    assert.equal(event.firstReportedAt, null);
+    assert.equal(event.updatedAt, null);
+    assert.equal(event.startedAt, null);
+    assert.ok(!renderIncidentRss([event]).includes("<pubDate>"));
+  }
+  const spendesk = platformIncidents.find(item => item.id === "spendesk-3ds-20261007")!;
+  assert.equal(spendesk.scope, "upstream");
+  assert.equal(spendesk.status, "identified");
+  assert.equal(spendesk.resolutionReportedAt, null);
+  assert.equal(platformIncidents.find(item => item.id === "welyb-notifications-20261005")!.resolutionReportedAt, "2026-10-09");
+});
+
+test("lecture des six nouveaux sites : recherche nominative complémentaire explicitement incomplète", () => {
+  assert.equal(securityReview.status, "partial_search");
+  assert.equal(incidentResearch.filter(item => item.status === "searched").length, 149);
+  for (const slug of ["befresh", "factureapp", "insiders-technologies", "kalanda", "my-eddy", "ratioo"]) {
+    const research = incidentResearch.find(item => item.platformSlug === slug)!;
+    assert.equal(research.status, "public_sites_reviewed");
+    assert.equal(research.checkedAt, "2026-10-14");
+    assert.equal(incidentsForPlatform(slug).security.status, "partial_search");
+    assert.equal(getPlatform(slug)!.incidentWatch.security.status, "partial_search");
+    assert.equal(incidentsForPlatform(slug).coverage.checkedAt, null);
+  }
+  assert.equal(incidentsForPlatform("introuvable").security.status, "not_reviewed");
 });
 
 test("revue du 8 octobre : attribution France, services hors PA et résolution inconnue", () => {
@@ -337,7 +381,7 @@ test("une mise à jour est détectée sans répéter un avis inchangé", () => {
 });
 test("API et MCP présentent incidents, couverture et mêmes sources", () => {
   const result = getResourceByUri("pacheck://corpus/incidents", {revision:"test",builtAt:"2026-09-16"}) as ReturnType<typeof incidentWatchCorpus>;
-  assert.equal(result.incidents.length, 69);
+  assert.equal(result.incidents.length, 75);
   assert.deepEqual(getPlatform("esker")!.incidentWatch.incidents, incidentsForPlatform("esker").incidents);
 });
 
@@ -371,7 +415,7 @@ test("le retrait du message Esker conserve la dernière date publiée sans inven
   assert.equal(event.status, "unknown");
   assert.equal(event.resolutionReportedAt, null);
   assert.equal(event.updatedAt, "2026-09-15T12:15:00Z");
-  assert.equal(event.checkedAt, "2026-10-10");
+  assert.equal(event.checkedAt, "2026-10-14");
 });
 
 test("avis non daté : observation distincte de la publication et attribution au service connecté", () => {
@@ -387,7 +431,7 @@ test("avis non daté : observation distincte de la publication et attribution au
   assert.match(xml, /Première observation par PA Check/);
   assert.ok(!xml.includes("<pubDate>"));
   assert.deepEqual(getPlatform("jefacture")!.incidentWatch.incidents.find(item => item.id === event.id), event);
-  for (const change of [{ firstObservedAt: null }, { firstObservedAt: "2026-10-11" }, { firstObservedAt: "2026-08-30" }, { firstObservedAt: "2026-09-31" }, { firstReportedAt: "2026-08-01" }, { relationship: undefined }]) {
+  for (const change of [{ firstObservedAt: null }, { firstObservedAt: "2026-10-15" }, { firstObservedAt: "2026-08-30" }, { firstObservedAt: "2026-09-31" }, { firstReportedAt: "2026-08-01" }, { relationship: undefined }]) {
     assert.throws(() => validateIncidents([{ ...event, ...change }]));
   }
 });
@@ -409,7 +453,7 @@ test("revue du 30 septembre : résolutions sourcées et retraits Esker distincts
 });
 
 test("chaque PA a une recherche datée ; collecte et incidents restent distincts", () => {
-  assert.equal(incidentResearch.length, 149);
+  assert.equal(incidentResearch.length, 155);
   assert.deepEqual([...incidentResearch.map(item => item.platformSlug)].sort(), platforms.map(item => item.slug).sort());
   assert.equal(incidentFeeds.length, 26);
   assert.equal(incidentWatchCorpus().collection.intervalMinutes, 1440);
@@ -484,13 +528,14 @@ test("CERT-FR fournit une piste de vulnérabilité, et le RSS public échappe le
 });
 test("relevé du 23 septembre : contact Shine actualisé et aucune admission déduite d’une disparition", async () => {
   const prior = JSON.parse(await readFile(new URL("../docs/archives/official-directory-2026-09-14.json",import.meta.url),"utf8"));
-  assert.equal(directory.approved.length, prior.approved.length);
-  assert.equal(directory.pending.length, 14);
-  assert.deepEqual(prior.pending.filter((entry: {name:string}) => !directory.pending.some(item => item.name === entry.name)).map((entry:{name:string})=>entry.name).sort(),["NUMERIA","WAKASTELLAR"]);
-  assert.equal(directory.approved.find(item => item.name === "DOKAPI")!.contact,"support_pa@dokapi.io");
-  assert.equal(directory.sourcePageUpdatedAt,"2026-09-22");
-  assert.equal(directory.snapshotDate,"2026-10-10");
-  assert.equal(directory.approved.find(item => item.name === "Shine")!.contact,"pa@shine.co");
+  const september = JSON.parse(await readFile(new URL("../docs/archives/official-directory-2026-09-23.json",import.meta.url),"utf8"));
+  assert.equal(september.approved.length, prior.approved.length);
+  assert.equal(september.pending.length, 14);
+  assert.deepEqual(prior.pending.filter((entry: {name:string}) => !september.pending.some((item: {name:string}) => item.name === entry.name)).map((entry:{name:string})=>entry.name).sort(),["NUMERIA","WAKASTELLAR"]);
+  assert.equal(september.approved.find((item: {name:string}) => item.name === "DOKAPI")!.contact,"support_pa@dokapi.io");
+  assert.equal(september.sourcePageUpdatedAt,"2026-09-22");
+  assert.equal(september.snapshotDate,"2026-09-23");
+  assert.equal(september.approved.find((item: {name:string}) => item.name === "Shine")!.contact,"pa@shine.co");
 });
 test("Sellsy non disponible en e-reporting, Abby API payante, portabilité Qonto distincte de l’export", () => {
   const sellsy = platforms.find(platform => platform.slug === "sellsy")!;

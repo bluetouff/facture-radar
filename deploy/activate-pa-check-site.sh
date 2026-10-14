@@ -193,11 +193,11 @@ import sys
 with open(sys.argv[1], encoding="utf-8") as handle:
     corpus = json.load(handle)
 counts = corpus["manifest"]["counts"]
-if counts.get("enrichedPlatforms") != 149:
+if counts.get("enrichedPlatforms") != 155:
     raise SystemExit("Nombre de fiches enrichies inattendu")
 if counts.get("questions") != 25:
     raise SystemExit("Nombre de questions inattendu")
-if counts.get("sources") != 440:
+if counts.get("sources") != 459:
     raise SystemExit("Nombre de sources inattendu")
 if len(corpus["incidents"]["incidents"]) != counts.get("incidentNotices"):
     raise SystemExit("Avis d’incident incoherents")
@@ -286,11 +286,11 @@ import sys
 
 data = json.load(sys.stdin)
 counts = data["manifest"]["counts"]
-if counts.get("enrichedPlatforms") != 149:
+if counts.get("enrichedPlatforms") != 155:
     raise SystemExit("Nombre de fiches live inattendu")
 if counts.get("questions") != 25:
     raise SystemExit("Nombre de questions live inattendu")
-if counts.get("sources") != 440:
+if counts.get("sources") != 459:
     raise SystemExit("Nombre de sources live inattendu")
 ' <<<"${LIVE_CORPUS}"
 

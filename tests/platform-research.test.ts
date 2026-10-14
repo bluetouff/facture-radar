@@ -4,9 +4,10 @@ import { readFile } from "node:fs/promises";
 import { platforms } from "../src/data/platforms.ts";
 import { platformResearchProfiles, researchForPlatform } from "../src/data/platform-research.ts";
 import { publicSiteObservations, TRACKER_RADAR_REVISION } from "../src/data/public-site-observations.ts";
+import previousDirectory from "../docs/archives/official-directory-2026-10-10.json" with { type: "json" };
 
-test("les 149 fiches ont un contrat de recherche fail-closed", () => {
-  assert.equal(platformResearchProfiles.length, 149);
+test("les 155 fiches ont un contrat de recherche fail-closed", () => {
+  assert.equal(platformResearchProfiles.length, 155);
   assert.deepEqual(
     new Set(platformResearchProfiles.map((profile) => profile.platformSlug)),
     new Set(platforms.map((platform) => platform.slug)),
@@ -49,7 +50,7 @@ test("les cas décisifs gardent leur limite exacte", () => {
 
 test("les observations publiques couvrent tout le corpus sans fabriquer les fiches non scannées", () => {
   assert.match(TRACKER_RADAR_REVISION, /^[0-9a-f]{40}$/);
-  assert.equal(publicSiteObservations.length, 149);
+  assert.equal(publicSiteObservations.length, 155);
   assert.equal(publicSiteObservations.filter((observation) => observation.status === "observed").length, 11);
   for (const observation of publicSiteObservations) {
     if (observation.status === "observed") {
@@ -71,4 +72,20 @@ test("les observations publiques couvrent tout le corpus sans fabriquer les fich
 test("les observations de sites ne peuvent pas modifier le moteur de choix", async () => {
   const matcher = await readFile(new URL("../src/lib/matcher.ts", import.meta.url), "utf8");
   assert.doesNotMatch(matcher, /public-site-observations|tracker|thirdPartyDomains/i);
+});
+
+test("les six admissions récentes ne fabriquent pas une observation de site", () => {
+  const previousNames = new Set(previousDirectory.approved.map((entry) => entry.name));
+  const additions = platforms.filter((platform) => !previousNames.has(platform.officialName));
+  assert.equal(additions.length, 6);
+  for (const platform of additions) {
+    const observation = publicSiteObservations.find((candidate) => candidate.platformSlug === platform.slug);
+    assert.ok(observation, platform.slug);
+    assert.equal(observation.status, "not_scanned", platform.slug);
+    assert.equal(observation.checkedAt, null, platform.slug);
+    assert.equal(observation.scanUrl, null, platform.slug);
+    assert.equal(observation.finalUrl, null, platform.slug);
+    assert.deepEqual(observation.trackers, [], platform.slug);
+    assert.deepEqual(observation.thirdPartyDomains, [], platform.slug);
+  }
 });

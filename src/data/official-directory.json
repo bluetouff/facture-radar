@@ -1,10 +1,10 @@
 {
-  "snapshotDate": "2026-10-10",
+  "snapshotDate": "2026-10-14",
   "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
   "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
   "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
-  "approvedSha256": "8b90543cedade74969f8c8f41ef2196b1d4802adec092b289ef1df9d6a40f640",
-  "pendingSha256": "79cacd06be0d7da6500e481717f68050e29ee632a76d86d92dacc220f07cf23a",
+  "approvedSha256": "58ceadb0befa0beb133a7f01bdcc182dc1ab4832cb282428c85f6f27dfd34e07",
+  "pendingSha256": "914c4bcb11f0ea46d1f98769857385b64a0b1258622eb69eee5466d91d132373",
   "approved": [
     {
       "name": "A-Cube",
@@ -185,6 +185,15 @@
       "website": "https://bcsolutions.fr/",
       "contact": "easinvoice.info@bcsolutions.fr",
       "registeredAt": "2026-01-15"
+    },
+    {
+      "name": "BE FRESH S.à r.l.",
+      "street": "13, rue de l'Innovation, Kockelscheuer",
+      "postalCode": "1896",
+      "city": "Luxembourg",
+      "website": "https://befresh.lu/",
+      "contact": "info@befresh.lu",
+      "registeredAt": "En attente"
     },
     {
       "name": "BILLIT",
@@ -529,6 +538,15 @@
       "registeredAt": "2026-01-15"
     },
     {
+      "name": "FACTUREAPP",
+      "street": "16 rue Cuvier",
+      "postalCode": "69002",
+      "city": "Lyon",
+      "website": "https://www.factureapp.com/",
+      "contact": "contact@facturesapp.com",
+      "registeredAt": "En attente"
+    },
+    {
       "name": "FIDUCIAL CLOUD",
       "street": "41 Rue Du Capitaine Guynemer",
       "postalCode": "92400",
@@ -682,6 +700,15 @@
       "registeredAt": "2026-01-28"
     },
     {
+      "name": "Insiders Technologies GmbH",
+      "street": "Brüsseler Straße 1, Kaiserslautern",
+      "postalCode": "67657",
+      "city": "Allemagne",
+      "website": "https://insiders-technologies.com/en/",
+      "contact": "e-invoicing@insiders-technologies.de",
+      "registeredAt": "En attente"
+    },
+    {
       "name": "In.Te.S.A. spa",
       "street": "Strada Pianezza, 289, Torino",
       "postalCode": "10151",
@@ -734,6 +761,15 @@
       "website": "https://www.ecma-solutions.com/",
       "contact": "https://go.jefacture.com/pa",
       "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "KALANDA",
+      "street": "94 Avenue de la Sarriette",
+      "postalCode": "13600",
+      "city": "La Ciotat",
+      "website": "https://www.kalanda.net/",
+      "contact": "kalandaefacture@kalanda.net",
+      "registeredAt": "En attente"
     },
     {
       "name": "KLEKOON",
@@ -833,6 +869,15 @@
       "website": "https://www.medius.com/fr",
       "contact": "info.france@medius.com",
       "registeredAt": "2026-01-08"
+    },
+    {
+      "name": "MY-EDDY",
+      "street": "2507 Avenue de l'Europe",
+      "postalCode": "69140",
+      "city": "Rillieux-la-Pape",
+      "website": "https://dailyapps.fr/",
+      "contact": "m.cure@my-eddy.fr",
+      "registeredAt": "En attente"
     },
     {
       "name": "MY FITECO",
@@ -1004,6 +1049,15 @@
       "website": "https://www.qweeby.fr/",
       "contact": "hello_pdp@qweeby.com",
       "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "RATIOO",
+      "street": "300 Rue du Noir Debout",
+      "postalCode": "59242",
+      "city": "Cappelle-en-Pévèle",
+      "website": "https://ratioo.fr/",
+      "contact": "contact@ratioo.fr",
+      "registeredAt": "En attente"
     },
     {
       "name": "SAGE",
@@ -1358,14 +1412,6 @@
       "contact": "info@fiskaltrust.fr"
     },
     {
-      "name": "BE FRESH S.à r.l.",
-      "street": "13, rue de l'Innovation, Kockelscheuer",
-      "postalCode": "1896",
-      "city": "Luxembourg",
-      "website": "https://befresh.lu/",
-      "contact": "info@befresh.lu"
-    },
-    {
       "name": "CENSE",
       "street": "4 Place Sadi Carnot",
       "postalCode": "13002",
@@ -1390,44 +1436,28 @@
       "contact": "pdp.ey@fr.ey.com"
     },
     {
-      "name": "FACTUREAPP",
-      "street": "16 rue Cuvier",
-      "postalCode": "69002",
-      "city": "Lyon",
-      "website": "https://www.factureapp.com/",
-      "contact": "contact@facturesapp.com"
+      "name": "Konica Minolta Business Solutions France",
+      "street": "365 Route de Saint Germain",
+      "postalCode": "78420",
+      "city": "Carrières-sur-Seine",
+      "website": "https://www.konicaminolta.fr/fr-fr",
+      "contact": "contactpa@konicaminolta.fr"
     },
     {
-      "name": "Insiders Technologies GmbH",
-      "street": "Brüsseler Straße 1, Kaiserslautern",
-      "postalCode": "67657",
-      "city": "Allemagne",
-      "website": "https://insiders-technologies.com/en/",
-      "contact": "e-invoicing@insiders-technologies.de"
+      "name": "Ponsot Conseil Gestion",
+      "street": "185 Avenue Henri Mauriat",
+      "postalCode": "13100",
+      "city": "Aix-en-Provence",
+      "website": "https://www.ponsotconseilgestion.com/",
+      "contact": "contact@ponsotconseilgestion.com"
     },
     {
-      "name": "KALANDA",
-      "street": "94 Avenue de la Sarriette",
-      "postalCode": "13600",
-      "city": "La Ciotat",
-      "website": "https://www.kalanda.net/",
-      "contact": "kalandaefacture@kalanda.net"
-    },
-    {
-      "name": "MY-EDDY",
-      "street": "2507 Avenue de l'Europe",
-      "postalCode": "69140",
-      "city": "Rillieux-la-Pape",
-      "website": "https://dailyapps.fr/",
-      "contact": "m.cure@my-eddy.fr"
-    },
-    {
-      "name": "RATIOO",
-      "street": "300 Rue du Noir Debout",
-      "postalCode": "59242",
-      "city": "Cappelle-en-Pévèle",
-      "website": "https://ratioo.fr/",
-      "contact": "contact@ratioo.fr"
+      "name": "Sage Holding France",
+      "street": "52 Avenue du Général de Gaulle",
+      "postalCode": "92800",
+      "city": "Puteaux",
+      "website": "https://www.sage.com/fr-fr/",
+      "contact": "pa.france@sage.com"
     },
     {
       "name": "SWILE",
@@ -1462,5 +1492,5 @@
       "contact": "facturation-electronique@zefyr.net"
     }
   ],
-  "sourcePageUpdatedAt": "2026-09-22"
+  "sourcePageUpdatedAt": "2026-10-13"
 }

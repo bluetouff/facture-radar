@@ -120,7 +120,7 @@ Corpus JSON : https://pa.l0g.fr/api/corpus.json
 Révision déployée : https://pa.l0g.fr/DEPLOYED_SHA
 Méthodologie : https://pa.l0g.fr/methodologie/
 
-Ce document reprend les réponses, les 149 fiches enrichies, l'annuaire DGFiP et l'index des sources. Une information marquée « À confirmer » ne doit pas être transformée en oui.
+Ce document reprend les réponses, les ${platforms.length} fiches enrichies, l'annuaire DGFiP et l'index des sources. Une information marquée « À confirmer » ne doit pas être transformée en oui.
 
 # Veille des incidents
 

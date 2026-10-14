@@ -14,7 +14,7 @@ export function comparisonFacts(platform: Platform, research: PlatformResearchPr
   const direct = research.directImport.value;
   const iso = research.iso27001Scope.value;
   return [
-    fact("target", "Public visé", { value: platform.targets, status: "declared", sourceIds: [], checkedAt: "", note: "Public décrit dans la fiche PA Check. À rapprocher des conditions de l’offre." }, platform.targets.map(target => targetLabels[target]).join(", ")),
+    fact("target", "Public visé", { value: platform.targets.length ? platform.targets : null, status: platform.targets.length ? "declared" : "non_documented", sourceIds: [], checkedAt: "", note: platform.targets.length ? "Public décrit dans la fiche PA Check. À rapprocher des conditions de l’offre." : "Public visé à confirmer" }, platform.targets.map(target => targetLabels[target]).join(", ")),
     fact("price", "Prix et conditions", platform.pricing, platform.pricing.value?.label || unknown),
     fact("allowance", "Volume inclus", platform.allowance, platform.allowance.value?.label || unknown),
     fact("bank", "Compte bancaire obligatoire", platform.bankAccountRequired, yesNo(platform.bankAccountRequired.value)),

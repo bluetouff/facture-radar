@@ -2,6 +2,7 @@ import { septemberJourneyProfiles } from "./journey-profiles-september.ts";
 import { expandedJourneyProfiles } from "./journey-profiles-expanded.ts";
 import { secondWaveJourneyProfiles } from "./journey-profiles-second-wave.ts";
 import { thirdWaveJourneyProfiles } from "./journey-profiles-third-wave.ts";
+import { octoberJourneyProfiles } from "./journey-profiles-october.ts";
 
 export type JourneyAudience = "micro" | "tpe-pme" | "eti-ge";
 export type JourneyProfileId =
@@ -153,7 +154,13 @@ export type JourneyProfileId =
   | "weproc"
   | "wisetech"
   | "xelya"
-  | "ytems";
+  | "ytems"
+  | "befresh"
+  | "factureapp"
+  | "insiders-technologies"
+  | "kalanda"
+  | "my-eddy"
+  | "ratioo";
 
 export interface JourneyActionDefinition {
   title: string;
@@ -993,6 +1000,7 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
   ...secondWaveJourneyProfiles,
   ...thirdWaveJourneyProfiles,
   ...septemberJourneyProfiles,
+  ...octoberJourneyProfiles,
 ];
 
 export function collectJourneySourceIds(profile: JourneyProfileDefinition): string[] {

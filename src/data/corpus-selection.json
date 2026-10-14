@@ -1,5 +1,5 @@
 {
-  "selectedAt": "2026-09-14",
+  "selectedAt": "2026-10-14",
   "audience": "Indépendants, entrepreneurs, entreprises, équipes administratives et cabinets comptables en France",
   "method": [
     "Présence dans la liste des plateformes approuvées publiée par la DGFiP",
@@ -1050,6 +1050,48 @@
       "reach": "Infrastructure de conformité pour éditeurs de caisse, intégrateurs et commerçants",
       "reachSourceIds": ["fiskaltrust-france-2026-09"],
       "reason": "Entrée approuvée ajoutée au relevé DGFiP ; détails du service PA France encore à confirmer."
+    },
+    {
+      "slug": "befresh",
+      "segment": "non-documente",
+      "reach": "Public et volumétrie de l’offre PA non documentés",
+      "reachSourceIds": ["befresh-pa-20261014"],
+      "reason": "Acteur ajouté au fichier DGFiP du 13 octobre ; fiche ouverte avec les données publiques et les limites de l’offre française."
+    },
+    {
+      "slug": "factureapp",
+      "segment": "non-documente",
+      "reach": "Public et volumétrie de l’offre PA non documentés",
+      "reachSourceIds": ["factureapp-pa-20261014"],
+      "reason": "Acteur ajouté au fichier DGFiP du 13 octobre ; fiche ouverte avec les données publiques et les limites de l’offre française."
+    },
+    {
+      "slug": "insiders-technologies",
+      "segment": "non-documente",
+      "reach": "Public et volumétrie de l’offre PA non documentés",
+      "reachSourceIds": ["insiders-einvoicing-20261014"],
+      "reason": "Acteur ajouté au fichier DGFiP du 13 octobre ; fiche ouverte avec les données publiques et les limites de l’offre française."
+    },
+    {
+      "slug": "kalanda",
+      "segment": "non-documente",
+      "reach": "Public et volumétrie de l’offre PA non documentés",
+      "reachSourceIds": ["kalanda-pa-20261014"],
+      "reason": "Acteur ajouté au fichier DGFiP du 13 octobre ; fiche ouverte avec les données publiques et les limites de l’offre française."
+    },
+    {
+      "slug": "my-eddy",
+      "segment": "non-documente",
+      "reach": "Public et volumétrie de l’offre PA non documentés",
+      "reachSourceIds": ["my-eddy-pa-20261014"],
+      "reason": "Acteur ajouté au fichier DGFiP du 13 octobre ; fiche ouverte avec les données publiques et les limites de l’offre française."
+    },
+    {
+      "slug": "ratioo",
+      "segment": "non-documente",
+      "reach": "Public et volumétrie de l’offre PA non documentés",
+      "reachSourceIds": ["ratioo-pa-offre-20261014", "ratioo-pricing-20261014", "ratioo-pa-20261014"],
+      "reason": "Acteur ajouté au fichier DGFiP du 13 octobre ; fiche ouverte avec les données publiques et les limites de l’offre française."
     }
   ],
   "replaced": [

@@ -38,7 +38,7 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
   <section class="shell watch-metrics" aria-label="Périmètre publié">
     <div><span class="metric-icon"><InterfaceIcon name="proof" /></span><strong>{watch.incidents.length}</strong><span>avis publiés<small>{relayedCount} {relayedCount > 1 ? "notifications relayées" : "notification relayée"} · {claimCount} {claimCount > 1 ? "revendications" : "revendication"} à confirmer</small></span></div>
     <div><span class="metric-icon"><InterfaceIcon name="invoice" /></span><strong>{watch.incidents.filter(event => event.scope === "pa").length}</strong><span>avis sur les flux PA<small>Périmètre précisé par la source</small></span></div>
-    <div><span class="metric-icon"><InterfaceIcon name="search" /></span><strong>{watch.research.length}</strong><span>PA recherchées<small><a href="#recherche">{reviewed.length} sources de disponibilité relues ↗</a></small></span></div>
+    <div><span class="metric-icon"><InterfaceIcon name="search" /></span><strong>{watch.research.length}</strong><span>PA suivies<small><a href="#recherche">{reviewed.length} sources de disponibilité relues ↗</a></small></span></div>
   </section>
   <section class="shell watch-journal" id="journal" aria-labelledby="journal-title">
     <div class="section-head journal-head">
@@ -86,7 +86,7 @@ const scopeIcons = { pa: "invoice", publisher_service: "grid", upstream: "route"
       <p>{item.note}</p><footer>{item.sourceIds.map(id => <a href={watch.sources.find(source => source.id === id)!.url} rel="noopener noreferrer">Consulter la source ↗</a>)}<small>Revue du {shortDate(item.checkedAt!)}</small></footer>
     </article>)}</div>
     <Pagination id="source-pagination" label="Pages des sources de disponibilité" total={reviewed.length} pageSize={3} controls="source-list" />
-    <p class="coverage-remaining"><InterfaceIcon name="search" /><span>La recherche couvre les 149 noms. Pour {platforms.length - reviewed.length} plateformes, l’historique de disponibilité demeure non documenté dans les sources retenues. <a href="#recherche">Consulter le détail par plateforme ↗</a></span></p>
+    <p class="coverage-remaining"><InterfaceIcon name="search" /><span>Le suivi couvre {platforms.length} noms. Pour {platforms.length - reviewed.length} plateformes, l’historique de disponibilité demeure non documenté dans les sources retenues. <a href="#recherche">Consulter le détail par plateforme ↗</a></span></p>
   </section>
   <IncidentResearch />
   <section class="shell watch-method" id="couverture" aria-labelledby="method-title">

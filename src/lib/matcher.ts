@@ -43,7 +43,10 @@ export function matchPlatform(platform: Platform, input: DiagnosticInput): Match
   const reasons: string[] = [];
   const unknowns: string[] = [];
 
-  if (!platform.targets.includes(input.size)) {
+  if (platform.targets.length === 0) {
+    blockers.push("Public visé à confirmer");
+    unknowns.push("Public visé");
+  } else if (!platform.targets.includes(input.size)) {
     blockers.push("Cette offre ne vise pas votre taille d'entreprise");
   } else {
     reasons.push("Adaptée à votre taille d'entreprise");

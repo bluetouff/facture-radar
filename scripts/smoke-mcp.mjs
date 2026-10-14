@@ -60,8 +60,8 @@ async function inspectClient(versionNegotiation) {
     assert.equal(resources.resources.length, 8);
     const incidentsResource = await client.readResource({ uri: "pacheck://corpus/incidents" });
     const incidentData = JSON.parse(incidentsResource.contents[0].text);
-    assert.equal(incidentData.coverage.length, 149);
-    assert.equal(incidentData.incidents.length, 69);
+    assert.equal(incidentData.coverage.length, 155);
+    assert.equal(incidentData.incidents.length, 75);
     assert.equal(incidentData.schemaVersion, "2.2");
     const zenfirst = incidentData.incidents.find(incident => incident.id === "zenfirst-claim-20260917");
     assert.equal(zenfirst.verification, "reported_claim");
@@ -72,7 +72,7 @@ async function inspectClient(versionNegotiation) {
     assert.equal(altagem.affectedService, "Altagem");
     assert.equal(altagem.scope, "connected_service");
     assert.deepEqual(altagem.platformSlugs, ["iopole"]);
-    assert.equal(incidentData.research.length, 149);
+    assert.equal(incidentData.research.length, 155);
     assert.equal(incidentData.collection.feeds.length, 26);
     assert.ok(resources.resources.some((resource) => resource.uri === "pacheck://corpus/official-directory"));
 
@@ -84,8 +84,13 @@ async function inspectClient(versionNegotiation) {
     assert.match(answer.content[0]?.type === "text" ? answer.content[0].text : "", /B2Brouter/);
 
     const status = await client.callTool({ name: "get_corpus_status", arguments: {} });
-    assert.equal(status.structuredContent?.counts?.enrichedPlatforms, 149);
-    assert.equal(status.structuredContent?.counts?.approvedPlatforms, 149);
+    assert.equal(status.structuredContent?.counts?.enrichedPlatforms, 155);
+    assert.equal(status.structuredContent?.counts?.approvedPlatforms, 155);
+    const newcomer = await client.callTool({ name: "search_official_directory", arguments: { query: "KALANDA", status: "approved" } });
+    assert.equal(newcomer.structuredContent?.matches?.[0]?.registeredAt, "En attente");
+    const newcomerText = newcomer.content.find(item => item.type === "text")?.text ?? "";
+    assert.match(newcomerText, /date d’immatriculation en attente selon la DGFiP/);
+    assert.ok(!newcomerText.includes("depuis le En attente"));
   } finally {
     await client.close();
   }
@@ -99,7 +104,7 @@ try {
 
   const health = await fetch(new URL("/healthz", endpoint));
   assert.equal(health.status, 200);
-  assert.equal((await health.json()).counts.sources, 440);
+  assert.equal((await health.json()).counts.sources, 459);
 
   const missing = await fetch(new URL("/not-found", endpoint));
   assert.equal(missing.status, 404);

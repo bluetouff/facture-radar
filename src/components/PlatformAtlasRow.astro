@@ -51,7 +51,7 @@ const workflowSignal = platform.publicApi.value?.available
       </div>
       <p>{platform.summary}</p>
       <div class="atlas-audiences">
-        {platform.targets.map((target) => <span>{targets[target]}</span>)}
+        {platform.targets.length ? platform.targets.map((target) => <span>{targets[target]}</span>) : <span>Public visé à confirmer</span>}
       </div>
     </div>
     <div class="atlas-signals" aria-label="Repères de choix">

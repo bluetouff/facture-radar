@@ -1,3 +1,4 @@
+import { octoberPlatforms } from "./platforms-october.ts";
 import { septemberPlatforms } from "./platforms-september.ts";
 import type { Evidence, Platform } from "./types.ts";
 import { expandedPlatforms } from "./platforms-expanded.ts";
@@ -211,7 +212,7 @@ export const platforms: Platform[] = [
     allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: true, label: "Devis et factures illimités" }, ["qonto-invoicing-2026", "qonto-billing-2026"]),
     sendsInvoices: documented(true, ["qonto-invoicing-2026"]),
     receivesInvoices: documented(true, ["qonto-invoicing-2026"]),
-    eReporting: unknown("La page commerciale annonce l'e-reporting, mais l'aide Qonto indique au 25 août 2026 un accès bêta limité à certaines organisations éligibles."),
+    eReporting: { value: null, status: "non_documented", sourceIds: [], checkedAt: "2026-10-14", note: "L’aide datée du 1er octobre et relue le 14 limite la bêta aux transactions B2B transfrontalières (flux 10.1), pour certaines organisations françaises sur le web. La disponibilité générale et les autres opérations restent à confirmer." },
     bankAccountRequired: documented(false, ["qonto-invoicing-2026", "qonto-billing-2026"]),
     accountantAccess: documented(true, ["qonto-invoicing-2026"]),
     publicApi: unknown("L'accès à l'API avec l'offre de facturation gratuite reste à confirmer."),
@@ -221,7 +222,7 @@ export const platforms: Platform[] = [
     hostingCountries: unknown("Le lieu d'hébergement de la plateforme et les sous-traitants restent à confirmer."),
     iso27001: unknown("Le certificat applicable à la plateforme et sa portée restent à confirmer."),
     commitmentMonths: documented(0, ["qonto-billing-2026"]),
-    importantUnknowns: ["Disponibilité générale de l'e-reporting", "Export complet des données", "API de l’offre gratuite", "Aperçu PDF de certains fichiers UBL/CII"]
+    importantUnknowns: ["Disponibilité générale de l'e-reporting", "Export complet des données", "API de l’offre gratuite", "Aperçu PDF de certains fichiers UBL/CII", "Champs BT-10/BT-13 et adresses par établissement encore annoncés dans l’aide"]
   },
   {
     slug: "sellsy",
@@ -385,8 +386,8 @@ export const platforms: Platform[] = [
     pricing: documented({ kind: "quote", monthlyFrom: null, unit: "quote", freeFor: [], promotionalPriceExcluded: true, label: "Tarification sur devis, aucune grille PA publique retenue" }, ["cegedim-pa-2026"]),
     allowance: unknown("Les paliers de volume et coûts unitaires ne sont pas publiés."),
     sendsInvoices: documented(true, ["cegedim-pa-2026"]),
-    receivesInvoices: documented(true, ["cegedim-pa-2026"]),
-    eReporting: documented(true, ["cegedim-pa-2026", "cegedim-release-20260918"], "La note de septembre réserve l’accès à l’e-reporting aux utilisateurs affectés à l’entreprise concernée. Une affectation limitée à un groupe de divisions ou d’établissements ne donne plus accès à ces fonctions.", "2026-10-10"),
+    receivesInvoices: documented(true, ["cegedim-pa-2026", "cegedim-release-20261014", "cegedim-release-index-20261014"], "La note SY 1.37 présente Essential pour recevoir et suivre les factures françaises dans le portail avant raccordement ERP. Une phase de mise en œuvre est requise. L’émission est exclue de cette offre Essential ; sa date de déploiement reste à confirmer.", "2026-10-14"),
+    eReporting: documented(true, ["cegedim-pa-2026", "cegedim-release-20260918", "cegedim-release-20261014"], "La note de septembre réserve l’accès à l’e-reporting aux utilisateurs affectés à l’entreprise concernée. Une affectation limitée à un groupe de divisions ou d’établissements ne donne plus accès à ces fonctions. SY Essential permet la saisie des données e-reporting françaises dans le portail après mise en œuvre. La note 1.37 décrit aussi la ventilation des montants encaissés par taux de TVA dans l’historique des statuts.", "2026-10-14"),
     bankAccountRequired: unknown("Les conditions d'accès à la plateforme seule restent à confirmer."),
     accountantAccess: unknown("L'accès destiné à un comptable externe reste à confirmer."),
     publicApi: unknown("Les conditions d'accès à l'API de SY business restent à confirmer."),
@@ -516,7 +517,7 @@ export const platforms: Platform[] = [
     accountantAccess: documented(true, ["jefacture-cabinet-2026"], "Un espace Cabinet distinct permet de gérer les dossiers clients et leurs intégrations."),
     publicApi: documented({ available: true, includedInFree: false }, ["jefacture-pricing-2026", "jefacture-api-2026"], "La clé API est annoncée dans les offres Premium et Optimum, pas dans le Freemium."),
     exportDocumented: unknown("Les formats de restitution complète et la procédure après résiliation restent à confirmer."),
-    integrations: documented(["Peppol", "Chorus Pro", "logiciels de production comptable", "API", "SharePoint (application optionnelle)"], ["jefacture-pricing-2026", "jefacture-cabinet-2026", "jefacture-nouveautes-202609"], "Les notes de septembre ajoutent SharePoint dans la bibliothèque d’applications et documentent la reprise d’un envoi après correction de l’identifiant du destinataire. Les avoirs reprennent la date et le type de la facture d’origine.", "2026-10-08"),
+    integrations: documented(["Peppol", "Chorus Pro", "logiciels de production comptable", "API", "SharePoint (application optionnelle)", "Lexis Poly (module Finances)"], ["jefacture-pricing-2026", "jefacture-cabinet-2026", "jefacture-nouveautes-202609", "lexis-jefacture-20261007"], "Les notes de septembre ajoutent SharePoint dans la bibliothèque d’applications et documentent la reprise d’un envoi après correction de l’identifiant du destinataire. Les avoirs reprennent la date et le type de la facture d’origine. La note Lexis Poly du 7 octobre documente un connecteur jefacture.com pour les cabinets disposant du module Finances.", "2026-10-14"),
     formats: documented(["Factur-X"], ["jefacture-cabinet-2026"]),
     hostingCountries: unknown("Le lieu d'hébergement et les sous-traitants restent à confirmer."),
     iso27001: unknown("Le certificat applicable à la plateforme et son périmètre restent à confirmer."),
@@ -652,4 +653,5 @@ export const platforms: Platform[] = [
   ...secondWavePlatforms,
   ...thirdWavePlatforms,
   ...septemberPlatforms,
+  ...octoberPlatforms,
 ];

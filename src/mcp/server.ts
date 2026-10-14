@@ -197,7 +197,7 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
       content: [{
         type: "text",
         text: matches.length > 0
-          ? matches.map((entry) => `- ${entry.name} : ${entry.status === "approved" ? "approuvée" : "en attente"}${entry.registeredAt ? ` depuis le ${entry.registeredAt}` : ""}`).join("\n")
+          ? matches.map((entry) => `- ${entry.name} : ${entry.status === "approved" ? "approuvée" : "en attente"}${entry.registeredAt && /^\d{4}-\d{2}-\d{2}$/.test(entry.registeredAt) ? ` depuis le ${entry.registeredAt}` : entry.registeredAt === "En attente" ? " ; date d’immatriculation en attente selon la DGFiP" : ""}`).join("\n")
           : `Aucun résultat dans l'instantané DGFiP du ${resources.officialDirectory.snapshotDate}.`,
       }],
       structuredContent: result,

@@ -1091,5 +1091,47 @@
     "status": "searched",
     "feedIds": [],
     "note": "Recherche nominative publique actualisée le 10 octobre pour les nouveautés depuis le 8 octobre, complétée par les avis identifiés depuis septembre. Les pistes pertinentes sont recoupées auprès de leurs auteurs. Les notifications privées et les ressources non indexées restent hors du périmètre."
+  },
+  {
+    "platformSlug": "befresh",
+    "checkedAt": "2026-10-14",
+    "status": "public_sites_reviewed",
+    "feedIds": [],
+    "note": "Lecture directe des sites publics identifiés par la DGFiP le 14 octobre. La recherche nominative complémentaire reste à effectuer ; ces lectures ne constituent pas un historique complet des incidents."
+  },
+  {
+    "platformSlug": "factureapp",
+    "checkedAt": "2026-10-14",
+    "status": "public_sites_reviewed",
+    "feedIds": [],
+    "note": "Lecture directe des sites publics identifiés par la DGFiP le 14 octobre. La recherche nominative complémentaire reste à effectuer ; ces lectures ne constituent pas un historique complet des incidents."
+  },
+  {
+    "platformSlug": "insiders-technologies",
+    "checkedAt": "2026-10-14",
+    "status": "public_sites_reviewed",
+    "feedIds": [],
+    "note": "Lecture directe des sites publics identifiés par la DGFiP le 14 octobre. La recherche nominative complémentaire reste à effectuer ; ces lectures ne constituent pas un historique complet des incidents."
+  },
+  {
+    "platformSlug": "kalanda",
+    "checkedAt": "2026-10-14",
+    "status": "public_sites_reviewed",
+    "feedIds": [],
+    "note": "Lecture directe des sites publics identifiés par la DGFiP le 14 octobre. La recherche nominative complémentaire reste à effectuer ; ces lectures ne constituent pas un historique complet des incidents."
+  },
+  {
+    "platformSlug": "my-eddy",
+    "checkedAt": "2026-10-14",
+    "status": "public_sites_reviewed",
+    "feedIds": [],
+    "note": "Lecture directe des sites publics identifiés par la DGFiP le 14 octobre. La recherche nominative complémentaire reste à effectuer ; ces lectures ne constituent pas un historique complet des incidents."
+  },
+  {
+    "platformSlug": "ratioo",
+    "checkedAt": "2026-10-14",
+    "status": "public_sites_reviewed",
+    "feedIds": [],
+    "note": "Lecture directe des sites publics identifiés par la DGFiP le 14 octobre. La recherche nominative complémentaire reste à effectuer ; ces lectures ne constituent pas un historique complet des incidents."
   }
 ]

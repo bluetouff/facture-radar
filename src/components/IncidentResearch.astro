@@ -5,8 +5,8 @@ import { incidentResearch, incidentFeeds, incidentCoverage } from "../data/incid
 import { platforms } from "../data/platforms";
 ---
 <section class="shell research" id="recherche" aria-labelledby="research-title">
-  <header><div><span class="mono-label">La couverture en détail</span><h2 id="research-title" tabindex="-1">Les 149 plateformes recherchées.</h2></div><span class="research-total"><InterfaceIcon name="check" /> Recherches du 10 octobre</span></header>
-  <p>Recherche nominative actualisée le 10 octobre, complétée par la relecture des flux et pages d’état disponibles. Retrouvez la portée du contrôle et les flux disponibles pour chaque plateforme.</p>
+  <header><div><span class="mono-label">La couverture en détail</span><h2 id="research-title" tabindex="-1">Les {platforms.length} plateformes suivies.</h2></div><span class="research-total"><InterfaceIcon name="check" /> Dernière recherche générale : 10 octobre</span></header>
+  <p>Les 149 acteurs présents le 10 octobre ont fait l’objet d’une recherche nominative. Les six nouveaux acteurs ont été examinés à partir des listes officielles et de leurs sites publics le 14. L’actualisation des recherches générales est en cours ; chaque fiche conserve la date et la portée de son contrôle.</p>
   <form id="research-filter" hidden><label for="research-query">Rechercher une plateforme</label><input id="research-query" type="search" placeholder="Nom de la plateforme…" autocomplete="off" /></form>
   <p id="research-count" role="status" aria-live="polite">{incidentResearch.length} plateformes</p>
   <div id="research-list">{incidentResearch.map(item => {
@@ -14,7 +14,7 @@ import { platforms } from "../data/platforms";
     const feeds = incidentFeeds.filter(feed => item.feedIds.includes(feed.id));
     const coverage = incidentCoverage.find(coverage => coverage.platformSlug === item.platformSlug);
     return <article class="research-row" data-name={platform.displayName} id={`recherche-${item.platformSlug}`}>
-      <div class="research-name"><a href={`/plateformes/${item.platformSlug}/`}>{platform.displayName}</a><span>Recherche publique effectuée</span></div>
+      <div class="research-name"><a href={`/plateformes/${item.platformSlug}/`}>{platform.displayName}</a><span>{item.status === "public_sites_reviewed" ? "Sites publics consultés" : "Recherche nominative effectuée"} · <time datetime={item.checkedAt}>{new Date(`${item.checkedAt}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", timeZone: "Europe/Paris" })}</time></span></div>
       <div><span class:list={["feed-badge", { connected: feeds.length > 0 }]}><InterfaceIcon name={feeds.length ? "route" : "search"} />{feeds.length ? "Collecte quotidienne" : "Suivi manuel"}</span><p>{coverage?.note ?? "Historique de disponibilité non documenté dans les sources retenues."}</p></div>
       <details><summary>Détail de la recherche</summary><p>{item.note}</p>{feeds.map(feed => <a href={feed.url} rel="noopener noreferrer">{feed.kind === "esker" ? "Page d’état" : feed.kind.toUpperCase()} · {feed.name} ↗</a>)}</details>
     </article>;

@@ -32,7 +32,7 @@ const counter = String(index + 1).padStart(2, "0");
     <p>{platform.summary}</p>
     <div class="teaser-signal"><InterfaceIcon name="verdict" /><strong>{mainSignal}</strong></div>
     <footer>
-      <span>{platform.targets.slice(0, 3).map((target) => targets[target]).join(" · ")}</span>
+      <span>{platform.targets.length ? platform.targets.slice(0, 3).map((target) => targets[target]).join(" · ") : "Public visé à confirmer"}</span>
       <strong>Lire le dossier <InterfaceIcon name="arrow" /></strong>
     </footer>
   </a>

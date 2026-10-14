@@ -2,6 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import directory from "../src/data/official-directory.json" with { type: "json" };
+import previousDirectory from "../docs/archives/official-directory-2026-10-10.json" with { type: "json" };
+import sources from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 import { researchForPlatform } from "../src/data/platform-research.ts";
 import { matchPlatform } from "../src/lib/matcher.ts";
@@ -9,9 +11,9 @@ import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 import { passportRoutes } from "../src/data/passport-routes.ts";
 
 test("le relevé courant conserve les admissions et corrections documentées en septembre", async () => {
-  assert.equal(directory.snapshotDate, "2026-10-10");
-  assert.equal(directory.approved.length, 149);
-  assert.equal(directory.pending.length, 14);
+  assert.equal(directory.snapshotDate, "2026-10-14");
+  assert.equal(directory.approved.length, 155);
+  assert.equal(directory.pending.length, 11);
   const expected = new Map([
     ["BLG", "2026-08-26"], ["FISKALTRUST", "2026-08-28"],
     ["CYCLOPE", "2026-08-25"], ["LUNDI MATIN", "2026-08-24"], ["VENTYA", "2025-12-18"],
@@ -26,6 +28,51 @@ test("le relevé courant conserve les admissions et corrections documentées en 
   const archive = JSON.parse(await readFile(new URL("../docs/archives/ecosio-2026-08-26.json", import.meta.url), "utf8"));
   assert.equal(archive.platform.officialName, "ECOSIO");
   assert.equal(archive.journey.platformSlug, "ecosio");
+});
+
+test("les 149 anciennes entrées conservent leurs dates et leur provenance officielle", () => {
+  assert.equal(previousDirectory.snapshotDate, "2026-10-10");
+  assert.equal(previousDirectory.approved.length, 149);
+  for (const previous of previousDirectory.approved) {
+    const entry = directory.approved.find((candidate) => candidate.name === previous.name);
+    const platform = platforms.find((candidate) => candidate.officialName === previous.name);
+    assert.ok(entry, `${previous.name} doit rester dans la liste approuvée`);
+    assert.ok(platform, `${previous.name} doit conserver sa fiche`);
+    assert.equal(entry.registeredAt, previous.registeredAt, previous.name);
+    assert.equal(platform.registeredAt.value, previous.registeredAt, previous.name);
+    for (const evidence of [platform.officialStatus, platform.registeredAt]) {
+      assert.equal(evidence.status, "official", previous.name);
+      assert.ok(evidence.sourceIds.includes("dgfip-list-2026-09-10"), previous.name);
+      assert.ok(!evidence.sourceIds.includes("dgfip-list-20261014"), previous.name);
+      assert.ok(evidence.checkedAt < "2026-10-14", previous.name);
+    }
+  }
+});
+
+test("les six nouvelles PA reproduisent la date En attente sans date fictive", () => {
+  const officialSource = sources.find((source) => source.id === "dgfip-list-20261014");
+  assert.ok(officialSource);
+  assert.equal(officialSource.type, "official-list");
+  assert.equal(officialSource.accessedAt, "2026-10-14");
+  const previousNames = new Set(previousDirectory.approved.map((entry) => entry.name));
+  const additions = directory.approved.filter((entry) => !previousNames.has(entry.name));
+  assert.deepEqual(additions.map((entry) => entry.name).sort(), [
+    "BE FRESH S.à r.l.", "FACTUREAPP", "Insiders Technologies GmbH", "KALANDA", "MY-EDDY", "RATIOO",
+  ].sort());
+  for (const entry of additions) {
+    const platform = platforms.find((candidate) => candidate.officialName === entry.name);
+    assert.ok(platform, entry.name);
+    assert.equal(entry.registeredAt, "En attente", entry.name);
+    assert.equal(platform.registeredAt.value, "En attente", entry.name);
+    for (const evidence of [platform.officialStatus, platform.registeredAt]) {
+      assert.equal(evidence.status, "official", entry.name);
+      assert.deepEqual(evidence.sourceIds, ["dgfip-list-20261014"], entry.name);
+      assert.equal(evidence.checkedAt, "2026-10-14", entry.name);
+    }
+    for (const evidence of [platform.sendsInvoices, platform.receivesInvoices, platform.eReporting]) {
+      assert.ok(!evidence.sourceIds.includes("dgfip-list-20261014"), `${entry.name} : l'admission ne démontre pas une fonction en production`);
+    }
+  }
 });
 
 test("B2Brouter reste payant pour la conformité France même à très faible volume", () => {
@@ -70,7 +117,8 @@ test("hébergement PA et certificats conservent leurs périmètres et dates prop
   assert.notEqual(doxallia.value?.validUntil, "2029-06-19");
   assert.ok(doxallia.sourceIds.includes("doxallia-hds-2026-09"));
   assert.equal(researchForPlatform("qonto").availability.eReporting.value?.stage, "beta");
-  assert.equal(researchForPlatform("qonto").availability.eReporting.checkedAt, "2026-09-14");
+  assert.equal(researchForPlatform("qonto").availability.eReporting.checkedAt, "2026-10-14");
+  assert.ok(researchForPlatform("qonto").availability.eReporting.sourceIds.includes("qonto-invoicing-20261014"));
   assert.equal(platforms.find((platform) => platform.slug === "sage")!.pricing.checkedAt, "2026-08-25");
 });
 
