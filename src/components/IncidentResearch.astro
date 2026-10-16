@@ -6,7 +6,7 @@ import { platforms } from "../data/platforms";
 ---
 <section class="shell research" id="recherche" aria-labelledby="research-title">
   <header><div><span class="mono-label">La couverture en détail</span><h2 id="research-title" tabindex="-1">Les {platforms.length} plateformes suivies.</h2></div><span class="research-total"><InterfaceIcon name="check" /> Dernière recherche générale : 10 octobre</span></header>
-  <p>Les 149 acteurs présents le 10 octobre ont fait l’objet d’une recherche nominative. Les six nouveaux acteurs ont été examinés à partir des listes officielles et de leurs sites publics le 14. L’actualisation des recherches générales est en cours ; chaque fiche conserve la date et la portée de son contrôle.</p>
+  <p>Les 149 acteurs présents le 10 octobre ont fait l’objet d’une recherche nominative. Les six nouveaux acteurs ont été examinés à partir des listes officielles et de leurs sites publics le 16. L’actualisation des recherches générales est en cours ; chaque fiche conserve la date et la portée de son contrôle.</p>
   <form id="research-filter" hidden><label for="research-query">Rechercher une plateforme</label><input id="research-query" type="search" placeholder="Nom de la plateforme…" autocomplete="off" /></form>
   <p id="research-count" role="status" aria-live="polite">{incidentResearch.length} plateformes</p>
   <div id="research-list">{incidentResearch.map(item => {

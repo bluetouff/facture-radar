@@ -33,7 +33,11 @@ function incidentUrl(source, value) {
     "cert-fr": /^\/(?:avis|alerte|actualite|cti|ioc|dur)\/CERTFR-\d{4}-[A-Z]+-\d+\/$/,
     myunisoft: /^\/incident\/[a-f0-9-]{36}\/$/,
   };
-  if (url.origin !== new URL(source.url).origin || url.username || url.password || url.search || url.hash || !paths[source.profile]?.test(url.pathname)) throw new Error("Lien incident hors périmètre");
+  // The canonical CERT-FR feed still publishes links on its former official origin.
+  const allowedOrigins = source.profile === "cert-fr"
+    ? ["https://cert.cyber.gouv.fr", "https://www.cert.ssi.gouv.fr"]
+    : [new URL(source.url).origin];
+  if (!allowedOrigins.includes(url.origin) || url.username || url.password || url.search || url.hash || !paths[source.profile]?.test(url.pathname)) throw new Error("Lien incident hors périmètre");
   return url.href;
 }
 function candidate(source, item, now) {

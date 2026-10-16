@@ -1,0 +1,1271 @@
+{
+  "checkedAt": "2026-10-16",
+  "since": "2026-09-01",
+  "refreshWindowSince": "2026-10-14",
+  "platformCount": 155,
+  "status": "partial_search",
+  "completedNominalSearches": 0,
+  "pendingNominalSearches": 155,
+  "lastCompletedCohort": {
+    "checkedAt": "2026-10-10",
+    "platformCount": 149
+  },
+  "previousPartialSearch": {
+    "checkedAt": "2026-10-14",
+    "completedNominalSearches": 23,
+    "pendingNominalSearches": 132,
+    "archive": "incident-research-2026-10-14.json"
+  },
+  "method": "Lectures directes des listes officielles, des sites connus, des pages produit, des avis et des flux. Le seul appel de recherche Exa reçoit HTTP 402, crédits épuisés. Aucun repli générique exécuté dans cette revue ; décision de méthode en attente. Les lectures directes restent distinctes d’une recherche nominative générale.",
+  "searchProvider": {
+    "name": "Exa",
+    "status": "credit_limit",
+    "httpStatus": 402,
+    "attempts": 1,
+    "numResultsRequested": 5,
+    "actualResultsReturned": 0,
+    "reportedAt": "2026-10-16T15:15:50.870Z"
+  },
+  "queries": [
+    {
+      "platformSlug": "cegid",
+      "name": "Cegid",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "sage",
+      "name": "Sage",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "pennylane",
+      "name": "Pennylane",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "tiime",
+      "name": "Tiime",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "abby",
+      "name": "Abby",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "myunisoft",
+      "name": "MyUnisoft",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "septeo",
+      "name": "Septeo Ingeneo",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "qonto",
+      "name": "Qonto Facturation",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "sellsy",
+      "name": "Sellsy",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "indy",
+      "name": "Indy",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "superpdp",
+      "name": "SuperPDP",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "sap",
+      "name": "SAP",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "generix",
+      "name": "Generix",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "esker",
+      "name": "Esker",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "cegedim",
+      "name": "Cegedim SY business",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "axonaut",
+      "name": "Axonaut",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "shine",
+      "name": "Shine Facture",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "macompta",
+      "name": "macompta.fr",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "odoo",
+      "name": "Odoo",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "jefacture",
+      "name": "jefacture.com",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "fulll",
+      "name": "fulll",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "kolecto",
+      "name": "Kolecto",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "yooz",
+      "name": "Yooz",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "doxallia",
+      "name": "Doxallia Invox-IA",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "seres",
+      "name": "Seres e-Facture PA",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "b2brouter",
+      "name": "B2BRouter",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "dext",
+      "name": "Dext",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "dougs",
+      "name": "Dougs",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "billit",
+      "name": "Billit",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "ipaidthat",
+      "name": "iPaidThat",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "agicap",
+      "name": "Agicap",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "spendesk",
+      "name": "Spendesk",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "lucca",
+      "name": "Lucca Factures",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "n2f",
+      "name": "N2F",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "flowie",
+      "name": "Flowie",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "axelor",
+      "name": "Axelor",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "a-cube",
+      "name": "A-Cube",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "invopop",
+      "name": "Invopop",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "storecove",
+      "name": "Storecove",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "pagero",
+      "name": "ONESOURCE Pagero",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "basware",
+      "name": "Basware",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "avalara",
+      "name": "Avalara",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "comarch",
+      "name": "Comarch",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "edicom",
+      "name": "EDICOM",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "opentext",
+      "name": "OpenText",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "docuware",
+      "name": "DocuWare",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "tessi",
+      "name": "Digital Invoice by Tessi",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "esalink",
+      "name": "EsaLink Hubtimize",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "itesoft",
+      "name": "ITESOFT",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "chaintrust",
+      "name": "Chaintrust",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "agena3000",
+      "name": "AGENA3000",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "arteva",
+      "name": "Artéva Orchestrade",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "axway",
+      "name": "Axway eInvoicing",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "azopio",
+      "name": "Azopio",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "b4value",
+      "name": "b4value.net",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "cecurity",
+      "name": "Cecurity eFacture",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "cleartax",
+      "name": "ClearTax",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "digital-technologies",
+      "name": "Digital Technologies",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "docoon",
+      "name": "Docoon Invoice",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "docprocess",
+      "name": "DocProcess",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "edics",
+      "name": "EDiCSpro",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "edt",
+      "name": "EDT EIMA",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "eezi",
+      "name": "eezi",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "effinum",
+      "name": "Effinum",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "euro-information",
+      "name": "HBS e-factures",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "fiducial-cloud",
+      "name": "FIDUCIAL Cloud Facilia",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "fonoa",
+      "name": "Fonoa",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "gep",
+      "name": "GEP E-Invoice Automation",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "groupe-sigma",
+      "name": "Sigma Lixa PA",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "gurusoft",
+      "name": "GuruSoft eDoc",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "icd",
+      "name": "DEMATRUST Light",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "iedi",
+      "name": "iEDI",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "indicom",
+      "name": "Indicom",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "infologic",
+      "name": "PA Copilote",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "intesa",
+      "name": "Intesa",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "iopole",
+      "name": "Iopole",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "legalinvoice",
+      "name": "LegalInvoice",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "logilec",
+      "name": "LOGILEC",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "marosa",
+      "name": "Marosa VATify",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "medius",
+      "name": "Medius",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "ntt-data",
+      "name": "JOUBINI by NTT DATA",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "open-bee",
+      "name": "Open Bee",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "paragon",
+      "name": "Invoice Paragon Platform",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "name": "Pitney Bowes Invoice Services",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "qweeby",
+      "name": "Qweeby",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "seeburger",
+      "name": "SEEBURGER E-Invoicing Hub",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "seqino",
+      "name": "SEQINO",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "serensia",
+      "name": "Serensia",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "sovos",
+      "name": "Sovos",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "sps-commerce",
+      "name": "SPS Commerce",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "symtrax",
+      "name": "Symtrax Compleo",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "taxera",
+      "name": "Taxera",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "tenor",
+      "name": "Tenor eDemat",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "tesisquare",
+      "name": "TESISQUARE",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "tradeshift",
+      "name": "Tradeshift Babelway",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "transalis",
+      "name": "Transalis",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "tungsten",
+      "name": "Tungsten e-Invoice Connect",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "tx2",
+      "name": "TX2 Concept",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "voxel",
+      "name": "Voxel Bavel",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "accenture",
+      "name": "Accenture eComply & Verify",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "ademico",
+      "name": "Ademico Software",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "ags-records",
+      "name": "WiDOFACT by AGS",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "arratech",
+      "name": "Arratech Connect",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "aruba",
+      "name": "Aruba OneSuite",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "atgp",
+      "name": "BEE.FACT",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "bc-solutions",
+      "name": "eas'Invoice",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "cbs",
+      "name": "cbs e-world.cloud",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "cegi-alfa",
+      "name": "Cegi Alfa",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "cyclope",
+      "name": "Cyclope",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "darva",
+      "name": "Ofeli by DARVA",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "digipharmacie",
+      "name": "DigiPA",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "docnova",
+      "name": "Docnova",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "freedz",
+      "name": "Freedz",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "dokapi",
+      "name": "Dokapi",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "ecosio-intercom",
+      "name": "ecosio InterCom",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "edicom-group",
+      "name": "EDICOM Group",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "edieyes",
+      "name": "EdiEyes Vision Care",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "enerj",
+      "name": "ENERJ",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "entropics",
+      "name": "ZenOnline",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "esi",
+      "name": "ESI",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "facnote",
+      "name": "Facnote PDP",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "gestav",
+      "name": "Gestav",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "iaf",
+      "name": "IAF",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "iga-assurance",
+      "name": "IGA Assurance",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "klekoon",
+      "name": "Klekoon",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "kolecto-pdp",
+      "name": "Kolecto PDP",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "village-connecte",
+      "name": "Le Village Connecté",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "lundi-matin",
+      "name": "Lundi Matin",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "my-fiteco",
+      "name": "MyFiteco",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "mykinexo",
+      "name": "MyKinexo PDP",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "mysupply",
+      "name": "MySupply",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "neotimo",
+      "name": "Neotimo",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "officein",
+      "name": "OfficeIn",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "one-up",
+      "name": "OneUp",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "payflows",
+      "name": "Payflows Athena",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "scribee",
+      "name": "Scribee",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "sni",
+      "name": "SNI",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "solo",
+      "name": "Solo",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "srci",
+      "name": "SRCI iXFacture",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "treso2",
+      "name": "Treso2",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "ventya",
+      "name": "Ventya",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "veryswing",
+      "name": "Veryswing",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "vosfactures",
+      "name": "VosFactures",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "weproc",
+      "name": "WeInvoice by WeProc",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "wisetech",
+      "name": "WiseTech Global",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "xelya",
+      "name": "Xelya",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "ytems",
+      "name": "Ytems",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "blg",
+      "name": "blgCloud",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "fiskaltrust",
+      "name": "fiskaltrust",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-10",
+      "recordedMethod": "searched"
+    },
+    {
+      "platformSlug": "befresh",
+      "name": "BeInvoice by BeFresh",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-16",
+      "recordedMethod": "public_sites_reviewed"
+    },
+    {
+      "platformSlug": "factureapp",
+      "name": "FacturesApp",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-16",
+      "recordedMethod": "public_sites_reviewed"
+    },
+    {
+      "platformSlug": "insiders-technologies",
+      "name": "Insiders Technologies",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-16",
+      "recordedMethod": "public_sites_reviewed"
+    },
+    {
+      "platformSlug": "kalanda",
+      "name": "Kalanda",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-16",
+      "recordedMethod": "public_sites_reviewed"
+    },
+    {
+      "platformSlug": "my-eddy",
+      "name": "MY-EDDY",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-16",
+      "recordedMethod": "public_sites_reviewed"
+    },
+    {
+      "platformSlug": "ratioo",
+      "name": "Ratioo",
+      "query": null,
+      "searchStatus": "pending",
+      "previousRecordedCheck": "2026-10-16",
+      "recordedMethod": "public_sites_reviewed"
+    }
+  ]
+}
