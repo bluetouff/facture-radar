@@ -80,7 +80,7 @@ export const secondWavePlatforms: Platform[] = [
     slug: "docoon", displayName: "Docoon Invoice", officialName: "DOCOON", registeredAt: "2025-12-15",
     summary: "Infrastructure de facturation proposée en direct, marque blanche ou marque grise.",
     targets: ["tpe", "pme", "eti", "ge"], ecosystem: ["API", "marque blanche", "marque grise", "SecNumCloud"],
-    sendsInvoices: documented(true, ["docoon-pa-2026"]), receivesInvoices: documented(true, ["docoon-pa-2026"]), eReporting: documented(true, ["docoon-pa-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["docoon-pa-2026"]),
+    sendsInvoices: documented(true, ["docoon-pa-2026"]), receivesInvoices: documented(true, ["docoon-pa-2026", "docoon-release-20261012"], "La version 2.20 ajoute le statut 203 Mise à disposition après les contrôles et rétablit l’émission du CDAR 202 à réception. Livraison du 12 octobre, note publiée le 14 octobre.", "2026-10-20"), eReporting: documented(true, ["docoon-pa-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["docoon-pa-2026"]),
     integrations: documented(["API REST", "GraphQL", "ERP", "Peppol", "marque blanche", "marque grise"], ["docoon-pa-20260920"], "Connecteurs et API annoncés sur la page produit ; conditions d’accès à confirmer.", "2026-09-20"),
     formats: documented(["Factur-X", "UBL", "CII", "JSON", "ZUGFeRD"], ["docoon-pa-20260920"], "Formats présentés par l’éditeur ; périmètre d’import et de restitution à préciser.", "2026-09-20"),
     hostingCountries: declared(["France"], ["docoon-pa-20260920"], "L’éditeur annonce un hébergement et un traitement en France.", "2026-09-20"), iso27001: declared(true, ["docoon-pa-2026"]),

@@ -89,3 +89,14 @@ test("les six admissions récentes ne fabriquent pas une observation de site", (
     assert.deepEqual(observation.thirdPartyDomains, [], platform.slug);
   }
 });
+
+test("Indy distingue une émission annoncée de la réception et de l’e-reporting documentés séparément", () => {
+  const profile = researchForPlatform("indy");
+  const platform = platforms.find(item => item.slug === "indy")!;
+  assert.equal(platform.sendsInvoices.value, false);
+  assert.equal(profile.availability.sendsInvoices.value?.stage, "announced");
+  assert.equal(profile.availability.sendsInvoices.checkedAt, "2026-10-20");
+  assert.equal(profile.availability.receivesInvoices.value?.stage, "available");
+  assert.equal(profile.availability.eReporting.value?.stage, "available");
+  assert.deepEqual(profile.availability.eReporting.sourceIds, ["indy-invoicing-2026"]);
+});

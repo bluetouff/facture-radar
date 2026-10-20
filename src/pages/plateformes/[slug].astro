@@ -142,14 +142,14 @@ const isoSourceRecords = research.iso27001Scope.sourceIds
   .filter((source) => source !== undefined);
 const pricing = platform.pricing.value;
 const priceValue = pricing?.kind === "free"
-  ? "0 € HT"
+  ? pricing.monthlyFrom === 0 ? "0 € HT" : "Gratuité sous conditions"
   : pricing?.kind === "included"
     ? "Inclus dans une offre"
     : pricing?.monthlyFrom !== null && pricing?.monthlyFrom !== undefined
       ? `Dès ${pricing.monthlyFrom.toLocaleString("fr-FR", { maximumFractionDigits: 2 })} € HT / mois`
       : pricing?.kind === "quote"
         ? "Sur devis"
-        : "À confirmer";
+        : pricing?.kind === "paid" ? "Tarif public documenté" : "À confirmer";
 const bankValue = platform.bankAccountRequired.value === true
   ? "Connexion requise"
   : platform.bankAccountRequired.value === false

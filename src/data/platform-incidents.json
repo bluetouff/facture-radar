@@ -1702,15 +1702,15 @@
     "scope": "publisher_service",
     "verification": "primary_notice",
     "affectedService": "Online Help Center France, pages d’aide des produits Sage",
-    "title": "Sage : centre d’aide français partiellement inaccessible",
-    "summary": "Sage signale le 20 octobre des difficultés d’accès des clients français au centre d’aide en ligne de plusieurs produits, dont Sage 50, Sage 100, Sage FRP 1000 et Sage eFacture. Le complément de 9 h 14 UTC classe l’incident comme identifié.",
-    "status": "identified",
+    "title": "Sage : centre d’aide français sous surveillance",
+    "summary": "Sage signale le 20 octobre des difficultés d’accès des clients français au centre d’aide en ligne de plusieurs produits, dont Sage 50, Sage 100, Sage FRP 1000 et Sage eFacture. À 12 h 59 UTC, l’éditeur annonce un fonctionnement revenu à la normale et place le service sous surveillance.",
+    "status": "monitoring",
     "startedAt": null,
     "detectedAt": null,
     "firstReportedAt": "2026-10-20T08:27:34Z",
     "firstObservedAt": "2026-10-20",
     "resolutionReportedAt": null,
-    "updatedAt": "2026-10-20T09:14:12Z",
+    "updatedAt": "2026-10-20T12:59:35Z",
     "checkedAt": "2026-10-20",
     "sourceIds": [
       "sage-help-fr-20261020"
@@ -1740,5 +1740,54 @@
       "pagero-online-20261009"
     ],
     "limitations": "Avis historique découvert lors de la lecture manuelle du 20 octobre. Le composant Pagero Online est cité sans pays ni fonctions PA françaises précisés. Les heures sont celles des notifications, distinctes du début effectif. Les maintenances planifiées publiées dans le même portail restent séparées de cet incident."
+  },
+  {
+    "id": "sage-efacture-archivage-20261020",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Portail Sage eFacture PROD et archivage coffre-fort",
+    "title": "Sage eFacture : incident d’archivage affiché sur le portail",
+    "summary": "Lors de la lecture du 20 octobre, un bandeau public Sage eFacture signale un problème d’archivage sur le coffre-fort en production. Sage précise que le portail reçoit les factures, les stocke et ne les envoie pas encore à leurs destinataires. Le message ne comporte pas de date de publication ni de périmètre PA explicite.",
+    "status": "unknown",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": null,
+    "firstObservedAt": "2026-10-20",
+    "resolutionReportedAt": null,
+    "updatedAt": null,
+    "checkedAt": "2026-10-20",
+    "sourceIds": [
+      "sage-efacture-archivage-20261020"
+    ],
+    "limitations": "Le 20 octobre est la première observation par PA Check, pas le début de l’incident. L’avis non daté est encore affiché ; statut détaillé, durée et nombre de clients touchés restent inconnus. La transmission des flux réglementaires PA n’est pas explicitement citée. Le même portail affiche séparément une maintenance planifiée le 20 octobre de 12 h à 14 h, exclue du décompte et inutilisée pour dater cet incident. Le bandeau dupliqué sur la page correspond à un seul avis."
+  },
+  {
+    "id": "sps-fulfillment-20261012",
+    "platformSlugs": [
+      "sps-commerce"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "SPS Commerce Fulfillment : consultation, ouverture et envoi de documents dans l’application",
+    "title": "SPS Commerce : interface Fulfillment rétablie le 12 octobre",
+    "summary": "SPS Commerce signale le 12 octobre des difficultés pour consulter, ouvrir ou envoyer des documents dans Fulfillment. Le traitement des documents et les flux de données continuent normalement selon l’éditeur. Après application d’un correctif et surveillance, la résolution est annoncée à 15 h 07 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-10-12T13:02:55Z",
+    "firstObservedAt": "2026-10-20",
+    "resolutionReportedAt": "2026-10-12T15:07:48Z",
+    "updatedAt": "2026-10-12T15:07:48Z",
+    "checkedAt": "2026-10-20",
+    "sourceIds": [
+      "sps-fulfillment-20261012",
+      "sps-fulfillment-product-20261020"
+    ],
+    "limitations": "La documentation de Fulfillment inclut les factures parmi les documents EDI traités. L’avis ne précise pas quels types de documents sont touchés, les pays concernés ou une atteinte aux flux de la PA française. Les heures conservées correspondent aux notifications ; le début réel de la difficulté reste inconnu. La maintenance planifiée du 17 octobre est distincte et reste hors compteur."
   }
 ]

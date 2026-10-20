@@ -75,7 +75,7 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
   },
   dext: {
     availability: {
-      sendsInvoices: available("Compte de facturation électronique Dext", ["dext-pa-2026", "dext-send-electronic-2026"]),
+      sendsInvoices: documented({ stage: "available", scope: "Compte Dext Facturation, limité à 5 documents de vente par an dans l’offre gratuite" }, ["dext-pa-2026", "dext-send-electronic-2026", "dext-free-limits-20261013"], "Factures, acomptes et avoirs partagent ce quota. La réception est annoncée sans limite ; aucun équivalent en nombre de factures n’est calculé.", "2026-10-20"),
       receivesInvoices: available("Compte de facturation électronique Dext", ["dext-pa-2026"]),
       eReporting: available("Compte de facturation électronique Dext", ["dext-pa-2026"]),
     },
@@ -165,7 +165,7 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
   },
   indy: {
     availability: {
-      sendsInvoices: available("Service de facturation Indy", ["indy-invoicing-2026"]),
+      sendsInvoices: documented({ stage: "announced", scope: "Émission PA à PA depuis Indy" }, ["indy-emission-20261020"], "L’aide mise à jour le 22 septembre exclut une émission structurée via le réseau PA déjà disponible. L’ouverture générale et sa date restent à confirmer ; la facturation PDF classique reste distincte.", "2026-10-20"),
       receivesInvoices: available("Service de facturation Indy", ["indy-invoicing-2026"]),
       eReporting: available("Service de facturation Indy", ["indy-invoicing-2026"]),
     },

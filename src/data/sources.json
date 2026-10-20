@@ -3806,5 +3806,157 @@
     "url": "https://status.pagero.com/incidents/x6vw220fl8yw",
     "type": "documentation",
     "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "indy-emission-20261020",
+    "title": "Pourquoi l’émission PA à PA n’est pas encore disponible sur Indy (aide mise à jour le 22 septembre 2026)",
+    "publisher": "Centre d’aide Indy",
+    "url": "https://wikicompta.indy.fr/fr/articles/17058407-pourquoi-je-ne-peux-pas-encore-emettre-mes-factures-electroniques-avec-indy",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "dext-free-limits-20261013",
+    "title": "Dext Facturation : offre gratuite, quota de documents et export ZIP (aide mise à jour le 13 octobre 2026)",
+    "publisher": "Centre d’aide Dext",
+    "url": "https://help.dext.com/fr/articles/340843-dext-facturation-presentation",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "docuware-statuses-20261014",
+    "title": "E-Invoicing Service : statut Lue, suffixes SIREN et SIRET pour la France (14 octobre 2026)",
+    "publisher": "DocuWare Knowledge Center",
+    "url": "https://knowledgecenter.docuware.com/docs/fr/october-26-news-e-invoicing",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "n2f-roadmap-20261016",
+    "title": "Feuille de route N2F octobre 2026 : fonctions disponibles et développements en cours",
+    "publisher": "N2F",
+    "url": "https://n2f.freshdesk.com/fr/support/solutions/articles/44002865855-feuille-de-route-octobre-2026",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "pagero-oracle-cmk-20261015",
+    "title": "ONESOURCE Pagero E-invoicing Oracle CMK 2.3.1.0 : notes de version du 15 octobre 2026",
+    "publisher": "Thomson Reuters",
+    "url": "https://www.thomsonreuters.com/en-us/help/onesource-indirect-tax/e-invoicing/release-notes/2026/oracle-cmk-2-3-1-0-release-notes",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "esalink-security-20261015",
+    "title": "Facturation électronique : sécurité, hébergement et continuité de Hubtimize (15 octobre 2026)",
+    "publisher": "EsaLink",
+    "url": "https://www.esalink.com/blog/securite-facturation-electronique-hubtimize/",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "sellsy-api-20261016",
+    "title": "Sellsy API : changements des 13–16 octobre 2026",
+    "publisher": "Sellsy",
+    "url": "https://docs.sellsy.com/api/v2/changelog.html",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "pennylane-experience-20261019",
+    "title": "Parcours de facturation électronique Pennylane (aide mise à jour le 19 octobre 2026)",
+    "publisher": "Centre d’aide Pennylane",
+    "url": "https://help.pennylane.com/fr/articles/561209-decouvrir-l-experience-de-la-facturation-electronique-dans-pennylane",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "comarch-sis-id-20261013",
+    "title": "France : contrôles de conformité Comarch et vérification des coordonnées bancaires par Sis ID (13 octobre 2026)",
+    "publisher": "Comarch",
+    "url": "https://www.comarch.com/trade-and-services/data-management/news/french-e-invoicing-2026-how-comarch-and-sis-id-cover-compliance-and-payment-security/",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "sage-efacture-archivage-20261020",
+    "title": "Sage eFacture : bandeau d’incident d’archivage, observé le 20 octobre 2026",
+    "publisher": "Sage France",
+    "url": "https://efacture.sage.fr/Public/Commun/Index.aspx?ReturnUrl=%2F",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "docoon-release-20261012",
+    "title": "Docoon Invoice 2.20 : livraison du 12 octobre, note publiée le 14 octobre",
+    "publisher": "Divalto, portail d’informations",
+    "url": "https://divalto.atlassian.net/wiki/spaces/VP/pages/13418987524/Docoon+Invoice+2.20",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "sovos-emea-status-20261020",
+    "title": "État Sovos EMEA : composants France et historique récent",
+    "publisher": "Sovos",
+    "url": "https://emea.status.sovos.com/",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "sps-status-20261020",
+    "title": "SPS Commerce : page d’état et flux RSS/Atom publics",
+    "publisher": "SPS Commerce",
+    "url": "https://status.spscommerce.com/",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "sps-fulfillment-20261012",
+    "title": "SPS Commerce : indisponibilité de l’interface Fulfillment du 12 octobre",
+    "publisher": "SPS Commerce",
+    "url": "https://status.spscommerce.com/incidents/2v3vj2qbwfzr",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "sps-fulfillment-product-20261020",
+    "title": "SPS Fulfillment : périmètre produit EDI comprenant les factures",
+    "publisher": "SPS Commerce",
+    "url": "https://www.spscommerce.com/products/fulfillment/edi/",
+    "type": "documentation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "entropics-zenpa-20261020",
+    "title": "ENTROPICS ZenPA : offre gratuite conditionnelle, crédits et options",
+    "publisher": "ENTROPICS",
+    "url": "https://entropics.fr/",
+    "type": "pricing",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "facnote-offer-20261020",
+    "title": "FACNOTE PDP : tarifs entreprise, quotas et accès API",
+    "publisher": "Groupe Facnote",
+    "url": "https://groupefacnote.com/",
+    "type": "pricing",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "gestav-pricing-20261020",
+    "title": "Gestav : grille PA Conformité et Usage",
+    "publisher": "Gestav",
+    "url": "https://gestav.com/facturation-electronique/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "gestav-contract-20261020",
+    "title": "Gestav : CGS version 26-05, durée et portabilité PA",
+    "publisher": "Gestav / Augusta Viromanduorum Numericam",
+    "url": "https://gestav.com/cgv",
+    "type": "contract",
+    "accessedAt": "2026-10-20"
   }
 ]

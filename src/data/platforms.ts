@@ -85,7 +85,7 @@ export const platforms: Platform[] = [
     registeredAt: official("2025-12-11"),
     pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["micro"], promotionalPriceExcluded: true, label: "Offre gratuite réservée aux micro-entreprises, offres payantes à partir de 7 € HT par mois" }, ["pennylane-free-2026"]),
     allowance: documented({ monthlyInvoices: null, annualInvoices: 1200, unlimited: false, label: "1 200 factures par an et 1 utilisateur dans l'offre gratuite" }, ["pennylane-free-2026"]),
-    sendsInvoices: documented(true, ["pennylane-free-2026"]),
+    sendsInvoices: documented(true, ["pennylane-free-2026", "pennylane-experience-20261019"], "L’aide modifiée le 19 octobre décrit l’activation de l’envoi dans Paramètres > Transmission de factures. Les droits requis et un consentement de réception ou une vérification d’identité conditionnent l’activation. La FAQ des factures récurrentes indique toutefois une activation uniquement sur demande via le support, alors que le parcours général décrit un interrupteur : ce point reste à confirmer pour chaque dossier. La date de mise à jour de l’aide ne date pas le lancement de toutes ces fonctions.", "2026-10-20"),
     receivesInvoices: documented(true, ["pennylane-free-2026"]),
     eReporting: documented(true, ["pennylane-formats-2026"]),
     bankAccountRequired: documented(false, ["pennylane-free-2026"]),
@@ -240,7 +240,7 @@ export const platforms: Platform[] = [
     eReporting: documented(false, ["sellsy-rollout-2026-09"], "L’aide opérationnelle indique que l’e-reporting n’est pas encore disponible et vise la fin de l’année. Cette précision prévaut sur les annonces générales de l’offre.", "2026-09-16"),
     bankAccountRequired: unknown("Les conditions d'utilisation de la plateforme sans autre module Sellsy restent à confirmer dans le contrat."),
     accountantAccess: documented(true, ["sellsy-accountants-2026"], "L'accès expert-comptable est annoncé gratuit, sans surcoût ni limite."),
-    publicApi: documented({ available: true, includedInFree: false }, ["sellsy-pricing-2026"], "Des quotas API sont indiqués dans les offres payantes."),
+    publicApi: documented({ available: true, includedInFree: false }, ["sellsy-pricing-2026", "sellsy-api-20261016"], "Des quotas API sont indiqués dans les offres payantes. Le changelog du 16 octobre ajoute is_taxes_inc et rate_category aux points de terminaison de documents concernés, ainsi qu’un réglage de suivi des e-mails pour les contacts. Ces ajouts techniques ne constituent pas une annonce de disponibilité de l’e-reporting.", "2026-10-20"),
     exportDocumented: documented(true, ["sellsy-accountants-2026"], "Les exports de journaux CSV et FEC sont disponibles. La récupération complète après résiliation reste à confirmer."),
     integrations: documented(["Cegid Loop", "MyUnisoft", "Pennylane", "Tiime", "Sage 100", "ACD", "Inqom", "Chorus Pro"], ["sellsy-accountants-2026", "sellsy-invoicing-2026"]),
     formats: documented(["Factur-X", "UBL", "CII"], ["sellsy-invoicing-2026"]),
@@ -260,7 +260,7 @@ export const platforms: Platform[] = [
     registeredAt: official("2026-01-09"),
     pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["micro", "tpe"], promotionalPriceExcluded: true, label: "Facturation électronique gratuite et sans limite d'usage" }, ["indy-invoicing-2026", "indy-billing-2026"]),
     allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: true, label: "Factures et devis illimités" }, ["indy-billing-2026"]),
-    sendsInvoices: documented(true, ["indy-invoicing-2026"]),
+    sendsInvoices: documented(false, ["indy-emission-20261020"], "L’aide opérationnelle mise à jour le 22 septembre indique que l’émission PA à PA et la transmission automatique structurée restent indisponibles. La création de factures et leur envoi PDF par e-mail sont distincts. La réception est déjà proposée ; aucune date précise d’ouverture générale de l’émission n’est publiée.", "2026-10-20"),
     receivesInvoices: documented(true, ["indy-invoicing-2026"]),
     eReporting: documented(true, ["indy-invoicing-2026"]),
     bankAccountRequired: documented(false, ["indy-billing-2026"]),
@@ -272,7 +272,7 @@ export const platforms: Platform[] = [
     hostingCountries: unknown("Le lieu d'hébergement et les sous-traitants restent à confirmer."),
     iso27001: unknown("Le certificat public applicable et son périmètre restent à rattacher."),
     commitmentMonths: documented(0, ["indy-invoicing-2026"]),
-    importantUnknowns: ["Export complet des données", "Pays d'hébergement", "Accès pour un comptable externe", "Formats de réception"]
+    importantUnknowns: ["Ouverture générale de l’émission PA à PA", "Export complet des données", "Pays d'hébergement", "Accès pour un comptable externe", "Formats de réception"]
   },
   {
     slug: "superpdp",

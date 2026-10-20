@@ -115,3 +115,11 @@ test("Sellsy ne reçoit pas de feu vert tant que l’e-reporting est annoncé", 
   assert.equal(result.verdict, "act");
   assert.ok(result.lines.some(line => line.state === "no"));
 });
+
+test("Indy signale son émission PA à PA indisponible sans perdre son agrément", () => {
+  const result = verifyKnownTool(platforms, "Indy");
+  assert.equal(result.verdict, "act");
+  assert.equal(result.platform?.officialStatus.value, "registered");
+  assert.equal(result.platform?.sendsInvoices.value, false);
+  assert.ok(result.lines.some(line => line.label === "Émission" && line.state === "no" && line.evidence?.sourceIds.includes("indy-emission-20261020")));
+});

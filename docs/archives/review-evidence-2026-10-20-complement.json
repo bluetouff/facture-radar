@@ -1,0 +1,1044 @@
+{
+  "reviewedOn": "2026-10-20",
+  "phase": "classic_web_complement",
+  "newSources": [
+    {
+      "id": "indy-emission-20261020",
+      "title": "Pourquoi l’émission PA à PA n’est pas encore disponible sur Indy (aide mise à jour le 22 septembre 2026)",
+      "publisher": "Centre d’aide Indy",
+      "url": "https://wikicompta.indy.fr/fr/articles/17058407-pourquoi-je-ne-peux-pas-encore-emettre-mes-factures-electroniques-avec-indy",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "dext-free-limits-20261013",
+      "title": "Dext Facturation : offre gratuite, quota de documents et export ZIP (aide mise à jour le 13 octobre 2026)",
+      "publisher": "Centre d’aide Dext",
+      "url": "https://help.dext.com/fr/articles/340843-dext-facturation-presentation",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "docuware-statuses-20261014",
+      "title": "E-Invoicing Service : statut Lue, suffixes SIREN et SIRET pour la France (14 octobre 2026)",
+      "publisher": "DocuWare Knowledge Center",
+      "url": "https://knowledgecenter.docuware.com/docs/fr/october-26-news-e-invoicing",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "n2f-roadmap-20261016",
+      "title": "Feuille de route N2F octobre 2026 : fonctions disponibles et développements en cours",
+      "publisher": "N2F",
+      "url": "https://n2f.freshdesk.com/fr/support/solutions/articles/44002865855-feuille-de-route-octobre-2026",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "pagero-oracle-cmk-20261015",
+      "title": "ONESOURCE Pagero E-invoicing Oracle CMK 2.3.1.0 : notes de version du 15 octobre 2026",
+      "publisher": "Thomson Reuters",
+      "url": "https://www.thomsonreuters.com/en-us/help/onesource-indirect-tax/e-invoicing/release-notes/2026/oracle-cmk-2-3-1-0-release-notes",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "esalink-security-20261015",
+      "title": "Facturation électronique : sécurité, hébergement et continuité de Hubtimize (15 octobre 2026)",
+      "publisher": "EsaLink",
+      "url": "https://www.esalink.com/blog/securite-facturation-electronique-hubtimize/",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "sellsy-api-20261016",
+      "title": "Sellsy API : changements des 13–16 octobre 2026",
+      "publisher": "Sellsy",
+      "url": "https://docs.sellsy.com/api/v2/changelog.html",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "pennylane-experience-20261019",
+      "title": "Parcours de facturation électronique Pennylane (aide mise à jour le 19 octobre 2026)",
+      "publisher": "Centre d’aide Pennylane",
+      "url": "https://help.pennylane.com/fr/articles/561209-decouvrir-l-experience-de-la-facturation-electronique-dans-pennylane",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "comarch-sis-id-20261013",
+      "title": "France : contrôles de conformité Comarch et vérification des coordonnées bancaires par Sis ID (13 octobre 2026)",
+      "publisher": "Comarch",
+      "url": "https://www.comarch.com/trade-and-services/data-management/news/french-e-invoicing-2026-how-comarch-and-sis-id-cover-compliance-and-payment-security/",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "sage-efacture-archivage-20261020",
+      "title": "Sage eFacture : bandeau d’incident d’archivage, observé le 20 octobre 2026",
+      "publisher": "Sage France",
+      "url": "https://efacture.sage.fr/Public/Commun/Index.aspx?ReturnUrl=%2F",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "docoon-release-20261012",
+      "title": "Docoon Invoice 2.20 : livraison du 12 octobre, note publiée le 14 octobre",
+      "publisher": "Divalto, portail d’informations",
+      "url": "https://divalto.atlassian.net/wiki/spaces/VP/pages/13418987524/Docoon+Invoice+2.20",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "sovos-emea-status-20261020",
+      "title": "État Sovos EMEA : composants France et historique récent",
+      "publisher": "Sovos",
+      "url": "https://emea.status.sovos.com/",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "sps-status-20261020",
+      "title": "SPS Commerce : page d’état et flux RSS/Atom publics",
+      "publisher": "SPS Commerce",
+      "url": "https://status.spscommerce.com/",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "sps-fulfillment-20261012",
+      "title": "SPS Commerce : indisponibilité de l’interface Fulfillment du 12 octobre",
+      "publisher": "SPS Commerce",
+      "url": "https://status.spscommerce.com/incidents/2v3vj2qbwfzr",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "sps-fulfillment-product-20261020",
+      "title": "SPS Fulfillment : périmètre produit EDI comprenant les factures",
+      "publisher": "SPS Commerce",
+      "url": "https://www.spscommerce.com/products/fulfillment/edi/",
+      "type": "documentation",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "entropics-zenpa-20261020",
+      "title": "ENTROPICS ZenPA : offre gratuite conditionnelle, crédits et options",
+      "publisher": "ENTROPICS",
+      "url": "https://entropics.fr/",
+      "type": "pricing",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "facnote-offer-20261020",
+      "title": "FACNOTE PDP : tarifs entreprise, quotas et accès API",
+      "publisher": "Groupe Facnote",
+      "url": "https://groupefacnote.com/",
+      "type": "pricing",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "gestav-pricing-20261020",
+      "title": "Gestav : grille PA Conformité et Usage",
+      "publisher": "Gestav",
+      "url": "https://gestav.com/facturation-electronique/tarifs",
+      "type": "pricing",
+      "accessedAt": "2026-10-20"
+    },
+    {
+      "id": "gestav-contract-20261020",
+      "title": "Gestav : CGS version 26-05, durée et portabilité PA",
+      "publisher": "Gestav / Augusta Viromanduorum Numericam",
+      "url": "https://gestav.com/cgv",
+      "type": "contract",
+      "accessedAt": "2026-10-20"
+    }
+  ],
+  "counts": {
+    "nominalQueries": 155,
+    "sources": 495,
+    "incidents": 83,
+    "availability": 77,
+    "security": 6,
+    "paScope": 15,
+    "feeds": 27
+  },
+  "validation": {
+    "status": "passed",
+    "dataValidation": "155 fiches, 495 sources liées, 11 dossiers en attente",
+    "astroErrors": 0,
+    "astroWarnings": 0,
+    "testsPassed": 200,
+    "testsFailed": 0,
+    "htmlPages": 199,
+    "seo": "passed",
+    "npmAuditVulnerabilities": 0,
+    "deploymentScriptSyntax": "passed",
+    "browser": {
+      "counts": [
+        77,
+        6
+      ],
+      "securityFilter": [
+        0,
+        6
+      ],
+      "spsFilter": [
+        1,
+        0
+      ],
+      "researchDate": "2026-10-20",
+      "feeds": 27,
+      "profiles": [
+        "gestav",
+        "entropics",
+        "indy"
+      ],
+      "horizontalOverflow": false,
+      "consoleErrors": 0
+    },
+    "independentReview": "Deux incohérences de coût des parcours Indy/Dext corrigées, avec tests de régression. Les limites de disponibilité et de périmètre sont conservées."
+  },
+  "deployment": {
+    "status": "not_activated"
+  },
+  "sourceReads": [
+    {
+      "id": "billit-cgv-october",
+      "url": "https://www.billit.eu/fr-fr/informations-juridiques/modification-conditions-generales-doctobre-2026/",
+      "finalUrl": "https://www.billit.eu/fr-fr/informations-juridiques/modification-conditions-generales-doctobre-2026/",
+      "retrievedAt": "2026-10-20T12:53:53.582931+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 87027,
+      "sha256": "0cec61bf0da237d47fac93d618318a221fe24805947fcc8b53bd92617349ba81",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "comarch-sis-id",
+      "url": "https://www.comarch.com/trade-and-services/data-management/news/french-e-invoicing-2026-how-comarch-and-sis-id-cover-compliance-and-payment-security/",
+      "finalUrl": "https://www.comarch.com/trade-and-services/data-management/news/french-e-invoicing-2026-how-comarch-and-sis-id-cover-compliance-and-payment-security/",
+      "retrievedAt": "2026-10-20T12:53:50.377934+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 355513,
+      "sha256": "9fb6924ece501de46eddd31b15c3aaf3f69d634968d5f7a7265339f6c330a725",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "comarch-sis-id-20261013"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "dext-presentation",
+      "url": "https://help.dext.com/fr/articles/340843-dext-facturation-presentation",
+      "finalUrl": "https://help.dext.com/fr/articles/340843-qu-est-ce-que-dext-facturation",
+      "retrievedAt": "2026-10-20T12:53:54.341037+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 124596,
+      "sha256": "562ceb2278e5349b4825b920be2f047832085618926d7fd2254f724c1e6f7998",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "dext-free-limits-20261013"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "dext-send",
+      "url": "https://help.dext.com/fr/articles/713039-comment-envoyer-des-factures-electroniques-depuis-dext",
+      "finalUrl": "https://help.dext.com/fr/articles/713039-comment-envoyer-des-factures-electroniques-depuis-dext",
+      "retrievedAt": "2026-10-20T12:53:53.834348+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 160719,
+      "sha256": "5aab5bac0ed982ec825af245178b027e5500bcf185ca52ef1bae90c68430b8b0",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "date_metadata_only",
+      "role": "primary_read"
+    },
+    {
+      "id": "docuware-october-article",
+      "url": "https://knowledgecenter.docuware.com/docs/fr/october-26-news-e-invoicing",
+      "finalUrl": "https://knowledgecenter.docuware.com/docs/fr/october-26-news-e-invoicing",
+      "retrievedAt": "2026-10-20T12:56:20.905285+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 658688,
+      "sha256": "7ded116297cbe8f9f5bbabc57692584f70710b5b8cb6b447604fd9738acffa25",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "docuware-statuses-20261014"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "docuware-october",
+      "url": "https://knowledgecenter.docuware.com/docs/fr/2026-10-other-updates",
+      "finalUrl": "https://knowledgecenter.docuware.com/docs/fr/2026-10-other-updates",
+      "retrievedAt": "2026-10-20T12:53:53.015389+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 590482,
+      "sha256": "64c48d474559fc488bf82fbe2a3ea7540f4c6f61be8f30c637147af10291cd9e",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "sparse_category_not_substantive",
+      "role": "primary_read"
+    },
+    {
+      "id": "edicom-oct14",
+      "url": "https://careers.edicomgroup.com/noticias/facturacion-electronica-francia/",
+      "finalUrl": "https://careers.edicomgroup.com/noticias/facturacion-electronica-francia/",
+      "retrievedAt": "2026-10-20T12:53:51.067148+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 108602,
+      "sha256": "d38caec8f2ee9e199614a1b0e9bc3969deb74bf9a9a69896308b4ff121828b18",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "esalink-security-post",
+      "url": "https://fr.linkedin.com/posts/esalink-b2b-services_facturation-%C3%A9lectronique-la-s%C3%A9curit%C3%A9-au-activity-7516777604624826369-1O9p",
+      "finalUrl": "https://fr.linkedin.com/posts/esalink-b2b-services_facturation-%C3%A9lectronique-la-s%C3%A9curit%C3%A9-au-activity-7516777604624826369-1O9p",
+      "retrievedAt": "2026-10-20T12:53:57.207744+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 102329,
+      "sha256": "6e0c21d54e57cfe9c451d662b84a7c26d76d0ea6cb681105b4685d7bbb9ebe7d",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "esalink-security",
+      "url": "https://www.esalink.com/blog/securite-facturation-electronique-hubtimize/",
+      "finalUrl": "https://www.esalink.com/blog/securite-facturation-electronique-hubtimize/",
+      "retrievedAt": "2026-10-20T12:56:20.908995+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 220877,
+      "sha256": "27945844fd402301ddb6f1a5c85b0bdbdad386655a81fa4aacfc87f156053f52",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "esalink-security-20261015"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "esker-45-days",
+      "url": "https://fr.linkedin.com/posts/esker_bilan-rfe-octobre-2026pdf-activity-7515667954890448897-CvCp",
+      "finalUrl": "https://fr.linkedin.com/posts/esker_bilan-rfe-octobre-2026pdf-activity-7515667954890448897-CvCp",
+      "retrievedAt": "2026-10-20T12:53:57.898068+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 103277,
+      "sha256": "2bc4ef8f15c69a1034fe1ce2f4fe198f79027a0c518cdb0497839871d5b5917e",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "indy-why",
+      "url": "https://wikicompta.indy.fr/fr/articles/17058407-pourquoi-je-ne-peux-pas-encore-emettre-mes-factures-electroniques-avec-indy",
+      "finalUrl": "https://wikicompta.indy.fr/fr/articles/17058407-pourquoi-je-ne-peux-pas-encore-emettre-mes-factures-electroniques-avec-indy",
+      "retrievedAt": "2026-10-20T12:53:54.948237+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 240084,
+      "sha256": "f504e0a94eda81395616641bb66d2d3d36a7ce11661920e8f91ff0ff1f27fbe8",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "indy-emission-20261020"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "kolecto-october",
+      "url": "https://support.kolecto.fr/fr/articles/864335-octobre-2026-les-nouveautes-kolecto",
+      "finalUrl": "https://support.kolecto.fr/fr/articles/864335-octobre-2026-les-nouveautes-kolecto",
+      "retrievedAt": "2026-10-20T12:53:49.742126+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 85839,
+      "sha256": "f150aa86a8a4f6121dbc0664e142a44cb6b196c53ea57d4224c423f2d923fad7",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "lexis-october",
+      "url": "https://assistance.lexisnexis.fr/hc/fr/articles/49435217425037-Release-Note-Octobre-2026",
+      "finalUrl": "https://assistance.lexisnexis.fr/hc/fr/articles/49435217425037-Release-Note-Octobre-2026",
+      "retrievedAt": "2026-10-20T12:53:56.493025+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 27838,
+      "sha256": "8898c45ce4ece5c3bcd132c69c582f2a396c7055ebc3c91060a85dcee68519b0",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "n2f-october",
+      "url": "https://n2f.freshdesk.com/fr/support/solutions/articles/44002865855-feuille-de-route-octobre-2026",
+      "finalUrl": "https://n2f.freshdesk.com/fr/support/solutions/articles/44002865855-feuille-de-route-octobre-2026",
+      "retrievedAt": "2026-10-20T12:53:49.997382+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 35036,
+      "sha256": "8bbf3c18d40a1adb873aeca763a17aefcf7e1b5b1172063ed0868460c1775b1d",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "n2f-roadmap-20261016"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "pagero-oracle-oct15",
+      "url": "https://www.thomsonreuters.com/en-us/help/onesource-indirect-tax/e-invoicing/release-notes/2026/oracle-cmk-2-3-1-0-release-notes",
+      "finalUrl": "https://www.thomsonreuters.com/en-us/help/onesource-indirect-tax/e-invoicing/release-notes/2026/oracle-cmk-2-3-1-0-release-notes",
+      "retrievedAt": "2026-10-20T12:53:50.302435+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 348549,
+      "sha256": "be8aaca3b224c4bad6929f03b181bda49e5c9a2f2ea521054fe4cde54079ae7d",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "pagero-oracle-cmk-20261015"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "pennylane-experience",
+      "url": "https://help.pennylane.com/fr/articles/561209-decouvrir-l-experience-de-la-facturation-electronique-dans-pennylane",
+      "finalUrl": "https://help.pennylane.com/fr/articles/561209-decouvrir-l-experience-de-la-facturation-electronique-dans-pennylane",
+      "retrievedAt": "2026-10-20T12:53:49.019609+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 165653,
+      "sha256": "d0453dd4691a9a3c6f13dc08dfd3c9ee68689314086182c6c5fe85fcd894ef36",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "pennylane-experience-20261019"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "qonto-whats-new",
+      "url": "https://qonto.com/fr/product/whats-new",
+      "finalUrl": "https://qonto.com/fr/product/whats-new",
+      "retrievedAt": "2026-10-20T12:53:55.724439+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 765527,
+      "sha256": "ed4f73db7e4a3649efcef2792ce083eea87de005e27a545c897eebda193ccdfd",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "sage-efacture",
+      "url": "https://efacture.sage.fr/Public/Commun/Index.aspx",
+      "finalUrl": "https://efacture.sage.fr/Public/Commun/Index.aspx",
+      "retrievedAt": "2026-10-20T12:53:49.016563+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 123773,
+      "sha256": "4bf7f390cd6bbf18a97fb68d90f3e04e04774bcdc3f206d16f20cff87ec95551",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "sage-efacture-archivage-20261020"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "sellsy-api",
+      "url": "https://docs.sellsy.com/api/v2/changelog.html",
+      "finalUrl": "https://docs.sellsy.com/api/v2/changelog.html",
+      "retrievedAt": "2026-10-20T12:53:49.598487+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 88680,
+      "sha256": "993cb14353cce5266a0da002b846abc2d60d81d1f7a6635ffe2edd9a3533ed48",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [
+        "sellsy-api-20261016"
+      ],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "sellsy-deployment",
+      "url": "https://help.sellsy.com/fr/articles/16815816-fonctionnalites-en-cours-de-deploiement",
+      "finalUrl": "https://help.sellsy.com/fr/articles/16815816-fonctionnalites-en-cours-de-deploiement",
+      "retrievedAt": "2026-10-20T12:53:49.211736+00:00",
+      "reviewedOn": "2026-10-20",
+      "success": false,
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "unavailable_no_authentication_attempted",
+      "role": "primary_read"
+    },
+    {
+      "id": "spendesk-october",
+      "url": "https://www.spendesk.com/fr/platform/platform-releases/octobre-2026-nouveautes/",
+      "finalUrl": "https://www.spendesk.com/fr/platform/platform-releases/octobre-2026-nouveautes/",
+      "retrievedAt": "2026-10-20T12:53:55.945706+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 334978,
+      "sha256": "db0ce30a255070f1f8bd153acf98931d22deeadbcbcb84d24317f93925e320b2",
+      "method": "direct_primary_body",
+      "retainedSourceIds": [],
+      "reviewLevel": "body_relevant_sections_and_date_metadata",
+      "role": "primary_read"
+    },
+    {
+      "id": "fiducial-claim",
+      "url": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "finalUrl": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "retrievedAt": "2026-10-20T12:54:13.188810+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 49409,
+      "sha256": "d04edef54933bd1dc7c0e13a220a112f9a88ec72c69db2fd47ce4753706e27ea",
+      "textSha256": "19f4a826a3e7ea93209f0814842c0eade969c811161a9c25d6dcec5857730965",
+      "contentType": "text/html; charset=UTF-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "cecurity-release",
+      "url": "https://app.cecurity.com/demat/v2/help/saas-release-notes/index.html",
+      "finalUrl": "https://app.cecurity.com/demat/v2/help/saas-release-notes/index.html",
+      "retrievedAt": "2026-10-20T12:54:13.189710+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 219693,
+      "sha256": "ffe1339edc41a7dd7df2f9c67a8b905fe913266ebef0ee477dbca25622a6122b",
+      "textSha256": "73844d1b0b8cf6637eb487664fb5b8c15fb36f9b77580ab226bc1ec65efab7b4",
+      "contentType": "text/html",
+      "role": "primary_read"
+    },
+    {
+      "id": "docoon-release-219",
+      "url": "https://divalto.atlassian.net/wiki/spaces/VP/pages/13355679893/Docoon%2BInvoice%2B2.19",
+      "finalUrl": "https://divalto.atlassian.net/wiki/spaces/VP/pages/13355679893/Docoon%2BInvoice%2B2.19",
+      "retrievedAt": "2026-10-20T12:54:13.189813+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 1482586,
+      "sha256": "af432c134aacac9ba1085f1eed60a94846d66b017c2f075d182d09d84ee0342f",
+      "textSha256": "bcca3a2058c19b7487104835eae05f27b0be76c41c3b1aaf212d31a4edd0b5b3",
+      "contentType": "text/html; charset=\"utf-8\"",
+      "role": "primary_read"
+    },
+    {
+      "id": "docoon-release-2191",
+      "url": "https://divalto.atlassian.net/wiki/spaces/VP/pages/13380419639/Docoon%2BInvoice%2B2.19.1",
+      "finalUrl": "https://divalto.atlassian.net/wiki/spaces/VP/pages/13380419639/Docoon%2BInvoice%2B2.19.1",
+      "retrievedAt": "2026-10-20T12:54:13.189881+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 1460979,
+      "sha256": "2f6c91d680a33494f6971c3f9f22fb2481fd9a2b1347dae7317b2e241f2a0bd7",
+      "textSha256": "60a45e7f57d9c5d4150a83671dccec5d82484a52dc8fab010e017d54b2ba6e00",
+      "contentType": "text/html; charset=\"utf-8\"",
+      "role": "primary_read"
+    },
+    {
+      "id": "seqino-receive",
+      "url": "https://help.seqino.com/fr/articles/761679-comment-activer-la-reception-des-factures-electroniques-sur-mon-compte",
+      "finalUrl": "https://help.seqino.com/fr/articles/761679-comment-activer-la-reception-des-factures-electroniques-sur-mon-compte",
+      "retrievedAt": "2026-10-20T12:54:13.429215+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 76926,
+      "sha256": "f0e087cc2e6704ff1b3770778373fb0b418e9fc1b378c878a82f3202dd4df848",
+      "textSha256": "fbb3a55cbf0056e4e0af63b678997b01be36dd8e736af9a31666caaec5c99e99",
+      "contentType": "text/html; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "seqino-check-receive",
+      "url": "https://help.seqino.com/fr/articles/765362-comment-savoir-si-la-reception-des-factures-electroniques-est-bien-activee",
+      "finalUrl": "https://help.seqino.com/fr/articles/765362-comment-savoir-si-la-reception-des-factures-electroniques-est-bien-activee",
+      "retrievedAt": "2026-10-20T12:54:13.541125+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 76512,
+      "sha256": "2ee1307c72d169df8d6dd626eb2aa93a813a6eaf60fee68bf544f2cdc2da4ff7",
+      "textSha256": "7e1894b56da5da1dc465d733c08e4e8b3aea21afcb91bcea020277d684c7cb05",
+      "contentType": "text/html; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sovos-press",
+      "url": "https://sovos.com/press-releases/",
+      "finalUrl": "https://sovos.com/press-releases/",
+      "retrievedAt": "2026-10-20T12:54:13.902806+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 369478,
+      "sha256": "93f5ac5b585a7ac6a91aa407948e0567720757533d3997a733c1f12caba9738f",
+      "textSha256": "fbd01962d512345f9e6df4a95ce0723c58d8478a955a19932cd02ffa7d28013c",
+      "contentType": "text/html; charset=UTF-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sovos-status",
+      "url": "https://emea.status.sovos.com/",
+      "finalUrl": "https://emea.status.sovos.com/",
+      "retrievedAt": "2026-10-20T12:54:14.030430+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 29226,
+      "sha256": "fd6ea0dbd70e00eb14a69b0dac32b0f1f5703506d19da5ff32115fd707f10993",
+      "textSha256": "50844f9bf2488877d4396b270fdb872b5b466e4c10e206a07be3f89e93d12e64",
+      "contentType": "text/html; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "iopole-cyber",
+      "url": "https://fr.linkedin.com/posts/iopole_facturation-%C3%A9lectronique-et-cybers%C3%A9curit%C3%A9-activity-7514347840509431808-qP_e",
+      "finalUrl": "https://fr.linkedin.com/posts/iopole_facturation-%C3%A9lectronique-et-cybers%C3%A9curit%C3%A9-activity-7514347840509431808-qP_e",
+      "retrievedAt": "2026-10-20T12:54:14.060963+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 121508,
+      "sha256": "9bf5172f9db3c572a19ee4d6b7c92764bedc8d09a3d5ade74b01cc2f8a511dbd",
+      "textSha256": "2a80c8c456216232e7e40daa638c258bc958ac2675086fa40753965f1cd1c820",
+      "contentType": "text/html; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "docoon-release-220",
+      "url": "https://divalto.atlassian.net/wiki/spaces/VP/pages/13418987524/Docoon+Invoice+2.20",
+      "finalUrl": "https://divalto.atlassian.net/wiki/spaces/VP/pages/13418987524/Docoon+Invoice+2.20",
+      "retrievedAt": "2026-10-20T12:55:00.119256+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 1463460,
+      "sha256": "916800a61c10101c4f2459df70325d02666497c7f8c36cae7a357b61058e8e2e",
+      "textSha256": "9a970bb64550a8dab7107d4b2ee5d0a8bf4729ae395f1dd300fb43662a1a3a4e",
+      "contentType": "text/html; charset=\"utf-8\"",
+      "role": "primary_read"
+    },
+    {
+      "id": "sovos-csa",
+      "url": "https://sovos.com/press-releases/sovos-joins-cloud-security-alliance/",
+      "finalUrl": "https://sovos.com/press-releases/sovos-joins-cloud-security-alliance/",
+      "retrievedAt": "2026-10-20T12:55:00.120187+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 353577,
+      "sha256": "e2eab8300a81e3edf618db6ffb47f4bd171fce92e122ac4f7ffd4cf11880abd0",
+      "textSha256": "2149e04dc6cf39c5dc39faf448f73bdcac7a4d9954a074d48b4c7ad49da82821",
+      "contentType": "text/html; charset=UTF-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "tesisquare-press",
+      "url": "https://www.tesisquare.com/de/news/pressemitteilungen/",
+      "finalUrl": "https://www.tesisquare.com/de/news/pressemitteilungen/",
+      "retrievedAt": "2026-10-20T12:55:00.120284+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 425318,
+      "sha256": "40e6410c8ce8c83aed5cd4d12604f8b30e7b6d00b33998277ac71542729e5769",
+      "textSha256": "ec2c9f1b515f24613f5af98ce41911377823a51317b945d018f3882434e3d8e5",
+      "contentType": "text/html; charset=UTF-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "icd-dematrust-light",
+      "url": "https://icdint.fr/dematrust-light",
+      "finalUrl": "https://icdint.fr/dematrust-light",
+      "retrievedAt": "2026-10-20T12:55:00.120387+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 130262,
+      "sha256": "75718009fdff38768cdda3cd921f4c63fac81e7063087dd523f6d43858874b57",
+      "textSha256": "e356f1df9518c0da2f57412910ed85bef675986f00bd6d071b0ff92d02efbce4",
+      "contentType": "text/html; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sps-discovery",
+      "url": "https://statusfield.com/services/sps-commerce/incidents",
+      "finalUrl": "https://statusfield.com/services/sps-commerce/incidents",
+      "retrievedAt": "2026-10-20T12:58:42.475473+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 283667,
+      "sha256": "34b6f7157195272814e861df29cbc73f441ab16ec4674a5946d48f9b1dbd06d9",
+      "textSha256": "700b811ea70b4e926f894480b9c9c80b9c7b959f1a830e5b20cc7b6bfad1e7d4",
+      "contentType": "text/html; charset=utf-8",
+      "role": "secondary_discovery"
+    },
+    {
+      "id": "sps-status",
+      "url": "https://status.spscommerce.com",
+      "finalUrl": "https://status.spscommerce.com",
+      "retrievedAt": "2026-10-20T12:58:58.325316+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 115366,
+      "sha256": "0a0914749da1502785c24a8d184d1d7580e65db828e98f68c8729fe2fe704040",
+      "textSha256": "90fad9858e93371080c544643a764bb652e434edaaffcbdc350f0c06bb491068",
+      "contentType": "text/html; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sps-fulfillment-20261012",
+      "url": "https://status.spscommerce.com/incidents/2v3vj2qbwfzr",
+      "finalUrl": "https://status.spscommerce.com/incidents/2v3vj2qbwfzr",
+      "retrievedAt": "2026-10-20T12:59:34.941731+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 78151,
+      "sha256": "370a487edb7b959ee0dddafd11cd9ffe2fe52bf72dca1634b3d02b6a0567fe27",
+      "textSha256": "5f7e7b2baf4be4105487beb8f0a3d8069f790776db2a951a578ec93b69101c77",
+      "contentType": "text/html; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sps-rss",
+      "url": "https://status.spscommerce.com/history.rss",
+      "finalUrl": "https://status.spscommerce.com/history.rss",
+      "retrievedAt": "2026-10-20T12:59:34.942275+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 40880,
+      "sha256": "b4211d216f772826ffa2f473a1dc2a30c6b0d5d234a8b740790f9f18ea9f8782",
+      "textSha256": "46d38742061d6b132b656e07831b4fadb145ec490be4ede60d8f9d280fc523ef",
+      "contentType": "application/rss+xml; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sps-atom",
+      "url": "https://status.spscommerce.com/history.atom",
+      "finalUrl": "https://status.spscommerce.com/history.atom",
+      "retrievedAt": "2026-10-20T12:59:34.942347+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 39292,
+      "sha256": "e5b3c458dc9596b57b158bcf15dfd888ca7ff25a6b0333996e6190bff6d39bfe",
+      "textSha256": "6cd364117c0ce64ad52b627b86d814d080c835aab60d54bb8b71c513e8e394cc",
+      "contentType": "application/atom+xml; charset=utf-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sps-product-discovery",
+      "url": "https://www.spscommerce.com/fr/",
+      "finalUrl": "https://www.spscommerce.com/fr/",
+      "retrievedAt": "2026-10-20T13:00:28.288209+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 631085,
+      "sha256": "b77e20445d7cd4d6906b8027a695affef5879766c2f75ecf0ec0a6d39ceb6a76",
+      "textSha256": "de53109de23427f99b55d6ef2c7fc000a18cb6ccacd4e3141c742aa7d62d5c02",
+      "contentType": "text/html; charset=UTF-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sps-fulfillment-product",
+      "url": "https://www.spscommerce.com/fr/produits/fulfillment/",
+      "finalUrl": "https://www.spscommerce.com/fr/produits/fulfillment/",
+      "retrievedAt": "2026-10-20T13:00:41.341174+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 259105,
+      "sha256": "4ed261a931f1ea94f0e2121bd6815b2d545687dee52def6dc9cace381b39c97e",
+      "textSha256": "447af44498bf6b18f0db1fab8ec781c55d0cc5df5ed0ed1eba93082ebd8fd35f",
+      "contentType": "text/html; charset=UTF-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "sps-fulfillment-edi",
+      "url": "https://www.spscommerce.com/products/fulfillment/edi/",
+      "finalUrl": "https://www.spscommerce.com/products/fulfillment/edi/",
+      "retrievedAt": "2026-10-20T13:01:13.864488+00:00",
+      "reviewedOn": "2026-10-20",
+      "status": 200,
+      "success": true,
+      "bytes": 533918,
+      "sha256": "5c81f0044e05f78d286039983c4dbb51ff76813cbebf94af8a1c54dfa651c9f5",
+      "textSha256": "81fd87001f41ca598e6b6551c494da332a27d50c45862563d0581a6283ce4556",
+      "contentType": "text/html; charset=UTF-8",
+      "role": "primary_read"
+    },
+    {
+      "id": "edicom-france-20261014",
+      "url": "https://careers.edicomgroup.com/noticias/facturacion-electronica-francia/",
+      "retrievedAt": "2026-10-20T12:56:14.059230+00:00",
+      "bytes": 108602,
+      "sha256": "d38caec8f2ee9e199614a1b0e9bc3969deb74bf9a9a69896308b4ff121828b18",
+      "role": "primary_read"
+    },
+    {
+      "id": "kolecto-october-20261020",
+      "url": "https://support.kolecto.fr/fr/articles/864335-octobre-2026-les-nouveautes-kolecto",
+      "retrievedAt": "2026-10-20T12:56:13.270279+00:00",
+      "bytes": 85839,
+      "sha256": "433131eee2d98206668ed1d887a427d88cc47ef4bfe0c4b975505400c69eeeb0",
+      "role": "primary_read"
+    },
+    {
+      "id": "gestav-tarifs-20261020",
+      "url": "https://gestav.com/facturation-electronique/tarifs",
+      "retrievedAt": "2026-10-20T12:56:13.460466+00:00",
+      "bytes": 122031,
+      "sha256": "f40f566d1725cfc4d483686f6cacf2db2cf3c7797e05e549eee05a81714a6db4",
+      "role": "primary_read"
+    },
+    {
+      "id": "gestav-micro-20261020",
+      "url": "https://gestav.com/facturation-electronique/micro",
+      "retrievedAt": "2026-10-20T12:56:13.654765+00:00",
+      "bytes": 138731,
+      "sha256": "0d17318edaf513ed8a3e6934ecdd4e1cd272733f057b742a22e50f5711b61f41",
+      "role": "primary_read"
+    },
+    {
+      "id": "gestav-cgv-20261020",
+      "url": "https://gestav.com/cgv",
+      "retrievedAt": "2026-10-20T12:56:13.880055+00:00",
+      "bytes": 372131,
+      "sha256": "a6a6f67cb46403cad0125a71b97976c43e0eeb82d99dcf45f863f6a77826e09d",
+      "role": "primary_read"
+    },
+    {
+      "id": "facnote-cgu-20261020",
+      "url": "https://groupefacnote.com/conditions-generales-dutilisation/",
+      "retrievedAt": "2026-10-20T12:56:15.218108+00:00",
+      "bytes": 133753,
+      "sha256": "631436460723d884a67d7ce9c3bac36a576ab85cae7115ee69b1bdbae89c9d13",
+      "role": "primary_read"
+    },
+    {
+      "id": "mysupply-news-danish-20261020",
+      "url": "https://mysupply.dk/mysupply-foerende-it-leverandoer-dokumenthaandtering/nyhedscenter/",
+      "retrievedAt": "2026-10-20T12:56:14.625393+00:00",
+      "bytes": 96625,
+      "sha256": "5804dcaeaa475616000494298d041bc2dc64a2b34f00b84a842f2092e0d3df71",
+      "role": "primary_read"
+    },
+    {
+      "id": "entropics-reused-homepage",
+      "url": "https://entropics.fr/",
+      "finalUrl": "https://entropics.fr/",
+      "retrievedAt": "2026-10-20T11:58:50.478040+00:00",
+      "status": 200,
+      "success": true,
+      "bytes": 152497,
+      "sha256": "8c0135ca08532d67799e43dae7671b925d16387b2dd86ea60e5c7c96461b72c4",
+      "role": "primary_read",
+      "method": "reused_same_day_homepage_body",
+      "proofArchive": "provider-homepages-2026-10-20.json"
+    },
+    {
+      "id": "facnote-pdp-reused-homepage",
+      "url": "https://www.facnote.com/",
+      "finalUrl": "https://groupefacnote.com/",
+      "retrievedAt": "2026-10-20T11:58:54.310799+00:00",
+      "status": 200,
+      "success": true,
+      "bytes": 171143,
+      "sha256": "d7bab6b2a8efcb6aad660e0be9c0ef20529bd9c26ed6c8d3089333bafbe80f81",
+      "role": "primary_read",
+      "method": "reused_same_day_homepage_body",
+      "proofArchive": "provider-homepages-2026-10-20.json"
+    }
+  ],
+  "collector": {
+    "checkedAt": "2026-10-20T13:12:13.758Z",
+    "sources": 27,
+    "collected": 27,
+    "failed": 0,
+    "pendingBefore": 349,
+    "pendingAfter": 352,
+    "changes": 5,
+    "priorQueuePreserved": true,
+    "intervalMinutes": 1440,
+    "modelCalls": 0
+  },
+  "collectorDeltaReview": [
+    {
+      "id": "sage-help-fr-20261020",
+      "decision": "update_existing_to_monitoring",
+      "scope": "publisher_service",
+      "update": {
+        "id": "sage-help-fr-20261020",
+        "title": "Sage : centre d’aide français sous surveillance",
+        "summary": "Sage signale le 20 octobre des difficultés d’accès des clients français au centre d’aide en ligne de plusieurs produits, dont Sage 50, Sage 100, Sage FRP 1000 et Sage eFacture. À 12 h 59 UTC, l’éditeur annonce un fonctionnement revenu à la normale et place le service sous surveillance.",
+        "status": "monitoring",
+        "resolutionReportedAt": null,
+        "updatedAt": "2026-10-20T12:59:35Z",
+        "checkedAt": "2026-10-20"
+      },
+      "notificationsUtcNewestFirst": [
+        {
+          "status": "Monitoring",
+          "message": "The service is performing as expected. Avoiding a reoccurrence is our priority as we closely monitor the service.",
+          "publishedAt": "2026-10-20T12:59:35Z"
+        },
+        {
+          "status": "Identified",
+          "message": "We have identified an issue preventing French customers from accessing Online Help Centre (FR) across the products listed below. The products/services whose help pages have been identified as affected at the moment are: - Sage Business Cloud - Sage 50 - Sage ECF - Sage 100 - Sage FRP 1000 - Sage BOB - Sage BI Reporting - Sage Paie PME - Sage eFacture - Sage EDI Online - Sage Production (GPAO) - Sage Génération Experts - Linkup PME - Sage Batigest Connect et i7",
+          "publishedAt": "2026-10-20T09:14:12Z"
+        },
+        {
+          "status": "Investigating",
+          "message": "We are investigating a potential issue with the service. An update will be provided within 30 minutes.",
+          "publishedAt": "2026-10-20T08:27:34Z"
+        }
+      ],
+      "feedPublishedAt": "2026-10-20T12:59:35.000Z",
+      "note": "Attribut Unix du message de surveillance à 12:59:35 UTC, identique au flux. Aucune résolution publiée. Centre d’aide français, distinct des applications et flux PA.",
+      "proof": {
+        "id": "sage-help-fr-20261020",
+        "url": "https://status.sage.com/incidents/4ntqxltb75j1",
+        "finalUrl": "https://status.sage.com/incidents/4ntqxltb75j1",
+        "retrievedAt": "2026-10-20T13:13:49.730113+00:00",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "success": true,
+        "bytes": 84970,
+        "sha256": "add11167c4e1143042e8da1c3fc6254a2bbe63aa6a19f27abe296a0be2b34696",
+        "textSha256": "e77e9002ce0970f34db27561f8489a5d9635b3d3fb060b87ff19801eced5f6ca"
+      }
+    },
+    {
+      "id": "pitney-bowes-qkgz6w0536qd",
+      "decision": "exclude_shipping_carrier_service",
+      "notificationsUtcNewestFirst": [
+        {
+          "status": "Resolved",
+          "message": "UPS have resolved the issue and all services are functional now.",
+          "publishedAt": "2026-10-20T12:16:26Z"
+        },
+        {
+          "status": "Investigating",
+          "message": "Failures are being observed for UPS carrier. There is no ongoing issue with Pitney Bowes systems though the current carrier side errors might result in disruption of RateShipment. Pitney Bowes Teams are actively working with UPS and we will update as we make progress.",
+          "publishedAt": "2026-10-20T11:16:15Z"
+        }
+      ],
+      "note": "Résolution notifiée le 20 octobre à 12:16:26 UTC. L’avis décrit les erreurs UPS RateShipment côté transporteur et précise l’absence de problème en cours dans les systèmes Pitney Bowes. Aucun impact sur la facturation PA n’est documenté.",
+      "proof": {
+        "id": "pitney-bowes-qkgz6w0536qd",
+        "url": "https://status.pitneybowes.com/incidents/qkgz6w0536qd",
+        "finalUrl": "https://status.pitneybowes.com/incidents/qkgz6w0536qd",
+        "retrievedAt": "2026-10-20T13:13:49.730460+00:00",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "success": true,
+        "bytes": 138793,
+        "sha256": "f5553af4c77f39429ee26232fd9956dfec52a4092ba1f63bb6610d0e860872dd",
+        "textSha256": "4590739c70640a1d3bd27d5967c48cbe5e62d420ada2f81a80d9d50b0f4ed673"
+      }
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1344",
+      "decision": "exclude_vulnerability_advisory_without_pa_incident",
+      "product": "Mattermost Server",
+      "publishedOn": "2026-10-20",
+      "vendorBulletinsDated": "2026-10-19",
+      "note": "Avis de vulnérabilités et correctifs, sans compromission ni incident de PA identifié. Le flux utilise minuit UTC pour la date du bulletin ; aucune heure effective de publication n’est déduite.",
+      "proof": {
+        "id": "cert-fr-CERTFR-2026-AVI-1344",
+        "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1344/",
+        "finalUrl": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1344/",
+        "retrievedAt": "2026-10-20T13:13:49.730532+00:00",
+        "status": 200,
+        "contentType": "text/html",
+        "success": true,
+        "bytes": 26471,
+        "sha256": "e49088b3ff84bbc6c408c32fb1eb2007eb51542cdcb28db360bce8acc7e8dff3",
+        "textSha256": "d4f98d4f0409911fcb22c184abbd438a83f548f30542df46c7b671f456cfa308"
+      }
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1343",
+      "decision": "exclude_vulnerability_advisory_without_pa_incident",
+      "product": "Laravel",
+      "publishedOn": "2026-10-20",
+      "vendorBulletinsDated": "2026-10-19",
+      "note": "Avis de vulnérabilités et correctifs, sans compromission ni incident de PA identifié. Le flux utilise minuit UTC pour la date du bulletin ; aucune heure effective de publication n’est déduite.",
+      "proof": {
+        "id": "cert-fr-CERTFR-2026-AVI-1343",
+        "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1343/",
+        "finalUrl": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1343/",
+        "retrievedAt": "2026-10-20T13:13:49.730580+00:00",
+        "status": 200,
+        "contentType": "text/html",
+        "success": true,
+        "bytes": 21128,
+        "sha256": "61026f981d27e4053ab79b78f3f8e19a8af986c41d61f076e16f1818f47db208",
+        "textSha256": "091b0d7eb55adb62d2a0526770053606748f117b93d81e6c774870510bec0752"
+      }
+    }
+  ]
+}

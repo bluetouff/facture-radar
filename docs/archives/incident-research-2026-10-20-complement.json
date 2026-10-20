@@ -1,0 +1,2090 @@
+{
+  "reviewedOn": "2026-10-20",
+  "phase": "classic_web_complement",
+  "method": "155 recherches nominatives publiques, suivies de lectures ciblées des sources primaires. Les résultats indexés sont des pistes ; seuls les faits suffisamment attribués et recoupés sont intégrés aux fiches et au journal.",
+  "authorization": "Web classique explicitement autorisé par l’utilisateur le 20 octobre après refus Exa HTTP 402 pour crédits épuisés. Aucun nouvel essai Exa ni achat de crédits.",
+  "initialQueries": 155,
+  "completedInitialQueries": 155,
+  "failedInitialQueries": 0,
+  "queries": [
+    {
+      "platformSlug": "a-cube",
+      "name": "A-Cube",
+      "query": "\"A-Cube\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Documentation et pages marketing existantes ; pas de changement spécifique daté10–20 confirmé, pas de propagation des contradictions commerciales aux données réglementaires.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "abby",
+      "name": "Abby",
+      "query": "\"Abby\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "L’aide maintient la réception disponible et l’émission différée, déjà documentées ; France Num13oct n’établit pas une nouvelle capacité PA. Messages d’utilisateurs isolés non assimilés à un incident PA.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "accenture",
+      "name": "Accenture eComply & Verify",
+      "query": "\"ACCENTURE\" Accenture eComply & Verify : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "ademico",
+      "name": "Ademico Software",
+      "query": "\"ADEMICO SOFTWARE\" Ademico Software : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "agena3000",
+      "name": "AGENA3000",
+      "query": "\"AGENA3000\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Webinars et contenu de conformité anciens retrouvés ; pas de signal nouveau daté dans la période confirmé.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "agicap",
+      "name": "Agicap",
+      "query": "\"Agicap\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages et contenus existants ; article tiers15oct pédagogique, pas nouveau déploiement produit ou incident vérifié.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "ags-records",
+      "name": "WiDOFACT by AGS",
+      "query": "\"AGS RECORDS MANAGEMENT\" WiDOFACT by AGS : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "L’article WiDOFACT est daté du 7 avril ; les autres annonces produit sont également antérieures. L’indexation récente n’est pas une nouvelle immatriculation.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "arratech",
+      "name": "Arratech Connect",
+      "query": "\"Arratech\" Arratech Connect : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "arteva",
+      "name": "Artéva Orchestrade",
+      "query": "\"Artéva Orchestrade\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Documentation et partenariat/API déjà antérieurs ; dates du PLF2025 conservées, aucune redatation2026.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "aruba",
+      "name": "Aruba OneSuite",
+      "query": "\"Aruba S.p.A.\" Aruba OneSuite : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le score UpGuard récemment recalculé n’est pas un avis de violation de données. Les informations commerciales retenues restent distinctes d’un incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "atgp",
+      "name": "BEE.FACT",
+      "query": "BEE.FACT ATGP facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages BEE.FACT et immatriculation antérieure retrouvées. Aucune annonce datée de la fenêtre retenue ; e.FACT du consortium catalan AOC est un autre service.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "avalara",
+      "name": "Avalara",
+      "query": "\"Avalara\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "AvaTax débutoct antérieur et produit fiscal distinct ; actualité14oct client américain sans nouveau périmètre PA français.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "axelor",
+      "name": "Axelor",
+      "query": "\"Axelor\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Salon14–15oct et documentation de module existent ; pas de lancement nouveau daté ou incident PA inféré de cet événement.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "axonaut",
+      "name": "Axonaut",
+      "query": "\"Axonaut\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "France Num15oct décrit le produit, sans établir un nouvel incident ; articles promotionnels ou anciens hors nouveautés vérifiées.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "axway",
+      "name": "Axway eInvoicing",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant Axway eInvoicing (AXWAY SOFTWARE), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "azopio",
+      "name": "Azopio",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant Azopio (AZOPIO), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "b2brouter",
+      "name": "B2BRouter",
+      "query": "\"B2BRouter\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Documentation de cas d’usage et offres existantes retrouvées, sans nouvelle date de publication vérifiée.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "b4value",
+      "name": "b4value.net",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant b4value.net (B4VALUE.NET), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "basware",
+      "name": "Basware",
+      "query": "\"Basware\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Avis Extension France daté8oct déjà recherché ; pas un nouvel incident10–20 démontré. Renouvellement SSO prévu25oct : maintenance future exclue.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "bc-solutions",
+      "name": "eas'Invoice",
+      "query": "eas'Invoice BC SOLUTIONS facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Accueil primaire et publications anciennes retrouvés. Les API liées au projet eas’Invoice sont déjà décrites dans la fiche ; disponibilité publique hors projet et prix restent inconnus.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "befresh",
+      "name": "BeInvoice by BeFresh",
+      "query": "BeInvoice by BeFresh BE FRESH S.à r.l. facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 1er septembre au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-09-01",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche depuis le1erseptembre ; les résultats Beefree/FreshBooks sont des homonymes. La page BeFresh relue directement le20 reste la preuve actuelle, sans nouvelle capacité française déduite.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "billit",
+      "name": "Billit",
+      "query": "\"Billit\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Notice de modification des CGV d’octobre lue ; date exacte de prise d’effet et applicabilité contractuelle française à préciser, sans transformer SLA annoncé en disponibilité mesurée.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "blg",
+      "name": "blgCloud",
+      "query": "blgCloud BLG facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "La publication de cybersécurité retrouvée concerne l’attaque de fin juillet, déjà traitée dans la passe directe. Le statut indexé et les cabinets juridiques BLG ne fournissent pas une nouvelle atteinte attribuable.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "cbs",
+      "name": "cbs e-world.cloud",
+      "query": "cbs e-world.cloud CBS Corporate Business Solutions facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Présentation e-world.cloud retrouvée, sans annonce datée de la fenêtre dans les résultats retenus. La portée mondiale n’est pas convertie en nouvelles capacités françaises.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "cecurity",
+      "name": "Cecurity eFacture",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant Cecurity eFacture (CECURITY), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les dernières notes publiques portent la date du 23 septembre (version 2.31.0), hors fenêtre. La perturbation Welyb de récupération des factures reste suivie séparément dans la passe directe ; son périmètre ne devient pas une panne globale Cecurity.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "cegedim",
+      "name": "Cegedim SY business",
+      "query": "\"Cegedim SY business\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Sources presse8oct et lancement antérieur retrouvés ; toute annonce21oct reste future et exclue au20.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "cegi-alfa",
+      "name": "Cegi Alfa",
+      "query": "Cegi Alfa CEGI ALFA facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Résultats de la requête partagée dominés par PA Check et des reprises générales. Aucun document primaire spécifique nouveau qualifié ; aucune absence d’incident déduite.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "cegid",
+      "name": "Cegid",
+      "query": "\"Cegid\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Résultats surtout anciens et généraux ; les documents 2024/2025 ou sans date de publication vérifiée ne constituent pas des nouveautés de la période.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "chaintrust",
+      "name": "Chaintrust",
+      "query": "\"Chaintrust\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Comparateur17oct porte tarifs de saisie comptable, pas quota/prix PA assuré ; annonces Visma anciennes, pas de nouveauté vérifiée dans les résultats.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "cleartax",
+      "name": "ClearTax",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant ClearTax (CLEARTAX), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "comarch",
+      "name": "Comarch",
+      "query": "\"Comarch\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Article primaire13oct sur contrôles IBAN et rôle distinct de Sis ID ; pas preuve d’une attaque ni d’un connecteur technique nouvellement livré.",
+      "retainedSourceIds": [
+        "comarch-sis-id-20261013"
+      ]
+    },
+    {
+      "platformSlug": "cyclope",
+      "name": "Cyclope",
+      "query": "Cyclope CYCLOPE facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "CGU et accueil retrouvés ; la mesure Peppol tierce datée de septembre et le service e.FACT catalan ne documentent pas un incident PA Cyclope sur la fenêtre.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "darva",
+      "name": "Ofeli by DARVA",
+      "query": "Ofeli by DARVA DARVA facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Articles primaires de septembre retrouvés. Le guide Sinapps Auto déjà relu directement le20 est inchangé ; pas de nouvelle publication qualifiée sur la fenêtre.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "dext",
+      "name": "Dext",
+      "query": "\"Dext\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Aide modifiée13oct14:44:17Z : compte gratuit limité à5documents de vente/an, factures/acompte/avoirs inclus ; réception illimitée. Correction du quota illimité, sans inventer un nombre équivalent de factures.",
+      "retainedSourceIds": [
+        "dext-free-limits-20261013"
+      ]
+    },
+    {
+      "platformSlug": "digipharmacie",
+      "name": "DigiPA",
+      "query": "DigiPA DIGIPHARMACIE facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages et CGU DigiPA retrouvées. Les avis ANS/MSSanté concernent d’autres services et restent sans rattachement à DigiPA. Aucune nouveauté spécifique qualifiée.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "digital-technologies",
+      "name": "Digital Technologies",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant Digital Technologies (DIGITAL TECHNOLOGIES), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "docnova",
+      "name": "Docnova",
+      "query": "Docnova Docnova, MELASOFT GmbH facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Résultats sur Docnova/Melasoft distingués des homonymes. Publications et application Android antérieures à la fenêtre ; la mesure tierce Peppol ne documente pas une panne de toute la PA.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "docoon",
+      "name": "Docoon Invoice",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant Docoon Invoice (DOCOON), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Version 2.20 livrée le 12 octobre, note Divalto publiée le 14 : statut 203 à réception et correctifs CDAR 202, adressage, Factur-X préfixé et interface. Complément de fiche proposé ; les correctifs ne deviennent pas des incidents. Avis support du 19 déjà qualifié dans la passe directe.",
+      "retainedSourceIds": [
+        "docoon-release-20261012"
+      ]
+    },
+    {
+      "platformSlug": "docprocess",
+      "name": "DocProcess",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant DocProcess (DOCPROCESS), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "docuware",
+      "name": "DocuWare",
+      "query": "\"DocuWare\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Article primaire publié14oct10:42:34.388Z : statut Lue et routage par suffixe SIREN/SIRET ; ne pas reprendre son interprétation réglementaire comme analyse juridique indépendante.",
+      "retainedSourceIds": [
+        "docuware-statuses-20261014"
+      ]
+    },
+    {
+      "platformSlug": "dokapi",
+      "name": "Dokapi",
+      "query": "Dokapi DOKAPI facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Dokapi Public concerne le secteur public belge et ne démontre pas une nouvelle capacité française. Les pages France et anciennes annonces ne donnent pas de nouveauté datée retenue.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "dougs",
+      "name": "Dougs",
+      "query": "\"Dougs\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Contenus1oct et antérieurs ; communiqué15oct2025 explicitement hors fenêtre2026.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "doxallia",
+      "name": "Doxallia Invox-IA",
+      "query": "\"Doxallia Invox-IA\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Annonces2025 et pages non datées retrouvées ; certification déclarée dans les contenus ne vaut pas nouveau certificat archivé.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "ecosio-intercom",
+      "name": "ecosio InterCom",
+      "query": "ecosio InterCom ecosio InterCom, a Vertex Company facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le changelog découvert décrit une note du30septembre, hors fenêtre. Le guide de livraison français est déjà relu le20 ; âge de crawl et publication restent distincts.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "edicom",
+      "name": "EDICOM",
+      "query": "\"EDICOM\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Article primaire14oct, modifié15, bilan du groupe :800projets/3000entités déclarés. Pas d’assimilation à des chiffres propres à EDICOM France ni à la fiche edicom-group.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "edicom-group",
+      "name": "EDICOM Group",
+      "query": "EDICOM Group EDICOM Group facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Bilan corporate du14octobre lu en primaire. Il parle d’EDICOM au niveau groupe, sans distinguer les deux entrées DGFiP. Aucun changement de capacité attribué à edicom-group.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "edics",
+      "name": "EDiCSpro",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant EDiCSpro (EDICS France), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "edieyes",
+      "name": "EdiEyes Vision Care",
+      "query": "EdiEyes Vision Care EdiEyes Vision Care facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages primaires d’actualité et présentation retrouvées, dont article du31juillet. Aucune nouveauté datée de la fenêtre qualifiée ; déclarations de sécurité non traitées comme incidents.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "edt",
+      "name": "EDT EIMA",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant EDT EIMA (EDT), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "eezi",
+      "name": "eezi",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant eezi (EEZI powered by VAT IT), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "effinum",
+      "name": "Effinum",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant Effinum (Effinum by SPEE), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "enerj",
+      "name": "ENERJ",
+      "query": "ENERJ ENERJ facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages primaires retrouvées ; leurs anciennes références au calendrier ne constituent pas une mise à jour publiée dans la fenêtre. Enedis et les autres opérateurs restent distincts.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "entropics",
+      "name": "ZenOnline",
+      "query": "ZenOnline ENTROPICS facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Proposition de complément sourcé : offre ZenPA, quotas en crédits et condition de flux complets, options API/SFTP payantes, e-reporting encore annoncé progressivement. Publication initiale inconnue ; observation20 uniquement. Voir profileProposals.",
+      "retainedSourceIds": [
+        "entropics-zenpa-20261020"
+      ]
+    },
+    {
+      "platformSlug": "esalink",
+      "name": "EsaLink Hubtimize",
+      "query": "\"EsaLink Hubtimize\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Article primaire15oct : hébergement PA/archivage déclaré en France sur infrastructure qualifiée SecNumCloud, MFA, ISO27001 annoncée. La qualification du cloud ne certifie pas l’application PA elle-même.",
+      "retainedSourceIds": [
+        "esalink-security-20261015"
+      ]
+    },
+    {
+      "platformSlug": "esi",
+      "name": "ESI",
+      "query": "ESI ESI facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Désambiguïsation supplémentaire effectuée sur esi-groupe.com. ESI eCloud/ESTECH, ESI Bruxelles et ESI Group simulation ne sont pas attribués à cette PA. Aucun signal primaire nouveau qualifié.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "esker",
+      "name": "Esker",
+      "query": "\"Esker\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Maintenance Peppol14oct planifiée exclue ; avis1–2oct déjà couvert. Bilan primaire des45jours lu : chiffres déclarés par Esker, pas taux de disponibilité ni classement.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "euro-information",
+      "name": "HBS e-factures",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant HBS e-factures (EURO INFORMATION), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "facnote",
+      "name": "Facnote PDP",
+      "query": "Facnote PDP FACNOTE PDP facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Proposition de complément sourcé : forfaits annuels HT, quotas, KYC/KYB, e-reporting par envoi, dépassements et accès API sans périodicité publiée. Voir profileProposals.",
+      "retainedSourceIds": [
+        "facnote-offer-20261020"
+      ]
+    },
+    {
+      "platformSlug": "factureapp",
+      "name": "FacturesApp",
+      "query": "FacturesApp FACTUREAPP facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 1er septembre au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-09-01",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche depuis le1erseptembre. Le domaine DGFiP reste factureapp.com ; il contient des liens vers FacturesApp, mais aucune donnée issue du site pluralisé n’est injectée dans la fiche sans rattachement précis. Les incidents FNIM/Facturapi ne sont pas attribués à cette PA.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "fiducial-cloud",
+      "name": "FIDUCIAL Cloud Facilia",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant FIDUCIAL Cloud Facilia (FIDUCIAL CLOUD), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "La déclaration du 1er octobre concerne un client utilisant un logiciel sur site. FIDUCIAL indique ne pas avoir constaté de compromission de son propre SI. Source déjà connue, hors fenêtre ; aucun nouvel incident de la PA n’est déduit.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "fiskaltrust",
+      "name": "fiskaltrust",
+      "query": "fiskaltrust FISKALTRUST facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Communiqué PA et pages e-invoicing retrouvés. Les modules nationaux de caisse restent distincts des fonctions françaises. Pas de nouveau signal daté qualifié au-delà du suivi direct.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "flowie",
+      "name": "Flowie",
+      "query": "\"Flowie\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Nouveaux tarifs/MCP déjà vérifiés par l’agent annuaire et root ; pas de doublon de modification proposé. Voir la passe directe annuaire/root et ses notes des16–19octobre.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "fonoa",
+      "name": "Fonoa",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant Fonoa (Fonoa Technologies Limited), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "freedz",
+      "name": "Freedz",
+      "query": "Freedz DOCOON IMMO / FREEDZ facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages Docoon.immo/Freedz et annonces antérieures retrouvées. Aucun signal daté de la fenêtre retenu ; la marque et le service restent distincts des autres offres Docoon.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "fulll",
+      "name": "fulll",
+      "query": "\"fulll\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Disponibilité annoncée1sept et contenus déjà antérieurs retrouvés ; pas de nouvelle capacité ou incident daté confirmé.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "generix",
+      "name": "Generix",
+      "query": "\"Generix\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Baromètres juillet2026 et septembre2025 retrouvés ; la mention15oct sur le PPF concerne une ancienne décision et ne doit pas être redatée2026.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "gep",
+      "name": "GEP E-Invoice Automation",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant GEP E-Invoice Automation (GEP), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "gestav",
+      "name": "Gestav",
+      "query": "Gestav GESTAV facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Proposition de complément sourcé : prix annuels TTC Conformité, quotas réception/émission, option e-reporting HT, retrait de la valeur mensuelle TTC affichée en HT dans le parcours. Divergence de restitution conservée. Voir profileProposals.",
+      "retainedSourceIds": [
+        "gestav-contract-20261020",
+        "gestav-pricing-20261020"
+      ]
+    },
+    {
+      "platformSlug": "groupe-sigma",
+      "name": "Sigma Lixa PA",
+      "query": "Avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française concernant Sigma Lixa PA (GROUPE SIGMA), publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "gurusoft",
+      "name": "GuruSoft eDoc",
+      "query": "\"GURUSOFT\" GuruSoft eDoc : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "iaf",
+      "name": "IAF",
+      "query": "IAF IAF facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le bon site IAF est distingué d’AFNIC et des organismes de santé. Les services d’infogérance et de cybersécurité ne sont pas des notifications d’incident de la PA.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "icd",
+      "name": "DEMATRUST Light",
+      "query": "\"ICD International\" DEMATRUST Light : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "La page DEMATRUST Light confirme les montants déjà présents : 45 € HT/mois et inscription à la réception à 0 €. Le webinaire du 22 est futur ; le texte à partir de 0 € ne transforme pas toute l’offre en gratuité.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "iedi",
+      "name": "iEDI",
+      "query": "\"iEDI ApS\" iEDI : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "iga-assurance",
+      "name": "IGA Assurance",
+      "query": "IGA Assurance IGA ASSURANCE facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Publications IGA et agrément antérieurs retrouvés ; aucune annonce nouvelle spécifique qualifiée. Les documents d’AIG, IGS ou d’autres assureurs ne lui sont pas attribués.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "indicom",
+      "name": "Indicom",
+      "query": "\"INDICOM\" Indicom : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "indy",
+      "name": "Indy",
+      "query": "\"Indy\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Correction opérationnelle : aide mise à jour22sept10:35:53Z, découverte20, émission PA à PA explicitement indisponible. Réception confirmée. E-reporting indépendant conservé sur ses sources antérieures.",
+      "retainedSourceIds": [
+        "indy-emission-20261020"
+      ]
+    },
+    {
+      "platformSlug": "infologic",
+      "name": "PA Copilote",
+      "query": "\"INFOLOGIC\" PA Copilote : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le nouveau partenariat du 11 octobre porte sur le déploiement de l’ERP Copilote chez Gourmet de Paris. Cette annonce ne prouve pas une nouvelle fonction de la PA.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "insiders-technologies",
+      "name": "Insiders Technologies",
+      "query": "Insiders Technologies Insiders Technologies GmbH facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 1er septembre au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-09-01",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche depuis le1erseptembre. Les pages officielles sont déjà relues le20 ; aucun incident FNIM/Welyb/VosFactures n’est attribué à Insiders à partir de la proximité des résultats.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "intesa",
+      "name": "Intesa",
+      "query": "\"In.Te.S.A. spa\" Intesa : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "invopop",
+      "name": "Invopop",
+      "query": "\"Invopop\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages couverture et statut, tarification30juillet retrouvées ; une page de statut courante ne prouve pas l’absence historique.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "iopole",
+      "name": "Iopole",
+      "query": "\"IOPOLE\" Iopole : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le post cybersécurité publié le 9 octobre, modifié le 12, commente des dossiers existants et annonce une table ronde du 13 ; aucune compromission Iopole nouvelle n’y est signalée. Les bilans commerciaux et anciennes release notes ne sont pas des avis d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "ipaidthat",
+      "name": "iPaidThat",
+      "query": "\"iPaidThat\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Contenus de conformité, sécurité et calendrier déjà antérieurs ; pas de nouveauté technique datée dans la période confirmée.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "itesoft",
+      "name": "ITESOFT",
+      "query": "\"ITESOFT\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Contenus sécurité généraux et annonces anciennes ; ne pas transformer une attaque DGFiP évoquée par ITESOFT en attaque ITESOFT.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "jefacture",
+      "name": "jefacture.com",
+      "query": "\"jefacture.com\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Notes septembre anciennes ; connecteur Lexis Poly annoncé7oct, date vérifiée en corps, hors fenêtre10–20. Ne pas le redater sur une date de crawl.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "kalanda",
+      "name": "Kalanda",
+      "query": "Kalanda KALANDA facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 1er septembre au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-09-01",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche depuis le1erseptembre. Page officielle relue directement le20 ; les incidents FNIM, Ikoula ou VosFactures restent sans rattachement documenté à la PA Kalanda.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "klekoon",
+      "name": "Klekoon",
+      "query": "Klekoon KLEKOON facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les ressources récentes concernent notamment la réponse aux appels d’offres, pas une nouvelle fonction de la PA. Les incidents d’AFNIC/Worldline ne sont pas rattachés à Klekoon.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "kolecto",
+      "name": "Kolecto",
+      "query": "\"Kolecto\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Notes octobre lues : évolutions1/8/9oct, antérieures au10. Pas de date de crawl utilisée comme publication.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "kolecto-pdp",
+      "name": "Kolecto PDP",
+      "query": "Kolecto PDP KOLECTO PDP facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Note d’octobre lue en primaire : entrées datées des1,8et9octobre seulement, donc hors fenêtre10–20. Aucune capacité n’est étendue à l’autre entité Kolecto à partir d’une nouveauté générique.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "legalinvoice",
+      "name": "LegalInvoice",
+      "query": "\"Legalinvoice by Tinexta Infocert\" LegalInvoice : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "logilec",
+      "name": "LOGILEC",
+      "query": "\"LOGILEC\" LOGILEC : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "lucca",
+      "name": "Lucca Factures",
+      "query": "\"Lucca Factures\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Auto-citation PA Check exclue ; pages produit et aides anciennes retrouvées. Aucun changement nouveau spécifique confirmé.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "lundi-matin",
+      "name": "Lundi Matin",
+      "query": "Lundi Matin LUNDI MATIN facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Désambiguïsation effectuée. Le média lundimatin et la formule « lundi matin » dans les avis PEP’s sont exclus. Les documents de services LUNDI MATIN retrouvés sont antérieurs.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "macompta",
+      "name": "macompta.fr",
+      "query": "\"macompta.fr\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Blog16oct pédagogique et réception2oct retrouvés ; les anciennes aides et engagements d’infrastructure ne prouvent pas de lancement ou incident nouveau.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "marosa",
+      "name": "Marosa VATify",
+      "query": "\"MAROSA\" Marosa VATify : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "medius",
+      "name": "Medius",
+      "query": "\"MEDIUS\" Medius : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "L’immatriculation finale annoncée le 12 janvier et les actualités de septembre ne constituent pas des nouveautés du 10 au 20 octobre.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "my-eddy",
+      "name": "MY-EDDY",
+      "query": "MY-EDDY MY-EDDY facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 1er septembre au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-09-01",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche depuis le1erseptembre. Les pages DailyApps déjà relues le20 ne documentent pas davantage l’offre PA ; Enedis, Welyb et les avis génériques ne sont pas des alertes MY-EDDY.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "my-fiteco",
+      "name": "MyFiteco",
+      "query": "MyFiteco MY FITECO facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages primaires FITECO retrouvées. Les webinaires des22et27octobre sont futurs au20 et ne démontrent pas une fonction livrée dans la fenêtre.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "mykinexo",
+      "name": "MyKinexo PDP",
+      "query": "MyKinexo PDP MyKinexo PDP facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages Kinexo et annonces d’immatriculation antérieures retrouvées, sans nouveauté datée retenue. Les reprises PA Check sont exclues des preuves.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "mysupply",
+      "name": "MySupply",
+      "query": "MySupply MySupply Aps facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Communiqué anglophone publié le25septembre et activité de marque prévue au1eroctobre déjà documentés dans la passe directe. Le site danois précise une annonce initiale dès juin. Aucun lancement nouveau daté du20 n’est déclaré.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "myunisoft",
+      "name": "MyUnisoft",
+      "query": "\"MyUnisoft\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Page météo et contenus anciens retrouvés ; météo relue par la passe directe du20. Une vue courante opérationnelle ne prouve pas l’absence d’incident historique.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "n2f",
+      "name": "N2F",
+      "query": "\"N2F\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Feuille de route modifiée16oct : QR code/adresse mobile et langue des lisibles récemment disponibles ; achats B2B internationaux/e-reporting encore en développement, gardés distincts.",
+      "retainedSourceIds": [
+        "n2f-roadmap-20261016"
+      ]
+    },
+    {
+      "platformSlug": "neotimo",
+      "name": "Neotimo",
+      "query": "Neotimo NEOTIMO facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages primaires et FAQ retrouvées ; les avis Welyb concernent son application et ses connexions, et les services Netomi/DIMOCO sont distincts. Pas de nouveau signal qualifié dans cette recherche.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "ntt-data",
+      "name": "JOUBINI by NTT DATA",
+      "query": "\"NTT DATA Business Solutions\" JOUBINI by NTT DATA : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "odoo",
+      "name": "Odoo",
+      "query": "\"Odoo\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Documentation18/19 retrouvée ; articles partenaires actualisés en octobre renvoient à des évolutions antérieures. Pas d’inférence d’incident à partir d’un travail de stabilisation.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "officein",
+      "name": "OfficeIn",
+      "query": "OfficeIn OfficeIn facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Accueil et publications OfficeIn retrouvés. La publicité de coffre-fort ne fournit pas une date de certificat applicable nouvelle. Les avis Sage/Spendesk restent attribués à leurs auteurs.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "one-up",
+      "name": "OneUp",
+      "query": "OneUp ONE UP facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Désambiguïsation effectuée sur smallbusiness.oneup.com. 1up-servers, OneUp Sales et UpCloud sont exclus. Aucun signal primaire nouveau qualifié pour ONE UP.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "open-bee",
+      "name": "Open Bee",
+      "query": "\"OPEN BEE\" Open Bee : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "opentext",
+      "name": "OpenText",
+      "query": "\"OpenText\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Signaux tiers portent Middle East/DE/AU ou maintenance, pas PA France établie. Publications générales et services d’archivage ne suffisent pas à une nouvelle alerte PA.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "pagero",
+      "name": "ONESOURCE Pagero",
+      "query": "\"ONESOURCE Pagero\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Release Oracle CMK2.3.1.0 du15oct vérifiée : France AP auto-facturation et transfrontalier via Oracle BIP, configuration requise. Incident9oct ajouté par passe directe déjà couvert.",
+      "retainedSourceIds": [
+        "pagero-oracle-cmk-20261015"
+      ]
+    },
+    {
+      "platformSlug": "paragon",
+      "name": "Invoice Paragon Platform",
+      "query": "\"PARAGON\" Invoice Paragon Platform : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "payflows",
+      "name": "Payflows Athena",
+      "query": "Payflows Athena PAYFLOWS facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Payflows Athena est distingué d’athenahealth et Athena Ag. La page produit et la note de mai ne fournissent pas une nouveauté datée dans la fenêtre.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "pennylane",
+      "name": "Pennylane",
+      "query": "\"Pennylane\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Aide modifiée le19 octobre à08:22:25Z : parcours général d’activation par interrupteur, mais FAQ des récurrentes encore uniquement sur demande via le support. La restriction est conservée, sans dater le lancement de toutes les fonctions.",
+      "retainedSourceIds": [
+        "pennylane-experience-20261019"
+      ]
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "name": "Pitney Bowes Invoice Services",
+      "query": "\"PITNEY BOWES\" Pitney Bowes Invoice Services : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les avis USPS et UPS ont été relus dans la passe directe : expéditions/étiquettes, sans impact établi sur Invoice Services français. Ils restent hors journal des incidents de facturation.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "qonto",
+      "name": "Qonto Facturation",
+      "query": "\"Qonto Facturation\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Page nouveautés lue ; AI/MCP et double validation sans date de publication précise. Le billet sponsorisé15oct est pédagogique, pas une nouvelle capacité PA vérifiée. Tarification effective1oct hors fenêtre.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "qweeby",
+      "name": "Qweeby",
+      "query": "\"QWEEBY\" Qweeby : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "ratioo",
+      "name": "Ratioo",
+      "query": "Ratioo RATIOO facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 1er septembre au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-09-01",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche depuis le1erseptembre. Ratio Status et Fakture.o sont des services distincts. Les pages Ratioo déjà relues le20 conservent leurs limites commerciales et opérationnelles ; aucun nouvel incident attribué.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "sage",
+      "name": "Sage",
+      "query": "\"Sage\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Nouveau bandeau primaire non daté sur le portail eFacture : incident d’archivage et transmission des documents, périmètre éditeur. Première observation20 ; début et première publication inconnus. Maintenance planifiée20 exclue. Le centre d’aide20 est déjà couvert par la passe directe.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "sap",
+      "name": "SAP",
+      "query": "\"SAP\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "CERT13oct relu dans la passe directe : vulnérabilités produits, pas incident PA confirmé. Signal de disponibilité16oct sur produit Brésil/e-mobility hors périmètre français.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "scribee",
+      "name": "Scribee",
+      "query": "Scribee SCRIBEE facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les documents primaires API retrouvés complètent les preuves directes du20 ; le guide GoCardless est déjà proposé dans la passe directe. Aucune nouvelle publication de sécurité datée n’est qualifiée ici.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "seeburger",
+      "name": "SEEBURGER E-Invoicing Hub",
+      "query": "\"SEEBURGER\" SEEBURGER E-Invoicing Hub : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "La Convention USF des 14/15 octobre est un événement annoncé de longue date. L’événement et les contenus génériques ne prouvent pas une nouvelle fonction ou un incident PA.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "sellsy",
+      "name": "Sellsy",
+      "query": "\"Sellsy\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Changelog API primaire des13–16oct lu ; ajout de champs de taxes et suivi e-mail. Page déploiement401 en accès direct, contenu indexé seulement ; ne pas prétendre sa revue intégrale ni nouvelle disponibilité e-reporting.",
+      "retainedSourceIds": [
+        "sellsy-api-20261016"
+      ]
+    },
+    {
+      "platformSlug": "septeo",
+      "name": "Septeo Ingeneo",
+      "query": "\"Septeo Ingeneo\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Résultats d’immatriculation, portail et fonctionnalités anciens ; aucun changement spécifique à publier confirmé par cette recherche.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "seqino",
+      "name": "SEQINO",
+      "query": "\"SEQINO\" SEQINO : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les aides d’activation et de vérification de réception datent des 6 et 7 août, déjà repérées dans les archives. Pas une nouveauté d’octobre.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "serensia",
+      "name": "Serensia",
+      "query": "\"SERENSIA by Quadient\" Serensia : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "seres",
+      "name": "Seres e-Facture PA",
+      "query": "\"Seres e-Facture PA\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Résultats mêlant auto-citations PA Check exclues et comparateurs ; aucune source nouvelle spécifique confirmée. Les limites de recherche ne constituent pas une preuve d’absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "shine",
+      "name": "Shine Facture",
+      "query": "\"Shine Facture\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Aides2/14sept et pages commerciales retrouvées ; aucune nouvelle fonction datée10–20 confirmée dans les résultats.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "sni",
+      "name": "SNI",
+      "query": "SNI SNI facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Désambiguïsation effectuée sur snitechnology.net. La page France et le site sont retrouvés ; les résultats génériques ANSSI/AFNIC ne documentent pas un incident de SNI.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "solo",
+      "name": "Solo",
+      "query": "Solo SOLO facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le bon éditeur solo.fr est retrouvé. Les articles génériques de cybersécurité et les incidents d’autres plateformes ne sont pas attribués à Solo. Aucun complément daté qualifié.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "sovos",
+      "name": "Sovos",
+      "query": "\"SOVOS\" Sovos : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Adhésion CSA annoncée le 15 octobre : contexte société uniquement, aucun badge ou certificat PA déduit. Portail EMEA lu directement : composants France visibles, fonctionnement normal à l’instant de lecture et historique récent vide ; aucune conclusion d’absence depuis le 10. Aucun lien RSS/Atom explicite dans les balises a/link.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "spendesk",
+      "name": "Spendesk",
+      "query": "\"Spendesk\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Page nouveautés identique aux faits déjà documentés8oct : AI Connect lecture seule, e-reporting achats internationaux. Incidents suivis dans passe directe, pas de nouvel avis ajouté depuis le moteur.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "sps-commerce",
+      "name": "SPS Commerce",
+      "query": "\"SPS COMMERCE\" SPS Commerce : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Avis Fulfillment du 12 octobre confirmé dans la source primaire : consultation/ouverture/envoi des documents affectés, traitement et flux de données annoncés normaux. Produit documenté comme traitant aussi des factures, sans pays ni PA française précisés : ajout publisher_service proposé. RSS/Atom liés répondent 200 ; parseur réel validé dans une liste autorisée de test, sans modifier le registre suivi.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "srci",
+      "name": "SRCI iXFacture",
+      "query": "SRCI iXFacture SRCI facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Présentation iXFacture et profil FranceNum modifié le11 retrouvés. Une date de mise à jour du profil institutionnel n’est pas une date de livraison produit ; pas de nouvelle capacité attribuée.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "storecove",
+      "name": "Storecove",
+      "query": "\"Storecove\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Sandbox antérieure et maintenance/statistiques de statut retrouvées ; les100% affichés ne sont pas repris comme mesure autonome de disponibilité.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "superpdp",
+      "name": "SuperPDP",
+      "query": "\"SuperPDP\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "L’incident annuaire18sept est déjà connu ; reprises de comparateurs et forum Dokos7sept ne démontrent pas un nouvel incident du10–20.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "symtrax",
+      "name": "Symtrax Compleo",
+      "query": "\"SYMTRAX\" Symtrax Compleo : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "taxera",
+      "name": "Taxera",
+      "query": "\"TAXERA\" Taxera : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "tenor",
+      "name": "Tenor eDemat",
+      "query": "\"TENOR\" Tenor eDemat : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "tesisquare",
+      "name": "TESISQUARE",
+      "query": "\"TESISQUARE SPA\" TESISQUARE : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le portail presse annonce Platform 8.0 le 12 octobre (supply chain, IA, données temps réel). Le périmètre opérationnel de facturation PA française n’est pas précisé ; pas de nouveau champ PA déduit.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "tessi",
+      "name": "Digital Invoice by Tessi",
+      "query": "\"Digital Invoice by Tessi\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Offres Essential et immatriculation annoncées2024/2025, pas nouvelles en octobre2026.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "tiime",
+      "name": "Tiime",
+      "query": "\"Tiime\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les principales aides remontent au4septembre ; les pages commerciales non datées ne prouvent pas un nouveau lancement10–20.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "tradeshift",
+      "name": "Tradeshift Babelway",
+      "query": "\"TRADESHIFT BABELWAY\" Tradeshift Babelway : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les notes Fall 2026 datent des 21/22 septembre et leurs intégrations figurent déjà dans le corpus. Crawl récent distinct de publication ; pas de nouvelle livraison attestée du 10 au 20.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "transalis",
+      "name": "Transalis",
+      "query": "\"Transalis Limited\" Transalis : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "treso2",
+      "name": "Treso2",
+      "query": "Treso2 TRESO2 facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Profil FranceNum modifié le15 et pages de sécurité TRESO2 retrouvés. Une mise à jour du référencement n’est pas une annonce produit ou un avis d’incident ; pas de complément daté retenu.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "tungsten",
+      "name": "Tungsten e-Invoice Connect",
+      "query": "\"TUNGSTEN AUTOMATION FRANCE\" Tungsten e-Invoice Connect : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "La recherche générique n’ajoute aucun avis primaire. La passe directe confirme la résolution notifiée le 19 octobre du dossier France du 13, sans transformer l’heure de notification en heure réelle de reprise.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "tx2",
+      "name": "TX2 Concept",
+      "query": "\"TX2 Concept\" TX2 Concept : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "ventya",
+      "name": "Ventya",
+      "query": "Ventya VENTYA facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Pages Clear’Invoice et anciens agréments/certifications retrouvés. Les références à des salons de2025 restent hors fenêtre, sans nouvelle disponibilité ou sécurité déduite.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "veryswing",
+      "name": "Veryswing",
+      "query": "Veryswing VERYSWING facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les résultats retrouvent surtout des notices antérieures ; les statuts Veryswing sont déjà lus dans la passe directe du20 par le suivi principal. Aucun doublon d’alerte n’est proposé.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "village-connecte",
+      "name": "Le Village Connecté",
+      "query": "Le Village Connecté LE VILLAGE CONNECTE facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Ressources de LVC et publications antérieures retrouvées. Les annonces éditoriales générales et les avis Welyb sont conservés dans leur propre périmètre, sans nouvelle attribution à LVC.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "vosfactures",
+      "name": "VosFactures",
+      "query": "VosFactures VosFactures facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Les reprises de la fuite de septembre sont distinguées d’une nouvelle atteinte. Le suivi des communiqués et de l’AIFE est couvert par la passe directe du20 ; aucune nouvelle qualification ajoutée depuis les extraits du moteur.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "voxel",
+      "name": "Voxel Bavel",
+      "query": "\"VOXEL, an Amadeus company\" Voxel Bavel : avis officiels, incidents de sécurité ou de disponibilité et nouveautés de facturation électronique française publiés entre le 10 et le 20 octobre 2026.",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Recherche nominative effectuée. Aucun nouveau signal utile suffisamment étayé n’a été retenu dans les résultats consultés. La couverture reste partielle ; elle ne démontre pas une absence d’incident.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "weproc",
+      "name": "WeInvoice by WeProc",
+      "query": "WeInvoice by WeProc WEPROC facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Page primaire status.weinvoice.fr relue : la mention de20minutes concerne le31août, pas une panne du17octobre ni de l’application Web. Les avis déjà publiés restent dans le corpus principal.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "wisetech",
+      "name": "WiseTech Global",
+      "query": "WiseTech Global WiseTech GLOBAL facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Actualités groupe, rapports et avertissement contre des escroqueries à l’investissement retrouvés. Aucun rattachement à une nouvelle atteinte ou fonction de la PA française n’est établi.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "xelya",
+      "name": "Xelya",
+      "query": "Xelya XELYA facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le résultat de statut annonce une maintenance des21–22octobre, future au20. L’ouverture directe renvoie un corps sans texte exploitable ; aucun nouvel incident passé n’est déduit.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "yooz",
+      "name": "Yooz",
+      "query": "\"Yooz\" facturation électronique France nouveautés incident sécurité disponibilité du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Communiqué sponsorisé Archimag19/20oct sur risques cyber, pas avis d’attaque chez Yooz. Aucun incident déduit de ce contenu général.",
+      "retainedSourceIds": []
+    },
+    {
+      "platformSlug": "ytems",
+      "name": "Ytems",
+      "query": "Ytems YTEMS facturation électronique incident sécurité cyberattaque indisponibilité nouveautés du 10 au 20 octobre 2026",
+      "reviewedOn": "2026-10-20",
+      "window": {
+        "from": "2026-10-10",
+        "to": "2026-10-20"
+      },
+      "status": "completed",
+      "decision": "Le bon produit Ytems est retrouvé. Les homonymes et articles génériques ne documentent pas une nouvelle alerte ; aucun complément primaire daté qualifié dans les résultats retenus.",
+      "retainedSourceIds": []
+    }
+  ],
+  "additionalSearches": {
+    "actorDisambiguationQueries": 4,
+    "broadRootQueries": 6,
+    "note": "Les recherches de suivi des sources primaires s’ajoutent aux requêtes nominatives. Les réponses brutes restent des documents de travail ; aucun extrait long de moteur n’est republié."
+  },
+  "retainedSourceIds": [
+    "indy-emission-20261020",
+    "dext-free-limits-20261013",
+    "docuware-statuses-20261014",
+    "n2f-roadmap-20261016",
+    "pagero-oracle-cmk-20261015",
+    "esalink-security-20261015",
+    "sellsy-api-20261016",
+    "pennylane-experience-20261019",
+    "comarch-sis-id-20261013",
+    "sage-efacture-archivage-20261020",
+    "docoon-release-20261012",
+    "sovos-emea-status-20261020",
+    "sps-status-20261020",
+    "sps-fulfillment-20261012",
+    "sps-fulfillment-product-20261020",
+    "entropics-zenpa-20261020",
+    "facnote-offer-20261020",
+    "gestav-pricing-20261020",
+    "gestav-contract-20261020"
+  ],
+  "newIncidentIds": [
+    "sage-efacture-archivage-20261020",
+    "sps-fulfillment-20261012"
+  ],
+  "newSecurityIncidentIds": [],
+  "limitations": [
+    "Recherche publique terminée ne signifie pas contrôle technique de sécurité ou de disponibilité.",
+    "Les moteurs ne couvrent pas tous les avis privés, les portails fermés ou les contenus non indexés.",
+    "Les dates de modification d’une aide et les dates d’observation restent distinctes d’un lancement, du début réel d’une panne ou d’une compromission.",
+    "Les six nouveaux acteurs sont recherchés depuis le 1er septembre ; les autres requêtes visent le retard depuis la recherche générale du 10 octobre, en complément du corpus historique."
+  ]
+}

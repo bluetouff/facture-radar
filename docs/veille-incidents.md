@@ -1,6 +1,6 @@
 # Veille publique des incidents PA
 
-Revue du 30 septembre 2026, complétée le 1er octobre pour VosFactures. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
+Dernière revue : 20 octobre 2026. Le relevé initial du 30 septembre et ses compléments restent décrits ci-dessous. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
 
 ## Recherche initiale et publications
 
@@ -15,7 +15,7 @@ Revue du 30 septembre 2026, complétée le 1er octobre pour VosFactures. Périod
 
 La fréquence demandée est **un relevé quotidien**, pas une surveillance à la minute. Le workflow `.github/workflows/incidents.yml` lance la collecte à 06 h 17 UTC. GitHub peut décaler l’exécution. Il n’y a aucune boucle de relance automatique.
 
-Le registre `src/data/incident-watch-sources.json` contient **26 sources pour 25 PA, plus le CERT-FR** : RSS, Atom, trois API JSON et la page TrustEsker. Une exécution effectue au plus 26 lectures de contenu, avec quatre sources simultanées. La résolution DNS publique épinglée génère ses propres échanges réseau. Les sources d’un même opérateur ne sont pas interrogées deux fois pour les variantes RSS et Atom.
+Le registre `src/data/incident-watch-sources.json` contient **27 sources au total : 26 PA et le CERT-FR**, après ajout du flux SPS le 20 octobre : RSS, Atom, trois API JSON et la page TrustEsker. Une exécution effectue au plus 27 lectures de contenu, avec quatre sources simultanées. La résolution DNS publique épinglée génère ses propres échanges réseau. Les sources d’un même opérateur ne sont pas interrogées deux fois pour les variantes RSS et Atom.
 
 ```sh
 npm run incidents:collect
@@ -40,7 +40,7 @@ Les nouveaux éléments restent dans la file de revue même après un relevé sa
 
 ## Revue utile, sans travail répété
 
-Le réveil automatique Codex est **en pause** pour éviter la consommation automatique de tokens. Le workflow GitHub est un script déterministe, sans appel à un modèle. À la demande de l’utilisateur, lire d’abord les artifacts existants et examiner les changements utiles. Une recherche web supplémentaire répond à un signal concret ; la recherche générale des 149 PA n’est pas répétée chaque jour.
+Le réveil automatique Codex est **en pause** pour éviter la consommation automatique de tokens. Le workflow GitHub est un script déterministe, sans appel à un modèle. À la demande de l’utilisateur, lire d’abord les artifacts existants et examiner les changements utiles. Une recherche web supplémentaire répond à un signal concret ; la recherche générale des 155 PA n’est pas répétée chaque jour.
 
 1. Lire la source originale et identifier l’entreprise, le produit, les pays et les services effectivement concernés.
 2. Recontrôler les avis ouverts : paiements par carte Spendesk, raccordement Welyb/eFacture, statuts Welyb/jefacture.com et envois Welyb aux applications tierces. La réception des factures Spendesk et la clôture des exercices Welyb sont annoncées rétablies. Les messages Esker des environnements G et J ont disparu ; leurs états finaux restent à confirmer. La disparition d’une entrée du flux n’est pas une preuve de résolution.
@@ -84,3 +84,7 @@ Voir `docs/revue-pa-2026-09-30.md` : listes DGFiP inchangées, neuf avis ajouté
 ## Complément du 1er octobre
 
 Voir `docs/revue-vosfactures-2026-10-01.md`. La notification Factuali reproduite par Fuites Infos et le communiqué officiel Fakturownia permettent de publier l’alerte VosFactures. Le corpus contient 47 avis, dont cinq de sécurité. Les autres plateformes gardent leurs dates de contrôle propres.
+
+## Complément du 20 octobre 2026
+
+Les 155 recherches nominatives sont terminées après autorisation d’utiliser le web classique. Le corpus comprend 83 avis, dont 77 de disponibilité et six de sécurité. Sage eFacture et SPS Fulfillment sont ajoutés au périmètre application des éditeurs ; les traitements SPS sont annoncés normaux. La collecte quotidienne passe à 27 sources, sans appel à un modèle : validation réelle 27/27 et file précédente conservée. Voir le [complément documenté](complement-recherche-2026-10-20.md) et les archives qui y sont reliées.

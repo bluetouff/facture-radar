@@ -360,5 +360,19 @@
     "checkedAt": "2026-10-20",
     "note": "Flux officiel déplacé vers cert.cyber.gouv.fr, destination de la redirection vérifiée le 16 octobre. Les liens des bulletins restent aussi publiés sur www.cert.ssi.gouv.fr. Le rattachement à une PA demande une vérification du produit concerné.",
     "sourceId": "cert-fr-watch-2026-09"
+  },
+  {
+    "id": "sps-commerce",
+    "platformSlugs": [
+      "sps-commerce"
+    ],
+    "name": "SPS Commerce",
+    "url": "https://status.spscommerce.com/history.rss",
+    "kind": "rss",
+    "profile": "statuspage",
+    "pageUrl": "https://status.spscommerce.com/",
+    "checkedAt": "2026-10-20",
+    "note": "Flux public lié depuis la page officielle. Les avis couvrent les produits de l’éditeur ; pays, application et périmètre PA sont qualifiés pour chaque incident.",
+    "sourceId": "sps-status-20261020"
   }
 ]

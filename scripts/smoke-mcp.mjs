@@ -61,7 +61,7 @@ async function inspectClient(versionNegotiation) {
     const incidentsResource = await client.readResource({ uri: "pacheck://corpus/incidents" });
     const incidentData = JSON.parse(incidentsResource.contents[0].text);
     assert.equal(incidentData.coverage.length, 155);
-    assert.equal(incidentData.incidents.length, 81);
+    assert.equal(incidentData.incidents.length, 83);
     assert.equal(incidentData.schemaVersion, "2.2");
     const zenfirst = incidentData.incidents.find(incident => incident.id === "zenfirst-claim-20260917");
     assert.equal(zenfirst.verification, "reported_claim");
@@ -73,7 +73,7 @@ async function inspectClient(versionNegotiation) {
     assert.equal(altagem.scope, "connected_service");
     assert.deepEqual(altagem.platformSlugs, ["iopole"]);
     assert.equal(incidentData.research.length, 155);
-    assert.equal(incidentData.collection.feeds.length, 26);
+    assert.equal(incidentData.collection.feeds.length, 27);
     assert.ok(resources.resources.some((resource) => resource.uri === "pacheck://corpus/official-directory"));
 
     const answer = await client.callTool({
@@ -104,7 +104,7 @@ try {
 
   const health = await fetch(new URL("/healthz", endpoint));
   assert.equal(health.status, 200);
-  assert.equal((await health.json()).counts.sources, 476);
+  assert.equal((await health.json()).counts.sources, 495);
 
   const missing = await fetch(new URL("/not-found", endpoint));
   assert.equal(missing.status, 404);

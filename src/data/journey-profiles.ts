@@ -329,8 +329,8 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
     platformSlug: "indy",
     toolLabel: "Indy",
     toolDetail: "Outil de facturation et de gestion destiné aux indépendants.",
-    checkedAt: "2026-08-25",
-    toolSourceIds: ["indy-invoicing-2026"],
+    checkedAt: "2026-10-20",
+    toolSourceIds: ["indy-invoicing-2026", "indy-emission-20261020"],
     contextSourceIds: [],
     activation: {
       label: "Inscription",
@@ -345,11 +345,13 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
       activateAction: { title: "Lancez l'inscription", detail: "Cliquez sur S'inscrire et suivez les étapes affichées pour votre entreprise.", sourceIds: ["indy-activation-2026"] },
       checkAction: { title: "Contrôlez le statut Indy", detail: "Vérifiez que l'inscription est terminée pour la bonne entreprise.", sourceIds: ["indy-activation-2026"] },
     },
-    costByAudience: allAudiences(freeCost(
-      "Facturation électronique et activation de la plateforme agréée annoncées gratuites, avec factures illimitées.",
-      "Le compte professionnel et les services comptables optionnels ne sont pas inclus dans ce calcul.",
-      ["indy-invoicing-2026", "indy-billing-2026", "indy-activation-2026"],
-    )),
+    costByAudience: allAudiences({
+      baseMonthlyFrom: null,
+      paMonthlySurcharge: null,
+      label: "Réception électronique et facturation classique annoncées gratuites ; émission PA à PA indisponible.",
+      caveat: "Le prix annoncé pour Indy reste distinct du coût d’une solution complémentaire d’émission, qui n’est pas connu. Aucun total à 12, 24 ou 36 mois n’est calculé pour le parcours complet. Le compte professionnel et les services comptables optionnels restent séparés.",
+      sourceIds: ["indy-invoicing-2026", "indy-billing-2026", "indy-activation-2026", "indy-emission-20261020"],
+    }),
     afterActivationActions: [testReceipt("Indy")],
   },
   {

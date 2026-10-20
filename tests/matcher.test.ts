@@ -124,3 +124,15 @@ test("l'interface explique l'absence de classement et n'affiche plus de faux top
   assert.match(visual, /Toutes les options confirmées/);
   assert.doesNotMatch(`${source}\n${visual}`, /Voici trois options|OPTION 0|Meilleur point de départ|featured|compatibility/);
 });
+
+test("les documents de vente gratuits Dext ne deviennent pas un quota fictif de factures", () => {
+  const platform = platforms.find(item => item.slug === "dext")!;
+  assert.equal(platform.allowance.value?.unlimited, false);
+  assert.equal(platform.allowance.value?.annualInvoices, null);
+  assert.equal(platform.allowance.value?.monthlyInvoices, null);
+  assert.match(platform.allowance.value?.label ?? "", /5 documents de vente.*an.*acomptes.*avoirs/);
+  const result = matchPlatform(platform, { ...base, monthlyInvoices: 8 });
+  assert.equal(result.eligible, false);
+  assert.ok(result.unknowns.includes("Plafond de l'offre gratuite"));
+  assert.equal(platform.pricing.value?.kind, "free");
+});

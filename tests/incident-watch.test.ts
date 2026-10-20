@@ -169,7 +169,7 @@ test("dates au jour près, détection et résolution sans date restent fidèles 
 });
 
 test("les avis distinguent PA, application et dépendance sans durée inventée", () => {
-  assert.equal(platformIncidents.length, 81);
+  assert.equal(platformIncidents.length, 83);
   assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 15);
   assert.equal(platformIncidents.find(event => event.id === "esker-french-b2b-20260915")!.status, "unknown");
   assert.equal(incidentsForPlatform("pennylane").incidents[0]!.scope, "publisher_service");
@@ -232,18 +232,51 @@ test("revue du 14 octobre : flux français, dépendance et avis sans date resten
   assert.equal(platformIncidents.find(item => item.id === "welyb-notifications-20261005")!.resolutionReportedAt, "2026-10-09");
 });
 
-test("lecture des six nouveaux sites : recherche nominative complémentaire explicitement incomplète", () => {
-  assert.equal(securityReview.status, "partial_search");
-  assert.equal(incidentResearch.filter(item => item.status === "searched").length, 149);
+test("recherche nominative terminée pour les 155 PA, couverture historique conservée séparément", () => {
+  assert.equal(securityReview.status, "public_search_completed");
+  assert.equal(securityReview.platformCount, platforms.length);
+  assert.equal(incidentResearch.filter(item => item.status === "searched").length, 155);
+  assert.ok(incidentResearch.every(item => item.checkedAt === "2026-10-20"));
   for (const slug of ["befresh", "factureapp", "insiders-technologies", "kalanda", "my-eddy", "ratioo"]) {
     const research = incidentResearch.find(item => item.platformSlug === slug)!;
-    assert.equal(research.status, "public_sites_reviewed");
+    assert.equal(research.status, "searched");
     assert.equal(research.checkedAt, "2026-10-20");
-    assert.equal(incidentsForPlatform(slug).security.status, "partial_search");
-    assert.equal(getPlatform(slug)!.incidentWatch.security.status, "partial_search");
+    assert.equal(incidentsForPlatform(slug).security.status, "public_search_completed");
+    assert.equal(getPlatform(slug)!.incidentWatch.security.status, "public_search_completed");
     assert.equal(incidentsForPlatform(slug).coverage.checkedAt, null);
   }
   assert.equal(incidentsForPlatform("introuvable").security.status, "not_reviewed");
+});
+
+test("Sage eFacture : le bandeau non daté conserve l’observation et un périmètre éditeur", () => {
+  const event = platformIncidents.find(item => item.id === "sage-efacture-archivage-20261020")!;
+  assert.equal(event.scope, "publisher_service");
+  assert.equal(event.kind, "availability");
+  assert.equal(event.status, "unknown");
+  assert.equal(event.firstObservedAt, "2026-10-20");
+  for (const key of ["startedAt", "detectedAt", "firstReportedAt", "resolutionReportedAt", "updatedAt"] as const) assert.equal(event[key], null);
+  assert.ok(!renderIncidentRss([event]).includes("<pubDate>"));
+  assert.match(event.limitations, /maintenance planifiée.*exclue du décompte/);
+});
+
+test("SPS : interface perturbée et flux conservés, collecte quotidienne sur l’origine officielle", () => {
+  const event = platformIncidents.find(item => item.id === "sps-fulfillment-20261012")!;
+  const watch = incidentsForPlatform("sps-commerce");
+  assert.equal(event.scope, "publisher_service");
+  assert.equal(event.status, "resolved");
+  assert.equal(event.startedAt, null);
+  assert.equal(event.firstReportedAt, "2026-10-12T13:02:55Z");
+  assert.equal(event.resolutionReportedAt, "2026-10-12T15:07:48Z");
+  assert.match(event.summary, /traitement des documents et les flux de données continuent normalement/);
+  assert.deepEqual(watch.security.feedIds, ["sps-commerce"]);
+  assert.equal(watch.feeds.length, 1);
+  const feed = watchSources.find(source => source.id === "sps-commerce")!;
+  const body = (url: string) => `<rss><channel><item><title>Fulfillment</title><link>${url}</link><pubDate>Mon, 12 Oct 2026 15:07:48 GMT</pubDate><description>Resolved</description></item></channel></rss>`;
+  const now = Date.parse("2026-10-20T14:00:00Z");
+  const [candidate] = parseWatchSource(feed, body("https://status.spscommerce.com/incidents/2v3vj2qbwfzr"), now);
+  assert.equal(candidate.id, "sps-commerce-2v3vj2qbwfzr");
+  assert.equal(candidate.publishedAt, "2026-10-12T15:07:48.000Z");
+  for (const url of ["https://status.spscommerce.com.evil.example/incidents/abc", "http://127.0.0.1/incidents/abc", "https://status.spscommerce.com/admin"]) assert.throws(() => parseWatchSource(feed, body(url), now));
 });
 
 test("revue du 20 octobre : clôtures datées et retraits conservent leurs états propres", () => {
@@ -300,8 +333,9 @@ test("avis du 20 octobre : support et historique découvert restent distincts de
     assert.equal(event.startedAt, null);
   }
   const help = platformIncidents.find(event => event.id === "sage-help-fr-20261020")!;
-  assert.equal(help.status, "identified");
-  assert.equal(help.updatedAt, "2026-10-20T09:14:12Z");
+  assert.equal(help.status, "monitoring");
+  assert.equal(help.resolutionReportedAt, null);
+  assert.equal(help.updatedAt, "2026-10-20T12:59:35Z");
   assert.equal(help.resolutionReportedAt, null);
   const pagero = platformIncidents.find(event => event.id === "pagero-online-20261009")!;
   assert.equal(pagero.firstObservedAt, "2026-10-20");
@@ -443,7 +477,7 @@ test("une mise à jour est détectée sans répéter un avis inchangé", () => {
 });
 test("API et MCP présentent incidents, couverture et mêmes sources", () => {
   const result = getResourceByUri("pacheck://corpus/incidents", {revision:"test",builtAt:"2026-09-16"}) as ReturnType<typeof incidentWatchCorpus>;
-  assert.equal(result.incidents.length, 81);
+  assert.equal(result.incidents.length, 83);
   assert.deepEqual(getPlatform("esker")!.incidentWatch.incidents, incidentsForPlatform("esker").incidents);
 });
 
@@ -518,7 +552,7 @@ test("revue du 30 septembre : résolutions sourcées et retraits Esker distincts
 test("chaque PA a une recherche datée ; collecte et incidents restent distincts", () => {
   assert.equal(incidentResearch.length, 155);
   assert.deepEqual([...incidentResearch.map(item => item.platformSlug)].sort(), platforms.map(item => item.slug).sort());
-  assert.equal(incidentFeeds.length, 26);
+  assert.equal(incidentFeeds.length, 27);
   assert.equal(incidentWatchCorpus().collection.intervalMinutes, 1440);
   assert.equal(incidentsForPlatform("abby").security.status, "public_search_completed");
   assert.equal(incidentsForPlatform("weproc").incidents.length, 5);

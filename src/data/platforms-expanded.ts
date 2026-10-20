@@ -103,11 +103,12 @@ export const expandedPlatforms: Platform[] = [
     summary: "Plateforme pensée pour les entreprises et les cabinets, avec une offre gratuite de facturation électronique.",
     targets: ["micro", "tpe", "pme"], ecosystem: ["cabinet comptable", "OCR", "GED", "collecte", "facturation"],
     pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["micro", "tpe", "pme"], promotionalPriceExcluded: true, label: "Compte gratuit pour facturation électronique et e-reporting, offre complète à 25 € HT par mois avec engagement annuel" }, ["dext-pricing-2026"]),
-    allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: true, label: "Création de devis et factures annoncée sans limite dans le compte gratuit" }, ["dext-pricing-2026"]),
-    sendsInvoices: documented(true, ["dext-pa-2026", "dext-send-electronic-2026"]), receivesInvoices: documented(true, ["dext-pa-2026"]), eReporting: documented(true, ["dext-pa-2026"]),
+    allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: false, label: "5 documents de vente émis par an dans Dext Facturation, factures, acomptes et avoirs compris ; devis et réception électronique illimités" }, ["dext-free-limits-20261013"], "Le quota porte sur des documents de vente et inclut les émissions via la PA. Il n’est pas converti en nombre équivalent de factures. Le compte gratuit comprend 1 utilisateur et 500 Mo de stockage ; le support humain est exclu.", "2026-10-20"),
+    sendsInvoices: documented(true, ["dext-pa-2026", "dext-send-electronic-2026", "dext-free-limits-20261013"], "L’offre gratuite limite l’émission à 5 documents de vente par an, factures, acomptes et avoirs compris.", "2026-10-20"), receivesInvoices: documented(true, ["dext-pa-2026"]), eReporting: documented(true, ["dext-pa-2026"]),
     bankAccountRequired: documented(false, ["dext-pricing-2026"]), accountantAccess: documented(true, ["dext-pa-2026"], "Un mandat signé est demandé lorsque le cabinet agit pour son client."),
+    exportDocumented: documented(true, ["dext-free-limits-20261013"], "L’aide décrit l’export de documents au format ZIP dans le compte gratuit. Les exports dans d’autres formats sont exclus de cette offre ; l’exhaustivité du XML et la restitution après résiliation restent à confirmer.", "2026-10-20"),
     formats: documented(["Factur-X", "UBL", "CII"], ["dext-pa-2026"]), commitmentMonths: documented(0, ["dext-pricing-2026"], "Le compte gratuit n'impose pas d'engagement."),
-    importantUnknowns: ["API publique", "Hébergement", "Export complet", "Limites du stockage gratuit"],
+    importantUnknowns: ["API publique", "Hébergement", "Export complet incluant les XML et conditions de sortie"],
   }),
   expand({
     slug: "dougs", displayName: "Dougs", officialName: "Dougs Facturation gratuite", registeredAt: "2025-12-12",
@@ -166,9 +167,9 @@ export const expandedPlatforms: Platform[] = [
     slug: "n2f", displayName: "N2F", officialName: "N2F PDP", registeredAt: "2025-12-19",
     summary: "Plateforme orientée factures fournisseurs et notes de frais, avec émission, réception et archivage.",
     targets: ["tpe", "pme", "eti", "ge"], ecosystem: ["factures fournisseurs", "notes de frais", "TVA", "archivage", "API"],
-    pricing: quote(), sendsInvoices: documented(true, ["n2f-pa-2026"]), receivesInvoices: documented(true, ["n2f-pa-2026"]), eReporting: documented(true, ["n2f-pa-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["n2f-pa-2026"]), iso27001: declared(true, ["n2f-pa-2026"], "Certification annoncée par N2F, certificat et périmètre à archiver."),
+    pricing: quote(), sendsInvoices: documented(true, ["n2f-pa-2026"]), receivesInvoices: documented(true, ["n2f-pa-2026", "n2f-roadmap-20261016"], "La feuille de route modifiée le 16 octobre présente le partage de l’adresse de facturation par QR code ou copie depuis le mobile, ainsi que le choix de la langue du lisible lorsqu’une e-facture reçue ne comporte pas de PDF, parmi les fonctions récemment disponibles.", "2026-10-20"), eReporting: documented(true, ["n2f-pa-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["n2f-pa-2026"]), iso27001: declared(true, ["n2f-pa-2026"], "Certification annoncée par N2F, certificat et périmètre à archiver."),
     publicApi: declared({ available: true, includedInFree: null }, ["n2f-pa-2026"], "L'émission client par API suppose des données déjà structurées et conformes."),
-    importantUnknowns: ["Prix et volumes", "Accès à l'API", "Hébergement", "Restitution complète"],
+    importantUnknowns: ["Prix et volumes", "Accès à l'API", "Hébergement", "Restitution complète", "Finalisation de l’e-reporting des achats B2B internationaux, encore en développement dans la feuille de route du 16 octobre"],
   }),
   expand({
     slug: "flowie", displayName: "Flowie", officialName: "FLOWIE", registeredAt: "2026-01-07",
@@ -209,7 +210,7 @@ export const expandedPlatforms: Platform[] = [
     slug: "pagero", displayName: "ONESOURCE Pagero", officialName: "PAGERO", registeredAt: "2025-12-19",
     summary: "Réseau mondial de conformité désormais proposé par Thomson Reuters pour connecter les ERP.",
     targets: ["eti", "ge"], ecosystem: ["Thomson Reuters", "ERP", "achats", "ventes", "réseau mondial"],
-    pricing: quote(), sendsInvoices: documented(true, ["pagero-france-2026"]), receivesInvoices: documented(true, ["pagero-france-2026"]), eReporting: documented(true, ["pagero-france-2026"]), integrations: documented(["ERP", "outils achats", "outils fiscaux", "intégrations personnalisées"], ["pagero-connectivity-2026"]), formats: documented(["UBL 2.1", "CII", "Factur-X", "Peppol BIS", "EDIFACT"], ["pagero-france-2026"]),
+    pricing: quote(), sendsInvoices: documented(true, ["pagero-france-2026"]), receivesInvoices: documented(true, ["pagero-france-2026"]), eReporting: documented(true, ["pagero-france-2026"]), integrations: documented(["ERP", "Oracle CMK", "Oracle BIP", "outils achats", "outils fiscaux", "intégrations personnalisées"], ["pagero-connectivity-2026", "pagero-oracle-cmk-20261015"], "Les notes Oracle CMK 2.3.1.0 du 15 octobre livrent les flux France AP Self-Billing et AP Cross-Border via Oracle BIP. La configuration des champs fournisseurs et factures, des tables de correspondance et des rapports BIP reste requise pour chaque flux utilisé.", "2026-10-20"), formats: documented(["UBL 2.1", "CII", "Factur-X", "Peppol BIS", "EDIFACT"], ["pagero-france-2026"]),
     importantUnknowns: ["Prix et volumes", "Engagement", "Hébergement France", "API publique"],
   }),
   expand({
@@ -230,7 +231,7 @@ export const expandedPlatforms: Platform[] = [
     slug: "comarch", displayName: "Comarch", officialName: "COMARCH SA", registeredAt: "2025-12-18",
     summary: "Échanges de données et conformité internationale intégrés aux ERP des grands groupes.",
     targets: ["eti", "ge"], ecosystem: ["EDI", "ERP", "SAP", "Oracle", "international"],
-    pricing: quote(), sendsInvoices: documented(true, ["comarch-france-2026"]), receivesInvoices: documented(true, ["comarch-france-2026"]), eReporting: documented(true, ["comarch-france-2026", "comarch-registration-2026"]), integrations: documented(["SAP", "Oracle", "ERP", "EDI"], ["comarch-france-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["comarch-registration-2026"]), iso27001: declared(true, ["comarch-registration-2026"]),
+    pricing: quote(), sendsInvoices: documented(true, ["comarch-france-2026"]), receivesInvoices: documented(true, ["comarch-france-2026"]), eReporting: documented(true, ["comarch-france-2026", "comarch-registration-2026"]), integrations: documented(["SAP", "Oracle", "ERP", "EDI"], ["comarch-france-2026", "comarch-sis-id-20261013"], "L’article du 13 octobre décrit chez Comarch des contrôles de cohérence des IBAN avec les données ERP et les registres. La vérification que le compte appartient au fournisseur est attribuée séparément à Sis ID. Ce texte ne précise pas la livraison d’un nouveau connecteur ni son inclusion commerciale.", "2026-10-20"), formats: documented(["Factur-X", "UBL", "CII"], ["comarch-registration-2026"]), iso27001: declared(true, ["comarch-registration-2026"]),
     importantUnknowns: ["Prix et volumes", "API publique", "Hébergement France", "Réversibilité"],
   }),
   expand({
@@ -251,7 +252,7 @@ export const expandedPlatforms: Platform[] = [
     slug: "docuware", displayName: "DocuWare", officialName: "DOCUWARE", registeredAt: "2025-12-22",
     summary: "Gestion documentaire et workflows de factures reliés aux ERP et au réseau Peppol.",
     targets: ["pme", "eti", "ge"], ecosystem: ["GED", "workflows", "ERP", "Peppol", "archivage"],
-    pricing: quote(), sendsInvoices: documented(true, ["docuware-pa-2026"]), receivesInvoices: documented(true, ["docuware-invoices-2026", "docuware-pa-2026", "docuware-statuses-20261010"], "La documentation du 9 octobre décrit le suivi des factures reçues, avec deux limites : la mise à jour du statut CDAR 212 Encaissée reste prévue pour une version ultérieure et les motifs de refus ne sont pas encore échangés sur le réseau.", "2026-10-10"), eReporting: documented(true, ["docuware-pa-2026"]), integrations: documented(["ERP", "logiciels comptables", "Peppol", "GED DocuWare"], ["docuware-invoices-2026"]), formats: declared(["Factur-X", "formats internationaux"], ["docuware-invoices-2026"]), exportDocumented: declared(true, ["docuware-invoices-2026"], "Le document original est annoncé comme accessible et archivé."),
+    pricing: quote(), sendsInvoices: documented(true, ["docuware-pa-2026"]), receivesInvoices: documented(true, ["docuware-invoices-2026", "docuware-pa-2026", "docuware-statuses-20261010", "docuware-statuses-20261014"], "La note publiée le 14 octobre ajoute le statut Lue et le routage par suffixes SIREN et SIRET pour les configurations françaises, sous DocuWare Cloud. Les workflows doivent être adaptés au nouveau statut. La documentation du 9 octobre annonçait encore CDAR 212 Encaissée pour une version ultérieure et précisait que les motifs de refus n’étaient pas échangés sur le réseau ; la nouvelle note ne résout pas ces limites.", "2026-10-20"), eReporting: documented(true, ["docuware-pa-2026"]), integrations: documented(["ERP", "logiciels comptables", "Peppol", "GED DocuWare"], ["docuware-invoices-2026"]), formats: declared(["Factur-X", "formats internationaux"], ["docuware-invoices-2026"]), exportDocumented: declared(true, ["docuware-invoices-2026"], "Le document original est annoncé comme accessible et archivé."),
     importantUnknowns: ["Prix et volumes", "Liste précise des formats", "API publique", "Engagement"],
   }),
   expand({
@@ -265,7 +266,7 @@ export const expandedPlatforms: Platform[] = [
     slug: "esalink", displayName: "EsaLink Hubtimize", officialName: "ESALINK", registeredAt: "2025-12-11",
     summary: "Plateforme EDI destinée à s'insérer dans les systèmes existants et à transformer les formats.",
     targets: ["pme", "eti", "ge"], ecosystem: ["EDI", "ERP", "GED", "CRM", "archivage"],
-    pricing: quote(), sendsInvoices: documented(true, ["esalink-pa-2026"]), receivesInvoices: documented(true, ["esalink-pa-2026"]), eReporting: documented(true, ["esalink-pa-2026"]), integrations: documented(["EDI", "ERP", "GED", "CRM", "systèmes métiers"], ["esalink-pa-2026", "esalink-platform-2026"]), formats: declared(["Factur-X", "UBL", "CII", "formats EDI"], ["esalink-pa-2026"]), iso27001: declared(true, ["esalink-platform-2026"]),
+    pricing: quote(), sendsInvoices: documented(true, ["esalink-pa-2026"]), receivesInvoices: documented(true, ["esalink-pa-2026"]), eReporting: documented(true, ["esalink-pa-2026"]), integrations: documented(["EDI", "ERP", "GED", "CRM", "systèmes métiers"], ["esalink-pa-2026", "esalink-platform-2026"]), formats: declared(["Factur-X", "UBL", "CII", "formats EDI"], ["esalink-pa-2026"]), hostingCountries: declared(["France"], ["esalink-security-20261015"], "EsaLink attribue l’hébergement de Hubtimize e-Invoicing et de son archivage à une infrastructure qualifiée SecNumCloud, avec exploitation depuis la France. La qualification de l’infrastructure reste distincte d’une qualification de l’application ; le prestataire et le périmètre contractuel sont à confirmer.", "2026-10-20"), iso27001: declared(true, ["esalink-platform-2026", "esalink-security-20261015"], "L’article du 15 octobre rattache le SMSI notamment au conseil et au développement de Hubtimize. Le certificat public, ses dates et son périmètre exact restent à archiver.", "2026-10-20"),
     importantUnknowns: ["Prix et volumes", "API publique", "Portée des certifications", "Conditions de sortie"],
   }),
   expand({

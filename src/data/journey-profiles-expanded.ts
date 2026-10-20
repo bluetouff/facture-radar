@@ -99,9 +99,15 @@ export const expandedJourneyProfiles: readonly JourneyProfileDefinition[] = [
     cost: paid(110 / 12, "Professional coûte 110 € HT par an pour la conformité France.", "Le montant mensuel est un équivalent de l’abonnement annuel. Basic ne couvre pas les fonctions réglementaires France. API et intégration à chiffrer séparément.", ["b2brouter-pricing-2026-09"]),
   }),
   journey({
-    id: "dext", aliases: ["Dext", "Dext Prepare"], platformSlug: "dext", toolLabel: "Dext",
-    toolDetail: "Collecte et préparation comptable pour entreprises et cabinets.", sourceIds: ["dext-pa-2026", "dext-send-electronic-2026"],
-    cost: free("Le compte gratuit inclut la facturation électronique et l'e-reporting.", "L'offre complète affichée à 25 € HT par mois ajoute OCR et automatisation pour 250 documents mensuels.", ["dext-pricing-2026"]),
+    checkedAt: "2026-10-20", id: "dext", aliases: ["Dext", "Dext Prepare"], platformSlug: "dext", toolLabel: "Dext",
+    toolDetail: "Collecte et préparation comptable pour entreprises et cabinets.", sourceIds: ["dext-pa-2026", "dext-send-electronic-2026", "dext-free-limits-20261013"],
+    cost: {
+      baseMonthlyFrom: null,
+      paMonthlySurcharge: null,
+      label: "Dext Facturation : réception électronique illimitée ; émission limitée à 5 documents de vente par an dans le compte gratuit.",
+      caveat: "Factures, acomptes et avoirs partagent ce quota, y compris via la PA. Les devis restent illimités. Aucun équivalent en nombre de factures ni coût gratuit général à 12, 24 ou 36 mois n’est déduit. Au-delà du quota, le coût dépend de l’offre payante choisie et de ses conditions ; il reste à confirmer pour votre usage.",
+      sourceIds: ["dext-pricing-2026", "dext-free-limits-20261013"],
+    },
     activation: {
       question: "Votre entreprise a-t-elle désigné Dext et, si un cabinet agit pour vous, le mandat est-il signé ?",
       todo: "Dext demande la désignation de la plateforme. Lorsqu'un cabinet agit pour son client, un mandat signé est nécessaire.",
