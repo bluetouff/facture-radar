@@ -11,7 +11,7 @@ import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 import { passportRoutes } from "../src/data/passport-routes.ts";
 
 test("le relevé courant conserve les admissions et corrections documentées en septembre", async () => {
-  assert.equal(directory.snapshotDate, "2026-10-16");
+  assert.equal(directory.snapshotDate, "2026-10-20");
   assert.equal(directory.approved.length, 155);
   assert.equal(directory.pending.length, 11);
   const expected = new Map([
@@ -88,6 +88,16 @@ test("B2Brouter reste payant pour la conformité France même à très faible vo
   assert.ok(journey);
   assert.equal(journey.cost.baseMonthlyFrom, 110 / 12);
   assert.match(passportRoutes.find((route) => route.slug === "b2brouter")!.cost.value, /110/);
+});
+
+test("Flowie sur devis conserve un coût inconnu et des conditions gratuites à confirmer", () => {
+  const platform = platforms.find(platform => platform.slug === "flowie")!;
+  assert.equal(platform.pricing.value?.kind, "quote");
+  assert.equal(platform.pricing.value?.monthlyFrom, null);
+  assert.equal(platform.publicApi.value?.includedInFree, null);
+  const result = matchPlatform(platform, { size: "pme", monthlyInvoices: 10, freeOnly: false, noBankAccount: false, needsAccountantAccess: false, needsApi: true, needsInternationalReporting: false });
+  assert.equal(result.annualCost, null);
+  assert.equal(platform.iso27001.checkedAt, "2026-10-02");
 });
 
 test("les nouvelles fiches ne déduisent ni prix ni disponibilité de l'agrément", () => {

@@ -1,0 +1,5903 @@
+{
+  "checkedAt": "2026-10-20",
+  "method": "Lectures directes des URL officielles avec validation des destinations publiques ; aucune recherche nominative générale",
+  "coverage": {
+    "actors": 155,
+    "uniqueUrls": 154,
+    "readUrls": 129,
+    "reusedUrls": 6,
+    "failedUrls": 19,
+    "httpRequests": 201,
+    "actorsWithSuccessfulRead": 136,
+    "actorsWithFailedRead": 19,
+    "urlsWithSignals": 3,
+    "maxConcurrentRequests": 4,
+    "perResponseTimeoutSeconds": 25,
+    "maxResponseBytes": 3145728,
+    "note": "Lectures directes des accueils ; aucune recherche nominative générale ni conclusion d’absence d’incident.",
+    "successfulUniqueUrls": 135,
+    "successfulActorRows": 136,
+    "successfulActorRowsWithLimitedText": 5,
+    "successfulActorRowsWithSubstantiveStaticText": 131,
+    "uniqueUrlsWithSubstantiveStaticText": 130,
+    "limitedStaticText": [
+      {
+        "actors": [
+          "MY FITECO"
+        ],
+        "url": "https://myfiteco.com/",
+        "textCharacters": 10,
+        "firstTextLine": "My fiteco"
+      },
+      {
+        "actors": [
+          "TAXERA"
+        ],
+        "url": "https://taxera.tech/",
+        "textCharacters": 100,
+        "firstTextLine": "Taxera Technologies — Global Tax Compliance Platform"
+      },
+      {
+        "actors": [
+          "jefacture.com"
+        ],
+        "url": "https://www.ecma-solutions.com/",
+        "textCharacters": 60,
+        "firstTextLine": "ECMA - JECMA"
+      },
+      {
+        "actors": [
+          "ESI"
+        ],
+        "url": "https://www.esi-groupe.com/",
+        "textCharacters": 11,
+        "firstTextLine": "ESI-GROUPE"
+      },
+      {
+        "actors": [
+          "LOGILEC"
+        ],
+        "url": "https://www.logilec.fr/",
+        "textCharacters": 94,
+        "firstTextLine": "Retrouvez-nous sur www.logilec.leclerc"
+      }
+    ],
+    "duplicateOfficialUrl": [
+      {
+        "actors": [
+          "KOLECTO PA",
+          "KOLECTO PDP"
+        ],
+        "url": "https://www.kolecto.fr/"
+      }
+    ],
+    "failureExitCodes": {
+      "56": 7,
+      "28": 11,
+      "63": 1
+    },
+    "failureHttpStatuses": {
+      "403": 6,
+      "0": 7,
+      "200": 5,
+      "404": 1
+    },
+    "failures": [
+      {
+        "actors": [
+          "ABBY"
+        ],
+        "url": "https://abby.fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "ADEMICO SOFTWARE"
+        ],
+        "url": "https://ademico-software.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "DIGIPHARMACIE"
+        ],
+        "url": "https://digipharmacie.fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "DOCPROCESS"
+        ],
+        "url": "https://doc-process.com/fr",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "ecosio InterCom, a Vertex Company"
+        ],
+        "url": "https://ecosio.com/fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "EDICOM Group"
+        ],
+        "url": "https://edicomgroup.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) Operation timed out after 25007 milliseconds with 0 bytes received"
+      },
+      {
+        "actors": [
+          "EDICOM France"
+        ],
+        "url": "https://edicomgroup.fr/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "AGS RECORDS MANAGEMENT"
+        ],
+        "url": "https://www.ags-recordsmanagement.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) Failed to connect to www.ags-recordsmanagement.com port 443 after 10009 ms: Timeout was reached"
+      },
+      {
+        "actors": [
+          "CBS Corporate Business Solutions"
+        ],
+        "url": "https://www.cbs-consulting.com/en/",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25004 milliseconds with 65070 out of 319764 bytes received"
+      },
+      {
+        "actors": [
+          "CEGEDIM"
+        ],
+        "url": "https://www.cegedim.fr/",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25006 milliseconds with 12422 out of 213615 bytes received"
+      },
+      {
+        "actors": [
+          "CHAINTRUST by Visma"
+        ],
+        "url": "https://www.chaintrust.io/",
+        "exitCode": 63,
+        "httpStatus": 200,
+        "error": "curl: (63) Exceeded the maximum allowed file size (3145728) with 3145728 bytes"
+      },
+      {
+        "actors": [
+          "CLEARTAX"
+        ],
+        "url": "https://www.cleartax.com/fr",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25002 milliseconds with 49124 bytes received"
+      },
+      {
+        "actors": [
+          "ENERJ"
+        ],
+        "url": "https://www.enerj.fr/",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25005 milliseconds with 247082 out of 1418256 bytes received"
+      },
+      {
+        "actors": [
+          "LUNDI MATIN"
+        ],
+        "url": "https://www.lundimatin.fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "Docnova, MELASOFT GmbH"
+        ],
+        "url": "https://www.melasoft.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "PARAGON"
+        ],
+        "url": "https://www.paragon.world/fr",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "SAGE"
+        ],
+        "url": "https://www.sage.com/fr-fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "SEEBURGER"
+        ],
+        "url": "https://www.seeburger.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "WiseTech GLOBAL"
+        ],
+        "url": "https://www.wisetechglobal.com/fr-fr/",
+        "exitCode": 56,
+        "httpStatus": 404,
+        "error": "curl: (56) The requested URL returned error: 404"
+      }
+    ],
+    "qualifiedHomePageSignal": "mySupply/Inexchange communiqué vérifié séparément.",
+    "discardedKeywordSignals": [
+      {
+        "actors": [
+          "STORECOVE"
+        ],
+        "url": "https://www.storecove.com/fr/fr",
+        "reason": "Mention marketing de perturbations, aucun avis concret d’incident."
+      },
+      {
+        "actors": [
+          "SYMTRAX"
+        ],
+        "url": "https://www.symtrax.com/fr",
+        "reason": "Mention marketing de perturbations, aucun avis concret d’incident."
+      },
+      {
+        "actors": [
+          "TESISQUARE SPA"
+        ],
+        "url": "https://www.tesisquare.com/fr",
+        "reason": "Mention marketing de perturbations, aucun avis concret d’incident."
+      }
+    ],
+    "proofs": [
+      "actor-homepage-results.json",
+      "homepages-manifest.json",
+      "homepages-summary.json",
+      "homepages-progress.jsonl"
+    ]
+  },
+  "actors": [
+    {
+      "name": "A-Cube",
+      "officialWebsite": "https://www.acubeapi.com/",
+      "result": {
+        "url": "https://www.acubeapi.com/",
+        "actors": [
+          "A-Cube"
+        ],
+        "observedAt": "2026-10-20T11:58:08.696554+00:00",
+        "urlKey": "35eba5d250f24bdd",
+        "hops": [
+          {
+            "url": "https://www.acubeapi.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html",
+              "date": "Tue, 20 Oct 2026 11:58:08 GMT",
+              "etag": "\"7b0815ca25fc59ebd08ca2a005b35200\"",
+              "last-modified": "Mon, 19 Oct 2026 14:42:11 GMT",
+              "content-length": "1167853"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.acubeapi.com/",
+        "rawPath": "homepages/35eba5d250f24bdd.raw",
+        "textPath": "homepages/35eba5d250f24bdd.txt",
+        "bytes": 1167853,
+        "sha256": "4d7a4d6c67bceeb3e8147ca9cef317d417429d3d5bc242c1471b94d94d1f7fcc",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.301
+      }
+    },
+    {
+      "name": "ABBY",
+      "officialWebsite": "https://abby.fr/",
+      "result": {
+        "url": "https://abby.fr/",
+        "actors": [
+          "ABBY"
+        ],
+        "observedAt": "2026-10-20T11:58:08.696963+00:00",
+        "urlKey": "b387e752781a5471",
+        "hops": [
+          {
+            "url": "https://abby.fr/",
+            "httpStatus": 403,
+            "exitCode": 56,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:08 GMT",
+              "content-type": "text/html",
+              "content-length": "919"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      }
+    },
+    {
+      "name": "ACCENTURE",
+      "officialWebsite": "https://www.accenture.com/fr-fr",
+      "result": {
+        "url": "https://www.accenture.com/fr-fr",
+        "actors": [
+          "ACCENTURE"
+        ],
+        "observedAt": "2026-10-20T11:58:08.697055+00:00",
+        "urlKey": "b52493b6c003a5b2",
+        "hops": [
+          {
+            "url": "https://www.accenture.com/fr-fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html;charset=utf-8",
+              "content-length": "177111",
+              "last-modified": "Tue, 20 Oct 2026 10:02:33 GMT",
+              "etag": "\"2b3d7-65e42bab85599\"",
+              "date": "Tue, 20 Oct 2026 11:58:08 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.accenture.com/fr-fr",
+        "rawPath": "homepages/b52493b6c003a5b2.raw",
+        "textPath": "homepages/b52493b6c003a5b2.txt",
+        "bytes": 177111,
+        "sha256": "32a34398b2a8c36353b0ec91e989f04d721dd9a451c913cc2fd5debc56856373",
+        "contentType": "text/html;charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.232
+      }
+    },
+    {
+      "name": "ADEMICO SOFTWARE",
+      "officialWebsite": "https://ademico-software.com/",
+      "result": {
+        "url": "https://ademico-software.com/",
+        "actors": [
+          "ADEMICO SOFTWARE"
+        ],
+        "observedAt": "2026-10-20T11:58:08.697136+00:00",
+        "urlKey": "be087f21bdcfc7fc",
+        "hops": [
+          {
+            "url": "https://ademico-software.com/",
+            "httpStatus": 0,
+            "exitCode": 28,
+            "headers": {}
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      }
+    },
+    {
+      "name": "AGENA 3000",
+      "officialWebsite": "https://www.agena3000.com/fr/nos-solutions/a3-e-facture",
+      "result": {
+        "url": "https://www.agena3000.com/fr/nos-solutions/a3-e-facture",
+        "actors": [
+          "AGENA 3000"
+        ],
+        "observedAt": "2026-10-20T11:58:08.842856+00:00",
+        "urlKey": "bb792229284aab2e",
+        "hops": [
+          {
+            "url": "https://www.agena3000.com/fr/nos-solutions/a3-e-facture",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Mon, 19 Oct 2026 06:38:04 GMT",
+              "location": "/fr/nos-solutions/a3-e-invoicing",
+              "content-type": "text/html; charset=utf-8"
+            }
+          },
+          {
+            "url": "https://www.agena3000.com/fr/nos-solutions/a3-e-invoicing",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Mon, 19 Oct 2026 06:38:05 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.agena3000.com/fr/nos-solutions/a3-e-invoicing",
+        "rawPath": "homepages/bb792229284aab2e.raw",
+        "textPath": "homepages/bb792229284aab2e.txt",
+        "bytes": 57789,
+        "sha256": "9f68d4ac0adc805fe3151d6941ce753aa312ad7dc0821f9fbf27a7f71116690b",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.184
+      }
+    },
+    {
+      "name": "AGICAP",
+      "officialWebsite": "https://agicap.com/fr/",
+      "result": {
+        "url": "https://agicap.com/fr/",
+        "actors": [
+          "AGICAP"
+        ],
+        "observedAt": "2026-10-20T11:58:08.928773+00:00",
+        "urlKey": "81bf90e5a7463f4f",
+        "hops": [
+          {
+            "url": "https://agicap.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:09 GMT",
+              "content-type": "text/html",
+              "last-modified": "Fri, 16 Oct 2026 07:40:41 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://agicap.com/fr/",
+        "rawPath": "homepages/81bf90e5a7463f4f.raw",
+        "textPath": "homepages/81bf90e5a7463f4f.txt",
+        "bytes": 255431,
+        "sha256": "6245f1cc3e60d4eedfae1ff9f5450658bf1fc603998fbbf9265c4f1470e49891",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.266
+      }
+    },
+    {
+      "name": "AGS RECORDS MANAGEMENT",
+      "officialWebsite": "https://www.ags-recordsmanagement.com/",
+      "result": {
+        "url": "https://www.ags-recordsmanagement.com/",
+        "actors": [
+          "AGS RECORDS MANAGEMENT"
+        ],
+        "observedAt": "2026-10-20T11:58:08.997891+00:00",
+        "urlKey": "2bed3c10a7255778",
+        "hops": [
+          {
+            "url": "https://www.ags-recordsmanagement.com/",
+            "httpStatus": 0,
+            "exitCode": 28,
+            "headers": {}
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) Failed to connect to www.ags-recordsmanagement.com port 443 after 10009 ms: Timeout was reached"
+      }
+    },
+    {
+      "name": "Arratech",
+      "officialWebsite": "https://www.arratech.com/",
+      "result": {
+        "url": "https://www.arratech.com/",
+        "actors": [
+          "Arratech"
+        ],
+        "observedAt": "2026-10-20T11:58:09.026629+00:00",
+        "urlKey": "f5db56337b409b06",
+        "hops": [
+          {
+            "url": "https://www.arratech.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:58:09 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.arratech.com/",
+        "rawPath": "homepages/f5db56337b409b06.raw",
+        "textPath": "homepages/f5db56337b409b06.txt",
+        "bytes": 372122,
+        "sha256": "e438ea6e08b3566dc801da1703a8b515647899e390b4dd4219b5397db748f13c",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.717
+      }
+    },
+    {
+      "name": "ARTEVA",
+      "officialWebsite": "https://www.arteva.fr/",
+      "result": {
+        "url": "https://www.arteva.fr/",
+        "actors": [
+          "ARTEVA"
+        ],
+        "observedAt": "2026-10-20T11:58:09.195057+00:00",
+        "urlKey": "83d7680d713b74a2",
+        "hops": [
+          {
+            "url": "https://www.arteva.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:09 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "196120",
+              "last-modified": "Tue, 20 Oct 2026 11:54:54 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.arteva.fr/",
+        "rawPath": "homepages/83d7680d713b74a2.raw",
+        "textPath": "homepages/83d7680d713b74a2.txt",
+        "bytes": 196120,
+        "sha256": "243baf82f2c569792e75737e2c41c5714e7b118ac4c5dee9d5e345d6fc560e29",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.18
+      }
+    },
+    {
+      "name": "Aruba S.p.A.",
+      "officialWebsite": "https://www.arubaonesuite.fr/",
+      "result": {
+        "url": "https://www.arubaonesuite.fr/",
+        "actors": [
+          "Aruba S.p.A."
+        ],
+        "observedAt": "2026-10-20T11:58:09.375529+00:00",
+        "urlKey": "3b88c7cfa05971c3",
+        "hops": [
+          {
+            "url": "https://www.arubaonesuite.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html;charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:58:13 GMT",
+              "content-length": "40660"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.arubaonesuite.fr/",
+        "rawPath": "homepages/3b88c7cfa05971c3.raw",
+        "textPath": "homepages/3b88c7cfa05971c3.txt",
+        "bytes": 40660,
+        "sha256": "5d37e5e6636a22fffd83cba95d106c27ce96523018774a68032a09764c581302",
+        "contentType": "text/html;charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 10.998
+      }
+    },
+    {
+      "name": "ATGP",
+      "officialWebsite": "https://www.atgp.net/",
+      "result": {
+        "url": "https://www.atgp.net/",
+        "actors": [
+          "ATGP"
+        ],
+        "observedAt": "2026-10-20T11:58:09.743729+00:00",
+        "urlKey": "39743036286d7d23",
+        "hops": [
+          {
+            "url": "https://www.atgp.net/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:53:30 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "267070",
+              "etag": "\"88426-1792279257;;;\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.atgp.net/",
+        "rawPath": "homepages/39743036286d7d23.raw",
+        "textPath": "homepages/39743036286d7d23.txt",
+        "bytes": 267070,
+        "sha256": "f706535f047785fab7e308a3f06d309d5776fad9dcf6957c609225d7fee14d51",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.23
+      }
+    },
+    {
+      "name": "AVALARA",
+      "officialWebsite": "https://www.avalara.com/eu/fr",
+      "result": {
+        "url": "https://www.avalara.com/eu/fr",
+        "actors": [
+          "AVALARA"
+        ],
+        "observedAt": "2026-10-20T11:58:09.973484+00:00",
+        "urlKey": "4e584aaa02cf67da",
+        "hops": [
+          {
+            "url": "https://www.avalara.com/eu/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=iso-8859-1",
+              "content-length": "288",
+              "location": "https://www.avalara.com/eu/fr/index.html",
+              "date": "Tue, 20 Oct 2026 11:58:10 GMT"
+            }
+          },
+          {
+            "url": "https://www.avalara.com/eu/fr/index.html",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "location": "https://www.avalara.com/fr/fr/index.html",
+              "date": "Tue, 20 Oct 2026 11:58:10 GMT"
+            }
+          },
+          {
+            "url": "https://www.avalara.com/fr/fr/index.html",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html;charset=utf-8",
+              "content-length": "503426",
+              "last-modified": "Tue, 20 Oct 2026 11:37:28 GMT",
+              "etag": "\"7ae82-65e440e208e6a\"",
+              "date": "Tue, 20 Oct 2026 11:58:11 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.avalara.com/fr/fr/index.html",
+        "rawPath": "homepages/4e584aaa02cf67da.raw",
+        "textPath": "homepages/4e584aaa02cf67da.txt",
+        "bytes": 503426,
+        "sha256": "f0387906d32ee021ae5a240e8666de998927059190d4294ca456db1955a615ae",
+        "contentType": "text/html;charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 2.273
+      }
+    },
+    {
+      "name": "AXELOR",
+      "officialWebsite": "https://axelor.com/fr/",
+      "result": {
+        "url": "https://axelor.com/fr/",
+        "actors": [
+          "AXELOR"
+        ],
+        "observedAt": "2026-10-20T11:58:12.246162+00:00",
+        "urlKey": "8429980b5015fd81",
+        "hops": [
+          {
+            "url": "https://axelor.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:58:12 GMT",
+              "last-modified": "Tue, 20 Oct 2026 06:15:21 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://axelor.com/fr/",
+        "rawPath": "homepages/8429980b5015fd81.raw",
+        "textPath": "homepages/8429980b5015fd81.txt",
+        "bytes": 414552,
+        "sha256": "e4427842481d580b124f2ddcdd2ddcedfdaa851141c6593d7503545536640ff7",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.192
+      }
+    },
+    {
+      "name": "AXONAUT",
+      "officialWebsite": "https://axonaut.com/",
+      "result": {
+        "url": "https://axonaut.com/",
+        "actors": [
+          "AXONAUT"
+        ],
+        "observedAt": "2026-10-20T11:58:12.438229+00:00",
+        "urlKey": "74871b24c9c184bc",
+        "hops": [
+          {
+            "url": "https://axonaut.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:12 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://axonaut.com/",
+        "rawPath": "homepages/74871b24c9c184bc.raw",
+        "textPath": "homepages/74871b24c9c184bc.txt",
+        "bytes": 466817,
+        "sha256": "79c0fb6bc7d9398252ee6ee93b677ff5f8b96d49cc6e70e444b9261861ae1ca1",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.282
+      }
+    },
+    {
+      "name": "AXWAY SOFTWARE",
+      "officialWebsite": "https://www.axway.com/fr",
+      "result": {
+        "url": "https://www.axway.com/fr",
+        "actors": [
+          "AXWAY SOFTWARE"
+        ],
+        "observedAt": "2026-10-20T11:58:12.720329+00:00",
+        "urlKey": "0fe794d0c0112896",
+        "hops": [
+          {
+            "url": "https://www.axway.com/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "etag": "W/\"1792453267\"",
+              "last-modified": "Mon, 19 Oct 2026 23:41:07 GMT",
+              "date": "Tue, 20 Oct 2026 11:58:13 GMT",
+              "content-length": "145732"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.axway.com/fr",
+        "rawPath": "homepages/0fe794d0c0112896.raw",
+        "textPath": "homepages/0fe794d0c0112896.txt",
+        "bytes": 145732,
+        "sha256": "9bc1a8cf4a632e413cc37883374329cb4f694996b0347b83b0c7f3c266624691",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.398
+      }
+    },
+    {
+      "name": "AZOPIO",
+      "officialWebsite": "https://www.azopio.com/fr/",
+      "result": {
+        "url": "https://www.azopio.com/fr/",
+        "actors": [
+          "AZOPIO"
+        ],
+        "observedAt": "2026-10-20T11:58:13.118089+00:00",
+        "urlKey": "37cee763e1da36c8",
+        "hops": [
+          {
+            "url": "https://www.azopio.com/fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:13 GMT",
+              "location": "https://www.azopio.com/fr/index",
+              "content-length": "279",
+              "content-type": "text/html; charset=iso-8859-1"
+            }
+          },
+          {
+            "url": "https://www.azopio.com/fr/index",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:13 GMT",
+              "location": "https://www.azopio.com/fr/index/",
+              "content-length": "0",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          },
+          {
+            "url": "https://www.azopio.com/fr/index/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:14 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.azopio.com/fr/index/",
+        "rawPath": "homepages/37cee763e1da36c8.raw",
+        "textPath": "homepages/37cee763e1da36c8.txt",
+        "bytes": 264750,
+        "sha256": "37cdd70f6ad52fea3c0771caadc1ac5b2fa614b980690014825a8f64e5227d0d",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.983
+      }
+    },
+    {
+      "name": "B2BRouter",
+      "officialWebsite": "https://www.b2brouter.net/fr",
+      "result": {
+        "url": "https://www.b2brouter.net/fr",
+        "actors": [
+          "B2BRouter"
+        ],
+        "observedAt": "2026-10-20T11:58:15.101319+00:00",
+        "urlKey": "c157a26aed227235",
+        "hops": [
+          {
+            "url": "https://www.b2brouter.net/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:15 GMT",
+              "content-type": "text/html",
+              "content-length": "162",
+              "location": "https://www.b2brouter.net/fr/"
+            }
+          },
+          {
+            "url": "https://www.b2brouter.net/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:15 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.b2brouter.net/fr/",
+        "rawPath": "homepages/c157a26aed227235.raw",
+        "textPath": "homepages/c157a26aed227235.txt",
+        "bytes": 154451,
+        "sha256": "f5fc96c2627a82928513a6d051fcde3a57699eba8488048a259e093faa3c0b37",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.585
+      }
+    },
+    {
+      "name": "B4VALUE.NET",
+      "officialWebsite": "https://www.b4value.net/en/",
+      "result": {
+        "url": "https://www.b4value.net/en/",
+        "actors": [
+          "B4VALUE.NET"
+        ],
+        "observedAt": "2026-10-20T11:58:15.686610+00:00",
+        "urlKey": "c499e5e759295a2d",
+        "hops": [
+          {
+            "url": "https://www.b4value.net/en/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:15 GMT",
+              "content-type": "text/html",
+              "content-length": "144918",
+              "last-modified": "Mon, 31 Aug 2026 10:02:40 GMT",
+              "etag": "\"23616-65a54e70bef5a\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.b4value.net/en/",
+        "rawPath": "homepages/c499e5e759295a2d.raw",
+        "textPath": "homepages/c499e5e759295a2d.txt",
+        "bytes": 144918,
+        "sha256": "70347c0d38edc6ecd653bf6c9e1221233d8f9ffb0f1c9d261e1a4a6502e1881a",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.204
+      }
+    },
+    {
+      "name": "BASWARE",
+      "officialWebsite": "https://www.basware.com/fr",
+      "result": {
+        "url": "https://www.basware.com/fr",
+        "actors": [
+          "BASWARE"
+        ],
+        "observedAt": "2026-10-20T11:58:15.891002+00:00",
+        "urlKey": "a049144ecea4bb30",
+        "hops": [
+          {
+            "url": "https://www.basware.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:16 GMT",
+              "content-length": "0",
+              "location": "https://www.basware.com/fr/"
+            }
+          },
+          {
+            "url": "https://www.basware.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:16 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 09:24:37 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.basware.com/fr/",
+        "rawPath": "homepages/a049144ecea4bb30.raw",
+        "textPath": "homepages/a049144ecea4bb30.txt",
+        "bytes": 119422,
+        "sha256": "a4714c639e1954d87b7ddd1db65bf67eb54b79a03619ddb4c872e34f51adc735",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.283
+      }
+    },
+    {
+      "name": "BC SOLUTIONS",
+      "officialWebsite": "https://bcsolutions.fr/",
+      "result": {
+        "url": "https://bcsolutions.fr/",
+        "actors": [
+          "BC SOLUTIONS"
+        ],
+        "observedAt": "2026-10-20T11:58:16.174132+00:00",
+        "urlKey": "d2ec74b27006e3e2",
+        "hops": [
+          {
+            "url": "https://bcsolutions.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:16 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "1136651"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://bcsolutions.fr/",
+        "rawPath": "homepages/d2ec74b27006e3e2.raw",
+        "textPath": "homepages/d2ec74b27006e3e2.txt",
+        "bytes": 1136651,
+        "sha256": "56a43fe7f2ec4ca67f1fd24683b0412de54b2942bd85ca1d6340923c5c30fbac",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.356
+      }
+    },
+    {
+      "name": "BE FRESH S.à r.l.",
+      "officialWebsite": "https://befresh.lu/",
+      "result": {
+        "url": "https://befresh.lu/",
+        "actors": [
+          "BE FRESH S.à r.l."
+        ],
+        "observedAt": "2026-10-20T11:58:16.529884+00:00",
+        "urlKey": "5fdcea09edf5eaad",
+        "hops": [],
+        "status": "reused_priority_read",
+        "rawPath": "befresh-pa-20261014.html",
+        "textPath": "befresh-pa-20261014.txt",
+        "sha256": "802446a4c6b139e00f353d755ec2b8d09591c2a00e08cf8ce0f9f3c6c1746cce",
+        "bytes": 36727,
+        "signalLines": [],
+        "elapsedSeconds": 0.001
+      }
+    },
+    {
+      "name": "BILLIT",
+      "officialWebsite": "https://www.billit.eu/fr-be/",
+      "result": {
+        "url": "https://www.billit.eu/fr-be/",
+        "actors": [
+          "BILLIT"
+        ],
+        "observedAt": "2026-10-20T11:58:16.530952+00:00",
+        "urlKey": "a22beb867ec5c380",
+        "hops": [
+          {
+            "url": "https://www.billit.eu/fr-be/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:58:16 GMT",
+              "content-length": "121075"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.billit.eu/fr-be/",
+        "rawPath": "homepages/a22beb867ec5c380.raw",
+        "textPath": "homepages/a22beb867ec5c380.txt",
+        "bytes": 121075,
+        "sha256": "85010ab0cd4c88325133261301f1b4d7f6a15101b65c68a68ce7093a86d95c02",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.279
+      }
+    },
+    {
+      "name": "BLG",
+      "officialWebsite": "https://www.blgcloud.fr/",
+      "result": {
+        "url": "https://www.blgcloud.fr/",
+        "actors": [
+          "BLG"
+        ],
+        "observedAt": "2026-10-20T11:58:16.810334+00:00",
+        "urlKey": "49c6a2cf692f941e",
+        "hops": [
+          {
+            "url": "https://www.blgcloud.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:17 GMT",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.blgcloud.fr/",
+        "rawPath": "homepages/49c6a2cf692f941e.raw",
+        "textPath": "homepages/49c6a2cf692f941e.txt",
+        "bytes": 116338,
+        "sha256": "d3dfc49cb025a0248e1a133e0f166bf47f936ec04102cde2b28aca61a28dc6f9",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.256
+      }
+    },
+    {
+      "name": "CBS Corporate Business Solutions",
+      "officialWebsite": "https://www.cbs-consulting.com/en/",
+      "result": {
+        "url": "https://www.cbs-consulting.com/en/",
+        "actors": [
+          "CBS Corporate Business Solutions"
+        ],
+        "observedAt": "2026-10-20T11:58:17.066675+00:00",
+        "urlKey": "9f6537d09ccc8317",
+        "hops": [
+          {
+            "url": "https://www.cbs-consulting.com/en/",
+            "httpStatus": 200,
+            "exitCode": 28,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:24 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "319764",
+              "last-modified": "Tue, 20 Oct 2026 08:12:24 GMT"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25004 milliseconds with 65070 out of 319764 bytes received"
+      }
+    },
+    {
+      "name": "CECURITY",
+      "officialWebsite": "https://www.cecurity.com/",
+      "result": {
+        "url": "https://www.cecurity.com/",
+        "actors": [
+          "CECURITY"
+        ],
+        "observedAt": "2026-10-20T11:58:18.816293+00:00",
+        "urlKey": "6fab103b0928dfe1",
+        "hops": [
+          {
+            "url": "https://www.cecurity.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:19 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.cecurity.com/",
+        "rawPath": "homepages/6fab103b0928dfe1.raw",
+        "textPath": "homepages/6fab103b0928dfe1.txt",
+        "bytes": 225364,
+        "sha256": "39e7484931f2357069b81ac446409d2eb3ece9c88bb36aae32e9d7886cf36b04",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.009
+      }
+    },
+    {
+      "name": "CEGEDIM",
+      "officialWebsite": "https://www.cegedim.fr/",
+      "result": {
+        "url": "https://www.cegedim.fr/",
+        "actors": [
+          "CEGEDIM"
+        ],
+        "observedAt": "2026-10-20T11:58:19.068904+00:00",
+        "urlKey": "373e335fbb14ab83",
+        "hops": [
+          {
+            "url": "https://www.cegedim.fr/",
+            "httpStatus": 302,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://www.cegedim.fr/Pages/default.aspx",
+              "date": "Tue, 20 Oct 2026 11:58:19 GMT",
+              "content-length": "164"
+            }
+          },
+          {
+            "url": "https://www.cegedim.fr/Pages/default.aspx",
+            "httpStatus": 200,
+            "exitCode": 28,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:58:25 GMT",
+              "content-length": "213615"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25006 milliseconds with 12422 out of 213615 bytes received"
+      }
+    },
+    {
+      "name": "CEGI ALFA",
+      "officialWebsite": "https://www.cegi.fr/",
+      "result": {
+        "url": "https://www.cegi.fr/",
+        "actors": [
+          "CEGI ALFA"
+        ],
+        "observedAt": "2026-10-20T11:58:19.825003+00:00",
+        "urlKey": "187383a6bc8202ba",
+        "hops": [
+          {
+            "url": "https://www.cegi.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:19 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 10:53:44 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.cegi.fr/",
+        "rawPath": "homepages/187383a6bc8202ba.raw",
+        "textPath": "homepages/187383a6bc8202ba.txt",
+        "bytes": 115050,
+        "sha256": "5a5201f8222d98f204af399be5e80d22fde655e3411ee30b35d09a5132c71e70",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.187
+      }
+    },
+    {
+      "name": "CEGID",
+      "officialWebsite": "https://www.cegid.com/fr",
+      "result": {
+        "url": "https://www.cegid.com/fr",
+        "actors": [
+          "CEGID"
+        ],
+        "observedAt": "2026-10-20T11:58:20.011710+00:00",
+        "urlKey": "5122930b84b5b6c3",
+        "hops": [
+          {
+            "url": "https://www.cegid.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:20 GMT",
+              "content-type": "text/html; charset=iso-8859-1",
+              "location": "https://www.cegid.com/fr/"
+            }
+          },
+          {
+            "url": "https://www.cegid.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:20 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 11:53:23 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.cegid.com/fr/",
+        "rawPath": "homepages/5122930b84b5b6c3.raw",
+        "textPath": "homepages/5122930b84b5b6c3.txt",
+        "bytes": 185342,
+        "sha256": "aeba6422db68c697245b3b75f0dc778e6da0e75b6945b203abd6993b987bdac5",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.196
+      }
+    },
+    {
+      "name": "CHAINTRUST by Visma",
+      "officialWebsite": "https://www.chaintrust.io/",
+      "result": {
+        "url": "https://www.chaintrust.io/",
+        "actors": [
+          "CHAINTRUST by Visma"
+        ],
+        "observedAt": "2026-10-20T11:58:20.207468+00:00",
+        "urlKey": "720685b46ce00f5d",
+        "hops": [
+          {
+            "url": "https://www.chaintrust.io/",
+            "httpStatus": 200,
+            "exitCode": 63,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:20 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 63,
+        "httpStatus": 200,
+        "error": "curl: (63) Exceeded the maximum allowed file size (3145728) with 3145728 bytes"
+      }
+    },
+    {
+      "name": "CLEARTAX",
+      "officialWebsite": "https://www.cleartax.com/fr",
+      "result": {
+        "url": "https://www.cleartax.com/fr",
+        "actors": [
+          "CLEARTAX"
+        ],
+        "observedAt": "2026-10-20T11:58:20.373370+00:00",
+        "urlKey": "8160000d3a14e7f6",
+        "hops": [
+          {
+            "url": "https://www.cleartax.com/fr",
+            "httpStatus": 200,
+            "exitCode": 28,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:58:28 GMT"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25002 milliseconds with 49124 bytes received"
+      }
+    },
+    {
+      "name": "COMARCH SA",
+      "officialWebsite": "https://www.comarch.com/",
+      "result": {
+        "url": "https://www.comarch.com/",
+        "actors": [
+          "COMARCH SA"
+        ],
+        "observedAt": "2026-10-20T11:58:20.525382+00:00",
+        "urlKey": "e17b1c97604379fe",
+        "hops": [
+          {
+            "url": "https://www.comarch.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:20 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.comarch.com/",
+        "rawPath": "homepages/e17b1c97604379fe.raw",
+        "textPath": "homepages/e17b1c97604379fe.txt",
+        "bytes": 319116,
+        "sha256": "e764083134ad7a803cd05e5f80c2fe6e550c83a2fbdb9df6fc1f53627bdc15a4",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.379
+      }
+    },
+    {
+      "name": "CYCLOPE",
+      "officialWebsite": "https://cyclope.digital/",
+      "result": {
+        "url": "https://cyclope.digital/",
+        "actors": [
+          "CYCLOPE"
+        ],
+        "observedAt": "2026-10-20T11:58:20.904176+00:00",
+        "urlKey": "425832a7f3697373",
+        "hops": [
+          {
+            "url": "https://cyclope.digital/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:21 GMT",
+              "content-type": "text/html",
+              "content-length": "2496"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://cyclope.digital/",
+        "rawPath": "homepages/425832a7f3697373.raw",
+        "textPath": "homepages/425832a7f3697373.txt",
+        "bytes": 2496,
+        "sha256": "9ce6199da8be3fb470233838529c6a951e6b47b35ebada0f0665192c25f59f6f",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.364
+      }
+    },
+    {
+      "name": "DARVA",
+      "officialWebsite": "https://www.darva.com/",
+      "result": {
+        "url": "https://www.darva.com/",
+        "actors": [
+          "DARVA"
+        ],
+        "observedAt": "2026-10-20T11:58:21.268261+00:00",
+        "urlKey": "fddfb97a8f9f1927",
+        "hops": [
+          {
+            "url": "https://www.darva.com/",
+            "httpStatus": 302,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:22 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://www.darva.com/fr/"
+            }
+          },
+          {
+            "url": "https://www.darva.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:22 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.darva.com/fr/",
+        "rawPath": "homepages/fddfb97a8f9f1927.raw",
+        "textPath": "homepages/fddfb97a8f9f1927.txt",
+        "bytes": 151953,
+        "sha256": "51800cae4f578ab6a1d9f5e7fc716ff04ca84d111cda509ba6aab0878ce603d0",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.336
+      }
+    },
+    {
+      "name": "DEXT",
+      "officialWebsite": "https://dext.com/fr/produits/logiciel-facturation",
+      "result": {
+        "url": "https://dext.com/fr/produits/logiciel-facturation",
+        "actors": [
+          "DEXT"
+        ],
+        "observedAt": "2026-10-20T11:58:22.604794+00:00",
+        "urlKey": "1076fcaea0dd9d0a",
+        "hops": [
+          {
+            "url": "https://dext.com/fr/produits/logiciel-facturation",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:22 GMT",
+              "content-length": "0",
+              "location": "https://dext.com/fr/cabinet/produits/logiciel-facturation"
+            }
+          },
+          {
+            "url": "https://dext.com/fr/cabinet/produits/logiciel-facturation",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html",
+              "content-length": "551066",
+              "date": "Tue, 20 Oct 2026 11:58:22 GMT",
+              "last-modified": "Tue, 20 Oct 2026 11:00:19 GMT",
+              "etag": "\"e67162ae90348089d3e82c1826c8d291\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://dext.com/fr/cabinet/produits/logiciel-facturation",
+        "rawPath": "homepages/1076fcaea0dd9d0a.raw",
+        "textPath": "homepages/1076fcaea0dd9d0a.txt",
+        "bytes": 551066,
+        "sha256": "99bac777ce956664d2895da70bfc78c974383e0748357baf6fe1edd0892cb248",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.392
+      }
+    },
+    {
+      "name": "DIGIPHARMACIE",
+      "officialWebsite": "https://digipharmacie.fr/",
+      "result": {
+        "url": "https://digipharmacie.fr/",
+        "actors": [
+          "DIGIPHARMACIE"
+        ],
+        "observedAt": "2026-10-20T11:58:22.997134+00:00",
+        "urlKey": "249ea4808f1a8eca",
+        "hops": [
+          {
+            "url": "https://digipharmacie.fr/",
+            "httpStatus": 403,
+            "exitCode": 56,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:23 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "5332"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      }
+    },
+    {
+      "name": "DIGITAL TECHNOLOGIES",
+      "officialWebsite": "https://digtechs.com/?lang=fr",
+      "result": {
+        "url": "https://digtechs.com/?lang=fr",
+        "actors": [
+          "DIGITAL TECHNOLOGIES"
+        ],
+        "observedAt": "2026-10-20T11:58:23.076591+00:00",
+        "urlKey": "1783f90cca5b77fe",
+        "hops": [
+          {
+            "url": "https://digtechs.com/?lang=fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html",
+              "content-length": "818",
+              "date": "Tue, 20 Oct 2026 11:58:23 GMT",
+              "location": "https://www.digtechs.com/?lang=fr"
+            }
+          },
+          {
+            "url": "https://www.digtechs.com/?lang=fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:23 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "0",
+              "location": "https://www.digtechs.com/fr/?lang=fr"
+            }
+          },
+          {
+            "url": "https://www.digtechs.com/fr/?lang=fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:23 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.digtechs.com/fr/?lang=fr",
+        "rawPath": "homepages/1783f90cca5b77fe.raw",
+        "textPath": "homepages/1783f90cca5b77fe.txt",
+        "bytes": 156485,
+        "sha256": "468b534ab9ac341dc6bda8dc6688d85c7ec20fbb7965ba56315ee1982082f45b",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.854
+      }
+    },
+    {
+      "name": "Docnova, MELASOFT GmbH",
+      "officialWebsite": "https://www.melasoft.com/",
+      "result": {
+        "url": "https://www.melasoft.com/",
+        "actors": [
+          "Docnova, MELASOFT GmbH"
+        ],
+        "observedAt": "2026-10-20T11:58:23.930782+00:00",
+        "urlKey": "6e75e3e70c60d62d",
+        "hops": [
+          {
+            "url": "https://www.melasoft.com/",
+            "httpStatus": 0,
+            "exitCode": 28,
+            "headers": {}
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      }
+    },
+    {
+      "name": "DOCOON",
+      "officialWebsite": "https://docoon.com/",
+      "result": {
+        "url": "https://docoon.com/",
+        "actors": [
+          "DOCOON"
+        ],
+        "observedAt": "2026-10-20T11:58:34.077180+00:00",
+        "urlKey": "1a5179a74daf45f9",
+        "hops": [
+          {
+            "url": "https://docoon.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 12:03:02 GMT",
+              "last-modified": "Tue, 20 Oct 2026 09:21:47 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://docoon.com/",
+        "rawPath": "homepages/1a5179a74daf45f9.raw",
+        "textPath": "homepages/1a5179a74daf45f9.txt",
+        "bytes": 317618,
+        "sha256": "da52a6f4adaa6ea4ca0f4e6bd6e212e35b9d176d7856799c929aa05385515993",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.005
+      }
+    },
+    {
+      "name": "DOCOON IMMO / FREEDZ",
+      "officialWebsite": "https://docoon.immo/",
+      "result": {
+        "url": "https://docoon.immo/",
+        "actors": [
+          "DOCOON IMMO / FREEDZ"
+        ],
+        "observedAt": "2026-10-20T11:58:35.082831+00:00",
+        "urlKey": "301d2f2e0466eba4",
+        "hops": [
+          {
+            "url": "https://docoon.immo/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 12:03:03 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://docoon.immo/",
+        "rawPath": "homepages/301d2f2e0466eba4.raw",
+        "textPath": "homepages/301d2f2e0466eba4.txt",
+        "bytes": 241128,
+        "sha256": "6f06b2e56194d99a7513882c378a57865fa5a00c8754ebe87f1470e15e98ea02",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.625
+      }
+    },
+    {
+      "name": "DOCPROCESS",
+      "officialWebsite": "https://doc-process.com/fr",
+      "result": {
+        "url": "https://doc-process.com/fr",
+        "actors": [
+          "DOCPROCESS"
+        ],
+        "observedAt": "2026-10-20T11:58:35.708459+00:00",
+        "urlKey": "bd1dce0e7478d364",
+        "hops": [
+          {
+            "url": "https://doc-process.com/fr",
+            "httpStatus": 0,
+            "exitCode": 28,
+            "headers": {}
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      }
+    },
+    {
+      "name": "DOCUWARE",
+      "officialWebsite": "https://start.docuware.com/fr/",
+      "result": {
+        "url": "https://start.docuware.com/fr/",
+        "actors": [
+          "DOCUWARE"
+        ],
+        "observedAt": "2026-10-20T11:58:42.135678+00:00",
+        "urlKey": "d950cc6406e76020",
+        "hops": [
+          {
+            "url": "https://start.docuware.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:42 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Mon, 19 Oct 2026 15:48:20 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://start.docuware.com/fr/",
+        "rawPath": "homepages/d950cc6406e76020.raw",
+        "textPath": "homepages/d950cc6406e76020.txt",
+        "bytes": 259977,
+        "sha256": "efde2b0941d4860be94bb89b3d977c4258c0a26ccec6c7ea584eb481bbd5d373",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.201
+      }
+    },
+    {
+      "name": "DOKAPI",
+      "officialWebsite": "https://www.dokapi.io/",
+      "result": {
+        "url": "https://www.dokapi.io/",
+        "actors": [
+          "DOKAPI"
+        ],
+        "observedAt": "2026-10-20T11:58:42.336739+00:00",
+        "urlKey": "9599efd5b1f9c2cb",
+        "hops": [
+          {
+            "url": "https://www.dokapi.io/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:42 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Thu, 15 Oct 2026 10:23:55 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.dokapi.io/",
+        "rawPath": "homepages/9599efd5b1f9c2cb.raw",
+        "textPath": "homepages/9599efd5b1f9c2cb.txt",
+        "bytes": 55268,
+        "sha256": "fe04b146c507361cd09960099634c63fe9171da7f734f5343f576d9c184196dc",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.23
+      }
+    },
+    {
+      "name": "Dougs Facturation gratuite",
+      "officialWebsite": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+      "result": {
+        "url": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+        "actors": [
+          "Dougs Facturation gratuite"
+        ],
+        "observedAt": "2026-10-20T11:58:42.566666+00:00",
+        "urlKey": "50bd5fd9f52ffd8e",
+        "hops": [
+          {
+            "url": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:42 GMT",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+        "rawPath": "homepages/50bd5fd9f52ffd8e.raw",
+        "textPath": "homepages/50bd5fd9f52ffd8e.txt",
+        "bytes": 663361,
+        "sha256": "27f8639eb8b3fc94be517f8d07b258ec678821266bea706e2ad8ce9c8df0d003",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.479
+      }
+    },
+    {
+      "name": "DOXALLIA",
+      "officialWebsite": "https://www.doxallia.com/",
+      "result": {
+        "url": "https://www.doxallia.com/",
+        "actors": [
+          "DOXALLIA"
+        ],
+        "observedAt": "2026-10-20T11:58:43.045858+00:00",
+        "urlKey": "11a907a55f0a285f",
+        "hops": [
+          {
+            "url": "https://www.doxallia.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:58:43 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.doxallia.com/",
+        "rawPath": "homepages/11a907a55f0a285f.raw",
+        "textPath": "homepages/11a907a55f0a285f.txt",
+        "bytes": 88587,
+        "sha256": "4d803920053bbd5fae4330ecb1c8776e4c87994f0927a181bca16951752df147",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.432
+      }
+    },
+    {
+      "name": "ecosio InterCom, a Vertex Company",
+      "officialWebsite": "https://ecosio.com/fr/",
+      "result": {
+        "url": "https://ecosio.com/fr/",
+        "actors": [
+          "ecosio InterCom, a Vertex Company"
+        ],
+        "observedAt": "2026-10-20T11:58:43.477519+00:00",
+        "urlKey": "54d9d43fc0517756",
+        "hops": [
+          {
+            "url": "https://ecosio.com/fr/",
+            "httpStatus": 403,
+            "exitCode": 56,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:43 GMT",
+              "content-type": "text/html",
+              "content-length": "103"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      }
+    },
+    {
+      "name": "EDICOM France",
+      "officialWebsite": "https://edicomgroup.fr/",
+      "result": {
+        "url": "https://edicomgroup.fr/",
+        "actors": [
+          "EDICOM France"
+        ],
+        "observedAt": "2026-10-20T11:58:43.590386+00:00",
+        "urlKey": "b1077cae0c0b523f",
+        "hops": [
+          {
+            "url": "https://edicomgroup.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:56 GMT",
+              "location": "https://edicomgroup.com/fr/",
+              "content-length": "275",
+              "content-type": "text/html; charset=iso-8859-1"
+            }
+          },
+          {
+            "url": "https://edicomgroup.com/fr/",
+            "httpStatus": 0,
+            "exitCode": 28,
+            "headers": {}
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      }
+    },
+    {
+      "name": "EDICOM Group",
+      "officialWebsite": "https://edicomgroup.com/",
+      "result": {
+        "url": "https://edicomgroup.com/",
+        "actors": [
+          "EDICOM Group"
+        ],
+        "observedAt": "2026-10-20T11:58:44.291836+00:00",
+        "urlKey": "2bf200e13370a039",
+        "hops": [
+          {
+            "url": "https://edicomgroup.com/",
+            "httpStatus": 0,
+            "exitCode": 28,
+            "headers": {}
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) Operation timed out after 25007 milliseconds with 0 bytes received"
+      }
+    },
+    {
+      "name": "EDICS France",
+      "officialWebsite": "https://edics.fr/",
+      "result": {
+        "url": "https://edics.fr/",
+        "actors": [
+          "EDICS France"
+        ],
+        "observedAt": "2026-10-20T11:58:45.502350+00:00",
+        "urlKey": "c8184f71ad726bb3",
+        "hops": [
+          {
+            "url": "https://edics.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:47 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://edics.fr/",
+        "rawPath": "homepages/c8184f71ad726bb3.raw",
+        "textPath": "homepages/c8184f71ad726bb3.txt",
+        "bytes": 251511,
+        "sha256": "ccc1f644f23423bc4c300a335e33177d62e567bc06ee7f24cd919abf7508592e",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 2.63
+      }
+    },
+    {
+      "name": "EdiEyes Vision Care",
+      "officialWebsite": "https://www.edieyes.fr/",
+      "result": {
+        "url": "https://www.edieyes.fr/",
+        "actors": [
+          "EdiEyes Vision Care"
+        ],
+        "observedAt": "2026-10-20T11:58:45.765412+00:00",
+        "urlKey": "e9d8a644a77e7148",
+        "hops": [
+          {
+            "url": "https://www.edieyes.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:47 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.edieyes.fr/",
+        "rawPath": "homepages/e9d8a644a77e7148.raw",
+        "textPath": "homepages/e9d8a644a77e7148.txt",
+        "bytes": 408753,
+        "sha256": "01ab07e5ed2889ded9b767a5d95cea2f55d7f022b992792e03cce1305a827022",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 2.096
+      }
+    },
+    {
+      "name": "EDT",
+      "officialWebsite": "https://www.group-edt.fr/",
+      "result": {
+        "url": "https://www.group-edt.fr/",
+        "actors": [
+          "EDT"
+        ],
+        "observedAt": "2026-10-20T11:58:47.861492+00:00",
+        "urlKey": "939c4605327d8293",
+        "hops": [
+          {
+            "url": "https://www.group-edt.fr/",
+            "httpStatus": 302,
+            "exitCode": 0,
+            "headers": {
+              "location": "https://www.group-edt.fr/edt-rejoint-weexa/",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "0",
+              "date": "Tue, 20 Oct 2026 11:58:48 GMT"
+            }
+          },
+          {
+            "url": "https://www.group-edt.fr/edt-rejoint-weexa/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "etag": "\"34659-1792431462;;;\"",
+              "date": "Tue, 20 Oct 2026 11:58:48 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.group-edt.fr/edt-rejoint-weexa/",
+        "rawPath": "homepages/939c4605327d8293.raw",
+        "textPath": "homepages/939c4605327d8293.txt",
+        "bytes": 110212,
+        "sha256": "9a71ecda6e54079f066c53928e455a036b3bbe8f364cc4eb3ab4481ab71c0d8f",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.442
+      }
+    },
+    {
+      "name": "EEZI powered by VAT IT",
+      "officialWebsite": "https://eezi.io/",
+      "result": {
+        "url": "https://eezi.io/",
+        "actors": [
+          "EEZI powered by VAT IT"
+        ],
+        "observedAt": "2026-10-20T11:58:48.132662+00:00",
+        "urlKey": "711159fefa969875",
+        "hops": [
+          {
+            "url": "https://eezi.io/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html",
+              "content-length": "509354",
+              "date": "Tue, 20 Oct 2026 11:58:48 GMT",
+              "last-modified": "Mon, 19 Oct 2026 10:17:56 GMT",
+              "etag": "\"59c936541b3252ec4208ee5d88dd9f6c\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://eezi.io/",
+        "rawPath": "homepages/711159fefa969875.raw",
+        "textPath": "homepages/711159fefa969875.txt",
+        "bytes": 509354,
+        "sha256": "317306990a59c79e0da22f26e27789e6bbbb8f16826cefd22cf889c25c6dd9b6",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.437
+      }
+    },
+    {
+      "name": "Effinum by SPEE",
+      "officialWebsite": "https://www.effinum.fr/",
+      "result": {
+        "url": "https://www.effinum.fr/",
+        "actors": [
+          "Effinum by SPEE"
+        ],
+        "observedAt": "2026-10-20T11:58:48.304018+00:00",
+        "urlKey": "5a56f8d6477142a4",
+        "hops": [
+          {
+            "url": "https://www.effinum.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:48 GMT",
+              "location": "https://effinum.fr/",
+              "content-length": "0",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          },
+          {
+            "url": "https://effinum.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:49 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://effinum.fr/",
+        "rawPath": "homepages/5a56f8d6477142a4.raw",
+        "textPath": "homepages/5a56f8d6477142a4.txt",
+        "bytes": 146311,
+        "sha256": "196cc9100ffcc9aaf4fcd153edccc1cc00a7a9c2d3f4517ee99c3fb6aaaec763",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 2.174
+      }
+    },
+    {
+      "name": "ENERJ",
+      "officialWebsite": "https://www.enerj.fr/",
+      "result": {
+        "url": "https://www.enerj.fr/",
+        "actors": [
+          "ENERJ"
+        ],
+        "observedAt": "2026-10-20T11:58:48.569972+00:00",
+        "urlKey": "80d2e5ffb5fc6e10",
+        "hops": [
+          {
+            "url": "https://www.enerj.fr/",
+            "httpStatus": 200,
+            "exitCode": 28,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "etag": "W/\"ef01b3ad3e0304ac784252353704647c\"",
+              "date": "Tue, 20 Oct 2026 11:58:49 GMT",
+              "content-length": "1418256"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25005 milliseconds with 247082 out of 1418256 bytes received"
+      }
+    },
+    {
+      "name": "ENTROPICS",
+      "officialWebsite": "https://entropics.fr/",
+      "result": {
+        "url": "https://entropics.fr/",
+        "actors": [
+          "ENTROPICS"
+        ],
+        "observedAt": "2026-10-20T11:58:50.478040+00:00",
+        "urlKey": "3902308c53715643",
+        "hops": [
+          {
+            "url": "https://entropics.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:51 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://entropics.fr/",
+        "rawPath": "homepages/3902308c53715643.raw",
+        "textPath": "homepages/3902308c53715643.txt",
+        "bytes": 152497,
+        "sha256": "8c0135ca08532d67799e43dae7671b925d16387b2dd86ea60e5c7c96461b72c4",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.414
+      }
+    },
+    {
+      "name": "ESALINK",
+      "officialWebsite": "https://www.esalink.com/",
+      "result": {
+        "url": "https://www.esalink.com/",
+        "actors": [
+          "ESALINK"
+        ],
+        "observedAt": "2026-10-20T11:58:51.891786+00:00",
+        "urlKey": "5dc770b6e2a46229",
+        "hops": [
+          {
+            "url": "https://www.esalink.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:57:19 GMT",
+              "etag": "\"16opl389vuy6svw\"",
+              "content-length": "318751"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.esalink.com/",
+        "rawPath": "homepages/5dc770b6e2a46229.raw",
+        "textPath": "homepages/5dc770b6e2a46229.txt",
+        "bytes": 318751,
+        "sha256": "b6684e384ea0e00f3c1bc8776ca89b9ce9914c0bbf3bca39f54a4c9e8831563a",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.334
+      }
+    },
+    {
+      "name": "ESI",
+      "officialWebsite": "https://www.esi-groupe.com/",
+      "result": {
+        "url": "https://www.esi-groupe.com/",
+        "actors": [
+          "ESI"
+        ],
+        "observedAt": "2026-10-20T11:58:52.225902+00:00",
+        "urlKey": "3f936d175da5f66f",
+        "hops": [
+          {
+            "url": "https://www.esi-groupe.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:52 GMT",
+              "content-type": "text/html"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.esi-groupe.com/",
+        "rawPath": "homepages/3f936d175da5f66f.raw",
+        "textPath": "homepages/3f936d175da5f66f.txt",
+        "bytes": 5277,
+        "sha256": "243dc556e808c8cdf359dfe12918fec09b1a523a3be88623cf57ccd5b7fcb86b",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.122
+      }
+    },
+    {
+      "name": "ESKER",
+      "officialWebsite": "https://www.esker.fr/",
+      "result": {
+        "url": "https://www.esker.fr/",
+        "actors": [
+          "ESKER"
+        ],
+        "observedAt": "2026-10-20T11:58:52.347470+00:00",
+        "urlKey": "18d243fa76fd8b2b",
+        "hops": [
+          {
+            "url": "https://www.esker.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://www.esker.com/fr/",
+              "date": "Tue, 20 Oct 2026 11:58:52 GMT",
+              "content-length": "148"
+            }
+          },
+          {
+            "url": "https://www.esker.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:53 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "141214",
+              "last-modified": "Tue, 20 Oct 2026 09:22:24 GMT",
+              "etag": "W/\"1792488144\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.esker.com/fr/",
+        "rawPath": "homepages/18d243fa76fd8b2b.raw",
+        "textPath": "homepages/18d243fa76fd8b2b.txt",
+        "bytes": 141214,
+        "sha256": "144b3c70455cd1af2494c26dc0c64f009e9931236e7a842af9e5e7a4b2ee168c",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.462
+      }
+    },
+    {
+      "name": "EURO INFORMATION",
+      "officialWebsite": "https://www.e-i.com/fr",
+      "result": {
+        "url": "https://www.e-i.com/fr",
+        "actors": [
+          "EURO INFORMATION"
+        ],
+        "observedAt": "2026-10-20T11:58:53.809532+00:00",
+        "urlKey": "faff782ee193b6e7",
+        "hops": [
+          {
+            "url": "https://www.e-i.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:54 GMT",
+              "location": "https://www.e-i.com/fr/index.html",
+              "content-length": "241",
+              "content-type": "text/html; charset=iso-8859-1"
+            }
+          },
+          {
+            "url": "https://www.e-i.com/fr/index.html",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:53 GMT",
+              "content-length": "55397",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.e-i.com/fr/index.html",
+        "rawPath": "homepages/faff782ee193b6e7.raw",
+        "textPath": "homepages/faff782ee193b6e7.txt",
+        "bytes": 55397,
+        "sha256": "4f335ec5c2c8ffb0b647aba489a3f386925e1e973d93ea792f295bc88188e95e",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.501
+      }
+    },
+    {
+      "name": "FACNOTE PDP",
+      "officialWebsite": "https://www.facnote.com/",
+      "result": {
+        "url": "https://www.facnote.com/",
+        "actors": [
+          "FACNOTE PDP"
+        ],
+        "observedAt": "2026-10-20T11:58:54.310799+00:00",
+        "urlKey": "166b57b518a95f08",
+        "hops": [
+          {
+            "url": "https://www.facnote.com/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:29 GMT",
+              "location": "https://groupefacnote.com/",
+              "content-length": "234",
+              "content-type": "text/html; charset=iso-8859-1"
+            }
+          },
+          {
+            "url": "https://groupefacnote.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:55 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://groupefacnote.com/",
+        "rawPath": "homepages/166b57b518a95f08.raw",
+        "textPath": "homepages/166b57b518a95f08.txt",
+        "bytes": 171143,
+        "sha256": "d7bab6b2a8efcb6aad660e0be9c0ef20529bd9c26ed6c8d3089333bafbe80f81",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.057
+      }
+    },
+    {
+      "name": "FACTUREAPP",
+      "officialWebsite": "https://www.factureapp.com/",
+      "result": {
+        "url": "https://www.factureapp.com/",
+        "actors": [
+          "FACTUREAPP"
+        ],
+        "observedAt": "2026-10-20T11:58:55.368116+00:00",
+        "urlKey": "fa4d2451f711f973",
+        "hops": [],
+        "status": "reused_priority_read",
+        "rawPath": "factureapp-pa-20261014.html",
+        "textPath": "factureapp-pa-20261014.txt",
+        "sha256": "54ba21493c1bc7f9134bed169fa6a08edb94fb90785f62b5eb831cac751851d6",
+        "bytes": 27527,
+        "signalLines": [],
+        "elapsedSeconds": 0.001
+      }
+    },
+    {
+      "name": "FIDUCIAL CLOUD",
+      "officialWebsite": "https://www.fiducial.fr/",
+      "result": {
+        "url": "https://www.fiducial.fr/",
+        "actors": [
+          "FIDUCIAL CLOUD"
+        ],
+        "observedAt": "2026-10-20T11:58:55.368740+00:00",
+        "urlKey": "84ad5a3f46f0a9eb",
+        "hops": [
+          {
+            "url": "https://www.fiducial.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 10:06:38 GMT",
+              "content-length": "235139"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.fiducial.fr/",
+        "rawPath": "homepages/84ad5a3f46f0a9eb.raw",
+        "textPath": "homepages/84ad5a3f46f0a9eb.txt",
+        "bytes": 235139,
+        "sha256": "70c9ba8051ef0369a214001ce5219cc835fac18f00bdbdbea312cc6b141d6b76",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.251
+      }
+    },
+    {
+      "name": "FISKALTRUST",
+      "officialWebsite": "https://fiskaltrust.eu/fr-fr/",
+      "result": {
+        "url": "https://fiskaltrust.eu/fr-fr/",
+        "actors": [
+          "FISKALTRUST"
+        ],
+        "observedAt": "2026-10-20T11:58:55.619467+00:00",
+        "urlKey": "21715d47741449a0",
+        "hops": [
+          {
+            "url": "https://fiskaltrust.eu/fr-fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:58:54 GMT",
+              "content-length": "242689"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://fiskaltrust.eu/fr-fr/",
+        "rawPath": "homepages/21715d47741449a0.raw",
+        "textPath": "homepages/21715d47741449a0.txt",
+        "bytes": 242689,
+        "sha256": "0d50d723fb436f9f05ead68b93cc6465af4cc527abe49c3c2fb62c2398908305",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.354
+      }
+    },
+    {
+      "name": "FLOWIE",
+      "officialWebsite": "https://www.get-flowie.com/",
+      "result": {
+        "url": "https://www.get-flowie.com/",
+        "actors": [
+          "FLOWIE"
+        ],
+        "observedAt": "2026-10-20T11:58:55.973116+00:00",
+        "urlKey": "6b14b8182a796d11",
+        "hops": [
+          {
+            "url": "https://www.get-flowie.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:56 GMT",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.get-flowie.com/",
+        "rawPath": "homepages/6b14b8182a796d11.raw",
+        "textPath": "homepages/6b14b8182a796d11.txt",
+        "bytes": 316797,
+        "sha256": "c0a937ade544151f5948fa706b159c8e1082cff8fed5bfb112b12ae41dd41dca",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.209
+      }
+    },
+    {
+      "name": "Fonoa Technologies Limited",
+      "officialWebsite": "https://www.fonoa.com/",
+      "result": {
+        "url": "https://www.fonoa.com/",
+        "actors": [
+          "Fonoa Technologies Limited"
+        ],
+        "observedAt": "2026-10-20T11:58:56.182116+00:00",
+        "urlKey": "6cc1b1e7e0a0754a",
+        "hops": [
+          {
+            "url": "https://www.fonoa.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:56 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Mon, 19 Oct 2026 11:54:08 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.fonoa.com/",
+        "rawPath": "homepages/6cc1b1e7e0a0754a.raw",
+        "textPath": "homepages/6cc1b1e7e0a0754a.txt",
+        "bytes": 301017,
+        "sha256": "9f8fee03463dbd4cd17b4caedc19624e2f712a8a476fe2e7fcc4af0bc8616ee9",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.235
+      }
+    },
+    {
+      "name": "FULLL",
+      "officialWebsite": "https://www.fulll.fr/",
+      "result": {
+        "url": "https://www.fulll.fr/",
+        "actors": [
+          "FULLL"
+        ],
+        "observedAt": "2026-10-20T11:58:56.417084+00:00",
+        "urlKey": "ef3b6d198c4ec77c",
+        "hops": [
+          {
+            "url": "https://www.fulll.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:56 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Tue, 20 Oct 2026 11:42:12 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.fulll.fr/",
+        "rawPath": "homepages/ef3b6d198c4ec77c.raw",
+        "textPath": "homepages/ef3b6d198c4ec77c.txt",
+        "bytes": 72250,
+        "sha256": "d16d616041fb467bc9f48695f4f1e7f7a31a6298a499eea2d2a8c5fa33949d50",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.102
+      }
+    },
+    {
+      "name": "GEP",
+      "officialWebsite": "https://www.gep.com/software/e-invoicing",
+      "result": {
+        "url": "https://www.gep.com/software/e-invoicing",
+        "actors": [
+          "GEP"
+        ],
+        "observedAt": "2026-10-20T11:58:56.519235+00:00",
+        "urlKey": "8da6e0b651a9b152",
+        "hops": [
+          {
+            "url": "https://www.gep.com/software/e-invoicing",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:58:57 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.gep.com/software/e-invoicing",
+        "rawPath": "homepages/8da6e0b651a9b152.raw",
+        "textPath": "homepages/8da6e0b651a9b152.txt",
+        "bytes": 367183,
+        "sha256": "b15624e05fa7234054397d4b923b760b10f93f229490b684a1e6de1b0b373176",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.977
+      }
+    },
+    {
+      "name": "GENERIX Group",
+      "officialWebsite": "https://www.generixgroup.com/fr",
+      "result": {
+        "url": "https://www.generixgroup.com/fr",
+        "actors": [
+          "GENERIX Group"
+        ],
+        "observedAt": "2026-10-20T11:58:56.906173+00:00",
+        "urlKey": "53cbd4074c5ae1b3",
+        "hops": [
+          {
+            "url": "https://www.generixgroup.com/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:58:58 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.generixgroup.com/fr",
+        "rawPath": "homepages/53cbd4074c5ae1b3.raw",
+        "textPath": "homepages/53cbd4074c5ae1b3.txt",
+        "bytes": 93077,
+        "sha256": "f45164224a9a8232f97fd5c5697720d6e8a98ea0b931fa1feadcb022ab20b40b",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.656
+      }
+    },
+    {
+      "name": "GESTAV",
+      "officialWebsite": "https://gestav.com/",
+      "result": {
+        "url": "https://gestav.com/",
+        "actors": [
+          "GESTAV"
+        ],
+        "observedAt": "2026-10-20T11:58:57.496418+00:00",
+        "urlKey": "8243e83f2bdf1d82",
+        "hops": [
+          {
+            "url": "https://gestav.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "etag": "\"1090iw6zdfu2k9o\"",
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "119985",
+              "date": "Tue, 20 Oct 2026 11:58:57 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://gestav.com/",
+        "rawPath": "homepages/8243e83f2bdf1d82.raw",
+        "textPath": "homepages/8243e83f2bdf1d82.txt",
+        "bytes": 119985,
+        "sha256": "39d7993b4ac86a5d55b8f35336530771254be2421df1be485a7855aa70dbe047",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.182
+      }
+    },
+    {
+      "name": "GROUPE SIGMA",
+      "officialWebsite": "https://www.sigma.fr/",
+      "result": {
+        "url": "https://www.sigma.fr/",
+        "actors": [
+          "GROUPE SIGMA"
+        ],
+        "observedAt": "2026-10-20T11:58:57.678668+00:00",
+        "urlKey": "f8293a4207e042ba",
+        "hops": [
+          {
+            "url": "https://www.sigma.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:57 GMT",
+              "last-modified": "Tue, 20 Oct 2026 03:57:49 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sigma.fr/",
+        "rawPath": "homepages/f8293a4207e042ba.raw",
+        "textPath": "homepages/f8293a4207e042ba.txt",
+        "bytes": 125787,
+        "sha256": "db0f564521156a5799cf28cefc77588677ff33a31c34396403072d1e77238cbc",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.239
+      }
+    },
+    {
+      "name": "GURUSOFT",
+      "officialWebsite": "https://guru-soft.com/fr/france/",
+      "result": {
+        "url": "https://guru-soft.com/fr/france/",
+        "actors": [
+          "GURUSOFT"
+        ],
+        "observedAt": "2026-10-20T11:58:57.917408+00:00",
+        "urlKey": "b71338576fbec565",
+        "hops": [
+          {
+            "url": "https://guru-soft.com/fr/france/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:58 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://guru-soft.com/fr/france/",
+        "rawPath": "homepages/b71338576fbec565.raw",
+        "textPath": "homepages/b71338576fbec565.txt",
+        "bytes": 279365,
+        "sha256": "9a0fdc8c25bb4a5fe2461692edc392b7dd3e2c06225a5a67982d5039a0d30488",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.351
+      }
+    },
+    {
+      "name": "IAF",
+      "officialWebsite": "https://www.assistances.fr/",
+      "result": {
+        "url": "https://www.assistances.fr/",
+        "actors": [
+          "IAF"
+        ],
+        "observedAt": "2026-10-20T11:58:58.268954+00:00",
+        "urlKey": "57ef4e7c80d62314",
+        "hops": [
+          {
+            "url": "https://www.assistances.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-length": "0",
+              "location": "https://iaf.fr/"
+            }
+          },
+          {
+            "url": "https://iaf.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html;charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:58:58 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://iaf.fr/",
+        "rawPath": "homepages/57ef4e7c80d62314.raw",
+        "textPath": "homepages/57ef4e7c80d62314.txt",
+        "bytes": 43115,
+        "sha256": "4039b0d170509bcd415511c0844b91a171f69d59e4c77fe39f8852c64b9f0ad3",
+        "contentType": "text/html;charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.182
+      }
+    },
+    {
+      "name": "ICD International",
+      "officialWebsite": "https://icdint.fr/",
+      "result": {
+        "url": "https://icdint.fr/",
+        "actors": [
+          "ICD International"
+        ],
+        "observedAt": "2026-10-20T11:58:58.451271+00:00",
+        "urlKey": "2d1c0886e0344b0d",
+        "hops": [
+          {
+            "url": "https://icdint.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:58 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Tue, 20 Oct 2026 11:58:58 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://icdint.fr/",
+        "rawPath": "homepages/2d1c0886e0344b0d.raw",
+        "textPath": "homepages/2d1c0886e0344b0d.txt",
+        "bytes": 159846,
+        "sha256": "b151743a32dceefec1819c82a04e640df60f9d4a0e482f4abef24f8d0fa2c3aa",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.313
+      }
+    },
+    {
+      "name": "iEDI ApS",
+      "officialWebsite": "https://www.iedi.com/",
+      "result": {
+        "url": "https://www.iedi.com/",
+        "actors": [
+          "iEDI ApS"
+        ],
+        "observedAt": "2026-10-20T11:58:58.562226+00:00",
+        "urlKey": "226ac1514923b900",
+        "hops": [
+          {
+            "url": "https://www.iedi.com/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:58 GMT",
+              "location": "https://iedi.com/"
+            }
+          },
+          {
+            "url": "https://iedi.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:58 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Mon, 19 Oct 2026 06:48:39 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://iedi.com/",
+        "rawPath": "homepages/226ac1514923b900.raw",
+        "textPath": "homepages/226ac1514923b900.txt",
+        "bytes": 426701,
+        "sha256": "9695b70d0bb73665d9c7525137d19872588ca9de8e6380ebf8e5bf755479a921",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.472
+      }
+    },
+    {
+      "name": "IGA ASSURANCE",
+      "officialWebsite": "https://www.iga-assurance.fr/",
+      "result": {
+        "url": "https://www.iga-assurance.fr/",
+        "actors": [
+          "IGA ASSURANCE"
+        ],
+        "observedAt": "2026-10-20T11:58:58.764697+00:00",
+        "urlKey": "ba7d3a231a6210f7",
+        "hops": [
+          {
+            "url": "https://www.iga-assurance.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:58 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.iga-assurance.fr/",
+        "rawPath": "homepages/ba7d3a231a6210f7.raw",
+        "textPath": "homepages/ba7d3a231a6210f7.txt",
+        "bytes": 258964,
+        "sha256": "7570e6c064c5a41644f0988216de0062debddb18a5140c46af94672bc26221fd",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.747
+      }
+    },
+    {
+      "name": "INDICOM",
+      "officialWebsite": "https://www.indicom.eu/en/idc-home",
+      "result": {
+        "url": "https://www.indicom.eu/en/idc-home",
+        "actors": [
+          "INDICOM"
+        ],
+        "observedAt": "2026-10-20T11:58:59.034622+00:00",
+        "urlKey": "7af6e259e496adea",
+        "hops": [
+          {
+            "url": "https://www.indicom.eu/en/idc-home",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:00 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://indicom.eu/"
+            }
+          },
+          {
+            "url": "https://indicom.eu/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:02 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://indicom.eu/",
+        "rawPath": "homepages/7af6e259e496adea.raw",
+        "textPath": "homepages/7af6e259e496adea.txt",
+        "bytes": 870475,
+        "sha256": "a044cd9814a46e639cde729b303023a1d52f057bd7fcb6d1e806ee2704823ed9",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 3.843
+      }
+    },
+    {
+      "name": "INDY",
+      "officialWebsite": "https://www.indy.fr/",
+      "result": {
+        "url": "https://www.indy.fr/",
+        "actors": [
+          "INDY"
+        ],
+        "observedAt": "2026-10-20T11:58:59.511780+00:00",
+        "urlKey": "3e99863388a84052",
+        "hops": [
+          {
+            "url": "https://www.indy.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:58:59 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 11:45:21 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.indy.fr/",
+        "rawPath": "homepages/3e99863388a84052.raw",
+        "textPath": "homepages/3e99863388a84052.txt",
+        "bytes": 505607,
+        "sha256": "813ed1847b7524c6dbca046b1738277e853f37fe02cc01b2c099f54777b0ce5d",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.298
+      }
+    },
+    {
+      "name": "INFOLOGIC",
+      "officialWebsite": "https://www.infologic-copilote.fr/",
+      "result": {
+        "url": "https://www.infologic-copilote.fr/",
+        "actors": [
+          "INFOLOGIC"
+        ],
+        "observedAt": "2026-10-20T11:58:59.809909+00:00",
+        "urlKey": "aa8652b6776d16ae",
+        "hops": [
+          {
+            "url": "https://www.infologic-copilote.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "etag": "\"62420-1792442364;;;\"",
+              "date": "Tue, 20 Oct 2026 11:58:59 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.infologic-copilote.fr/",
+        "rawPath": "homepages/aa8652b6776d16ae.raw",
+        "textPath": "homepages/aa8652b6776d16ae.txt",
+        "bytes": 1477382,
+        "sha256": "e3f54d46acfa605436f3eefe885f2a09bece653f4a49789fd97af360bfdc111b",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.384
+      }
+    },
+    {
+      "name": "Insiders Technologies GmbH",
+      "officialWebsite": "https://insiders-technologies.com/en/",
+      "result": {
+        "url": "https://insiders-technologies.com/en/",
+        "actors": [
+          "Insiders Technologies GmbH"
+        ],
+        "observedAt": "2026-10-20T11:59:00.194466+00:00",
+        "urlKey": "80bf9389cde510f7",
+        "hops": [],
+        "status": "reused_priority_read",
+        "rawPath": "insiders-pa-20261014.html",
+        "textPath": "insiders-pa-20261014.txt",
+        "sha256": "ee2601cdb44b360b4df20a8ba4e8e762134dc66571c0f1345334ca18274b7320",
+        "bytes": 329211,
+        "signalLines": [],
+        "elapsedSeconds": 0.003
+      }
+    },
+    {
+      "name": "In.Te.S.A. spa",
+      "officialWebsite": "https://www.intesa.it/",
+      "result": {
+        "url": "https://www.intesa.it/",
+        "actors": [
+          "In.Te.S.A. spa"
+        ],
+        "observedAt": "2026-10-20T11:59:00.197350+00:00",
+        "urlKey": "11f140d619a3441f",
+        "hops": [
+          {
+            "url": "https://www.intesa.it/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:57:12 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.intesa.it/",
+        "rawPath": "homepages/11f140d619a3441f.raw",
+        "textPath": "homepages/11f140d619a3441f.txt",
+        "bytes": 148944,
+        "sha256": "ca6125c5639e2e9111cc3484fdbac8f930e7a9a30416f7eb157f1ce64ed77c7d",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.086
+      }
+    },
+    {
+      "name": "INVOPOP",
+      "officialWebsite": "https://www.invopop.com/",
+      "result": {
+        "url": "https://www.invopop.com/",
+        "actors": [
+          "INVOPOP"
+        ],
+        "observedAt": "2026-10-20T11:59:01.283785+00:00",
+        "urlKey": "b8a74a8c18dbd953",
+        "hops": [
+          {
+            "url": "https://www.invopop.com/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/plain; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:59:01 GMT",
+              "location": "https://invopop.com/",
+              "content-length": "35"
+            }
+          },
+          {
+            "url": "https://invopop.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html",
+              "date": "Tue, 20 Oct 2026 11:59:01 GMT",
+              "content-length": "1016711"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://invopop.com/",
+        "rawPath": "homepages/b8a74a8c18dbd953.raw",
+        "textPath": "homepages/b8a74a8c18dbd953.txt",
+        "bytes": 1016711,
+        "sha256": "27a50bfaf8431452d869bbda2ca0e3408a3460688ceb66e5042029f5cf14f16a",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.715
+      }
+    },
+    {
+      "name": "IOPOLE",
+      "officialWebsite": "https://www.iopole.com/",
+      "result": {
+        "url": "https://www.iopole.com/",
+        "actors": [
+          "IOPOLE"
+        ],
+        "observedAt": "2026-10-20T11:59:01.998854+00:00",
+        "urlKey": "641978bc9c3f0fcc",
+        "hops": [
+          {
+            "url": "https://www.iopole.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:02 GMT",
+              "content-type": "text/html",
+              "content-length": "193852",
+              "last-modified": "Thu, 15 Oct 2026 07:47:50 GMT",
+              "etag": "\"6ad08526-2f53c\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.iopole.com/",
+        "rawPath": "homepages/641978bc9c3f0fcc.raw",
+        "textPath": "homepages/641978bc9c3f0fcc.txt",
+        "bytes": 193852,
+        "sha256": "9cbc415a5234195baf48f32c2630f17eac65ab61e34fd8012d11d8ba0d1ab280",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.168
+      }
+    },
+    {
+      "name": "iPaidThat",
+      "officialWebsite": "https://ipaidthat.io/fr",
+      "result": {
+        "url": "https://ipaidthat.io/fr",
+        "actors": [
+          "iPaidThat"
+        ],
+        "observedAt": "2026-10-20T11:59:02.166534+00:00",
+        "urlKey": "7473500414b01d68",
+        "hops": [
+          {
+            "url": "https://ipaidthat.io/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:02 GMT",
+              "content-type": "text/html",
+              "content-length": "162",
+              "location": "https://app.ipaidthat.io/fr"
+            }
+          },
+          {
+            "url": "https://app.ipaidthat.io/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:59:02 GMT",
+              "location": "/fr/"
+            }
+          },
+          {
+            "url": "https://app.ipaidthat.io/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "84571",
+              "date": "Tue, 20 Oct 2026 11:59:02 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://app.ipaidthat.io/fr/",
+        "rawPath": "homepages/7473500414b01d68.raw",
+        "textPath": "homepages/7473500414b01d68.txt",
+        "bytes": 84571,
+        "sha256": "2165839aee4d892a17b8f7a3b803c8aee31ee5286215be527a8dfa74c9ca47c0",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.563
+      }
+    },
+    {
+      "name": "ITESOFT",
+      "officialWebsite": "https://www.itesoft.com/fr",
+      "result": {
+        "url": "https://www.itesoft.com/fr",
+        "actors": [
+          "ITESOFT"
+        ],
+        "observedAt": "2026-10-20T11:59:02.730015+00:00",
+        "urlKey": "5bbc676b21cd0814",
+        "hops": [
+          {
+            "url": "https://www.itesoft.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:02 GMT",
+              "content-length": "0",
+              "location": "https://www.itesoft.com/fr/"
+            }
+          },
+          {
+            "url": "https://www.itesoft.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Thu, 08 Oct 2026 08:42:01 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.itesoft.com/fr/",
+        "rawPath": "homepages/5bbc676b21cd0814.raw",
+        "textPath": "homepages/5bbc676b21cd0814.txt",
+        "bytes": 149094,
+        "sha256": "5a4e35b9a388e4980f096079a2f56ba27747b62c6545b717f04ed62ec848e730",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.39
+      }
+    },
+    {
+      "name": "jefacture.com",
+      "officialWebsite": "https://www.ecma-solutions.com/",
+      "result": {
+        "url": "https://www.ecma-solutions.com/",
+        "actors": [
+          "jefacture.com"
+        ],
+        "observedAt": "2026-10-20T11:59:02.877498+00:00",
+        "urlKey": "c14716571f0efcef",
+        "hops": [
+          {
+            "url": "https://www.ecma-solutions.com/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "location": "https://ecma-solutions.com/",
+              "content-length": "235",
+              "content-type": "text/html; charset=iso-8859-1",
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT"
+            }
+          },
+          {
+            "url": "https://ecma-solutions.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT",
+              "content-type": "text/html",
+              "content-length": "1038"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://ecma-solutions.com/",
+        "rawPath": "homepages/c14716571f0efcef.raw",
+        "textPath": "homepages/c14716571f0efcef.txt",
+        "bytes": 1038,
+        "sha256": "38d96dd976cdbe709c8c8034eb7d409a58f0b35f80254af249a43a8d9dbbda3e",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.268
+      }
+    },
+    {
+      "name": "KALANDA",
+      "officialWebsite": "https://www.kalanda.net/",
+      "result": {
+        "url": "https://www.kalanda.net/",
+        "actors": [
+          "KALANDA"
+        ],
+        "observedAt": "2026-10-20T11:59:03.120325+00:00",
+        "urlKey": "988fdee91709c54d",
+        "hops": [],
+        "status": "reused_priority_read",
+        "rawPath": "kalanda-pa-20261014.html",
+        "textPath": "kalanda-pa-20261014.txt",
+        "sha256": "38f31a52c0f2e92ce3eb33259dbf413e794cab985569f6c3dc082ec1c362b93f",
+        "bytes": 420963,
+        "signalLines": [],
+        "elapsedSeconds": 0.001
+      }
+    },
+    {
+      "name": "KLEKOON",
+      "officialWebsite": "https://www.klekoon.com/",
+      "result": {
+        "url": "https://www.klekoon.com/",
+        "actors": [
+          "KLEKOON"
+        ],
+        "observedAt": "2026-10-20T11:59:03.121273+00:00",
+        "urlKey": "5a3ec8c386ea1f3d",
+        "hops": [
+          {
+            "url": "https://www.klekoon.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-length": "296268",
+              "content-type": "text/html; Charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.klekoon.com/",
+        "rawPath": "homepages/5a3ec8c386ea1f3d.raw",
+        "textPath": "homepages/5a3ec8c386ea1f3d.txt",
+        "bytes": 296268,
+        "sha256": "5d4c070270c0ab8e0fc11a5be800d7efd8fdb270fddfdef76fa126217071c49c",
+        "contentType": "text/html; Charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.582
+      }
+    },
+    {
+      "name": "KOLECTO PA",
+      "officialWebsite": "https://www.kolecto.fr/",
+      "result": {
+        "url": "https://www.kolecto.fr/",
+        "actors": [
+          "KOLECTO PA",
+          "KOLECTO PDP"
+        ],
+        "observedAt": "2026-10-20T11:59:03.145210+00:00",
+        "urlKey": "8953231d08fd74e8",
+        "hops": [
+          {
+            "url": "https://www.kolecto.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Fri, 16 Oct 2026 16:48:48 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.kolecto.fr/",
+        "rawPath": "homepages/8953231d08fd74e8.raw",
+        "textPath": "homepages/8953231d08fd74e8.txt",
+        "bytes": 339926,
+        "sha256": "7d10c054b7d4ab5cf51d775a1dd0e0233224d4d38cbc1a8c561e795ca88ac893",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.177
+      }
+    },
+    {
+      "name": "KOLECTO PDP",
+      "officialWebsite": "https://www.kolecto.fr/",
+      "result": {
+        "url": "https://www.kolecto.fr/",
+        "actors": [
+          "KOLECTO PA",
+          "KOLECTO PDP"
+        ],
+        "observedAt": "2026-10-20T11:59:03.145210+00:00",
+        "urlKey": "8953231d08fd74e8",
+        "hops": [
+          {
+            "url": "https://www.kolecto.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Fri, 16 Oct 2026 16:48:48 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.kolecto.fr/",
+        "rawPath": "homepages/8953231d08fd74e8.raw",
+        "textPath": "homepages/8953231d08fd74e8.txt",
+        "bytes": 339926,
+        "sha256": "7d10c054b7d4ab5cf51d775a1dd0e0233224d4d38cbc1a8c561e795ca88ac893",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.177
+      }
+    },
+    {
+      "name": "LE VILLAGE CONNECTE",
+      "officialWebsite": "https://village-connecte.fr/",
+      "result": {
+        "url": "https://village-connecte.fr/",
+        "actors": [
+          "LE VILLAGE CONNECTE"
+        ],
+        "observedAt": "2026-10-20T11:59:03.322164+00:00",
+        "urlKey": "f93584e8b2488471",
+        "hops": [
+          {
+            "url": "https://village-connecte.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://village-connecte.fr/",
+        "rawPath": "homepages/f93584e8b2488471.raw",
+        "textPath": "homepages/f93584e8b2488471.txt",
+        "bytes": 335448,
+        "sha256": "6b8389964c5d94dd5cd08f7fa54d3826ee53065033ba0ac51eb90971a958b1d4",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.147
+      }
+    },
+    {
+      "name": "Legalinvoice by Tinexta Infocert",
+      "officialWebsite": "https://www.infocert.it/",
+      "result": {
+        "url": "https://www.infocert.it/",
+        "actors": [
+          "Legalinvoice by Tinexta Infocert"
+        ],
+        "observedAt": "2026-10-20T11:59:03.469254+00:00",
+        "urlKey": "03f0f3461ba59399",
+        "hops": [
+          {
+            "url": "https://www.infocert.it/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT",
+              "last-modified": "Mon, 19 Oct 2026 12:58:58 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.infocert.it/",
+        "rawPath": "homepages/03f0f3461ba59399.raw",
+        "textPath": "homepages/03f0f3461ba59399.txt",
+        "bytes": 428287,
+        "sha256": "5f2a0e2ca6582c7c9d29534909f99c4bc6349f8f5f25f88b1cf90bd41c9b8243",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.215
+      }
+    },
+    {
+      "name": "LOGILEC",
+      "officialWebsite": "https://www.logilec.fr/",
+      "result": {
+        "url": "https://www.logilec.fr/",
+        "actors": [
+          "LOGILEC"
+        ],
+        "observedAt": "2026-10-20T11:59:03.684191+00:00",
+        "urlKey": "6a3b94d2a5dd1d70",
+        "hops": [
+          {
+            "url": "https://www.logilec.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT",
+              "last-modified": "Tue, 08 Jul 2025 10:34:41 GMT",
+              "etag": "\"8f02-63968820fe4a8\"",
+              "content-length": "36610",
+              "content-type": "text/html; charset=ISO-8859-1"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.logilec.fr/",
+        "rawPath": "homepages/6a3b94d2a5dd1d70.raw",
+        "textPath": "homepages/6a3b94d2a5dd1d70.txt",
+        "bytes": 36610,
+        "sha256": "cd47704343f5c562a51aad870351b33c961afe98b6a27d049e9d08baeade7444",
+        "contentType": "text/html; charset=ISO-8859-1",
+        "signalLines": [],
+        "elapsedSeconds": 0.18
+      }
+    },
+    {
+      "name": "LUCCA",
+      "officialWebsite": "https://www.lucca.fr/",
+      "result": {
+        "url": "https://www.lucca.fr/",
+        "actors": [
+          "LUCCA"
+        ],
+        "observedAt": "2026-10-20T11:59:03.703287+00:00",
+        "urlKey": "0e57db72ebd44ed0",
+        "hops": [
+          {
+            "url": "https://www.lucca.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:04 GMT",
+              "content-type": "text/html",
+              "last-modified": "Tue, 20 Oct 2026 11:59:03 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.lucca.fr/",
+        "rawPath": "homepages/0e57db72ebd44ed0.raw",
+        "textPath": "homepages/0e57db72ebd44ed0.txt",
+        "bytes": 203841,
+        "sha256": "d94b1ea61d245cb7a12199a75179d50cedaed868c998f9529ed15bc76e6d8989",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.678
+      }
+    },
+    {
+      "name": "LUNDI MATIN",
+      "officialWebsite": "https://www.lundimatin.fr/",
+      "result": {
+        "url": "https://www.lundimatin.fr/",
+        "actors": [
+          "LUNDI MATIN"
+        ],
+        "observedAt": "2026-10-20T11:59:03.863774+00:00",
+        "urlKey": "4003af3f8c27683f",
+        "hops": [
+          {
+            "url": "https://www.lundimatin.fr/",
+            "httpStatus": 403,
+            "exitCode": 56,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:03 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "5354"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      }
+    },
+    {
+      "name": "MACOMPTA.FR",
+      "officialWebsite": "https://www.macompta.fr/",
+      "result": {
+        "url": "https://www.macompta.fr/",
+        "actors": [
+          "MACOMPTA.FR"
+        ],
+        "observedAt": "2026-10-20T11:59:03.965054+00:00",
+        "urlKey": "3d2504cb434f2d31",
+        "hops": [
+          {
+            "url": "https://www.macompta.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:04 GMT",
+              "content-type": "text/html;charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.macompta.fr/",
+        "rawPath": "homepages/3d2504cb434f2d31.raw",
+        "textPath": "homepages/3d2504cb434f2d31.txt",
+        "bytes": 53727,
+        "sha256": "89ee39bd607f220963eb78796de08a183621922c251c07c5b7428a2117b9e84d",
+        "contentType": "text/html;charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.186
+      }
+    },
+    {
+      "name": "MAROSA",
+      "officialWebsite": "https://marosavat.com/",
+      "result": {
+        "url": "https://marosavat.com/",
+        "actors": [
+          "MAROSA"
+        ],
+        "observedAt": "2026-10-20T11:59:04.150614+00:00",
+        "urlKey": "4faf6a1fb0a1f713",
+        "hops": [
+          {
+            "url": "https://marosavat.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:04 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Tue, 20 Oct 2026 11:23:52 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://marosavat.com/",
+        "rawPath": "homepages/4faf6a1fb0a1f713.raw",
+        "textPath": "homepages/4faf6a1fb0a1f713.txt",
+        "bytes": 158611,
+        "sha256": "b3b2d2a70c93da089a26ce50323b7d23cbd985983d78917fdf03d892765c0a94",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.219
+      }
+    },
+    {
+      "name": "MEDIUS",
+      "officialWebsite": "https://www.medius.com/fr",
+      "result": {
+        "url": "https://www.medius.com/fr",
+        "actors": [
+          "MEDIUS"
+        ],
+        "observedAt": "2026-10-20T11:59:04.370122+00:00",
+        "urlKey": "32d2705ee0adbf6f",
+        "hops": [
+          {
+            "url": "https://www.medius.com/fr",
+            "httpStatus": 302,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:04 GMT",
+              "content-length": "0",
+              "location": "https://www.medius.com:443/fr/accueil/"
+            }
+          },
+          {
+            "url": "https://www.medius.com:443/fr/accueil/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:05 GMT",
+              "content-length": "0",
+              "location": "https://www.medius.com/fr/"
+            }
+          },
+          {
+            "url": "https://www.medius.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:05 GMT",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.medius.com/fr/",
+        "rawPath": "homepages/32d2705ee0adbf6f.raw",
+        "textPath": "homepages/32d2705ee0adbf6f.txt",
+        "bytes": 269560,
+        "sha256": "142715fa00ec0e75c1fba656a422b1b8a278e517c3703529d5770caaac5d5cd8",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.522
+      }
+    },
+    {
+      "name": "MY-EDDY",
+      "officialWebsite": "https://dailyapps.fr/",
+      "result": {
+        "url": "https://dailyapps.fr/",
+        "actors": [
+          "MY-EDDY"
+        ],
+        "observedAt": "2026-10-20T11:59:04.381509+00:00",
+        "urlKey": "40c1d04c17218fdf",
+        "hops": [],
+        "status": "reused_priority_read",
+        "rawPath": "my-eddy-pa-20261014.html",
+        "textPath": "my-eddy-pa-20261014.txt",
+        "sha256": "e29f43937135e53a94d39af2faea06ffdd97b188dae265e02e83b0c099cdb109",
+        "bytes": 365001,
+        "signalLines": [],
+        "elapsedSeconds": 0.001
+      }
+    },
+    {
+      "name": "MY FITECO",
+      "officialWebsite": "https://myfiteco.com/",
+      "result": {
+        "url": "https://myfiteco.com/",
+        "actors": [
+          "MY FITECO"
+        ],
+        "observedAt": "2026-10-20T11:59:04.382387+00:00",
+        "urlKey": "fd9a3635f61ebcbb",
+        "hops": [
+          {
+            "url": "https://myfiteco.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:04 GMT",
+              "content-type": "text/html",
+              "content-length": "1173",
+              "last-modified": "Fri, 16 Oct 2026 07:49:57 GMT",
+              "etag": "\"6ad1d725-495\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://myfiteco.com/",
+        "rawPath": "homepages/fd9a3635f61ebcbb.raw",
+        "textPath": "homepages/fd9a3635f61ebcbb.txt",
+        "bytes": 1173,
+        "sha256": "f1884e939c7f23a1a999f3115796cdd5d9c7a8e902956b8d1f3d9952a6c81324",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.09
+      }
+    },
+    {
+      "name": "MY UNISOFT",
+      "officialWebsite": "https://myunisoft.fr/",
+      "result": {
+        "url": "https://myunisoft.fr/",
+        "actors": [
+          "MY UNISOFT"
+        ],
+        "observedAt": "2026-10-20T11:59:04.472648+00:00",
+        "urlKey": "e650a274f7ad005c",
+        "hops": [
+          {
+            "url": "https://myunisoft.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:52:06 GMT",
+              "content-type": "text/html; charset=iso-8859-1",
+              "location": "https://myu.fr/",
+              "content-length": "223"
+            }
+          },
+          {
+            "url": "https://myu.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:04 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 09:56:36 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://myu.fr/",
+        "rawPath": "homepages/e650a274f7ad005c.raw",
+        "textPath": "homepages/e650a274f7ad005c.txt",
+        "bytes": 218798,
+        "sha256": "4dd2adffe46c497ce846f9dc9260ebd759791c1c689ac94f342273019bffed0e",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.235
+      }
+    },
+    {
+      "name": "MyKinexo PDP",
+      "officialWebsite": "https://www.kinexo.fr/",
+      "result": {
+        "url": "https://www.kinexo.fr/",
+        "actors": [
+          "MyKinexo PDP"
+        ],
+        "observedAt": "2026-10-20T11:59:04.707832+00:00",
+        "urlKey": "753878a7ebab0fbd",
+        "hops": [
+          {
+            "url": "https://www.kinexo.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:05 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.kinexo.fr/",
+        "rawPath": "homepages/753878a7ebab0fbd.raw",
+        "textPath": "homepages/753878a7ebab0fbd.txt",
+        "bytes": 36984,
+        "sha256": "b5e7cb97cd2e8de522fca67a48d7d0beaab79306c0332a437470565c4646fe7b",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.618
+      }
+    },
+    {
+      "name": "MySupply Aps",
+      "officialWebsite": "https://mysupply.dk/en",
+      "result": {
+        "url": "https://mysupply.dk/en",
+        "actors": [
+          "MySupply Aps"
+        ],
+        "observedAt": "2026-10-20T11:59:05.326326+00:00",
+        "urlKey": "b3c5cac424bde43b",
+        "hops": [
+          {
+            "url": "https://mysupply.dk/en",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html",
+              "content-length": "795",
+              "date": "Tue, 20 Oct 2026 11:59:05 GMT",
+              "location": "https://inexchange.com/en"
+            }
+          },
+          {
+            "url": "https://inexchange.com/en",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:05 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Mon, 19 Oct 2026 11:04:26 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://inexchange.com/en",
+        "rawPath": "homepages/b3c5cac424bde43b.raw",
+        "textPath": "homepages/b3c5cac424bde43b.txt",
+        "bytes": 144954,
+        "sha256": "6b1a6e1d8453b555aa3e313c152af7ce75dc7519774cd082d0f3d0660bc03cdb",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.285
+      }
+    },
+    {
+      "name": "N2F PDP",
+      "officialWebsite": "https://www.n2f.com/fr/note-de-frais/",
+      "result": {
+        "url": "https://www.n2f.com/fr/note-de-frais/",
+        "actors": [
+          "N2F PDP"
+        ],
+        "observedAt": "2026-10-20T11:59:05.611818+00:00",
+        "urlKey": "56fca82eba31dd30",
+        "hops": [
+          {
+            "url": "https://www.n2f.com/fr/note-de-frais/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:06 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.n2f.com/fr/note-de-frais/",
+        "rawPath": "homepages/56fca82eba31dd30.raw",
+        "textPath": "homepages/56fca82eba31dd30.txt",
+        "bytes": 265500,
+        "sha256": "0f119a624cea3d3e8e6b47136679e62b3317b850dffd3bf4ecc5759537fcab53",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.978
+      }
+    },
+    {
+      "name": "NEOTIMO",
+      "officialWebsite": "https://neotimo.com/",
+      "result": {
+        "url": "https://neotimo.com/",
+        "actors": [
+          "NEOTIMO"
+        ],
+        "observedAt": "2026-10-20T11:59:05.892018+00:00",
+        "urlKey": "cfffb81742b4f8b4",
+        "hops": [
+          {
+            "url": "https://neotimo.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:06 GMT",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://neotimo.com/",
+        "rawPath": "homepages/cfffb81742b4f8b4.raw",
+        "textPath": "homepages/cfffb81742b4f8b4.txt",
+        "bytes": 102357,
+        "sha256": "2ee8e9e03764aaa35c4f5f78eb95a29691d74097b5dcef82cf99ddfca6ce9ef5",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.174
+      }
+    },
+    {
+      "name": "NTT DATA Business Solutions",
+      "officialWebsite": "https://fr.nttdata.com/",
+      "result": {
+        "url": "https://fr.nttdata.com/",
+        "actors": [
+          "NTT DATA Business Solutions"
+        ],
+        "observedAt": "2026-10-20T11:59:06.065727+00:00",
+        "urlKey": "9cdd9704c89fe40c",
+        "hops": [
+          {
+            "url": "https://fr.nttdata.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:06 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "94853"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://fr.nttdata.com/",
+        "rawPath": "homepages/9cdd9704c89fe40c.raw",
+        "textPath": "homepages/9cdd9704c89fe40c.txt",
+        "bytes": 94853,
+        "sha256": "b85624a79a8eaf1351f64f0b8665d287375f0cfd9dd6c0760976ecf1d87ed33a",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.941
+      }
+    },
+    {
+      "name": "ODOO",
+      "officialWebsite": "https://www.odoo.com/fr_FR",
+      "result": {
+        "url": "https://www.odoo.com/fr_FR",
+        "actors": [
+          "ODOO"
+        ],
+        "observedAt": "2026-10-20T11:59:06.589484+00:00",
+        "urlKey": "ac00b589d4b5b7d6",
+        "hops": [
+          {
+            "url": "https://www.odoo.com/fr_FR",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:06 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "100479"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.odoo.com/fr_FR",
+        "rawPath": "homepages/ac00b589d4b5b7d6.raw",
+        "textPath": "homepages/ac00b589d4b5b7d6.txt",
+        "bytes": 100479,
+        "sha256": "ec4355d9f6c4805c3fd11376f3f64f89a6a64e8fb6a540caed99f7b9303d7aa5",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.351
+      }
+    },
+    {
+      "name": "OfficeIn",
+      "officialWebsite": "https://officein.fr/",
+      "result": {
+        "url": "https://officein.fr/",
+        "actors": [
+          "OfficeIn"
+        ],
+        "observedAt": "2026-10-20T11:59:06.940832+00:00",
+        "urlKey": "a2e7dafc1e4bebe8",
+        "hops": [
+          {
+            "url": "https://officein.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT",
+              "etag": "\"aa258d164f7c123e9100cdd4224fb23f-ssl\"",
+              "content-length": "86021"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://officein.fr/",
+        "rawPath": "homepages/a2e7dafc1e4bebe8.raw",
+        "textPath": "homepages/a2e7dafc1e4bebe8.txt",
+        "bytes": 86021,
+        "sha256": "02cad6a1d68cf3f632abb72aa613c612137db10593540e5b7256f7d192c2862f",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.279
+      }
+    },
+    {
+      "name": "ONE UP",
+      "officialWebsite": "https://smallbusiness.oneup.com/fr/",
+      "result": {
+        "url": "https://smallbusiness.oneup.com/fr/",
+        "actors": [
+          "ONE UP"
+        ],
+        "observedAt": "2026-10-20T11:59:07.007099+00:00",
+        "urlKey": "1e620e88555b7a8d",
+        "hops": [
+          {
+            "url": "https://smallbusiness.oneup.com/fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT",
+              "content-type": "text/html",
+              "content-length": "166",
+              "location": "https://smallbusiness.oneup.com/fr"
+            }
+          },
+          {
+            "url": "https://smallbusiness.oneup.com/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Fri, 07 Aug 2026 08:34:17 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://smallbusiness.oneup.com/fr",
+        "rawPath": "homepages/1e620e88555b7a8d.raw",
+        "textPath": "homepages/1e620e88555b7a8d.txt",
+        "bytes": 37707,
+        "sha256": "8903f611e557ce262a4204f2ea7742a48f588f1c68d04172c79644ed7392eea3",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.388
+      }
+    },
+    {
+      "name": "OPEN BEE",
+      "officialWebsite": "https://www.openbee.com/",
+      "result": {
+        "url": "https://www.openbee.com/",
+        "actors": [
+          "OPEN BEE"
+        ],
+        "observedAt": "2026-10-20T11:59:07.220142+00:00",
+        "urlKey": "b5261eab1ca0ce38",
+        "hops": [
+          {
+            "url": "https://www.openbee.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "80142",
+              "etag": "\"193458-1792496842;;;\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.openbee.com/",
+        "rawPath": "homepages/b5261eab1ca0ce38.raw",
+        "textPath": "homepages/b5261eab1ca0ce38.txt",
+        "bytes": 80142,
+        "sha256": "5f8b859273e3905bd11693657778317de8326a4d905db234e207d405ee7d4d81",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.232
+      }
+    },
+    {
+      "name": "OPENTEXT",
+      "officialWebsite": "https://www.opentext.fr/",
+      "result": {
+        "url": "https://www.opentext.fr/",
+        "actors": [
+          "OPENTEXT"
+        ],
+        "observedAt": "2026-10-20T11:59:07.395035+00:00",
+        "urlKey": "2e41e8452a961745",
+        "hops": [
+          {
+            "url": "https://www.opentext.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://www.opentext.com/fr-fr",
+              "content-length": "153",
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT"
+            }
+          },
+          {
+            "url": "https://www.opentext.com/fr-fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://www.opentext.com/fr",
+              "content-length": "150",
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT"
+            }
+          },
+          {
+            "url": "https://www.opentext.com/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.opentext.com/fr",
+        "rawPath": "homepages/2e41e8452a961745.raw",
+        "textPath": "homepages/2e41e8452a961745.txt",
+        "bytes": 400172,
+        "sha256": "0e9abc235bfd7db33ffb4d363daff384c34159c19bae55101e33fd92aa62a27f",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.448
+      }
+    },
+    {
+      "name": "PAGERO",
+      "officialWebsite": "https://www.pagero.com/fr",
+      "result": {
+        "url": "https://www.pagero.com/fr",
+        "actors": [
+          "PAGERO"
+        ],
+        "observedAt": "2026-10-20T11:59:07.452416+00:00",
+        "urlKey": "80940d8f54005349",
+        "hops": [
+          {
+            "url": "https://www.pagero.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT",
+              "content-type": "text/html",
+              "location": "https://europe.thomsonreuters.com/fr"
+            }
+          },
+          {
+            "url": "https://europe.thomsonreuters.com/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "465491",
+              "etag": "\"yd3aier1zo9yoi\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://europe.thomsonreuters.com/fr",
+        "rawPath": "homepages/80940d8f54005349.raw",
+        "textPath": "homepages/80940d8f54005349.txt",
+        "bytes": 465491,
+        "sha256": "8d73243a7d4aab59e4487a5a44820962ff1fb56d1752afc3f896e1897664dbd3",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.58
+      }
+    },
+    {
+      "name": "PARAGON",
+      "officialWebsite": "https://www.paragon.world/fr",
+      "result": {
+        "url": "https://www.paragon.world/fr",
+        "actors": [
+          "PARAGON"
+        ],
+        "observedAt": "2026-10-20T11:59:07.843372+00:00",
+        "urlKey": "d059e86835412e99",
+        "hops": [
+          {
+            "url": "https://www.paragon.world/fr",
+            "httpStatus": 403,
+            "exitCode": 56,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:07 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      }
+    },
+    {
+      "name": "PAYFLOWS",
+      "officialWebsite": "https://payflows.io/",
+      "result": {
+        "url": "https://payflows.io/",
+        "actors": [
+          "PAYFLOWS"
+        ],
+        "observedAt": "2026-10-20T11:59:07.930598+00:00",
+        "urlKey": "589a85ca3c8bbe52",
+        "hops": [
+          {
+            "url": "https://payflows.io/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:08 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Tue, 20 Oct 2026 10:55:01 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://payflows.io/",
+        "rawPath": "homepages/589a85ca3c8bbe52.raw",
+        "textPath": "homepages/589a85ca3c8bbe52.txt",
+        "bytes": 320795,
+        "sha256": "d1d4f241c615f8f859affc3cb1b002c8155f7501428b8b3cd472f51ed1bcf70e",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.215
+      }
+    },
+    {
+      "name": "PENNYLANE",
+      "officialWebsite": "https://www.pennylane.com/fr",
+      "result": {
+        "url": "https://www.pennylane.com/fr",
+        "actors": [
+          "PENNYLANE"
+        ],
+        "observedAt": "2026-10-20T11:59:08.032694+00:00",
+        "urlKey": "93a6f37f66028fcb",
+        "hops": [
+          {
+            "url": "https://www.pennylane.com/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html;charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:59:08 GMT",
+              "etag": "\"1b711bb2c8538fe14bdac06f06952331-ssl\"",
+              "content-length": "436421"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.pennylane.com/fr",
+        "rawPath": "homepages/93a6f37f66028fcb.raw",
+        "textPath": "homepages/93a6f37f66028fcb.txt",
+        "bytes": 436421,
+        "sha256": "00e564ab4e0b1909d14493af7189901e3efda1823c8835de8f1f7858433eb79a",
+        "contentType": "text/html;charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.327
+      }
+    },
+    {
+      "name": "PITNEY BOWES",
+      "officialWebsite": "https://www.pitneybowes.com/fr",
+      "result": {
+        "url": "https://www.pitneybowes.com/fr",
+        "actors": [
+          "PITNEY BOWES"
+        ],
+        "observedAt": "2026-10-20T11:59:08.145363+00:00",
+        "urlKey": "866fef96edad0401",
+        "hops": [
+          {
+            "url": "https://www.pitneybowes.com/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:08 GMT",
+              "content-type": "text/html;charset=utf-8",
+              "last-modified": "Tue, 20 Oct 2026 11:56:11 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.pitneybowes.com/fr",
+        "rawPath": "homepages/866fef96edad0401.raw",
+        "textPath": "homepages/866fef96edad0401.txt",
+        "bytes": 76950,
+        "sha256": "61e8e03a93c62eab1ba63db79ed29379ddf8742d906c824fbc2ca5a3b390ffe2",
+        "contentType": "text/html;charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.167
+      }
+    },
+    {
+      "name": "QONTO",
+      "officialWebsite": "https://qonto.com/fr",
+      "result": {
+        "url": "https://qonto.com/fr",
+        "actors": [
+          "QONTO"
+        ],
+        "observedAt": "2026-10-20T11:59:08.311959+00:00",
+        "urlKey": "d16e2fa0ab06d55a",
+        "hops": [
+          {
+            "url": "https://qonto.com/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "569345",
+              "etag": "W/\"9fdb144fe6f3705c5469b760efc91ecf\"",
+              "date": "Mon, 19 Oct 2026 14:20:48 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://qonto.com/fr",
+        "rawPath": "homepages/d16e2fa0ab06d55a.raw",
+        "textPath": "homepages/d16e2fa0ab06d55a.txt",
+        "bytes": 569345,
+        "sha256": "9fdb144fe6f3705c5469b760efc91ecfa2f24fdb01477dad936745de2f15f44d",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.169
+      }
+    },
+    {
+      "name": "QWEEBY",
+      "officialWebsite": "https://www.qweeby.fr/",
+      "result": {
+        "url": "https://www.qweeby.fr/",
+        "actors": [
+          "QWEEBY"
+        ],
+        "observedAt": "2026-10-20T11:59:08.359621+00:00",
+        "urlKey": "2c5e4af7dd94a87d",
+        "hops": [
+          {
+            "url": "https://www.qweeby.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:08 GMT",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.qweeby.fr/",
+        "rawPath": "homepages/2c5e4af7dd94a87d.raw",
+        "textPath": "homepages/2c5e4af7dd94a87d.txt",
+        "bytes": 84337,
+        "sha256": "4879a99f8b3a122761625eac48c5697a370a893e7c5e5e58c0515fd50e583249",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.251
+      }
+    },
+    {
+      "name": "RATIOO",
+      "officialWebsite": "https://ratioo.fr/",
+      "result": {
+        "url": "https://ratioo.fr/",
+        "actors": [
+          "RATIOO"
+        ],
+        "observedAt": "2026-10-20T11:59:08.480828+00:00",
+        "urlKey": "d9759bc3a7b7ab53",
+        "hops": [],
+        "status": "reused_priority_read",
+        "rawPath": "ratioo-pa-20261014.html",
+        "textPath": "ratioo-pa-20261014.txt",
+        "sha256": "21ce2a8ad8045ed087029c322dd15854b8dc7e6489b67263e18a4decb2950a73",
+        "bytes": 215630,
+        "signalLines": [],
+        "elapsedSeconds": 0.001
+      }
+    },
+    {
+      "name": "SAGE",
+      "officialWebsite": "https://www.sage.com/fr-fr/",
+      "result": {
+        "url": "https://www.sage.com/fr-fr/",
+        "actors": [
+          "SAGE"
+        ],
+        "observedAt": "2026-10-20T11:59:08.481857+00:00",
+        "urlKey": "bc80634bd6a7d52f",
+        "hops": [
+          {
+            "url": "https://www.sage.com/fr-fr/",
+            "httpStatus": 403,
+            "exitCode": 56,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:08 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      }
+    },
+    {
+      "name": "SAP",
+      "officialWebsite": "https://www.sap.com/france/",
+      "result": {
+        "url": "https://www.sap.com/france/",
+        "actors": [
+          "SAP"
+        ],
+        "observedAt": "2026-10-20T11:59:08.611211+00:00",
+        "urlKey": "83753d858e5e47e3",
+        "hops": [
+          {
+            "url": "https://www.sap.com/france/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "location": "https://www.sap.com/france/index.html",
+              "content-type": "text/html",
+              "content-length": "0",
+              "date": "Tue, 20 Oct 2026 11:59:08 GMT"
+            }
+          },
+          {
+            "url": "https://www.sap.com/france/index.html",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html",
+              "date": "Tue, 20 Oct 2026 11:59:09 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sap.com/france/index.html",
+        "rawPath": "homepages/83753d858e5e47e3.raw",
+        "textPath": "homepages/83753d858e5e47e3.txt",
+        "bytes": 161452,
+        "sha256": "c2cea5b493c34fa21abf917799e7b9991917d2a8cabde2bdc20c81c6759c096b",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.968
+      }
+    },
+    {
+      "name": "SCRIBEE",
+      "officialWebsite": "https://www.scribee.tech/",
+      "result": {
+        "url": "https://www.scribee.tech/",
+        "actors": [
+          "SCRIBEE"
+        ],
+        "observedAt": "2026-10-20T11:59:08.620427+00:00",
+        "urlKey": "3acf7f10b0df84ef",
+        "hops": [
+          {
+            "url": "https://www.scribee.tech/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:08 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Tue, 20 Oct 2026 11:59:08 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.scribee.tech/",
+        "rawPath": "homepages/3acf7f10b0df84ef.raw",
+        "textPath": "homepages/3acf7f10b0df84ef.txt",
+        "bytes": 85478,
+        "sha256": "fece766362dc10065aaa55c2006ee8061cac7f0a65f6dafa5c2e8e23a7258606",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.271
+      }
+    },
+    {
+      "name": "SEEBURGER",
+      "officialWebsite": "https://www.seeburger.com/",
+      "result": {
+        "url": "https://www.seeburger.com/",
+        "actors": [
+          "SEEBURGER"
+        ],
+        "observedAt": "2026-10-20T11:59:08.891861+00:00",
+        "urlKey": "b5dfb0c38f7f4891",
+        "hops": [
+          {
+            "url": "https://www.seeburger.com/",
+            "httpStatus": 0,
+            "exitCode": 28,
+            "headers": {}
+          }
+        ],
+        "status": "failed",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      }
+    },
+    {
+      "name": "SEPTEO",
+      "officialWebsite": "https://www.septeopdp.com/",
+      "result": {
+        "url": "https://www.septeopdp.com/",
+        "actors": [
+          "SEPTEO"
+        ],
+        "observedAt": "2026-10-20T11:59:09.390576+00:00",
+        "urlKey": "da0391f5d041f0d4",
+        "hops": [
+          {
+            "url": "https://www.septeopdp.com/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-length": "0",
+              "location": "https://www.ingeneo.septeo.com/expert-comptable/facture-electronique-experts-comptables"
+            }
+          },
+          {
+            "url": "https://www.ingeneo.septeo.com/expert-comptable/facture-electronique-experts-comptables",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:09 GMT",
+              "content-type": "text/html",
+              "content-length": "166",
+              "location": "/"
+            }
+          },
+          {
+            "url": "https://www.ingeneo.septeo.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:09 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Fri, 16 Oct 2026 14:01:41 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.ingeneo.septeo.com/",
+        "rawPath": "homepages/da0391f5d041f0d4.raw",
+        "textPath": "homepages/da0391f5d041f0d4.txt",
+        "bytes": 341497,
+        "sha256": "8d028c63eb7a36afc388ea819b1de3d974beec39295f05230bc90745aafa6304",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.668
+      }
+    },
+    {
+      "name": "SEQINO",
+      "officialWebsite": "https://seqino.com/",
+      "result": {
+        "url": "https://seqino.com/",
+        "actors": [
+          "SEQINO"
+        ],
+        "observedAt": "2026-10-20T11:59:09.579658+00:00",
+        "urlKey": "870c3b878a42ab3c",
+        "hops": [
+          {
+            "url": "https://seqino.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:09 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "213331"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://seqino.com/",
+        "rawPath": "homepages/870c3b878a42ab3c.raw",
+        "textPath": "homepages/870c3b878a42ab3c.txt",
+        "bytes": 213331,
+        "sha256": "2b020eeef3fa4c1cab79c4ded3528db72d35e56425cdeea8c0e5e7c173481e6e",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.384
+      }
+    },
+    {
+      "name": "SERENSIA by Quadient",
+      "officialWebsite": "https://www.serensia.com/",
+      "result": {
+        "url": "https://www.serensia.com/",
+        "actors": [
+          "SERENSIA by Quadient"
+        ],
+        "observedAt": "2026-10-20T11:59:09.963621+00:00",
+        "urlKey": "d1179e8f73ba5f31",
+        "hops": [
+          {
+            "url": "https://www.serensia.com/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:11 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://serensia.com/"
+            }
+          },
+          {
+            "url": "https://serensia.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:11 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Mon, 19 Oct 2026 08:50:07 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://serensia.com/",
+        "rawPath": "homepages/d1179e8f73ba5f31.raw",
+        "textPath": "homepages/d1179e8f73ba5f31.txt",
+        "bytes": 524979,
+        "sha256": "e29ab3cfb6dcf30da02868fb64e0d0c7bc926f7f3da5c861c61e66d33eee7651",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.989
+      }
+    },
+    {
+      "name": "SERES",
+      "officialWebsite": "https://www.seres.fr/",
+      "result": {
+        "url": "https://www.seres.fr/",
+        "actors": [
+          "SERES"
+        ],
+        "observedAt": "2026-10-20T11:59:10.058089+00:00",
+        "urlKey": "c04658394056d305",
+        "hops": [
+          {
+            "url": "https://www.seres.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:09 GMT",
+              "content-type": "text/html; charset=iso-8859-1",
+              "content-length": "265",
+              "location": "https://seres.fr/"
+            }
+          },
+          {
+            "url": "https://seres.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:10 GMT",
+              "content-type": "text/html; charset=iso-8859-1",
+              "content-length": "268",
+              "location": "https://seres.fr/fr/"
+            }
+          },
+          {
+            "url": "https://seres.fr/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:11 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://seres.fr/fr/",
+        "rawPath": "homepages/c04658394056d305.raw",
+        "textPath": "homepages/c04658394056d305.txt",
+        "bytes": 1052868,
+        "sha256": "279c181fb7d3fa3b8410c0ba5017636ba35b4f5b2e1ce51760d5b1185dd52c4b",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.704
+      }
+    },
+    {
+      "name": "Shine",
+      "officialWebsite": "https://www.shine.fr/",
+      "result": {
+        "url": "https://www.shine.fr/",
+        "actors": [
+          "Shine"
+        ],
+        "observedAt": "2026-10-20T11:59:11.762688+00:00",
+        "urlKey": "6156b0c38fbf6e47",
+        "hops": [
+          {
+            "url": "https://www.shine.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:59:11 GMT",
+              "etag": "\"d1d67ad350fb4e32b8ee9d4856ad312e-ssl\"",
+              "content-length": "333953"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.shine.fr/",
+        "rawPath": "homepages/6156b0c38fbf6e47.raw",
+        "textPath": "homepages/6156b0c38fbf6e47.txt",
+        "bytes": 333953,
+        "sha256": "857f782212ab78f902fccabcc0bed9067e29a9346a0ddf6898853e76f319cdaf",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.27
+      }
+    },
+    {
+      "name": "SNI",
+      "officialWebsite": "https://snitechnology.net/fr",
+      "result": {
+        "url": "https://snitechnology.net/fr",
+        "actors": [
+          "SNI"
+        ],
+        "observedAt": "2026-10-20T11:59:11.952285+00:00",
+        "urlKey": "134ee9d256177191",
+        "hops": [
+          {
+            "url": "https://snitechnology.net/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:12 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://snitechnology.net/fr",
+        "rawPath": "homepages/134ee9d256177191.raw",
+        "textPath": "homepages/134ee9d256177191.txt",
+        "bytes": 301479,
+        "sha256": "132ce8cf2dee96a4f73a7da7b87e0f7949cd4b604300ced6b2997fab43447234",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.253
+      }
+    },
+    {
+      "name": "SOLO",
+      "officialWebsite": "https://www.solo.fr/",
+      "result": {
+        "url": "https://www.solo.fr/",
+        "actors": [
+          "SOLO"
+        ],
+        "observedAt": "2026-10-20T11:59:12.033043+00:00",
+        "urlKey": "07029e34b73b1528",
+        "hops": [
+          {
+            "url": "https://www.solo.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:12 GMT",
+              "content-type": "text/html;charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.solo.fr/",
+        "rawPath": "homepages/07029e34b73b1528.raw",
+        "textPath": "homepages/07029e34b73b1528.txt",
+        "bytes": 372654,
+        "sha256": "27450bb4f8669f95f59b26f105a7cbf96a09dc69d2b4992d86c4a440ea9e5800",
+        "contentType": "text/html;charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.296
+      }
+    },
+    {
+      "name": "SOVOS",
+      "officialWebsite": "https://www.saphety.com/fr",
+      "result": {
+        "url": "https://www.saphety.com/fr",
+        "actors": [
+          "SOVOS"
+        ],
+        "observedAt": "2026-10-20T11:59:12.329211+00:00",
+        "urlKey": "18ad68dbabda4165",
+        "hops": [
+          {
+            "url": "https://www.saphety.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:13 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "0",
+              "location": "https://sovos.com/fr/tva/regles-fiscales/facturation-electronique-en-france/"
+            }
+          },
+          {
+            "url": "https://sovos.com/fr/tva/regles-fiscales/facturation-electronique-en-france/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:13 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://sovos.com/fr/tva/regles-fiscales/facturation-electronique-en-france/",
+        "rawPath": "homepages/18ad68dbabda4165.raw",
+        "textPath": "homepages/18ad68dbabda4165.txt",
+        "bytes": 416705,
+        "sha256": "f38c9ede190cdcb6f0a79cd698d2d3d8cd3dd75dbab2a160aa98806156da290b",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.998
+      }
+    },
+    {
+      "name": "SPENDESK",
+      "officialWebsite": "https://www.spendesk.com/fr/",
+      "result": {
+        "url": "https://www.spendesk.com/fr/",
+        "actors": [
+          "SPENDESK"
+        ],
+        "observedAt": "2026-10-20T11:59:13.204934+00:00",
+        "urlKey": "a253d1b82f2d2fc4",
+        "hops": [
+          {
+            "url": "https://www.spendesk.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:59:13 GMT",
+              "etag": "\"b6a535c6629d6c7430619230b113ee0f-ssl\"",
+              "content-length": "496474"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.spendesk.com/fr/",
+        "rawPath": "homepages/a253d1b82f2d2fc4.raw",
+        "textPath": "homepages/a253d1b82f2d2fc4.txt",
+        "bytes": 496474,
+        "sha256": "3c698f9f48d7a721903120d7b8e4dcab91fdd5c9d67c70109082da9acde51708",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.455
+      }
+    },
+    {
+      "name": "SPS COMMERCE",
+      "officialWebsite": "https://tiekinetix.com/fr",
+      "result": {
+        "url": "https://tiekinetix.com/fr",
+        "actors": [
+          "SPS COMMERCE"
+        ],
+        "observedAt": "2026-10-20T11:59:13.657944+00:00",
+        "urlKey": "8c161457a5e34345",
+        "hops": [
+          {
+            "url": "https://tiekinetix.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:15 GMT",
+              "location": "https://www.spscommerce.com/fr",
+              "content-length": "319",
+              "content-type": "text/html; charset=iso-8859-1"
+            }
+          },
+          {
+            "url": "https://www.spscommerce.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://www.spscommerce.com/fr/",
+              "date": "Tue, 20 Oct 2026 11:59:16 GMT",
+              "content-length": "0"
+            }
+          },
+          {
+            "url": "https://www.spscommerce.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:59:16 GMT",
+              "content-length": "631085"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.spscommerce.com/fr/",
+        "rawPath": "homepages/8c161457a5e34345.raw",
+        "textPath": "homepages/8c161457a5e34345.txt",
+        "bytes": 631085,
+        "sha256": "b77e20445d7cd4d6906b8027a695affef5879766c2f75ecf0ec0a6d39ceb6a76",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 2.754
+      }
+    },
+    {
+      "name": "SRCI",
+      "officialWebsite": "https://solutions.srci.fr/",
+      "result": {
+        "url": "https://solutions.srci.fr/",
+        "actors": [
+          "SRCI"
+        ],
+        "observedAt": "2026-10-20T11:59:13.660043+00:00",
+        "urlKey": "8cd68dab376128e8",
+        "hops": [
+          {
+            "url": "https://solutions.srci.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:14 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://solutions.srci.fr/",
+        "rawPath": "homepages/8cd68dab376128e8.raw",
+        "textPath": "homepages/8cd68dab376128e8.txt",
+        "bytes": 177711,
+        "sha256": "ebaa3dfaa1a1dfb5f0b1bb7e38b1c216933d5acf8f409efa82b0772f030c38a2",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.301
+      }
+    },
+    {
+      "name": "STORECOVE",
+      "officialWebsite": "https://www.storecove.com/fr/fr",
+      "result": {
+        "url": "https://www.storecove.com/fr/fr",
+        "actors": [
+          "STORECOVE"
+        ],
+        "observedAt": "2026-10-20T11:59:14.327713+00:00",
+        "urlKey": "8efc70d391e4cd69",
+        "hops": [
+          {
+            "url": "https://www.storecove.com/fr/fr",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:14 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "204903"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.storecove.com/fr/fr",
+        "rawPath": "homepages/8efc70d391e4cd69.raw",
+        "textPath": "homepages/8efc70d391e4cd69.txt",
+        "bytes": 204903,
+        "sha256": "6ae388b6f4e5b2e9c5bec992547be573c42dbdb21f6e99a5f612907dc34492fa",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [
+          {
+            "line": 102,
+            "text": "“L’intégration avec Storecove a permis à nos clients de se connecter rapidement et sans effort au réseau Peppol, les aidant ainsi à satisfaire aux exigences de facturation électronique imposées par le gouvernement de Singapour avec un minimum de perturbations.”"
+          }
+        ],
+        "elapsedSeconds": 0.506
+      }
+    },
+    {
+      "name": "SUPER PDP",
+      "officialWebsite": "https://www.superpdp.tech/",
+      "result": {
+        "url": "https://www.superpdp.tech/",
+        "actors": [
+          "SUPER PDP"
+        ],
+        "observedAt": "2026-10-20T11:59:14.833993+00:00",
+        "urlKey": "10ed198022b37702",
+        "hops": [
+          {
+            "url": "https://www.superpdp.tech/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:14 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "27085",
+              "last-modified": "Tue, 20 Oct 2026 08:59:23 GMT",
+              "etag": "\"6ad72d6b-69cd\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.superpdp.tech/",
+        "rawPath": "homepages/10ed198022b37702.raw",
+        "textPath": "homepages/10ed198022b37702.txt",
+        "bytes": 27085,
+        "sha256": "8f6a486b388169832e09d2c6775170fb4af0e5ce9c6e900ed7a4582694773865",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.143
+      }
+    },
+    {
+      "name": "SYMTRAX",
+      "officialWebsite": "https://www.symtrax.com/fr",
+      "result": {
+        "url": "https://www.symtrax.com/fr",
+        "actors": [
+          "SYMTRAX"
+        ],
+        "observedAt": "2026-10-20T11:59:14.960918+00:00",
+        "urlKey": "85530b44919f75ea",
+        "hops": [
+          {
+            "url": "https://www.symtrax.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:15 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "0",
+              "location": "https://www.symtrax.com/fr/"
+            }
+          },
+          {
+            "url": "https://www.symtrax.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:16 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.symtrax.com/fr/",
+        "rawPath": "homepages/85530b44919f75ea.raw",
+        "textPath": "homepages/85530b44919f75ea.txt",
+        "bytes": 145727,
+        "sha256": "ed04963b10af0d1bd5344e48317474d3bbe4e3d375c9fda91a30f15a33b1160e",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [
+          {
+            "line": 111,
+            "text": "Mise en œuvre d’une solution indépendante de votre ERP, sans impact sur votre architecture informatique ni perturbation de vos activités."
+          }
+        ],
+        "elapsedSeconds": 1.488
+      }
+    },
+    {
+      "name": "TAXERA",
+      "officialWebsite": "https://taxera.tech/",
+      "result": {
+        "url": "https://taxera.tech/",
+        "actors": [
+          "TAXERA"
+        ],
+        "observedAt": "2026-10-20T11:59:14.976519+00:00",
+        "urlKey": "b42edbc28962dba7",
+        "hops": [
+          {
+            "url": "https://taxera.tech/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:15 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "4941",
+              "etag": "\"bc0cf023f3be9d1d0247613a5927d5d1\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://taxera.tech/",
+        "rawPath": "homepages/b42edbc28962dba7.raw",
+        "textPath": "homepages/b42edbc28962dba7.txt",
+        "bytes": 4941,
+        "sha256": "2f861a44c9ad1fb22543900d58a84f6c9f6aefc9615fec524ed29e995937dee5",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.715
+      }
+    },
+    {
+      "name": "TeamSystem Sellsy",
+      "officialWebsite": "https://go.sellsy.com/",
+      "result": {
+        "url": "https://go.sellsy.com/",
+        "actors": [
+          "TeamSystem Sellsy"
+        ],
+        "observedAt": "2026-10-20T11:59:15.691257+00:00",
+        "urlKey": "b569d636ed5a5ea9",
+        "hops": [
+          {
+            "url": "https://go.sellsy.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:15 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Sun, 18 Oct 2026 14:14:08 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://go.sellsy.com/",
+        "rawPath": "homepages/b569d636ed5a5ea9.raw",
+        "textPath": "homepages/b569d636ed5a5ea9.txt",
+        "bytes": 113174,
+        "sha256": "80bda3224ec4f7b940031d06aed9eafe0884b5afa7d4385daa2cfeed09911892",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.122
+      }
+    },
+    {
+      "name": "TENOR",
+      "officialWebsite": "https://tenorsolutions.com/",
+      "result": {
+        "url": "https://tenorsolutions.com/",
+        "actors": [
+          "TENOR"
+        ],
+        "observedAt": "2026-10-20T11:59:15.813687+00:00",
+        "urlKey": "b7a8a05766d83bf4",
+        "hops": [
+          {
+            "url": "https://tenorsolutions.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "last-modified": "Tue, 20 Oct 2026 07:51:56 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "date": "Tue, 20 Oct 2026 11:59:15 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://tenorsolutions.com/",
+        "rawPath": "homepages/b7a8a05766d83bf4.raw",
+        "textPath": "homepages/b7a8a05766d83bf4.txt",
+        "bytes": 206785,
+        "sha256": "e84bb919ce0631232a7f9a2053120188a46224817dd8121af6122d91108c6498",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.252
+      }
+    },
+    {
+      "name": "TESISQUARE SPA",
+      "officialWebsite": "https://www.tesisquare.com/fr",
+      "result": {
+        "url": "https://www.tesisquare.com/fr",
+        "actors": [
+          "TESISQUARE SPA"
+        ],
+        "observedAt": "2026-10-20T11:59:16.065262+00:00",
+        "urlKey": "f8e9f24de6c63d42",
+        "hops": [
+          {
+            "url": "https://www.tesisquare.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:16 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://www.tesisquare.com/fr/"
+            }
+          },
+          {
+            "url": "https://www.tesisquare.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:16 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "661212",
+              "last-modified": "Tue, 20 Oct 2026 09:37:51 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.tesisquare.com/fr/",
+        "rawPath": "homepages/f8e9f24de6c63d42.raw",
+        "textPath": "homepages/f8e9f24de6c63d42.txt",
+        "bytes": 661212,
+        "sha256": "6436af522e5065c75d62952ceecc9e747c49283c054600f7f8c1028e753a0846",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [
+          {
+            "line": 203,
+            "text": "Naviguez facilement dans l’industrie électronique avec TESISQUARE. Cette solution vous permet de gérer les chaînes d’approvisionnement internationales, d’atténuer les perturbations et de promouvoir l’innovation, ce qui se traduit par une augmentation de la productivité et de la compétitivité sur le marché."
+          }
+        ],
+        "elapsedSeconds": 0.774
+      }
+    },
+    {
+      "name": "TESSI Technologies",
+      "officialWebsite": "https://www.tessi.eu/fr",
+      "result": {
+        "url": "https://www.tessi.eu/fr",
+        "actors": [
+          "TESSI Technologies"
+        ],
+        "observedAt": "2026-10-20T11:59:16.411985+00:00",
+        "urlKey": "ff1a9c96e972cdaf",
+        "hops": [
+          {
+            "url": "https://www.tessi.eu/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:16 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "0",
+              "location": "https://www.tessi.eu/fr/"
+            }
+          },
+          {
+            "url": "https://www.tessi.eu/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:17 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.tessi.eu/fr/",
+        "rawPath": "homepages/ff1a9c96e972cdaf.raw",
+        "textPath": "homepages/ff1a9c96e972cdaf.txt",
+        "bytes": 239272,
+        "sha256": "5392ec3adfbd523bb226209a774ce97fb35ee13f1c73f994e2432e11ab23e9e1",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.253
+      }
+    },
+    {
+      "name": "TIIME PDP",
+      "officialWebsite": "https://www.tiime.fr/",
+      "result": {
+        "url": "https://www.tiime.fr/",
+        "actors": [
+          "TIIME PDP"
+        ],
+        "observedAt": "2026-10-20T11:59:16.448963+00:00",
+        "urlKey": "885013abce415a24",
+        "hops": [
+          {
+            "url": "https://www.tiime.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:16 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 11:42:01 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.tiime.fr/",
+        "rawPath": "homepages/885013abce415a24.raw",
+        "textPath": "homepages/885013abce415a24.txt",
+        "bytes": 380125,
+        "sha256": "ff4885a8d620365d8edf282574c8601178b343373d88eacc47f54c7ebf6b295c",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.221
+      }
+    },
+    {
+      "name": "TRADESHIFT BABELWAY",
+      "officialWebsite": "https://tradeshift.com/fr",
+      "result": {
+        "url": "https://tradeshift.com/fr",
+        "actors": [
+          "TRADESHIFT BABELWAY"
+        ],
+        "observedAt": "2026-10-20T11:59:16.670035+00:00",
+        "urlKey": "6a04c6935ed2b5a6",
+        "hops": [
+          {
+            "url": "https://tradeshift.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:17 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "0",
+              "location": "https://tradeshift.com/fr/"
+            }
+          },
+          {
+            "url": "https://tradeshift.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:17 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 07:35:44 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://tradeshift.com/fr/",
+        "rawPath": "homepages/6a04c6935ed2b5a6.raw",
+        "textPath": "homepages/6a04c6935ed2b5a6.txt",
+        "bytes": 158849,
+        "sha256": "9546d3baf621445a1e350eef93652108bdadc930a73f17a0295aa7e5009a6076",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.345
+      }
+    },
+    {
+      "name": "Transalis Limited",
+      "officialWebsite": "https://www.transalis.com/",
+      "result": {
+        "url": "https://www.transalis.com/",
+        "actors": [
+          "Transalis Limited"
+        ],
+        "observedAt": "2026-10-20T11:59:16.839081+00:00",
+        "urlKey": "9d46130b5cfa2c4e",
+        "hops": [
+          {
+            "url": "https://www.transalis.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "content-type": "text/html; charset=utf-8",
+              "date": "Tue, 20 Oct 2026 11:59:17 GMT",
+              "etag": "\"ffa39a5ac3dc22e4e103d4d8e887ce11\"",
+              "content-length": "962876"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.transalis.com/",
+        "rawPath": "homepages/9d46130b5cfa2c4e.raw",
+        "textPath": "homepages/9d46130b5cfa2c4e.txt",
+        "bytes": 962876,
+        "sha256": "e09a6bc56305eb87d93413cf2c373572d65fe508d48a186485c8b52176b67c10",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.337
+      }
+    },
+    {
+      "name": "TRESO2",
+      "officialWebsite": "http://www.treso2.com/",
+      "result": {
+        "url": "http://www.treso2.com/",
+        "actors": [
+          "TRESO2"
+        ],
+        "observedAt": "2026-10-20T11:59:17.175962+00:00",
+        "urlKey": "3a14f268da07bf01",
+        "hops": [
+          {
+            "url": "http://www.treso2.com/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:17 GMT",
+              "content-type": "text/html",
+              "content-length": "166",
+              "location": "https://www.treso2.com/"
+            }
+          },
+          {
+            "url": "https://www.treso2.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:17 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Tue, 20 Oct 2026 10:00:33 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.treso2.com/",
+        "rawPath": "homepages/3a14f268da07bf01.raw",
+        "textPath": "homepages/3a14f268da07bf01.txt",
+        "bytes": 1174900,
+        "sha256": "c3dfb8572c0622aa8c244ad3e6f1be3188c62fe566230527141acfa189ee08e3",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.49
+      }
+    },
+    {
+      "name": "TUNGSTEN AUTOMATION FRANCE",
+      "officialWebsite": "https://www.tungstenautomation.fr/",
+      "result": {
+        "url": "https://www.tungstenautomation.fr/",
+        "actors": [
+          "TUNGSTEN AUTOMATION FRANCE"
+        ],
+        "observedAt": "2026-10-20T11:59:17.665466+00:00",
+        "urlKey": "838a3d05b1ac217c",
+        "hops": [
+          {
+            "url": "https://www.tungstenautomation.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:18 GMT",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.tungstenautomation.fr/",
+        "rawPath": "homepages/838a3d05b1ac217c.raw",
+        "textPath": "homepages/838a3d05b1ac217c.txt",
+        "bytes": 396559,
+        "sha256": "48675c92337cd11bfa8e3a83be7c757b84f533b026617f7939dee992e0ad3043",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.499
+      }
+    },
+    {
+      "name": "TX2 Concept",
+      "officialWebsite": "https://tx2.fr/",
+      "result": {
+        "url": "https://tx2.fr/",
+        "actors": [
+          "TX2 Concept"
+        ],
+        "observedAt": "2026-10-20T11:59:17.666273+00:00",
+        "urlKey": "cac66fb440d23df0",
+        "hops": [
+          {
+            "url": "https://tx2.fr/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:19 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "location": "https://www.tx2.fr/"
+            }
+          },
+          {
+            "url": "https://www.tx2.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:19 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.tx2.fr/",
+        "rawPath": "homepages/cac66fb440d23df0.raw",
+        "textPath": "homepages/cac66fb440d23df0.txt",
+        "bytes": 1070545,
+        "sha256": "df787c96c5e393541f47d15e8af472542f80998a321774139954a8676652b9d0",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 1.932
+      }
+    },
+    {
+      "name": "VENTYA",
+      "officialWebsite": "https://www.ventya.fr/",
+      "result": {
+        "url": "https://www.ventya.fr/",
+        "actors": [
+          "VENTYA"
+        ],
+        "observedAt": "2026-10-20T11:59:18.015415+00:00",
+        "urlKey": "4fb9ae79e70dd9e3",
+        "hops": [
+          {
+            "url": "https://www.ventya.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:18 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "content-length": "28045"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.ventya.fr/",
+        "rawPath": "homepages/4fb9ae79e70dd9e3.raw",
+        "textPath": "homepages/4fb9ae79e70dd9e3.txt",
+        "bytes": 28045,
+        "sha256": "ab6b7e5325288b6190b16e3144263071995f770a976f41851eff2e941854772b",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.145
+      }
+    },
+    {
+      "name": "VERYSWING",
+      "officialWebsite": "https://veryswing.com/",
+      "result": {
+        "url": "https://veryswing.com/",
+        "actors": [
+          "VERYSWING"
+        ],
+        "observedAt": "2026-10-20T11:59:18.160694+00:00",
+        "urlKey": "0993e535ba11d27a",
+        "hops": [
+          {
+            "url": "https://veryswing.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:19 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://veryswing.com/",
+        "rawPath": "homepages/0993e535ba11d27a.raw",
+        "textPath": "homepages/0993e535ba11d27a.txt",
+        "bytes": 286998,
+        "sha256": "4cac59fff3671faec6bacff04919b4e8e9a81c77089608e451d3afe800caf787",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 2.495
+      }
+    },
+    {
+      "name": "VosFactures",
+      "officialWebsite": "https://vosfactures.fr/",
+      "result": {
+        "url": "https://vosfactures.fr/",
+        "actors": [
+          "VosFactures"
+        ],
+        "observedAt": "2026-10-20T11:59:19.079935+00:00",
+        "urlKey": "b9d3158af3bb0a31",
+        "hops": [
+          {
+            "url": "https://vosfactures.fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:19 GMT",
+              "content-type": "text/html",
+              "content-length": "217970",
+              "last-modified": "Tue, 20 Oct 2026 11:29:46 GMT",
+              "etag": "\"6ad750aa-35372\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://vosfactures.fr/",
+        "rawPath": "homepages/b9d3158af3bb0a31.raw",
+        "textPath": "homepages/b9d3158af3bb0a31.txt",
+        "bytes": 217970,
+        "sha256": "b38162ee078bf68dcf6ebb14fa71ec9b8ce6c4580621baf5a307100059160a75",
+        "contentType": "text/html",
+        "signalLines": [],
+        "elapsedSeconds": 0.242
+      }
+    },
+    {
+      "name": "VOXEL, an Amadeus company",
+      "officialWebsite": "https://www.voxelgroup.net/facture-electronique/",
+      "result": {
+        "url": "https://www.voxelgroup.net/facture-electronique/",
+        "actors": [
+          "VOXEL, an Amadeus company"
+        ],
+        "observedAt": "2026-10-20T11:59:19.164465+00:00",
+        "urlKey": "794c13306e8c5e15",
+        "hops": [
+          {
+            "url": "https://www.voxelgroup.net/facture-electronique/",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:19 GMT",
+              "location": "https://www.voxelgroup.net/fr/plateforme-agreee",
+              "content-type": "text/html; charset=iso-8859-1"
+            }
+          },
+          {
+            "url": "https://www.voxelgroup.net/fr/plateforme-agreee",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:19 GMT",
+              "location": "https://www.voxelgroup.net/fr/plateforme-agreee/",
+              "content-length": "0",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          },
+          {
+            "url": "https://www.voxelgroup.net/fr/plateforme-agreee/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:21 GMT",
+              "last-modified": "Tue, 20 Oct 2026 07:02:13 GMT",
+              "content-type": "text/html; charset=UTF-8"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.voxelgroup.net/fr/plateforme-agreee/",
+        "rawPath": "homepages/794c13306e8c5e15.raw",
+        "textPath": "homepages/794c13306e8c5e15.txt",
+        "bytes": 213310,
+        "sha256": "525034103afc2b84846421d6da23949f1b8378b6178aaa4d62199113b87790ab",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 2.021
+      }
+    },
+    {
+      "name": "WEPROC",
+      "officialWebsite": "https://www.weproc.com/fr/",
+      "result": {
+        "url": "https://www.weproc.com/fr/",
+        "actors": [
+          "WEPROC"
+        ],
+        "observedAt": "2026-10-20T11:59:19.321503+00:00",
+        "urlKey": "140010594d39d7c6",
+        "hops": [
+          {
+            "url": "https://www.weproc.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:19 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 01:41:39 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.weproc.com/fr/",
+        "rawPath": "homepages/140010594d39d7c6.raw",
+        "textPath": "homepages/140010594d39d7c6.txt",
+        "bytes": 511916,
+        "sha256": "3a2541b789d150a406cb9665a733711945a6c00a27c4af7ca772b1b411569493",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.458
+      }
+    },
+    {
+      "name": "WiseTech GLOBAL",
+      "officialWebsite": "https://www.wisetechglobal.com/fr-fr/",
+      "result": {
+        "url": "https://www.wisetechglobal.com/fr-fr/",
+        "actors": [
+          "WiseTech GLOBAL"
+        ],
+        "observedAt": "2026-10-20T11:59:19.597987+00:00",
+        "urlKey": "fa761728afc30e50",
+        "hops": [
+          {
+            "url": "https://www.wisetechglobal.com/fr-fr/",
+            "httpStatus": 404,
+            "exitCode": 56,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:20 GMT",
+              "content-type": "text/html; charset=utf-8"
+            }
+          }
+        ],
+        "status": "failed",
+        "exitCode": 56,
+        "httpStatus": 404,
+        "error": "curl: (56) The requested URL returned error: 404"
+      }
+    },
+    {
+      "name": "XELYA",
+      "officialWebsite": "https://www.xelya.com/",
+      "result": {
+        "url": "https://www.xelya.com/",
+        "actors": [
+          "XELYA"
+        ],
+        "observedAt": "2026-10-20T11:59:19.779688+00:00",
+        "urlKey": "df8654ee8f15d552",
+        "hops": [
+          {
+            "url": "https://www.xelya.com/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:56:35 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "content-length": "267468",
+              "etag": "\"815470-1792449494;;;\""
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.xelya.com/",
+        "rawPath": "homepages/df8654ee8f15d552.raw",
+        "textPath": "homepages/df8654ee8f15d552.txt",
+        "bytes": 267468,
+        "sha256": "6514bcb96947c194991584342d51a2f1ad472f8ad732929a5e99290c2b04f467",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.195
+      }
+    },
+    {
+      "name": "YOOZ PDP",
+      "officialWebsite": "https://www.getyooz.com/fr",
+      "result": {
+        "url": "https://www.getyooz.com/fr",
+        "actors": [
+          "YOOZ PDP"
+        ],
+        "observedAt": "2026-10-20T11:59:19.974497+00:00",
+        "urlKey": "7f1d9652c7fbc157",
+        "hops": [
+          {
+            "url": "https://www.getyooz.com/fr",
+            "httpStatus": 301,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:20 GMT",
+              "content-type": "text/html",
+              "location": "https://www.getyooz.com/fr/"
+            }
+          },
+          {
+            "url": "https://www.getyooz.com/fr/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:20 GMT",
+              "content-type": "text/html; charset=UTF-8",
+              "last-modified": "Tue, 20 Oct 2026 08:57:24 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://www.getyooz.com/fr/",
+        "rawPath": "homepages/7f1d9652c7fbc157.raw",
+        "textPath": "homepages/7f1d9652c7fbc157.txt",
+        "bytes": 309521,
+        "sha256": "f93474cb82c34ef9b11d473b4eb5b657c445402211eef55ce5452d39147805f1",
+        "contentType": "text/html; charset=UTF-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.283
+      }
+    },
+    {
+      "name": "YTEMS",
+      "officialWebsite": "https://com.ytems.app/",
+      "result": {
+        "url": "https://com.ytems.app/",
+        "actors": [
+          "YTEMS"
+        ],
+        "observedAt": "2026-10-20T11:59:20.258040+00:00",
+        "urlKey": "bd3b8ae8c03af776",
+        "hops": [
+          {
+            "url": "https://com.ytems.app/",
+            "httpStatus": 200,
+            "exitCode": 0,
+            "headers": {
+              "date": "Tue, 20 Oct 2026 11:59:20 GMT",
+              "content-type": "text/html; charset=utf-8",
+              "last-modified": "Mon, 19 Oct 2026 16:40:11 GMT"
+            }
+          }
+        ],
+        "status": "read",
+        "httpStatus": 200,
+        "finalUrl": "https://com.ytems.app/",
+        "rawPath": "homepages/bd3b8ae8c03af776.raw",
+        "textPath": "homepages/bd3b8ae8c03af776.txt",
+        "bytes": 73551,
+        "sha256": "2af6ab48f87ab2545059879d921256117fd359f55fbaf0ff1cb3d06575698ca3",
+        "contentType": "text/html; charset=utf-8",
+        "signalLines": [],
+        "elapsedSeconds": 0.183
+      }
+    }
+  ]
+}

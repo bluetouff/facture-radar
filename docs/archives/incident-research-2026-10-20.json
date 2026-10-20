@@ -1,0 +1,1402 @@
+{
+  "checkedAt": "2026-10-20",
+  "since": "2026-09-01",
+  "refreshWindowSince": "2026-10-16",
+  "platformCount": 155,
+  "status": "partial_search",
+  "completedNominalSearches": 0,
+  "pendingNominalSearches": 155,
+  "lastCompletedCohort": {
+    "checkedAt": "2026-10-10",
+    "platformCount": 149
+  },
+  "previousPartialSearch": {
+    "checkedAt": "2026-10-14",
+    "completedNominalSearches": 23,
+    "pendingNominalSearches": 132,
+    "archive": "incident-research-2026-10-14.json"
+  },
+  "method": "Comparaison des deux listes officielles complètes, lectures des sources prioritaires et des accueils des 155 acteurs. Refus HTTP, échecs réseau et réponses limitées sont distingués des lectures substantielles. Les avis publiés et les pages de disponibilité manuelle sont relus ; les artifacts quotidiens servent à examiner les modifications sans relancer le collecteur. Aucun repli de recherche générique exécuté après Exa 402 ; décision de méthode en attente.",
+  "searchProvider": {
+    "name": "Exa",
+    "status": "credit_limit",
+    "httpStatus": 402,
+    "attempts": 1,
+    "numResultsRequested": 5,
+    "actualResultsReturned": 0,
+    "reportedAt": "2026-10-20T11:54:09.854Z"
+  },
+  "directHomepageReview": {
+    "actors": 155,
+    "uniqueUrls": 154,
+    "readUrls": 129,
+    "reusedUrls": 6,
+    "failedUrls": 19,
+    "httpRequests": 201,
+    "actorsWithSuccessfulRead": 136,
+    "actorsWithFailedRead": 19,
+    "urlsWithSignals": 3,
+    "maxConcurrentRequests": 4,
+    "perResponseTimeoutSeconds": 25,
+    "maxResponseBytes": 3145728,
+    "note": "Lectures directes des accueils ; aucune recherche nominative générale ni conclusion d’absence d’incident.",
+    "successfulUniqueUrls": 135,
+    "successfulActorRows": 136,
+    "successfulActorRowsWithLimitedText": 5,
+    "successfulActorRowsWithSubstantiveStaticText": 131,
+    "uniqueUrlsWithSubstantiveStaticText": 130,
+    "limitedStaticText": [
+      {
+        "actors": [
+          "MY FITECO"
+        ],
+        "url": "https://myfiteco.com/",
+        "textCharacters": 10,
+        "firstTextLine": "My fiteco"
+      },
+      {
+        "actors": [
+          "TAXERA"
+        ],
+        "url": "https://taxera.tech/",
+        "textCharacters": 100,
+        "firstTextLine": "Taxera Technologies — Global Tax Compliance Platform"
+      },
+      {
+        "actors": [
+          "jefacture.com"
+        ],
+        "url": "https://www.ecma-solutions.com/",
+        "textCharacters": 60,
+        "firstTextLine": "ECMA - JECMA"
+      },
+      {
+        "actors": [
+          "ESI"
+        ],
+        "url": "https://www.esi-groupe.com/",
+        "textCharacters": 11,
+        "firstTextLine": "ESI-GROUPE"
+      },
+      {
+        "actors": [
+          "LOGILEC"
+        ],
+        "url": "https://www.logilec.fr/",
+        "textCharacters": 94,
+        "firstTextLine": "Retrouvez-nous sur www.logilec.leclerc"
+      }
+    ],
+    "duplicateOfficialUrl": [
+      {
+        "actors": [
+          "KOLECTO PA",
+          "KOLECTO PDP"
+        ],
+        "url": "https://www.kolecto.fr/"
+      }
+    ],
+    "failureExitCodes": {
+      "56": 7,
+      "28": 11,
+      "63": 1
+    },
+    "failureHttpStatuses": {
+      "403": 6,
+      "0": 7,
+      "200": 5,
+      "404": 1
+    },
+    "failures": [
+      {
+        "actors": [
+          "ABBY"
+        ],
+        "url": "https://abby.fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "ADEMICO SOFTWARE"
+        ],
+        "url": "https://ademico-software.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "DIGIPHARMACIE"
+        ],
+        "url": "https://digipharmacie.fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "DOCPROCESS"
+        ],
+        "url": "https://doc-process.com/fr",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "ecosio InterCom, a Vertex Company"
+        ],
+        "url": "https://ecosio.com/fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "EDICOM Group"
+        ],
+        "url": "https://edicomgroup.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) Operation timed out after 25007 milliseconds with 0 bytes received"
+      },
+      {
+        "actors": [
+          "EDICOM France"
+        ],
+        "url": "https://edicomgroup.fr/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "AGS RECORDS MANAGEMENT"
+        ],
+        "url": "https://www.ags-recordsmanagement.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) Failed to connect to www.ags-recordsmanagement.com port 443 after 10009 ms: Timeout was reached"
+      },
+      {
+        "actors": [
+          "CBS Corporate Business Solutions"
+        ],
+        "url": "https://www.cbs-consulting.com/en/",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25004 milliseconds with 65070 out of 319764 bytes received"
+      },
+      {
+        "actors": [
+          "CEGEDIM"
+        ],
+        "url": "https://www.cegedim.fr/",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25006 milliseconds with 12422 out of 213615 bytes received"
+      },
+      {
+        "actors": [
+          "CHAINTRUST by Visma"
+        ],
+        "url": "https://www.chaintrust.io/",
+        "exitCode": 63,
+        "httpStatus": 200,
+        "error": "curl: (63) Exceeded the maximum allowed file size (3145728) with 3145728 bytes"
+      },
+      {
+        "actors": [
+          "CLEARTAX"
+        ],
+        "url": "https://www.cleartax.com/fr",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25002 milliseconds with 49124 bytes received"
+      },
+      {
+        "actors": [
+          "ENERJ"
+        ],
+        "url": "https://www.enerj.fr/",
+        "exitCode": 28,
+        "httpStatus": 200,
+        "error": "curl: (28) Operation timed out after 25005 milliseconds with 247082 out of 1418256 bytes received"
+      },
+      {
+        "actors": [
+          "LUNDI MATIN"
+        ],
+        "url": "https://www.lundimatin.fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "Docnova, MELASOFT GmbH"
+        ],
+        "url": "https://www.melasoft.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "PARAGON"
+        ],
+        "url": "https://www.paragon.world/fr",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "SAGE"
+        ],
+        "url": "https://www.sage.com/fr-fr/",
+        "exitCode": 56,
+        "httpStatus": 403,
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "actors": [
+          "SEEBURGER"
+        ],
+        "url": "https://www.seeburger.com/",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "error": "curl: (28) SSL connection timeout"
+      },
+      {
+        "actors": [
+          "WiseTech GLOBAL"
+        ],
+        "url": "https://www.wisetechglobal.com/fr-fr/",
+        "exitCode": 56,
+        "httpStatus": 404,
+        "error": "curl: (56) The requested URL returned error: 404"
+      }
+    ],
+    "qualifiedHomePageSignal": "mySupply/Inexchange communiqué vérifié séparément.",
+    "discardedKeywordSignals": [
+      {
+        "actors": [
+          "STORECOVE"
+        ],
+        "url": "https://www.storecove.com/fr/fr",
+        "reason": "Mention marketing de perturbations, aucun avis concret d’incident."
+      },
+      {
+        "actors": [
+          "SYMTRAX"
+        ],
+        "url": "https://www.symtrax.com/fr",
+        "reason": "Mention marketing de perturbations, aucun avis concret d’incident."
+      },
+      {
+        "actors": [
+          "TESISQUARE SPA"
+        ],
+        "url": "https://www.tesisquare.com/fr",
+        "reason": "Mention marketing de perturbations, aucun avis concret d’incident."
+      }
+    ],
+    "proofs": [
+      "actor-homepage-results.json",
+      "homepages-manifest.json",
+      "homepages-summary.json",
+      "homepages-progress.jsonl"
+    ]
+  },
+  "directHomepageEvidence": "provider-homepages-2026-10-20.json",
+  "queries": [
+    {
+      "platformSlug": "a-cube",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "abby",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "accenture",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "ademico",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "agena3000",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "agicap",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "arratech",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "arteva",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "aruba",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "avalara",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "axelor",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "axonaut",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "axway",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "azopio",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "b2brouter",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "b4value",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "basware",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "atgp",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "billit",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "blg",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "cbs",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "cecurity",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "cegedim",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "cegi-alfa",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "cegid",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "chaintrust",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "cleartax",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "comarch",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "cyclope",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "icd",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "dext",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "digipharmacie",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "tessi",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "digital-technologies",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "docnova",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "docoon",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "docprocess",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "docuware",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "dokapi",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "dougs",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "doxallia",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "bc-solutions",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "ecosio-intercom",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "edicom",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "edicom-group",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "edics",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "edieyes",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "edt",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "eezi",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "effinum",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "enerj",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "esalink",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "esi",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "esker",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "facnote",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "fiducial-cloud",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "fiskaltrust",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "flowie",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "fonoa",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "freedz",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "fulll",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "generix",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "gep",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "gestav",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "gurusoft",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "euro-information",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "iaf",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "iedi",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "iga-assurance",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "indicom",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "indy",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "intesa",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "paragon",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "invopop",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "iopole",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "ipaidthat",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "itesoft",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "jefacture",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "klekoon",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "kolecto",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "kolecto-pdp",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "village-connecte",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "legalinvoice",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "logilec",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "lucca",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "lundi-matin",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "macompta",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "marosa",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "medius",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "my-fiteco",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "mykinexo",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "mysupply",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "myunisoft",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "n2f",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "neotimo",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "ntt-data",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "odoo",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "darva",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "officein",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "pagero",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "one-up",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "open-bee",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "opentext",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "infologic",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "payflows",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "pennylane",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "qonto",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "qweeby",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "sage",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "sap",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "scribee",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "seeburger",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "sellsy",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "septeo",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "seqino",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "serensia",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "seres",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "shine",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "groupe-sigma",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "sni",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "solo",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "sovos",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "spendesk",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "sps-commerce",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "srci",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "storecove",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "superpdp",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "symtrax",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "taxera",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "tenor",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "tesisquare",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "tiime",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "tradeshift",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "transalis",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "treso2",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "tungsten",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "tx2",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "ventya",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "veryswing",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "vosfactures",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "voxel",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "weproc",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "ags-records",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "wisetech",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "xelya",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "yooz",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "ytems",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "entropics",
+      "checkedAt": "2026-10-10",
+      "recordedMethod": "searched",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "befresh",
+      "checkedAt": "2026-10-20",
+      "recordedMethod": "public_sites_reviewed",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "factureapp",
+      "checkedAt": "2026-10-20",
+      "recordedMethod": "public_sites_reviewed",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "insiders-technologies",
+      "checkedAt": "2026-10-20",
+      "recordedMethod": "public_sites_reviewed",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "kalanda",
+      "checkedAt": "2026-10-20",
+      "recordedMethod": "public_sites_reviewed",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "my-eddy",
+      "checkedAt": "2026-10-20",
+      "recordedMethod": "public_sites_reviewed",
+      "searchStatus": "pending",
+      "query": null
+    },
+    {
+      "platformSlug": "ratioo",
+      "checkedAt": "2026-10-20",
+      "recordedMethod": "public_sites_reviewed",
+      "searchStatus": "pending",
+      "query": null
+    }
+  ]
+}
