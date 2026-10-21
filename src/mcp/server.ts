@@ -65,6 +65,8 @@ export function createPaCheckMcpServer(revision: CorpusRevision): McpServer {
     websiteUrl: "https://pa.l0g.fr/agents/",
     description: "Corpus public sur les plateformes agréées et la facturation électronique en France.",
   }, {
+    // The largest public tool input has nine keys and two priority values.
+    maxToolInputElements: 32,
     instructions: [
       "Répondez d'abord à la question concrète de l'utilisateur.",
       "N'inventez jamais une fonction, un tarif ou une compatibilité absent du corpus.",

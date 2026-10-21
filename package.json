@@ -32,7 +32,7 @@
     "@astrojs/check": "^0.9.10",
     "@modelcontextprotocol/client": "^2.0.0",
     "@modelcontextprotocol/node": "^2.0.0",
-    "@modelcontextprotocol/server": "^2.0.0",
+    "@modelcontextprotocol/server": "^2.3.1",
     "@types/node": "^24.3.0",
     "esbuild": "^0.25.9",
     "exceljs": "^4.4.0",
@@ -40,7 +40,8 @@
   },
   "overrides": {
     "js-yaml": "5.4.2",
-    "uuid": "11.1.1"
+    "uuid": "11.1.1",
+    "vite": "8.2.4"
   },
   "engines": {
     "node": ">=22.0.0"
