@@ -87,6 +87,15 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
     }, ["dext-add-documents-2026", "dext-send-electronic-2026"], "L'ajout de documents et l'envoi par la PA sont décrits. Le traitement d'un Factur-X tiers et de son XML embarqué n'est pas précisé."),
     terminationTerms: documented("Le compte gratuit n'impose pas d'engagement. Les conditions applicables aux offres payantes dépendent de l'abonnement.", ["dext-pricing-2026"]),
   },
+  docnova: {
+    overagePricing: documented("La grille affiche Basic à 5 € par mois pour 10 documents, Standard à 15 € pour 30 documents et Premium à 25 € pour 100 documents. Enterprise est sur contact. TVA, prix des dépassements et conditions API restent à confirmer ; ces volumes ne sont pas convertis en quotas de factures.", ["docnova-pricing-20261022", "docnova-pricing-frame-20261022"], "La grille exclut les intégrations ERP par API de Free, Basic, Standard et Premium.", "2026-10-22"),
+    exitTerms: documented<ExitTerms>({
+      bulkExport: null,
+      formats: ["PDF", "XML"],
+      postTerminationAccess: null,
+      fees: null,
+    }, ["docnova-pricing-20261022", "docnova-pricing-frame-20261022"], "La vue, le téléchargement et l’envoi PDF/XML sont inclus dans Free. La grille ne précise pas une restitution complète en masse des factures, pièces et statuts, ni l’accès après résiliation.", "2026-10-22"),
+  },
   doxallia: {
     iso27001Scope: documented<Iso27001ScopeDetail>({
       evidenceKind: "certificate",
@@ -149,6 +158,21 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
   },
   ipaidthat: {
     exitTerms: documented<ExitTerms>({ bulkExport: null, formats: [], postTerminationAccess: null, fees: null }, ["ipaidthat-portabilite-20261004"], "L’aide décrit la portabilité entrante de la ligne d’annuaire, avec un délai minimum de 10 jours. L’historique des factures et leurs cycles restent chez la PA précédente ; la procédure transfère la ligne, sans reprendre les factures passées. Les conditions d’export complet et d’accès après résiliation restent à obtenir auprès de cette PA.", "2026-10-04"),
+  },
+  infologic: {
+    iso27001Scope: declared<Iso27001ScopeDetail>({
+      evidenceKind: "scope_statement",
+      legalEntity: null,
+      standard: "ISO/IEC 27001:2022",
+      certificateNumber: null,
+      certificationBody: "AFNOR",
+      validFrom: null,
+      validUntil: null,
+      statementOfApplicability: null,
+      scopeText: "Développement, commercialisation, intégration, hébergement et maintenance de l’ERP Copilote et de ses services en ligne, dont la PA (facturation électronique).",
+      platformRelation: "explicit_platform",
+      validity: "not_published",
+    }, ["infologic-iso-20261022", "infologic-certificate-20261022"], "L’éditeur annonce une certification délivrée par AFNOR, prenant effet le 27 août 2025. Le certificat signé courant, son titulaire exact, son numéro et ses dates de validité restent à rattacher ; cette date annoncée n’est pas reportée comme période certifiée vérifiée.", "2026-10-22"),
   },
   fulll: {
     availability: {
@@ -244,7 +268,7 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
   },
   shine: {
     availability: {
-      sendsInvoices: available("Shine Facture, avec ou sans compte professionnel", ["shine-pa-2026", "shine-activation-2026"]),
+      sendsInvoices: documented({ stage: "available", scope: "Émission électronique B2B depuis Shine Facture, avec ou sans compte professionnel" }, ["shine-pa-2026", "shine-activation-2026", "shine-send-20261022"], "L’aide exclut actuellement l’envoi de factures électroniques à une entité publique depuis Shine Facture. Cette limite B2G ne remet pas en cause l’émission B2B documentée.", "2026-10-22"),
       receivesInvoices: available("Shine Facture, avec ou sans compte professionnel", ["shine-pa-2026", "shine-activation-2026"]),
     },
     terminationTerms: documented("L'offre de facturation étudiée est annoncée sans engagement.", ["shine-pricing-2026"]),

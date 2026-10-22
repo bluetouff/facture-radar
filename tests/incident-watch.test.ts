@@ -29,7 +29,7 @@ test("VosFactures : la notification relayée reste attribuée au prestataire", (
   assert.match(event.summary, /Factuali déclare épargnés les services de facturation électronique/);
   assert.match(event.summary, /invalidation des codes API est annoncée pour le 1er octobre/);
   assert.match(event.limitations, /bornes historiques des données polonaises/);
-  assert.equal(platformIncidents.filter(item => item.scope === "pa").length, 15);
+  assert.equal(platformIncidents.filter(item => item.scope === "pa").length, 16);
   assert.throws(() => validateIncidents([{ ...event, verification: "primary_notice" }]));
   for (const id of event.sourceIds) assert.ok(incidentWatchCorpus().sources.some(source => source.id === id));
   assert.deepEqual(getPlatform("vosfactures")!.incidentWatch.incidents, watch.incidents);
@@ -163,14 +163,14 @@ test("dates au jour près, détection et résolution sans date restent fidèles 
   const xml = renderIncidentRss([event]);
   assert.ok(!xml.includes("<pubDate>"));
   assert.match(xml, /Date non publiée/);
-  for (const change of [{ startedAt: "2026-09-31" }, { startedAt: "2026-08-01" }, { startedAt: null }, { detectedAt: "2026-09-02" }, { resolutionReportedAt: "2026-09-03" }, { updatedAt: "2026-10-21" }]) assert.throws(() => validateIncidents([{ ...event, ...change }]));
+  for (const change of [{ startedAt: "2026-09-31" }, { startedAt: "2026-08-01" }, { startedAt: null }, { detectedAt: "2026-09-02" }, { resolutionReportedAt: "2026-09-03" }, { updatedAt: "2026-10-23" }]) assert.throws(() => validateIncidents([{ ...event, ...change }]));
   const dated = platformIncidents.find(event => event.updatedAt?.includes("T"))!;
   assert.match(renderIncidentRss([dated]), /<pubDate>/);
 });
 
 test("les avis distinguent PA, application et dépendance sans durée inventée", () => {
-  assert.equal(platformIncidents.length, 83);
-  assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 15);
+  assert.equal(platformIncidents.length, 88);
+  assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 16);
   assert.equal(platformIncidents.find(event => event.id === "esker-french-b2b-20260915")!.status, "unknown");
   assert.equal(incidentsForPlatform("pennylane").incidents[0]!.scope, "publisher_service");
   assert.equal(platformIncidents.find(event => event.id === "welyb-cecurity-consultation-20260904")!.startedAt, "2026-09-04");
@@ -209,7 +209,7 @@ test("revue du 14 octobre : flux français, dépendance et avis sans date resten
     const event = platformIncidents.find(item => item.id === id)!;
     assert.equal(event.scope, "pa");
     assert.equal(event.kind, "availability");
-    assert.equal(event.startedAt, null);
+    assert.equal(event.startedAt, id === "tungsten-france-20261013" ? "2026-10-12T06:51:00Z" : null);
     assert.match(event.firstReportedAt!, /^2026-10-13T/);
   }
   const connector = platformIncidents.find(item => item.id === "welyb-cecurity-recuperation-20261014")!;
@@ -236,11 +236,11 @@ test("recherche nominative terminée pour les 155 PA, couverture historique cons
   assert.equal(securityReview.status, "public_search_completed");
   assert.equal(securityReview.platformCount, platforms.length);
   assert.equal(incidentResearch.filter(item => item.status === "searched").length, 155);
-  assert.ok(incidentResearch.every(item => item.checkedAt === "2026-10-20"));
+  assert.ok(incidentResearch.every(item => item.checkedAt === "2026-10-22"));
   for (const slug of ["befresh", "factureapp", "insiders-technologies", "kalanda", "my-eddy", "ratioo"]) {
     const research = incidentResearch.find(item => item.platformSlug === slug)!;
     assert.equal(research.status, "searched");
-    assert.equal(research.checkedAt, "2026-10-20");
+    assert.equal(research.checkedAt, "2026-10-22");
     assert.equal(incidentsForPlatform(slug).security.status, "public_search_completed");
     assert.equal(getPlatform(slug)!.incidentWatch.security.status, "public_search_completed");
     assert.equal(incidentsForPlatform(slug).coverage.checkedAt, null);
@@ -333,10 +333,9 @@ test("avis du 20 octobre : support et historique découvert restent distincts de
     assert.equal(event.startedAt, null);
   }
   const help = platformIncidents.find(event => event.id === "sage-help-fr-20261020")!;
-  assert.equal(help.status, "monitoring");
-  assert.equal(help.resolutionReportedAt, null);
-  assert.equal(help.updatedAt, "2026-10-20T12:59:35Z");
-  assert.equal(help.resolutionReportedAt, null);
+  assert.equal(help.status, "resolved");
+  assert.equal(help.resolutionReportedAt, "2026-10-21T09:36:22Z");
+  assert.equal(help.updatedAt, "2026-10-21T09:36:22Z");
   const pagero = platformIncidents.find(event => event.id === "pagero-online-20261009")!;
   assert.equal(pagero.firstObservedAt, "2026-10-20");
   assert.equal(pagero.firstReportedAt, "2026-10-09T11:20:01Z");
@@ -477,7 +476,7 @@ test("une mise à jour est détectée sans répéter un avis inchangé", () => {
 });
 test("API et MCP présentent incidents, couverture et mêmes sources", () => {
   const result = getResourceByUri("pacheck://corpus/incidents", {revision:"test",builtAt:"2026-09-16"}) as ReturnType<typeof incidentWatchCorpus>;
-  assert.equal(result.incidents.length, 83);
+  assert.equal(result.incidents.length, 88);
   assert.deepEqual(getPlatform("esker")!.incidentWatch.incidents, incidentsForPlatform("esker").incidents);
 });
 
@@ -511,7 +510,7 @@ test("le retrait du message Esker conserve la dernière date publiée sans inven
   assert.equal(event.status, "unknown");
   assert.equal(event.resolutionReportedAt, null);
   assert.equal(event.updatedAt, "2026-09-15T12:15:00Z");
-  assert.equal(event.checkedAt, "2026-10-20");
+  assert.equal(event.checkedAt, "2026-10-22");
 });
 
 test("avis initial non daté : observation et résolution restent distinctes pour le service connecté", () => {
@@ -528,7 +527,7 @@ test("avis initial non daté : observation et résolution restent distinctes pou
   assert.match(xml, /Première observation par PA Check/);
   assert.ok(!xml.includes("<pubDate>"));
   assert.deepEqual(getPlatform("jefacture")!.incidentWatch.incidents.find(item => item.id === event.id), event);
-  for (const change of [{ firstObservedAt: "2026-10-21" }, { firstObservedAt: "2026-09-31" }, { relationship: undefined }]) {
+  for (const change of [{ firstObservedAt: "2026-10-23" }, { firstObservedAt: "2026-09-31" }, { relationship: undefined }]) {
     assert.throws(() => validateIncidents([{ ...event, ...change }]));
   }
 });

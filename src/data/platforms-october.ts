@@ -87,8 +87,9 @@ export const octoberPlatforms: Platform[] = [
     "sourceIds": [],
     "checkedAt": "2026-10-14",
     "note": "La transmission des données de transactions et paiements au dispositif français n’est pas documentée."
-  }
-}),
+  },
+  iso27001: {"value":true,"status":"declared","sourceIds":["befresh-iso-claim-20261022"],"checkedAt":"2026-10-22","note":"Dans une publication du 25 juin 2026, BeFresh déclare une certification ISO/IEC 27001:2022 depuis septembre 2025 pour son SMSI couvrant notamment les logiciels de facturation, le SaaS et le point d’accès Peppol. Certificat courant, dates de validité et périmètre PA français restent à documenter."},
+  }),
   expand({
   "slug": "factureapp",
   "displayName": "FacturesApp",
@@ -475,7 +476,7 @@ export const octoberPlatforms: Platform[] = [
 }),
 ].map(platform => {
   for (const value of Object.values(platform)) {
-    if (value && typeof value === "object" && "checkedAt" in value) value.checkedAt = checkedAt;
+    if (value && typeof value === "object" && "checkedAt" in value && value.checkedAt < checkedAt) value.checkedAt = checkedAt;
   }
   platform.officialStatus.sourceIds = ["dgfip-list-20261014"];
   platform.registeredAt.sourceIds = ["dgfip-list-20261014"];

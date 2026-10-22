@@ -3958,5 +3958,229 @@
     "url": "https://gestav.com/cgv",
     "type": "contract",
     "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "esker-ar24-ere-20261021",
+    "title": "Esker : envoi et consultation des lettres recommandées électroniques perturbés chez AR24",
+    "publisher": "Esker",
+    "url": "https://www.trustesker.com/?env=G",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "ar24-maintenance-20261021",
+    "title": "AR24 : maintenance exceptionnelle de production annoncée le 21 octobre",
+    "publisher": "AR24",
+    "url": "https://status.ar24.fr/incidents/r8v3d314fzbm",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "sage-connector-cloud-20261020",
+    "title": "Sage Génération Experts Connector Cloud France : incident du 20 octobre clos le 21",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/yjw96gx5rv4q",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "tungsten-france-writeup-20261022",
+    "title": "Tungsten : retour d’incident France, début des retards le 12 octobre et rattrapage terminé le 14",
+    "publisher": "Tungsten Automation",
+    "url": "https://status.tungstencloud.com/europe/incidents/01M4TARHBEYH5A44V3BYN9BKQ6/write-up",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "cegedim-index-20261022",
+    "title": "Cegedim : notes de version datées du 21 octobre, calendrier indicatif",
+    "publisher": "Cegedim Business Services",
+    "url": "https://help.sybycegedim.com/en_US/release-note-sy/releasenote-2026",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "docnova-pricing-20261022",
+    "title": "Docnova : offres publiques françaises",
+    "publisher": "Docnova / Melasoft",
+    "url": "https://docnova.ai/fr/prix/",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "docnova-pricing-frame-20261022",
+    "title": "Docnova : grille des plans incorporée à la page officielle des prix",
+    "publisher": "Docnova / Melasoft",
+    "url": "https://7a6e21cd-a062-4a53-9fc1-5d36dd0ac39f.vercel.app/#docnova-price",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "neotimo-pricing-20261022",
+    "title": "Neotimo : offres entreprises et mandataires",
+    "publisher": "Neotimo",
+    "url": "https://neotimo.com/pricing",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "neotimo-developers-20261022",
+    "title": "Neotimo : accès développeurs et état annoncé de l’API",
+    "publisher": "Neotimo",
+    "url": "https://neotimo.com/developers",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "axelor-pricing-20261022",
+    "title": "Axelor : tarifs ERP par utilisateur et minimums de souscription",
+    "publisher": "Axelor",
+    "url": "https://axelor.com/fr/tarifs/",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "infologic-iso-20261022",
+    "title": "Infologic : facturation électronique et portée ISO déclarée",
+    "publisher": "Infologic",
+    "url": "https://www.infologic-copilote.fr/infos-erp-copilote/infologic-facturation-electronique-2026/",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "infologic-certificate-20261022",
+    "title": "Infologic : annonce de certification ISO 27001",
+    "publisher": "Infologic",
+    "url": "https://www.infologic-copilote.fr/infos-entreprise/certification-iso-27001/",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "xelya-themisia-faq-20261022",
+    "title": "Themisia : FAQ sur les droits et la facturation",
+    "publisher": "Themisia / Xelya",
+    "url": "https://themisia.paris/faq",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "xelya-themisia-offer-20261022",
+    "title": "Themisia : prix et conditions selon le Barreau et le rôle",
+    "publisher": "Themisia / Xelya",
+    "url": "https://themisia.paris/offre",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "xelya-themisia-invoicing-20261022",
+    "title": "Themisia : réception et archivage des factures",
+    "publisher": "Themisia / Xelya",
+    "url": "https://themisia.paris/facturation-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "shine-send-20261022",
+    "title": "Shine Facture : émission électronique et limite des destinataires publics",
+    "publisher": "Shine",
+    "url": "https://help.shine.fr/shine-facture/fr/articles/13402315-comment-envoyer-une-facture-electronique",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "officein-coffre-20261022",
+    "title": "OfficeIn : coffre-fort officines, espace comptable et conditions de l’offre affichée",
+    "publisher": "OfficeIn",
+    "url": "https://coffre-fort.officein.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "befresh-iso-claim-20261022",
+    "title": "BeFresh : déclaration ISO/IEC 27001:2022 publiée le 25 juin 2026",
+    "publisher": "BeFresh, publication officielle LinkedIn",
+    "url": "https://www.linkedin.com/posts/befresh-lu_befresh-certified-iso-27001-since-september-activity-7475834918745587713-VVal",
+    "type": "security",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "atgp-beefact-20261022",
+    "title": "@GP : mode dégradé PHP et rétablissement de BEE-FACT annoncé le 22 octobre",
+    "publisher": "@GP",
+    "url": "https://www.atgp.net/info-incidents/",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "flowie-changelog-20261022",
+    "title": "Flowie Exchange : consentement MCP v3.44.4 du 22 octobre",
+    "publisher": "Flowie",
+    "url": "https://docs.get-flowie.com/changelog.fr",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "lucca-pricing-20261022",
+    "title": "Tarifs Lucca : exemple Factures exprimé par facture, pas par mois",
+    "publisher": "Lucca",
+    "url": "https://www.lucca.fr/tarifs/",
+    "type": "pricing",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "treso2-faq-20261022",
+    "title": "TRESO2 : FAQ intégrations ERP, API JSON et sandbox",
+    "publisher": "TRESO2 / Pytheas Capital",
+    "url": "https://www.treso2.com/ressources/faq",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "paragon-faq-20261022",
+    "title": "IPP Paragon : FAQ conversion des formats et intégration API/EDI",
+    "publisher": "Paragon",
+    "url": "https://paragon-pa.com/faq/",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "ytems-faq-20261022",
+    "title": "Ytems : FAQ Factur-X, réception et export de documents",
+    "publisher": "Ytems",
+    "url": "https://com.ytems.app/faq",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "arratech-reporting-20261022",
+    "title": "Arratech : API française d’e-reporting par événements",
+    "publisher": "Arratech",
+    "url": "https://docs.arratech.com/api/france-e-reporting",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "sage-help-fr-20261022",
+    "title": "Sage : centre d’aide français, résolution annoncée le 21 octobre",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/4ntqxltb75j1",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "pagero-france-20260925",
+    "title": "Pagero Online France : perturbations intermittentes du 25 septembre",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/incidents/rywg5sl5z73c",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "pagero-attachments-20260924",
+    "title": "Pagero Online et TMS : fichiers supplémentaires du 24 septembre",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/incidents/t0xjfy9kssq4",
+    "type": "documentation",
+    "accessedAt": "2026-10-22"
   }
 ]

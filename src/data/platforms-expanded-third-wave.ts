@@ -1,5 +1,5 @@
 import type { Platform } from "./types.ts";
-import { declared, documented, expand } from "./platforms-expanded.ts";
+import { declared, documented, expand, unknown } from "./platforms-expanded.ts";
 
 const free = (label: string, sourceIds: string[]) => documented({
   kind: "free" as const,
@@ -49,7 +49,7 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "arratech", displayName: "Arratech Connect", officialName: "Arratech", registeredAt: "2026-07-03",
     summary: "Passerelle européenne d'e-invoicing avec API, webhooks, portail et déploiements multi-pays.",
     targets: ["pme", "eti", "ge"], ecosystem: ["API", "webhooks", "Peppol", "ERP"],
-    sendsInvoices: documented(true, ["arratech-france-2026"]), receivesInvoices: documented(true, ["arratech-france-2026"]), eReporting: documented(true, ["arratech-france-2026"]),
+    sendsInvoices: documented(true, ["arratech-france-2026"]), receivesInvoices: documented(true, ["arratech-france-2026"]), eReporting: {"value":true,"status":"documented","sourceIds":["arratech-france-2026","arratech-reporting-20261022"],"checkedAt":"2026-10-22","note":"La documentation technique française décrit l’envoi d’événements via API pour les sous-flux 10.1 à 10.4. Le mode SELF_SUBMIT est celui à utiliser ; PLATFORM_DERIVED est annoncé mais indisponible et refusé. L’acceptation d’un événement signifie sa prise en charge, pas son dépôt effectif : le statut de déclaration et son résultat doivent être suivis séparément."},
     publicApi: documented({ available: true, includedInFree: null }, ["arratech-api-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["arratech-france-2026"]), integrations: documented(["API REST", "webhooks", "ERP", "Peppol"], ["arratech-france-2026", "arratech-api-2026"]),
     hostingCountries: declared(["Allemagne"], ["arratech-api-2026"], "Le déploiement standard est annoncé à Francfort ; des déploiements nationaux sont aussi proposés."),
     importantUnknowns: ["Prix et volumes", "Lieu retenu pour un contrat France", "SLA contractuel", "Restitution complète"],
@@ -119,9 +119,10 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "docnova", displayName: "Docnova", officialName: "Docnova, MELASOFT GmbH", registeredAt: "2026-05-13",
     summary: "Portail et API de facturation électronique européenne avec une formule gratuite limitée.",
     targets: ["micro", "tpe", "pme", "eti"], ecosystem: ["API", "EDI", "Peppol", "portail"],
-    pricing: free("Formule gratuite limitée à cinq factures par mois", ["docnova-pricing-2026"]), allowance: documented({ monthlyInvoices: 5, annualInvoices: null, unlimited: false, label: "Cinq factures par mois dans la formule gratuite" }, ["docnova-pricing-2026"]),
-    sendsInvoices: documented(true, ["docnova-france-2026"]), receivesInvoices: documented(true, ["docnova-france-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["docnova-france-2026"]), integrations: documented(["API", "EDI", "Peppol", "portail"], ["docnova-france-2026"]), commitmentMonths: documented(0, ["docnova-pricing-2026"]),
-    importantUnknowns: ["E-reporting France", "Coût au-delà de cinq factures", "Hébergement", "Restitution complète"],
+    pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["micro", "tpe", "pme"], promotionalPriceExcluded: true, label: "Formule gratuite limitée à cinq factures par mois" }, ["docnova-pricing-2026", "docnova-pricing-20261022", "docnova-pricing-frame-20261022"], "La grille embarquée affiche Basic à 5 € par mois pour 10 documents, Standard à 15 € pour 30 documents et Premium à 25 € pour 100 documents ; Enterprise est sur contact. TVA et coût des dépassements restent à préciser. Ces paliers en documents ne sont pas convertis en quotas de factures.", "2026-10-22"), allowance: documented({ monthlyInvoices: 5, annualInvoices: null, unlimited: false, label: "Cinq factures par mois dans la formule gratuite" }, ["docnova-pricing-2026", "docnova-pricing-frame-20261022"], "Free indique cinq factures par mois et une ligne Documents limitée à cinq. Le décompte commun ou séparé de l’émission et de la réception reste à confirmer.", "2026-10-22"),
+    sendsInvoices: documented(true, ["docnova-france-2026"]), receivesInvoices: documented(true, ["docnova-france-2026"]), publicApi: documented({ available: true, includedInFree: false }, ["docnova-france-2026", "docnova-pricing-frame-20261022"], "La grille exclut les intégrations ERP par API de Free, Basic, Standard et Premium. Les conditions API de l’offre Enterprise restent à confirmer.", "2026-10-22"), integrations: documented(["API", "EDI", "Peppol", "portail"], ["docnova-france-2026"]), commitmentMonths: documented(0, ["docnova-pricing-2026"]),
+    exportDocumented: documented(true, ["docnova-pricing-20261022", "docnova-pricing-frame-20261022"], "La grille inclut la vue, le téléchargement et l’envoi PDF/XML dans Free. Elle ne décrit pas une restitution complète en masse, les statuts ou l’accès après résiliation.", "2026-10-22"),
+    importantUnknowns: ["E-reporting France", "Coût des dépassements et de l’API", "Décompte des documents entrants et sortants", "Hébergement", "Restitution complète"],
   }),
   expand({
     slug: "freedz", displayName: "Freedz", officialName: "DOCOON IMMO / FREEDZ", registeredAt: "2025-12-23",
@@ -280,10 +281,11 @@ export const thirdWavePlatforms: Platform[] = [
   }),
   expand({
     slug: "neotimo", displayName: "Neotimo", officialName: "NEOTIMO", registeredAt: "2026-04-13",
-    summary: "Plateforme française gratuite et illimitée, avec API et documentation développeur publique.",
+    summary: "Conformité électronique gratuite sans limite de volume, avec offres optionnelles pour entreprises et mandataires ; accès API de production à confirmer.",
     targets: ["micro", "tpe", "pme", "eti"], ecosystem: ["API", "Peppol", "facturation", "développeurs"],
-    pricing: free("Plateforme gratuite et annoncée sans limite de factures", ["neotimo-pricing-2026"]), allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: true, label: "Factures annoncées illimitées" }, ["neotimo-pricing-2026"]),
-    sendsInvoices: documented(true, ["neotimo-home-2026"]), receivesInvoices: documented(true, ["neotimo-home-2026"]), eReporting: documented(true, ["neotimo-home-2026"]), publicApi: documented({ available: true, includedInFree: false }, ["neotimo-developers-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["neotimo-home-2026"]), integrations: documented(["API", "Peppol"], ["neotimo-developers-2026"]), commitmentMonths: documented(0, ["neotimo-pricing-2026"]), hostingCountries: declared(["France"], ["neotimo-home-2026"]), iso27001: declared(true, ["neotimo-home-2026"]),
+    pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["micro", "tpe", "pme"], promotionalPriceExcluded: true, label: "Plateforme gratuite et annoncée sans limite de factures" }, ["neotimo-pricing-2026", "neotimo-pricing-20261022", "neotimo-developers-20261022"], "Essentiel inclut la conformité sans limite de volume. Les offres payantes ajoutent des services dont plusieurs restent En finition ou Sur la feuille de route. Pour les tiers sous mandat, Gestionnaire affiche 79 € HT par mois avec facture annuelle de 790 € HT ; Cabinet affiche 149 € HT avec facture annuelle de 1 490 € HT. La grille annonce une sandbox API libre, mais la page développeurs indique encore une finalisation et une demande d’accès ; disponibilité de production et conditions API à confirmer.", "2026-10-22"), allowance: documented({ monthlyInvoices: null, annualInvoices: null, unlimited: true, label: "Factures annoncées illimitées" }, ["neotimo-pricing-2026"]),
+    sendsInvoices: documented(true, ["neotimo-home-2026"]), receivesInvoices: documented(true, ["neotimo-home-2026"]), eReporting: documented(true, ["neotimo-home-2026"]), publicApi: { ...unknown<{ available: boolean; includedInFree: boolean | null }>("La page développeurs indique une API en cours de finalisation avec demande d’accès, tandis que la grille annonce une sandbox libre. Disponibilité de production à confirmer."), checkedAt: "2026-10-22" }, formats: documented(["Factur-X", "UBL", "CII"], ["neotimo-home-2026"]), integrations: documented(["API", "Peppol"], ["neotimo-developers-2026"]), commitmentMonths: documented(0, ["neotimo-pricing-2026"]), hostingCountries: declared(["France"], ["neotimo-home-2026"]), iso27001: declared(true, ["neotimo-home-2026"]),
+    accountantAccess: declared(true, ["neotimo-pricing-20261022"], "Gestionnaire et Gestionnaire Cabinet permettent aux cabinets et mandataires d’opérer les dossiers sous mandat, avec respectivement cinq et quinze utilisateurs. L’accès individuel du mandant à son espace et l’API multi-dossiers restent annoncés sur la feuille de route.", "2026-10-22"),
     importantUnknowns: ["Tarif et volumes de l'API", "Conditions d'accès à l'API de production", "Sous-traitants", "Restitution complète"],
   }),
   expand({
@@ -291,7 +293,13 @@ export const thirdWavePlatforms: Platform[] = [
     summary: "Outil de contrôle et de centralisation des factures fournisseurs destiné aux pharmacies.",
     targets: ["micro", "tpe", "pme"], ecosystem: ["pharmacie", "contrôle de remises", "factures fournisseurs", "banque"],
     integrations: documented(["factures fournisseurs", "relevés bancaires", "logiciels de pharmacie"], ["officein-home-2026"]),
-    importantUnknowns: ["Réception réglementaire", "Émission", "E-reporting", "Prix, formats et sortie"],
+    importantUnknowns: ["Réception réglementaire","Émission","E-reporting","Tarif actuel : 0 € HT/mois affiché avec une condition d’inscription avant le 1er septembre","Formats, restitution et certificat ISO applicable"],
+
+    accountantAccess: {"value":true,"status":"documented","sourceIds":["officein-coffre-20261022"],"checkedAt":"2026-10-22","note":"La page du coffre-fort propose un espace comptable dédié. Les conditions d’activation et d’accès dans l’offre actuellement souscrite restent à confirmer."},
+
+    hostingCountries: {"value":["France"],"status":"declared","sourceIds":["officein-coffre-20261022"],"checkedAt":"2026-10-22","note":"OfficeIn annonce un hébergement en France pour son coffre-fort officines. Le fournisseur et le périmètre contractuel précis restent à documenter."},
+
+    iso27001: {"value":true,"status":"declared","sourceIds":["officein-coffre-20261022"],"checkedAt":"2026-10-22","note":"La page revendique ISO 27001 et affiche le logo. Certificat public, titulaire, organisme, validité et périmètre de la PA française restent à obtenir."},
   }),
   expand({
     slug: "one-up", displayName: "OneUp", officialName: "ONE UP", registeredAt: "2026-01-08",
@@ -339,7 +347,7 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "treso2", displayName: "Treso2", officialName: "TRESO2", registeredAt: "2026-01-08",
     summary: "Plateforme de trésorerie et de facturation avec API, ERP et tarifs publics.",
     targets: ["pme", "eti", "ge"], ecosystem: ["trésorerie", "API", "ERP", "facturation"],
-    pricing: paid(79, "Essential à partir de 79 € HT par mois, plus 0,08 € par facture", ["treso2-pricing-2026"]), sendsInvoices: documented(true, ["treso2-invoices-2026"]), receivesInvoices: documented(true, ["treso2-invoices-2026"]), eReporting: documented(true, ["treso2-invoices-2026"]), publicApi: documented({ available: true, includedInFree: false }, ["treso2-pricing-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["treso2-invoices-2026"]), integrations: documented(["API", "ERP", "trésorerie"], ["treso2-invoices-2026"]),
+    pricing: paid(79, "Essential à partir de 79 € HT par mois, plus 0,08 € par facture", ["treso2-pricing-2026"]), sendsInvoices: documented(true, ["treso2-invoices-2026"]), receivesInvoices: documented(true, ["treso2-invoices-2026"]), eReporting: documented(true, ["treso2-invoices-2026"]), publicApi: {"value":{"available":true,"includedInFree":false},"status":"documented","sourceIds":["treso2-pricing-2026","treso2-faq-20261022"],"checkedAt":"2026-10-22","note":"La FAQ décrit une entrée JSON et la génération des formats réglementaires, ainsi qu’une sandbox annoncée disponible pour tester ses propres données. Les connexions passent par API ou échange de fichiers ; le prix et les conditions de l’intégration restent à confirmer dans l’offre souscrite."}, formats: documented(["Factur-X", "UBL", "CII"], ["treso2-invoices-2026"]), integrations: {"value":["API","ERP","trésorerie","Sage","SAP","Microsoft Dynamics","Cegid","Oracle","EBP","Infor","Blackline","échange de fichiers","template Excel"],"status":"documented","sourceIds":["treso2-invoices-2026","treso2-faq-20261022"],"checkedAt":"2026-10-22","note":"ERP et logiciels comptables nommés dans la FAQ. API ou échange de fichiers ; template Excel annoncé pour les structures sans ERP. La compatibilité de chaque version et le coût de raccordement restent à confirmer."},
     importantUnknowns: ["Nombre de factures incluses", "Coût d'installation", "Engagement", "Hébergement et sortie"],
   }),
   expand({
@@ -382,8 +390,9 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "xelya", displayName: "Xelya", officialName: "XELYA", registeredAt: "2026-05-13",
     summary: "Plateforme intégrée aux logiciels Ximi, Diapaz et Themisia pour conserver son outil métier.",
     targets: ["tpe", "pme", "eti"], ecosystem: ["Ximi", "Diapaz", "Themisia", "services à la personne"],
-    sendsInvoices: documented(true, ["xelya-pa-2026"]), receivesInvoices: documented(true, ["xelya-pa-2026"]), eReporting: documented(true, ["xelya-pa-2026"]), integrations: documented(["Ximi", "Diapaz", "Themisia"], ["xelya-pa-2026"]),
-    importantUnknowns: ["Prix et volumes", "Accès hors logiciels Xelya", "Formats", "API et sortie"],
+    pricing: documented({ kind: "included", monthlyFrom: null, unit: "user", freeFor: [], promotionalPriceExcluded: true, label: "Socle Themisia : gratuité sous conditions Barreau de Paris, sinon 25 € HT par utilisateur et par mois" }, ["xelya-themisia-offer-20261022", "xelya-themisia-faq-20261022"], "Le Socle Themisia est gratuit pour les avocats dirigeants et associés du Barreau de Paris, au titre du SIREN de leur structure. Les autres avocats et les collaborateurs rejoignant le cabinet sont facturés 25 € HT par utilisateur et par mois. Un collaborateur libéral parisien dirigeant de son entreprise individuelle bénéficie du socle gratuit sur son propre SIREN. Cette tarification ne décrit pas les offres Ximi, Diapaz ou une PA Xelya autonome.", "2026-10-22"),
+    sendsInvoices: documented(true, ["xelya-pa-2026"]), receivesInvoices: documented(true, ["xelya-pa-2026", "xelya-themisia-invoicing-20261022"], "La réception et l’archivage des factures fournisseurs sont inclus dans le Socle Themisia, sans option payante ni surcoût au volume. Les conditions des autres logiciels Xelya restent distinctes.", "2026-10-22"), eReporting: documented(true, ["xelya-pa-2026"]), integrations: documented(["Ximi", "Diapaz", "Themisia"], ["xelya-pa-2026"]),
+    importantUnknowns: ["Prix et volumes hors Socle Themisia", "Accès hors logiciels Xelya", "Formats", "API et sortie"],
   }),
   expand({
     slug: "ytems", displayName: "Ytems", officialName: "YTEMS", registeredAt: "2026-08-03",
@@ -391,5 +400,7 @@ export const thirdWavePlatforms: Platform[] = [
     targets: ["micro", "tpe", "pme"], ecosystem: ["expert-comptable", "cabinets", "inscription clients", "production comptable"],
     accountantAccess: documented(true, ["ytems-pa-2026"]), integrations: documented(["portail cabinet", "outils comptables", "suivi des clients"], ["ytems-pa-2026"]),
     importantUnknowns: ["Émission et réception opérationnelles", "E-reporting", "Prix par dossier", "Formats, hébergement et sortie"],
+
+    formats: {"value":["Factur-X"],"status":"documented","sourceIds":["ytems-faq-20261022"],"checkedAt":"2026-10-22","note":"La FAQ décrit la génération de factures Factur-X pour les clients BNC. Les autres formats et la matrice de réception ne sont pas précisés."},
   }),
 ];

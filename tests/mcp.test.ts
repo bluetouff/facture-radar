@@ -108,8 +108,8 @@ test("le manifeste et les ressources couvrent tout le corpus public", () => {
     journeys: 155,
     invoiceRoutes: 6,
     directRoutingOptions: 3,
-    sources: 495,
-    incidentNotices: 83,
+    sources: 523,
+    incidentNotices: 88,
     observedPublicSites: 11,
   });
   const directory = getResourceByUri("pacheck://corpus/official-directory", revision) as { approved: unknown[]; pending: unknown[] };

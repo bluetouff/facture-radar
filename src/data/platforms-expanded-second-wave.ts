@@ -196,7 +196,8 @@ export const secondWavePlatforms: Platform[] = [
     summary: "Plateforme française intégrée à l'ERP Copilote, orientée industrie et distribution.",
     targets: ["pme", "eti"], ecosystem: ["ERP Copilote", "EDI", "archivage", "industrie"],
     sendsInvoices: documented(true, ["infologic-pa-2026"]), receivesInvoices: documented(true, ["infologic-pa-2026"]), eReporting: documented(true, ["infologic-pa-2026"]), formats: documented(["Factur-X", "UBL", "CII", "EDIFACT"], ["infologic-pa-2026"]), integrations: documented(["ERP Copilote", "EDI", "stockage probant"], ["infologic-pa-2026"]),
-    importantUnknowns: ["Prix et volumes", "API publique", "Hébergement technique", "Réversibilité"],
+    iso27001: declared(true, ["infologic-iso-20261022", "infologic-certificate-20261022"], "L’éditeur revendique ISO/IEC 27001:2022 pour le développement, la commercialisation, l’intégration, l’hébergement et la maintenance de l’ERP Copilote et de ses services en ligne, dont la PA. Le certificat signé courant, ses dates et son titulaire restent à rattacher.", "2026-10-22"),
+    importantUnknowns: ["Prix et volumes", "API publique", "Hébergement technique", "Certificat ISO courant", "Réversibilité"],
   }),
   expand({
     slug: "intesa", displayName: "Intesa", officialName: "In.Te.S.A. spa", registeredAt: "2026-08-06",
@@ -259,8 +260,10 @@ export const secondWavePlatforms: Platform[] = [
     slug: "paragon", displayName: "Invoice Paragon Platform", officialName: "PARAGON", registeredAt: "2025-12-22",
     summary: "Plateforme cloud modulaire avec archivage, tableaux de bord et intégration ERP.",
     targets: ["pme", "eti", "ge"], ecosystem: ["ERP", "archivage", "reporting", "cloud"],
-    integrations: documented(["ERP", "systèmes comptables", "plateformes externes"], ["paragon-ipp-2026"]),
+    integrations: {"value":["ERP","systèmes comptables","plateformes externes","API","EDI"],"status":"documented","sourceIds":["paragon-ipp-2026","paragon-faq-20261022"],"checkedAt":"2026-10-22","note":"La FAQ décrit des modes de connexion ERP via API ou EDI. Elle ne publie pas les conditions d’une API accessible hors projet d’intégration."},
     importantUnknowns: ["Émission, réception et e-reporting par pack", "Prix et volumes", "Formats", "Hébergement"],
+
+    formats: {"value":["UBL","CII","Factur-X"],"status":"documented","sourceIds":["paragon-faq-20261022"],"checkedAt":"2026-10-22","note":"IPP documente l’extraction des données d’un PDF et la conversion de formats propriétaires vers UBL, CII ou Factur-X. La matrice détaillée d’émission et de réception par pack reste à confirmer."},
   }),
   expand({
     slug: "pitney-bowes", displayName: "Pitney Bowes Invoice Services", officialName: "PITNEY BOWES", registeredAt: "2026-01-13",

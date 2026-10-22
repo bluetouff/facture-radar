@@ -1,0 +1,135 @@
+{
+  "reviewDate": "2026-10-22",
+  "status": "blocked_official_site_maintenance",
+  "lastKnownSnapshotDate": "2026-10-20",
+  "lastKnownCounts": {
+    "approved": 155,
+    "pending": 11
+  },
+  "lastKnownHashes": {
+    "approved": "58ceadb0befa0beb133a7f01bdcc182dc1ab4832cb282428c85f6f27dfd34e07",
+    "pending": "914c4bcb11f0ea46d1f98769857385b64a0b1258622eb69eee5466d91d132373"
+  },
+  "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+  "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+  "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+  "currentReads": [
+    {
+      "name": "approved",
+      "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+      "accessedAt": "2026-10-22T07:10:51.541567+00:00",
+      "exitCode": 0,
+      "bytes": 1159176,
+      "sha256": "cdd9197fe1967d09c2a753880ddf2299a7cb1feb565c10f0c067a958f8883854",
+      "curlMetadata": "approved.curl.json",
+      "headers": "approved.headers",
+      "body": "approved.xlsx",
+      "error": "",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "isZipWorkbook": false,
+      "title": "Impôts.gouv.fr – site en maintenance",
+      "validWorkbook": false
+    },
+    {
+      "name": "pending",
+      "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+      "accessedAt": "2026-10-22T07:10:51.677905+00:00",
+      "exitCode": 0,
+      "bytes": 1159176,
+      "sha256": "cdd9197fe1967d09c2a753880ddf2299a7cb1feb565c10f0c067a958f8883854",
+      "curlMetadata": "pending.curl.json",
+      "headers": "pending.headers",
+      "body": "pending.xlsx",
+      "error": "",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "isZipWorkbook": false,
+      "title": "Impôts.gouv.fr – site en maintenance",
+      "validWorkbook": false
+    },
+    {
+      "name": "dgfip-page",
+      "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+      "accessedAt": "2026-10-22T07:10:51.564844+00:00",
+      "exitCode": 0,
+      "bytes": 1159176,
+      "sha256": "cdd9197fe1967d09c2a753880ddf2299a7cb1feb565c10f0c067a958f8883854",
+      "curlMetadata": "dgfip-page.curl.json",
+      "headers": "dgfip-page.headers",
+      "body": "dgfip-page.html",
+      "error": "",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "isZipWorkbook": false,
+      "title": "Impôts.gouv.fr – site en maintenance",
+      "validWorkbook": null
+    }
+  ],
+  "comparison": {
+    "binaryComparisonPerformed": false,
+    "allRowsCompared": false,
+    "reason": "Les deux URL de classeurs répondent avec une page HTML de maintenance, pas des archives XLSX. Aucun ajout, retrait ou changement de champ ne peut être qualifié depuis ces réponses.",
+    "attemptedAt": [
+      "2026-10-22T07:10:51.541567+00:00",
+      "2026-10-22T07:10:51.677905+00:00",
+      "2026-10-22T07:10:51.564844+00:00",
+      "2026-10-22T07:26:14.371227+00:00",
+      "2026-10-22T07:26:14.401402+00:00",
+      "2026-10-22T07:26:14.313612+00:00"
+    ]
+  },
+  "changesToCurrentSnapshot": false,
+  "limits": "Les deux contrôles du 22 octobre ont renvoyé la page de maintenance pour les trois URL. Le dernier annuaire effectivement vérifié reste celui du 20 octobre. Les listes actuelles n’ont pas pu être comparées ; aucun ajout, retrait ou changement ne peut être déduit de ces réponses.",
+  "finalControl": [
+    {
+      "name": "approved-final",
+      "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+      "accessedAt": "2026-10-22T07:26:14.371227+00:00",
+      "exitCode": 0,
+      "httpStatus": "200",
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+      "bytes": 1159176,
+      "sha256": "cdd9197fe1967d09c2a753880ddf2299a7cb1feb565c10f0c067a958f8883854",
+      "isZipWorkbook": false,
+      "title": "Impôts.gouv.fr – site en maintenance",
+      "body": "approved-final.xlsx",
+      "headers": "approved-final.headers",
+      "error": ""
+    },
+    {
+      "name": "pending-final",
+      "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+      "accessedAt": "2026-10-22T07:26:14.401402+00:00",
+      "exitCode": 0,
+      "httpStatus": "200",
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+      "bytes": 1159176,
+      "sha256": "cdd9197fe1967d09c2a753880ddf2299a7cb1feb565c10f0c067a958f8883854",
+      "isZipWorkbook": false,
+      "title": "Impôts.gouv.fr – site en maintenance",
+      "body": "pending-final.xlsx",
+      "headers": "pending-final.headers",
+      "error": ""
+    },
+    {
+      "name": "dgfip-page-final",
+      "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+      "accessedAt": "2026-10-22T07:26:14.313612+00:00",
+      "exitCode": 0,
+      "httpStatus": "200",
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+      "bytes": 1159176,
+      "sha256": "cdd9197fe1967d09c2a753880ddf2299a7cb1feb565c10f0c067a958f8883854",
+      "isZipWorkbook": false,
+      "title": "Impôts.gouv.fr – site en maintenance",
+      "body": "dgfip-page-final.html",
+      "headers": "dgfip-page-final.headers",
+      "error": ""
+    }
+  ],
+  "currentDataSnapshotPreserved": true
+}

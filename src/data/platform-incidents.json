@@ -13,7 +13,7 @@
     "firstReportedAt": "2026-09-10T10:40:00Z",
     "resolutionReportedAt": "2026-09-10T14:33:00Z",
     "updatedAt": "2026-09-10T14:33:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-w04d6drd7g3n"
     ],
@@ -33,7 +33,7 @@
     "firstReportedAt": "2026-09-02T00:40:00Z",
     "resolutionReportedAt": "2026-09-10T13:14:00Z",
     "updatedAt": "2026-09-10T13:14:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-fjh6wx81xg1p"
     ],
@@ -53,7 +53,7 @@
     "firstReportedAt": "2026-09-05T02:02:00Z",
     "resolutionReportedAt": "2026-09-07T09:13:00Z",
     "updatedAt": "2026-09-07T09:13:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-rhf8nv5dd1rq"
     ],
@@ -73,7 +73,7 @@
     "firstReportedAt": "2026-09-11T14:45:00Z",
     "resolutionReportedAt": "2026-09-15T18:57:00Z",
     "updatedAt": "2026-09-15T18:57:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-qgr9wjcbs466"
     ],
@@ -93,7 +93,7 @@
     "firstReportedAt": "2026-09-14T12:15:00Z",
     "resolutionReportedAt": "2026-09-15T10:12:00Z",
     "updatedAt": "2026-09-15T10:12:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-9zgm55t360kp"
     ],
@@ -113,7 +113,7 @@
     "firstReportedAt": "2026-09-14T09:50:00Z",
     "resolutionReportedAt": "2026-09-14T22:10:00Z",
     "updatedAt": "2026-09-14T22:10:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-ldq4kg4q8htj"
     ],
@@ -133,7 +133,7 @@
     "firstReportedAt": "2026-09-13T18:57:00Z",
     "resolutionReportedAt": "2026-09-14T07:06:00Z",
     "updatedAt": "2026-09-14T07:06:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-yh0mj6qwrmcy"
     ],
@@ -153,7 +153,7 @@
     "firstReportedAt": "2026-09-11T08:18:00Z",
     "resolutionReportedAt": "2026-09-11T14:06:00Z",
     "updatedAt": "2026-09-11T14:06:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-2xx8jjz4pxfz"
     ],
@@ -173,7 +173,7 @@
     "firstReportedAt": "2026-09-01T11:41:00Z",
     "resolutionReportedAt": "2026-09-02T12:01:00Z",
     "updatedAt": "2026-09-02T12:01:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-v9p9p0xfp5qj"
     ],
@@ -193,7 +193,7 @@
     "firstReportedAt": "2026-09-14T11:15:00+02:00",
     "resolutionReportedAt": "2026-09-14T12:06:00+02:00",
     "updatedAt": "2026-09-14T12:06:00+02:00",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "pennylane-incident-zfpsp7z9wn1z"
     ],
@@ -213,7 +213,7 @@
     "firstReportedAt": "2026-09-15T08:00:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15T12:15:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "esker-status-2026-09"
     ],
@@ -233,7 +233,7 @@
     "firstReportedAt": "2026-09-01T09:51:27Z",
     "resolutionReportedAt": "2026-09-01T11:31:26Z",
     "updatedAt": "2026-09-01T11:31:26Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "weproc-peppol-20260901-source"
     ],
@@ -253,7 +253,7 @@
     "firstReportedAt": "2026-09-01T07:29:28Z",
     "resolutionReportedAt": "2026-09-01T07:34:28Z",
     "updatedAt": "2026-09-01T07:34:28Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "weproc-piste-20260901-source"
     ],
@@ -273,7 +273,7 @@
     "firstReportedAt": "2026-09-16T06:58:00Z",
     "resolutionReportedAt": "2026-09-16T09:14:18Z",
     "updatedAt": "2026-09-16T09:14:18Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "dokapi-emails-20260916-source"
     ],
@@ -293,7 +293,7 @@
     "firstReportedAt": "2026-09-04T07:59:00Z",
     "resolutionReportedAt": "2026-09-04T09:52:12Z",
     "updatedAt": "2026-09-04T09:52:12Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-einvoice-20260904-source"
     ],
@@ -313,7 +313,7 @@
     "firstReportedAt": "2026-09-02T08:12:00Z",
     "resolutionReportedAt": "2026-09-02T09:59:21Z",
     "updatedAt": "2026-09-02T09:59:21Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-access-20260902-source"
     ],
@@ -333,7 +333,7 @@
     "firstReportedAt": "2026-09-04T11:10:00Z",
     "resolutionReportedAt": "2026-09-04T14:03:30Z",
     "updatedAt": "2026-09-04T14:03:30Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-microsoft-20260904-source"
     ],
@@ -353,7 +353,7 @@
     "firstReportedAt": "2026-09-16T10:05:00Z",
     "resolutionReportedAt": "2026-09-17T08:06:12Z",
     "updatedAt": "2026-09-17T08:06:12Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-transfers-20260916-source"
     ],
@@ -373,7 +373,7 @@
     "firstReportedAt": "2026-09-10T15:41:53.079Z",
     "resolutionReportedAt": "2026-09-10T16:36:54.418Z",
     "updatedAt": "2026-09-10T16:36:54.418Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "invopop-console-20260910-source"
     ],
@@ -393,7 +393,7 @@
     "firstReportedAt": "2026-09-02T08:15:54.409Z",
     "resolutionReportedAt": "2026-09-02T10:26:25.372Z",
     "updatedAt": "2026-09-02T10:26:25.372Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "invopop-peppol-sml-20260902-source"
     ],
@@ -413,7 +413,7 @@
     "firstReportedAt": "2026-09-16T13:10:31Z",
     "resolutionReportedAt": "2026-09-16T13:18:36Z",
     "updatedAt": "2026-09-16T13:18:36Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "myunisoft-connection-20260916-source"
     ],
@@ -433,7 +433,7 @@
     "firstReportedAt": "2026-09-15T09:48:15Z",
     "resolutionReportedAt": "2026-09-15T10:00:05Z",
     "updatedAt": "2026-09-15T10:00:05Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "myunisoft-display-20260915-source"
     ],
@@ -453,7 +453,7 @@
     "firstReportedAt": "2026-09-16T10:17:20.636Z",
     "resolutionReportedAt": "2026-09-17T07:58:23Z",
     "updatedAt": "2026-09-17T07:58:23Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "tungsten-support-20260916-source"
     ],
@@ -478,7 +478,7 @@
     "firstReportedAt": "2026-09-14",
     "resolutionReportedAt": "2026-10-16",
     "updatedAt": "2026-10-16",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -507,7 +507,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -536,7 +536,7 @@
     "firstReportedAt": "2026-09-15",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "frenchbreaches-welyb-20260915"
     ],
@@ -560,7 +560,7 @@
     "firstReportedAt": "2026-09-18",
     "resolutionReportedAt": "2026-09-18",
     "updatedAt": "2026-09-18",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "superpdp-directory-20260918-source"
     ],
@@ -581,7 +581,7 @@
     "firstReportedAt": "2026-09-16T14:52:00Z",
     "resolutionReportedAt": "2026-10-07T09:09:23Z",
     "updatedAt": "2026-10-07T09:09:23Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-amazon-20260916-source"
     ],
@@ -608,7 +608,7 @@
     "firstReportedAt": "2026-09-17",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-17",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "frenchbreaches-zenfirst-20260917"
     ],
@@ -628,7 +628,7 @@
     "firstReportedAt": "2026-09-21T10:27:53Z",
     "resolutionReportedAt": "2026-09-21T12:13:23Z",
     "updatedAt": "2026-09-21T12:13:23Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "ecosio-france-20260921-source"
     ],
@@ -648,7 +648,7 @@
     "firstReportedAt": "2026-09-22T14:44:00Z",
     "resolutionReportedAt": "2026-09-23T10:34:08Z",
     "updatedAt": "2026-09-23T10:34:08Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-france-20260922-source"
     ],
@@ -668,7 +668,7 @@
     "firstReportedAt": "2026-09-21T15:14:00Z",
     "resolutionReportedAt": "2026-09-23T07:20:49Z",
     "updatedAt": "2026-09-23T07:20:49Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-ios-20260921-source"
     ],
@@ -688,7 +688,7 @@
     "firstReportedAt": "2026-09-22T15:53:40Z",
     "resolutionReportedAt": "2026-09-22T15:55:53Z",
     "updatedAt": "2026-09-22T15:55:53Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "eezi-dashboard-20260922-source"
     ],
@@ -708,7 +708,7 @@
     "firstReportedAt": "2026-09-21",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-21",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "frenchbreaches-altagem-20260921",
       "cyberattaque-altagem-20260921"
@@ -735,7 +735,7 @@
     "firstReportedAt": "2026-09-19",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-20",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "frenchbreaches-faktus-20260919"
     ],
@@ -761,7 +761,7 @@
     "firstReportedAt": "2026-09-22",
     "resolutionReportedAt": "2026-09-24",
     "updatedAt": "2026-09-24",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -780,7 +780,7 @@
     "firstReportedAt": "2026-09-16",
     "resolutionReportedAt": "2026-09-22",
     "updatedAt": "2026-09-22",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -801,7 +801,7 @@
     "firstReportedAt": "2026-09-25T14:25:00Z",
     "resolutionReportedAt": "2026-09-25T15:02:06Z",
     "updatedAt": "2026-09-25T15:02:06Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "pennylane-incident-s9lkgtlw03s2"
     ],
@@ -821,7 +821,7 @@
     "firstReportedAt": "2026-09-25T13:28:00Z",
     "resolutionReportedAt": "2026-09-25T15:13:28Z",
     "updatedAt": "2026-09-25T15:13:28Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "weproc-incident-1073900"
     ],
@@ -841,7 +841,7 @@
     "firstReportedAt": "2026-09-28T07:14:00Z",
     "resolutionReportedAt": "2026-09-28T10:02:49Z",
     "updatedAt": "2026-09-28T10:02:49Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "lucca-incident-nfx98d4xggmb"
     ],
@@ -861,7 +861,7 @@
     "firstReportedAt": "2026-09-28T07:59:00Z",
     "resolutionReportedAt": "2026-09-28T12:03:30Z",
     "updatedAt": "2026-09-28T12:03:30Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-mc2p8blsm281"
     ],
@@ -881,7 +881,7 @@
     "firstReportedAt": "2026-09-28T10:10:08Z",
     "resolutionReportedAt": "2026-09-28T10:10:08Z",
     "updatedAt": "2026-09-28T10:10:08Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-4r3t9stk544k"
     ],
@@ -901,7 +901,7 @@
     "firstReportedAt": "2026-09-29T15:57:00Z",
     "resolutionReportedAt": "2026-09-30T07:17:30Z",
     "updatedAt": "2026-09-30T07:17:30Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-incident-qs6rjc37fr6l"
     ],
@@ -921,7 +921,7 @@
     "firstReportedAt": "2026-09-29T19:54:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-29T21:38:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "esker-status-2026-09"
     ],
@@ -940,7 +940,7 @@
     "firstReportedAt": "2026-09-25",
     "resolutionReportedAt": "2026-10-08",
     "updatedAt": "2026-10-08",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -961,7 +961,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": "2026-10-16",
     "updatedAt": "2026-10-16",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -992,7 +992,7 @@
     "firstReportedAt": "2026-10-01",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-01",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "factuali-notification-relayed-20261001",
       "fuitesinfos-vosfactures-20261001",
@@ -1014,7 +1014,7 @@
     "firstReportedAt": "2026-09-30T15:40:00Z",
     "resolutionReportedAt": "2026-10-05T08:56:53Z",
     "updatedAt": "2026-10-05T08:56:53Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-kt4m889tbj9p"
     ],
@@ -1035,7 +1035,7 @@
     "firstReportedAt": "2026-10-01",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-01",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "esker-environment-e-20261001"
     ],
@@ -1078,7 +1078,7 @@
     "firstReportedAt": "2026-10-02T14:09:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-02T14:09:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "esker-pa-interconnexion-20261002"
     ],
@@ -1099,7 +1099,7 @@
     "firstReportedAt": "2026-10-03T07:40:00Z",
     "resolutionReportedAt": "2026-10-03T13:24:28Z",
     "updatedAt": "2026-10-03T13:24:28Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "weproc-incident-1080572",
       "weproc-incident-1080599",
@@ -1126,7 +1126,7 @@
     "firstReportedAt": "2026-10-02T13:55:55Z",
     "resolutionReportedAt": "2026-10-05",
     "updatedAt": "2026-10-05",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "myunisoft-incident-fba23613-5912-4c1f-a6f9-28aa0c690859",
       "myunisoft-incident-4367fb01-ec0f-4fc6-94dd-d983ed2260b7"
@@ -1146,7 +1146,7 @@
     "firstReportedAt": "2026-10-02",
     "resolutionReportedAt": "2026-10-02",
     "updatedAt": "2026-10-02",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1186,7 +1186,7 @@
     "firstReportedAt": "2026-10-05T14:45:25Z",
     "resolutionReportedAt": "2026-10-06T15:28:00Z",
     "updatedAt": "2026-10-06T15:28:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-grngh6q7rzc2"
     ],
@@ -1207,7 +1207,7 @@
     "firstReportedAt": "2026-10-07T12:02:00Z",
     "resolutionReportedAt": "2026-10-07T16:01:30Z",
     "updatedAt": "2026-10-07T16:01:30Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-j6kkplxr2ff3"
     ],
@@ -1228,7 +1228,7 @@
     "firstReportedAt": "2026-10-07T09:13:16Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-13T08:22:47Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-3ds-20261007"
     ],
@@ -1249,7 +1249,7 @@
     "firstReportedAt": "2026-10-07T08:12:00Z",
     "resolutionReportedAt": "2026-10-07T08:17:28Z",
     "updatedAt": "2026-10-07T08:17:28Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "weproc-incident-1083848"
     ],
@@ -1270,7 +1270,7 @@
     "firstReportedAt": "2026-10-06",
     "resolutionReportedAt": "2026-10-06",
     "updatedAt": "2026-10-06",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "myunisoft-incident-8ccd8e7d-9ad4-431f-a77b-bdf5e0f68bb1"
     ],
@@ -1291,7 +1291,7 @@
     "firstReportedAt": "2026-10-05",
     "resolutionReportedAt": "2026-10-06",
     "updatedAt": "2026-10-06",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "myunisoft-incident-b74ef35b-df82-419b-aaf6-c44451d130ae"
     ],
@@ -1312,7 +1312,7 @@
     "firstReportedAt": "2026-10-03T10:49:00Z",
     "resolutionReportedAt": "2026-10-03T17:40:00Z",
     "updatedAt": "2026-10-03T17:40:00Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "invopop-incident-20261003",
       "invopop-postmortem-20261003"
@@ -1334,7 +1334,7 @@
     "firstReportedAt": "2026-10-05T07:42:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-05",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "esker-environment-e-20261005"
     ],
@@ -1354,7 +1354,7 @@
     "firstReportedAt": "2026-10-07",
     "resolutionReportedAt": "2026-10-07",
     "updatedAt": "2026-10-07",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1373,7 +1373,7 @@
     "firstReportedAt": "2026-10-07",
     "resolutionReportedAt": "2026-10-09",
     "updatedAt": "2026-10-09",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1414,7 +1414,7 @@
     "firstReportedAt": "2026-10-09T10:26:00Z",
     "resolutionReportedAt": "2026-10-09T11:49:49Z",
     "updatedAt": "2026-10-09T11:49:49Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-gs8td6mcwhwk"
     ],
@@ -1435,7 +1435,7 @@
     "firstReportedAt": "2026-10-09T13:48:00Z",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-13",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "esker-display-d-20261009",
       "esker-display-e-20261009",
@@ -1458,7 +1458,7 @@
     "firstReportedAt": "2026-10-07",
     "resolutionReportedAt": "2026-10-19",
     "updatedAt": "2026-10-19",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1480,7 +1480,7 @@
     "firstReportedAt": "2026-10-13T10:37:19Z",
     "resolutionReportedAt": "2026-10-14T16:05:32Z",
     "updatedAt": "2026-10-14T16:05:32Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-s1t694g66bw6"
     ],
@@ -1501,7 +1501,7 @@
     "firstReportedAt": "2026-10-12T13:12:00Z",
     "resolutionReportedAt": "2026-10-12T15:35:46Z",
     "updatedAt": "2026-10-12T15:35:46Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-kgpbkx523w51"
     ],
@@ -1522,7 +1522,7 @@
     "firstReportedAt": "2026-10-13T14:28:00Z",
     "resolutionReportedAt": "2026-10-13T16:00:29Z",
     "updatedAt": "2026-10-13T16:00:29Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-incident-s5d6hfv2l437"
     ],
@@ -1537,17 +1537,18 @@
     "kind": "availability",
     "scope": "pa",
     "title": "Tungsten : traitement des factures françaises rétabli",
-    "summary": "Tungsten clôt le 19 octobre son avis sur les services de facturation électronique français. L’éditeur précise que le traitement fonctionne normalement depuis le matin du 14 octobre UTC. Les transactions soumises pendant la perturbation font encore l’objet d’un rapprochement ; les clients dont une transaction reste dans un statut intermédiaire sont invités à contacter le support.",
+    "summary": "Le retour d’incident de Tungsten situe les premiers retards de statuts et de réponses fiscales françaises vers 06 h 51 UTC le 12 octobre. Les documents entrants et sortants ne sont plus traités de 03 h 15 à 12 h 54 UTC le 13, puis des services s’interrompent à nouveau de 13 h 43 à 16 h 13 UTC. Tous les documents en attente sont annoncés traités le 14 à 15 h 17 UTC, sans nouvelle soumission nécessaire. L’éditeur attribue la panne à un défaut logiciel de la plateforme d’un prestataire, aggravé par des réponses lentes et une capacité limitée.",
     "status": "resolved",
-    "startedAt": null,
+    "startedAt": "2026-10-12T06:51:00Z",
     "firstReportedAt": "2026-10-13T09:51:07Z",
     "resolutionReportedAt": "2026-10-19T11:30:54.571Z",
     "updatedAt": "2026-10-19T11:30:54.571Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
-      "tungsten-france-20261013"
+      "tungsten-france-20261013",
+      "tungsten-france-writeup-20261022"
     ],
-    "limitations": "La notification finale est datée du 19 octobre à 11 h 30 UTC. Le retour à un niveau normal est situé au matin du 14, sans heure précise. L’éditeur conserve une réserve sur le rapprochement de certaines transactions. Les heures de notification restent distinctes du début réel de l’incident.",
+    "limitations": "Le début des retards est approximatif, selon le retour d’incident. La clôture de l’avis reste notifiée le 19 octobre ; le rattrapage terminé le 14 est une information distincte. Le prestataire n’est pas nommé. L’absence de perte de données est déclarée par Tungsten. Date de publication du retour d’incident inconnue, première lecture le 22 octobre.",
     "affectedService": "Tungsten e-Invoicing France : traitement et récupération des factures"
   },
   {
@@ -1562,7 +1563,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1584,7 +1585,7 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1616,7 +1617,7 @@
     "firstObservedAt": "2026-10-16",
     "resolutionReportedAt": "2026-10-15T06:47:08Z",
     "updatedAt": "2026-10-15T06:47:08Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "spendesk-einvoices-20261015"
     ],
@@ -1640,7 +1641,7 @@
     "firstObservedAt": "2026-10-16",
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "veryswing-analyse-196-20261014",
       "veryswing-analyse-197-20261014"
@@ -1663,7 +1664,7 @@
     "firstObservedAt": "2026-10-14",
     "resolutionReportedAt": "2026-10-16",
     "updatedAt": "2026-10-16",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "welyb-status-20260916"
     ],
@@ -1687,7 +1688,7 @@
     "firstObservedAt": "2026-10-19",
     "resolutionReportedAt": "2026-10-19T17:15:12Z",
     "updatedAt": "2026-10-19T17:15:12Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "docoon-support-20261019"
     ],
@@ -1702,18 +1703,18 @@
     "scope": "publisher_service",
     "verification": "primary_notice",
     "affectedService": "Online Help Center France, pages d’aide des produits Sage",
-    "title": "Sage : centre d’aide français sous surveillance",
-    "summary": "Sage signale le 20 octobre des difficultés d’accès des clients français au centre d’aide en ligne de plusieurs produits, dont Sage 50, Sage 100, Sage FRP 1000 et Sage eFacture. À 12 h 59 UTC, l’éditeur annonce un fonctionnement revenu à la normale et place le service sous surveillance.",
-    "status": "monitoring",
+    "title": "Sage : centre d’aide français rétabli",
+    "summary": "Sage annonce le 21 octobre à 09 h 36 UTC la résolution des difficultés d’accès au centre d’aide français, après la mise sous surveillance du 20 à 12 h 59 UTC. Les pages d’aide de plusieurs produits, dont Sage eFacture, étaient concernées.",
+    "status": "resolved",
     "startedAt": null,
     "detectedAt": null,
     "firstReportedAt": "2026-10-20T08:27:34Z",
     "firstObservedAt": "2026-10-20",
-    "resolutionReportedAt": null,
-    "updatedAt": "2026-10-20T12:59:35Z",
-    "checkedAt": "2026-10-20",
+    "resolutionReportedAt": "2026-10-21T09:36:22Z",
+    "updatedAt": "2026-10-21T09:36:22Z",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
-      "sage-help-fr-20261020"
+      "sage-help-fr-20261022"
     ],
     "limitations": "L’avis concerne les pages d’aide des produits cités. Une panne de leurs applications ou des flux de la PA Sage reste non documentée. Les horaires correspondent aux notifications affichées dans l’avis ; le début effectif de la difficulté reste inconnu."
   },
@@ -1735,7 +1736,7 @@
     "firstObservedAt": "2026-10-20",
     "resolutionReportedAt": "2026-10-09T21:26:34Z",
     "updatedAt": "2026-10-09T21:26:34Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "pagero-online-20261009"
     ],
@@ -1759,11 +1760,11 @@
     "firstObservedAt": "2026-10-20",
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sage-efacture-archivage-20261020"
     ],
-    "limitations": "Le 20 octobre est la première observation par PA Check, pas le début de l’incident. L’avis non daté est encore affiché ; statut détaillé, durée et nombre de clients touchés restent inconnus. La transmission des flux réglementaires PA n’est pas explicitement citée. Le même portail affiche séparément une maintenance planifiée le 20 octobre de 12 h à 14 h, exclue du décompte et inutilisée pour dater cet incident. Le bandeau dupliqué sur la page correspond à un seul avis."
+    "limitations": "Le bandeau d’incident d’archivage observé le 20 octobre est absent du portail relu le 22. Aucune notification de résolution datée n’est retrouvée. Début réel, durée et impact sur les flux de la PA restent à confirmer. Le 20 octobre est la première observation par PA Check, pas le début de l’incident. L’avis non daté est encore affiché ; statut détaillé, durée et nombre de clients touchés restent inconnus. La transmission des flux réglementaires PA n’est pas explicitement citée. Le même portail affiche séparément une maintenance planifiée le 20 octobre de 12 h à 14 h, exclue du décompte et inutilisée pour dater cet incident. Le bandeau dupliqué sur la page correspond à un seul avis."
   },
   {
     "id": "sps-fulfillment-20261012",
@@ -1783,11 +1784,132 @@
     "firstObservedAt": "2026-10-20",
     "resolutionReportedAt": "2026-10-12T15:07:48Z",
     "updatedAt": "2026-10-12T15:07:48Z",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-22",
     "sourceIds": [
       "sps-fulfillment-20261012",
       "sps-fulfillment-product-20261020"
     ],
     "limitations": "La documentation de Fulfillment inclut les factures parmi les documents EDI traités. L’avis ne précise pas quels types de documents sont touchés, les pays concernés ou une atteinte aux flux de la PA française. Les heures conservées correspondent aux notifications ; le début réel de la difficulté reste inconnu. La maintenance planifiée du 17 octobre est distincte et reste hors compteur."
+  },
+  {
+    "id": "sage-connector-cloud-20261020",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Sage Génération Experts Connector Cloud France, paramètres Marketplace et lots d’intégration",
+    "title": "Sage Génération Experts : déconnexions et lots d’intégration manquants, résolution annoncée",
+    "summary": "Sage décrit des déconnexions lors de l’ouverture des paramètres Marketplace et la non-réception de certains lots de REGATE et TransfertBANQUE pour des clients français. Le service est placé sous surveillance le 20 octobre à 16 h UTC, puis annoncé rétabli le 21 à 09 h 52 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-10-20T14:27:00Z",
+    "firstObservedAt": "2026-10-21T11:58:50.864Z",
+    "resolutionReportedAt": "2026-10-21T09:52:04Z",
+    "updatedAt": "2026-10-21T09:52:04Z",
+    "checkedAt": "2026-10-22",
+    "sourceIds": [
+      "sage-connector-cloud-20261020"
+    ],
+    "limitations": "L’avis porte sur le connecteur français de Génération Experts. Un impact sur les flux réglementaires de la PA Sage reste non documenté. Le début effectif est inconnu ; les horaires sont ceux des notifications. Les lots cités ne permettent pas d’attribuer la cause aux éditeurs tiers."
+  },
+  {
+    "id": "esker-ar24-ere-20261021",
+    "platformSlugs": [
+      "esker"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "verification": "primary_notice",
+    "affectedService": "Lettres recommandées électroniques AR24 utilisées dans les environnements Esker C, D, E, F, G, H, J et K",
+    "title": "Esker : lettres recommandées électroniques perturbées chez AR24",
+    "summary": "Esker signale le 21 octobre à 12 h 34 UTC des difficultés d’envoi, de traitement et de consultation des lettres recommandées électroniques à la suite d’une maintenance de sécurité urgente chez son prestataire AR24. Le message figure dans les environnements C, D, E, F, G, H, J et K. AR24 affiche une maintenance exceptionnelle de production en cours lors de la consultation du 22 octobre.",
+    "status": "investigating",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-10-21T12:34:00Z",
+    "firstObservedAt": "2026-10-22T07:10:50.964Z",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-10-21T12:34:00Z",
+    "checkedAt": "2026-10-22",
+    "sourceIds": [
+      "esker-ar24-ere-20261021",
+      "ar24-maintenance-20261021"
+    ],
+    "limitations": "L’avis concerne les lettres recommandées électroniques. L’environnement L de la PA française n’est pas cité. La maintenance de sécurité décrite par Esker ne documente pas une cyberattaque ou une fuite de données. Le retour attendu le 21 au soir n’est pas une résolution confirmée. La cause technique et le début réel restent inconnus."
+  },
+  {
+    "id": "atgp-beefact-20261021",
+    "platformSlugs": [
+      "atgp"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "verification": "primary_notice",
+    "affectedService": "Accès au service de facturation électronique BEE-FACT (@GP)",
+    "title": "@GP : accès BEE-FACT rétabli après maintenance PHP",
+    "summary": "@GP indique un passage progressif de ses services en mode dégradé à partir du 21 octobre après une alerte de sécurité PHP. Le complément du 22 octobre à 09 h 00 annonce le déploiement du module corrigé et le rétablissement de l’accès à BEE-FACT et FICPROD. Les traitements EDI hébergés sont restés actifs selon l’éditeur.",
+    "status": "resolved",
+    "startedAt": "2026-10-21",
+    "detectedAt": null,
+    "firstReportedAt": null,
+    "firstObservedAt": "2026-10-22",
+    "resolutionReportedAt": "2026-10-22",
+    "updatedAt": "2026-10-22",
+    "checkedAt": "2026-10-22",
+    "sourceIds": [
+      "atgp-beefact-20261022"
+    ],
+    "limitations": "Le rétablissement retenu vise l’accès à BEE-FACT. La notice générale reste En cours et les autres portails enseigne et WebEDI demeurent en phase de test avant déploiement du correctif. La source ne documente pas une compromission. Le 21 octobre figure dans la colonne Date de début ; la date de première publication propre reste inconnue. Le complément est affiché à 09 h 00 sans fuseau : les dates sont conservées au jour, sans conversion UTC. L’heure réelle de début et les volumes touchés restent à préciser."
+  },
+  {
+    "id": "pagero-france-admin-20260925",
+    "platformSlugs": [
+      "pagero"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Pagero Online France, fonctions administratives",
+    "title": "Pagero Online France : fonctions administratives rétablies le 25 septembre",
+    "summary": "Pagero signale le 25 septembre des lenteurs, erreurs de délai et échecs intermittents lors de l’accès aux fonctions administratives de Pagero Online France. L’éditeur indique avoir corrigé des difficultés de communication entre ses services internes. Le fonctionnement est rétabli sous surveillance à 16 h 34 CEST ; la résolution est annoncée à 20 h 53 CEST.",
+    "status": "resolved",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-09-25T12:35:00Z",
+    "firstObservedAt": "2026-10-22",
+    "resolutionReportedAt": "2026-09-25T18:53:00Z",
+    "updatedAt": "2026-09-25T18:53:00Z",
+    "checkedAt": "2026-10-22",
+    "sourceIds": [
+      "pagero-france-20260925"
+    ],
+    "limitations": "Avis historique découvert le 22 octobre. Le pays France est explicite ; l’avis décrit les fonctions administratives, sans préciser d’interruption des échanges de factures ou des flux réglementaires PA. Les heures sont celles des notifications, pas le début réel de la perturbation."
+  },
+  {
+    "id": "pagero-attachments-20260924",
+    "platformSlugs": [
+      "pagero"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Pagero Online et Pagero TMS, pièces jointes et formats de fichiers",
+    "title": "Pagero : fichiers et pièces jointes retraités après une mise à jour",
+    "summary": "Après une mise à jour, Pagero indique que des pièces jointes supplémentaires ont pu être envoyées le 24 septembre entre 10 h 10 et 12 h 30 CEST, avec des formats ou noms de fichiers inattendus selon la configuration du client. L’éditeur annonce à 21 h 55 CEST le retraitement de tous les documents concernés conformément aux formats et conventions de nommage configurés.",
+    "status": "resolved",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-09-24T13:00:00Z",
+    "firstObservedAt": "2026-10-22",
+    "resolutionReportedAt": "2026-09-24T19:55:00Z",
+    "updatedAt": "2026-09-24T19:55:00Z",
+    "checkedAt": "2026-10-22",
+    "sourceIds": [
+      "pagero-attachments-20260924"
+    ],
+    "limitations": "Avis historique découvert le 22 octobre. Les composants Pagero Online et Pagero TMS sont cités ; pays, types de documents et périmètre PA français restent non précisés. La fenêtre de 10 h 10 à 12 h 30 décrit des envois possibles, pas la durée totale du dysfonctionnement. La source documente des pièces inattendues et un retraitement, sans confirmer une fuite de données."
   }
 ]

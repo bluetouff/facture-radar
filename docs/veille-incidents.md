@@ -88,3 +88,7 @@ Voir `docs/revue-vosfactures-2026-10-01.md`. La notification Factuali reproduite
 ## Complément du 20 octobre 2026
 
 Les 155 recherches nominatives sont terminées après autorisation d’utiliser le web classique. Le corpus comprend 83 avis, dont 77 de disponibilité et six de sécurité. Sage eFacture et SPS Fulfillment sont ajoutés au périmètre application des éditeurs ; les traitements SPS sont annoncés normaux. La collecte quotidienne passe à 27 sources, sans appel à un modèle : validation réelle 27/27 et file précédente conservée. Voir le [complément documenté](complement-recherche-2026-10-20.md) et les archives qui y sont reliées.
+
+## Revue du 22 octobre 2026
+
+Les 155 recherches nominatives et les 27 sources sont relues. Le journal contient 88 avis, dont 82 de disponibilité et six de sécurité. Les mesures préventives PHP chez @GP et la perturbation ERE chez AR24 sont publiées en disponibilité avec leur périmètre. Deux avis Pagero de septembre sont retrouvés, sans déplacement de leurs dates d’origine. Le contrôle DGFiP est bloqué par une page de maintenance ; le snapshot valide du 20 est conservé. Voir [la revue et ses preuves](revue-pa-2026-10-22.md).

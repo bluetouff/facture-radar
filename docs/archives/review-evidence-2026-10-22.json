@@ -1,0 +1,892 @@
+{
+  "checkedOn": "2026-10-22",
+  "responses": [
+    {
+      "id": "esker-status-E",
+      "url": "https://www.trustesker.com/?env=E",
+      "bytes": 66174,
+      "sha256": "0fc43be9620342e891b1eea76c2ca610c154935d9a73e86d67fcdce2a6caf39d",
+      "retrievedAt": "2026-10-22T07:11:10.673567+00:00"
+    },
+    {
+      "id": "esker-status-L",
+      "url": "https://www.trustesker.com/?env=L",
+      "bytes": 66174,
+      "sha256": "4955952534f616a981b56a67fc92b90176dcc73e01cd209466e91763b5de179c",
+      "retrievedAt": "2026-10-22T07:11:10.694571+00:00"
+    },
+    {
+      "id": "esker-status-G",
+      "url": "https://www.trustesker.com/?env=G",
+      "bytes": 66174,
+      "sha256": "c54eec7b873fe8489ead157a9242969b556d623d8ba6c3a3aa5e547e1d85c41c",
+      "retrievedAt": "2026-10-22T07:11:10.673427+00:00"
+    },
+    {
+      "id": "esker-status-J",
+      "url": "https://www.trustesker.com/?env=J",
+      "bytes": 66174,
+      "sha256": "843b82cb6a9f938efe065c0a9531cc80651e7728db2983f10f43dff4c2446a6f",
+      "retrievedAt": "2026-10-22T07:11:10.684180+00:00"
+    },
+    {
+      "id": "welyb-status",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "bytes": 166384,
+      "sha256": "fbba853761314cacce4695b916266dc9f286bbac5b61c13da7b38bc6f6114077",
+      "retrievedAt": "2026-10-22T07:11:10.814734+00:00"
+    },
+    {
+      "id": "qonto-status",
+      "url": "https://status.qonto.com/incidents/October-2026",
+      "bytes": 18924,
+      "sha256": "2fe2d7241a5473f9959c7db3a7bd00142537ee166a96ec1141f548cde7bc7a4e",
+      "retrievedAt": "2026-10-22T07:11:10.829566+00:00"
+    },
+    {
+      "id": "esker-status-2026-09",
+      "url": "https://www.trustesker.com/?env=G",
+      "bytes": 66174,
+      "sha256": "4be1017ebe1018dd75e827c1e3d25b5711522aa73b1268ff091d8c42347d9aed",
+      "retrievedAt": "2026-10-22T07:11:10.779162+00:00"
+    },
+    {
+      "id": "sage-incident-w04d6drd7g3n",
+      "url": "https://status.sage.com/incidents/w04d6drd7g3n",
+      "bytes": 85106,
+      "sha256": "478285765b06932e9f189a62edfba39b0bcee544c957f5a59d1fd7d8c04c8203",
+      "retrievedAt": "2026-10-22T07:11:11.484009+00:00"
+    },
+    {
+      "id": "sage-incident-fjh6wx81xg1p",
+      "url": "https://status.sage.com/incidents/fjh6wx81xg1p",
+      "bytes": 100171,
+      "sha256": "5ada4a1efef0889ecf7271bf1473e67abf946c7c638a8afffcd1f15663ccee7e",
+      "retrievedAt": "2026-10-22T07:11:11.451632+00:00"
+    },
+    {
+      "id": "sage-incident-rhf8nv5dd1rq",
+      "url": "https://status.sage.com/incidents/rhf8nv5dd1rq",
+      "bytes": 86745,
+      "sha256": "31e0ac6a98be766b40505f4bd1b886f5752a44d2924b5a8ab0adf9c8be05295b",
+      "retrievedAt": "2026-10-22T07:11:11.547809+00:00"
+    },
+    {
+      "id": "sage-incident-qgr9wjcbs466",
+      "url": "https://status.sage.com/incidents/qgr9wjcbs466",
+      "bytes": 85049,
+      "sha256": "ca60a87da5619632ad22278d472af4b23d538eacc52fbc17ce5745ebce0245e3",
+      "retrievedAt": "2026-10-22T07:11:11.594468+00:00"
+    },
+    {
+      "id": "sage-incident-9zgm55t360kp",
+      "url": "https://status.sage.com/incidents/9zgm55t360kp",
+      "bytes": 85679,
+      "sha256": "5c9c0bae1c3ccb0c133599ab662152a0c71433a5a867ea134f9b4290483f9a2b",
+      "retrievedAt": "2026-10-22T07:11:12.065505+00:00"
+    },
+    {
+      "id": "sage-incident-ldq4kg4q8htj",
+      "url": "https://status.sage.com/incidents/ldq4kg4q8htj",
+      "bytes": 86078,
+      "sha256": "2d18fcb6d258b03bd42c135cf3db93cc544e4fdf344472a07ed6963de7709310",
+      "retrievedAt": "2026-10-22T07:11:12.178519+00:00"
+    },
+    {
+      "id": "sage-incident-yh0mj6qwrmcy",
+      "url": "https://status.sage.com/incidents/yh0mj6qwrmcy",
+      "bytes": 86165,
+      "sha256": "02d4c62e07707ccd3a177e2e8ef375eb918de3d4d75c7c63e950e623fbd02b59",
+      "retrievedAt": "2026-10-22T07:11:12.208904+00:00"
+    },
+    {
+      "id": "sage-incident-2xx8jjz4pxfz",
+      "url": "https://status.sage.com/incidents/2xx8jjz4pxfz",
+      "bytes": 85598,
+      "sha256": "4320ac91ea29a7428c143f78639b92cbc040a3605ab0bfd9ecf5500e0d60e322",
+      "retrievedAt": "2026-10-22T07:11:12.170443+00:00"
+    },
+    {
+      "id": "sage-incident-v9p9p0xfp5qj",
+      "url": "https://status.sage.com/incidents/v9p9p0xfp5qj",
+      "bytes": 85163,
+      "sha256": "aae934e728ba09a98a1fe6508356eae48d8f3f4de13683a49f0b94666f5968ea",
+      "retrievedAt": "2026-10-22T07:11:12.630601+00:00"
+    },
+    {
+      "id": "pennylane-incident-zfpsp7z9wn1z",
+      "url": "https://status.pennylane.com/incidents/zfpsp7z9wn1z",
+      "bytes": 72878,
+      "sha256": "2c0be0c5725cb50eb7bc7156b3121d03c1b3732b033858bceb9b474135d62be0",
+      "retrievedAt": "2026-10-22T07:11:12.733758+00:00"
+    },
+    {
+      "id": "weproc-peppol-20260901-source",
+      "url": "https://status.weinvoice.fr/incident/1044756",
+      "bytes": 100488,
+      "sha256": "d8c753c92fa327248899936d07b6900ea716d3b8bb785e2f16e36faaef1714ae",
+      "retrievedAt": "2026-10-22T07:11:12.358343+00:00"
+    },
+    {
+      "id": "weproc-piste-20260901-source",
+      "url": "https://status.weinvoice.fr/incident/1044543",
+      "bytes": 99012,
+      "sha256": "985fd9c2ba065bd697667ede9a466ad581cddf050148e20f1a9505695d633c6a",
+      "retrievedAt": "2026-10-22T07:11:12.381948+00:00"
+    },
+    {
+      "id": "dokapi-emails-20260916-source",
+      "url": "https://dokapi.statuspage.io/incidents/hx6xfwqj64k9",
+      "bytes": 54435,
+      "sha256": "7bbcacfc18cfbc821655a4b4c0603dee0c10f43e72121a3c188467165a39ec9e",
+      "retrievedAt": "2026-10-22T07:11:12.897929+00:00"
+    },
+    {
+      "id": "spendesk-einvoice-20260904-source",
+      "url": "https://status.spendesk.com/incidents/7v0rjf4x41br",
+      "bytes": 73561,
+      "sha256": "2e60465b2dcf88df637cd41490ef670fb998aa36334c6cba3fed32e83dab002f",
+      "retrievedAt": "2026-10-22T07:11:12.792147+00:00"
+    },
+    {
+      "id": "spendesk-access-20260902-source",
+      "url": "https://status.spendesk.com/incidents/t2xb9nmwz5s6",
+      "bytes": 73303,
+      "sha256": "27cb49b8ba965ba304e65f3067d2f7dab26667e4b8a0cf6da6b7aaca55a5f73e",
+      "retrievedAt": "2026-10-22T07:11:13.143035+00:00"
+    },
+    {
+      "id": "spendesk-microsoft-20260904-source",
+      "url": "https://status.spendesk.com/incidents/b2hlvjc2kzn5",
+      "bytes": 73701,
+      "sha256": "7acc9eab4eb64ebb1cf3992641ee8a13133d63d7c3d853a3a8a6d5fb1802cf86",
+      "retrievedAt": "2026-10-22T07:11:13.335768+00:00"
+    },
+    {
+      "id": "spendesk-transfers-20260916-source",
+      "url": "https://status.spendesk.com/incidents/0dkn55v5wcqg",
+      "bytes": 73421,
+      "sha256": "4ccf3e5844aaded4447c2cf87f6d45b3eb05863319d4cf010c31438ce78e139a",
+      "retrievedAt": "2026-10-22T07:11:13.378325+00:00"
+    },
+    {
+      "id": "invopop-console-20260910-source",
+      "url": "https://status.invopop.com/incidents/01M25ZQ2HQW967V65TSSFH91HM",
+      "bytes": 451152,
+      "sha256": "9163b276e6c17a379bb2acdddd66489998ae4dcf7ef519d828cd3973c2f06ff8",
+      "retrievedAt": "2026-10-22T07:11:13.255401+00:00"
+    },
+    {
+      "id": "invopop-peppol-sml-20260902-source",
+      "url": "https://status.invopop.com/incidents/01M1GK0Q19JRJ5ZSHXWEAF0HW1",
+      "bytes": 448446,
+      "sha256": "69b5aca89e98162523aae5fc5c8e2f375cb2f37f35f92d6630042d0514a522a3",
+      "retrievedAt": "2026-10-22T07:11:13.319580+00:00"
+    },
+    {
+      "id": "myunisoft-connection-20260916-source",
+      "url": "https://meteo.myunisoft.fr/incident/02da09f4-55ea-4a25-9b80-779a7eef0939/",
+      "bytes": 6050,
+      "sha256": "0530b75cf57a1464b0fe0ac732eee30d5377cd3587958ea7191991316d297e6a",
+      "retrievedAt": "2026-10-22T07:11:13.366648+00:00"
+    },
+    {
+      "id": "myunisoft-display-20260915-source",
+      "url": "https://meteo.myunisoft.fr/incident/21de5fdd-7d59-4b36-9790-8f63c9976523/",
+      "bytes": 6116,
+      "sha256": "011dcad008c885a20387b71a9a25d4f65f87a4ba2a8d81ab4e380395be181067",
+      "retrievedAt": "2026-10-22T07:11:13.415524+00:00"
+    },
+    {
+      "id": "tungsten-support-20260916-source",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M2MVH4FXXX66TJXA9ZHDV5XJ",
+      "bytes": 569613,
+      "sha256": "f18401644525d7be79c61d1a84a81a3a2b617c6a8414910125cb4c0a6048716a",
+      "retrievedAt": "2026-10-22T07:11:13.531843+00:00"
+    },
+    {
+      "id": "welyb-status-20260916",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "bytes": 166384,
+      "sha256": "fbba853761314cacce4695b916266dc9f286bbac5b61c13da7b38bc6f6114077",
+      "retrievedAt": "2026-10-22T07:11:13.487167+00:00"
+    },
+    {
+      "id": "frenchbreaches-welyb-20260915",
+      "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "bytes": 82323,
+      "sha256": "7a98e3b245aad14435138f6f4c9ebb15e69b441e6782ab976295571a20741423",
+      "retrievedAt": "2026-10-22T07:11:14.374679+00:00"
+    },
+    {
+      "id": "frenchbreaches-zenfirst-20260917",
+      "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "bytes": 80397,
+      "sha256": "479e7da3d239c5dbaa771bb68d0069d85f7f127870ed2002a79cb635f3b2cdeb",
+      "retrievedAt": "2026-10-22T07:11:14.260573+00:00"
+    },
+    {
+      "id": "spendesk-amazon-20260916-source",
+      "url": "https://status.spendesk.com/incidents/9rz9sjd4npml",
+      "bytes": 76104,
+      "sha256": "b6f82b4c1a9301eaf644c6b0a50424c414df2e036b9ac789d8f6997b8b994bf2",
+      "retrievedAt": "2026-10-22T07:11:14.121917+00:00"
+    },
+    {
+      "id": "superpdp-directory-20260918-source",
+      "url": "https://status.superpdp.tech/",
+      "bytes": 56791,
+      "sha256": "19b52bb2ffe8cf8a806fe4beeee72f37de4ecc9adbce42887f49aa54721cd437",
+      "retrievedAt": "2026-10-22T07:11:13.683945+00:00"
+    },
+    {
+      "id": "ecosio-france-20260921-source",
+      "url": "https://www.ecosio-status.com/incidents/01M31QYCZABKK6JASKJRP9RJR9",
+      "bytes": 500296,
+      "sha256": "5fae758143d908c0d013beb787bf4983b84202c83686246b1473aa6f46f99a0e",
+      "retrievedAt": "2026-10-22T07:11:14.113127+00:00"
+    },
+    {
+      "id": "spendesk-france-20260922-source",
+      "url": "https://status.spendesk.com/incidents/l38cjk9k2spy",
+      "bytes": 73535,
+      "sha256": "01f79735fae9671f1a932cd35df106334db06660307f7a2d1ed7dca7932e076d",
+      "retrievedAt": "2026-10-22T07:11:14.495360+00:00"
+    },
+    {
+      "id": "spendesk-ios-20260921-source",
+      "url": "https://status.spendesk.com/incidents/4gndfyrx7ndj",
+      "bytes": 73368,
+      "sha256": "57169fb0c7395c98d4533cdebab61d9ed46a6fd20e9be04ddf1faa894fc88ed0",
+      "retrievedAt": "2026-10-22T07:11:14.555909+00:00"
+    },
+    {
+      "id": "eezi-dashboard-20260922-source",
+      "url": "https://eezi.instatus.com/cmucut4ft1um81npccbw9inh5",
+      "bytes": 128246,
+      "sha256": "3a080584d12429feea3b6d5fd2f39e609d02ccf7bf1e7194e27f0fe958f7267f",
+      "retrievedAt": "2026-10-22T07:11:14.988785+00:00"
+    },
+    {
+      "id": "frenchbreaches-altagem-20260921",
+      "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "bytes": 89371,
+      "sha256": "809f531ab7c369de289aa683162dcda59e4ae1572d12967e129d271458e8a73a",
+      "retrievedAt": "2026-10-22T07:11:15.293394+00:00"
+    },
+    {
+      "id": "cyberattaque-altagem-20260921",
+      "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "bytes": 76323,
+      "sha256": "28c0e4844586e2658479e67e73f515bf680254e0a8a3ffd7c134367a16404ec2",
+      "retrievedAt": "2026-10-22T07:11:14.862406+00:00"
+    },
+    {
+      "id": "frenchbreaches-faktus-20260919",
+      "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "bytes": 91675,
+      "sha256": "dd5b01be3178f8fb6b7f01b8f5509fc8c45b94b75c5c593fda73b07d4fc70f36",
+      "retrievedAt": "2026-10-22T07:11:15.470827+00:00"
+    },
+    {
+      "id": "pennylane-incident-s9lkgtlw03s2",
+      "url": "https://status.pennylane.com/incidents/s9lkgtlw03s2",
+      "bytes": 72185,
+      "sha256": "401ca61ef904d966a3f5840ccf7454844bbda98572944699f583a68144ae42d4",
+      "retrievedAt": "2026-10-22T07:11:15.293353+00:00"
+    },
+    {
+      "id": "weproc-incident-1073900",
+      "url": "https://status.weinvoice.fr/incident/1073900",
+      "bytes": 99015,
+      "sha256": "9ed6d696f03d339be1d6c84d83171d943a4c440ee1e1a41ff6fef9ccf8c9e591",
+      "retrievedAt": "2026-10-22T07:11:15.163662+00:00"
+    },
+    {
+      "id": "lucca-incident-nfx98d4xggmb",
+      "url": "https://status.lucca.fr/incidents/nfx98d4xggmb",
+      "bytes": 74807,
+      "sha256": "8fd479fa3c4e058cd24230ee6c43de92df9f39ec3525b5b2340ba3c2f55fe1ac",
+      "retrievedAt": "2026-10-22T07:11:15.758197+00:00"
+    },
+    {
+      "id": "sage-incident-mc2p8blsm281",
+      "url": "https://status.sage.com/incidents/mc2p8blsm281",
+      "bytes": 85778,
+      "sha256": "b8c4384f18cb278c86abd93dc3ecb3a40b58b9f62461a215cd0abdabf2999df1",
+      "retrievedAt": "2026-10-22T07:11:15.894992+00:00"
+    },
+    {
+      "id": "sage-incident-4r3t9stk544k",
+      "url": "https://status.sage.com/incidents/4r3t9stk544k",
+      "bytes": 83174,
+      "sha256": "9b3b5ed52ed584d4537a5088ac08dd7cb8ee5e97ac6bea03d4c7af678be4c6fa",
+      "retrievedAt": "2026-10-22T07:11:15.851132+00:00"
+    },
+    {
+      "id": "spendesk-incident-qs6rjc37fr6l",
+      "url": "https://status.spendesk.com/incidents/qs6rjc37fr6l",
+      "bytes": 73209,
+      "sha256": "b356dafe876027afe6a7b85a7f7efe18502347e84b96941711ce0fd72ad6b9aa",
+      "retrievedAt": "2026-10-22T07:11:15.995449+00:00"
+    },
+    {
+      "id": "fakturownia-security-20260929",
+      "url": "https://fakturownia.pl/incydent",
+      "bytes": 165840,
+      "sha256": "92aaacd2ddf351bb9e4007f2b162cc7b4f80379cc05c69159456d86904cd8fb6",
+      "retrievedAt": "2026-10-22T07:11:15.974247+00:00"
+    },
+    {
+      "id": "factuali-notification-relayed-20261001",
+      "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "bytes": 127712,
+      "sha256": "b929d7f120a94cb7d1fe06eba5f6012ac98a33781dd0b58b44ee31007a5ccd11",
+      "retrievedAt": "2026-10-22T07:11:15.961161+00:00"
+    },
+    {
+      "id": "fuitesinfos-vosfactures-20261001",
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "bytes": 50339,
+      "sha256": "c43dc1f8535c79488634e59936aecf3f23cfa6e652b8715258952a861c17a771",
+      "retrievedAt": "2026-10-22T07:11:16.022039+00:00"
+    },
+    {
+      "id": "aife-vosfactures-20261002",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "bytes": 309474,
+      "sha256": "01713e0478842b517539da2a8866a00bf70e61569848e136ce4f7f3422cbdfd9",
+      "retrievedAt": "2026-10-22T07:11:16.352616+00:00"
+    },
+    {
+      "id": "sage-incident-kt4m889tbj9p",
+      "url": "https://status.sage.com/incidents/kt4m889tbj9p",
+      "bytes": 86900,
+      "sha256": "656ac207925b98f7a9adb45a1a66ec4af665eed9956f3ccc69bc6a7275dd5fad",
+      "retrievedAt": "2026-10-22T07:11:16.607352+00:00"
+    },
+    {
+      "id": "esker-environment-e-20261001",
+      "url": "https://www.trustesker.com/?env=E",
+      "bytes": 66175,
+      "sha256": "fb17a6168267ed1dca40dee4b2a84e699fbb9ab4fb537f215923098503deddcd",
+      "retrievedAt": "2026-10-22T07:11:16.093276+00:00"
+    },
+    {
+      "id": "aife-vosfactures-reprise-20261004",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "bytes": 309474,
+      "sha256": "8d4834ce02f658f6555a5e0e74c0572f4b5ebc2cb43b3dc39dc792563b81ba4b",
+      "retrievedAt": "2026-10-22T07:11:16.409494+00:00"
+    },
+    {
+      "id": "esker-pa-interconnexion-20261002",
+      "url": "https://www.trustesker.com/?env=L",
+      "bytes": 66174,
+      "sha256": "a1673cd56e6ad52a52b52961069ba86815e3a06d42114999e8c6292b3c3e605a",
+      "retrievedAt": "2026-10-22T07:11:16.186178+00:00"
+    },
+    {
+      "id": "weproc-incident-1080572",
+      "url": "https://status.weinvoice.fr/incident/1080572",
+      "bytes": 99012,
+      "sha256": "d0ceccdb64d0b3bef45d74d728f987504948fabb392aeb9dcd7f044e79a8ed0b",
+      "retrievedAt": "2026-10-22T07:11:16.373566+00:00"
+    },
+    {
+      "id": "weproc-incident-1080599",
+      "url": "https://status.weinvoice.fr/incident/1080599",
+      "bytes": 99012,
+      "sha256": "9ecf26960f773385cabf4aa8b630d9995588fc30a0cd4e5964b6e8268ac66619",
+      "retrievedAt": "2026-10-22T07:11:16.533189+00:00"
+    },
+    {
+      "id": "weproc-incident-1080609",
+      "url": "https://status.weinvoice.fr/incident/1080609",
+      "bytes": 99012,
+      "sha256": "cfc0dda1fc35ad79b3c48d256a890ea529d7b356f5c6fa43afa418aaf50e9cfa",
+      "retrievedAt": "2026-10-22T07:11:16.544555+00:00"
+    },
+    {
+      "id": "weproc-incident-1080639",
+      "url": "https://status.weinvoice.fr/incident/1080639",
+      "bytes": 99013,
+      "sha256": "b92e109b2a7c7ac95ca266ffb7946f9e47286defe514ba3fdb5e88e7ca9447ee",
+      "retrievedAt": "2026-10-22T07:11:16.584617+00:00"
+    },
+    {
+      "id": "weproc-incident-1080650",
+      "url": "https://status.weinvoice.fr/incident/1080650",
+      "bytes": 99015,
+      "sha256": "caecbd2587fe8282dfca6466e312e360b6e334587c6c19b7a315873d2497515c",
+      "retrievedAt": "2026-10-22T07:11:16.710175+00:00"
+    },
+    {
+      "id": "weproc-incident-1080708",
+      "url": "https://status.weinvoice.fr/incident/1080708",
+      "bytes": 99015,
+      "sha256": "28768472efa1f907b2fb66ea4b35f81d86461d038dd0adc5927ed363fb8ca25b",
+      "retrievedAt": "2026-10-22T07:11:16.716645+00:00"
+    },
+    {
+      "id": "weproc-incident-1080719",
+      "url": "https://status.weinvoice.fr/incident/1080719",
+      "bytes": 99014,
+      "sha256": "573cd9e8f16d0d5eafde78c7d0781cb3f74d77a458720c17d41433eb273c9c02",
+      "retrievedAt": "2026-10-22T07:11:16.780136+00:00"
+    },
+    {
+      "id": "myunisoft-incident-fba23613-5912-4c1f-a6f9-28aa0c690859",
+      "url": "https://meteo.myunisoft.fr/incident/fba23613-5912-4c1f-a6f9-28aa0c690859/",
+      "bytes": 6054,
+      "sha256": "65702718b6dcaafdc7deafa3b4a9194ed2543efc6db5745d93317aa86b9b76dd",
+      "retrievedAt": "2026-10-22T07:11:16.702701+00:00"
+    },
+    {
+      "id": "myunisoft-incident-4367fb01-ec0f-4fc6-94dd-d983ed2260b7",
+      "url": "https://meteo.myunisoft.fr/incident/4367fb01-ec0f-4fc6-94dd-d983ed2260b7/",
+      "bytes": 6054,
+      "sha256": "54046ee98adfa963d3b0f2c0437d26c8b1c88005e0ceb2d585e63498d0df3585",
+      "retrievedAt": "2026-10-22T07:11:16.810124+00:00"
+    },
+    {
+      "id": "fiducial-security-20261001",
+      "url": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "error": "Voir journaux de collecte : réponse non conservée ou lecture échouée"
+    },
+    {
+      "id": "sage-incident-j6kkplxr2ff3",
+      "url": "https://status.sage.com/incidents/j6kkplxr2ff3",
+      "bytes": 85978,
+      "sha256": "941eb9d3343f072bf717164419a517427ca64ae79cd0fd1c5cfc0ff03a8c598a",
+      "retrievedAt": "2026-10-22T07:11:17.439967+00:00"
+    },
+    {
+      "id": "sage-incident-grngh6q7rzc2",
+      "url": "https://status.sage.com/incidents/grngh6q7rzc2",
+      "bytes": 86412,
+      "sha256": "a3e335132517d68e7d519a785dcecaf4474d239914e6a26a304c9ccec89f690c",
+      "retrievedAt": "2026-10-22T07:11:17.352208+00:00"
+    },
+    {
+      "id": "spendesk-3ds-20261007",
+      "url": "https://status.spendesk.com/incidents/v2rhxyvn0mqr",
+      "bytes": 72766,
+      "sha256": "b51497f5eb1b59edb6b6baccc2c48b4b36db76242dbad1e5fdb4bbd88951789a",
+      "retrievedAt": "2026-10-22T07:11:17.305226+00:00"
+    },
+    {
+      "id": "weproc-incident-1083848",
+      "url": "https://status.weinvoice.fr/incident/1083848",
+      "bytes": 99012,
+      "sha256": "37b7047cdf286218394ac98d25ce428e6d439eab78780de4c812a7bea57ea145",
+      "retrievedAt": "2026-10-22T07:11:17.000707+00:00"
+    },
+    {
+      "id": "myunisoft-incident-8ccd8e7d-9ad4-431f-a77b-bdf5e0f68bb1",
+      "url": "https://meteo.myunisoft.fr/incident/8ccd8e7d-9ad4-431f-a77b-bdf5e0f68bb1/",
+      "bytes": 6827,
+      "sha256": "764455fe66eccb66d2cc907d19af23846a27c27c0604ce2b80d24652acff2347",
+      "retrievedAt": "2026-10-22T07:11:17.103953+00:00"
+    },
+    {
+      "id": "myunisoft-incident-b74ef35b-df82-419b-aaf6-c44451d130ae",
+      "url": "https://meteo.myunisoft.fr/incident/b74ef35b-df82-419b-aaf6-c44451d130ae/",
+      "bytes": 6032,
+      "sha256": "236312015f709831d9b3034841bf255387911eb96337d641e0fcf0ff20f73733",
+      "retrievedAt": "2026-10-22T07:11:17.202498+00:00"
+    },
+    {
+      "id": "invopop-incident-20261003",
+      "url": "https://status.invopop.com/incidents/01M45HTD3GB1BD409X4Q6ZM0W6",
+      "bytes": 469244,
+      "sha256": "f5c10da7a4ac91150869a8cf58983d50b11aeb0dfcd6a87b56b27ab4854408ee",
+      "retrievedAt": "2026-10-22T07:11:17.349477+00:00"
+    },
+    {
+      "id": "invopop-postmortem-20261003",
+      "url": "https://status.invopop.com/incidents/01M45HTD3GB1BD409X4Q6ZM0W6/write-up",
+      "bytes": 457133,
+      "sha256": "c46d9b7fbd7cf14e4f7d48ac925e75c514878f9863ede896f1c75e01360341a6",
+      "retrievedAt": "2026-10-22T07:11:17.954670+00:00"
+    },
+    {
+      "id": "esker-environment-e-20261005",
+      "url": "https://www.trustesker.com/?env=E",
+      "bytes": 66175,
+      "sha256": "f1c8448a9b5e1677db97b017e1fa2367950f5b91bf0aeba8f15505cd9bf2ab60",
+      "retrievedAt": "2026-10-22T07:11:17.439967+00:00"
+    },
+    {
+      "id": "aife-depot-pdf-20261006",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm?id=aife_publication&sys_id=ad302dc52b370b50267bff6fce91bf56",
+      "bytes": 309562,
+      "sha256": "92b0efd59699394ab3ea277425126e457c14a705e67afbf1248f8bb82b370778",
+      "retrievedAt": "2026-10-22T07:11:17.721214+00:00"
+    },
+    {
+      "id": "sage-incident-gs8td6mcwhwk",
+      "url": "https://status.sage.com/incidents/gs8td6mcwhwk",
+      "bytes": 85258,
+      "sha256": "86221fdfc020f441345e98c40fc5ea8840d366b5b246bf01498705de4ad1dc84",
+      "retrievedAt": "2026-10-22T07:11:18.169091+00:00"
+    },
+    {
+      "id": "esker-display-d-20261009",
+      "url": "https://www.trustesker.com/?env=D",
+      "bytes": 66175,
+      "sha256": "fa628c915d6dfbf79690fe35527c61bcc891a9ffe417c1756626ed210631e42f",
+      "retrievedAt": "2026-10-22T07:11:17.532439+00:00"
+    },
+    {
+      "id": "esker-display-e-20261009",
+      "url": "https://www.trustesker.com/?env=E",
+      "bytes": 66174,
+      "sha256": "fbd87cfdda57b6ffac4cd88b1b6d87144bf1ef6a1dcf63bae1b5fc5dd143b93d",
+      "retrievedAt": "2026-10-22T07:11:17.627206+00:00"
+    },
+    {
+      "id": "esker-display-g-20261009",
+      "url": "https://www.trustesker.com/?env=G",
+      "bytes": 66174,
+      "sha256": "b94a3d40c3b2a6ef077d6c5cf3939d7707699c6854dd8f0082adce5bdf052012",
+      "retrievedAt": "2026-10-22T07:11:17.710064+00:00"
+    },
+    {
+      "id": "esker-display-k-20261009",
+      "url": "https://www.trustesker.com/?env=K",
+      "bytes": 66174,
+      "sha256": "91b175f4aa214320775e90ad9a853437cd44942450bba3130675885d8e882a79",
+      "retrievedAt": "2026-10-22T07:11:17.796933+00:00"
+    },
+    {
+      "id": "sage-incident-s1t694g66bw6",
+      "url": "https://status.sage.com/incidents/s1t694g66bw6",
+      "bytes": 87698,
+      "sha256": "48507a0022d8cede03a60946dc9f389a4a580b4803771145ec6f2a398729f655",
+      "retrievedAt": "2026-10-22T07:11:18.288358+00:00"
+    },
+    {
+      "id": "sage-incident-kgpbkx523w51",
+      "url": "https://status.sage.com/incidents/kgpbkx523w51",
+      "bytes": 84567,
+      "sha256": "981ad97ec9c05a0bd32b294f340713577bb0ae9986e235997c577977aa626ce5",
+      "retrievedAt": "2026-10-22T07:11:18.536488+00:00"
+    },
+    {
+      "id": "sage-incident-s5d6hfv2l437",
+      "url": "https://status.sage.com/incidents/s5d6hfv2l437",
+      "bytes": 84567,
+      "sha256": "031568274c99e31a0b54fda650199c0a6781090fed5bcedce30dc63e7d103866",
+      "retrievedAt": "2026-10-22T07:11:18.557435+00:00"
+    },
+    {
+      "id": "tungsten-france-20261013",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M4TARHBEYH5A44V3BYN9BKQ6",
+      "bytes": 585110,
+      "sha256": "e2b5cb3c3893ee48289f4401c74c5137f300f616833b778223d8c708abf0c429",
+      "retrievedAt": "2026-10-22T07:11:18.480358+00:00"
+    },
+    {
+      "id": "spendesk-einvoices-20261015",
+      "url": "https://status.spendesk.com/incidents/r39c15dj66mw",
+      "bytes": 72305,
+      "sha256": "2967e61984b05c998f6f5b4776a034c061013d8aa51fee11ed424d886948e8cd",
+      "retrievedAt": "2026-10-22T07:11:18.755914+00:00"
+    },
+    {
+      "id": "veryswing-analyse-196-20261014",
+      "url": "https://status.veryswing.com/incident/196/",
+      "bytes": 10353,
+      "sha256": "4c8d06197a189b400ae67ccc5a630fe05f3242d5e14432101ad29e42130435f7",
+      "retrievedAt": "2026-10-22T07:11:18.637205+00:00"
+    },
+    {
+      "id": "veryswing-analyse-197-20261014",
+      "url": "https://status.veryswing.com/incident/197/",
+      "bytes": 10351,
+      "sha256": "669aa9e6550f2ea87567f612e015f18c51f3db440eaa5e8488ca970c20aedc05",
+      "retrievedAt": "2026-10-22T07:11:18.638509+00:00"
+    },
+    {
+      "id": "docoon-support-20261019",
+      "url": "https://docooninvoice.statuspage.io/incidents/j6hwwj4btd6k",
+      "bytes": 74012,
+      "sha256": "06b9ccc86066050615083d23e1769b07887afc795e96430ead2e1f531a132229",
+      "retrievedAt": "2026-10-22T07:11:18.907607+00:00"
+    },
+    {
+      "id": "sage-help-fr-20261020",
+      "url": "https://status.sage.com/incidents/4ntqxltb75j1",
+      "bytes": 86824,
+      "sha256": "6f0498a94bf04802cebca3febc33c341a642078970d191897646c5a2120256a2",
+      "retrievedAt": "2026-10-22T07:11:19.240261+00:00"
+    },
+    {
+      "id": "pagero-online-20261009",
+      "url": "https://status.pagero.com/incidents/x6vw220fl8yw",
+      "bytes": 57257,
+      "sha256": "631d123f3050fc7b62a33d81d748ad61f174cb586361c70b990dc53eff06ddcb",
+      "retrievedAt": "2026-10-22T07:11:19.117183+00:00"
+    },
+    {
+      "id": "sage-efacture-archivage-20261020",
+      "url": "https://efacture.sage.fr/Public/Commun/Index.aspx?ReturnUrl=%2F",
+      "bytes": 33765,
+      "sha256": "56b6eaf403e0b71eedb3c6895d60299d313df1521fc8c286a59cd8fa8ad9efbc",
+      "retrievedAt": "2026-10-22T07:11:18.895602+00:00"
+    },
+    {
+      "id": "sps-fulfillment-20261012",
+      "url": "https://status.spscommerce.com/incidents/2v3vj2qbwfzr",
+      "bytes": 78151,
+      "sha256": "e36a968eaee3f67f7dc417b4b23dd926daf44ffa15a40e9199c0e7e735a098d8",
+      "retrievedAt": "2026-10-22T07:11:19.384980+00:00"
+    },
+    {
+      "id": "sps-fulfillment-product-20261020",
+      "url": "https://www.spscommerce.com/products/fulfillment/edi/",
+      "bytes": 534360,
+      "sha256": "624b5606c503a10026b5f3218549a7929402615b3ee4adb543106bf371f82bba",
+      "retrievedAt": "2026-10-22T07:11:19.136599+00:00"
+    },
+    {
+      "id": "vosfactures-press",
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "bytes": 50339,
+      "sha256": "34b16e0f7133f1609dd7ef500e3dc1c3d1b1bd19df0e14621057b8b6e4def592",
+      "retrievedAt": "2026-10-22T07:11:19.261545+00:00"
+    },
+    {
+      "id": "sage-yjw96gx5rv4q",
+      "url": "https://status.sage.com/incidents/yjw96gx5rv4q",
+      "bytes": 86036,
+      "sha256": "6d0dc5a7423f8423251cbba2fd0384a531b33911468d8d2fd1fc47e63449fc85",
+      "retrievedAt": "2026-10-22T07:12:58.890771+00:00"
+    },
+    {
+      "id": "sage-p1z908z72kq1",
+      "url": "https://status.sage.com/incidents/p1z908z72kq1",
+      "bytes": 84448,
+      "sha256": "eb39b006819b0d09886aab0fc9248952fce4c1eff54ff3aa0a93f6962f62237a",
+      "retrievedAt": "2026-10-22T07:12:58.892166+00:00"
+    },
+    {
+      "id": "sage-4ntqxltb75j1",
+      "url": "https://status.sage.com/incidents/4ntqxltb75j1",
+      "bytes": 86824,
+      "sha256": "47d83d4b05805194d5db97e6e80e9a7559e82a2feba1a5aa80185adc1aeebdc3",
+      "retrievedAt": "2026-10-22T07:12:58.924668+00:00"
+    },
+    {
+      "id": "esker-environment-D",
+      "url": "https://www.trustesker.com/?env=D",
+      "bytes": 66174,
+      "sha256": "08cdbe050675732884825ed66ab8e5b3e71024bd717f00d8dc6c22d37fa2340b",
+      "retrievedAt": "2026-10-22T07:12:58.377235+00:00"
+    },
+    {
+      "id": "esker-environment-E",
+      "url": "https://www.trustesker.com/?env=E",
+      "bytes": 66174,
+      "sha256": "fbd87cfdda57b6ffac4cd88b1b6d87144bf1ef6a1dcf63bae1b5fc5dd143b93d",
+      "retrievedAt": "2026-10-22T07:12:58.470537+00:00"
+    },
+    {
+      "id": "esker-environment-G",
+      "url": "https://www.trustesker.com/?env=G",
+      "bytes": 66175,
+      "sha256": "d6be18012cfbaf91fd99a48f2d4a75303789a7723867d8f13753d1724cf90dda",
+      "retrievedAt": "2026-10-22T07:12:58.559247+00:00"
+    },
+    {
+      "id": "esker-environment-K",
+      "url": "https://www.trustesker.com/?env=K",
+      "bytes": 66174,
+      "sha256": "3f44f4bea0ac56433a8bc9685030356263ea20f113fe8bb8681842a37fa42c81",
+      "retrievedAt": "2026-10-22T07:12:58.643386+00:00"
+    },
+    {
+      "id": "pitney-bowes-qkgz6w0536qd",
+      "url": "https://status.pitneybowes.com/incidents/qkgz6w0536qd",
+      "bytes": 138793,
+      "sha256": "c878b1da41fa0cc660d73d11340868810567e813222f95b36daf3e34add24666",
+      "retrievedAt": "2026-10-22T07:12:59.365379+00:00"
+    },
+    {
+      "id": "tungsten-01M25S9T1HG0AJZQQ21TEYGCQV",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M25S9T1HG0AJZQQ21TEYGCQV",
+      "bytes": 565868,
+      "sha256": "4a1da6d3f7fb584abfeb982bee92f96b1fa9e08961bf449f021789ec26685c59",
+      "retrievedAt": "2026-10-22T07:12:59.513234+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1344",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1344/",
+      "bytes": 26471,
+      "sha256": "e49088b3ff84bbc6c408c32fb1eb2007eb51542cdcb28db360bce8acc7e8dff3",
+      "retrievedAt": "2026-10-22T07:12:59.060229+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1343",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1343/",
+      "bytes": 21128,
+      "sha256": "61026f981d27e4053ab79b78f3f8e19a8af986c41d61f076e16f1818f47db208",
+      "retrievedAt": "2026-10-22T07:12:59.052771+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-ALE-014",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/",
+      "bytes": 26782,
+      "sha256": "91f474e2f0f414b2d8575b91cecd59d880e62f0179033baae665177100fc094a",
+      "retrievedAt": "2026-10-22T07:12:59.184056+00:00"
+    },
+    {
+      "id": "sps-commerce-2v3vj2qbwfzr",
+      "url": "https://status.spscommerce.com/incidents/2v3vj2qbwfzr",
+      "bytes": 78151,
+      "sha256": "e159f80ab0311372196f4b39aae8cdc5fa6c3b1b48891c3cbca8e287943c26c0",
+      "retrievedAt": "2026-10-22T07:12:59.485175+00:00"
+    },
+    {
+      "id": "sage-nm9m9qpm95yy",
+      "url": "https://status.sage.com/incidents/nm9m9qpm95yy",
+      "bytes": 83928,
+      "sha256": "0f54bdd41bcb55d244f80447d3a6bbdf51a016cf51d3391316bceb14534124e6",
+      "retrievedAt": "2026-10-22T07:12:59.753223+00:00"
+    },
+    {
+      "id": "sage-522mdd1rb7ls",
+      "url": "https://status.sage.com/incidents/522mdd1rb7ls",
+      "bytes": 83276,
+      "sha256": "4ed9e8d9a81ef2eeaaa24536242ffd895024b7ce8c6bf5182e850e7b961e629a",
+      "retrievedAt": "2026-10-22T07:12:59.929462+00:00"
+    },
+    {
+      "id": "esker-environment-C",
+      "url": "https://www.trustesker.com/?env=C",
+      "bytes": 66175,
+      "sha256": "da88b2ca803de35233dd420958e26c4b71438e252ee33eacc53b6aeb8c8d21cc",
+      "retrievedAt": "2026-10-22T07:12:59.569974+00:00"
+    },
+    {
+      "id": "esker-environment-F",
+      "url": "https://www.trustesker.com/?env=F",
+      "bytes": 66175,
+      "sha256": "b19e75cba2c5949028b8bf8edb4dcdfc9e5c86161fbd77af05f4411e0917b268",
+      "retrievedAt": "2026-10-22T07:12:59.590247+00:00"
+    },
+    {
+      "id": "esker-environment-H",
+      "url": "https://www.trustesker.com/?env=H",
+      "bytes": 66175,
+      "sha256": "9276c409e13570b32cbe14c3eddf70b2ac21cf417db6c7dd3651b0e836e2c71f",
+      "retrievedAt": "2026-10-22T07:12:59.653772+00:00"
+    },
+    {
+      "id": "esker-environment-J",
+      "url": "https://www.trustesker.com/?env=J",
+      "bytes": 66174,
+      "sha256": "80ad6bea04c22450f048d0a37dc96becc75ef3a63ccdcd06081d89b2f8ef8465",
+      "retrievedAt": "2026-10-22T07:12:59.678223+00:00"
+    },
+    {
+      "id": "pitney-bowes-h47s62bkcmvt",
+      "url": "https://status.pitneybowes.com/incidents/h47s62bkcmvt",
+      "bytes": 138793,
+      "sha256": "3ac65f766c8448d2a5dac1d68afe5bd5e7956fe0ddac40890afc897cd0beae90",
+      "retrievedAt": "2026-10-22T07:13:00.331120+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1346",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/",
+      "bytes": 25327,
+      "sha256": "f4ed424a3591914f24ece61f94533e90904c278e48b51d18e376feb4c20128c7",
+      "retrievedAt": "2026-10-22T07:12:59.818323+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1359",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1359/",
+      "bytes": 23247,
+      "sha256": "d886e658c77c7bba3aede55da5b7a12db17b1506bf9d59c40e4e9afc7c8c4a76",
+      "retrievedAt": "2026-10-22T07:12:59.877645+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1347",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/",
+      "bytes": 20349,
+      "sha256": "992e2ef2d65218b6e3707637ff200651966955d094198253ae72b7dd1302c429",
+      "retrievedAt": "2026-10-22T07:12:59.952365+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1345",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/",
+      "bytes": 29879,
+      "sha256": "2e2924e39ada6ac3985bc7a3be96409f78faf9aecbb1b95f3071315e26a86b06",
+      "retrievedAt": "2026-10-22T07:13:00.013342+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1357",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1357/",
+      "bytes": 135890,
+      "sha256": "a9a9a5e94f5ee111b2a61ee81094e8867b25c1ffc2e4908bb264c078279ebb3e",
+      "retrievedAt": "2026-10-22T07:13:00.090568+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1348",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1348/",
+      "bytes": 20896,
+      "sha256": "f44a79b0711071d15d8a0904c26c65b7eeb478d22d3b4047fcdc994d68cabf2b",
+      "retrievedAt": "2026-10-22T07:13:00.078496+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1358",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1358/",
+      "bytes": 24713,
+      "sha256": "9c0b058079f3f5bb6b1816d8a256ba58913a5b6212993a962a14c3a591de5355",
+      "retrievedAt": "2026-10-22T07:13:00.152249+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1355",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1355/",
+      "bytes": 30232,
+      "sha256": "f0cc73ec4df03ae05d10dfee138651693f32a2687450c0b22392aedc7c47e620",
+      "retrievedAt": "2026-10-22T07:13:00.210619+00:00"
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1356",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1356/",
+      "bytes": 20460,
+      "sha256": "6ba3c51075bb3a093c1f60f8887a8cda234ae87d69a005a8f7e1e93ee027ce30",
+      "retrievedAt": "2026-10-22T07:13:00.220537+00:00"
+    },
+    {
+      "id": "ar24-status",
+      "url": "https://status.ar24.fr/",
+      "bytes": 97306,
+      "sha256": "228af4aeb34b1e5fe88b1f331e77b95dbf45ba0d4a7e47cec2f9036091df339b",
+      "retrievedAt": "2026-10-22T07:13:00.762815+00:00"
+    },
+    {
+      "id": "ar24-maintenance-event",
+      "url": "https://status.ar24.fr/incidents/r8v3d314fzbm",
+      "bytes": 54770,
+      "sha256": "2d295af6b2178532a4f5cd84383dd5c836a14b86a756c5e12a6820bf894e3e57",
+      "retrievedAt": "2026-10-22T07:17:29.762465+00:00"
+    },
+    {
+      "id": "tungsten-france-writeup-20261022",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M4TARHBEYH5A44V3BYN9BKQ6/write-up",
+      "bytes": 526693,
+      "sha256": "3f13709062606dbb9112a0061e24686ca96c9b199082ad13fd6ba624ca8c27dc",
+      "retrievedAt": "2026-10-22T07:14:06.525043+00:00"
+    },
+    {
+      "id": "aife-rendered-20261022",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "bytes": 9868,
+      "sha256": "19538db24314cff5a4fc7adcb2673533a14cf2bf937d8dd9f8195082fc86dcbb",
+      "note": "Deux annonces développées : évolutions B2G et authentification ; anciens bandeaux VosFactures/PDF absents. Aucune résolution déduite."
+    }
+  ]
+}

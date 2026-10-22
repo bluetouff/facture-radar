@@ -1,0 +1,238 @@
+{
+  "reviewedOn": "2026-10-22",
+  "collection": "27 lectures le 22 ; artifacts GitHub du 21 réutilisés ; état et file cumulatifs conservés",
+  "candidates": [
+    {
+      "id": "sage-yjw96gx5rv4q",
+      "sourceId": "sage",
+      "title": "Generation Experts Connector Cloud (FR) - Operational",
+      "url": "https://status.sage.com/incidents/yjw96gx5rv4q",
+      "publishedAt": "2026-10-21T09:52:04.000Z",
+      "decision": "Ajout journal, application connecteur français ; incident clos."
+    },
+    {
+      "id": "sage-p1z908z72kq1",
+      "sourceId": "sage",
+      "title": "Brightpearl - Operational",
+      "url": "https://status.sage.com/incidents/p1z908z72kq1",
+      "publishedAt": "2026-10-21T09:43:31.000Z",
+      "decision": "Incident du site vitrine déjà qualifié au 20, connexion directe disponible ; pas de nouvelle panne de facturation démontrée."
+    },
+    {
+      "id": "sage-4ntqxltb75j1",
+      "sourceId": "sage",
+      "title": "Online Help Center (FR) - Operational",
+      "url": "https://status.sage.com/incidents/4ntqxltb75j1",
+      "publishedAt": "2026-10-21T09:36:22.000Z",
+      "decision": "Avis existant : résolution notifiée le 21 octobre."
+    },
+    {
+      "id": "esker-environment-D",
+      "sourceId": "esker",
+      "title": "TrustEsker environnement D",
+      "url": "https://www.trustesker.com/?env=D",
+      "publishedAt": null,
+      "decision": "Messages répétés regroupés dans un avis disponibilité du service AR24 ; PA L non citée, cyberattaque non établie."
+    },
+    {
+      "id": "esker-environment-E",
+      "sourceId": "esker",
+      "title": "TrustEsker environnement E",
+      "url": "https://www.trustesker.com/?env=E",
+      "publishedAt": null,
+      "decision": "Messages répétés regroupés dans un avis disponibilité du service AR24 ; PA L non citée, cyberattaque non établie."
+    },
+    {
+      "id": "esker-environment-G",
+      "sourceId": "esker",
+      "title": "TrustEsker environnement G",
+      "url": "https://www.trustesker.com/?env=G",
+      "publishedAt": null,
+      "decision": "Messages répétés regroupés dans un avis disponibilité du service AR24 ; PA L non citée, cyberattaque non établie."
+    },
+    {
+      "id": "esker-environment-K",
+      "sourceId": "esker",
+      "title": "TrustEsker environnement K",
+      "url": "https://www.trustesker.com/?env=K",
+      "publishedAt": null,
+      "decision": "Messages répétés regroupés dans un avis disponibilité du service AR24 ; PA L non citée, cyberattaque non établie."
+    },
+    {
+      "id": "pitney-bowes-qkgz6w0536qd",
+      "sourceId": "pitney-bowes",
+      "title": "UPS Service Disruption Observed for RateShipment.",
+      "url": "https://status.pitneybowes.com/incidents/qkgz6w0536qd",
+      "publishedAt": "2026-10-20T12:16:26.000Z",
+      "decision": "Expédition UPS et tarification RateShipment, hors périmètre facturation de la PA."
+    },
+    {
+      "id": "tungsten-01M25S9T1HG0AJZQQ21TEYGCQV",
+      "sourceId": "tungsten",
+      "title": "Intermittent Printix Sign-In and Printing Delays",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M25S9T1HG0AJZQQ21TEYGCQV",
+      "publishedAt": "2026-09-11T08:43:33.000Z",
+      "decision": "Authentification/impression Printix, hors produit PA et facturation française documentée."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1344",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans Mattermost Server (20 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1344/",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1343",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans Laravel (20 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1343/",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-ALE-014",
+      "sourceId": "cert-fr",
+      "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "sps-commerce-2v3vj2qbwfzr",
+      "sourceId": "sps-commerce",
+      "title": "Fulfillment is Unavailable",
+      "url": "https://status.spscommerce.com/incidents/2v3vj2qbwfzr",
+      "publishedAt": "2026-10-12T15:07:48.000Z",
+      "decision": "Avis du 12 octobre déjà publié, traitement et flux normaux selon la source ; pas de nouveau cas."
+    },
+    {
+      "id": "sage-nm9m9qpm95yy",
+      "sourceId": "sage",
+      "title": "Sage HCM (Criterion) - Partial Outage",
+      "url": "https://status.sage.com/incidents/nm9m9qpm95yy",
+      "publishedAt": "2026-10-21T20:11:49.000Z",
+      "decision": "RH et intégration LMS, hors services de facturation étudiés."
+    },
+    {
+      "id": "sage-522mdd1rb7ls",
+      "sourceId": "sage",
+      "title": "Sage HCM (Criterion) - Operational",
+      "url": "https://status.sage.com/incidents/522mdd1rb7ls",
+      "publishedAt": "2026-10-21T13:34:30.000Z",
+      "decision": "RH et intégration LMS, hors services de facturation étudiés."
+    },
+    {
+      "id": "esker-environment-C",
+      "sourceId": "esker",
+      "title": "TrustEsker environnement C",
+      "url": "https://www.trustesker.com/?env=C",
+      "publishedAt": null,
+      "decision": "Messages répétés regroupés dans un avis disponibilité du service AR24 ; PA L non citée, cyberattaque non établie."
+    },
+    {
+      "id": "esker-environment-F",
+      "sourceId": "esker",
+      "title": "TrustEsker environnement F",
+      "url": "https://www.trustesker.com/?env=F",
+      "publishedAt": null,
+      "decision": "Messages répétés regroupés dans un avis disponibilité du service AR24 ; PA L non citée, cyberattaque non établie."
+    },
+    {
+      "id": "esker-environment-H",
+      "sourceId": "esker",
+      "title": "TrustEsker environnement H",
+      "url": "https://www.trustesker.com/?env=H",
+      "publishedAt": null,
+      "decision": "Messages répétés regroupés dans un avis disponibilité du service AR24 ; PA L non citée, cyberattaque non établie."
+    },
+    {
+      "id": "esker-environment-J",
+      "sourceId": "esker",
+      "title": "TrustEsker environnement J",
+      "url": "https://www.trustesker.com/?env=J",
+      "publishedAt": null,
+      "decision": "Messages répétés regroupés dans un avis disponibilité du service AR24 ; PA L non citée, cyberattaque non établie."
+    },
+    {
+      "id": "pitney-bowes-h47s62bkcmvt",
+      "sourceId": "pitney-bowes",
+      "title": "UPS Service Disruption Observed for RateShipment.",
+      "url": "https://status.pitneybowes.com/incidents/h47s62bkcmvt",
+      "publishedAt": "2026-10-21T22:35:27.000Z",
+      "decision": "Expédition UPS et tarification RateShipment, hors périmètre facturation de la PA."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1346",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans les produits Mozilla (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1359",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans PHP (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1359/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1347",
+      "sourceId": "cert-fr",
+      "title": "Vulnérabilité dans MongoDB PHP Driver (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1345",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans les produits StormShield (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1357",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans Google Chrome (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1357/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1348",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans Mattermost Server (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1348/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1358",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans Apache Tomcat (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1358/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1355",
+      "sourceId": "cert-fr",
+      "title": "Multiples vulnérabilités dans Oracle Weblogic (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1355/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    },
+    {
+      "id": "cert-fr-CERTFR-2026-AVI-1356",
+      "sourceId": "cert-fr",
+      "title": "Vulnérabilité dans Traefik (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1356/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "decision": "Bulletin de vulnérabilité ou alerte générale, pas preuve d’incident chez une PA. PHP est traité comme piste institutionnelle distincte."
+    }
+  ]
+}
