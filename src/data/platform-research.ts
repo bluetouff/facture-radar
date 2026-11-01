@@ -42,6 +42,38 @@ type ResearchOverride = Partial<Omit<PlatformResearchProfile, "platformSlug" | "
 };
 
 const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
+  digipharmacie: { overagePricing: documented("CGV : 500 factures par mois incluses ; 0,07 € HT par facture supplémentaire. Le prix de base dépend de la formule souscrite.", ["digipharmacie-cgv-20261101"], "Tarif par client pharmacien, sans simulation de consommation ou de coût total au-delà du forfait.", "2026-11-01") },
+  qweeby: { availability: { eReporting: { value: {stage: "announced", scope: "Plans PA Référence et PA Intégral"}, status: "declared", sourceIds: ["qweeby-offers-20261101"], checkedAt: "2026-11-01", note: "La page décrit la prestation dans ces plans ; activation opérationnelle et cas disponibles restent à confirmer." } } },
+  arratech: {
+    hostingProviders: declared(["Amazon Web Services", "GCP S3NS"], ["arratech-tech-20261101"], "Le dossier technique décrit AWS à Francfort par défaut et un module GCP S3NS pour la France. L’éditeur fixe la région lors de l’entrée du client. Le contrat doit identifier le déploiement et le service qualifié effectivement utilisés.", "2026-11-01"),
+  },
+  effinum: {
+    directImport: documented<DirectImportDetail>({ acceptsThirdPartyFile: true, formats: ["XML"], preservesEmbeddedXml: null, requiresReentry: null }, ["effinum-guide-20261101"], "Le guide régional décrit l’import manuel de factures XML produites par un autre logiciel, puis leur suivi dans Fichiers importés. Factur-X, conservation d’un XML embarqué et ressaisie éventuelle restent à confirmer. Le guide distingue cette procédure du dépôt des achats papier via Cerfrance Connect.", "2026-11-01"),
+  },
+  cyclope: {
+    exitTerms: documented<ExitTerms>({
+      bulkExport: true,
+      formats: ["Factur-X", "CII/XML", "PDF"],
+      postTerminationAccess: "En cas de changement de PA, accès conservé pendant les 60 jours suivant la demande de migration ; service minimal jusqu’à migration complète.",
+      fees: "Exports de base annoncés gratuits ; assistance à la migration facturable selon l’annexe.",
+    }, ["cyclope-contract-20261101"], "L’article 4.5 prévoit l’intégralité des données et une restitution sous 60 jours. Ces CGU désignent INFORMATEX comme concédant et le portail Gallo. Elles décrivent une offre distribuée ; leur application à un autre contrat doit être confirmée.", "2026-11-01"),
+    terminationTerms: documented("Les CGU INFORMATEX prévoient 12 mois initiaux, reconduction annuelle et résiliation à l’échéance par lettre recommandée avec avis de réception, au moins deux mois avant le terme.", ["cyclope-contract-20261101"], "Articles 3 et 8 des CGU publiées pour le portail Gallo. Conditions à rapprocher de l’annexe et du distributeur retenus ; la durée n’est pas généralisée aux autres offres Cyclope.", "2026-11-01"),
+  },
+  factureapp: {
+    hostingProviders: declared(["OVHcloud"], ["factureapp-privacy-20261101"], "La politique v1.0 du 5 janvier 2026 nomme OVHcloud en France. Le service d’hébergement exact et la qualification SecNumCloud annoncée restent à vérifier sur le contrat et la référence ANSSI correspondante.", "2026-11-01"),
+    declaredSubprocessors: declared(["CENET SA", "OVHcloud", "Pipedrive", "Zendesk"], ["factureapp-privacy-20261101"], "Les pages 7 à 9 nomment CENET SA en Colombie pour le développement et l’administration technique, OVHcloud pour l’hébergement français, Pipedrive pour le CRM et Zendesk pour l’assistance. L’éditeur déclare que CENET ne détient pas les clés de déchiffrement et que les données restent physiquement en France. Ces déclarations et les garanties d’accès doivent être confrontées au contrat applicable.", "2026-11-01"),
+  },
+  macompta: {
+    overagePricing: {"value": "Première année gratuite ; ensuite jusqu’à 20 factures par mois sans abonnement Comptabilité/Facturation, ou 250 avec cet abonnement. Tarif au-delà des seuils non publié dans cette FAQ.", "status": "documented", "sourceIds": ["macompta-faq-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Article du 17 septembre découvert lors de la revue du 1er novembre. Les plafonds durables restent distincts de la gratuité initiale."},
+  },
+  weproc: {
+    overagePricing: {"value": "PA Interface : Pro 29 € HT/mois jusqu’à 250 documents ; Business : 39 € HT/mois jusqu’à 500. Au-delà : sur devis. PA Connect : 200 € HT/mois plus un tarif au document et une vérification de 2 € HT par compte.", "status": "documented", "sourceIds": ["weinvoice-pricing-20261101"], "checkedAt": "2026-11-01", "note": "La page est non datée ; il s’agit d’un complément découvert aujourd’hui."},
+    exitTerms: {"value": {"bulkExport": true, "formats": ["CSV", "XML EN 16931"], "postTerminationAccess": "Export et consultation annoncés après résiliation ; archivage annoncé pendant 10 ans.", "fees": "Export consolidé annoncé sans frais sur la page sécurité."}, "status": "documented", "sourceIds": ["weinvoice-pricing-20261101", "weinvoice-security-20261101"], "checkedAt": "2026-11-01", "note": "Ces modalités sont décrites publiquement par l’éditeur ; inventaire technique, délai et procédure de remise à confirmer."},
+    hostingProviders: {"value": ["Outscale"], "status": "declared", "sourceIds": ["weinvoice-security-20261101"], "checkedAt": "2026-11-01", "note": "Hébergement déclaré ; contrat et périmètre de qualification à confirmer."},
+    terminationTerms: {"value": "Abonnement mensuel résiliable à tout moment, sans pénalité annoncée.", "status": "documented", "sourceIds": ["weinvoice-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Selon la FAQ publique ; contrat souscrit à vérifier."},
+    iso27001Scope: {"value": {"evidenceKind": "scope_statement", "legalEntity": "Weproc", "standard": "ISO/IEC 27001:2022", "certificateNumber": null, "certificationBody": "Certi-Trust", "validFrom": null, "validUntil": null, "statementOfApplicability": null, "scopeText": "Système de management de la sécurité de l’information, selon la déclaration publique de Weproc.", "platformRelation": "organization_only", "validity": "not_published"}, "status": "declared", "sourceIds": ["weinvoice-security-20261101"], "checkedAt": "2026-11-01", "note": "Aucun certificat téléchargeable ni dates de validité sur la page ; la déclaration ne vérifie pas le périmètre exact de la PA."},
+  },
+  billit: {"terminationTerms":{"value":"Billit annonce de nouvelles conditions applicables le 30 novembre 2026 : renouvellement pour la durée choisie et résiliation au moins un jour avant la fin de période via Paramètres > Abonnement. Le refus des nouvelles conditions est annoncé possible jusqu’au 29 novembre inclus.","status":"documented","sourceIds":["billit-terms-update-20261101"],"checkedAt":"2026-11-01","note":"Au contrôle du 1 novembre, cette date d’entrée en vigueur est future ; ne pas présenter ces modalités comme déjà applicables à tous les contrats. La notice annonce aussi une assistance au transfert/changement de prestataire, sans détailler dans cette page le format d’export ou les frais."}},
   generix: {
     exitTerms: documented<ExitTerms>({
       bulkExport: null,
@@ -251,6 +283,7 @@ const researchOverrides: Readonly<Record<string, ResearchOverride>> = {
       fees: null,
     }, ["sellsy-accountants-2026"], "Des exports comptables sont publiés, sans procédure complète de restitution après résiliation."),
     terminationTerms: documented("L'offre Standard étudiée affiche un engagement de douze mois. Les conditions précises de résiliation restent contractuelles.", ["sellsy-pricing-2026"]),
+    declaredSubprocessors: {"value": ["AWS (copie hebdomadaire des sauvegardes sur S3)"], "status": "declared", "sourceIds": ["sellsy-backups-20261101"], "checkedAt": "2026-11-01", "note": "Sauvegardes nocturnes sur 14 jours et copie hebdomadaire chiffrée sur 12 semaines. Le pays de cette copie et une liste exhaustive de sous-traitants ne sont pas indiqués ; aucune localisation n’est déduite."},
     hostingProviders: declared(["Scaleway"], ["sellsy-invoicing-2026", "sellsy-accountants-2026"], "Sellsy annonce un hébergement en France chez Scaleway. Cette déclaration ne décrit pas nécessairement tous les sous-traitants de l'offre."),
   },
   septeo: {

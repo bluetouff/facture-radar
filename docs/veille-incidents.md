@@ -1,6 +1,6 @@
 # Veille publique des incidents PA
 
-Dernière revue : 20 octobre 2026. Le relevé initial du 30 septembre et ses compléments restent décrits ci-dessous. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
+Dernière revue : 1er novembre 2026. Le relevé initial du 30 septembre et ses compléments restent décrits ci-dessous. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
 
 ## Recherche initiale et publications
 
@@ -15,7 +15,7 @@ Dernière revue : 20 octobre 2026. Le relevé initial du 30 septembre et ses com
 
 La fréquence demandée est **un relevé quotidien**, pas une surveillance à la minute. Le workflow `.github/workflows/incidents.yml` lance la collecte à 06 h 17 UTC. GitHub peut décaler l’exécution. Il n’y a aucune boucle de relance automatique.
 
-Le registre `src/data/incident-watch-sources.json` contient **27 sources au total : 26 PA et le CERT-FR**, après ajout du flux SPS le 20 octobre : RSS, Atom, trois API JSON et la page TrustEsker. Une exécution effectue au plus 27 lectures de contenu, avec quatre sources simultanées. La résolution DNS publique épinglée génère ses propres échanges réseau. Les sources d’un même opérateur ne sont pas interrogées deux fois pour les variantes RSS et Atom.
+Le registre `src/data/incident-watch-sources.json` contient **28 sources au total : 27 PA et le CERT-FR**, après ajout du flux Swile le 1er novembre : RSS, trois API JSON et les pages publiques TrustEsker et Veryswing. Une exécution effectue au plus 28 lectures de contenu, avec quatre sources simultanées. La résolution DNS publique épinglée génère ses propres échanges réseau. Les sources d’un même opérateur sont interrogées une seule fois.
 
 ```sh
 npm run incidents:collect
@@ -92,3 +92,7 @@ Les 155 recherches nominatives sont terminées après autorisation d’utiliser 
 ## Revue du 22 octobre 2026
 
 Les 155 recherches nominatives et les 27 sources sont relues. Le journal contient 88 avis, dont 82 de disponibilité et six de sécurité. Les mesures préventives PHP chez @GP et la perturbation ERE chez AR24 sont publiées en disponibilité avec leur périmètre. Deux avis Pagero de septembre sont retrouvés, sans déplacement de leurs dates d’origine. Le contrôle DGFiP est bloqué par une page de maintenance ; le snapshot valide du 20 est conservé. Voir [la revue et ses preuves](revue-pa-2026-10-22.md).
+
+## Revue du 1er novembre 2026
+
+La liste officielle redevient accessible : 155 PA, dix dossiers en attente, Swile ajouté et DocProcess conservé en historique. La recherche porte sur les 155 acteurs courants et DocProcess. Le corpus réunit 119 avis, dont 113 de disponibilité et six de sécurité. Veryswing passe du flux Atom disparu à sa page d’historique ; le CERT-FR accepte son nouveau domaine officiel avec www. Les origines, chemins et dates restent contrôlés. Swile rejoint la collecte quotidienne, portant le registre à 28 sources, sans modèle ni changement de fréquence. Les erreurs d’acquisition restent des échecs de collecte, sans attribution de panne à une PA. Voir [la revue et ses preuves](revue-pa-2026-11-01.md).

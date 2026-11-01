@@ -536,7 +536,7 @@
     "firstReportedAt": "2026-09-15",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-15",
-    "checkedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
       "frenchbreaches-welyb-20260915"
     ],
@@ -608,7 +608,7 @@
     "firstReportedAt": "2026-09-17",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-17",
-    "checkedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
       "frenchbreaches-zenfirst-20260917"
     ],
@@ -708,7 +708,7 @@
     "firstReportedAt": "2026-09-21",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-21",
-    "checkedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
       "frenchbreaches-altagem-20260921",
       "cyberattaque-altagem-20260921"
@@ -735,7 +735,7 @@
     "firstReportedAt": "2026-09-19",
     "resolutionReportedAt": null,
     "updatedAt": "2026-09-20",
-    "checkedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
       "frenchbreaches-faktus-20260919"
     ],
@@ -992,7 +992,7 @@
     "firstReportedAt": "2026-10-01",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-01",
-    "checkedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
       "factuali-notification-relayed-20261001",
       "fuitesinfos-vosfactures-20261001",
@@ -1165,7 +1165,7 @@
     "firstReportedAt": "2026-10-01",
     "resolutionReportedAt": null,
     "updatedAt": "2026-10-01",
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
       "fiducial-security-20261001"
     ],
@@ -1222,15 +1222,15 @@
     "kind": "availability",
     "scope": "upstream",
     "title": "Spendesk : notifications d’authentification 3DS absentes sur iOS",
-    "summary": "Spendesk signale depuis le 7 octobre l’absence de notifications d’authentification 3DS pour certains utilisateurs iOS. Le complément du 13 attribue le problème à un traitement rare chez son prestataire et annonce un correctif en préparation. L’avis conserve le statut identifié lors de la lecture du 20.",
-    "status": "identified",
+    "summary": "Spendesk annonce le 23 octobre la résolution des notifications d’authentification 3DS manquantes pour certains utilisateurs iOS. Le signalement du 7 et le complément du 13 attribuaient le problème au traitement d’un prestataire d’authentification non nommé. Le service de facturation électronique conserve un périmètre distinct.",
+    "status": "resolved",
     "startedAt": null,
     "firstReportedAt": "2026-10-07T09:13:16Z",
-    "resolutionReportedAt": null,
-    "updatedAt": "2026-10-13T08:22:47Z",
-    "checkedAt": "2026-10-22",
+    "resolutionReportedAt": "2026-10-23T12:36:45Z",
+    "updatedAt": "2026-10-23T12:36:45Z",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
-      "spendesk-3ds-20261007"
+      "spendesk-3ds-resolution-20261101"
     ],
     "limitations": "L’attribution au prestataire vient de Spendesk, qui ne le nomme pas dans cet avis. L’incident concerne les notifications de paiement ; l’impact sur les flux PA reste non documenté. Cet avis de disponibilité ne signale pas de compromission.",
     "affectedService": "Notifications 3DS iOS Spendesk, service du prestataire d’authentification"
@@ -1563,9 +1563,9 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
-      "welyb-status-20260916"
+      "welyb-status-20261101"
     ],
     "limitations": "La rubrique reste sans date propre. La première copie conservée le 14 octobre portait une date générale de mise à jour du 13. La relecture du 20 confirme la présence de l’avis, sans nouvel horaire de début ni notification de résolution. L’attribution vient de Welyb et aucun opérateur PA particulier n’est désigné.",
     "affectedService": "Connecteur Welyb vers Ami Compta",
@@ -1585,9 +1585,9 @@
     "firstReportedAt": null,
     "resolutionReportedAt": null,
     "updatedAt": null,
-    "checkedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
-      "welyb-status-20260916"
+      "welyb-status-20261101"
     ],
     "limitations": "Avis sans date propre, observé le 14 octobre et toujours présent dans les perturbations lors de la relecture du 20. Il concerne la récupération dans Welyb ; une indisponibilité ou une atteinte directe à la PA Cecurity reste non établie. Le rétablissement du raccordement des nouveaux dossiers annoncé le 16 reste distinct.",
     "affectedService": "Récupération des factures eFacture by Cecurity dans Welyb",
@@ -1825,20 +1825,21 @@
     "verification": "primary_notice",
     "affectedService": "Lettres recommandées électroniques AR24 utilisées dans les environnements Esker C, D, E, F, G, H, J et K",
     "title": "Esker : lettres recommandées électroniques perturbées chez AR24",
-    "summary": "Esker signale le 21 octobre à 12 h 34 UTC des difficultés d’envoi, de traitement et de consultation des lettres recommandées électroniques à la suite d’une maintenance de sécurité urgente chez son prestataire AR24. Le message figure dans les environnements C, D, E, F, G, H, J et K. AR24 affiche une maintenance exceptionnelle de production en cours lors de la consultation du 22 octobre.",
-    "status": "investigating",
+    "summary": "Esker avait signalé des perturbations d’envoi et de consultation des lettres recommandées électroniques pendant une maintenance urgente chez AR24. AR24 annonce la fin de l’opération le 22 octobre à 16 h 02 CEST. Les environnements Esker C, D, E, F, G, H, J et K sont cités dans l’avis initial ; l’environnement L de la PA française reste distinct.",
+    "status": "resolved",
     "startedAt": null,
     "detectedAt": null,
     "firstReportedAt": "2026-10-21T12:34:00Z",
     "firstObservedAt": "2026-10-22T07:10:50.964Z",
-    "resolutionReportedAt": null,
-    "updatedAt": "2026-10-21T12:34:00Z",
-    "checkedAt": "2026-10-22",
+    "resolutionReportedAt": "2026-10-22T14:02:11Z",
+    "updatedAt": "2026-10-22T14:02:11Z",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
       "esker-ar24-ere-20261021",
-      "ar24-maintenance-20261021"
+      "ar24-maintenance-20261021",
+      "ar24-completion-20261101"
     ],
-    "limitations": "L’avis concerne les lettres recommandées électroniques. L’environnement L de la PA française n’est pas cité. La maintenance de sécurité décrite par Esker ne documente pas une cyberattaque ou une fuite de données. Le retour attendu le 21 au soir n’est pas une résolution confirmée. La cause technique et le début réel restent inconnus."
+    "limitations": "La fin de maintenance est notifiée par AR24, sans détail sur le rattrapage de chaque document ERE chez Esker. La cause de sécurité à l’origine de la mesure ne constitue pas une preuve de compromission. Le début effectif et les volumes restent inconnus."
   },
   {
     "id": "atgp-beefact-20261021",
@@ -1850,7 +1851,7 @@
     "verification": "primary_notice",
     "affectedService": "Accès au service de facturation électronique BEE-FACT (@GP)",
     "title": "@GP : accès BEE-FACT rétabli après maintenance PHP",
-    "summary": "@GP indique un passage progressif de ses services en mode dégradé à partir du 21 octobre après une alerte de sécurité PHP. Le complément du 22 octobre à 09 h 00 annonce le déploiement du module corrigé et le rétablissement de l’accès à BEE-FACT et FICPROD. Les traitements EDI hébergés sont restés actifs selon l’éditeur.",
+    "summary": "@GP indique un passage progressif de ses services en mode dégradé à partir du 21 octobre après une alerte de sécurité PHP. Le complément du 22 octobre à 09 h 00 annonce le déploiement du module corrigé et le rétablissement de l’accès à BEE-FACT et FICPROD. Les traitements EDI hébergés sont restés actifs selon l’éditeur. Le complément final de @GP annonce l’ensemble des services rétabli le 22 octobre à 19 h 00, sans fuseau explicite. L’éditeur déclare que ses systèmes n’ont subi aucune attaque et que les données sont restées protégées.",
     "status": "resolved",
     "startedAt": "2026-10-21",
     "detectedAt": null,
@@ -1858,11 +1859,12 @@
     "firstObservedAt": "2026-10-22",
     "resolutionReportedAt": "2026-10-22",
     "updatedAt": "2026-10-22",
-    "checkedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
     "sourceIds": [
-      "atgp-beefact-20261022"
+      "atgp-beefact-20261022",
+      "atgp-final-20261101"
     ],
-    "limitations": "Le rétablissement retenu vise l’accès à BEE-FACT. La notice générale reste En cours et les autres portails enseigne et WebEDI demeurent en phase de test avant déploiement du correctif. La source ne documente pas une compromission. Le 21 octobre figure dans la colonne Date de début ; la date de première publication propre reste inconnue. Le complément est affiché à 09 h 00 sans fuseau : les dates sont conservées au jour, sans conversion UTC. L’heure réelle de début et les volumes touchés restent à préciser."
+    "limitations": "L’accès BEE-FACT avait été annoncé rétabli à 09 h 00 ; le message final porte sur tous les services. Le 22 octobre et les heures publiées sont conservés séparément, sans calcul de durée. Les déclarations de protection des données sont attribuées à @GP."
   },
   {
     "id": "pagero-france-admin-20260925",
@@ -1911,5 +1913,702 @@
       "pagero-attachments-20260924"
     ],
     "limitations": "Avis historique découvert le 22 octobre. Les composants Pagero Online et Pagero TMS sont cités ; pays, types de documents et périmètre PA français restent non précisés. La fenêtre de 10 h 10 à 12 h 30 décrit des envois possibles, pas la durée totale du dysfonctionnement. La source documente des pièces inattendues et un retraitement, sans confirmer une fuite de données."
+  },
+  {
+    "id": "lucca-0sswhv6zhr2d",
+    "platformSlugs": [
+      "lucca"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Lucca : applications rétablies après la perturbation du 22 octobre",
+    "summary": "Lucca signale des performances dégradées sur certaines applications le 22 octobre, puis annonce leur rétablissement.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-22T12:49:57Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-22T15:12:46Z",
+    "updatedAt": "2026-10-22T15:12:46Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "lucca-0sswhv6zhr2d"
+    ],
+    "limitations": "Les notifications documentent les applications Lucca. Le début réel, les clients touchés et l’impact sur les flux de la PA française restent à préciser. Les horaires de publication ne mesurent pas une durée de panne."
+  },
+  {
+    "id": "lucca-hmx60fgz6jz7",
+    "platformSlugs": [
+      "lucca"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Lucca : applications rétablies après la perturbation du 26 octobre",
+    "summary": "Lucca signale des performances dégradées sur certaines applications le 26 octobre, puis annonce leur rétablissement.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-26T08:15:51Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-26T09:12:54Z",
+    "updatedAt": "2026-10-26T09:12:54Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "lucca-hmx60fgz6jz7"
+    ],
+    "limitations": "Les notifications documentent les applications Lucca. Le début réel, les clients touchés et l’impact sur les flux de la PA française restent à préciser. Les horaires de publication ne mesurent pas une durée de panne."
+  },
+  {
+    "id": "lucca-lmlm1w911gty",
+    "platformSlugs": [
+      "lucca"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Lucca : applications rétablies après la perturbation du 29 octobre",
+    "summary": "Lucca annonce une indisponibilité le 29 octobre, puis un rétablissement. L’éditeur attribue la cause à la saturation des équilibreurs de charge de son fournisseur cloud, non nommé, et décrit une modification réseau.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-29T08:08:51Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-29T09:31:01Z",
+    "updatedAt": "2026-10-29T09:31:01Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "lucca-lmlm1w911gty"
+    ],
+    "limitations": "Les notifications documentent les applications Lucca. Le début réel, les clients touchés et l’impact sur les flux de la PA française restent à préciser. Les horaires de publication ne mesurent pas une durée de panne."
+  },
+  {
+    "id": "sage-00fdqy9rqdqh",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Sage FRP 1000 France : service rétabli le 27 octobre",
+    "summary": "Sage signale une perturbation de FRP 1000 en France le 27 octobre, puis annonce la résolution et le retour du service à son fonctionnement attendu.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-27T15:14:49Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-27T15:33:51Z",
+    "updatedAt": "2026-10-27T15:33:51Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "sage-00fdqy9rqdqh"
+    ],
+    "limitations": "Le périmètre documenté est celui de l’application nommée. L’avis ne décrit pas l’impact sur les échanges réglementaires de la PA française. La cause, le début effectif et le nombre de clients concernés restent inconnus."
+  },
+  {
+    "id": "sage-d8tnj415j80n",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Sage 50 France : déconnexions de Ciel Données Mobiles rétablies",
+    "summary": "Sage décrit le 28 octobre des déconnexions de clients français de Ciel Données Mobiles et leur conseille de se reconnecter. Les autres fonctions sont annoncées opérationnelles. Une surveillance puis une résolution sont publiées.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-28T09:27:37Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-28T11:31:11Z",
+    "updatedAt": "2026-10-28T11:31:11Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "sage-d8tnj415j80n"
+    ],
+    "limitations": "Le périmètre documenté est celui de l’application nommée. L’avis ne décrit pas l’impact sur les échanges réglementaires de la PA française. La cause, le début effectif et le nombre de clients concernés restent inconnus."
+  },
+  {
+    "id": "sage-c34h4qgm6q5r",
+    "platformSlugs": [
+      "sage"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Sage Intacct Europe : accès rétabli après des erreurs d’adresse IP",
+    "summary": "Sage signale le 29 octobre des échecs de connexion pour une petite partie de ses clients européens, avec le message IP address is not valid. Le service est placé sous surveillance, puis annoncé rétabli le 30 octobre.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-29T09:29:39Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-30T15:56:24Z",
+    "updatedAt": "2026-10-30T15:56:24Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "sage-c34h4qgm6q5r"
+    ],
+    "limitations": "Le périmètre documenté est celui de l’application nommée. L’avis ne décrit pas l’impact sur les échanges réglementaires de la PA française. La cause, le début effectif et le nombre de clients concernés restent inconnus."
+  },
+  {
+    "id": "spendesk-w7sbfw2qjzpt",
+    "platformSlugs": [
+      "spendesk"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Spendesk : détails des cartes d’abonnement de nouveau accessibles",
+    "summary": "Des clients ne pouvaient plus consulter les détails et numéros de cartes d’abonnement actives à partir du signalement du 26 octobre. Spendesk décrit un correctif de mitigation, puis annonce la résolution le 29 octobre.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-26T10:44:02Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-29T11:38:05Z",
+    "updatedAt": "2026-10-29T11:38:05Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "spendesk-w7sbfw2qjzpt"
+    ],
+    "limitations": "L’avis porte sur l’affichage des cartes d’abonnement, sans fuite de numéros signalée. La disponibilité des factures électroniques et des flux PA reste distincte. Le début réel et les volumes touchés sont inconnus."
+  },
+  {
+    "id": "weproc-1107374",
+    "platformSlugs": [
+      "weproc"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "verification": "primary_notice",
+    "title": "WeInvoice : appels à l’annuaire PISTE rétablis le 29 octobre",
+    "summary": "WeInvoice publie une alerte sur les appels à l’annuaire PISTE le 29 octobre à 04 h 25 UTC, puis la clôture à 04 h 30 UTC après le retour de trafic réussi. Le seuil observé porte sur ses propres appels au cours des quinze dernières minutes.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-29T04:25:28Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-29T04:30:28Z",
+    "updatedAt": "2026-10-29T04:30:28Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "weproc-1107374"
+    ],
+    "limitations": "Le constat et l’attribution au fournisseur ou au réseau proviennent de WeInvoice. La confirmation directe de l’AIFE, les autres PA et la cause générale ne sont pas documentées. Le seuil d’alerte ne représente pas un taux de disponibilité global."
+  },
+  {
+    "id": "eezi-cmvtfjan50b0f0wqg1p2oook7",
+    "platformSlugs": [
+      "eezi"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "eezi : traitement France AP ralenti puis rétabli",
+    "summary": "eezi publie le 28 octobre un traitement FRA AP plus lent que prévu. L’avis indique un correctif déjà appliqué et une surveillance, puis la résolution le 30 octobre à 07 h 09 UTC. Le composant Tax authority: FRA est explicitement cité.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-28T13:00:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-30T07:09:00Z",
+    "updatedAt": "2026-10-30T07:09:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "eezi-cmvtfjan50b0f0wqg1p2oook7"
+    ],
+    "limitations": "Le libellé FRA AP et le composant France sont ceux de l’éditeur. Le détail des flux, le début effectif, le nombre de documents touchés et leur rattrapage ne sont pas publiés. Le temps affiché entre notifications ne prouve pas une panne continue. Le libellé AP n’est pas développé et le rattachement exact à la PA reste à documenter.",
+    "affectedService": "Traitement FRA AP eezi"
+  },
+  {
+    "id": "superpdp-network-20261030",
+    "platformSlugs": [
+      "superpdp"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "verification": "primary_notice",
+    "title": "SuperPDP : incident réseau sur l’API, rétablissement annoncé",
+    "summary": "La page de statut signale le 30 octobre un serveur principal devenu injoignable, avec une alerte sur api.superpdp.tech, puis annonce le rétablissement de l’API. Les trois messages sont regroupés dans cet avis.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-30",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-30",
+    "updatedAt": "2026-10-30",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "superpdp-network-20261030"
+    ],
+    "limitations": "La page affiche 11 h 08, 11 h 09 et 11 h 19 CET, tandis que le RSS donne les mêmes heures en UTC. Les dates sont conservées au jour près devant cette contradiction. Les volumes, le rattrapage et le début réel restent inconnus."
+  },
+  {
+    "id": "ecosio-intercom-01m6b6e5mvdhptvw16rghsvbsv",
+    "platformSlugs": [
+      "ecosio-intercom"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "verification": "primary_notice",
+    "title": "ecosio : transmission Flow1 en France perturbée",
+    "summary": "ecosio signale le 1er novembre un blocage de transmission Flow1. Le composant E-invoice - France figure dans l’avis. L’investigation reste ouverte au contrôle, avec cause et prévision de rétablissement à préciser.",
+    "status": "investigating",
+    "startedAt": null,
+    "firstReportedAt": "2026-11-01T09:18:20Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-11-01T09:18:20Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "ecosio-intercom-01m6b6e5mvdhptvw16rghsvbsv"
+    ],
+    "limitations": "Le signalement concerne explicitement la France, mais ne détaille pas les types de documents, les volumes ou le début effectif. Le titre Flow1 est conservé sans lui attribuer un autre périmètre. Une résolution reste à publier."
+  },
+  {
+    "id": "welyb-url-20261022",
+    "platformSlugs": [],
+    "kind": "availability",
+    "scope": "ecosystem_service",
+    "verification": "primary_notice",
+    "affectedService": "Accès web Welyb par URL complexe",
+    "title": "Welyb : accès par URL complexe corrigé",
+    "summary": "Welyb annonce le déploiement d’un correctif le 22 octobre pour les connexions via une adresse terminée par /home ou /signin. Le support conseille de forcer le rechargement si une page blanche persiste.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": null,
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-22",
+    "updatedAt": "2026-10-22",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "welyb-status-20261101"
+    ],
+    "limitations": "La page d’ensemble est datée du 30 octobre, sans date propre de début ou de première publication pour cette rubrique. Le service Welyb est concerné ; aucun impact sur les infrastructures d’une PA n’est établi. Le paragraphe historique évoque encore un correctif en développement ; le complément explicite du 22 annonce son déploiement."
+  },
+  {
+    "id": "welyb-mobile-download-20261101",
+    "platformSlugs": [],
+    "kind": "availability",
+    "scope": "ecosystem_service",
+    "verification": "primary_notice",
+    "affectedService": "Téléchargement de documents dans Welyb mobile",
+    "title": "Welyb mobile : téléchargement direct de documents perturbé",
+    "summary": "Welyb indique que le téléchargement direct est temporairement indisponible sur les versions mobiles 8.14.6 à 8.16 incluses. Une mise à jour corrective est annoncée en cours de déploiement ; le téléchargement depuis le navigateur est proposé.",
+    "status": "investigating",
+    "startedAt": null,
+    "firstReportedAt": null,
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": null,
+    "updatedAt": null,
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "welyb-status-20261101"
+    ],
+    "limitations": "La page d’ensemble est datée du 30 octobre, sans date propre de début ou de première publication pour cette rubrique. Le service Welyb est concerné ; aucun impact sur les infrastructures d’une PA n’est établi."
+  },
+  {
+    "id": "welyb-mobile-viewer-20261101",
+    "platformSlugs": [],
+    "kind": "availability",
+    "scope": "ecosystem_service",
+    "verification": "primary_notice",
+    "affectedService": "Visualisation des documents dans Welyb mobile",
+    "title": "Welyb mobile : consultation de documents perturbée sur certains appareils Apple",
+    "summary": "Welyb signale une visualisation des documents indisponible pour certains utilisateurs sur iPhone ou iPad. L’investigation se poursuit ; le support propose la consultation depuis le navigateur du téléphone.",
+    "status": "investigating",
+    "startedAt": null,
+    "firstReportedAt": null,
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": null,
+    "updatedAt": null,
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "welyb-status-20261101"
+    ],
+    "limitations": "La page d’ensemble est datée du 30 octobre, sans date propre de début ou de première publication pour cette rubrique. Le service Welyb est concerné ; aucun impact sur les infrastructures d’une PA n’est établi."
+  },
+  {
+    "id": "pagero-ppf-20261101",
+    "platformSlugs": [
+      "pagero"
+    ],
+    "kind": "availability",
+    "scope": "upstream",
+    "verification": "primary_notice",
+    "title": "Pagero : transmissions au PPF suspendues, documents conservés en file",
+    "summary": "Pagero signale le 1er novembre des retards sur les documents sortants vers le Portail public de facturation (PPF_PROD). L’éditeur attribue le blocage à une limite de stockage ou de système de fichiers de la passerelle de réception et indique travailler avec le support PPF. Le complément de 18 h 05 CET annonce l’envoi suspendu jusqu’au 2 novembre à 03 h 30 UTC, horaire prévu de reprise. Les documents restent en file et leur traitement automatique est annoncé après rétablissement de la passerelle.",
+    "status": "identified",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-11-01T07:50:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-11-01T17:05:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "pagero-ppf-20261101"
+    ],
+    "limitations": "L’attribution à la passerelle PPF et la préservation des données sont des déclarations de Pagero. La confirmation directe de l’AIFE, le début réel, les volumes concernés et la reprise effective restent à obtenir. L’horaire du 2 novembre est une prévision. Les notifications sont affichées en CET (UTC+1)."
+  },
+  {
+    "id": "pagero-support-20261023",
+    "platformSlugs": [
+      "pagero"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Pagero : canaux de support rétablis le 23 octobre",
+    "summary": "Pagero signale le 23 octobre une perturbation majeure de ses systèmes de support : les équipes ne pouvaient plus consulter les dossiers clients ou traiter les demandes reçues par chat et par courriel. L’éditeur annonce le rétablissement à 08 h 37 CEST. Son prestataire externe, non nommé, a confirmé le retour à la stabilité et poursuit l’analyse de la cause.",
+    "status": "resolved",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-10-23T05:21:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-23T06:37:00Z",
+    "updatedAt": "2026-10-23T06:37:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "pagero-support-20261023"
+    ],
+    "limitations": "Les composants Help & Support et Pagero Online sont cités. L’avis décrit les canaux d’assistance ; un impact sur les échanges de factures ou les flux de la PA française reste non documenté. L’éditeur mentionne un prestataire sans établir la cause technique. Les horaires de notification ne fixent pas le début effectif."
+  },
+  {
+    "id": "veryswing-vsdb-20261028",
+    "platformSlugs": [
+      "veryswing"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "Veryswing : réplication VSDB du groupe 1 perturbée",
+    "summary": "Veryswing indique que la réplication du serveur VSDB du groupe 1, arrêtée le 28 octobre à 17 h 48, a redémarré le 29 octobre à 09 h 40, heures de Paris. L’éditeur attribue les difficultés à son réseau interne. Le serveur reste accessible, mais d’autres interruptions de réplication sont possibles ; pendant celles-ci, les données cessent d’être synchronisées. Le composant reste en panne partielle lors du contrôle.",
+    "status": "identified",
+    "startedAt": "2026-10-28T16:48:00Z",
+    "detectedAt": null,
+    "firstReportedAt": "2026-10-29T10:09:28Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": null,
+    "updatedAt": "2026-10-29T10:09:28Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "veryswing-vsdb-20261029"
+    ],
+    "limitations": "Le périmètre documenté est la base répliquée VSDB du groupe 1. Le composant Facturation électronique est affiché opérationnel lors de la lecture ; l’avis n’établit pas un impact sur les flux de la PA. Le redémarrage annoncé de la réplication demeure distinct d’une résolution complète, encore attendue."
+  },
+  {
+    "id": "docuware-viewer-emea-20261021",
+    "platformSlugs": [
+      "docuware"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "DocuWare : visualiseur EMEA rétabli après une mise à jour",
+    "summary": "DocuWare décrit le 21 octobre des erreurs du visualiseur et des difficultés intermittentes d’accès à certaines fonctions pour une partie des clients EMEA. L’éditeur annonce le rétablissement puis explique que des paramètres avaient été appliqués de façon incomplète lors du déploiement d’une mise à jour. Les paramètres ont été corrigés ; des vérifications automatiques et une revue des régions sont annoncées.",
+    "status": "resolved",
+    "startedAt": null,
+    "detectedAt": null,
+    "firstReportedAt": "2026-10-21T08:20:51Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-21T11:59:42Z",
+    "updatedAt": "2026-10-21T14:16:27Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "docuware-viewer-emea-20261021"
+    ],
+    "limitations": "Avis historique découvert le 1er novembre. L’analyse vise EMEA et le composant View ; clients français et flux de la PA ne sont pas précisés. Les horaires individuels affichés en EDT ont été convertis en UTC. Le compteur de durée du portail ne sert pas à reconstruire un début réel."
+  },
+  {
+    "id": "docuware-ftp-emea-20261007",
+    "platformSlugs": [
+      "docuware"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "title": "DocuWare : service FTP EMEA rétabli le 8 octobre",
+    "summary": "DocuWare indique que certaines connexions Scan-to-FTP ont été indisponibles à partir du soir du 7 octobre en EMEA, tandis que les autres modes de connexion continuaient de fonctionner. Une interruption complète d’environ 80 minutes le 8 octobre est décrite dans le retour d’incident. L’éditeur attribue la saturation des ressources à la croissance d’un journal de maintenance et annonce le rétablissement après ajout de ressources.",
+    "status": "resolved",
+    "startedAt": "2026-10-07",
+    "detectedAt": null,
+    "firstReportedAt": "2026-10-08T10:33:22Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-08T12:23:04Z",
+    "updatedAt": "2026-10-09T11:47:15Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "docuware-ftp-emea-20261008"
+    ],
+    "limitations": "Avis historique découvert le 1er novembre. La région EMEA est citée, avec le composant FTP ; le périmètre PA français reste à confirmer. Le début est connu au jour près, sans heure. Les 80 minutes sont une estimation de l’éditeur pour la phase d’interruption complète. Les notifications affichées en EDT sont converties en UTC."
+  },
+  {
+    "id": "fulll-1109486",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Service d’authentification fulll",
+    "title": "fulll : authentification rétablie le 31 octobre",
+    "summary": "Le service d’authentification fait l’objet d’une alerte le 31 octobre à 11 h 39 UTC, puis d’un rétablissement annoncé à 11 h 41 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-31T11:39:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-31T11:41:00Z",
+    "updatedAt": "2026-10-31T11:41:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1109486-20261101"
+    ],
+    "limitations": "Les horaires sont ceux des notifications, publiées en EDT et converties en UTC à la minute. Le début réel, la cause et le nombre de clients touchés restent inconnus. Le rattachement aux flux PA demeure non documenté."
+  },
+  {
+    "id": "fulll-1106620",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Production SQL fulll",
+    "title": "fulll : interruptions successives de Production SQL le 28 octobre",
+    "summary": "L’éditeur publie plusieurs alertes et rétablissements du composant Production SQL le 28 octobre, avec une première notification à 11 h 14 UTC et une clôture à 21 h 37 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-28T11:14:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-28T21:37:00Z",
+    "updatedAt": "2026-10-28T21:37:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1106620-20261101"
+    ],
+    "limitations": "Cinq épisodes sont notifiés sous le même identifiant : 11 h 14/16, 20 h 39/47, 20 h 50/21 h 06, 21 h 08/18 et 21 h 21/37 UTC. Le journal regroupe cet avis ; cet intervalle ne décrit pas une interruption continue. Horaires EDT convertis à la minute ; début réel et impact sur les flux PA inconnus."
+  },
+  {
+    "id": "fulll-1101526",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Authentification fulll et page d’accueil",
+    "title": "fulll : connexion et page d’accueil rétablies le 24 octobre",
+    "summary": "fulll signale l’indisponibilité des deux composants d’authentification le 24 octobre à 19 h 54 UTC, puis leur rétablissement à 19 h 57 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-24T19:54:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-24T19:57:00Z",
+    "updatedAt": "2026-10-24T19:57:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1101526-20261101"
+    ],
+    "limitations": "Les horaires sont ceux des notifications, publiées en EDT et converties en UTC à la minute. Le début réel, la cause et le nombre de clients touchés restent inconnus. Le rattachement aux flux PA demeure non documenté."
+  },
+  {
+    "id": "fulll-1097775",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Caisse, Production API, Compta, SQL, Fiscale et Paie fulll",
+    "title": "fulll : alertes sur la caisse et les outils de production du 21 au 23 octobre",
+    "summary": "Un avis distinct signale la Caisse le 21 octobre, puis plusieurs composants de production le 22. Des retours de Production Fiscale, API, Compta, Paie et SQL sont publiés le 22. Une nouvelle alerte SQL le 23 est suivie d’un rétablissement à 08 h 24 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-21T18:04:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-23T08:24:00Z",
+    "updatedAt": "2026-10-23T08:24:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1097775-20261101"
+    ],
+    "limitations": "Le dernier état global est résolu mais la dernière mise à jour concerne uniquement SQL. Aucune notification explicite de retour de Caisse n’est visible dans cet avis. Les mises à jour décrivent plusieurs composants et reprises, pas une panne continue de 38 heures. Le composant Plateforme agréée est absent de cet avis de suivi. Horaires EDT convertis en UTC à la minute."
+  },
+  {
+    "id": "fulll-1097346",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "verification": "primary_notice",
+    "affectedService": "Plateforme agréée fulll et autres services de la suite",
+    "title": "fulll : interruption préventive pour appliquer des correctifs PHP",
+    "summary": "Le 21 octobre, fulll annonce une mise hors ligne préventive après les alertes PHP. Le composant Plateforme agréée figure parmi les services concernés. À 17 h 54 UTC, l’éditeur annonce les services accessibles après application et validation du correctif, avec une exception pour Caisse.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-21T14:10:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-21T18:01:00Z",
+    "updatedAt": "2026-10-21T18:01:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1097346-20261101"
+    ],
+    "limitations": "L’avis décrit une interruption préventive et affirme que les données sont préservées ; il ne documente pas une compromission. Le créneau 16 h–18 h du texte n’a pas de fuseau explicite, il n’est pas converti en début réel. La reprise PA est annoncée à 17 h 54 UTC ; la clôture affichée à 18 h 01 maintient Caisse indisponible. Les avis 1097770 et 1097775 suivent séparément les services résiduels. Horaires de notification EDT convertis en UTC à la minute."
+  },
+  {
+    "id": "fulll-1095858",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Portail fulll",
+    "title": "fulll : portail rétabli le 20 octobre",
+    "summary": "Une alerte concerne le portail le 20 octobre à 12 h 41 UTC. Le retour du service est annoncé à 12 h 48 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-20T12:41:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-20T12:48:00Z",
+    "updatedAt": "2026-10-20T12:48:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1095858-20261101"
+    ],
+    "limitations": "Les horaires sont ceux des notifications, publiées en EDT et converties en UTC à la minute. Le début réel, la cause et le nombre de clients touchés restent inconnus. Le rattachement aux flux PA demeure non documenté."
+  },
+  {
+    "id": "fulll-1091413",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Authentification fulll et page d’accueil",
+    "title": "fulll : authentification rétablie le 15 octobre",
+    "summary": "Les deux composants d’authentification sont signalés indisponibles le 15 octobre à 20 h 10 UTC, puis rétablis à 20 h 13 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-15T20:10:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-15T20:13:00Z",
+    "updatedAt": "2026-10-15T20:13:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1091413-20261101"
+    ],
+    "limitations": "Les horaires sont ceux des notifications, publiées en EDT et converties en UTC à la minute. Le début réel, la cause et le nombre de clients touchés restent inconnus. Le rattachement aux flux PA demeure non documenté."
+  },
+  {
+    "id": "fulll-1089867",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "pa",
+    "verification": "primary_notice",
+    "affectedService": "Composant Plateforme agréée fulll",
+    "title": "fulll : composant Plateforme agréée rétabli le 14 octobre",
+    "summary": "Le 14 octobre à 07 h 39 UTC, une notification signale les composants Image et Plateforme agréée indisponibles. Le retour de la Plateforme agréée est annoncé à 07 h 41 UTC ; Image est annoncé rétabli à 07 h 43 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-14T07:39:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-14T07:41:00Z",
+    "updatedAt": "2026-10-14T07:43:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1089867-20261101"
+    ],
+    "limitations": "L’attribution PA repose sur le nom explicite du composant. La résolution de la PA est distinguée de celle d’Image deux minutes plus tard. Les horaires de notification EDT sont convertis en UTC à la minute ; le début réel, les opérations et le volume de factures touchés restent inconnus."
+  },
+  {
+    "id": "fulll-1084313",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Portail et Documents fulll",
+    "title": "fulll : portail et documents rétablis le 7 octobre",
+    "summary": "Une alerte du 7 octobre à 18 h 28 UTC porte sur le portail et les documents. Deux notifications de retour de service sont publiées à 18 h 29 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-07T18:28:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-07T18:29:00Z",
+    "updatedAt": "2026-10-07T18:29:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1084313-20261101"
+    ],
+    "limitations": "Les horaires sont ceux des notifications, publiées en EDT et converties en UTC à la minute. Le début réel, la cause et le nombre de clients touchés restent inconnus. Le rattachement aux flux PA demeure non documenté."
+  },
+  {
+    "id": "fulll-1081679",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Production SQL fulll",
+    "title": "fulll : Production SQL rétablie le 5 octobre",
+    "summary": "Production SQL est signalé indisponible le 5 octobre à 01 h 07 UTC, puis annoncé rétabli à 01 h 14 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-10-05T01:07:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-10-05T01:14:00Z",
+    "updatedAt": "2026-10-05T08:28:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1081679-20261101"
+    ],
+    "limitations": "La mise à jour de 01 h 14 UTC établit le retour de SQL. La clôture affichée plus tard à 08 h 28 contient un message contradictoire, Bank went down, sans composant associé : elle n’est pas retenue comme date de reprise de SQL et ne suffit pas à qualifier un incident bancaire distinct. Les horaires EDT sont convertis en UTC à la minute. Le début réel et l’impact PA restent inconnus."
+  },
+  {
+    "id": "fulll-1071459",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Keeper fulll",
+    "title": "fulll : Keeper rétabli le 22 septembre",
+    "summary": "Une alerte du 22 septembre à 17 h 33 UTC concerne Keeper ; son retour est annoncé à 17 h 35 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-22T17:33:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-09-22T17:35:00Z",
+    "updatedAt": "2026-09-22T17:35:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1071459-20261101"
+    ],
+    "limitations": "Les horaires sont ceux des notifications, publiées en EDT et converties en UTC à la minute. Le début réel, la cause et le nombre de clients touchés restent inconnus. Le rattachement aux flux PA demeure non documenté."
+  },
+  {
+    "id": "fulll-1065720",
+    "platformSlugs": [
+      "fulll"
+    ],
+    "kind": "availability",
+    "scope": "publisher_service",
+    "verification": "primary_notice",
+    "affectedService": "Assistant de TVA et accueil-compta fulll",
+    "title": "fulll : alertes sur Assistant de TVA et accueil-compta le 16 septembre",
+    "summary": "Le 16 septembre, Assistant de TVA est signalé indisponible à 14 h 39 UTC et annoncé rétabli à 14 h 40. Une alerte accueil-compta est publiée à 14 h 50, suivie de son retour à 14 h 51 UTC.",
+    "status": "resolved",
+    "startedAt": null,
+    "firstReportedAt": "2026-09-16T14:39:00Z",
+    "firstObservedAt": "2026-11-01",
+    "resolutionReportedAt": "2026-09-16T14:51:00Z",
+    "updatedAt": "2026-09-16T14:51:00Z",
+    "checkedAt": "2026-11-01",
+    "sourceIds": [
+      "fulll-incident-1065720-20261101"
+    ],
+    "limitations": "Deux alertes distinctes sont regroupées par l’éditeur sous le même identifiant. Les horaires ne décrivent pas une panne continue des deux composants. Le début réel et un impact sur les flux de la PA restent inconnus. Notifications EDT converties en UTC à la minute."
   }
 ]

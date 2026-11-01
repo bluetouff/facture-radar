@@ -25,12 +25,12 @@ test("les mesures PHP et AR24 conservent leur service et leur état de reprise p
   assert.equal(atgp.status, "resolved");
   assert.equal(atgp.resolutionReportedAt, "2026-10-22");
   assert.equal(atgp.firstReportedAt, null);
-  assert.match(atgp.limitations, /notice générale reste En cours/);
+  assert.match(atgp.summary, /ensemble des services rétabli/);
   const esker = platformIncidents.find(item => item.id === "esker-ar24-ere-20261021")!;
   assert.equal(esker.kind, "availability");
   assert.equal(esker.scope, "upstream");
-  assert.equal(esker.resolutionReportedAt, null);
-  assert.match(esker.limitations, /environnement L.*n’est pas cité/);
+  assert.equal(esker.resolutionReportedAt, "2026-10-22T14:02:11Z");
+  assert.match(esker.summary, /environnement L.*reste distinct/);
   const tungsten = platformIncidents.find(item => item.id === "tungsten-france-20261013")!;
   assert.equal(tungsten.startedAt, "2026-10-12T06:51:00Z");
   assert.equal(tungsten.resolutionReportedAt, "2026-10-19T11:30:54.571Z");

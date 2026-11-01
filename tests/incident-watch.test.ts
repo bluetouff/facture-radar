@@ -29,7 +29,7 @@ test("VosFactures : la notification relayée reste attribuée au prestataire", (
   assert.match(event.summary, /Factuali déclare épargnés les services de facturation électronique/);
   assert.match(event.summary, /invalidation des codes API est annoncée pour le 1er octobre/);
   assert.match(event.limitations, /bornes historiques des données polonaises/);
-  assert.equal(platformIncidents.filter(item => item.scope === "pa").length, 16);
+  assert.equal(platformIncidents.filter(item => item.scope === "pa").length, 20);
   assert.throws(() => validateIncidents([{ ...event, verification: "primary_notice" }]));
   for (const id of event.sourceIds) assert.ok(incidentWatchCorpus().sources.some(source => source.id === id));
   assert.deepEqual(getPlatform("vosfactures")!.incidentWatch.incidents, watch.incidents);
@@ -169,8 +169,8 @@ test("dates au jour près, détection et résolution sans date restent fidèles 
 });
 
 test("les avis distinguent PA, application et dépendance sans durée inventée", () => {
-  assert.equal(platformIncidents.length, 88);
-  assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 16);
+  assert.equal(platformIncidents.length, 119);
+  assert.equal(platformIncidents.filter(event => event.scope === "pa").length, 20);
   assert.equal(platformIncidents.find(event => event.id === "esker-french-b2b-20260915")!.status, "unknown");
   assert.equal(incidentsForPlatform("pennylane").incidents[0]!.scope, "publisher_service");
   assert.equal(platformIncidents.find(event => event.id === "welyb-cecurity-consultation-20260904")!.startedAt, "2026-09-04");
@@ -227,8 +227,8 @@ test("revue du 14 octobre : flux français, dépendance et avis sans date resten
   }
   const spendesk = platformIncidents.find(item => item.id === "spendesk-3ds-20261007")!;
   assert.equal(spendesk.scope, "upstream");
-  assert.equal(spendesk.status, "identified");
-  assert.equal(spendesk.resolutionReportedAt, null);
+  assert.equal(spendesk.status, "resolved");
+  assert.equal(spendesk.resolutionReportedAt, "2026-10-23T12:36:45Z");
   assert.equal(platformIncidents.find(item => item.id === "welyb-notifications-20261005")!.resolutionReportedAt, "2026-10-09");
 });
 
@@ -236,11 +236,11 @@ test("recherche nominative terminée pour les 155 PA, couverture historique cons
   assert.equal(securityReview.status, "public_search_completed");
   assert.equal(securityReview.platformCount, platforms.length);
   assert.equal(incidentResearch.filter(item => item.status === "searched").length, 155);
-  assert.ok(incidentResearch.every(item => item.checkedAt === "2026-10-22"));
+  assert.ok(incidentResearch.every(item => item.checkedAt === "2026-11-01"));
   for (const slug of ["befresh", "factureapp", "insiders-technologies", "kalanda", "my-eddy", "ratioo"]) {
     const research = incidentResearch.find(item => item.platformSlug === slug)!;
     assert.equal(research.status, "searched");
-    assert.equal(research.checkedAt, "2026-10-22");
+    assert.equal(research.checkedAt, "2026-11-01");
     assert.equal(incidentsForPlatform(slug).security.status, "public_search_completed");
     assert.equal(getPlatform(slug)!.incidentWatch.security.status, "public_search_completed");
     assert.equal(incidentsForPlatform(slug).coverage.checkedAt, null);
@@ -420,7 +420,7 @@ test("Oh Dear conserve les avis distincts ayant le même lien racine", () => {
   assert.equal(notices.length, 2);
   assert.notEqual(notices[0].id, notices[1].id);
   assert.deepEqual(parseWatchSource(feed, rss(closed + opened), current), [...notices].reverse());
-  assert.equal(compareCandidates(Object.fromEntries(notices.map(n => [n.id, n])), notices).length, 0);
+  assert.equal(compareCandidates(Object.fromEntries(notices.map((n: { id: string }) => [n.id, n])), notices).length, 0);
   const changed = parseWatchSource(feed, rss(closed.replace("Resolved", "Amended")), current);
   assert.equal(changed[0].id, notices[1].id);
   assert.equal(compareCandidates({ [notices[1].id]: notices[1] }, changed)[0].change, "updated");
@@ -476,7 +476,7 @@ test("une mise à jour est détectée sans répéter un avis inchangé", () => {
 });
 test("API et MCP présentent incidents, couverture et mêmes sources", () => {
   const result = getResourceByUri("pacheck://corpus/incidents", {revision:"test",builtAt:"2026-09-16"}) as ReturnType<typeof incidentWatchCorpus>;
-  assert.equal(result.incidents.length, 88);
+  assert.equal(result.incidents.length, 119);
   assert.deepEqual(getPlatform("esker")!.incidentWatch.incidents, incidentsForPlatform("esker").incidents);
 });
 
@@ -551,10 +551,10 @@ test("revue du 30 septembre : résolutions sourcées et retraits Esker distincts
 test("chaque PA a une recherche datée ; collecte et incidents restent distincts", () => {
   assert.equal(incidentResearch.length, 155);
   assert.deepEqual([...incidentResearch.map(item => item.platformSlug)].sort(), platforms.map(item => item.slug).sort());
-  assert.equal(incidentFeeds.length, 27);
+  assert.equal(incidentFeeds.length, 28);
   assert.equal(incidentWatchCorpus().collection.intervalMinutes, 1440);
   assert.equal(incidentsForPlatform("abby").security.status, "public_search_completed");
-  assert.equal(incidentsForPlatform("weproc").incidents.length, 5);
+  assert.equal(incidentsForPlatform("weproc").incidents.length, 6);
   assert.equal(incidentsForPlatform("spendesk").incidents.filter(event => event.scope === "pa").length, 2);
   assert.equal(platformIncidents.filter(event => event.kind === "security").length, 6);
   assert.ok(incidentWatchCorpus().securityReview.findings.every(finding => ["outside_period", "vulnerability_advisory"].includes(finding.type)));
@@ -570,15 +570,6 @@ test("les mises à jour Better Stack se regroupent indépendamment de l’ordre 
   assert.match(first[0].content, /Resolved/);
   assert.equal(first[0].publishedAt, "2026-09-01T10:00:00.000Z");
   assert.throws(() => parseWatchSource(feed, rss(newer + newer.replace("Resolved", "Contradictory")), now));
-});
-
-test("Atom : fuseau, origine, entités et contenu obligatoires", () => {
-  const feed = watchSources.find(feed => feed.id === "veryswing")!;
-  const atom = '<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Test</title><link rel="alternate" href="https://status.veryswing.com/incident/123/"/><updated>2026-09-15T09:00:00Z</updated><summary type="html">Message</summary></entry></feed>';
-  assert.equal(parseWatchSource(feed, atom, now).length, 1);
-  assert.throws(() => parseWatchSource(feed, atom.replace("status.veryswing.com", "localhost"), now));
-  assert.throws(() => parseWatchSource(feed, atom.replace("09:00:00Z", "09:00:00"), now));
-  assert.throws(() => parseWatchSource(feed, '<!DOCTYPE feed>' + atom, now));
 });
 
 test("API JSON : schéma, fenêtre et chronologie vérifiés avant intégration", () => {
@@ -618,6 +609,7 @@ test("CERT-FR fournit une piste de vulnérabilité, et le RSS public échappe le
   assert.equal(notice.length, 1);
   assert.equal(feed.url, "https://cert.cyber.gouv.fr/feed/");
   assert.equal(parseWatchSource(feed, rss(item("https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1134/")), now).length, 1);
+  assert.equal(parseWatchSource(feed, rss(item("https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1134/")), now).length, 1);
   for (const origin of ["http://cert.cyber.gouv.fr", "https://cert.cyber.gouv.fr.evil.example", "https://localhost", "https://cert.ssi.gouv.fr"]) {
     assert.throws(() => parseWatchSource(feed, rss(item(`${origin}/avis/CERTFR-2026-AVI-1134/`)), now));
   }
@@ -626,6 +618,18 @@ test("CERT-FR fournit une piste de vulnérabilité, et le RSS public échappe le
   new SaxesParser().write(xml).close();
   assert.ok(!xml.includes("<script>"));
   assert.match(xml, /&lt;script&gt;/);
+});
+test("Cachet : la page publique conserve les identifiants et refuse un historique incomplet", () => {
+  const source = watchSources.find(source => source.id === "veryswing")!;
+  const body = '<div class="section-timeline"><div class="panel panel-message incident"><strong>Réplication perturbée</strong><a href="https://status.veryswing.com/incidents/201" class="links"><abbr data-timeago="2026-10-29T11:09:28+01:00"></abbr></a><div class="panel-body markdown-body"><p>Réplication relancée, enquête en cours.</p></div></div></div>';
+  const rows = parseWatchSource(source, body, Date.parse("2026-11-01T12:00:00Z"));
+  assert.equal(rows[0].id, "veryswing-201");
+  assert.equal(rows[0].publishedAt, "2026-10-29T10:09:28.000Z");
+  assert.match(rows[0].content, /enquête en cours/);
+  for (const changed of [body.replace("status.veryswing.com/incidents", "evil.example/incidents"), body.replace("2026-10-29T11:09:28+01:00", "2026-10-29T11:09:28"), body.replace('<div class="panel-body markdown-body">', '<div class="changed">'), body.replace('class="section-timeline"', 'class="changed"')]) {
+    assert.throws(() => parseWatchSource(source, changed, Date.parse("2026-11-01T12:00:00Z")));
+  }
+  assert.throws(() => parseWatchSource(source, '<div class="section-timeline"></div>'));
 });
 test("relevé du 23 septembre : contact Shine actualisé et aucune admission déduite d’une disparition", async () => {
   const prior = JSON.parse(await readFile(new URL("../docs/archives/official-directory-2026-09-14.json",import.meta.url),"utf8"));

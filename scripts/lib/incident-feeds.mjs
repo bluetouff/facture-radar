@@ -27,7 +27,7 @@ function incidentUrl(source, value) {
     statuspal: /^\/{1,2}incidents\/[A-Za-z0-9]+$/,
     "incident-io": /^\/europe\/incidents\/[A-Za-z0-9]+$/,
     betterstack: /^(?:\/fr)?\/incident\/\d+$/,
-    cachet: /^\/incident\/\d+\/$/,
+    cachet: /^(?:\/incident\/\d+\/|\/incidents\/\d+)$/,
     instatus: /^\/incident\/[a-z0-9]+$/,
     ohdear: /^(?:\/|\/(?:updates|incidents)\/[a-z0-9-]+\/?)$/,
     "cert-fr": /^\/(?:avis|alerte|actualite|cti|ioc|dur)\/CERTFR-\d{4}-[A-Z]+-\d+\/$/,
@@ -35,7 +35,7 @@ function incidentUrl(source, value) {
   };
   // The canonical CERT-FR feed still publishes links on its former official origin.
   const allowedOrigins = source.profile === "cert-fr"
-    ? ["https://cert.cyber.gouv.fr", "https://www.cert.ssi.gouv.fr"]
+    ? ["https://cert.cyber.gouv.fr", "https://www.cert.cyber.gouv.fr", "https://www.cert.ssi.gouv.fr"]
     : [new URL(source.url).origin];
   if (!allowedOrigins.includes(url.origin) || url.username || url.password || url.search || url.hash || !paths[source.profile]?.test(url.pathname)) throw new Error("Lien incident hors périmètre");
   return url.href;
@@ -80,6 +80,23 @@ export function parseWatchSource(source, body, now = Date.now()) {
   assertWatchSource(source);
   if (Buffer.byteLength(body) > FEED_LIMIT) throw new Error("Réponse trop volumineuse");
   if (source.kind === "json") return parseJson(source, body, now);
+  if (source.kind === "html" && source.profile === "cachet") {
+    if (!body.includes('class="section-timeline"')) throw new Error("Historique Cachet absent");
+    const sections = body.split('<div class="panel panel-message incident">').slice(1);
+    if (!sections.length || sections.length > 500) throw new Error("Historique Cachet invalide");
+    const ids = new Set();
+    return sections.map(section => {
+      const row = candidate(source, {
+        title: section.match(/<strong>([^<]+)<\/strong>/)?.[1],
+        url: section.match(/<a href="([^"]+)" class="links">/)?.[1],
+        publishedAt: section.match(/data-timeago="([^"]+)"/)?.[1],
+        content: section.match(/<div class="panel-body markdown-body">([\s\S]*?)<\/div>/)?.[1] ?? "",
+      }, now);
+      if (ids.has(row.id) || !row.content.trim()) throw new Error("Avis Cachet incomplet ou dupliqué");
+      ids.add(row.id);
+      return row;
+    }).filter(item => item.publishedAt >= since);
+  }
   if (source.kind === "esker") {
     if (!body.includes('class="tower_detail"') || !body.includes("Service availability")) throw new Error("Structure TrustEsker inattendue");
     const candidates = [];

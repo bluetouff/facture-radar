@@ -74,9 +74,9 @@ test("les observations de sites ne peuvent pas modifier le moteur de choix", asy
   assert.doesNotMatch(matcher, /public-site-observations|tracker|thirdPartyDomains/i);
 });
 
-test("les six admissions récentes ne fabriquent pas une observation de site", () => {
+test("les six admissions d’octobre ne fabriquent pas une observation de site", () => {
   const previousNames = new Set(previousDirectory.approved.map((entry) => entry.name));
-  const additions = platforms.filter((platform) => !previousNames.has(platform.officialName));
+  const additions = platforms.filter((platform) => !previousNames.has(platform.officialName) && !["swile", "atgp"].includes(platform.slug));
   assert.equal(additions.length, 6);
   for (const platform of additions) {
     const observation = publicSiteObservations.find((candidate) => candidate.platformSlug === platform.slug);

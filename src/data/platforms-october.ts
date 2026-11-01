@@ -102,7 +102,7 @@ export const octoberPlatforms: Platform[] = [
     "Plans d’émission et activation",
     "E-reporting opérationnel",
     "Conditions détaillées de l’offre",
-    "API, hébergement et restitution",
+    "API, contrat d’hébergement et restitution",
     "Adresse postale divergente entre la DGFiP et le site",
     "Public visé par l’offre PA et date d’immatriculation"
   ],
@@ -178,7 +178,14 @@ export const octoberPlatforms: Platform[] = [
     "sourceIds": [],
     "checkedAt": "2026-10-14",
     "note": "La page évoque les déclarations imposées à la plateforme sans détailler le périmètre de l’e-reporting."
-  }
+  },
+  hostingCountries: {
+    value: ["France"],
+    status: "declared",
+    sourceIds: ["factureapp-privacy-20261101"],
+    checkedAt: "2026-11-01",
+    note: "La politique v1.0 du 5 janvier 2026 déclare un hébergement exclusif chez OVHcloud en France, avec des sites primaires et secondaires français. Elle décrit séparément l’intervention de CENET SA en Colombie sur l’infrastructure. Service OVHcloud souscrit et qualification SecNumCloud applicable restent à vérifier.",
+  },
 }),
   expand({
   "slug": "insiders-technologies",

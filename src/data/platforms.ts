@@ -1,4 +1,5 @@
 import { octoberPlatforms } from "./platforms-october.ts";
+import { novemberPlatforms } from "./platforms-november.ts";
 import { septemberPlatforms } from "./platforms-september.ts";
 import type { Evidence, Platform } from "./types.ts";
 import { expandedPlatforms } from "./platforms-expanded.ts";
@@ -453,13 +454,13 @@ export const platforms: Platform[] = [
     slug: "macompta",
     displayName: "macompta.fr",
     officialName: "MACOMPTA.FR",
-    summary: "Plateforme agréée française accessible gratuitement, que l'entreprise conserve ou non son logiciel de gestion actuel.",
+    summary: "Plateforme agréée autonome de macompta.fr, gratuite la première année puis selon des plafonds liés à l’abonnement logiciel.",
     targets: ["micro", "tpe", "pme"],
     ecosystem: ["facturation", "comptabilité", "EDI", "Peppol"],
     officialStatus: official("registered"),
     registeredAt: official("2026-01-15"),
-    pricing: documented({ kind: "free", monthlyFrom: 0, unit: "company", freeFor: ["micro", "tpe", "pme"], promotionalPriceExcluded: true, label: "Inscription à la PA annoncée gratuite et sans engagement" }, ["macompta-pa-2026"]),
-    allowance: unknown("Les volumes gratuits, plafonds et éventuels coûts de dépassement ne sont pas publiés sur la page d'inscription."),
+    pricing: {"value": {"kind": "free", "monthlyFrom": null, "unit": "company", "freeFor": ["micro", "tpe", "pme"], "promotionalPriceExcluded": true, "label": "Première année gratuite ; ensuite jusqu’à 20 factures/mois sans abonnement logiciel, 250/mois avec Comptabilité et/ou Facturation"}, "status": "documented", "sourceIds": ["macompta-faq-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Première année gratuite. Ensuite la gratuité dépend du volume et de l’abonnement logiciel ; le prix au-delà des seuils reste à obtenir. Aucun abonnement mensuel uniforme n’est retenu pour les projections."},
+    allowance: {"value": {"monthlyInvoices": 20, "annualInvoices": null, "unlimited": false, "label": "Dès la deuxième année : 20 factures/mois sans abonnement logiciel ; 250/mois avec Comptabilité et/ou Facturation"}, "status": "documented", "sourceIds": ["macompta-faq-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Le plafond retenu pour une PA autonome est celui de la deuxième année. La FAQ annonce une première année gratuite, sans préciser son volume dans cette réponse."},
     sendsInvoices: documented(true, ["macompta-pa-2026"]),
     receivesInvoices: documented(true, ["macompta-pa-2026", "macompta-reception-20261004"], "Les factures fournisseurs arrivent automatiquement dans Achats > Factures ; leur réception et leurs changements de statut sont historisés.", "2026-10-04"),
     eReporting: unknown("La transmission de données à l'administration est annoncée sans détail suffisant pour confirmer tous les cas d'e-reporting."),
@@ -472,7 +473,7 @@ export const platforms: Platform[] = [
     hostingCountries: declared(["France"], ["macompta-pa-2026"], "La page d'inscription annonce des données chiffrées et hébergées en France."),
     iso27001: documented(true, ["macompta-security-2026"], "L'éditeur indique être certifié ISO/IEC 27001 depuis juin 2025. Le certificat doit encore être archivé."),
     commitmentMonths: documented(0, ["macompta-pa-2026"]),
-    importantUnknowns: ["Plafonds de l'offre gratuite", "Activation de l'e-reporting", "Connexion bancaire éventuelle", "Export complet après résiliation"]
+    importantUnknowns: ["Tarif au-delà des plafonds et périmètre émission/réception du décompte", "Activation de l’e-reporting", "Connexion bancaire éventuelle", "Export complet après résiliation"]
   },
   {
     slug: "odoo",
@@ -654,4 +655,5 @@ export const platforms: Platform[] = [
   ...thirdWavePlatforms,
   ...septemberPlatforms,
   ...octoberPlatforms,
+  ...novemberPlatforms,
 ];

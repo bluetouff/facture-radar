@@ -4182,5 +4182,445 @@
     "url": "https://status.pagero.com/incidents/t0xjfy9kssq4",
     "type": "documentation",
     "accessedAt": "2026-10-22"
+  },
+  {
+    "id": "dgfip-list-20261101",
+    "title": "Listes des plateformes agréées et dossiers en attente, page mise à jour le 30 octobre 2026",
+    "publisher": "DGFiP",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "swile-home-20261101",
+    "title": "Swile : avantages salariés et déplacements professionnels",
+    "publisher": "Swile",
+    "url": "https://www.swile.co/",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "pagero-ppf-20261101",
+    "title": "Pagero : livraison des documents au PPF retardée, envoi suspendu",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/incidents/rbhs8s3vcrnq",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "pagero-support-20261023",
+    "title": "Pagero : perturbation des canaux de support, résolution le 23 octobre",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/incidents/b7ftm4f2p7qf",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "veryswing-vsdb-20261029",
+    "title": "Veryswing : réplication VSDB groupe 1 perturbée depuis le 28 octobre",
+    "publisher": "Veryswing",
+    "url": "https://status.veryswing.com/incidents/201",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "docuware-viewer-emea-20261021",
+    "title": "DocuWare : erreur du visualiseur EMEA, résolution et analyse de cause",
+    "publisher": "DocuWare",
+    "url": "https://statusportal.docuware.cloud/overview/incident/5df8d07e-e638-4428-9706-d761e74becf8?lang=en",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "docuware-ftp-emea-20261008",
+    "title": "DocuWare : service FTP EMEA, résolution et analyse de cause",
+    "publisher": "DocuWare",
+    "url": "https://statusportal.docuware.cloud/overview/incident/2dc52ac8-7562-469e-9861-691c617518c0?lang=en",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "qweeby-offers-20261101",
+    "title": "Qweeby : plans PA, API, hébergement et récupération des données",
+    "publisher": "Qweeby",
+    "url": "https://www.qweeby.fr/",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "arratech-tech-20261101",
+    "title": "Arratech Connect : infrastructure AWS et module France déclaré",
+    "publisher": "Arratech",
+    "url": "https://docs.arratech.com/technical-brief",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "effinum-guide-20261101",
+    "title": "Effinum : guide utilisateurs, import XML et raccordement des éditeurs",
+    "publisher": "Cerfrance Terre d’Allier",
+    "url": "https://cerfrance-terre-allier.fr/guide-effinum/",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "cyclope-contract-20261101",
+    "title": "Cyclope : CGU INFORMATEX, accès Gallo, migration et réversibilité",
+    "publisher": "Cyclope / INFORMATEX",
+    "url": "https://cyclope.digital/cgu.html",
+    "type": "contract",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "factureapp-privacy-20261101",
+    "title": "FacturesApp : politique de confidentialité v1.0 du 5 janvier 2026, infrastructure et sous-traitants",
+    "publisher": "FacturesApp",
+    "url": "https://www.facturesapp.com/fr/files/PolitiqueConfidentialite/politiqueconfidentialite.pdf",
+    "type": "contract",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "gestav-partner-20261101",
+    "title": "Gestav PA : offre partenaire, API AFNOR et formats",
+    "publisher": "Gestav",
+    "url": "https://gestav.com/partenaire",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "flowie-changelog-20261101",
+    "title": "Flowie Exchange : notes de version du 22 au 30 octobre 2026",
+    "publisher": "Flowie",
+    "url": "https://docs.get-flowie.com/changelog.fr",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "billit-terms-update-20261101",
+    "title": "Billit : nouvelles conditions générales annoncées pour le 30 novembre 2026",
+    "publisher": "Billit",
+    "url": "https://www.billit.eu/fr-fr/informations-juridiques/modification-conditions-generales-doctobre-2026/",
+    "type": "contract",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fiskaltrust-einvoicing-setup-20261101",
+    "title": "fiskaltrust : configuration et test eInvoicing France, étapes Portal en cours de validation",
+    "publisher": "fiskaltrust",
+    "url": "https://docs.fiskaltrust.cloud/docs/poscreators/middleware-doc/france/e-invoicing/setup",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "tradeshift-php-notice-20261022",
+    "title": "Tradeshift : notice de sécurité PHP du 22 octobre, PA et Babelway déclarés non affectés",
+    "publisher": "Tradeshift",
+    "url": "https://onboardingsuppliers.support.tradeshift.com/knowledgebase/article/40039733487250",
+    "type": "security",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "axway-php-response-20261023",
+    "title": "Axway Trust Center : réponse PHP2Shell du 23 octobre 2026",
+    "publisher": "Axway",
+    "url": "https://trust.axway.com/",
+    "type": "security",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "macompta-faq-pricing-20261101",
+    "title": "FAQ PA : gratuité la première année puis plafonds selon abonnement",
+    "publisher": "macompta.fr",
+    "url": "https://help.macompta.fr/fr/articles/715896-reponses-a-vos-questions-sur-la-plateforme-agreee-macompta-fr",
+    "type": "pricing",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "weinvoice-pricing-20261101",
+    "title": "PA Interface et PA Connect : tarifs et restitution après résiliation",
+    "publisher": "WeInvoice by Weproc",
+    "url": "https://weinvoice.fr/tarifs",
+    "type": "pricing",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "weinvoice-integrations-20261101",
+    "title": "Intégrations livrées, Shopify en préparation et statut encaissé manuel",
+    "publisher": "WeInvoice by Weproc",
+    "url": "https://weinvoice.fr/integrations",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "weinvoice-security-20261101",
+    "title": "Déclaration ISO 27001:2022 et hébergement Outscale en France",
+    "publisher": "WeInvoice by Weproc",
+    "url": "https://weinvoice.fr/technologie/securite",
+    "type": "security",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "weinvoice-api-20261101",
+    "title": "API Connect, sandbox et conditions de production",
+    "publisher": "WeInvoice by Weproc",
+    "url": "https://weinvoice.fr/technologie/api",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "sellsy-backups-20261101",
+    "title": "Sauvegardes, continuité et prévention des intrusions",
+    "publisher": "Sellsy",
+    "url": "https://help.sellsy.com/fr/articles/12927828-sauvegarde-continuite-de-service-et-prevention-des-intrusions",
+    "type": "security",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "edieyes-afnor-api-20261101",
+    "title": "API AFNOR XP Z12-013 et accès des cabinets annoncés",
+    "publisher": "EdiEyes",
+    "url": "https://www.edieyes.fr/api-afnor-xp-z12-013-gardez-le-controle/",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1109486-20261101",
+    "title": "fulll : authentification rétablie le 31 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1109486",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1106620-20261101",
+    "title": "fulll : interruptions successives de Production SQL le 28 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1106620",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1101526-20261101",
+    "title": "fulll : connexion et page d’accueil rétablies le 24 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1101526",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1097775-20261101",
+    "title": "fulll : alertes sur la caisse et les outils de production du 21 au 23 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1097775",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1097346-20261101",
+    "title": "fulll : interruption préventive pour appliquer des correctifs PHP",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1097346",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1095858-20261101",
+    "title": "fulll : portail rétabli le 20 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1095858",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1091413-20261101",
+    "title": "fulll : authentification rétablie le 15 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1091413",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1089867-20261101",
+    "title": "fulll : composant Plateforme agréée rétabli le 14 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1089867",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1084313-20261101",
+    "title": "fulll : portail et documents rétablis le 7 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1084313",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1081679-20261101",
+    "title": "fulll : Production SQL rétablie le 5 octobre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1081679",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1071459-20261101",
+    "title": "fulll : Keeper rétabli le 22 septembre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1071459",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "fulll-incident-1065720-20261101",
+    "title": "fulll : alertes sur Assistant de TVA et accueil-compta le 16 septembre",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1065720",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "lucca-0sswhv6zhr2d",
+    "title": "Lucca : applications rétablies après la perturbation du 22 octobre",
+    "publisher": "Lucca",
+    "url": "https://status.lucca.fr/incidents/0sswhv6zhr2d",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "lucca-hmx60fgz6jz7",
+    "title": "Lucca : applications rétablies après la perturbation du 26 octobre",
+    "publisher": "Lucca",
+    "url": "https://status.lucca.fr/incidents/hmx60fgz6jz7",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "lucca-lmlm1w911gty",
+    "title": "Lucca : applications rétablies après la perturbation du 29 octobre",
+    "publisher": "Lucca",
+    "url": "https://status.lucca.fr/incidents/lmlm1w911gty",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "sage-00fdqy9rqdqh",
+    "title": "Sage FRP 1000 France : service rétabli le 27 octobre",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/00fdqy9rqdqh",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "sage-d8tnj415j80n",
+    "title": "Sage 50 France : déconnexions de Ciel Données Mobiles rétablies",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/d8tnj415j80n",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "sage-c34h4qgm6q5r",
+    "title": "Sage Intacct Europe : accès rétabli après des erreurs d’adresse IP",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/c34h4qgm6q5r",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "spendesk-w7sbfw2qjzpt",
+    "title": "Spendesk : détails des cartes d’abonnement de nouveau accessibles",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/w7sbfw2qjzpt",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "weproc-1107374",
+    "title": "WeInvoice : appels à l’annuaire PISTE rétablis le 29 octobre",
+    "publisher": "WeInvoice / WeProc",
+    "url": "https://status.weinvoice.fr/incident/1107374",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "eezi-cmvtfjan50b0f0wqg1p2oook7",
+    "title": "eezi : traitement France AP ralenti puis rétabli",
+    "publisher": "eezi",
+    "url": "https://eezi.instatus.com/incident/cmvtfjan50b0f0wqg1p2oook7",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "superpdp-network-20261030",
+    "title": "SuperPDP : incident réseau sur l’API, rétablissement annoncé",
+    "publisher": "SuperPDP",
+    "url": "https://status.superpdp.tech/",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "ecosio-intercom-01m6b6e5mvdhptvw16rghsvbsv",
+    "title": "ecosio : transmission Flow1 en France perturbée",
+    "publisher": "ecosio",
+    "url": "https://www.ecosio-status.com//incidents/01M6B6E5MVDHPTVW16RGHSVBSV",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "spendesk-3ds-resolution-20261101",
+    "title": "Spendesk : résolution des notifications 3DS iOS le 23 octobre",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/v2rhxyvn0mqr",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "ar24-completion-20261101",
+    "title": "AR24 : fin de maintenance exceptionnelle le 22 octobre",
+    "publisher": "AR24",
+    "url": "https://status.ar24.fr/incidents/r8v3d314fzbm",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "atgp-final-20261101",
+    "title": "@GP : ensemble des services rétabli le 22 octobre à 19 h",
+    "publisher": "@GP",
+    "url": "https://www.atgp.net/info-incidents/",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "welyb-status-20261101",
+    "title": "Welyb : météo des services actualisée le 30 octobre",
+    "publisher": "Welyb",
+    "url": "https://support.welyb.fr/statut-plateforme",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "digipharmacie-pricing-20261101",
+    "title": "DigiEssentiel 35 € HT et DigiPlus 55 € HT, PA incluse",
+    "publisher": "Digipharmacie",
+    "url": "https://digipharmacie.fr/",
+    "type": "pricing",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "digipharmacie-cgv-20261101",
+    "title": "CGV : abonnement officine, option DigiPA et volumes inclus",
+    "publisher": "Digipharmacie",
+    "url": "https://digipharmacie.fr/conditions-generales-de-vente",
+    "type": "contract",
+    "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "swile-status-20261101",
+    "title": "Swile : page d’état et historique public",
+    "publisher": "Swile",
+    "url": "https://status.swile.co/",
+    "type": "documentation",
+    "accessedAt": "2026-11-01"
   }
 ]

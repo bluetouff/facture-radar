@@ -11,9 +11,9 @@ import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 import { passportRoutes } from "../src/data/passport-routes.ts";
 
 test("le relevé courant conserve les admissions et corrections documentées en septembre", async () => {
-  assert.equal(directory.snapshotDate, "2026-10-20");
+  assert.equal(directory.snapshotDate, "2026-11-01");
   assert.equal(directory.approved.length, 155);
-  assert.equal(directory.pending.length, 11);
+  assert.equal(directory.pending.length, 10);
   const expected = new Map([
     ["BLG", "2026-08-26"], ["FISKALTRUST", "2026-08-28"],
     ["CYCLOPE", "2026-08-25"], ["LUNDI MATIN", "2026-08-24"], ["VENTYA", "2025-12-18"],
@@ -30,12 +30,13 @@ test("le relevé courant conserve les admissions et corrections documentées en 
   assert.equal(archive.journey.platformSlug, "ecosio");
 });
 
-test("les 149 anciennes entrées conservent leurs dates et leur provenance officielle", () => {
+test("les entrées maintenues conservent leurs dates après renommage et passage en historique", () => {
   assert.equal(previousDirectory.snapshotDate, "2026-10-10");
   assert.equal(previousDirectory.approved.length, 149);
-  for (const previous of previousDirectory.approved) {
-    const entry = directory.approved.find((candidate) => candidate.name === previous.name);
-    const platform = platforms.find((candidate) => candidate.officialName === previous.name);
+  for (const previous of previousDirectory.approved.filter(entry => entry.name !== "DOCPROCESS")) {
+    const currentName = previous.name === "ATGP" ? "@GP" : previous.name;
+    const entry = directory.approved.find((candidate) => candidate.name === currentName);
+    const platform = platforms.find((candidate) => candidate.officialName === currentName);
     assert.ok(entry, `${previous.name} doit rester dans la liste approuvée`);
     assert.ok(platform, `${previous.name} doit conserver sa fiche`);
     assert.equal(entry.registeredAt, previous.registeredAt, previous.name);
@@ -55,7 +56,7 @@ test("les six nouvelles PA reproduisent la date En attente sans date fictive", (
   assert.equal(officialSource.type, "official-list");
   assert.equal(officialSource.accessedAt, "2026-10-14");
   const previousNames = new Set(previousDirectory.approved.map((entry) => entry.name));
-  const additions = directory.approved.filter((entry) => !previousNames.has(entry.name));
+  const additions = directory.approved.filter((entry) => !previousNames.has(entry.name) && !["SWILE", "@GP"].includes(entry.name));
   assert.deepEqual(additions.map((entry) => entry.name).sort(), [
     "BE FRESH S.à r.l.", "FACTUREAPP", "Insiders Technologies GmbH", "KALANDA", "MY-EDDY", "RATIOO",
   ].sort());
@@ -106,7 +107,11 @@ test("les nouvelles fiches ne déduisent ni prix ni disponibilité de l'agrémen
   for (const slug of ["blg", "fiskaltrust"]) {
     const platform = platforms.find((candidate) => candidate.slug === slug)!;
     assert.equal(platform.pricing.value, null);
-    assert.equal(platform.publicApi.value, null);
+    if (slug === "blg") assert.equal(platform.publicApi.value, null);
+    else {
+      assert.equal(platform.publicApi.status, "declared");
+      assert.ok(platform.publicApi.sourceIds.includes("fiskaltrust-einvoicing-setup-20261101"));
+    }
     assert.equal(researchForPlatform(slug).availability.eReporting.value, null);
     assert.equal(researchForPlatform(slug).availability.eReporting.checkedAt, "2026-09-14");
   }

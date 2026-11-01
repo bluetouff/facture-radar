@@ -12,7 +12,7 @@ L'URL publique est `https://pa.l0g.fr`. Le service fonctionne sans compte et san
 - trois questions pour trouver jusqu'à trois plateformes adaptées à l'activité et à la priorité indiquées ;
 - 155 fiches détaillées, chacune reliée à des sources publiques et datées ;
 - une sélection explicite couvrant les indépendants, TPE, PME, cabinets comptables, ETI et grandes entreprises ;
-- l'annuaire officiel complet, soit 155 plateformes approuvées et 11 en attente dans les fichiers DGFiP relus le 20 octobre 2026 ;
+- l'annuaire officiel complet, soit 155 plateformes approuvées et 10 en attente dans les fichiers DGFiP relus le 1er novembre 2026 ;
 - un comparateur point par point ;
 - des exports JSON publics et un corpus consolidé pour permettre la vérification et la réutilisation ;
 - un serveur MCP public en lecture seule, pour donner les mêmes réponses aux agents sans compte ni clé d'API ;
@@ -41,6 +41,8 @@ npm run data:refresh -- /chemin/liste-approuvees.xlsx /chemin/liste-attente.xlsx
 ```
 
 `npm run build` valide les données, vérifie les composants Astro, exécute les tests, génère le site statique dans `dist/` puis construit le serveur MCP autonome dans `dist-mcp/`.
+
+L’import des classeurs officiels (`npm run data:refresh`) utilise Python 3 et sa bibliothèque standard. Le build requiert Node ≥22.19 ; le bundle MCP est testé séparément sous Node 20.19.2 en CI.
 
 ## Accès pour les agents
 

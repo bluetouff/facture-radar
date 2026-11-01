@@ -1,5 +1,5 @@
 {
-  "selectedAt": "2026-10-14",
+  "selectedAt": "2026-11-01",
   "audience": "Indépendants, entrepreneurs, entreprises, équipes administratives et cabinets comptables en France",
   "method": [
     "Présence dans la liste des plateformes approuvées publiée par la DGFiP",
@@ -420,13 +420,6 @@
       "reach": "Infrastructure directe, marque blanche et marque grise",
       "reachSourceIds": ["docoon-pa-2026"],
       "reason": "API française conçue pour les éditeurs, intégrateurs et opérateurs."
-    },
-    {
-      "slug": "docprocess",
-      "segment": "eti-et-grands-comptes",
-      "reach": "Couverture publique des cycles clients et fournisseurs",
-      "reachSourceIds": ["docprocess-pa-2026"],
-      "reason": "Large jeu de formats et connexion aux ERP et portails."
     },
     {
       "slug": "edics",
@@ -1092,12 +1085,26 @@
       "reach": "Public et volumétrie de l’offre PA non documentés",
       "reachSourceIds": ["ratioo-pa-offre-20261014", "ratioo-pricing-20261014", "ratioo-pa-20261014"],
       "reason": "Acteur ajouté au fichier DGFiP du 13 octobre ; fiche ouverte avec les données publiques et les limites de l’offre française."
+    },
+    {
+      "slug": "swile",
+      "segment": "non-documente",
+      "reach": "Présence dans la liste des PA agréées consultée le 1er novembre",
+      "reachSourceIds": [
+        "dgfip-list-20261101",
+        "swile-home-20261101"
+      ],
+      "reason": "Nouvelle entrée de la liste officielle ; offre PA à documenter."
     }
   ],
   "replaced": [
     {
       "slug": "ecosio",
       "reason": "Entrée ECOSIO absente du relevé DGFiP du 10 septembre 2026 ; ecosio InterCom reste listée. Cause non publiée, fiche historique conservée."
+    },
+    {
+      "slug": "docprocess",
+      "reason": "DOCPROCESS est absente du fichier approuvé consulté le 1er novembre, sans motif indiqué. La page historique est conservée."
     }
   ]
 }

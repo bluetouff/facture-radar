@@ -26,7 +26,7 @@ test("un critère inconnu ou déclaré ne devient pas un oui ou un non publié",
   assert.equal(factState({ ...evidence, status: "declared", sourceIds: ["source"] }, true), "declared");
   assert.equal(factState({ ...evidence, status: "documented", sourceIds: ["source"] }, false), "no");
   assert.equal(facts("blg").price, "unknown");
-  assert.equal(facts("fiskaltrust").api, "unknown");
+  assert.equal(facts("fiskaltrust").api, "declared");
 });
 
 test("l'import PDF/XML n'est pas assimilé à un import Factur-X", () => {

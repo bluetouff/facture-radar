@@ -47,7 +47,7 @@ try {
   for (let offset = 0; offset < watchSources.length; offset += 4) {
   results.push(...await Promise.allSettled(watchSources.slice(offset, offset + 4).map(async source => {
     const body = await fetchSource(source);
-    await writeFile(`${archive}/${source.id}.${source.kind === "json" ? "json" : source.kind === "esker" ? "html" : "xml"}`, body);
+    await writeFile(`${archive}/${source.id}.${source.kind === "json" ? "json" : ["esker", "html"].includes(source.kind) ? "html" : "xml"}`, body);
     const candidates = parseWatchSource(source, body).map(candidate => ({ ...candidate, sourceId: source.id, platformSlugs: source.platformSlugs, classification: source.profile === "cert-fr" ? "security_advisory_to_review" : "publisher_notice_to_review" }));
     return { sourceId: source.id, url: source.url, status: "collected", checkedAt, sha256: digest(body), candidates };
   })));

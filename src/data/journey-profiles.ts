@@ -1,3 +1,4 @@
+import { novemberJourneyProfiles } from "./journey-profiles-november.ts";
 import { septemberJourneyProfiles } from "./journey-profiles-september.ts";
 import { expandedJourneyProfiles } from "./journey-profiles-expanded.ts";
 import { secondWaveJourneyProfiles } from "./journey-profiles-second-wave.ts";
@@ -65,7 +66,7 @@ export type JourneyProfileId =
   | "cleartax"
   | "digital-technologies"
   | "docoon"
-  | "docprocess"
+  | "swile"
   | "blg"
   | "fiskaltrust"
   | "edics"
@@ -768,7 +769,7 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
     platformSlug: "macompta",
     toolLabel: "macompta.fr",
     toolDetail: "Plateforme agréée autonome, utilisable même si l'entreprise conserve son outil de gestion.",
-    checkedAt: "2026-08-25",
+    checkedAt: "2026-11-01",
     toolSourceIds: ["macompta-pa-2026"],
     contextSourceIds: [],
     activation: {
@@ -784,10 +785,10 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
       activateAction: { title: "Terminez l'inscription", detail: "Vérifiez les informations de l'entreprise et finalisez le rattachement proposé.", sourceIds: ["macompta-pa-2026"] },
       checkAction: { title: "Contrôlez le statut", detail: "Vérifiez que la réception et l'envoi sont actifs pour le bon SIREN.", sourceIds: ["macompta-pa-2026"] },
     },
-    costByAudience: allAudiences(freeCost(
-      "L'inscription à la plateforme agréée est annoncée gratuite et sans engagement.",
-      "Les volumes inclus et les éventuels services payants ne sont pas détaillés sur la page d'inscription.",
-      ["macompta-pa-2026"],
+    costByAudience: allAudiences(quoteCost(
+      "Première année gratuite ; ensuite 20 factures/mois sans abonnement logiciel, ou 250/mois avec Comptabilité et/ou Facturation.",
+      "Le tarif au-delà des plafonds et le coût des logiciels associés restent à confirmer. Les projections sur 12, 24 et 36 mois sont suspendues faute de prix uniforme adapté au volume.",
+      ["macompta-faq-pricing-20261101"],
     )),
     afterActivationActions: [testReceipt("macompta.fr")],
   },
@@ -1003,6 +1004,7 @@ export const journeyProfiles: readonly JourneyProfileDefinition[] = [
   ...thirdWaveJourneyProfiles,
   ...septemberJourneyProfiles,
   ...octoberJourneyProfiles,
+  ...novemberJourneyProfiles,
 ];
 
 export function collectJourneySourceIds(profile: JourneyProfileDefinition): string[] {

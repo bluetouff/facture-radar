@@ -1,11 +1,20 @@
 {
-  "snapshotDate": "2026-10-20",
+  "snapshotDate": "2026-11-01",
   "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
   "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
   "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
-  "approvedSha256": "58ceadb0befa0beb133a7f01bdcc182dc1ab4832cb282428c85f6f27dfd34e07",
-  "pendingSha256": "914c4bcb11f0ea46d1f98769857385b64a0b1258622eb69eee5466d91d132373",
+  "approvedSha256": "b37662160facf9b5a4160955098e6a99f88067e74acb8fe60cf6958afbea125a",
+  "pendingSha256": "a6a2ba8f185824b4631d60e3a60271e017ff9f50e65c10dbc75662c0543275fe",
   "approved": [
+    {
+      "name": "@GP",
+      "street": "20, rue des Acacias",
+      "postalCode": "26120",
+      "city": "Montélier",
+      "website": "https://www.atgp.net/",
+      "contact": "contact.pdp@atgp.net",
+      "registeredAt": "2025-12-11"
+    },
     {
       "name": "A-Cube",
       "street": "via Pisani Vittor 20, Milan",
@@ -95,15 +104,6 @@
       "website": "https://www.arubaonesuite.fr/",
       "contact": "contact-pa@staff.aruba.it",
       "registeredAt": "2026-07-29"
-    },
-    {
-      "name": "ATGP",
-      "street": "20, rue des Acacias",
-      "postalCode": "26120",
-      "city": "Montélier",
-      "website": "https://www.atgp.net/",
-      "contact": "contact.pdp@atgp.net",
-      "registeredAt": "2025-12-11"
     },
     {
       "name": "AVALARA",
@@ -356,15 +356,6 @@
       "website": "https://docoon.immo/",
       "contact": "pdp@docoon.com",
       "registeredAt": "2025-12-23"
-    },
-    {
-      "name": "DOCPROCESS",
-      "street": "14 Chemin des Clos",
-      "postalCode": "38240",
-      "city": "Meylan",
-      "website": "https://doc-process.com/fr",
-      "contact": "contact@doc-process.com",
-      "registeredAt": "2025-12-15"
     },
     {
       "name": "DOCUWARE",
@@ -1213,6 +1204,15 @@
       "registeredAt": "2025-12-22"
     },
     {
+      "name": "SWILE",
+      "street": "561 Rue Georges Méliès",
+      "postalCode": "34000",
+      "city": "Montpellier",
+      "website": "https://www.swile.co/",
+      "contact": "gregory.truchetet@swile.co",
+      "registeredAt": "En attente"
+    },
+    {
       "name": "SYMTRAX",
       "street": "11 Rue Raymond Marc",
       "postalCode": "30000",
@@ -1458,14 +1458,6 @@
       "city": "Puteaux",
       "website": "https://www.sage.com/fr-fr/",
       "contact": "pa.france@sage.com"
-    },
-    {
-      "name": "SWILE",
-      "street": "561 Rue Georges Méliès",
-      "postalCode": "34000",
-      "city": "Montpellier",
-      "website": "https://www.swile.co/",
-      "contact": "gregory.truchetet@swile.co"
     },
     {
       "name": "Taxilla Europe BV",

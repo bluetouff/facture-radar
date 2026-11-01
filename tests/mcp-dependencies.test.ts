@@ -26,3 +26,17 @@ test("Astro charge Vite 8.2.4 et toutes les copies suivent le correctif éditeur
   const astroRequire = createRequire(require.resolve("astro/package.json"));
   assert.equal(astroRequire("vite/package.json").version, "8.2.4");
 });
+
+test("le transport MCP et son adaptateur HTTP excluent les versions vulnérables", () => {
+  for (const [name, minimum] of [["@modelcontextprotocol/node", [2, 1, 2]], ["@hono/node-server", [2, 1, 3]]] as const) {
+    const copies = Object.entries(lock.packages).filter(([path]) => path.endsWith(`node_modules/${name}`));
+    assert.ok(copies.length > 0, name);
+    for (const [path, entry] of copies) {
+      assert.match(entry.version!, /^\d+\.\d+\.\d+$/);
+      const version = entry.version!.split(".").map(Number) as [number, number, number];
+      assert.equal(version[0], minimum[0], path);
+      assert.ok(version[1] > minimum[1] || (version[1] === minimum[1] && version[2] >= minimum[2]), path);
+    }
+  }
+  assert.ok(!Object.keys(lock.packages).some(path => /node_modules\/(?:exceljs|minimatch|archiver)$/.test(path)));
+});

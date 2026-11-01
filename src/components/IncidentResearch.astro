@@ -3,10 +3,13 @@ import Pagination from "./Pagination.astro";
 import InterfaceIcon from "./InterfaceIcon.astro";
 import { incidentResearch, incidentFeeds, incidentCoverage } from "../data/incident-watch";
 import { platforms } from "../data/platforms";
+const researchDates = [...new Set(incidentResearch.map(item => item.checkedAt))];
+const generalDate = researchDates.length === 1 && incidentResearch.every(item => item.status === "searched") ? researchDates[0] : null;
+const generalDateLabel = generalDate ? new Date(`${generalDate}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Paris" }) : null;
 ---
 <section class="shell research" id="recherche" aria-labelledby="research-title">
-  <header><div><span class="mono-label">La couverture en détail</span><h2 id="research-title" tabindex="-1">Les {platforms.length} plateformes suivies.</h2></div><span class="research-total"><InterfaceIcon name="check" /> Dernière recherche générale : 22 octobre</span></header>
-  <p>Les 155 acteurs ont fait l’objet d’une recherche nominative le 22 octobre. Les résultats utiles sont vérifiés auprès de leurs auteurs. Chaque fiche conserve la portée de son contrôle ; la recherche publique dépend des informations accessibles et indexées.</p>
+  <header><div><span class="mono-label">La couverture en détail</span><h2 id="research-title" tabindex="-1">Les {platforms.length} plateformes suivies.</h2></div><span class="research-total"><InterfaceIcon name="check" />{generalDateLabel ? `Dernière recherche générale : ${generalDateLabel}` : "Dates de recherche indiquées par plateforme"}</span></header>
+  <p>{generalDateLabel ? `Les ${platforms.length} acteurs ont fait l’objet d’une recherche nominative le ${generalDateLabel}. ` : "Les recherches nominatives sont datées dans chaque fiche. "}Les résultats utiles sont vérifiés auprès de leurs auteurs. Chaque fiche conserve la portée de son contrôle ; la recherche publique dépend des informations accessibles et indexées.</p>
   <form id="research-filter" hidden><label for="research-query">Rechercher une plateforme</label><input id="research-query" type="search" placeholder="Nom de la plateforme…" autocomplete="off" /></form>
   <p id="research-count" role="status" aria-live="polite">{incidentResearch.length} plateformes</p>
   <div id="research-list">{incidentResearch.map(item => {
@@ -16,7 +19,7 @@ import { platforms } from "../data/platforms";
     return <article class="research-row" data-name={platform.displayName} id={`recherche-${item.platformSlug}`}>
       <div class="research-name"><a href={`/plateformes/${item.platformSlug}/`}>{platform.displayName}</a><span>{item.status === "public_sites_reviewed" ? "Sites publics consultés" : "Recherche nominative effectuée"} · <time datetime={item.checkedAt}>{new Date(`${item.checkedAt}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", timeZone: "Europe/Paris" })}</time></span></div>
       <div><span class:list={["feed-badge", { connected: feeds.length > 0 }]}><InterfaceIcon name={feeds.length ? "route" : "search"} />{feeds.length ? "Collecte quotidienne" : "Suivi manuel"}</span><p>{coverage?.note ?? "Historique de disponibilité non documenté dans les sources retenues."}</p></div>
-      <details><summary>Détail de la recherche</summary><p>{item.note}</p>{feeds.map(feed => <a href={feed.url} rel="noopener noreferrer">{feed.kind === "esker" ? "Page d’état" : feed.kind.toUpperCase()} · {feed.name} ↗</a>)}</details>
+      <details><summary>Détail de la recherche</summary><p>{item.note}</p>{feeds.map(feed => <a href={feed.url} rel="noopener noreferrer">{["esker", "html"].includes(feed.kind) ? "Page d’état" : feed.kind.toUpperCase()} · {feed.name} ↗</a>)}</details>
     </article>;
   })}</div>
   <Pagination id="research-pagination" label="Pages de la couverture des plateformes" total={incidentResearch.length} pageSize={10} controls="research-list" />

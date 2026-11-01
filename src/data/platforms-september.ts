@@ -21,11 +21,13 @@ export const septemberPlatforms: Platform[] = [
     summary: "Infrastructure de conformité fiscale pour logiciels de caisse, intégrateurs et commerçants ; service PA France à préciser.",
     targets: ["tpe", "pme", "eti", "ge"], ecosystem: ["logiciels de caisse", "POS", "intégrateurs", "commerce"],
     importantUnknowns: ["Disponibilité de chaque fonction PA France", "Prix et volumes PA", "Formats et API de la PA", "Hébergement et restitution"],
+
+    publicApi: {"value":{"available":true,"includedInFree":null},"status":"declared","sourceIds":["fiskaltrust-einvoicing-setup-20261101"],"checkedAt":"2026-11-01","note":"Guide préparatoire : La documentation publique décrit le parcours France du Middleware avec PosSystem API v2 : /sign produit le document puis /issue peut l’acheminer vers la PA du commerçant. Le guide propose une validation en sandbox et précise que les étapes exactes d’activation dans le Portal restent en cours de vérification. Cette documentation ne confirme pas un accès PA autonome ni la disponibilité de chaque parcours français en production ; conditions commerciales à obtenir."},
   }),
 ].map((platform) => {
   // These are new reviews, including the explicit gaps in the public sources.
   for (const value of Object.values(platform)) {
-    if (value && typeof value === "object" && "checkedAt" in value) value.checkedAt = checkedAt;
+    if (value && typeof value === "object" && "checkedAt" in value && value.checkedAt < checkedAt) value.checkedAt = checkedAt;
   }
   return platform;
 });

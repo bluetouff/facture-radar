@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
-import ExcelJS from "exceljs";
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import { normalizePublicHttpUrl } from "../src/lib/urls.ts";
 
 const approvedUrl = "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx";
@@ -13,44 +14,23 @@ async function loadBuffer(localPath, url) {
   return Buffer.from(await response.arrayBuffer());
 }
 
-function plainCell(cell) {
-  const value = cell.value;
-  if (value && typeof value === "object" && "richText" in value && Array.isArray(value.richText)) {
-    return value.richText.map((part) => part.text || "").join("").trim();
-  }
-  if (value && typeof value === "object" && "text" in value) {
-    const text = value.text;
-    if (typeof text === "string") return text.trim();
-    if (text && typeof text === "object" && "richText" in text && Array.isArray(text.richText)) {
-      return text.richText.map((part) => part.text || "").join("").trim();
-    }
-  }
-  if (value instanceof Date) return value.toISOString().slice(0, 10);
-  return value === null || value === undefined ? "" : String(value).trim();
-}
-
 async function parseWorkbook(buffer, includeDate) {
-  const workbook = new ExcelJS.Workbook();
-  await workbook.xlsx.load(buffer);
-  const sheet = workbook.worksheets[0];
-  if (!sheet) throw new Error("Classeur sans feuille");
-  const entries = [];
-  sheet.eachRow((row, rowNumber) => {
-    if (rowNumber <= 2) return;
-    const name = plainCell(row.getCell(1));
-    if (!name) return;
+  const result = spawnSync("python3", [fileURLToPath(new URL("./lib/read-official-xlsx.py", import.meta.url))], {
+    input: buffer, encoding: "utf8", maxBuffer: 2 * 1024 * 1024, timeout: 20_000,
+  });
+  if (result.error || result.status !== 0) throw new Error(result.stderr || result.error?.message || "Lecture XLSX impossible");
+  const rows = JSON.parse(result.stdout);
+  return rows.map(row => {
+    const [name, street, postalCode, city, website, contact, registeredAt] = row;
     const entry = {
       name,
-      street: plainCell(row.getCell(2)),
-      postalCode: plainCell(row.getCell(3)),
-      city: plainCell(row.getCell(4)),
-      website: normalizePublicHttpUrl(plainCell(row.getCell(5)), `site de ${name}`),
-      contact: plainCell(row.getCell(6)),
+      street, postalCode, city,
+      website: normalizePublicHttpUrl(website, `site de ${name}`),
+      contact,
     };
-    if (includeDate) entry.registeredAt = plainCell(row.getCell(7));
-    entries.push(entry);
+    if (includeDate) entry.registeredAt = registeredAt;
+    return entry;
   });
-  return entries;
 }
 
 const approvedBuffer = await loadBuffer(process.env.APPROVED_XLSX, approvedUrl);

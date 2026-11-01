@@ -87,14 +87,6 @@ export const secondWavePlatforms: Platform[] = [
     importantUnknowns: ["Prix et volumes", "Conditions commerciales des API", "SLA", "Restitution complète"],
   }),
   expand({
-    slug: "docprocess", displayName: "DocProcess", officialName: "DOCPROCESS", registeredAt: "2025-12-15",
-    summary: "Plateforme SaaS pour factures entrantes et sortantes, avec portails client et fournisseur.",
-    targets: ["pme", "eti", "ge"], ecosystem: ["ERP", "P2P", "O2C", "archivage"],
-    sendsInvoices: documented(true, ["docprocess-pa-2026"]), receivesInvoices: documented(true, ["docprocess-pa-2026"]), eReporting: documented(true, ["docprocess-pa-2026"]), formats: documented(["Factur-X", "UBL", "CII", "EDI", "IDoc", "CSV"], ["docprocess-pa-2026"]),
-    integrations: documented(["ERP", "EDI", "portail fournisseur", "portail client"], ["docprocess-pa-2026"]),
-    importantUnknowns: ["Prix et volumes", "API publique", "Hébergement", "Conditions de sortie"],
-  }),
-  expand({
     slug: "edics", displayName: "EDiCSpro", officialName: "EDICS France", registeredAt: "2026-01-08",
     summary: "Hub documentaire multicanal avec EDI, API, archivage et clause de réversibilité.",
     targets: ["pme", "eti", "ge"], ecosystem: ["EDI", "API", "archivage", "OCR"],
@@ -124,7 +116,8 @@ export const secondWavePlatforms: Platform[] = [
     targets: ["micro", "tpe", "pme"], ecosystem: ["Cerfrance", "agriculture", "paiement", "recouvrement"],
     sendsInvoices: documented(true, ["effinum-platform-2026"]), receivesInvoices: documented(true, ["effinum-platform-2026"]), eReporting: documented(true, ["effinum-platform-2026"]), formats: documented(["EDIFACT", "formats socles français"], ["effinum-platform-2026"]),
     integrations: documented(["processus de facturation", "production comptable", "paiement"], ["effinum-platform-2026"]),
-    importantUnknowns: ["Prix et volumes", "API publique", "Formats socles détaillés", "Hébergement"],
+    publicApi: declared({ available: true, includedInFree: null }, ["effinum-guide-20261101"], "Le guide Cerfrance Terre d’Allier décrit des API AFNOR mises à disposition des éditeurs pour raccorder leur logiciel à Effinum. Le raccordement passe par le service digitalisation ; documentation technique publique et conditions commerciales restent à obtenir.", "2026-11-01"),
+    importantUnknowns: ["Prix et volumes", "Conditions d’accès à l’API", "Formats socles détaillés", "Hébergement"],
   }),
   expand({
     slug: "euro-information", displayName: "HBS e-factures", officialName: "EURO INFORMATION", registeredAt: "2025-12-22",
@@ -278,7 +271,11 @@ export const secondWavePlatforms: Platform[] = [
     summary: "Plateforme de factures clients et fournisseurs, interconnectée à Peppol et à plusieurs réseaux.",
     targets: ["pme", "eti", "ge"], ecosystem: ["Peppol", "Chorus Pro", "ERP", "Factur-X"],
     sendsInvoices: documented(true, ["qweeby-pa-2026"]), receivesInvoices: documented(true, ["qweeby-pa-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["qweeby-pa-2026"]), integrations: documented(["Peppol", "Chorus Pro", "Generix", "Cegedim", "Tradeshift", "ERP"], ["qweeby-pa-2026"]),
-    importantUnknowns: ["E-reporting opérationnel", "Prix et volumes", "API publique", "Hébergement"],
+    pricing: documented({ kind: "quote", monthlyFrom: null, unit: "quote", freeFor: [], promotionalPriceExcluded: true, label: "Chiffrage personnalisé selon la volumétrie, les besoins et l’organisation" }, ["qweeby-offers-20261101"], "Trois plans sont décrits : Réception seule, PA Référence et PA Intégral. Le montant et les volumes contractuels restent sur devis.", "2026-11-01"),
+    publicApi: declared({ available: true, includedInFree: null }, ["qweeby-offers-20261101"], "Les plans PA Référence et PA Intégral annoncent le dépôt par API, FTP ou portail. L’accès commercial et la documentation publique de cette API restent à confirmer.", "2026-11-01"),
+    eReporting: {"value":null,"status":"non_documented","sourceIds":[],"checkedAt":"2026-11-01","note":"Les plans PA Référence et PA Intégral annoncent l’e-reporting ; activation opérationnelle et cas couverts restent à confirmer."},
+    hostingCountries: declared(["France"], ["qweeby-offers-20261101"], "Qweeby indique un stockage en Île-de-France, dans un datacenter TIII+ annoncé ISO 27001, avec redondance distante. L’hébergeur reste non nommé ; cette mention ne vérifie pas le certificat propre de la PA.", "2026-11-01"),
+    importantUnknowns: ["Activation et périmètre de l’e-reporting", "Prix et volumes contractuels", "Conditions d’accès à l’API", "Hébergeur nommé et certificat applicable", "Restitution après résiliation"],
   }),
   expand({
     slug: "seeburger", displayName: "SEEBURGER E-Invoicing Hub", officialName: "SEEBURGER", registeredAt: "2026-01-15",

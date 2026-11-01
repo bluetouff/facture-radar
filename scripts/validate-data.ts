@@ -40,7 +40,7 @@ const checkedSiteObservations = publicSiteObservationsSchema.parse(publicSiteObs
 const sourceIds = new Set(checkedSources.map((source) => source.id));
 if (sourceIds.size !== checkedSources.length) throw new Error("Un identifiant de source est dupliqué");
 const sourcesById = new Map(checkedSources.map((source) => [source.id, source]));
-const officialPlatformSourceIds = new Set(["dgfip-list-2026-09-10", "dgfip-list-20261014"]);
+const officialPlatformSourceIds = new Set(["dgfip-list-2026-09-10", "dgfip-list-20261014", "dgfip-list-20261101"]);
 const hasOfficialPlatformSource = (sourceIds: readonly string[]) => sourceIds.some((sourceId) =>
   officialPlatformSourceIds.has(sourceId) && sourcesById.get(sourceId)?.type === "official-list",
 );
@@ -329,8 +329,8 @@ for (const source of checkedSources) {
 if (officialDirectory.approved.length !== 155) {
   throw new Error(`La liste approuvée doit contenir 155 opérateurs, reçu ${officialDirectory.approved.length}`);
 }
-if (officialDirectory.pending.length !== 11) {
-  throw new Error(`La liste en attente doit contenir 11 opérateurs, reçu ${officialDirectory.pending.length}`);
+if (officialDirectory.pending.length !== 10) {
+  throw new Error(`La liste en attente doit contenir 10 opérateurs, reçu ${officialDirectory.pending.length}`);
 }
 
 console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${checkedPassportRoutes.length} routes Passeport, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);

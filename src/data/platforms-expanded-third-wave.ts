@@ -51,7 +51,7 @@ export const thirdWavePlatforms: Platform[] = [
     targets: ["pme", "eti", "ge"], ecosystem: ["API", "webhooks", "Peppol", "ERP"],
     sendsInvoices: documented(true, ["arratech-france-2026"]), receivesInvoices: documented(true, ["arratech-france-2026"]), eReporting: {"value":true,"status":"documented","sourceIds":["arratech-france-2026","arratech-reporting-20261022"],"checkedAt":"2026-10-22","note":"La documentation technique française décrit l’envoi d’événements via API pour les sous-flux 10.1 à 10.4. Le mode SELF_SUBMIT est celui à utiliser ; PLATFORM_DERIVED est annoncé mais indisponible et refusé. L’acceptation d’un événement signifie sa prise en charge, pas son dépôt effectif : le statut de déclaration et son résultat doivent être suivis séparément."},
     publicApi: documented({ available: true, includedInFree: null }, ["arratech-api-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["arratech-france-2026"]), integrations: documented(["API REST", "webhooks", "ERP", "Peppol"], ["arratech-france-2026", "arratech-api-2026"]),
-    hostingCountries: declared(["Allemagne"], ["arratech-api-2026"], "Le déploiement standard est annoncé à Francfort ; des déploiements nationaux sont aussi proposés."),
+    hostingCountries: declared(["Allemagne", "France"], ["arratech-tech-20261101"], "Le dossier technique situe le déploiement AWS par défaut à Francfort et déclare un module GCP S3NS pour le marché français. La région est fixée à l’entrée du client. Le lieu effectivement retenu et la qualification du service souscrit doivent figurer au contrat.", "2026-11-01"),
     importantUnknowns: ["Prix et volumes", "Lieu retenu pour un contrat France", "SLA contractuel", "Restitution complète"],
   }),
   expand({
@@ -64,7 +64,7 @@ export const thirdWavePlatforms: Platform[] = [
     importantUnknowns: ["Réception réglementaire opérationnelle", "E-reporting", "Formats France", "Conditions de sortie"],
   }),
   expand({
-    slug: "atgp", displayName: "BEE.FACT", officialName: "ATGP", registeredAt: "2025-12-11",
+    slug: "atgp", displayName: "BEE.FACT", officialName: "@GP", registeredAt: "2025-12-11",
     summary: "Plateforme française d'échange de factures reliée aux ERP et aux flux EDI.",
     targets: ["pme", "eti", "ge"], ecosystem: ["BEE.FACT", "EDI", "ERP", "annuaire"],
     sendsInvoices: documented(true, ["atgp-beefact-2026"]), receivesInvoices: documented(true, ["atgp-beefact-2026"]), eReporting: documented(true, ["atgp-beefact-2026"]), integrations: documented(["EDI", "ERP", "annuaire"], ["atgp-beefact-2026"]),
@@ -97,7 +97,8 @@ export const thirdWavePlatforms: Platform[] = [
     summary: "Plateforme française présentée pour émettre, recevoir et suivre les factures électroniques.",
     targets: ["tpe", "pme", "eti"], ecosystem: ["API", "ERP", "comptabilité", "CRM"],
     sendsInvoices: documented(true, ["cyclope-pa-2026"]), receivesInvoices: documented(true, ["cyclope-pa-2026"]), integrations: documented(["API", "ERP", "logiciels comptables", "CRM"], ["cyclope-pa-2026"]),
-    importantUnknowns: ["E-reporting", "Prix et volumes", "Formats et hébergement"],
+    exportDocumented: documented(true, ["cyclope-contract-20261101"], "Les CGU publiées pour le portail Gallo, avec INFORMATEX comme concédant, prévoient la restitution de l’intégralité des données lors d’un changement de PA. Leur applicabilité à une offre obtenue auprès d’un autre distributeur reste à confirmer.", "2026-11-01"),
+    importantUnknowns: ["E-reporting", "Prix et volumes", "Formats d’échange et hébergement", "Conditions propres au distributeur et à l’offre souscrite"],
   }),
   expand({
     slug: "darva", displayName: "Ofeli by DARVA", officialName: "DARVA", registeredAt: "2025-12-18",
@@ -108,9 +109,10 @@ export const thirdWavePlatforms: Platform[] = [
   }),
   expand({
     slug: "digipharmacie", displayName: "DigiPA", officialName: "DIGIPHARMACIE", registeredAt: "2025-12-23",
+    allowance: { value: { monthlyInvoices: 500, annualInvoices: null, unlimited: false, label: "CGV : 500 factures par mois incluses, puis 0,07 € HT par facture supplémentaire" }, status: "documented", sourceIds: ["digipharmacie-cgv-20261101"], checkedAt: "2026-11-01", note: "Le seuil est celui des CGV de la plateforme destinée aux pharmaciens d’officine. Les coûts projetés restent des minimums hors dépassements." },
     summary: "Module de réception de factures intégré à Digipharmacie pour les pharmacies d'officine.",
     targets: ["micro", "tpe", "pme"], ecosystem: ["pharmacie", "Digipharmacie", "archivage", "fournisseurs"],
-    pricing: documented({ kind: "included", monthlyFrom: null, unit: "subscription", freeFor: [], promotionalPriceExcluded: true, label: "DigiPA est inclus sans surcoût dans les abonnements DigiEssentiel et DigiPlus" }, ["digipharmacie-pa-2026", "digipharmacie-cgv-2026"]),
+    pricing: {"value": {"kind": "included", "monthlyFrom": 35, "unit": "subscription", "freeFor": [], "promotionalPriceExcluded": true, "label": "DigiEssentiel à 35 € HT/mois, DigiPlus à 55 € HT/mois ; DigiPA inclus sans surcoût"}, "status": "documented", "sourceIds": ["digipharmacie-pricing-20261101", "digipharmacie-cgv-20261101"], "checkedAt": "2026-11-01", "note": "Abonnement du client pharmacien d’officine, avec utilisateurs illimités annoncés. Les CGV incluent 500 factures/mois, puis 0,07 € HT par facture supplémentaire. L’essai de 30 jours reste distinct du tarif mensuel ; coût au-delà du volume à ajouter."},
     receivesInvoices: documented(true, ["digipharmacie-pa-2026", "digipharmacie-cgv-2026"]),
     hostingCountries: declared(["France"], ["digipharmacie-pa-2026"]), iso27001: declared(true, ["digipharmacie-pa-2026"]),
     importantUnknowns: ["Émission de factures clients", "E-reporting", "Formats de sortie", "Accès hors abonnement Digipharmacie"],
@@ -157,7 +159,9 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "edieyes", displayName: "EdiEyes Vision Care", officialName: "EdiEyes Vision Care", registeredAt: "2026-06-01",
     summary: "Solution de dématérialisation de factures pour les acteurs de la santé et de l'optique.",
     targets: ["pme", "eti", "ge"], ecosystem: ["santé", "optique", "EDI", "ERP"],
-    integrations: documented(["ERP", "EDI", "Eucleia Santé"], ["edieyes-invoices-2026"]), hostingCountries: declared(["France"], ["edieyes-invoices-2026"]), iso27001: declared(true, ["edieyes-invoices-2026"]),
+    integrations: documented(["ERP", "EDI", "Eucleia Santé"], ["edieyes-invoices-2026", "edieyes-afnor-api-20261101"], "L’article du 9 juillet annonce aussi l’implémentation de l’API AFNOR XP Z12-013 et un accès propre aux cabinets. Le texte conserve le futur ; l’ouverture en production et les conditions d’accès restent à confirmer.", "2026-11-01"), hostingCountries: declared(["France"], ["edieyes-invoices-2026"]), iso27001: declared(true, ["edieyes-invoices-2026"]),
+    publicApi: { value: null, status: "non_documented", sourceIds: [], checkedAt: "2026-11-01", note: "L’article du 9 juillet annonce l’implémentation de l’API AFNOR XP Z12-013. Endpoints publics, accès contractuel et disponibilité en production restent à confirmer." },
+    accountantAccess: { value: null, status: "non_documented", sourceIds: [], checkedAt: "2026-11-01", note: "Un accès propre aux cabinets est annoncé au futur dans l’article du 9 juillet. Son ouverture en production reste à vérifier." },
     importantUnknowns: ["Émission réglementaire", "Réception réglementaire", "E-reporting", "Prix et formats"],
   }),
   expand({
@@ -209,6 +213,12 @@ export const thirdWavePlatforms: Platform[] = [
     sendsInvoices: documented(true, ["gestav-pa-2026"]), receivesInvoices: documented(true, ["gestav-pa-2026"]), eReporting: documented(true, ["gestav-pa-2026", "gestav-pricing-20261020"], "Option à 24,90 € HT/an en Conformité, +2,90 € HT/mois en Starter, +4,90 € HT/mois en Pro, incluse en Business. Le prix de réception seul ne couvre pas ce supplément.", "2026-10-20"),
     commitmentMonths: documented(12, ["gestav-pricing-2026", "gestav-pricing-20261020", "gestav-contract-20261020"], "Engagement de 12 mois, même en paiement mensuel pour les offres Usage. Les CGS version 26-05 prévoient, sauf conditions particulières, une reconduction annuelle tacite et une opposition au moins un mois avant échéance.", "2026-10-20"),
     importantUnknowns: ["TVA des dépassements Conformité", "Contrat applicable et restitution : page 90 jours, CGS portabilité PA 12 mois", "Conditions de l’API partenaire", "Certificat et hébergeur applicables à la PA"],
+
+    integrations: {"value":["API AFNOR XP Z12-013"],"status":"documented","sourceIds":["gestav-partner-20261101"],"checkedAt":"2026-11-01","note":"Intégration proposée aux éditeurs, intégrateurs et cabinets dans l’offre partenaire ; sandbox et documentation fournies après qualification."},
+
+    formats: {"value":["Factur-X","UBL","CII"],"status":"documented","sourceIds":["gestav-partner-20261101"],"checkedAt":"2026-11-01","note":"La page partenaire cite explicitement les trois formats du socle pour l’émission et la réception via l’intégration. Le traitement de chaque format dans les autres offres reste à confirmer."},
+
+    publicApi: {"value":{"available":true,"includedInFree":false},"status":"documented","sourceIds":["gestav-partner-20261101"],"checkedAt":"2026-11-01","note":"L’offre partenaire décrit une API AFNOR XP Z12-013 pour émettre et recevoir depuis le logiciel métier. Qualification, kit de connexion et environnement de test sur demande précèdent la mise en service. Le tarif est un forfait partenaire plus des volumes séparés en émission et réception, sur devis ; aucun accès gratuit de production n’est établi."},
   }),
   expand({
     slug: "iaf", displayName: "IAF", officialName: "IAF", registeredAt: "2026-06-15",
@@ -376,8 +386,19 @@ export const thirdWavePlatforms: Platform[] = [
     slug: "weproc", displayName: "WeInvoice by WeProc", officialName: "WEPROC", registeredAt: "2025-12-23",
     summary: "Plateforme française avec offre gratuite limitée, API publique et documentation développeur.",
     targets: ["micro", "tpe", "pme", "eti"], ecosystem: ["WeProc", "API", "achats", "Peppol"],
-    pricing: free("Offre gratuite limitée à quinze documents par mois", ["weinvoice-pa-2026"]), allowance: documented({ monthlyInvoices: 15, annualInvoices: null, unlimited: false, label: "Quinze documents par mois dans l'offre gratuite" }, ["weinvoice-pa-2026"]), sendsInvoices: documented(true, ["weinvoice-pa-2026"]), receivesInvoices: documented(true, ["weinvoice-pa-2026"]), eReporting: documented(true, ["weinvoice-pa-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["weinvoice-pa-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["weinvoice-pa-2026"]), commitmentMonths: documented(0, ["weinvoice-pa-2026"]), hostingCountries: declared(["France"], ["weinvoice-pa-2026"]),
-    importantUnknowns: ["Prix au-delà de quinze documents", "Fonctions incluses dans l'API gratuite", "Certification ISO 27001 non acquise", "Restitution complète"],
+    pricing: {"value": {"kind": "free", "monthlyFrom": 0, "unit": "company", "freeFor": ["micro", "tpe", "pme"], "promotionalPriceExcluded": true, "label": "Free : 15 documents/mois ; Pro 29 € HT/mois pour 250 ; Business 39 € HT/mois pour 500"}, "status": "documented", "sourceIds": ["weinvoice-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Volumes de documents émis et reçus confondus, une entité et un code de routage. Les offres supérieures à 500 documents sont sur devis."},
+    allowance: {"value": {"monthlyInvoices": 15, "annualInvoices": null, "unlimited": false, "label": "Free : 15 documents émis et reçus confondus par mois, 1 entité, 1 code de routage et 1 utilisateur"}, "status": "documented", "sourceIds": ["weinvoice-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Les paliers payants sont exprimés en documents, sans les assimiler à un volume d’émission seul."},
+    publicApi: {"value": {"available": true, "includedInFree": false}, "status": "documented", "sourceIds": ["weinvoice-pricing-20261101", "weinvoice-api-20261101"], "checkedAt": "2026-11-01", "note": "API REST et webhooks affichés dès Pro ; PA Connect pour éditeurs : 200 € HT/mois plus 0,15/0,10/0,05 € par document selon volume et 2 € HT de vérification KYC/KYB par compte. La sandbox gratuite reste un environnement de test."},
+    exportDocumented: {"value": true, "status": "documented", "sourceIds": ["weinvoice-pricing-20261101"], "checkedAt": "2026-11-01", "note": "La FAQ décrit l’export intégral des factures émises et reçues en CSV et XML, y compris après résiliation. Modalités opérationnelles à confirmer avant souscription."},
+    integrations: {"value": ["Weproc", "Stripe", "WooCommerce", "HubSpot", "GoCardless", "Adyen"], "status": "documented", "sourceIds": ["weinvoice-integrations-20261101", "weinvoice-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Connecteurs annoncés disponibles dès Pro ; ouverture HubSpot à demander au support. Shopify reste en préparation. Le statut Encaissée se déclare encore via Cash in, même pour les règlements par connecteur."},
+    iso27001: {"value": true, "status": "declared", "sourceIds": ["weinvoice-security-20261101"], "checkedAt": "2026-11-01", "note": "Weproc déclare ISO/IEC 27001:2022 par Certi-Trust. La page ne fournit pas de certificat, de numéro ni de dates de validité ; portée exacte et certificat courant à obtenir."},
+    hostingCountries: {"value": ["France"], "status": "declared", "sourceIds": ["weinvoice-security-20261101"], "checkedAt": "2026-11-01", "note": "L’éditeur déclare Outscale en France pour la production, un site secondaire français et un archivage français. La qualification alléguée de l’infrastructure n’établit pas celle de l’application."},
+    importantUnknowns: ["Certificat ISO courant et portée exacte", "Conditions des contrats d’infrastructure", "Modalités effectives d’export et accès après résiliation", "Règles de consommation des documents et dépassement de palier"],
+    sendsInvoices: documented(true, ["weinvoice-pa-2026"]),
+    receivesInvoices: documented(true, ["weinvoice-pa-2026"]),
+    eReporting: documented(true, ["weinvoice-pa-2026"]),
+    formats: documented(["Factur-X", "UBL", "CII"], ["weinvoice-pa-2026"]),
+    commitmentMonths: documented(0, ["weinvoice-pa-2026"]),
   }),
   expand({
     slug: "wisetech", displayName: "WiseTech Global", officialName: "WiseTech GLOBAL", registeredAt: "2026-01-15",

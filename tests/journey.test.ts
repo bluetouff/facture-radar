@@ -124,12 +124,12 @@ test("une offre sur devis ne fabrique ni coût nul ni projection", () => {
 });
 
 test("une PA incluse dans un abonnement inconnu ne fabrique pas un coût total nul", () => {
-  const journey = buildInvoiceJourney(platforms, { tool: "DigiPA", audience: "micro", activation: "yes" });
+  const journey = buildInvoiceJourney(platforms, { tool: "Kolecto PDP", audience: "micro", activation: "yes" });
   assert.ok(journey);
   assert.equal(journey.cost.baseMonthlyFrom, null);
   assert.equal(journey.cost.paMonthlySurcharge, 0);
   assert.deepEqual(journey.cost.horizons, []);
-  assert.match(journey.cost.caveat, /prix de l'abonnement/i);
+  assert.match(journey.cost.caveat, /prix total du forfait/i);
 });
 
 test("Sellsy distingue le prix d'appel par utilisateur du surcoût PA", () => {

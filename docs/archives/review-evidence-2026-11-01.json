@@ -1,0 +1,1323 @@
+{
+  "checkedAt": "2026-11-01",
+  "warning": "Les empreintes HTTP portent sur les octets téléchargés ; les empreintes d’exports d’outils décrivent leur réponse conservée, pas nécessairement les octets originaux du serveur.",
+  "responses": [
+    {
+      "id": "spendesk-v2rhxyvn0mqr",
+      "url": "https://status.spendesk.com/incidents/v2rhxyvn0mqr",
+      "finalUrl": "https://status.spendesk.com/incidents/v2rhxyvn0mqr",
+      "sha256": "31fbfc8482550cf37f5265cbdb0c40231ecb6ca7c00c6c5390c50d250dc610d4",
+      "bytes": 73135,
+      "checkedAt": "2026-11-01T17:49:43.897472+00:00"
+    },
+    {
+      "id": "sage-nm9m9qpm95yy",
+      "url": "https://status.sage.com/incidents/nm9m9qpm95yy",
+      "finalUrl": "https://status.sage.com/incidents/nm9m9qpm95yy",
+      "sha256": "be4de8cdf51824f5bc9d61bd4421b8065572cfe0735e61a8477afe657d023b61",
+      "bytes": 85215,
+      "checkedAt": "2026-11-01T17:49:43.993006+00:00"
+    },
+    {
+      "id": "sage-522mdd1rb7ls",
+      "url": "https://status.sage.com/incidents/522mdd1rb7ls",
+      "finalUrl": "https://status.sage.com/incidents/522mdd1rb7ls",
+      "sha256": "da5aa166d5971822ca6f785b80d8314090d8d94a4b81a124c5f89adeae57594b",
+      "bytes": 83277,
+      "checkedAt": "2026-11-01T17:49:44.040980+00:00"
+    },
+    {
+      "id": "pitney-bowes-h47s62bkcmvt",
+      "url": "https://status.pitneybowes.com/incidents/h47s62bkcmvt",
+      "finalUrl": "https://status.pitneybowes.com/incidents/h47s62bkcmvt",
+      "sha256": "0b1efaa74ec3a29683786c886275dfc043b18b258501aafa15f14fb4478925e2",
+      "bytes": 138793,
+      "checkedAt": "2026-11-01T17:49:44.109386+00:00"
+    },
+    {
+      "id": "veryswing-199",
+      "url": "https://status.veryswing.com/incident/199/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "sage-gbw1729hs65w",
+      "url": "https://status.sage.com/incidents/gbw1729hs65w",
+      "finalUrl": "https://status.sage.com/incidents/gbw1729hs65w",
+      "sha256": "ad19203ecd3bac0f3a0d29c41cda1c27ed704c5f81e34daa44726daf7f479e9a",
+      "bytes": 84502,
+      "checkedAt": "2026-11-01T17:49:44.545590+00:00"
+    },
+    {
+      "id": "sage-09dtx6d9vzg0",
+      "url": "https://status.sage.com/incidents/09dtx6d9vzg0",
+      "finalUrl": "https://status.sage.com/incidents/09dtx6d9vzg0",
+      "sha256": "be06cd369d5dac117faa94bea9bafc9217e221d983f0c509e1db9a9b4143712c",
+      "bytes": 83319,
+      "checkedAt": "2026-11-01T17:49:44.650930+00:00"
+    },
+    {
+      "id": "lucca-0sswhv6zhr2d",
+      "url": "https://status.lucca.fr/incidents/0sswhv6zhr2d",
+      "finalUrl": "https://status.lucca.fr/incidents/0sswhv6zhr2d",
+      "sha256": "f98eaef4e1b1eea072c5ca34bf34daba8daec864aaa5e08d7cc26abf24bd046f",
+      "bytes": 74830,
+      "checkedAt": "2026-11-01T17:49:44.552409+00:00"
+    },
+    {
+      "id": "sage-1k4lym4rqj3n",
+      "url": "https://status.sage.com/incidents/1k4lym4rqj3n",
+      "finalUrl": "https://status.sage.com/incidents/1k4lym4rqj3n",
+      "sha256": "c2b8a71f8c37d97d8c84177f474ec9c127b5a0c37f6a122586a4394ccb7db7b0",
+      "bytes": 86028,
+      "checkedAt": "2026-11-01T17:49:44.650584+00:00"
+    },
+    {
+      "id": "pitney-bowes-fqqv5ht8n4gz",
+      "url": "https://status.pitneybowes.com/incidents/fqqv5ht8n4gz",
+      "finalUrl": "https://status.pitneybowes.com/incidents/fqqv5ht8n4gz",
+      "sha256": "aae475e9318aeb99e188bc50e28e7fe36450ce1c49784f33d91b82346211ecbb",
+      "bytes": 138953,
+      "checkedAt": "2026-11-01T17:49:45.126677+00:00"
+    },
+    {
+      "id": "lucca-hmx60fgz6jz7",
+      "url": "https://status.lucca.fr/incidents/hmx60fgz6jz7",
+      "finalUrl": "https://status.lucca.fr/incidents/hmx60fgz6jz7",
+      "sha256": "81390d32cb004ee3e69f6819296eb41bcd09d545f88f25b2e2c5536827958455",
+      "bytes": 75389,
+      "checkedAt": "2026-11-01T17:49:44.966021+00:00"
+    },
+    {
+      "id": "pitney-bowes-cscy3lzxydsb",
+      "url": "https://status.pitneybowes.com/incidents/cscy3lzxydsb",
+      "finalUrl": "https://status.pitneybowes.com/incidents/cscy3lzxydsb",
+      "sha256": "865efe4cbbf686399ab4c1874e7983419ec7027c0af118cbff0ade42ce598faa",
+      "bytes": 138856,
+      "checkedAt": "2026-11-01T17:49:45.266235+00:00"
+    },
+    {
+      "id": "spendesk-w7sbfw2qjzpt",
+      "url": "https://status.spendesk.com/incidents/w7sbfw2qjzpt",
+      "finalUrl": "https://status.spendesk.com/incidents/w7sbfw2qjzpt",
+      "sha256": "378dd3217468fc46c448ca7d9579716fb2b47e431b207ba30d7b5dcbd31c1f68",
+      "bytes": 73972,
+      "checkedAt": "2026-11-01T17:49:45.058171+00:00"
+    },
+    {
+      "id": "sage-k7l2cgg3l5lb",
+      "url": "https://status.sage.com/incidents/k7l2cgg3l5lb",
+      "finalUrl": "https://status.sage.com/incidents/k7l2cgg3l5lb",
+      "sha256": "813279304ebde33b61818850dfab4da47ea023e56299f2b937cbc7b3e7edd084",
+      "bytes": 83609,
+      "checkedAt": "2026-11-01T17:49:45.514867+00:00"
+    },
+    {
+      "id": "sage-8bhrj956fcwq",
+      "url": "https://status.sage.com/incidents/8bhrj956fcwq",
+      "finalUrl": "https://status.sage.com/incidents/8bhrj956fcwq",
+      "sha256": "fd86f44fe4cb48e6d6b6af4421d66f2c35823ccb4ec16f2976ea18a722eb5372",
+      "bytes": 84505,
+      "checkedAt": "2026-11-01T17:49:45.663533+00:00"
+    },
+    {
+      "id": "sage-j4bwgq4z846m",
+      "url": "https://status.sage.com/incidents/j4bwgq4z846m",
+      "finalUrl": "https://status.sage.com/incidents/j4bwgq4z846m",
+      "sha256": "2489d258f69ae3d63cdf4f13ee9103776a52b6e17922962d9114cf57a1709f09",
+      "bytes": 84534,
+      "checkedAt": "2026-11-01T17:49:45.698348+00:00"
+    },
+    {
+      "id": "sage-d8tnj415j80n",
+      "url": "https://status.sage.com/incidents/d8tnj415j80n",
+      "finalUrl": "https://status.sage.com/incidents/d8tnj415j80n",
+      "sha256": "c0ad5099968fd5bb9f88fda166e578a513631f7f2abeb91e3cdbe3daece48ed6",
+      "bytes": 85336,
+      "checkedAt": "2026-11-01T17:49:45.846821+00:00"
+    },
+    {
+      "id": "sage-8nmmyvcbscqx",
+      "url": "https://status.sage.com/incidents/8nmmyvcbscqx",
+      "finalUrl": "https://status.sage.com/incidents/8nmmyvcbscqx",
+      "sha256": "456d7223859b122ad46042c1235f486ecebb28fa8321bb9c4c01ee04bd7dadef",
+      "bytes": 85298,
+      "checkedAt": "2026-11-01T17:49:46.122059+00:00"
+    },
+    {
+      "id": "sage-xnt8rd1ryx6d",
+      "url": "https://status.sage.com/incidents/xnt8rd1ryx6d",
+      "finalUrl": "https://status.sage.com/incidents/xnt8rd1ryx6d",
+      "sha256": "de93525685293640820e819225a902859674f393532e21a7f19a77628cf35e53",
+      "bytes": 83328,
+      "checkedAt": "2026-11-01T17:49:46.236852+00:00"
+    },
+    {
+      "id": "sage-00fdqy9rqdqh",
+      "url": "https://status.sage.com/incidents/00fdqy9rqdqh",
+      "finalUrl": "https://status.sage.com/incidents/00fdqy9rqdqh",
+      "sha256": "ce5ab7b70f10d8ae60234af2d05586c4c521d07080d7c6a7b06ce7a95d4156eb",
+      "bytes": 83638,
+      "checkedAt": "2026-11-01T17:49:46.382302+00:00"
+    },
+    {
+      "id": "sage-ks7b13j4gfg2",
+      "url": "https://status.sage.com/incidents/ks7b13j4gfg2",
+      "finalUrl": "https://status.sage.com/incidents/ks7b13j4gfg2",
+      "sha256": "5fd5f1c366af0f4d51fc3cd4dc4b208bde6ed6b398b8bc0ad8754961f16d2a21",
+      "bytes": 85875,
+      "checkedAt": "2026-11-01T17:49:46.500672+00:00"
+    },
+    {
+      "id": "sage-c34h4qgm6q5r",
+      "url": "https://status.sage.com/incidents/c34h4qgm6q5r",
+      "finalUrl": "https://status.sage.com/incidents/c34h4qgm6q5r",
+      "sha256": "ef47ea662eb9e06c3d9cf7c34769af1d20f51f898cbf25cf2670e056c841dd2e",
+      "bytes": 85125,
+      "checkedAt": "2026-11-01T17:49:46.715640+00:00"
+    },
+    {
+      "id": "sage-xmc4jb8tbf76",
+      "url": "https://status.sage.com/incidents/xmc4jb8tbf76",
+      "finalUrl": "https://status.sage.com/incidents/xmc4jb8tbf76",
+      "sha256": "1580f5ec3dc2ae2a3b3e785e3a13e106540646b0c9fe97c8e38b3aaa00154abb",
+      "bytes": 83686,
+      "checkedAt": "2026-11-01T17:49:46.875681+00:00"
+    },
+    {
+      "id": "lucca-lmlm1w911gty",
+      "url": "https://status.lucca.fr/incidents/lmlm1w911gty",
+      "finalUrl": "https://status.lucca.fr/incidents/lmlm1w911gty",
+      "sha256": "9b28da0ad479bfdc4f1559f5bb7a04b9474f8b4227c11dd6f4dac19939c44e91",
+      "bytes": 76206,
+      "checkedAt": "2026-11-01T17:49:46.837304+00:00"
+    },
+    {
+      "id": "weproc-1107374",
+      "url": "https://status.weinvoice.fr/incident/1107374",
+      "finalUrl": "https://status.weinvoice.fr/incident/1107374",
+      "sha256": "8ed69825ec1b23692e49fb8d1bbd10a860af05ae48c72e81f41331a070d4e56e",
+      "bytes": 100859,
+      "checkedAt": "2026-11-01T17:49:46.730289+00:00"
+    },
+    {
+      "id": "eezi-cmvtfjan50b0f0wqg1p2oook7",
+      "url": "https://eezi.instatus.com/incident/cmvtfjan50b0f0wqg1p2oook7",
+      "finalUrl": "https://eezi.instatus.com/cmvtfjan50b0f0wqg1p2oook7",
+      "sha256": "93b7c03a3b68530ac9bc04d8379922ca74b8ff9aa94bb54117d63cc31697d6aa",
+      "bytes": 136235,
+      "checkedAt": "2026-11-01T17:49:47.081394+00:00"
+    },
+    {
+      "id": "sage-s2xkw68xv67v",
+      "url": "https://status.sage.com/incidents/s2xkw68xv67v",
+      "finalUrl": "https://status.sage.com/incidents/s2xkw68xv67v",
+      "sha256": "ca7c91bfdcd1849fc1693dd05ac49bc7b456644f26cfadba91e5896a9392c957",
+      "bytes": 84055,
+      "checkedAt": "2026-11-01T17:49:47.320484+00:00"
+    },
+    {
+      "id": "sage-w31xwqb6myq2",
+      "url": "https://status.sage.com/incidents/w31xwqb6myq2",
+      "finalUrl": "https://status.sage.com/incidents/w31xwqb6myq2",
+      "sha256": "8bea6e66ad3c26e51b3e08e7386d004c4ac3e025d80d9a7822b7b4b9034696e1",
+      "bytes": 84442,
+      "checkedAt": "2026-11-01T17:49:47.396622+00:00"
+    },
+    {
+      "id": "superpdp-notice-0b076b47ead2ad54bb7321b4",
+      "url": "https://status.superpdp.tech/",
+      "finalUrl": "https://status.superpdp.tech/",
+      "sha256": "e7615b3e1b9a9ddb351436728a2cc61e23fbd98beec94fe854846a98e18189d2",
+      "bytes": 66823,
+      "checkedAt": "2026-11-01T17:49:47.091046+00:00"
+    },
+    {
+      "id": "pitney-bowes-t9cdwlrzgcz0",
+      "url": "https://status.pitneybowes.com/incidents/t9cdwlrzgcz0",
+      "finalUrl": "https://status.pitneybowes.com/incidents/t9cdwlrzgcz0",
+      "sha256": "6367b52afef46e37561369a3852cb16a306aec5b9ea3ab12f9679369a5e916cd",
+      "bytes": 137996,
+      "checkedAt": "2026-11-01T17:49:47.728615+00:00"
+    },
+    {
+      "id": "ecosio-intercom-01M6B6E5MVDHPTVW16RGHSVBSV",
+      "url": "https://www.ecosio-status.com//incidents/01M6B6E5MVDHPTVW16RGHSVBSV",
+      "finalUrl": "https://www.ecosio-status.com/incidents/01M6B6E5MVDHPTVW16RGHSVBSV",
+      "sha256": "d38ba52f75073b849f5f36d3f15b10d5522afddd496a136464237442fa765cf8",
+      "bytes": 464798,
+      "checkedAt": "2026-11-01T17:49:47.747020+00:00"
+    },
+    {
+      "id": "esker-status-2026-09",
+      "url": "https://www.trustesker.com/?env=G",
+      "finalUrl": "https://www.trustesker.com/?env=G",
+      "sha256": "988bba51e1236da71ed87a25732757df626a8463c795483d2fd7d26a6a2f32ef",
+      "bytes": 60600,
+      "checkedAt": "2026-11-01T17:49:47.483676+00:00"
+    },
+    {
+      "id": "welyb-status-20260916",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "finalUrl": "https://support.welyb.fr/statut-plateforme",
+      "sha256": "24c649199e0b5416427e4dfe4bf43109394041b1f11c49f9023c180ae32d1b56",
+      "bytes": 167382,
+      "checkedAt": "2026-11-01T17:49:47.517956+00:00"
+    },
+    {
+      "id": "frenchbreaches-welyb-20260915",
+      "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "finalUrl": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "sha256": "bb79eb28cb344cd417d34d483fe0857eeb4f44ac6bc676c0147a78b0c51b332a",
+      "bytes": 82466,
+      "checkedAt": "2026-11-01T17:49:47.640006+00:00"
+    },
+    {
+      "id": "frenchbreaches-zenfirst-20260917",
+      "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "finalUrl": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "sha256": "e54826de5e7448429f9a3acc0aaf5bca3826031dd1ebac9de762e5745f47d4ec",
+      "bytes": 80540,
+      "checkedAt": "2026-11-01T17:49:47.692088+00:00"
+    },
+    {
+      "id": "frenchbreaches-altagem-20260921",
+      "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "finalUrl": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "sha256": "5cd5b6c731c311a4f8056790127a90c88b053f04c4a8d7182113c7a8e12dc8c2",
+      "bytes": 89514,
+      "checkedAt": "2026-11-01T17:49:47.779195+00:00"
+    },
+    {
+      "id": "cyberattaque-altagem-20260921",
+      "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "finalUrl": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "sha256": "2a6342e72aeec052b6c89143ccac2180bf9f9863cb99bb89ae0267f30d499758",
+      "bytes": 76323,
+      "checkedAt": "2026-11-01T17:49:48.094169+00:00"
+    },
+    {
+      "id": "frenchbreaches-faktus-20260919",
+      "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "finalUrl": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "sha256": "4a1f9c3bb98c7fa4da548210966e797bd9e37cd86a85438fa955809d903851c8",
+      "bytes": 91818,
+      "checkedAt": "2026-11-01T17:49:47.886705+00:00"
+    },
+    {
+      "id": "fakturownia-security-20260929",
+      "url": "https://fakturownia.pl/incydent",
+      "finalUrl": "https://fakturownia.pl/incydent",
+      "sha256": "a23d57a1b0d4df587d8ef17f296d8e093b971bc394a09ad70bafac07f67bee9d",
+      "bytes": 166608,
+      "checkedAt": "2026-11-01T17:49:47.958927+00:00"
+    },
+    {
+      "id": "factuali-notification-relayed-20261001",
+      "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "finalUrl": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "sha256": "b929d7f120a94cb7d1fe06eba5f6012ac98a33781dd0b58b44ee31007a5ccd11",
+      "bytes": 127712,
+      "checkedAt": "2026-11-01T17:49:47.886585+00:00"
+    },
+    {
+      "id": "fuitesinfos-vosfactures-20261001",
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "finalUrl": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "sha256": "f41efe6549f92f945b81614fc7cc1075dbb6756f8685f073b4394f35681d5578",
+      "bytes": 50339,
+      "checkedAt": "2026-11-01T17:49:48.069263+00:00"
+    },
+    {
+      "id": "aife-vosfactures-20261002",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "finalUrl": "https://portail.chorus-pro.gouv.fr/aife_csm",
+      "sha256": "64a5d67400a6f7c61ce113e01da82e74f7754e237143e6d7699196d1139af1eb",
+      "bytes": 309474,
+      "checkedAt": "2026-11-01T17:49:48.257219+00:00"
+    },
+    {
+      "id": "esker-environment-e-20261001",
+      "url": "https://www.trustesker.com/?env=E",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_RECORD_OVERFLOW] tlsv1 alert record overflow (_ssl.c:1144)>"
+    },
+    {
+      "id": "esker-pa-interconnexion-20261002",
+      "url": "https://www.trustesker.com/?env=L",
+      "finalUrl": "https://www.trustesker.com/?env=L",
+      "sha256": "9166bd1ebb7d89b72afbfe2d5e4980bf4bf55e5a090a2c25a5c443a501119936",
+      "bytes": 60601,
+      "checkedAt": "2026-11-01T17:49:48.065405+00:00"
+    },
+    {
+      "id": "fiducial-security-20261001",
+      "url": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "finalUrl": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "sha256": "00343b874d16dde59b1cd0700e174bebf510daa7bb3116ade2ff5ffd8d63d104",
+      "bytes": 49551,
+      "checkedAt": "2026-11-01T17:49:48.200796+00:00"
+    },
+    {
+      "id": "aife-depot-pdf-20261006",
+      "url": "https://portail.chorus-pro.gouv.fr/aife_csm?id=aife_publication&sys_id=ad302dc52b370b50267bff6fce91bf56",
+      "finalUrl": "https://portail.chorus-pro.gouv.fr/aife_csm?id=aife_publication&sys_id=ad302dc52b370b50267bff6fce91bf56",
+      "sha256": "3926d6503072ac82efab7c945bf7f9430e3e17a1699e2f4749bcef4c4437cac0",
+      "bytes": 309562,
+      "checkedAt": "2026-11-01T17:49:48.407622+00:00"
+    },
+    {
+      "id": "esker-display-d-20261009",
+      "url": "https://www.trustesker.com/?env=D",
+      "finalUrl": "https://www.trustesker.com/?env=D",
+      "sha256": "252d47cb6c8f9059c1f552d769a6cb8ad118cd2fc60fe90dce195928dc63bd55",
+      "bytes": 60601,
+      "checkedAt": "2026-11-01T17:49:48.180894+00:00"
+    },
+    {
+      "id": "esker-display-k-20261009",
+      "url": "https://www.trustesker.com/?env=K",
+      "finalUrl": "https://www.trustesker.com/?env=K",
+      "sha256": "3df279644c0b271da5ac1559bebf7728a16253e437c3b2c959533fe78f943262",
+      "bytes": 60601,
+      "checkedAt": "2026-11-01T17:49:48.269713+00:00"
+    },
+    {
+      "id": "sage-efacture-archivage-20261020",
+      "url": "https://efacture.sage.fr/Public/Commun/Index.aspx?ReturnUrl=%2F",
+      "finalUrl": "https://efacture.sage.fr/Public/Commun/Index.aspx?ReturnUrl=%2F",
+      "sha256": "f3d9edfa081640838caee539ffdc783e467ad710413710fe3cf9b11ba179fe80",
+      "bytes": 33765,
+      "checkedAt": "2026-11-01T17:49:48.318569+00:00"
+    },
+    {
+      "id": "ar24-maintenance-20261021",
+      "url": "https://status.ar24.fr/incidents/r8v3d314fzbm",
+      "finalUrl": "https://status.ar24.fr/incidents/r8v3d314fzbm",
+      "sha256": "f25c2c4b211d51ef0465bb1e79ee897a033ca7cd3ac0e11ccfd994afc9ec0044",
+      "bytes": 56523,
+      "checkedAt": "2026-11-01T17:49:48.820361+00:00"
+    },
+    {
+      "id": "veryswing-page",
+      "url": "https://status.veryswing.com/",
+      "finalUrl": "https://status.veryswing.com/",
+      "sha256": "57ab22a7e87bf600a82c77adcc3302cffb8f02246030051ac30a0f762e342f6d",
+      "bytes": 24751,
+      "checkedAt": "2026-11-01T17:49:48.411297+00:00"
+    },
+    {
+      "id": "atgp-page",
+      "url": "https://www.atgp.net/info-incidents/",
+      "finalUrl": "https://www.atgp.net/info-incidents/",
+      "sha256": "f1cb7c3c04bfcfa450f8e75b6b88730acaa186290ac4da8bcd9d59fac48cc4d7",
+      "bytes": 68977,
+      "checkedAt": "2026-11-01T17:49:48.470229+00:00"
+    },
+    {
+      "key": "cegid",
+      "url": "https://www.cegid.com/fr/facture-electronique-obligatoire/pdp/",
+      "finalUrl": "https://www.cegid.com/fr/facture-electronique-obligatoire/pdp/",
+      "sha256": "1ba4663a52770a42ca85448474838e235b064544888a7dfac3636c907488bdf0",
+      "bytes": 185372,
+      "checkedAt": "2026-11-01T17:50:24.061462+00:00",
+      "status": 200
+    },
+    {
+      "key": "tiime",
+      "url": "https://www.tiime.fr/plateforme-dematerialisation-partenaire-pdp",
+      "finalUrl": "https://www.tiime.fr/plateforme-dematerialisation-partenaire-pdp",
+      "sha256": "8a0ea809ace4aa45f949c0b9d7a0f2bdf2a361a748bb99b63f28b8a3ea62c2ce",
+      "bytes": 190920,
+      "checkedAt": "2026-11-01T17:50:24.063360+00:00",
+      "status": 200
+    },
+    {
+      "key": "septeo",
+      "url": "https://www.ingeneo.septeo.com/plateforme-agreee-facturation-electronique",
+      "finalUrl": "https://www.ingeneo.septeo.com/plateforme-agreee-facturation-electronique",
+      "sha256": "1831753a8d6eeec67f1d0a1dd090fa657ea7245230e08ae4ff6eaa12b4997f37",
+      "bytes": 179352,
+      "checkedAt": "2026-11-01T17:50:24.063462+00:00",
+      "status": 200
+    },
+    {
+      "key": "indy",
+      "url": "https://www.indy.fr/facturation-electronique/",
+      "finalUrl": "https://www.indy.fr/facturation-electronique/",
+      "sha256": "76fb77ef905f8c9adc6f506bfe7d7cee46757b99b1ea922150cbcc2c7a1e8010",
+      "bytes": 501833,
+      "checkedAt": "2026-11-01T17:50:24.065888+00:00",
+      "status": 200
+    },
+    {
+      "key": "generix",
+      "url": "https://www.generixgroup.com/fr/edi-services-facturation-electronique/pdp-dematerialisation-factures",
+      "finalUrl": "https://www.generixgroup.com/fr/edi-services-facturation-electronique/pdp-dematerialisation-factures",
+      "sha256": "cb8ecdad78316be9955c8ecd19fe36ece0fa6b710ad41745b53815e3d126c4b9",
+      "bytes": 102654,
+      "checkedAt": "2026-11-01T17:50:24.066379+00:00",
+      "status": 200
+    },
+    {
+      "key": "axonaut",
+      "url": "https://axonaut.com/content/prix",
+      "finalUrl": "https://axonaut.com/content/prix",
+      "sha256": "393a2f365fdeb8f32ad7750394674f580e34ed9870ccb4d85c5afb10ee3ff49d",
+      "bytes": 321604,
+      "checkedAt": "2026-11-01T17:50:24.066432+00:00",
+      "status": 200
+    },
+    {
+      "key": "odoo",
+      "url": "https://www.odoo.com/fr_FR/blog/actualites-dodoo-5/odoo-plateforme-agreee-pa-immatriculee-en-france-pour-la-facturation-electronique-2193",
+      "finalUrl": "https://www.odoo.com/fr_FR/blog/actualites-d-odoo-5/odoo-plateforme-agreee-pa-immatriculee-en-france-pour-la-facturation-electronique-2193",
+      "sha256": "a86457b744a5c75cbae266085403e17b600462be5892ea2bc2fbad03bda35144",
+      "bytes": 89777,
+      "checkedAt": "2026-11-01T17:50:24.229127+00:00",
+      "status": 200
+    },
+    {
+      "key": "kolecto",
+      "url": "https://www.kolecto.fr/produit/facturation-electronique",
+      "finalUrl": "https://www.kolecto.fr/fonctionnalites/facturation-electronique",
+      "sha256": "9e2ed365bbc0d148920660a63684e0c6e3a64ae418e350065e942579170f324b",
+      "bytes": 262998,
+      "checkedAt": "2026-11-01T17:50:24.245106+00:00",
+      "status": 200
+    },
+    {
+      "key": "seres",
+      "url": "https://seres.fr/fr/facture-electronique/",
+      "finalUrl": "https://seres.fr/fr/facture-electronique/",
+      "sha256": "d39363d79d54dd5fa46c388a3db1d24dd2539bc3ecb9d897fa9461f4b0b24f9e",
+      "bytes": 1018188,
+      "checkedAt": "2026-11-01T17:50:24.264629+00:00",
+      "status": 200
+    },
+    {
+      "key": "dougs",
+      "url": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+      "finalUrl": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+      "sha256": "9c14fa2193987bf37de58d1ce807a5e2ca4b94f25ceb52b80bd45461c41166ac",
+      "bytes": 653675,
+      "checkedAt": "2026-11-01T17:50:24.264873+00:00",
+      "status": 200
+    },
+    {
+      "key": "agicap",
+      "url": "https://agicap.com/fr/fonctionnalites/plateforme-agreee-facturation-electronique/",
+      "finalUrl": "https://agicap.com/fr/fonctionnalites/plateforme-agreee-facturation-electronique/",
+      "sha256": "609fc488aca23a07f5e45160208496aba252d8d5abd0ee19c8a8b56aa7110a74",
+      "bytes": 150559,
+      "checkedAt": "2026-11-01T17:50:24.282477+00:00",
+      "status": 200
+    },
+    {
+      "key": "n2f",
+      "url": "https://www.n2f.com/fr/logiciel-factures-fournisseurs/plateforme-agreee-facturation-electronique/",
+      "finalUrl": "https://www.n2f.com/fr/logiciel-factures-fournisseurs/plateforme-agreee-facturation-electronique/",
+      "sha256": "4715a3be683d03d1e4d41c2c76347d65060e2a54ff820b40e76ccd56c664f0d5",
+      "bytes": 221986,
+      "checkedAt": "2026-11-01T17:50:24.482957+00:00",
+      "status": 200
+    },
+    {
+      "key": "a-cube",
+      "url": "https://docs.acubeapi.com/documentation/gov-fr/",
+      "finalUrl": "https://docs.acubeapi.com/documentation/gov-fr/",
+      "sha256": "c2ced05463df07901351a2fd5f98711f9e74f7c07b67aff7440abf842a309039",
+      "bytes": 32606,
+      "checkedAt": "2026-11-01T17:50:24.497955+00:00",
+      "status": 200
+    },
+    {
+      "key": "pagero",
+      "url": "https://europe.thomsonreuters.com/fr/service-conformite/solutions/mandat-de-facturation-electronique-france",
+      "finalUrl": "https://europe.thomsonreuters.com/fr/service-conformite/solutions/mandat-de-facturation-electronique-france",
+      "sha256": "ffced145fa7bb1d0124ab1fc42f51a9fd2806da32fc5663ec362886a9d851432",
+      "bytes": 458048,
+      "checkedAt": "2026-11-01T17:50:24.606129+00:00",
+      "status": 200
+    },
+    {
+      "key": "comarch",
+      "url": "https://www.comarch.fr/solutions-it/plateforme-echange-et-de-gestion-des-documents/facturation-electronique/facturation-electronique-b2b-obligatoire-en-france/",
+      "finalUrl": "https://www.comarch.fr/solutions-it/plateforme-echange-et-de-gestion-des-documents/facturation-electronique/facturation-electronique-b2b-obligatoire-en-france/",
+      "sha256": "fdb7a62c93fb004a42f26327ec366d01a6ae723aa0dab925b6fee9c5c12b2375",
+      "bytes": 332908,
+      "checkedAt": "2026-11-01T17:50:24.686611+00:00",
+      "status": 200
+    },
+    {
+      "key": "docuware",
+      "url": "https://start.docuware.com/fr/factures-electroniques-avec-docuware",
+      "finalUrl": "https://start.docuware.com/fr/factures-electroniques-avec-docuware",
+      "sha256": "aef9d5d62aa4c90fabf422fa77efd5dd6a8f70f83fb949b863f010d562b5edf8",
+      "bytes": 160306,
+      "checkedAt": "2026-11-01T17:50:24.800473+00:00",
+      "status": 200
+    },
+    {
+      "key": "itesoft",
+      "url": "https://www.itesoft.com/fr/besoins/dematerialisation-factures/",
+      "finalUrl": "https://www.itesoft.com/fr/besoins/dematerialisation-factures/",
+      "sha256": "d31c30b83b4cef5153b7d251997c272f8ece92292d1417bac3305d7a79b1af94",
+      "bytes": 176879,
+      "checkedAt": "2026-11-01T17:50:24.946552+00:00",
+      "status": 200
+    },
+    {
+      "key": "arteva",
+      "url": "https://www.arteva.fr/orchestrade/facturation-electronique/",
+      "finalUrl": "https://www.arteva.fr/orchestrade/facturation-electronique/",
+      "sha256": "e6e5f078317edafc23e4c45976e3fce033c258cd317f8ec418e468761ac06dce",
+      "bytes": 206043,
+      "checkedAt": "2026-11-01T17:50:24.994902+00:00",
+      "status": 200
+    },
+    {
+      "key": "b4value",
+      "url": "https://www.b4value.net/en",
+      "finalUrl": "https://www.b4value.net/en/",
+      "sha256": "71f81b87869c5196b01a760de1bb1c3128fad335581c6a58966b0bb6910f2a92",
+      "bytes": 139874,
+      "checkedAt": "2026-11-01T17:50:25.008217+00:00",
+      "status": 200
+    },
+    {
+      "key": "digital-technologies",
+      "url": "https://digtechs.com/digital-technologies-devient-officiellement-une-platforme-agreee-en-france/?lang=fr",
+      "finalUrl": "https://www.digtechs.com/fr/digital-technologies-devient-officiellement-une-platforme-agreee-en-france/?lang=fr",
+      "sha256": "79a38c6390f02c7210a213acf011d7fd7ba86d616ca6eeee41d22a57bddc2067",
+      "bytes": 135588,
+      "checkedAt": "2026-11-01T17:50:25.061808+00:00",
+      "status": 200
+    },
+    {
+      "key": "edics",
+      "url": "https://edics.fr/notre-plateforme/",
+      "finalUrl": "https://edics.fr/notre-plateforme/",
+      "sha256": "85f6978a3782b6cafd37ae0f6271aad9f5150cfe4faba26518eba1f87c5cb12a",
+      "bytes": 158526,
+      "checkedAt": "2026-11-01T17:50:25.184727+00:00",
+      "status": 200
+    },
+    {
+      "key": "effinum",
+      "url": "https://effinum.fr/plateforme/",
+      "finalUrl": "https://effinum.fr/plateforme/",
+      "sha256": "f20af9682fd803917b593f4f3f92527053c34ffbca0f5fa5bc6863997fce91b1",
+      "bytes": 147711,
+      "checkedAt": "2026-11-01T17:50:25.238004+00:00",
+      "status": 200
+    },
+    {
+      "key": "fonoa",
+      "url": "https://www.fonoa.com/platform/e-invoicing",
+      "finalUrl": "https://www.fonoa.com/platform/e-invoicing",
+      "sha256": "c93e9d45805682f97757bf5c4ed981ee41117661f1294f5d954d76019eab0920",
+      "bytes": 230077,
+      "checkedAt": "2026-11-01T17:50:25.290403+00:00",
+      "status": 200
+    },
+    {
+      "key": "gurusoft",
+      "url": "https://guru-soft.com/fr/france/",
+      "finalUrl": "https://guru-soft.com/fr/france/",
+      "sha256": "d299aa616343beca5a530d769bab96da4efd54aee685e72ff7acd12dd5a81f1a",
+      "bytes": 277084,
+      "checkedAt": "2026-11-01T17:50:25.405660+00:00",
+      "status": 200
+    },
+    {
+      "key": "indicom",
+      "url": "https://indicom.eu/fr/nos-services/",
+      "finalUrl": "https://indicom.eu/fr/nos-services/",
+      "sha256": "ac83a686089a3c47529ede7bc9d51fbe5a6d6190101cd64e15a73fbf68df3048",
+      "bytes": 736711,
+      "checkedAt": "2026-11-01T17:50:25.445696+00:00",
+      "status": 200
+    },
+    {
+      "key": "iopole",
+      "url": "https://www.iopole.com/en/developpeurs",
+      "finalUrl": "https://www.iopole.com/en/developpeurs",
+      "sha256": "0074526a7112945ac277b20d3bbe4599b90c5e47ebb9fc37104272f9714c7db0",
+      "bytes": 114189,
+      "checkedAt": "2026-11-01T17:50:25.958458+00:00",
+      "status": 200
+    },
+    {
+      "key": "marosa",
+      "url": "https://marosavat.com/product/ctc-e-invoicing",
+      "finalUrl": "https://marosavat.com/product/ctc-e-invoicing",
+      "sha256": "276aff9a4a583eb3b13fac2c04cb1d3a4158c64c9e64607259eff3c2e91d0c73",
+      "bytes": 174876,
+      "checkedAt": "2026-11-01T17:50:26.106562+00:00",
+      "status": 200
+    },
+    {
+      "key": "open-bee",
+      "url": "https://www.openbee.com/plateforme-dematerialisation-partenaire/",
+      "finalUrl": "https://www.openbee.com/plateforme-dematerialisation-partenaire/",
+      "sha256": "bc963b1352540b4fb114b95e8e585e648e3a217d0d440ae0dfa22623e0eb0c9e",
+      "bytes": 96187,
+      "checkedAt": "2026-11-01T17:50:26.285892+00:00",
+      "status": 200
+    },
+    {
+      "key": "qweeby",
+      "url": "https://www.qweeby.fr/plateforme-agreee",
+      "finalUrl": "https://www.qweeby.fr/plateforme-agreee",
+      "sha256": "733bee9d1eceaab4a707bc720587f5660732aef870fbba32a558ce0e4f5de9c8",
+      "bytes": 39657,
+      "checkedAt": "2026-11-01T17:50:26.440619+00:00",
+      "status": 200
+    },
+    {
+      "key": "serensia",
+      "url": "https://serensia.com/",
+      "finalUrl": "https://serensia.com/",
+      "sha256": "231a06e3ed990bb964617f603cd88e35a0c228e6133e23606e903d47c0cbbd18",
+      "bytes": 525011,
+      "checkedAt": "2026-11-01T17:50:26.476124+00:00",
+      "status": 200
+    },
+    {
+      "key": "symtrax",
+      "url": "https://www.symtrax.com/fr/solutions/facturation-electronique-b2b-france/",
+      "finalUrl": "https://www.symtrax.com/fr/solutions/facturation-electronique-b2b-france/",
+      "sha256": "6d84feeb716a9d399bb5e54aee5df1377becbc81a62548e97df1f6f2370d63d3",
+      "bytes": 159790,
+      "checkedAt": "2026-11-01T17:50:26.496188+00:00",
+      "status": 200
+    },
+    {
+      "key": "tesisquare",
+      "url": "https://www.tesisquare.com/fr/electronic-invoicing",
+      "finalUrl": "https://www.tesisquare.com/fr/facturation-electronique/",
+      "sha256": "879d08389b5577dd8db5cf04f57383b29ef0b297a274e1eb9b950f1de74fb0bd",
+      "bytes": 420328,
+      "checkedAt": "2026-11-01T17:50:26.527962+00:00",
+      "status": 200
+    },
+    {
+      "key": "tungsten",
+      "url": "https://www.tungstenautomation.fr/products/e-invoice-connect",
+      "finalUrl": "https://www.tungstenautomation.fr/products/e-invoice-connect",
+      "sha256": "3cb20c06cf16d4c07c050f123343628e9d0f8b02325507c73515267c728b92b6",
+      "bytes": 190488,
+      "checkedAt": "2026-11-01T17:50:26.556040+00:00",
+      "status": 200
+    },
+    {
+      "key": "accenture",
+      "url": "https://www.accenture.com/us-en/products/ecomply-verify",
+      "finalUrl": "https://www.accenture.com/en/products/ecomply-verify",
+      "sha256": "1b9b52f08c12a02040303a2d37eab364f4268b4a7be0d01f0834d0357db95c72",
+      "bytes": 203396,
+      "checkedAt": "2026-11-01T17:50:26.679097+00:00",
+      "status": 200
+    },
+    {
+      "key": "arratech",
+      "url": "https://www.arratech.com/e-invoicing-in-france",
+      "finalUrl": "https://www.arratech.com/e-invoicing-in-france",
+      "sha256": "3d584a48c48905393831b95e3c7752a909476812f21d9b8588ad30bd5052e683",
+      "bytes": 209139,
+      "checkedAt": "2026-11-01T17:50:26.700107+00:00",
+      "status": 200
+    },
+    {
+      "key": "bc-solutions",
+      "url": "https://bcsolutions.fr/easinvoice/",
+      "finalUrl": "https://bcsolutions.fr/easinvoice/",
+      "sha256": "c403b40ca1700bc82dd6ba444e8d31268667c68abff32598d653c95490b274d2",
+      "bytes": 1183571,
+      "checkedAt": "2026-11-01T17:50:27.154415+00:00",
+      "status": 200
+    },
+    {
+      "key": "cyclope",
+      "url": "https://cyclope.digital/",
+      "finalUrl": "https://cyclope.digital/",
+      "sha256": "5fc1c900817a3c127172d3f8197fff1a416222e44a335ebc30e3736673c5345c",
+      "bytes": 5559,
+      "checkedAt": "2026-11-01T17:50:27.496580+00:00",
+      "status": 200
+    },
+    {
+      "key": "docnova",
+      "url": "https://docnova.ai/fr/logiciel-de-facturation-electronique-en-france/",
+      "finalUrl": "https://docnova.ai/fr/logiciel-de-facturation-electronique-en-france/",
+      "sha256": "96dc347a188d9cea626b33a2a8ae6b0987f1f4b171eeaf02ad9d3103ff83ff9a",
+      "bytes": 663558,
+      "checkedAt": "2026-11-01T17:50:27.598579+00:00",
+      "status": 200
+    },
+    {
+      "key": "ecosio-intercom",
+      "url": "https://ecosio.com/fr/la-facturation-electronique/",
+      "checkedAt": "2026-11-01T17:50:27.771873+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "enerj",
+      "url": "https://www.enerj.fr/",
+      "finalUrl": "https://www.enerj.fr/",
+      "sha256": "a177f11324ea4ec3ebcfc786a507ca500c12ed4415eb3c5484ed6207a2e96f17",
+      "bytes": 1422486,
+      "checkedAt": "2026-11-01T17:50:27.802362+00:00",
+      "status": 200
+    },
+    {
+      "key": "facnote",
+      "url": "https://groupefacnote.com/facnote-pdp-2/",
+      "finalUrl": "https://groupefacnote.com/",
+      "sha256": "0591ab4cae98055d7e0fc0954129a66e520fba8ef7d11875f449d458135a29bd",
+      "bytes": 171143,
+      "checkedAt": "2026-11-01T17:50:27.888344+00:00",
+      "status": 200
+    },
+    {
+      "key": "iga-assurance",
+      "url": "https://www.iga-assurance.fr/",
+      "finalUrl": "https://www.iga-assurance.fr/",
+      "sha256": "987e054ab7e26fa29c8c51167ba8c9815b3437c6c3137ba5af780d551e2d9307",
+      "bytes": 2720,
+      "checkedAt": "2026-11-01T17:50:28.014030+00:00",
+      "status": 200
+    },
+    {
+      "key": "village-connecte",
+      "url": "https://village-connecte.fr/la-plateforme-agreee-lvc/",
+      "finalUrl": "https://village-connecte.fr/la-plateforme-agreee-lvc/",
+      "sha256": "76aa8667ef3f6eaaa504f0ddc1194fd068ab80b847e7764a2b57b75c93314356",
+      "bytes": 362268,
+      "checkedAt": "2026-11-01T17:50:28.161924+00:00",
+      "status": 200
+    },
+    {
+      "key": "mykinexo",
+      "url": "https://www.kinexo.fr/facture-electronique-mykinexo-rejoint-la-liste-officielle-des-pdp-immatriculees/",
+      "finalUrl": "https://www.kinexo.fr/facture-electronique-mykinexo-rejoint-la-liste-officielle-des-pdp-immatriculees/",
+      "sha256": "30a957d3be31db484ff587b313579810ee40f233f5ffd3786f161cea0b85fa31",
+      "bytes": 59419,
+      "checkedAt": "2026-11-01T17:50:28.201700+00:00",
+      "status": 200
+    },
+    {
+      "key": "officein",
+      "url": "https://officein.fr/",
+      "finalUrl": "https://officein.fr/",
+      "sha256": "02cad6a1d68cf3f632abb72aa613c612137db10593540e5b7256f7d192c2862f",
+      "bytes": 86021,
+      "checkedAt": "2026-11-01T17:50:28.223895+00:00",
+      "status": 200
+    },
+    {
+      "key": "scribee",
+      "url": "https://www.scribee.tech/",
+      "finalUrl": "https://www.scribee.tech/",
+      "sha256": "fece766362dc10065aaa55c2006ee8061cac7f0a65f6dafa5c2e8e23a7258606",
+      "bytes": 85478,
+      "checkedAt": "2026-11-01T17:50:28.405878+00:00",
+      "status": 200
+    },
+    {
+      "key": "srci",
+      "url": "https://solutions.srci.fr/srci-pa-facturation-electronique/",
+      "finalUrl": "https://solutions.srci.fr/srci-pa-facturation-electronique/",
+      "sha256": "2a6296bbf889fd550c27310bf32ebacd886adc133ff31313f7a182b205c4f9d3",
+      "bytes": 146297,
+      "checkedAt": "2026-11-01T17:50:28.455428+00:00",
+      "status": 200
+    },
+    {
+      "key": "veryswing",
+      "url": "https://veryswing.com/veryswing-certifie-plateforme-agreee-facturation-electronique.html",
+      "finalUrl": "https://veryswing.com/veryswing-certifie-plateforme-agreee-facturation-electronique.html",
+      "sha256": "df17cfe96c6674973f9b3428a24d61fbbfa5ad9346b0506f61569b1a3fc7a737",
+      "bytes": 254014,
+      "checkedAt": "2026-11-01T17:50:28.522700+00:00",
+      "status": 200
+    },
+    {
+      "key": "wisetech",
+      "url": "https://www.wisetechglobal.com/product/geo-compliance",
+      "finalUrl": "https://www.cargowise.com/solutions/cargowise-customs/",
+      "sha256": "bacb316d34fa08733c69f252c966d8a06ae7346e0ce56c3c679cdb249951583d",
+      "bytes": 125090,
+      "checkedAt": "2026-11-01T17:50:28.644301+00:00",
+      "status": 200
+    },
+    {
+      "key": "blg",
+      "url": "https://www.blgcloud.fr/fonctionnalites-produit-etendues/fonctionnalites-produit-etendues-14/blgcloud-devient-plateforme-agreee-pour-la-facturation-electronique-en-france-185",
+      "finalUrl": "https://www.blgcloud.fr/fonctionnalites-produit-etendues/fonctionnalites-produit-etendues-14/blgcloud-devient-plateforme-agreee-pour-la-facturation-electronique-en-france-185",
+      "sha256": "aebfcda4d81fe29784db42db3d60f22732c3aae430f53e78563f4a1fd38f8719",
+      "bytes": 83906,
+      "checkedAt": "2026-11-01T17:50:28.682307+00:00",
+      "status": 200
+    },
+    {
+      "key": "factureapp",
+      "url": "https://www.factureapp.com/",
+      "finalUrl": "https://www.facturesapp.com/fr/",
+      "sha256": "7438d10ea0bf5fd2d4ecbc5fe7d586620c3e5c903d63550e380e41134837f52b",
+      "bytes": 27842,
+      "checkedAt": "2026-11-01T17:50:28.857159+00:00",
+      "status": 200
+    },
+    {
+      "key": "pagero-status",
+      "url": "https://status.pagero.com/",
+      "finalUrl": "https://status.pagero.com/",
+      "sha256": "2161f7d2bf745fcd3adf501596b4a2111502a866747cce4fabd584187552b2d2",
+      "bytes": 120910,
+      "checkedAt": "2026-11-01T17:50:29.040475+00:00",
+      "status": 200
+    },
+    {
+      "key": "pagero-ppf",
+      "url": "https://status.pagero.com/incidents/rbhs8s3vcrnq",
+      "finalUrl": "https://status.pagero.com/incidents/rbhs8s3vcrnq",
+      "sha256": "ce5c29f4326c539998b4fbc3c2796253a35a1306432fb0c36df510761d852957",
+      "bytes": 58212,
+      "checkedAt": "2026-11-01T17:50:29.220298+00:00",
+      "status": 200
+    },
+    {
+      "key": "pagero-support",
+      "url": "https://status.pagero.com/incidents/b7ftm4f2p7qf",
+      "finalUrl": "https://status.pagero.com/incidents/b7ftm4f2p7qf",
+      "sha256": "c6273e606ca9f7c2e1d3ce0d824f210b2fea8a4823731f6dbc195607676f2c0d",
+      "bytes": 56009,
+      "checkedAt": "2026-11-01T17:50:29.360292+00:00",
+      "status": 200
+    },
+    {
+      "key": "veryswing-status",
+      "url": "https://status.veryswing.com/",
+      "finalUrl": "https://status.veryswing.com/",
+      "sha256": "4b23ab185875af2187b0717a20132acf65398ce1d5215d760ffbbdcdf2ff45f1",
+      "bytes": 24751,
+      "checkedAt": "2026-11-01T17:50:29.625416+00:00",
+      "status": 200
+    },
+    {
+      "key": "docuware-status",
+      "url": "https://statusportal.docuware.cloud/",
+      "finalUrl": "https://statusportal.docuware.cloud/",
+      "sha256": "b8e616a1bbd484d3ac2e3373891fcc4d89cc3e2732ccd0c5bb6b83d5930f739f",
+      "bytes": 6027,
+      "checkedAt": "2026-11-01T17:50:29.753316+00:00",
+      "status": 200
+    },
+    {
+      "key": "odoo-status",
+      "url": "https://status.odoo.com/",
+      "finalUrl": "https://status.odoo.com/",
+      "sha256": "b523cda6f409a6a55d87ef09f7add9f992444f0e145a526063918faf04e0aec1",
+      "bytes": 388,
+      "checkedAt": "2026-11-01T17:50:29.764495+00:00",
+      "status": 200
+    },
+    {
+      "key": "odoo-security",
+      "url": "https://www.odoo.com/security",
+      "finalUrl": "https://www.odoo.com/security",
+      "sha256": "ddce573b56fa09782f4f255127bec6915339392957b3576427205a2534c788c4",
+      "bytes": 93714,
+      "checkedAt": "2026-11-01T17:50:29.873404+00:00",
+      "status": 200
+    },
+    {
+      "key": "qweeby-home",
+      "url": "https://www.qweeby.fr/",
+      "finalUrl": "https://www.qweeby.fr/",
+      "sha256": "b48d20b944d5bdcb2fd4934d22be3bf71c3670e5cdaea9e7144d893dd676bfd4",
+      "bytes": 84336,
+      "checkedAt": "2026-11-01T17:50:29.913185+00:00",
+      "status": 200
+    },
+    {
+      "key": "arratech-tech",
+      "url": "https://docs.arratech.com/technical-brief",
+      "finalUrl": "https://docs.arratech.com/technical-brief",
+      "sha256": "3a7098002d69ec53cbbe201d80b34b5c44c204ead2f54bc67a7dc258ea18cf12",
+      "bytes": 67666,
+      "checkedAt": "2026-11-01T17:50:29.930293+00:00",
+      "status": 200
+    },
+    {
+      "key": "arteva-apidoc",
+      "url": "https://apidoc.orchestrade.net/",
+      "finalUrl": "https://apidoc.orchestrade.net/",
+      "sha256": "2564cf1a9c2bf1d4d3a4df947c8e7860c888444ac4014db02b4a882a20e756bc",
+      "bytes": 2436,
+      "checkedAt": "2026-11-01T17:50:29.953867+00:00",
+      "status": 200
+    },
+    {
+      "key": "effinum-guide",
+      "url": "https://cerfrance-terre-allier.fr/guide-effinum/",
+      "finalUrl": "https://cerfrance-terre-allier.fr/guide-effinum/",
+      "sha256": "b9ec65007a616348f415be859e8e8df083a5e8a2db4aa4daaa18de425775b12f",
+      "bytes": 545127,
+      "checkedAt": "2026-11-01T17:50:29.969287+00:00",
+      "status": 200
+    },
+    {
+      "key": "cyclope-cgu",
+      "url": "https://cyclope.digital/cgu.html",
+      "finalUrl": "https://cyclope.digital/cgu.html",
+      "sha256": "b7db13e1226126a7739c035d1fdfccd2e100219af290539f509982a37f6d94bd",
+      "bytes": 36830,
+      "checkedAt": "2026-11-01T17:50:30.043029+00:00",
+      "status": 200
+    },
+    {
+      "key": "factureapp-privacy",
+      "url": "https://www.facturesapp.com/Publico/files/PolitiqueConfidentialite/politiqueconfidentialite.pdf",
+      "checkedAt": "2026-11-01T17:50:30.095061+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "cegid-agt",
+      "url": "https://help.ila.cegid.com/primavera/docs/instabilidade-na-comunica%C3%A7%C3%A3o-com-a-agt-fatura%C3%A7%C3%A3o-eletr%C3%B3nica",
+      "finalUrl": "https://help.ila.cegid.com/primavera/docs/instabilidade-na-comunica%C3%A7%C3%A3o-com-a-agt-fatura%C3%A7%C3%A3o-eletr%C3%B3nica",
+      "sha256": "4bbc801d029a67f993bde71464b230e29674f2602b8f6bd2e5efa92619ccb9d4",
+      "bytes": 590165,
+      "checkedAt": "2026-11-01T17:50:30.118879+00:00",
+      "status": 200
+    },
+    {
+      "key": "odoo-illustrative",
+      "url": "https://sentrixa.fr/articles/odoo-cloud-data-breach-customer-email.html",
+      "finalUrl": "https://sentrixa.fr/articles/odoo-cloud-data-breach-customer-email.html",
+      "sha256": "a4bdaf7ba5b3f59baf9492d65fb55590b7c034eb72537d75a1bca9cbb349c661",
+      "bytes": 51152,
+      "checkedAt": "2026-11-01T17:50:30.149516+00:00",
+      "status": 200
+    },
+    {
+      "key": "veryswing-201",
+      "url": "https://status.veryswing.com/incidents/201",
+      "finalUrl": "https://status.veryswing.com/incidents/201",
+      "sha256": "be33fd49bd72c083b37a598b393fcc0ce966489ea36d6c679949e9e592a9d6d6",
+      "bytes": 9815,
+      "checkedAt": "2026-11-01T17:52:26.788063+00:00",
+      "status": 200
+    },
+    {
+      "key": "arteva-afnor-flows",
+      "url": "https://documenter.getpostman.com/view/8317513/2sB3QRon6p",
+      "finalUrl": "https://documenter.getpostman.com/view/8317513/2sB3QRon6p",
+      "sha256": "6270132cd326076971926af1f2ab4e4049863671b1a9fd5dec6101bfe4a91d76",
+      "bytes": 42522,
+      "checkedAt": "2026-11-01T17:52:26.788380+00:00",
+      "status": 200
+    },
+    {
+      "key": "arteva-metier",
+      "url": "https://documenter.getpostman.com/view/8317513/SWECXveX",
+      "finalUrl": "https://documenter.getpostman.com/view/8317513/SWECXveX",
+      "sha256": "12596836a3c2f8419add2e78c1c03e046de96bc3afc8b3c56c68ca8a47a398d8",
+      "bytes": 41108,
+      "checkedAt": "2026-11-01T17:52:26.788462+00:00",
+      "status": 200
+    },
+    {
+      "key": "factureapp-privacy-fr",
+      "url": "https://www.facturesapp.com/fr/files/PolitiqueConfidentialite/politiqueconfidentialite.pdf",
+      "finalUrl": "https://www.facturesapp.com/fr/files/PolitiqueConfidentialite/politiqueconfidentialite.pdf",
+      "sha256": "d64268bcc13c5eb060e5ccc4f7abf627e353fe7110af9b54e2ce2c78f7bdc51c",
+      "bytes": 364498,
+      "checkedAt": "2026-11-01T17:52:26.788511+00:00",
+      "status": 200
+    },
+    {
+      "key": "accenture-dpa",
+      "url": "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-ECV-Data-Processing-and-Security-Policy-07-24.pdf",
+      "finalUrl": "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-ECV-Data-Processing-and-Security-Policy-07-24.pdf",
+      "sha256": "48e337bfa0a6c103f660c272961ea9d1d2d001bb063281912cdd2558ddc54d53",
+      "bytes": 288149,
+      "checkedAt": "2026-11-01T17:52:26.790314+00:00",
+      "status": 200
+    },
+    {
+      "id": "gestav-partner",
+      "url": "https://gestav.com/partenaire",
+      "finalUrl": "https://gestav.com/partenaire",
+      "sha256": "a179fb101509e40fdab5cadd992af4c702f3eedd40245d49be33705b72c10fd9",
+      "bytes": 115064,
+      "checkedAt": "2026-11-01T17:49:43.534154+00:00",
+      "status": 200
+    },
+    {
+      "id": "fiskaltrust-einvoicing-fr",
+      "url": "https://docs.fiskaltrust.cloud/docs/poscreators/middleware-doc/france/e-invoicing/overview",
+      "finalUrl": "https://docs.fiskaltrust.cloud/docs/poscreators/middleware-doc/france/e-invoicing/overview",
+      "sha256": "b316a303881b932fed691b2ff8601d6edcd80e3cdb607ef22b9fea02b5e0f6ab",
+      "bytes": 42325,
+      "checkedAt": "2026-11-01T17:49:43.561575+00:00",
+      "status": 200
+    },
+    {
+      "id": "billit-contract-update",
+      "url": "https://www.billit.eu/fr-fr/informations-juridiques/modification-conditions-generales-doctobre-2026/",
+      "finalUrl": "https://www.billit.eu/fr-fr/informations-juridiques/modification-conditions-generales-doctobre-2026/",
+      "sha256": "91530424298d5953eafa8988f7f7626a8881f85faae35e028b0657b407a8f736",
+      "bytes": 87085,
+      "checkedAt": "2026-11-01T17:49:43.584907+00:00",
+      "status": 200
+    },
+    {
+      "id": "welyb-status",
+      "url": "https://support.welyb.fr/statut-plateforme",
+      "finalUrl": "https://support.welyb.fr/statut-plateforme",
+      "sha256": "24c649199e0b5416427e4dfe4bf43109394041b1f11c49f9023c180ae32d1b56",
+      "bytes": 167382,
+      "checkedAt": "2026-11-01T17:49:43.545497+00:00",
+      "status": 200
+    },
+    {
+      "id": "flowie-changelog",
+      "url": "https://docs.get-flowie.com/changelog.fr",
+      "finalUrl": "https://docs.get-flowie.com/changelog.fr",
+      "sha256": "29dae01452712c01878befed0ef7b3afe25fa2bcbdae90c052cc145c498ecac2",
+      "bytes": 336085,
+      "checkedAt": "2026-11-01T17:49:43.822820+00:00",
+      "status": 200
+    },
+    {
+      "id": "entropics",
+      "url": "https://entropics.fr/",
+      "finalUrl": "https://entropics.fr/",
+      "sha256": "3f6c0e4629dfce8ac5d2ec82e3b2ad81ef28852812faf8d54e7d6574a651a65e",
+      "bytes": 152497,
+      "checkedAt": "2026-11-01T17:49:45.019979+00:00",
+      "status": 200
+    },
+    {
+      "id": "tradeshift-php-notice",
+      "url": "https://onboardingsuppliers.support.tradeshift.com/knowledgebase/article/40039733487250",
+      "finalUrl": "https://onboardingsuppliers.support.tradeshift.com/knowledgebase/article/40039733487250",
+      "sha256": "2c568a9969f7500ae2d10e991f60f0dfecafe74dab0d028a8edc45f676ccd6b5",
+      "bytes": 102300,
+      "checkedAt": "2026-11-01T17:49:44.001014+00:00",
+      "status": 200
+    },
+    {
+      "id": "axway-trust",
+      "url": "https://trust.axway.com/",
+      "finalUrl": "https://trust.axway.com/",
+      "sha256": "76098f23a61b719f0e0347f83ae6b5ed1e777fdd750e3f94a15881e8749c1d77",
+      "bytes": 206429,
+      "checkedAt": "2026-11-01T17:49:44.401578+00:00",
+      "status": 200
+    },
+    {
+      "id": "icd-api-preprod",
+      "url": "https://api.preprod.dematrust.com/icd-flow",
+      "finalUrl": "https://api.preprod.dematrust.com/icd-flow",
+      "sha256": "1bfc7704730cbe6d131dbbd64e3170b6feca01f947feeae5a78b4d65f6bf2497",
+      "bytes": 317794,
+      "checkedAt": "2026-11-01T17:49:44.051093+00:00",
+      "status": 200
+    },
+    {
+      "id": "fiskaltrust-setup",
+      "url": "https://docs.fiskaltrust.cloud/docs/poscreators/middleware-doc/france/e-invoicing/setup",
+      "sha256": "ef4ecd245ce98f7cbf166b847c67d08c0f2b88d4a7228636d5408147196498b8",
+      "bytes": 60801,
+      "checkedAt": "2026-11-01T17:50:24.383958+00:00",
+      "status": 200
+    },
+    {
+      "sha256": "ae671b51747679451ab103724a8976b11ca590cc34ebbb8fd97b3c747698abf4",
+      "bytes": 36650,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "b8809a863d84fb424ddee42759a40f7fc9599ea2f1f1775432e638c9d8b762db",
+      "bytes": 2549,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "70843e07a4b30d5b31f728218a36bf0cae16f697233b2deac74a9fb7c3e9089d",
+      "bytes": 3389,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "70beec47ce1e16e9d2ea4c8978d49f4049d48c0f9bcb3b4cedb42c2a40c7b3ff",
+      "bytes": 972,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "899785eb37ec7adb0f3e1c190c72f66d7fdc21f7d41034c30eca34f1d14560b1",
+      "bytes": 633,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "17a27937a58925658c37ca2bbe862737506d4f0833dc6fd855fa7cdac217ff2c",
+      "bytes": 767,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "0fba429f5df253f37537c1834c7bddae164296347fe9000b6dc2b5d0166a5bbc",
+      "bytes": 798,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "52dbdbe36302261e5c4c93eefe8b85930a41b0a1f547e8483c2abd3acc1a4348",
+      "bytes": 838,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "9fa58620dc83abf1431c67ee498703111ede86d473b317d31eebfda85b099890",
+      "bytes": 1009,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "26aa6cd01b5f68556389adca95507df31f12a6a2029ca683c8ce3f4695ac7496",
+      "bytes": 639,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "1103b241388beaaffaaf348def54287ea5e9dcd88e392dfc6cb7a815dffa0e2d",
+      "bytes": 4058,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "74251911673928a7c68963d6768e9ac5a112f1afc6dac502862525da85c25ffa",
+      "bytes": 590,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "5ee4bdb71276b083337def7a39a23c715ee3b5a9d8fdd9b20e24b5800c762500",
+      "bytes": 1799,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "88405df902ee352a7882c6983522958c9fbdeb39b5104704ea7ec81975c78ef5",
+      "bytes": 1009,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "ec77931a78d8c23c1ab2a7962531dccfe8f1b2f4c2222afda66e775bb4f13dc8",
+      "bytes": 6324,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "605d7d3d9b5083b2ce51fe100ea34e6ad00da939c0b933e657e5c58d130fb664",
+      "bytes": 428,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "957a891ae6cecb1c94ba811b395c5cfc7aea2652b363ad1f57cde805e3efcc01",
+      "bytes": 3899,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "b609ac7091ef480912d68624e459e3861724c40829b30a4236ea2d8da94782a4",
+      "bytes": 34235,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "33beae3628e6a0cd73749c0d12d31cbeac18ac0d02dafc630c130e4cb1b3e9cf",
+      "bytes": 29933,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "bb843f42773180e472d56be9e1c694468241683c4ad1fb034450dec77d814fe2",
+      "bytes": 28847,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "6284d46f20eb8679a1dbe5a196aa09c5689b9a00ddce3d67bbb9d9349f4ed360",
+      "bytes": 29207,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "14c0cba906d9d6f3310c7ec7f85d761c08f57cd6dfd59aa7c7602fb730b468ac",
+      "bytes": 24554,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "631ca61e98680990cb8b2476817bd136c46870f5683355a3e6949b31504d9689",
+      "bytes": 4310,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "152fc456b8bb928ff57bc6855f80a7c69dbcdf95a26f4ee62cbfb85ed63c60ba",
+      "bytes": 9755,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "b42dc0728880227f2b11a3c3780f7f6d327402c87cb39fb8d038431496106a7f",
+      "bytes": 35722,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "a541caf2b7512073c83e4f5e759ed611a099bb88375dd17b88f879d589fcedde",
+      "bytes": 35242,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "bb6e0c5d04afa475d1cbfe30d0538852f072e3833143685e00ab4b212e86dbb9",
+      "bytes": 35598,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "0d8ddbab003f5a930c7b5720ac22f4094db5f6d288f68b583173f738fb37fe31",
+      "bytes": 34598,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "aa0116a3956d5d3667c12967169128282d7204dd6b9d75952e282c2b769273f0",
+      "bytes": 34631,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "cf10f34c315e1c296fffa30cb84f0d2cc74e48fa94ddb126d3d392e516cdfe84",
+      "bytes": 28735,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "3a4360c95012254650bae2fddb07d3cbc848cfd9cd8cc6f1c00188b097f1586f",
+      "bytes": 30158,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "19909e932c3e1918602bcf74e9734e49d079c0e312cc7cf6d6c7c3537efdf3e2",
+      "bytes": 33275,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "14a77e7f75ee375aaee8f02609aee84393bb66898f109769591c9fa4359b251a",
+      "bytes": 31048,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "6be01d4d5a7e51e15ef423496b821aebf4d01a92cbd56a525ad34b878655a5f3",
+      "bytes": 33748,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "723b23ab9e4584a2ccf9716d430a34f9c9b6a8fcd22036bfb7cfe116fa0cc913",
+      "bytes": 31966,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "70ad3142e497f80983d4c41463242a9f034fa9761776f20ba5c2a6ebd03f7851",
+      "bytes": 30362,
+      "kind": "saved_tool_response"
+    },
+    {
+      "sha256": "73db178b3218890da5c0a3373cfea73d0195c6f70762e977233de113d54bed53",
+      "bytes": 31486,
+      "kind": "saved_tool_response"
+    }
+  ]
+}
