@@ -1,5 +1,5 @@
 import { octoberPlatforms } from "./platforms-october.ts";
-import { novemberPlatforms } from "./platforms-november.ts";
+import { novemberPlatforms, november12Platforms } from "./platforms-november.ts";
 import { septemberPlatforms } from "./platforms-september.ts";
 import type { Evidence, Platform } from "./types.ts";
 import { expandedPlatforms } from "./platforms-expanded.ts";
@@ -116,14 +116,14 @@ export const platforms: Platform[] = [
     eReporting: documented(true, ["tiime-pa-2026"]),
     bankAccountRequired: documented(false, ["tiime-pricing-2026"]),
     accountantAccess: documented(true, ["tiime-reception-20261008"], "Après activation de la PA, invitation du cabinet depuis Paramètres > Plateforme agréée. Accès Tiime Expert réservé aux professionnels inscrits à l’Ordre, pour les factures électroniques reçues et émises.", "2026-10-08"),
-    publicApi: unknown("Nous n'avons pas trouvé les conditions d'accès à une API publique générale."),
+    publicApi: {"value":{"available":true,"includedInFree":null},"status":"documented","sourceIds":["tiime-api-help-20261112","tiime-api-v2-20261112","tiime-api-invoices-20261112"],"checkedAt":"2026-11-12","note":"L’aide réserve l’accès sur demande aux éditeurs de logiciels, dans un partenariat. La documentation publique v2 décrit la lecture des clients, factures de vente, ventes externes et achats, avec pagination. Conditions commerciales et accès à une offre gratuite à confirmer ; la documentation publique ne vaut pas ouverture générale du service."},
     exportDocumented: documented(true, ["tiime-accountant-2026"], "L'export FEC est disponible. La récupération complète des données après résiliation reste à confirmer."),
     integrations: documented(["Tiime Expert", "FEC", "Stripe", "GoCardless", "Make"], ["tiime-pricing-2026", "tiime-accountant-2026"]),
     formats: documented(["Factur-X", "UBL", "CII"], ["tiime-pa-2026"]),
     hostingCountries: declared(["France", "Union européenne"], ["tiime-subprocessors-2026"], "La liste des sous-traitants distingue plusieurs localisations, dont certaines avec transferts vers les États-Unis."),
     iso27001: documented(true, ["tiime-pa-2026"], "Certification annoncée par l'éditeur pour la plateforme agréée, certificat public à archiver."),
     commitmentMonths: documented(0, ["tiime-pricing-2026"]),
-    importantUnknowns: ["Conditions d'accès à l'API", "Certificat ISO archivé", "Export complet après résiliation", "Périmètre exact des transferts hors UE"]
+    importantUnknowns: ["Conditions commerciales et accès partenaire à l’API","Certificat ISO archivé","Export complet après résiliation","Périmètre exact des transferts hors UE"]
   },
   {
     slug: "abby",
@@ -145,8 +145,8 @@ export const platforms: Platform[] = [
     exportDocumented: documented(true, ["abby-export-2026-09"], "Documents de facturation en PDF ; contacts, articles et livres en CSV ou Excel selon le type. Au-delà de 90 jours, Pro ou Business est requis. Restitution PA complète après résiliation non documentée.", "2026-09-16"),
     integrations: documented(["Make", "Zapier"], ["abby-home-2026"]),
     formats: declared(["Factur-X"], ["abby-formats-20260920"], "Format annoncé. L’aide décrit encore la génération du XML embarqué comme étant en cours de déploiement.", "2026-09-20"),
-    hostingCountries: unknown("Le lieu d'hébergement de la plateforme et les sous-traitants restent à confirmer."),
-    iso27001: declared(true, ["abby-home-2026"], "Certification annoncée par l'éditeur. Le certificat public et son périmètre doivent encore être archivés."),
+    hostingCountries: {"value":["France","Irlande","Allemagne"],"status":"declared","sourceIds":["abby-security-20261112","abby-legal-20261112"],"checkedAt":"2026-11-12","note":"La page Sécurité situe les fichiers à Paris, la base de production en Irlande et les sauvegardes à Francfort. Les mentions légales décrivent par ailleurs des centres français AWS : la répartition détaillée retenue vient de la page Sécurité. Le périmètre contractuel du client reste à vérifier."},
+    iso27001: {"value":true,"status":"documented","sourceIds":["abby-certificate-20260930","abby-legal-20261112"],"checkedAt":"2026-11-12","note":"Certificat public n°123418 Issue 2, révisé le 30 septembre 2026 et valable jusqu’au 24 août 2028 sous surveillance. Il couvre le logiciel cloud, les obligations de facturation électronique en France et l’infrastructure AWS. L’annexe nomme le siège de Nancy."},
     commitmentMonths: documented(0, ["abby-pricing-2026"]),
     importantUnknowns: ["Déploiement de l’émission et du Factur-X complet", "Disponibilité opérationnelle du e-reporting", "Périmètre PA de l’API Pro et Business", "Hébergement et restitution des données"]
   },
@@ -241,7 +241,7 @@ export const platforms: Platform[] = [
     eReporting: documented(false, ["sellsy-rollout-2026-09"], "L’aide opérationnelle indique que l’e-reporting n’est pas encore disponible et vise la fin de l’année. Cette précision prévaut sur les annonces générales de l’offre.", "2026-09-16"),
     bankAccountRequired: unknown("Les conditions d'utilisation de la plateforme sans autre module Sellsy restent à confirmer dans le contrat."),
     accountantAccess: documented(true, ["sellsy-accountants-2026"], "L'accès expert-comptable est annoncé gratuit, sans surcoût ni limite."),
-    publicApi: documented({ available: true, includedInFree: false }, ["sellsy-pricing-2026", "sellsy-api-20261016"], "Des quotas API sont indiqués dans les offres payantes. Le changelog du 16 octobre ajoute is_taxes_inc et rate_category aux points de terminaison de documents concernés, ainsi qu’un réglage de suivi des e-mails pour les contacts. Ces ajouts techniques ne constituent pas une annonce de disponibilité de l’e-reporting.", "2026-10-20"),
+    publicApi: {"value":{"available":true,"includedInFree":false},"status":"documented","sourceIds":["sellsy-pricing-2026","sellsy-api-20261112"],"checkedAt":"2026-11-12","note":"Le 4 novembre, le changelog ajoute la vérification de disponibilité d’une adresse de réception et la fonction du représentant légal au mandat. Le 10, il ajoute le numéro de contrat aux avoirs et une suggestion de flux pour les avoirs sans facture liée. Les quotas restent liés aux offres payantes ; ces évolutions ne démontrent pas l’ouverture de l’e-reporting."},
     exportDocumented: documented(true, ["sellsy-accountants-2026"], "Les exports de journaux CSV et FEC sont disponibles. La récupération complète après résiliation reste à confirmer."),
     integrations: documented(["Cegid Loop", "MyUnisoft", "Pennylane", "Tiime", "Sage 100", "ACD", "Inqom", "Chorus Pro"], ["sellsy-accountants-2026", "sellsy-invoicing-2026"]),
     formats: documented(["Factur-X", "UBL", "CII"], ["sellsy-invoicing-2026"]),
@@ -428,7 +428,7 @@ export const platforms: Platform[] = [
   {
     slug: "shine",
     displayName: "Shine Facture",
-    officialName: "Shine",
+    officialName: "Shine Solutions ApS",
     summary: "Facturation électronique gratuite et sans engagement, utilisable avec ou sans compte professionnel Shine.",
     targets: ["micro", "tpe", "pme"],
     ecosystem: ["facturation", "compte pro optionnel", "pré-comptabilité", "expert-comptable"],
@@ -443,7 +443,7 @@ export const platforms: Platform[] = [
     accountantAccess: documented(true, ["shine-pa-2026"], "La collaboration avec l'expert-comptable est annoncée, avec un périmètre variable selon l'offre."),
     publicApi: unknown("Les conditions d'accès à une API depuis Shine Facture restent à confirmer."),
     exportDocumented: documented(true, ["shine-pricing-2026"], "Les exports de documents sont indiqués comme disponibles. La restitution complète après résiliation reste à confirmer."),
-    integrations: documented(["intégrations comptables"], ["shine-pricing-2026"]),
+    integrations: {"value":["intégrations comptables","Connecteur MCP"],"status":"documented","sourceIds":["shine-pricing-2026","shine-mcp-terms-20261112"],"checkedAt":"2026-11-12","note":"Les CGU du connecteur prévoient un abonnement Shine Facture actif, une autorisation OAuth limitée aux habilitations choisies et leur révocation. La présence de ce connecteur ne prouve pas un accès général à une API REST ou sa gratuité."},
     formats: unknown("Les formats réglementaires couverts par l'offre étudiée ne sont pas listés dans les sources retenues."),
     hostingCountries: unknown("Le lieu d'hébergement de Shine Facture et ses sous-traitants restent à confirmer."),
     iso27001: unknown("Le certificat applicable à Shine Facture et son périmètre restent à confirmer."),
@@ -462,7 +462,7 @@ export const platforms: Platform[] = [
     pricing: {"value": {"kind": "free", "monthlyFrom": null, "unit": "company", "freeFor": ["micro", "tpe", "pme"], "promotionalPriceExcluded": true, "label": "Première année gratuite ; ensuite jusqu’à 20 factures/mois sans abonnement logiciel, 250/mois avec Comptabilité et/ou Facturation"}, "status": "documented", "sourceIds": ["macompta-faq-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Première année gratuite. Ensuite la gratuité dépend du volume et de l’abonnement logiciel ; le prix au-delà des seuils reste à obtenir. Aucun abonnement mensuel uniforme n’est retenu pour les projections."},
     allowance: {"value": {"monthlyInvoices": 20, "annualInvoices": null, "unlimited": false, "label": "Dès la deuxième année : 20 factures/mois sans abonnement logiciel ; 250/mois avec Comptabilité et/ou Facturation"}, "status": "documented", "sourceIds": ["macompta-faq-pricing-20261101"], "checkedAt": "2026-11-01", "note": "Le plafond retenu pour une PA autonome est celui de la deuxième année. La FAQ annonce une première année gratuite, sans préciser son volume dans cette réponse."},
     sendsInvoices: documented(true, ["macompta-pa-2026"]),
-    receivesInvoices: documented(true, ["macompta-pa-2026", "macompta-reception-20261004"], "Les factures fournisseurs arrivent automatiquement dans Achats > Factures ; leur réception et leurs changements de statut sont historisés.", "2026-10-04"),
+    receivesInvoices: {"value":true,"status":"documented","sourceIds":["macompta-pa-2026","macompta-reception-20261004","macompta-reception-20261112"],"checkedAt":"2026-11-12","note":"Les factures fournisseurs reçues automatiquement au format Factur-X apparaissent dans Achats > Factures. Motifs et commentaires des statuts sont transmis au fournisseur ; l’historique conserve les actions. Pour une autofacture reçue en comptabilité d’engagement, la comptabilisation en vente reste manuelle : l’aide précise qu’aucune écriture automatique n’est produite pour ce cas."},
     eReporting: unknown("La transmission de données à l'administration est annoncée sans détail suffisant pour confirmer tous les cas d'e-reporting."),
     bankAccountRequired: unknown("La page d'inscription ne précise pas si une connexion bancaire est requise pour l'enrôlement."),
     accountantAccess: documented(true, ["macompta-reception-20261004"], "L’article du 2 octobre documente la collaboration avec le cabinet, les droits d’accès au menu Achats et l’historique des traitements. Les actions du cabinet dépendent de l’organisation et des droits configurés.", "2026-10-04"),
@@ -656,4 +656,5 @@ export const platforms: Platform[] = [
   ...septemberPlatforms,
   ...octoberPlatforms,
   ...novemberPlatforms,
+  ...november12Platforms,
 ];

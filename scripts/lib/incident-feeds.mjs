@@ -86,13 +86,29 @@ export function parseWatchSource(source, body, now = Date.now()) {
     if (!sections.length || sections.length > 500) throw new Error("Historique Cachet invalide");
     const ids = new Set();
     return sections.map(section => {
+      const url = section.match(/<a href="([^"]+)" class="links">/)?.[1];
+      const bodyContent = section.match(/<div class="panel-body markdown-body">([\s\S]*?)<\/div>/)?.[1] ?? "";
+      const updates = [...section.matchAll(/<li class="list-group-item incident-update-item">([\s\S]*?)<\/li>/g)];
+      if (updates.length > 500 || updates.length !== (section.match(/class="list-group-item incident-update-item"/g) ?? []).length) throw new Error("Mises à jour Cachet incomplètes");
+      const updateContents = updates.map(([, update]) => {
+        const date = timestamp(update.match(/data-timeago="([^"]+)"/)?.[1], now);
+        const link = update.match(/<a href="([^"]+)" class="pull-right">/)?.[1];
+        if (!link) throw new Error("Lien de mise à jour Cachet absent");
+        const target = new URL(link, source.url);
+        if (!/^#update-\d+$/.test(target.hash)) throw new Error("Ancre Cachet invalide");
+        target.hash = "";
+        if (incidentUrl(source, target.href) !== incidentUrl(source, url)) throw new Error("Mise à jour Cachet hors avis");
+        const content = update.split("<small>")[0].trim();
+        if (!content) throw new Error("Mise à jour Cachet vide");
+        return `${date}\n${content}`;
+      });
       const row = candidate(source, {
         title: section.match(/<strong>([^<]+)<\/strong>/)?.[1],
-        url: section.match(/<a href="([^"]+)" class="links">/)?.[1],
+        url,
         publishedAt: section.match(/data-timeago="([^"]+)"/)?.[1],
-        content: section.match(/<div class="panel-body markdown-body">([\s\S]*?)<\/div>/)?.[1] ?? "",
+        content: [bodyContent, ...updateContents].join("\n"),
       }, now);
-      if (ids.has(row.id) || !row.content.trim()) throw new Error("Avis Cachet incomplet ou dupliqué");
+      if (ids.has(row.id) || !bodyContent.trim()) throw new Error("Avis Cachet incomplet ou dupliqué");
       ids.add(row.id);
       return row;
     }).filter(item => item.publishedAt >= since);

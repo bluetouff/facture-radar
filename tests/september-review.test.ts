@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import directory from "../src/data/official-directory.json" with { type: "json" };
 import previousDirectory from "../docs/archives/official-directory-2026-10-10.json" with { type: "json" };
+import octoberDirectory from "../docs/archives/official-directory-2026-10-14.json" with { type: "json" };
 import sources from "../src/data/sources.json" with { type: "json" };
 import { platforms } from "../src/data/platforms.ts";
 import { researchForPlatform } from "../src/data/platform-research.ts";
@@ -11,9 +12,9 @@ import { buildInvoiceJourney, findJourneyProfile } from "../src/lib/journey.ts";
 import { passportRoutes } from "../src/data/passport-routes.ts";
 
 test("le relevé courant conserve les admissions et corrections documentées en septembre", async () => {
-  assert.equal(directory.snapshotDate, "2026-11-01");
-  assert.equal(directory.approved.length, 155);
-  assert.equal(directory.pending.length, 10);
+  assert.equal(directory.snapshotDate, "2026-11-12");
+  assert.equal(directory.approved.length, 159);
+  assert.equal(directory.pending.length, 6);
   const expected = new Map([
     ["BLG", "2026-08-26"], ["FISKALTRUST", "2026-08-28"],
     ["CYCLOPE", "2026-08-25"], ["LUNDI MATIN", "2026-08-24"], ["VENTYA", "2025-12-18"],
@@ -34,7 +35,7 @@ test("les entrées maintenues conservent leurs dates après renommage et passage
   assert.equal(previousDirectory.snapshotDate, "2026-10-10");
   assert.equal(previousDirectory.approved.length, 149);
   for (const previous of previousDirectory.approved.filter(entry => entry.name !== "DOCPROCESS")) {
-    const currentName = previous.name === "ATGP" ? "@GP" : previous.name;
+    const currentName = previous.name === "ATGP" ? "@GP" : previous.name === "Shine" ? "Shine Solutions ApS" : previous.name;
     const entry = directory.approved.find((candidate) => candidate.name === currentName);
     const platform = platforms.find((candidate) => candidate.officialName === currentName);
     assert.ok(entry, `${previous.name} doit rester dans la liste approuvée`);
@@ -56,7 +57,7 @@ test("les six nouvelles PA reproduisent la date En attente sans date fictive", (
   assert.equal(officialSource.type, "official-list");
   assert.equal(officialSource.accessedAt, "2026-10-14");
   const previousNames = new Set(previousDirectory.approved.map((entry) => entry.name));
-  const additions = directory.approved.filter((entry) => !previousNames.has(entry.name) && !["SWILE", "@GP"].includes(entry.name));
+  const additions = octoberDirectory.approved.filter((entry) => !previousNames.has(entry.name) && !["SWILE", "@GP"].includes(entry.name));
   assert.deepEqual(additions.map((entry) => entry.name).sort(), [
     "BE FRESH S.à r.l.", "FACTUREAPP", "Insiders Technologies GmbH", "KALANDA", "MY-EDDY", "RATIOO",
   ].sort());
@@ -64,11 +65,13 @@ test("les six nouvelles PA reproduisent la date En attente sans date fictive", (
     const platform = platforms.find((candidate) => candidate.officialName === entry.name);
     assert.ok(platform, entry.name);
     assert.equal(entry.registeredAt, "En attente", entry.name);
-    assert.equal(platform.registeredAt.value, "En attente", entry.name);
+    const clarifiedDates: Record<string, string> = { RATIOO: "2026-10-09", "Insiders Technologies GmbH": "2026-11-02" };
+    assert.equal(platform.registeredAt.value, clarifiedDates[entry.name] ?? "En attente", entry.name);
     for (const evidence of [platform.officialStatus, platform.registeredAt]) {
       assert.equal(evidence.status, "official", entry.name);
-      assert.deepEqual(evidence.sourceIds, ["dgfip-list-20261014"], entry.name);
-      assert.equal(evidence.checkedAt, "2026-10-14", entry.name);
+      const clarified: boolean = evidence === platform.registeredAt && Boolean(clarifiedDates[entry.name]);
+      assert.deepEqual(evidence.sourceIds, [clarified ? "dgfip-list-20261112" : "dgfip-list-20261014"], entry.name);
+      assert.equal(evidence.checkedAt, clarified ? "2026-11-12" : "2026-10-14", entry.name);
     }
     for (const evidence of [platform.sendsInvoices, platform.receivesInvoices, platform.eReporting]) {
       assert.ok(!evidence.sourceIds.includes("dgfip-list-20261014"), `${entry.name} : l'admission ne démontre pas une fonction en production`);
@@ -140,7 +143,8 @@ test("hébergement PA et certificats conservent leurs périmètres et dates prop
 test("les déclarations Flowie laissent les dates et le périmètre ISO à confirmer", () => {
   const flowie = researchForPlatform("flowie");
   assert.equal(flowie.hostingProviders.status, "declared");
-  assert.deepEqual(flowie.hostingProviders.value, ["S3NS"]);
+  assert.deepEqual(flowie.hostingProviders.value, ["Google Cloud"]);
+  assert.match(flowie.hostingProviders.note!, /S3NS/);
   assert.equal(flowie.iso27001Scope.status, "declared");
   assert.equal(flowie.iso27001Scope.value?.evidenceKind, "renewal_statement");
   assert.equal(flowie.iso27001Scope.value?.validUntil, null);

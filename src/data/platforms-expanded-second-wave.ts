@@ -44,7 +44,9 @@ export const secondWavePlatforms: Platform[] = [
     sendsInvoices: documented(true, ["azopio-pa-2026", "azopio-pricing-2026"]), receivesInvoices: documented(true, ["azopio-pa-2026", "azopio-pricing-2026"]), eReporting: documented(true, ["azopio-pa-2026"]),
     publicApi: documented({ available: true, includedInFree: null }, ["azopio-pricing-2026"]), formats: documented(["Factur-X", "UBL", "CII"], ["azopio-pa-2026"]), iso27001: declared(true, ["azopio-pa-2026"]), commitmentMonths: documented(0, ["azopio-pricing-2026"]),
     importantUnknowns: ["Montants mensuels de la grille dynamique", "Coût des dépassements", "Hébergement", "Export complet"],
-  }),
+
+"integrations": {"value":["Powens (comptes bancaires)","Nylas (collecteurs e-mail)","Bridge (initiation de paiement)","Stripe / ProAbono (abonnement)"],"status":"documented","sourceIds":["azopio-security-20261112"],"checkedAt":"2026-11-12","note":"Prestataires et usages décrits dans la politique de sécurité. Ce relevé distingue les connexions bancaires, la collecte e-mail et la facturation de l’abonnement ; il ne démontre pas l’accès à des API PA pour ces tiers."}
+}),
   expand({
     slug: "b4value", displayName: "b4value.net", officialName: "B4VALUE.NET", registeredAt: "2026-03-04",
     summary: "Réseau TRAFFIQX pour l'échange international de factures, avec API et offres par volume.",

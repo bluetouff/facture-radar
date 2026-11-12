@@ -6,18 +6,18 @@ import officialDirectory from "../src/data/official-directory.json" with { type:
 import { platforms } from "../src/data/platforms.ts";
 import { platformSchema } from "../src/data/schema.ts";
 
-test("le corpus contient exactement les 155 acteurs approuvés", () => {
+test("le corpus contient exactement les 159 acteurs approuvés", () => {
   const platformSlugs = platforms.map((platform) => platform.slug).sort();
   const selectedSlugs = corpusSelection.selected.map((platform) => platform.slug).sort();
   assert.deepEqual(platformSlugs, selectedSlugs);
-  assert.equal(new Set(selectedSlugs).size, 155);
+  assert.equal(new Set(selectedSlugs).size, 159);
 });
 
 test("les noms enrichis couvrent exactement la liste DGFiP sans doublon", () => {
   const enrichedNames = platforms.map((platform) => platform.officialName).sort();
   const approvedNames = officialDirectory.approved.map((entry) => entry.name).sort();
   assert.deepEqual(enrichedNames, approvedNames);
-  assert.equal(new Set(enrichedNames).size, 155);
+  assert.equal(new Set(enrichedNames).size, 159);
 });
 
 test("la date d'immatriculation accepte le libellé DGFiP exact sans texte arbitraire", () => {

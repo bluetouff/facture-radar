@@ -6,8 +6,8 @@ import { platformResearchProfiles, researchForPlatform } from "../src/data/platf
 import { publicSiteObservations, TRACKER_RADAR_REVISION } from "../src/data/public-site-observations.ts";
 import previousDirectory from "../docs/archives/official-directory-2026-10-10.json" with { type: "json" };
 
-test("les 155 fiches ont un contrat de recherche fail-closed", () => {
-  assert.equal(platformResearchProfiles.length, 155);
+test("les 159 fiches ont un contrat de recherche fail-closed", () => {
+  assert.equal(platformResearchProfiles.length, 159);
   assert.deepEqual(
     new Set(platformResearchProfiles.map((profile) => profile.platformSlug)),
     new Set(platforms.map((platform) => platform.slug)),
@@ -50,7 +50,7 @@ test("les cas décisifs gardent leur limite exacte", () => {
 
 test("les observations publiques couvrent tout le corpus sans fabriquer les fiches non scannées", () => {
   assert.match(TRACKER_RADAR_REVISION, /^[0-9a-f]{40}$/);
-  assert.equal(publicSiteObservations.length, 155);
+  assert.equal(publicSiteObservations.length, 159);
   assert.equal(publicSiteObservations.filter((observation) => observation.status === "observed").length, 11);
   for (const observation of publicSiteObservations) {
     if (observation.status === "observed") {
@@ -74,10 +74,10 @@ test("les observations de sites ne peuvent pas modifier le moteur de choix", asy
   assert.doesNotMatch(matcher, /public-site-observations|tracker|thirdPartyDomains/i);
 });
 
-test("les six admissions d’octobre ne fabriquent pas une observation de site", () => {
+test("les admissions récentes ne fabriquent pas une observation de site", () => {
   const previousNames = new Set(previousDirectory.approved.map((entry) => entry.name));
-  const additions = platforms.filter((platform) => !previousNames.has(platform.officialName) && !["swile", "atgp"].includes(platform.slug));
-  assert.equal(additions.length, 6);
+  const additions = platforms.filter((platform) => !previousNames.has(platform.officialName) && !["swile", "atgp", "shine"].includes(platform.slug));
+  assert.equal(additions.length, 10);
   for (const platform of additions) {
     const observation = publicSiteObservations.find((candidate) => candidate.platformSlug === platform.slug);
     assert.ok(observation, platform.slug);

@@ -4622,5 +4622,509 @@
     "url": "https://status.swile.co/",
     "type": "documentation",
     "accessedAt": "2026-11-01"
+  },
+  {
+    "id": "dgfip-list-20261112",
+    "title": "Liste des plateformes agréées, relevé du 12 novembre 2026",
+    "publisher": "DGFiP",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "abby-security-20261112",
+    "title": "Abby : sécurité et répartition de l’hébergement",
+    "publisher": "Abby",
+    "url": "https://abby.fr/securite",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "abby-certificate-20260930",
+    "title": "Abby : certificat ISO/IEC 27001:2022 n°123418 Issue 2",
+    "publisher": "Prescient Security / Abby",
+    "url": "https://abby.fr/pdf/certificate/Abby_ISMS_Certificate_2026-09-30.pdf",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "abby-legal-20261112",
+    "title": "Abby : mentions légales et périmètre du certificat",
+    "publisher": "Abby",
+    "url": "https://abby.fr/legals/mentions",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "abby-status-20261112",
+    "title": "Abby France : état des applications et historique",
+    "publisher": "Abby",
+    "url": "https://abby-france.instatus.com/",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "blg-security-20260910",
+    "title": "blgCloud : point de sécurité et mesures au 10 septembre",
+    "publisher": "blgCloud",
+    "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-09-26-notification-d-incident-de-securite-et-mesures-de-protection-547",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "blg-security-20260810-review-20261112",
+    "title": "blgCloud : notification du 10 août sur l’attaque de fin juillet",
+    "publisher": "blgCloud",
+    "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "avalara-roadmap-20261103",
+    "title": "Avalara : version de novembre annoncée pour le 24",
+    "publisher": "Avalara",
+    "url": "https://knowledge.avalara.com/bundle/etf1716299629790_etf1716299629790/page/xge1755658120268.html",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "azopio-security-20261112",
+    "title": "Azopio : infrastructure, sauvegardes et prestataires",
+    "publisher": "Azopio",
+    "url": "https://www.azopio.com/fr/security-policy/",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "dougs-privacy-20261104",
+    "title": "Dougs : politique de confidentialité mise à jour le 4 novembre",
+    "publisher": "Dougs",
+    "url": "https://www.dougs.fr/politique-confidentialite/",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "basikon-home-20261112",
+    "title": "Basikon : plateforme de financement et intégrations",
+    "publisher": "Basikon",
+    "url": "https://www.basikon.com/",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "basikon-bsi-20261112",
+    "title": "Basikon : certificat ISO/IEC 27001:2022 IS 835710",
+    "publisher": "BSI",
+    "url": "https://www.bsigroup.com/fr-FR/products-and-services/assessment-and-certification/validation-and-verification/client-directory-certificate/IS%20835710/",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "docuware-status-20261112",
+    "title": "DocuWare : historique public sur trente jours",
+    "publisher": "DocuWare",
+    "url": "https://statusportal.docuware.cloud/",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "docuware-test-20261105",
+    "title": "DocuWare : notification de test à ignorer du 5 novembre",
+    "publisher": "DocuWare",
+    "url": "https://statusportal.docuware.cloud/overview/incident/8f713fe4-a108-4a62-bc20-288a083dfc22?lang=fr",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "dext-status-20261112",
+    "title": "Dext Prepare Web App : rapport HTTP sur sept jours",
+    "publisher": "Dext",
+    "url": "https://status.dext.com/389219",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "aruba-phishing-20261109",
+    "title": "Aruba : faux courriel de renouvellement de domaine du 9 novembre",
+    "publisher": "Aruba",
+    "url": "https://guide.aruba.it/fr/alertes/2026/phishing-email-09-11-2026",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "atgp-status-20261112",
+    "title": "@GP : page actuelle des anomalies",
+    "publisher": "@GP",
+    "url": "https://www.atgp.net/info-incidents/",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fulll-incident-1112385-20261112",
+    "title": "fulll : avis officiel 1112385",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1112385",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fulll-incident-1115547-20261112",
+    "title": "fulll : avis officiel 1115547",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1115547",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fulll-incident-1116653-20261112",
+    "title": "fulll : avis officiel 1116653",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1116653",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fulll-incident-1116679-20261112",
+    "title": "fulll : avis officiel 1116679",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1116679",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fulll-incident-1119878-20261112",
+    "title": "fulll : avis officiel 1119878",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1119878",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fulll-incident-1120747-20261112",
+    "title": "fulll : avis officiel 1120747",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1120747",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "lucca-zhgqxpryvyj6-20261112",
+    "title": "Lucca : interruption des applications dans la région OVH Limburg EU2, 3 novembre",
+    "publisher": "Lucca",
+    "url": "https://status.lucca.fr/incidents/zhgqxpryvyj6",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "pagero-delivery-rbhs8s3vcrnq-20261112",
+    "title": "Pagero : reprise des livraisons PPF et réserve sur le rattrapage",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/incidents/rbhs8s3vcrnq",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "pagero-clearance-tmcf9ljd0z83-20261112",
+    "title": "Pagero : rattrapage du flux clearance français annoncé terminé le 6 novembre",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/incidents/tmcf9ljd0z83",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "esker-peppol-20261029-20261112",
+    "title": "Esker : message PA français du 29 octobre sur les erreurs Peppol",
+    "publisher": "Esker",
+    "url": "https://www.trustesker.com/?env=G",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "flowie-changelog-20261112",
+    "title": "Flowie Exchange : notes du 3 au 10 novembre",
+    "publisher": "Flowie",
+    "url": "https://docs.get-flowie.com/changelog",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "flowie-procurement-20261112",
+    "title": "Flowie Exchange : évaluation fournisseur, sous-traitants et restitution",
+    "publisher": "Flowie",
+    "url": "https://docs.get-flowie.com/guides/procurement",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "gestav-cgs-20261112",
+    "title": "Gestav : CGS, portabilité générale et maintien après changement de PA",
+    "publisher": "AVN / Gestav",
+    "url": "https://gestav.com/cgv",
+    "type": "contract",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "macompta-reception-20261112",
+    "title": "macompta.fr : réception fournisseur, statuts et autofacturation",
+    "publisher": "macompta.fr",
+    "url": "https://help.macompta.fr/fr/articles/806988-recevoir-et-traiter-automatiquement-vos-factures-fournisseurs-via-la-plateforme-agreee",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "konica-komidoc-faq-20261112",
+    "title": "Konica Minolta : FAQ KOMI Doc et module PA Open Bee",
+    "publisher": "Konica Minolta",
+    "url": "https://digital-solutions.konicaminolta.fr/faq-client-komi-doc-sans-pa/",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "konica-openbee-pa-20261112",
+    "title": "Konica Minolta : description de l’offre KOMI Doc avec Open Bee",
+    "publisher": "Konica Minolta",
+    "url": "https://digital-solutions.konicaminolta.fr/gestion-documentaire/article-quest-ce-quune-plateforme-agreee-pa/",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "pennylane-hn2l065z54hr-20261112",
+    "title": "Pennylane : incident application du 10 novembre, résolution annoncée",
+    "publisher": "Pennylane",
+    "url": "https://status.pennylane.com/incidents/hn2l065z54hr",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "sage-8bsqk0rjwpg9-20261112",
+    "title": "Sage Connect : accès au menu de facturation électronique rétabli le 10 novembre",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/8bsqk0rjwpg9",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "sage-jd8s1rx86v5q-20261112",
+    "title": "Sage AutoEntry Core : synchronisation rétablie le 3 novembre",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/jd8s1rx86v5q",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "spendesk-5q8bzzg6ck1j-20261112",
+    "title": "Spendesk : authentification forte et SMS rétablis le 3 novembre",
+    "publisher": "Spendesk",
+    "url": "https://status.spendesk.com/incidents/5q8bzzg6ck1j",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "superpdp-errors-20261105-20261112",
+    "title": "SuperPDP : historique de l’alerte sur les erreurs 500 du 5 novembre",
+    "publisher": "SUPER PDP",
+    "url": "https://status.superpdp.tech/status-page/superpdp/history",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "sps-0l1110y8gs76-20261112",
+    "title": "SPS Commerce : traitement de documents rétabli le 9 novembre",
+    "publisher": "SPS Commerce",
+    "url": "https://status.spscommerce.com/incidents/0l1110y8gs76",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "veryswing-201-resolution-20261112",
+    "title": "Veryswing : résolution de l’incident réseau VSDB publiée le 5 novembre",
+    "publisher": "Veryswing",
+    "url": "https://status.veryswing.com/incidents/201",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "sage-efacture-observation-20261112",
+    "title": "Sage eFacture : portail relu le 12 novembre, ancien bandeau d’archivage absent",
+    "publisher": "Sage France",
+    "url": "https://efacture.sage.fr/Public/Commun/Index.aspx?ReturnUrl=%2F",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "tiime-api-help-20261112",
+    "title": "Tiime : accès à l’API sur demande pour les éditeurs de logiciels",
+    "publisher": "Tiime",
+    "url": "https://support.tiime.fr/fr/articles/26240-proposez-vous-une-api",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "tiime-api-v2-20261112",
+    "title": "Tiime : index public de la documentation API v2",
+    "publisher": "Tiime",
+    "url": "https://developers.tiime.fr/llms.txt",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "tiime-api-invoices-20261112",
+    "title": "Tiime API v2 : consultation des factures et avoirs de vente",
+    "publisher": "Tiime",
+    "url": "https://developers.tiime.fr/reference/public_v2_get_invoices.md",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "sellsy-api-20261112",
+    "title": "Sellsy API : notes de versions du 3 au 10 novembre",
+    "publisher": "Sellsy",
+    "url": "https://docs.sellsy.com/api/v2/private/changelog.html",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "shine-mcp-terms-20261112",
+    "title": "Shine Facture : CGU du connecteur MCP, applicables depuis le 28 septembre",
+    "publisher": "Shine",
+    "url": "https://www.shine.fr/lp/cgu-mcp-facturation/",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "shine-migration-terms-20261112",
+    "title": "Shine Facture : CGU, migration depuis Serensia et droits après résiliation",
+    "publisher": "Shine",
+    "url": "https://shine.co/fr/legal/terms",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "ponsot-home-20261112",
+    "title": "Ponsot Conseil Gestion : offre avocats, Factur-X et accès API",
+    "publisher": "PONSOT CONSEIL GESTION",
+    "url": "https://www.ponsotconseilgestion.com/",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "ponsot-cgu-20261112",
+    "title": "Ponsot Conseil Gestion : conditions de souscription, licences et restitution",
+    "publisher": "PONSOT CONSEIL GESTION",
+    "url": "https://www.ponsotconseilgestion.com/cgu",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "ponsot-security-20261112",
+    "title": "Ponsot Conseil Gestion : déclaration ISO 27001 et périmètre de sécurité",
+    "publisher": "PONSOT CONSEIL GESTION",
+    "url": "https://www.ponsotconseilgestion.com/securite",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "zefyr-pricing-20261112",
+    "title": "Zefyr : abonnement et facturation électronique inclus selon chiffre d’affaires",
+    "publisher": "ZEFYR",
+    "url": "https://www.zefyr.net/tarifs",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "zefyr-faq-20261112",
+    "title": "Zefyr : FAQ, hébergement et fonctionnement annoncé de la facturation électronique",
+    "publisher": "ZEFYR",
+    "url": "https://www.zefyr.net/faq",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "frenchbreaches-welyb-20260915-relecture-20261112",
+    "title": "Welyb / AGIRIS : notification de fuite de données relayée le 15 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+    "type": "press",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "frenchbreaches-zenfirst-20260917-relecture-20261112",
+    "title": "Zenfirst : revendication de fuite de données du 17 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+    "type": "press",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "frenchbreaches-altagem-20260921-relecture-20261112",
+    "title": "Altagem : revendication d’accès aux données",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+    "type": "press",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "cyberattaque-altagem-20260921-relecture-20261112",
+    "title": "Altagem : revendication visant clients et données opérationnelles",
+    "publisher": "Cyberattaque.org",
+    "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+    "type": "press",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "frenchbreaches-faktus-20260919-relecture-20261112",
+    "title": "Faktus : revendication de fuite de données, mise à jour du 20 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+    "type": "press",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "factuali-notification-relayed-20261001-relecture-20261112",
+    "title": "Notification Factuali / VosFactures : capture publiée par Fuites Infos",
+    "publisher": "Factuali, notification reproduite par Fuites Infos",
+    "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+    "type": "press",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fuitesinfos-vosfactures-20261001-relecture-20261112",
+    "title": "VosFactures : cyberattaque chez le prestataire Fakturownia et notification aux utilisateurs",
+    "publisher": "Fuites Infos / Christophe Boutry",
+    "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+    "type": "press",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fakturownia-security-20260929-relecture-20261112",
+    "title": "Incident Fakturownia : communiqué du 29 septembre actualisé le 1er octobre",
+    "publisher": "Fakturownia",
+    "url": "https://fakturownia.pl/incydent",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "fiducial-security-20261001-relecture-20261112",
+    "title": "FIDUCIAL : clarification sur une intrusion chez un client utilisant un logiciel local",
+    "publisher": "FIDUCIAL",
+    "url": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+    "type": "security",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "welyb-status-20261112",
+    "title": "Welyb : météo de la plateforme relue le 12 novembre",
+    "publisher": "Welyb",
+    "url": "https://support.welyb.fr/statut-plateforme",
+    "type": "documentation",
+    "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "aife-interview-20261027-20261112",
+    "title": "Entretien du directeur de l’AIFE : suspension de 48 heures puis reprise des échanges Factuali",
+    "publisher": "IT for Business / Emmanuel Spinat, AIFE",
+    "url": "https://www.itforbusiness.fr/emmanuel-spinat-aife-facturation-electronique-bilan-108971",
+    "type": "press",
+    "accessedAt": "2026-11-12"
   }
 ]

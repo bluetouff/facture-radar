@@ -488,5 +488,8 @@ export const octoberPlatforms: Platform[] = [
   platform.officialStatus.sourceIds = ["dgfip-list-20261014"];
   platform.registeredAt.sourceIds = ["dgfip-list-20261014"];
   platform.registeredAt.note = "La liste DGFiP mise à jour le 13 octobre classe cet acteur parmi les PA agréées et affiche En attente dans la colonne date d’immatriculation. La date précise reste non publiée.";
+  const confirmedDates: Record<string, string> = { "insiders-technologies": "2026-11-02", ratioo: "2026-10-09" };
+  const confirmedDate = confirmedDates[platform.slug];
+  if (confirmedDate) platform.registeredAt = { value: confirmedDate, status: "official", sourceIds: ["dgfip-list-20261112"], checkedAt: "2026-11-12", note: "Le relevé DGFiP du 12 novembre précise la date auparavant indiquée En attente." };
   return platform;
 });

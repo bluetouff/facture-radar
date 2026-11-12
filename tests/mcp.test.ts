@@ -102,19 +102,19 @@ test("le manifeste et les ressources couvrent tout le corpus public", () => {
   const manifest = corpusManifest(revision);
   assert.deepEqual(manifest.counts, {
     questions: 25,
-    enrichedPlatforms: 155,
-    approvedPlatforms: 155,
-    pendingPlatforms: 10,
-    journeys: 155,
+    enrichedPlatforms: 159,
+    approvedPlatforms: 159,
+    pendingPlatforms: 6,
+    journeys: 159,
     invoiceRoutes: 6,
     directRoutingOptions: 3,
-    sources: 578,
-    incidentNotices: 119,
+    sources: 641,
+    incidentNotices: 133,
     observedPublicSites: 11,
   });
   const directory = getResourceByUri("pacheck://corpus/official-directory", revision) as { approved: unknown[]; pending: unknown[] };
-  assert.equal(directory.approved.length, 155);
-  assert.equal(directory.pending.length, 10);
+  assert.equal(directory.approved.length, 159);
+  assert.equal(directory.pending.length, 6);
   assert.equal(getResourceByUri("file:///etc/passwd", revision), null);
 });
 

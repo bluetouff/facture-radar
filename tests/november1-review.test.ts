@@ -6,25 +6,25 @@ import { platforms } from "../src/data/platforms.ts";
 import { incidentResearch, incidentWatchCorpus, platformIncidents } from "../src/data/incident-watch.ts";
 import { publicSiteObservations } from "../src/data/public-site-observations.ts";
 
-test("Swile : admission officielle à date inconnue, DocProcess conservé en historique", async () => {
+test("Swile : admission officielle puis date précisée, DocProcess conservé en historique", async () => {
   const swile = platforms.find(p => p.slug === "swile")!;
   assert.equal(swile.officialStatus.status, "official");
-  assert.equal(swile.registeredAt.value, "En attente");
-  assert.deepEqual(swile.registeredAt.sourceIds, ["dgfip-list-20261101"]);
+  assert.equal(swile.registeredAt.value, "2026-11-02");
+  assert.deepEqual(swile.registeredAt.sourceIds, ["dgfip-list-20261112"]);
   for (const evidence of [swile.sendsInvoices, swile.receivesInvoices, swile.eReporting, swile.publicApi, swile.pricing]) assert.equal(evidence.value, null);
   assert.equal(publicSiteObservations.find(p => p.platformSlug === "swile")!.status, "not_scanned");
   assert.ok(!directory.pending.some(p => p.name === "SWILE"));
   assert.ok(!platforms.some(p => p.slug === "docprocess"));
   assert.match(await readFile(new URL("../src/pages/plateformes/docprocess.astro", import.meta.url), "utf8"), /Le fichier ne donne pas le motif/);
   assert.equal(platforms.find(p => p.slug === "atgp")!.officialName, "@GP");
-  assert.equal(incidentResearch.length, 155);
+  assert.equal(incidentResearch.length, 159);
 });
 test("les prévisions et les composants France ne deviennent pas des résolutions PA", () => {
   const pagero = platformIncidents.find(e => e.id === "pagero-ppf-20261101")!;
-  assert.equal(pagero.status, "identified");
+  assert.equal(pagero.status, "resolved");
   assert.equal(pagero.scope, "upstream");
-  assert.equal(pagero.resolutionReportedAt, null);
-  assert.match(pagero.limitations, /prévision/);
+  assert.equal(pagero.resolutionReportedAt, "2026-11-06T14:57:00Z");
+  assert.match(pagero.limitations, /reprise|rattrapage/);
   const eezi = platformIncidents.find(e => e.id === "eezi-cmvtfjan50b0f0wqg1p2oook7")!;
   assert.equal(eezi.scope, "publisher_service");
   assert.match(eezi.limitations, /rattachement exact à la PA reste à documenter/);

@@ -63,7 +63,7 @@ export const sourceSchema = z.object({
   accessedAt: z.iso.date(),
 });
 
-export const platformsSchema = z.array(platformSchema).length(155);
+export const platformsSchema = z.array(platformSchema).length(159);
 export const sourcesSchema = z.array(sourceSchema).min(12);
 
 const capabilityAvailability = z.object({
@@ -111,7 +111,7 @@ export const platformResearchSchema = z.object({
   iso27001Scope: evidence(iso27001ScopeDetail),
 }).strict();
 
-export const platformResearchProfilesSchema = z.array(platformResearchSchema).length(155);
+export const platformResearchProfilesSchema = z.array(platformResearchSchema).length(159);
 
 export const publicSiteObservationSchema = z.object({
   platformSlug: z.string().regex(/^[a-z0-9-]+$/),
@@ -131,7 +131,7 @@ export const publicSiteObservationSchema = z.object({
   note: z.string().min(1),
 }).strict();
 
-export const publicSiteObservationsSchema = z.array(publicSiteObservationSchema).length(155);
+export const publicSiteObservationsSchema = z.array(publicSiteObservationSchema).length(159);
 
 const passportFactSchema = z.object({
   id: z.enum(["entry", "format", "transmission", "integrity"]),

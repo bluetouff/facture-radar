@@ -161,7 +161,11 @@ export type JourneyProfileId =
   | "insiders-technologies"
   | "kalanda"
   | "my-eddy"
-  | "ratioo";
+  | "ratioo"
+  | "basikon"
+  | "konica-minolta"
+  | "ponsot-conseil-gestion"
+  | "zefyr";
 
 export interface JourneyActionDefinition {
   title: string;

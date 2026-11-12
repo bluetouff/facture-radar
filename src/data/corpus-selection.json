@@ -1,5 +1,5 @@
 {
-  "selectedAt": "2026-11-01",
+  "selectedAt": "2026-11-12",
   "audience": "Indépendants, entrepreneurs, entreprises, équipes administratives et cabinets comptables en France",
   "method": [
     "Présence dans la liste des plateformes approuvées publiée par la DGFiP",
@@ -1095,6 +1095,43 @@
         "swile-home-20261101"
       ],
       "reason": "Nouvelle entrée de la liste officielle ; offre PA à documenter."
+    },
+    {
+      "slug": "basikon",
+      "segment": "non-documente",
+      "reach": "Présence dans la liste officielle des PA ; audience de l’offre à préciser.",
+      "reachSourceIds": [
+        "dgfip-list-20261112",
+        "basikon-home-20261112"
+      ],
+      "reason": "Nouvelle entrée officielle, avec champs inconnus conservés jusqu’à qualification des sources de l’offre."
+    },
+    {
+      "slug": "konica-minolta",
+      "segment": "non-documente",
+      "reach": "Présence dans la liste officielle des PA ; audience de l’offre à préciser.",
+      "reachSourceIds": [
+        "dgfip-list-20261112"
+      ],
+      "reason": "Nouvelle entrée officielle, avec champs inconnus conservés jusqu’à qualification des sources de l’offre."
+    },
+    {
+      "slug": "ponsot-conseil-gestion",
+      "segment": "non-documente",
+      "reach": "Présence dans la liste officielle des PA ; audience de l’offre à préciser.",
+      "reachSourceIds": [
+        "dgfip-list-20261112"
+      ],
+      "reason": "Nouvelle entrée officielle, avec champs inconnus conservés jusqu’à qualification des sources de l’offre."
+    },
+    {
+      "slug": "zefyr",
+      "segment": "non-documente",
+      "reach": "Présence dans la liste officielle des PA ; audience de l’offre à préciser.",
+      "reachSourceIds": [
+        "dgfip-list-20261112"
+      ],
+      "reason": "Nouvelle entrée officielle, avec champs inconnus conservés jusqu’à qualification des sources de l’offre."
     }
   ],
   "replaced": [

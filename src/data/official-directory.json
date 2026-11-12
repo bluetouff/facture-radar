@@ -1,10 +1,10 @@
 {
-  "snapshotDate": "2026-11-01",
+  "snapshotDate": "2026-11-12",
   "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
   "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
   "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
-  "approvedSha256": "b37662160facf9b5a4160955098e6a99f88067e74acb8fe60cf6958afbea125a",
-  "pendingSha256": "a6a2ba8f185824b4631d60e3a60271e017ff9f50e65c10dbc75662c0543275fe",
+  "approvedSha256": "efc4bff7a2d8a9986930afb4db4edc517b87577aa7abdb73cef7ba85cc30772b",
+  "pendingSha256": "65c96830044f977de227c368e550909f1eea7ca129c784aacabcc5f60f8e09e7",
   "approved": [
     {
       "name": "@GP",
@@ -149,6 +149,15 @@
       "website": "https://www.azopio.com/fr/",
       "contact": "contact@azopio.com",
       "registeredAt": "2025-12-22"
+    },
+    {
+      "name": "Basikon",
+      "street": "17 Rue de Kronstadt",
+      "postalCode": "92380",
+      "city": "Garches",
+      "website": "https://www.basikon.com/fr",
+      "contact": "info@fiskaltrust.fr",
+      "registeredAt": "En attente"
     },
     {
       "name": "B2BRouter",
@@ -647,11 +656,11 @@
     },
     {
       "name": "iEDI ApS",
-      "street": "Bybjergvej 14, Espergærde",
-      "postalCode": "3060",
+      "street": "Strandvejen 60, 5e étage, Hellerup",
+      "postalCode": "2900",
       "city": "Danemark",
       "website": "https://www.iedi.com/",
-      "contact": "ds@iedi.com",
+      "contact": "helpdesk@iedi.com",
       "registeredAt": "2026-02-11"
     },
     {
@@ -697,7 +706,7 @@
       "city": "Allemagne",
       "website": "https://insiders-technologies.com/en/",
       "contact": "e-invoicing@insiders-technologies.de",
-      "registeredAt": "En attente"
+      "registeredAt": "2026-11-02"
     },
     {
       "name": "In.Te.S.A. spa",
@@ -788,6 +797,15 @@
       "website": "https://www.kolecto.fr/",
       "contact": "admin@kolecto.fr",
       "registeredAt": "2025-12-18"
+    },
+    {
+      "name": "Konica Minolta Business Solutions France",
+      "street": "365 Route de Saint Germain",
+      "postalCode": "78420",
+      "city": "Carrières-sur-Seine",
+      "website": "https://www.konicaminolta.fr/fr-fr",
+      "contact": "contactpa@konicaminolta.fr",
+      "registeredAt": "2026-11-03"
     },
     {
       "name": "LE VILLAGE CONNECTE",
@@ -1024,6 +1042,15 @@
       "registeredAt": "2026-01-13"
     },
     {
+      "name": "Ponsot Conseil Gestion",
+      "street": "185 Avenue Henri Mauriat",
+      "postalCode": "13100",
+      "city": "Aix-en-Provence",
+      "website": "https://www.ponsotconseilgestion.com/",
+      "contact": "contact@ponsotconseilgestion.com",
+      "registeredAt": "En attente"
+    },
+    {
       "name": "QONTO",
       "street": "18 Rue de Navarin",
       "postalCode": "75009",
@@ -1048,7 +1075,7 @@
       "city": "Cappelle-en-Pévèle",
       "website": "https://ratioo.fr/",
       "contact": "contact@ratioo.fr",
-      "registeredAt": "En attente"
+      "registeredAt": "2026-10-09"
     },
     {
       "name": "SAGE",
@@ -1123,7 +1150,7 @@
       "registeredAt": "2025-12-11"
     },
     {
-      "name": "Shine",
+      "name": "Shine Solutions ApS",
       "street": "Fiolstræde 17B, København",
       "postalCode": "1171",
       "city": "Danemark",
@@ -1210,7 +1237,7 @@
       "city": "Montpellier",
       "website": "https://www.swile.co/",
       "contact": "gregory.truchetet@swile.co",
-      "registeredAt": "En attente"
+      "registeredAt": "2026-11-02"
     },
     {
       "name": "SYMTRAX",
@@ -1400,17 +1427,18 @@
       "website": "https://com.ytems.app/",
       "contact": "pa@ytems.co",
       "registeredAt": "2026-08-03"
+    },
+    {
+      "name": "ZEFYR",
+      "street": "12 Rue Ernest Psichari",
+      "postalCode": "75007",
+      "city": "Paris",
+      "website": "https://www.zefyr.net/",
+      "contact": "facturation-electronique@zefyr.net",
+      "registeredAt": "En attente"
     }
   ],
   "pending": [
-    {
-      "name": "Basikon",
-      "street": "17 Rue de Kronstadt",
-      "postalCode": "92380",
-      "city": "Garches",
-      "website": "https://www.basikon.com/fr",
-      "contact": "info@fiskaltrust.fr"
-    },
     {
       "name": "CENSE",
       "street": "4 Place Sadi Carnot",
@@ -1436,22 +1464,6 @@
       "contact": "pdp.ey@fr.ey.com"
     },
     {
-      "name": "Konica Minolta Business Solutions France",
-      "street": "365 Route de Saint Germain",
-      "postalCode": "78420",
-      "city": "Carrières-sur-Seine",
-      "website": "https://www.konicaminolta.fr/fr-fr",
-      "contact": "contactpa@konicaminolta.fr"
-    },
-    {
-      "name": "Ponsot Conseil Gestion",
-      "street": "185 Avenue Henri Mauriat",
-      "postalCode": "13100",
-      "city": "Aix-en-Provence",
-      "website": "https://www.ponsotconseilgestion.com/",
-      "contact": "contact@ponsotconseilgestion.com"
-    },
-    {
       "name": "Sage Holding France",
       "street": "52 Avenue du Général de Gaulle",
       "postalCode": "92800",
@@ -1474,14 +1486,6 @@
       "city": "Belgique",
       "website": "https://www.yuman.io/",
       "contact": "contact@yuman.io"
-    },
-    {
-      "name": "ZEFYR",
-      "street": "12 Rue Ernest Psichari",
-      "postalCode": "75007",
-      "city": "Paris",
-      "website": "https://www.zefyr.net/",
-      "contact": "facturation-electronique@zefyr.net"
     }
   ]
 }

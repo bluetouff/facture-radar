@@ -212,14 +212,16 @@ export const thirdWavePlatforms: Platform[] = [
     allowance: documented({ monthlyInvoices: 10, annualInvoices: null, unlimited: false, label: "Réception seule : 10/mois ; Conformité Complète : 20/mois en émission et réception" }, ["gestav-pricing-2026", "gestav-pricing-20261020"], "Surplus Conformité affiché à 0,25 €/facture sans TVA explicitée pour ce supplément. Starter, Pro et Business : 30, 150 et 500 factures/mois, émises et reçues, tous types B2B/B2C/B2G confondus ; l’e-reporting est distinct de ce quota.", "2026-10-20"),
     sendsInvoices: documented(true, ["gestav-pa-2026"]), receivesInvoices: documented(true, ["gestav-pa-2026"]), eReporting: documented(true, ["gestav-pa-2026", "gestav-pricing-20261020"], "Option à 24,90 € HT/an en Conformité, +2,90 € HT/mois en Starter, +4,90 € HT/mois en Pro, incluse en Business. Le prix de réception seul ne couvre pas ce supplément.", "2026-10-20"),
     commitmentMonths: documented(12, ["gestav-pricing-2026", "gestav-pricing-20261020", "gestav-contract-20261020"], "Engagement de 12 mois, même en paiement mensuel pour les offres Usage. Les CGS version 26-05 prévoient, sauf conditions particulières, une reconduction annuelle tacite et une opposition au moins un mois avant échéance.", "2026-10-20"),
-    importantUnknowns: ["TVA des dépassements Conformité", "Contrat applicable et restitution : page 90 jours, CGS portabilité PA 12 mois", "Conditions de l’API partenaire", "Certificat et hébergeur applicables à la PA"],
+    importantUnknowns: ["TVA des dépassements Conformité","Contrat applicable : portabilité PA 12 mois, page commerciale 90 jours et documentation opérationnelle à obtenir","Conditions de l’API partenaire","Certificat et hébergeur applicables à la PA"],
 
     integrations: {"value":["API AFNOR XP Z12-013"],"status":"documented","sourceIds":["gestav-partner-20261101"],"checkedAt":"2026-11-01","note":"Intégration proposée aux éditeurs, intégrateurs et cabinets dans l’offre partenaire ; sandbox et documentation fournies après qualification."},
 
     formats: {"value":["Factur-X","UBL","CII"],"status":"documented","sourceIds":["gestav-partner-20261101"],"checkedAt":"2026-11-01","note":"La page partenaire cite explicitement les trois formats du socle pour l’émission et la réception via l’intégration. Le traitement de chaque format dans les autres offres reste à confirmer."},
 
     publicApi: {"value":{"available":true,"includedInFree":false},"status":"documented","sourceIds":["gestav-partner-20261101"],"checkedAt":"2026-11-01","note":"L’offre partenaire décrit une API AFNOR XP Z12-013 pour émettre et recevoir depuis le logiciel métier. Qualification, kit de connexion et environnement de test sur demande précèdent la mise en service. Le tarif est un forfait partenaire plus des volumes séparés en émission et réception, sur devis ; aucun accès gratuit de production n’est établi."},
-  }),
+
+"exportDocumented": {"value":true,"status":"documented","sourceIds":["gestav-cgs-20261112"],"checkedAt":"2026-11-12","note":"Les CGS décrivent la portabilité des factures archivées, pièces associées, adressage, paramétrage et données fiscales, dans un format structuré lisible par machine. Les formats de fichiers précis restent à obtenir. Les conditions particulières et les prestations effectivement souscrites prévalent."}
+}),
   expand({
     slug: "iaf", displayName: "IAF", officialName: "IAF", registeredAt: "2026-06-15",
     summary: "Plateforme française de facturation et point d'accès Peppol, reliée aux logiciels de gestion.",

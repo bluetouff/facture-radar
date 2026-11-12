@@ -1,0 +1,1243 @@
+{
+  "checkedAt": "2026-11-12",
+  "baseline": "b560663f8afd6ef2fa108b25eadddbd6dc96a3e7",
+  "period": {
+    "newInformationSince": "2026-11-01",
+    "historicalIncidentsSince": "2026-09-01"
+  },
+  "actorCount": 53,
+  "entries": [
+    {
+      "platformSlug": "esker",
+      "checkedAt": "2026-11-12",
+      "query": "\"Esker\" incident sécurité disponibilité nouveautés novembre 2026",
+      "resultBatch": 0,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "facnote",
+      "checkedAt": "2026-11-12",
+      "query": "\"Facnote\" facturation nouveautés incident novembre 2026",
+      "resultBatch": 0,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "fiducial-cloud",
+      "checkedAt": "2026-11-12",
+      "query": "\"Fiducial Cloud\" sécurité incident novembre 2026",
+      "resultBatch": 0,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "fiskaltrust",
+      "checkedAt": "2026-11-12",
+      "query": "\"fiskaltrust\" France release incident novembre 2026",
+      "resultBatch": 0,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "flowie",
+      "checkedAt": "2026-11-12",
+      "query": "Flowie logiciel facturation notes version novembre 2026 incident sécurité",
+      "resultBatch": 1,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "fonoa",
+      "checkedAt": "2026-11-12",
+      "query": "Fonoa e-invoicing incident security November 2026 updates",
+      "resultBatch": 1,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "freedz",
+      "checkedAt": "2026-11-12",
+      "query": "Freedz facturation incident sécurité novembre 2026 nouveautés",
+      "resultBatch": 1,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "fulll",
+      "checkedAt": "2026-11-12",
+      "query": "fulll statut incident novembre 2026 facturation PA",
+      "resultBatch": 1,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "generix",
+      "checkedAt": "2026-11-12",
+      "query": "Generix facturation incident sécurité novembre 2026 nouveautés API",
+      "resultBatch": 2,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "gep",
+      "checkedAt": "2026-11-12",
+      "query": "GEP e-invoicing France security incident November 2026 updates",
+      "resultBatch": 2,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "gestav",
+      "checkedAt": "2026-11-12",
+      "query": "Gestav plateforme agréée nouveautés incident novembre 2026",
+      "resultBatch": 2,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "gurusoft",
+      "checkedAt": "2026-11-12",
+      "query": "Gurusoft e-invoicing France incident security November 2026",
+      "resultBatch": 2,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "euro-information",
+      "checkedAt": "2026-11-12",
+      "query": "\"Euro Information\" facturation incident sécurité novembre 2026",
+      "resultBatch": 3,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "iaf",
+      "checkedAt": "2026-11-12",
+      "query": "\"IAF\" plateforme agréée facturation nouveautés incident novembre 2026",
+      "resultBatch": 3,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "iedi",
+      "checkedAt": "2026-11-12",
+      "query": "\"iEDI\" facturation incident sécurité novembre 2026",
+      "resultBatch": 3,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "iga-assurance",
+      "checkedAt": "2026-11-12",
+      "query": "\"IGA Assurance\" plateforme agréée incident novembre 2026",
+      "resultBatch": 3,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "indicom",
+      "checkedAt": "2026-11-12",
+      "query": "\"Indicom\" e-invoicing France incident security November 2026",
+      "resultBatch": 4,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "indy",
+      "checkedAt": "2026-11-12",
+      "query": "\"Indy\" facturation électronique incident sécurité novembre 2026 nouveautés",
+      "resultBatch": 4,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "intesa",
+      "checkedAt": "2026-11-12",
+      "query": "\"Intesa\" e-invoicing France security incident November 2026",
+      "resultBatch": 4,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "paragon",
+      "checkedAt": "2026-11-12",
+      "query": "\"Paragon\" plateforme agréée facturation incident sécurité novembre 2026",
+      "resultBatch": 4,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "invopop",
+      "checkedAt": "2026-11-12",
+      "query": "\"Invopop\" incident status November 2026 France",
+      "resultBatch": 5,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "iopole",
+      "checkedAt": "2026-11-12",
+      "query": "\"IOPOLE\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 5,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "ipaidthat",
+      "checkedAt": "2026-11-12",
+      "query": "\"iPaidThat\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 5,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "itesoft",
+      "checkedAt": "2026-11-12",
+      "query": "\"ITESOFT\" facturation incident sécurité novembre 2026",
+      "resultBatch": 5,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "jefacture",
+      "checkedAt": "2026-11-12",
+      "query": "\"jefacture\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 6,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "klekoon",
+      "checkedAt": "2026-11-12",
+      "query": "\"Klekoon\" plateforme agréée incident nouveautés novembre 2026",
+      "resultBatch": 6,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "kolecto",
+      "checkedAt": "2026-11-12",
+      "query": "\"Kolecto\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 6,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "kolecto-pdp",
+      "checkedAt": "2026-11-12",
+      "query": "\"Kolecto PDP\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 6,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "village-connecte",
+      "checkedAt": "2026-11-12",
+      "query": "\"Le Village Connecté\" plateforme agréée nouveautés incident novembre 2026",
+      "resultBatch": 7,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "legalinvoice",
+      "checkedAt": "2026-11-12",
+      "query": "\"Legalinvoice\" France e-invoicing security November 2026",
+      "resultBatch": 7,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "logilec",
+      "checkedAt": "2026-11-12",
+      "query": "\"Logilec\" incident sécurité novembre 2026 facturation",
+      "resultBatch": 7,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "lucca",
+      "checkedAt": "2026-11-12",
+      "query": "\"Lucca\" statut incident novembre 2026",
+      "resultBatch": 7,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "lundi-matin",
+      "checkedAt": "2026-11-12",
+      "query": "\"Lundi Matin\" facturation électronique nouveautés sécurité novembre 2026",
+      "resultBatch": 8,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "macompta",
+      "checkedAt": "2026-11-12",
+      "query": "\"macompta.fr\" plateforme agréée nouveautés novembre 2026 incident",
+      "resultBatch": 8,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "marosa",
+      "checkedAt": "2026-11-12",
+      "query": "\"Marosa\" incident security e-invoicing France November 2026",
+      "resultBatch": 8,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "medius",
+      "checkedAt": "2026-11-12",
+      "query": "\"Medius\" incident security France e-invoicing November 2026",
+      "resultBatch": 8,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "my-fiteco",
+      "checkedAt": "2026-11-12",
+      "query": "\"My Fiteco\" facturation incident nouveautés novembre 2026",
+      "resultBatch": 9,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "mykinexo",
+      "checkedAt": "2026-11-12",
+      "query": "\"MyKinexo\" incident nouveautés novembre 2026",
+      "resultBatch": 9,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "mysupply",
+      "checkedAt": "2026-11-12",
+      "query": "\"MySupply\" Inexchange incident security November 2026 France",
+      "resultBatch": 9,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "myunisoft",
+      "checkedAt": "2026-11-12",
+      "query": "\"MyUnisoft\" incident novembre 2026",
+      "resultBatch": 9,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "n2f",
+      "checkedAt": "2026-11-12",
+      "query": "\"N2F\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 10,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "neotimo",
+      "checkedAt": "2026-11-12",
+      "query": "\"Neotimo\" incident nouveautés novembre 2026",
+      "resultBatch": 10,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "ntt-data",
+      "checkedAt": "2026-11-12",
+      "query": "\"NTT DATA\" plateforme agréée incident sécurité novembre 2026",
+      "resultBatch": 10,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "odoo",
+      "checkedAt": "2026-11-12",
+      "query": "\"Odoo\" incident sécurité novembre 2026 France",
+      "resultBatch": 10,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "darva",
+      "checkedAt": "2026-11-12",
+      "query": "\"DARVA\" facturation incident sécurité nouveautés novembre 2026",
+      "resultBatch": 11,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "officein",
+      "checkedAt": "2026-11-12",
+      "query": "\"Officein\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 11,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "pagero",
+      "checkedAt": "2026-11-12",
+      "query": "\"Pagero\" France PPF incident November 2026",
+      "resultBatch": 11,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "one-up",
+      "checkedAt": "2026-11-12",
+      "query": "\"One Up\" plateforme agréée incident sécurité novembre 2026",
+      "resultBatch": 11,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "open-bee",
+      "checkedAt": "2026-11-12",
+      "query": "\"Open Bee\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 12,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "opentext",
+      "checkedAt": "2026-11-12",
+      "query": "\"OpenText\" France e-invoicing incident security November 2026",
+      "resultBatch": 12,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "infologic",
+      "checkedAt": "2026-11-12",
+      "query": "\"Infologic\" plateforme agréée incident novembre 2026",
+      "resultBatch": 12,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "payflows",
+      "checkedAt": "2026-11-12",
+      "query": "\"Payflows\" incident sécurité nouveautés novembre 2026",
+      "resultBatch": 12,
+      "status": "searched",
+      "qualification": "Résultats publics examinés ; les pistes retenues sont recoupées avec les sources primaires. Une recherche sans résultat concluant ne mesure pas la disponibilité ou la sécurité."
+    },
+    {
+      "platformSlug": "konica-minolta",
+      "checkedAt": "2026-11-12",
+      "query": "\"Konica Minolta\" \"plateforme agréée\" novembre 2026 sécurité tarif API",
+      "status": "searched",
+      "primaryUrls": [
+        "https://digital-solutions.konicaminolta.fr/faq-client-komi-doc-sans-pa/",
+        "https://digital-solutions.konicaminolta.fr/gestion-documentaire/article-quest-ce-quune-plateforme-agreee-pa/"
+      ],
+      "qualification": "Documentation d’offre distribuée avec Open Bee ; rattachement à la nouvelle entrée légale à confirmer."
+    }
+  ],
+  "batches": [
+    {
+      "id": 0,
+      "queries": [
+        "\"Esker\" incident sécurité disponibilité nouveautés novembre 2026",
+        "\"Facnote\" facturation nouveautés incident novembre 2026",
+        "\"Fiducial Cloud\" sécurité incident novembre 2026",
+        "\"fiskaltrust\" France release incident novembre 2026"
+      ],
+      "resultUrls": [
+        "https://pa.l0g.fr/incidents/",
+        "https://pingoru.io/providers/esker",
+        "https://www.esker.com",
+        "https://quelleplateforme.fr/journal-liste-dgfip-plateformes-agreees.html",
+        "https://fiskaltrust.eu/news/",
+        "https://status.fiskaltrust.eu/",
+        "https://esker.com/fr/ressources/webinars/fall-release-26-registration/",
+        "https://www.esker.com/news/press-release/",
+        "https://esker.com/fr/a-propos-esker/communiques-de-presse/",
+        "https://clivio.fr/facturation-electronique-2026/liste-plateformes-agreees",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://logicielcomptable.net/liste-des-plateformes-agreees-pour-la-facturation-electronique/",
+        "https://pa.l0g.fr/changements/",
+        "https://fiskaltrust.eu/media/toc/terms_conditions_fr.pdf",
+        "https://www.esker.com/sites/default/files/content/esker_document_denregistrement_universel-2019-fr-web_0.pdf",
+        "https://www.arcep.fr/uploads/tx_gsavis/24-2499.pdf",
+        "https://www.theinvoicinghub.com/wp-content/uploads/2026/04/The-Invoicing-Hub-Le-Grand-Benchmark-des-Plateformes-Agreees-3e-edition-Avril-2026.pdf",
+        "https://www.legifiscal.fr/actualites-fiscales/3888-facturation-electronique-publication-liste-plateformes-dematerialisation-partenaires-immatriculees.html?pdf=1"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "828fce343f5bfd5c2a401128da4babff734be3309ff10d7a7fe9e2f9aefb4c4a"
+    },
+    {
+      "id": 1,
+      "queries": [
+        "Flowie logiciel facturation notes version novembre 2026 incident sécurité",
+        "Fonoa e-invoicing incident security November 2026 updates",
+        "Freedz facturation incident sécurité novembre 2026 nouveautés",
+        "fulll statut incident novembre 2026 facturation PA"
+      ],
+      "resultUrls": [
+        "https://stackpulse.app/services/fulll",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.fonoa.com/resources/blog",
+        "https://pa.l0g.fr/changements/",
+        "https://docs.get-flowie.com/changelog",
+        "https://docs.get-flowie.com/contact",
+        "https://www.get-flowie.com/security",
+        "https://www.comparateur-facturation-electronique.fr/produit/fulll/",
+        "https://assistance.fulll.help/fr/support/home",
+        "https://comparer-pa.fr/plateformes/fulll",
+        "https://www.get-flowie.com/trust",
+        "https://verifymcp.io/servers/com-get-flowie-website/get-flowie",
+        "https://mof.gov.ae/wp-content/uploads/2026/02/UAE-Electronic-Invoicing-Guidelines_V-1.0-23Feb2026.pdf",
+        "https://tms.taxoman.gov.om/portal/documents/d/taxportal/monthly-faq-s-pdf",
+        "https://cdip.bnf.fr/GEDKP/100241392842/archimag_385.pdf",
+        "https://www.pwc.com/my/en/assets/publications/tax-in-motion/2026/pwc-tax-in-motion-issue-1.pdf",
+        "https://mof.gov.ae/wp-content/uploads/2025/12/Cabinet-Decision-Violations-and-Penalties-eInvoicing-final-version-en-8.12.25.pdf",
+        "https://taxnews.ey.com/Login/ViewNewsAttachment.aspx?AlertID=184349&AttachmentName=O7Es3P0Bag5A8pMq4NjxSlsu3fWk9rHD7lpwsGhLTPa20vXav%2FRdMf8E0nPZxJ6a&ualertID=null",
+        "https://www.reddit.com/r/Netsuite/comments/1vtm7ee/france_einvoicing_obn_connection_in_sandbox/",
+        "https://www.reddit.com/r/uae_startups/comments/1wafnq4/uae_einvoicing_mandate_has_anyone_started/",
+        "https://www.reddit.com/r/Dynamics365/comments/1wcfe0j/uae_einvoicing_with_dynamics_365_fo_how_are_you/",
+        "https://www.reddit.com/r/france/comments/1wuw1fm/un_mois_apr%C3%A8s_la_r%C3%A9forme_de_la_facturation/",
+        "https://www.reddit.com/r/UAE/comments/1xf7omt/e_invoicing/",
+        "https://www.reddit.com/r/Netsuite/comments/1w5e69v/failing_to_fetch_102_payment_record_for_france/",
+        "https://www.reddit.com/r/taxPH/comments/1xfxfoe/nasuspend_na_yung_seal_badge_sana_pati_rmc/"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "0f2ffcbb6b07857f3cc7bc00c1aa8215ece7ad364493ebd70074b37fe9227b49"
+    },
+    {
+      "id": 2,
+      "queries": [
+        "Generix facturation incident sécurité novembre 2026 nouveautés API",
+        "GEP e-invoicing France security incident November 2026 updates",
+        "Gestav plateforme agréée nouveautés incident novembre 2026",
+        "Gurusoft e-invoicing France incident security November 2026"
+      ],
+      "resultUrls": [
+        "https://pa.l0g.fr/incidents/",
+        "https://isdown.app/status/spendesk/incidents/658869-invoices-new-french-e-invoices-not-received",
+        "https://www.comparateur-facturation-electronique.fr/2026/09/26/pannes-incidents-plateformes-agreees/",
+        "https://doc.entreprise.api.gouv.fr/nouveautes",
+        "https://www.generixgroup.com/fr/ressources/press-releases",
+        "https://avis.monservicesecurise.cyber.gouv.fr/fr/changelog",
+        "https://sharedserviceslink.com/news/france-calls-pas-into-cybersecurity-review",
+        "https://pa.l0g.fr/plateformes/generix/",
+        "https://cyber.gouv.fr/actualites/lanssi-publie-le-rapport-dincident-sur-les-cyberattaques-ayant-touche-la-dgfip/?trk=article-ssr-frontend-pulse_little-text-block",
+        "https://www.erpimplementation.eu/en/aife-einvoicing-security-breach-supply-chain-france-2026/",
+        "https://guru-soft.com/en/france/",
+        "https://facturemetier.fr/plateformes/gurusoft/",
+        "https://www.applium.com/fr/wp-content/uploads/2025/10/Webinaire-GenerixByApplium-reponses-aux-questions.pdf",
+        "https://www.generixgroup.com/wp-content/uploads/2025/10/GIS-Services-Annexe-au-contrat-de-souscription.pdf",
+        "https://echanges.dila.gouv.fr/OPENDATA/AMF/244/8888/01/FC244398397_20210730.pdf",
+        "https://www.generixgroup.com/wp-content/uploads/2025/07/AFNOR-Release_6.7.25_FR.pdf",
+        "https://billentis.com/assets/reports/billentis_report2025_france.pdf",
+        "https://www.reddit.com/r/Netsuite/comments/1vtm7ee/france_einvoicing_obn_connection_in_sandbox/",
+        "https://www.reddit.com/r/france/comments/1vnfgv5/removed/",
+        "https://www.reddit.com/r/impotsfrance/comments/1w67kcs/failing_to_fetch_102_payment_record_for_france/",
+        "https://www.reddit.com/r/Netsuite/comments/1w5e69v/failing_to_fetch_102_payment_record_for_france/",
+        "https://en.wikipedia.org/wiki/2026_European_infrastructure_disruption",
+        "https://www.reddit.com/r/developpeurs/comments/1wklpt2/g%C3%A9n%C3%A9ration_de_pdf_facturx_norme_en_16931_et/",
+        "https://www.reddit.com/r/Entrepreneur/comments/1ncx0me/which_invoicing_tools_are_ready_for_frances/",
+        "https://www.reddit.com/r/SaaS/comments/1w5ctkt/do_you_have_french_business_customers_how_are_you/",
+        "https://www.reddit.com/r/pwnhub/comments/1wv2f28/fakturownia_data_breach_exposes_600000_businesses/",
+        "https://en.wikipedia.org/wiki/2026_European_cold_chain_hacks"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "a8ed5a72155b02b6c35874e1adff83a6298df192ede7aef33c6774baefdbec23"
+    },
+    {
+      "id": 3,
+      "queries": [
+        "\"Euro Information\" facturation incident sécurité novembre 2026",
+        "\"IAF\" plateforme agréée facturation nouveautés incident novembre 2026",
+        "\"iEDI\" facturation incident sécurité novembre 2026",
+        "\"IGA Assurance\" plateforme agréée incident novembre 2026"
+      ],
+      "resultUrls": [
+        "https://comparateur-efacturation.fr/guide/observatoire-facturation-electronique-2026",
+        "https://clara.direct/plateformes-agreees",
+        "https://pa.l0g.fr/plateformes/iga-assurance/",
+        "https://peppolcheck.fr/pdp/iga-assurance",
+        "https://pa.l0g.fr/incidents/",
+        "https://comparateur-efacturation.fr/guide/liste-plateformes-agreees",
+        "https://einvoicemap.com/fr/fr/liste-plateformes-agreees/",
+        "https://plateformes-agreees-facturation.com/plateformes",
+        "https://quelleplateforme.fr/annuaire.html",
+        "https://www.comparateur-facturation-electronique.fr/produit/iaf/",
+        "https://logiciel-de-gestion-commerciale.fr/plateformes-agreees/iga-assurance/",
+        "https://www.devis-factures.com/plateformes-agreees/iga-assurance/",
+        "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.pdf",
+        "https://presse.creditmutuelalliancefederale.fr/wp-content/uploads/2024/09/d45f6ae80288a4b89a32bd7f83834d6a.pdf",
+        "https://echanges.dila.gouv.fr/OPENDATA/AMF/114/8888/01/FC114623258_20260408.pdf",
+        "https://cdnwmsi.e-i.com/SITW/wm/global/1.0.0/WEBA/EPITHETE/assets/produits/hbs-e-factures/2026%20Livre%20blanc%20CIC%20efactures.pdf",
+        "https://www.capeb09.fr/userfiles/files/PJ1_Guide_facturation_electronique_CNOEC.pdf",
+        "https://cdnwmsi.e-i.com/SITW/wm/global/1.0.0/WEBA/BFCM/assets/articles/telechargements/notre-politique-rsm/4.0/2023-DPEF.pdf"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "dc482d48a7051f1f0226a483cee5fa9051c14692aa4868d0f1492bcbd303abbf"
+    },
+    {
+      "id": 4,
+      "queries": [
+        "\"Indicom\" e-invoicing France incident security November 2026",
+        "\"Indy\" facturation électronique incident sécurité novembre 2026 nouveautés",
+        "\"Intesa\" e-invoicing France security incident November 2026",
+        "\"Paragon\" plateforme agréée facturation incident sécurité novembre 2026"
+      ],
+      "resultUrls": [
+        "https://status.useparagon.com/",
+        "https://wikicompta.indy.fr/fr/articles/17058407-pourquoi-je-ne-peux-pas-encore-emettre-mes-factures-electroniques-avec-indy",
+        "https://pa.l0g.fr/incidents/",
+        "https://plateformes-agreees-facturation-electronique.fr/plateformes/paragon/",
+        "https://fr.linkedin.com/posts/paragon-france_le-1er-septembre-est-pass%C3%A9-le-travail-continue-activity-7502997166664183808-TU4G",
+        "https://logicielcomptable.net/liste-des-plateformes-agreees-pour-la-facturation-electronique/",
+        "https://fr.linkedin.com/posts/indyfr_16-nouveaut%C3%A9s-indy-en-6-mois-on-vous-activity-7491433128104955904-UtfR",
+        "https://facturclair.fr/plateformes-agreees/paragon",
+        "https://www.comparateur-facturation-electronique.fr/produit/indy/",
+        "https://plateforme-agree.org/avis/paragon/",
+        "https://comparateur-efacturation.fr/guide/liste-plateformes-agreees",
+        "https://www.paragonvps.com/status",
+        "https://www.dekamer.be/doc/CCRI/pdf/55/ic958.pdf",
+        "https://www.theinvoicinghub.com/wp-content/uploads/2026/04/The-Invoicing-Hub-Le-Grand-Benchmark-des-Plateformes-Agreees-3e-edition-Avril-2026.pdf",
+        "https://www.indy.fr/wp-content/uploads/2025-08-26-Indy-rachete-Lycha-le-logiciel-de-facturation-de-linsurtech-Coover.pdf",
+        "https://www.reddit.com/r/factureelectronique/comments/1x0rpy5/facturation_%C3%A9lectronique_vous_n%C3%AAtes_pas_encore_en/",
+        "https://cloud.esker.fr/fm/others/billentis-report-2025-france-web.pdf",
+        "https://www.dekamer.be/doc/CCRI/pdf/56/ic025.pdf",
+        "https://group.intesasanpaolo.com/content/dam/portalgroup/repository-documenti/investor-relations/bilanci-relazioni-en/2025/30092025_Interim_statement.pdf",
+        "https://fr.wikipedia.org/wiki/Indy_%28logiciel%29",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1w7x34b/le_fisc_sest_fait_pirater_cet_%C3%A9t%C3%A9_la_facturation/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1ta9iyw/facturation_%C3%A9lectonique_un_bon_outil_%C3%A7a_existe/",
+        "https://www.reddit.com/r/autoentrepreneurs/comments/1tszpp8/facturation_indy/",
+        "https://www.reddit.com/r/factureelectronique/comments/1tifbwn/autoentrepreneur_en_franchise_de_tva_vous_%C3%AAtes/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1ux56wp/facturation_%C3%A9lectronique_je_suis_perdu/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1vy1ovp/facturation_%C3%A9lectronique_que_fautil_avoir_fait/",
+        "https://www.reddit.com/r/Italia/comments/1w089cx/data_breach_teamsystem_esposti_iban_e_dati/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1sqbggb/la_fameuse_facturation_%C3%A9lectronique/",
+        "https://www.reddit.com/r/factureelectronique/comments/1u8cnhj/facturation_%C3%A9lectronique_seulement_1_entreprise/",
+        "https://www.reddit.com/r/conseiljuridique/comments/1ux58j6/facturation_%C3%A9lectronique_doisje_faire_des/",
+        "https://www.reddit.com/r/france/comments/1stcfjq/facturation_%C3%A9lectronique_2026_vous_avez_compris/"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "9cd7f967c4dccf1d73bf4b20b40597e5ef0e0513a3aa951613ba3b203e9a50fb"
+    },
+    {
+      "id": 5,
+      "queries": [
+        "\"Invopop\" incident status November 2026 France",
+        "\"IOPOLE\" incident sécurité nouveautés novembre 2026",
+        "\"iPaidThat\" incident sécurité nouveautés novembre 2026",
+        "\"ITESOFT\" facturation incident sécurité novembre 2026"
+      ],
+      "resultUrls": [
+        "https://status.invopop.com/",
+        "https://www.comparateur-facturation-electronique.fr/produit/invopop/",
+        "https://pa.l0g.fr/incidents/",
+        "https://fr.linkedin.com/posts/itesoft_facturation-%C3%A9lectronique-pas-de-report-activity-7500109051733815297-faX7",
+        "https://www.comparateur-facturation-electronique.fr/2026/09/26/pannes-incidents-plateformes-agreees/",
+        "https://pa.l0g.fr/plateformes/itesoft/",
+        "https://peppolstatus.com/providers/invopop/",
+        "https://fr.linkedin.com/posts/iopole_facturation-%C3%A9lectronique-et-cybers%C3%A9curit%C3%A9-activity-7514347840509431808-qP_e",
+        "https://app.ipaidthat.io/fr/securite/",
+        "https://www.intigriti.com/",
+        "https://status.invopop.com/incidents/01KS08Y8JEFNCEQEVPX383MJ1Z",
+        "https://ipaidthat.featurebase.app/fr/changelog",
+        "https://peppolcheck.fr/pdp/invopop",
+        "https://presse.grandesteurope.caisse-epargne.fr/download-pdf/69256caf64deadc1f9004fbb",
+        "https://echanges.dila.gouv.fr/OPENDATA/AMF/112/2025/04/FC112580460_20250429.pdf",
+        "https://billentis.com/assets/reports/billentis_report2025_france.pdf",
+        "https://echanges.dila.gouv.fr/OPENDATA/AMF/ECO/2023/04/FCECO070977_20230428.pdf",
+        "https://contact.itesoft.com/hubfs/2021-ITESOFT-CMS-THEME/9.4%20-%20Presse/Communiques%20de%20presse/ITESOFT_FR_CP_Immatriculation_Provisoire_PDP_ITESOFT_VF.pdf",
+        "https://www.planet-fintech.com/attachment/1596021/",
+        "https://fr.wikipedia.org/wiki/Itesoft"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "8b5be7efc46bc283c3b5c8e8e274eb0f08f3a72983603e14108548e19da72bee"
+    },
+    {
+      "id": 6,
+      "queries": [
+        "\"jefacture\" incident sécurité nouveautés novembre 2026",
+        "\"Klekoon\" plateforme agréée incident nouveautés novembre 2026",
+        "\"Kolecto\" incident sécurité nouveautés novembre 2026",
+        "\"Kolecto PDP\" incident sécurité nouveautés novembre 2026"
+      ],
+      "resultUrls": [
+        "https://quelleplateforme.fr/mises-a-jour.html",
+        "https://clevin.eu/france/plateformes-agreees",
+        "https://plateformes-agreees-facturation-electronique.fr/plateformes/klekoon/",
+        "https://facturoscope.fr/plateformes-agreees/klekoon/",
+        "https://support.kolecto.fr/fr/articles/681802-juin-2026-les-nouveautes-kolecto",
+        "https://www.klekoon.com/",
+        "https://www.why.eu/liste-plateformes-agreees/",
+        "https://plateforme-agree.org/avis/klekoon/",
+        "https://support.welyb.fr/statut-plateforme",
+        "https://facturclair.fr/plateformes-agreees/klekoon",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/klekoon/",
+        "https://www.dolibarr.fr/forum/t/fuite-de-donnees-depuis-la-plate-forme-welyb/51938",
+        "https://www.theinvoicinghub.com/wp-content/uploads/2026/04/The-Invoicing-Hub-Le-Grand-Benchmark-des-Plateformes-Agreees-3e-edition-Avril-2026.pdf",
+        "https://www.ccomptes.fr/sites/default/files/2024-09/BRR2024-19.pdf",
+        "https://www.klekoon.com/GetCalendrierFormation/0",
+        "https://www.klekoon.com/PDF/Application_de_co_signature_KleSign.pdf",
+        "https://d3tspamaz31jkd.cloudfront.net/media/notice_original/unna_5IvZHhK.pdf",
+        "https://www.courdecassation.fr/redirect_QLPX352NS6WJKQHI3PJ3MRXFFIMAD6CNPICX6ID674R76S2PZN6Q%3D%3D%3D%3D/decision/export/6868e99f0cb281e246494139/1"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "38fa74502e9c0cc883fc12e29f140c3ace82fb230a908759ac2489e8759fe343"
+    },
+    {
+      "id": 7,
+      "queries": [
+        "\"Le Village Connecté\" plateforme agréée nouveautés incident novembre 2026",
+        "\"Legalinvoice\" France e-invoicing security November 2026",
+        "\"Logilec\" incident sécurité novembre 2026 facturation",
+        "\"Lucca\" statut incident novembre 2026"
+      ],
+      "resultUrls": [
+        "https://status.lucca.fr/",
+        "https://www.statut-services.fr/service/lucca",
+        "https://www.statut-services.fr/service/lucca/aujourd-hui",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.comparateur-facturation-electronique.fr/produit/le-village-connecte/",
+        "https://alerts.live/en/cities/lucca",
+        "https://pa.l0g.fr/incidents/?plateforme=indy",
+        "https://luccanetweek.it/lucca/allarme-bomba-alla-carducci-di-lucca-genitori-in-attesa/",
+        "https://powercut.io/it/lucca/",
+        "https://supportrca.freshdesk.com/support/solutions/articles/101000555199-faq-facture-%C3%A9lectronique",
+        "https://village-connecte.fr/nos-ressources/",
+        "https://isdown.app/status/lucca/reports-map",
+        "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.pdf",
+        "https://www.er-consultants.com/fr/wp-content/uploads/2026/02/La-facture-electronique-V3.pdf",
+        "https://village-connecte.fr/app/uploads/sites/735/2025/06/AB9-Communique-de-presse-LVC-Le-Village-Connecte-annonce-que-sa-PDP-est-prete-VF.pdf",
+        "https://www.pappers.fr/entreprise/lvc-le-village-connecte-950883231/documents/LVC%20LE%20VILLAGE%20CONNECTE%20-%20Copie%20des%20statuts%20mis%20%C3%A0%20jour%2005-01-2026.pdf",
+        "https://www.pappers.fr/entreprise/le-village-connecte-892703349/documents/LE%20VILLAGE%20CONNECTE%20-%20Statuts%20mis%20%C3%A0%20jour%2001-06-2021.pdf",
+        "https://p1.mouvement.leclerc/sites/default/files/2022-04/Communiquee%CC%8C%20-%20Logilec%2C%20l%27outil%20logistique%20du%20Mouvement%20E.Leclerc%20se%20lance%20dans%20le%20dispositif%20FRET21-240920%20.pdf",
+        "https://it.wikipedia.org/wiki/Lucca"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "4d115647b108559cde83c8b3724a492ae214679c99e9efa96678b84b176059b4"
+    },
+    {
+      "id": 8,
+      "queries": [
+        "\"Lundi Matin\" facturation électronique nouveautés sécurité novembre 2026",
+        "\"macompta.fr\" plateforme agréée nouveautés novembre 2026 incident",
+        "\"Marosa\" incident security e-invoicing France November 2026",
+        "\"Medius\" incident security France e-invoicing November 2026"
+      ],
+      "resultUrls": [
+        "https://help.macompta.fr/fr/articles/715896-reponses-a-vos-questions-sur-la-plateforme-agreee-macompta-fr",
+        "https://www.lundimatin.fr/docs/kit-facturation-electronique",
+        "https://www.francenum.gouv.fr/activateurs/macomptafr",
+        "https://lelabotpe.fr/facturation-electronique/macompta-plateforme-agreee/",
+        "https://investisseurs.macompta.fr/communiques/",
+        "https://help.macompta.fr/fr/articles/806988-recevoir-et-traiter-automatiquement-vos-factures-fournisseurs-via-la-plateforme-agreee",
+        "https://fr.linkedin.com/posts/lundi-matin-sas_facturationelectronique-plateformeagr%C3%A9%C3%A9e-activity-7521836976652828672-o8nj",
+        "https://www.pappers.fr/entreprise/macomptafr-499890424",
+        "https://logiciel-de-gestion-commerciale.fr/plateformes-agreees/macompta-fr/",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.medius.com/blog/frances-e-invoicing-mandate-is-live-and-so-are-our-clients/",
+        "https://facturemetier.fr/plateformes/macompta-fr/",
+        "https://blog.macompta.fr/wp-content/uploads/2026/01/CP-Macompta.fr-devient-Plateforme-Agreee.pdf",
+        "https://investisseurs.macompta.fr/wp-content/uploads/2026/03/20260302_Initiation-de-couverture.pdf",
+        "https://investisseurs.macompta.fr/wp-content/uploads/2025/11/Reponses-aux-questions-ecrites_AG-2025-v2-vdef.pdf",
+        "https://www.airkitchen.fr/uploads/cgv/conditions-particulieres-de-services-lundi-matin.pdf",
+        "https://echanges.dila.gouv.fr/OPENDATA/AMF/ACT/2026/01/FCACT077862_20260115.pdf",
+        "https://www.airkitchen.fr/uploads/cgv/conditions-generales-de-vente-et-services-lundi-matin.pdf"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "8a9649dde13d3afcc0beee9adaab5cb13617f3d99b6839d1a9814cf6795d2192"
+    },
+    {
+      "id": 9,
+      "queries": [
+        "\"My Fiteco\" facturation incident nouveautés novembre 2026",
+        "\"MyKinexo\" incident nouveautés novembre 2026",
+        "\"MySupply\" Inexchange incident security November 2026 France",
+        "\"MyUnisoft\" incident novembre 2026"
+      ],
+      "resultUrls": [
+        "https://meteo.myunisoft.fr/",
+        "https://www.statut-services.fr/service/myunisoft",
+        "https://apps.apple.com/fr/app/my-fiteco/id1391676224",
+        "https://pa.l0g.fr/plateformes/myunisoft/",
+        "https://www.lafabriquedunet.fr/logiciels/gestion/facturation/plateformes-agreees",
+        "https://justuseapp.com/fr/app/1406797684/myunisoft/problems",
+        "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.pdf",
+        "https://www.peppol-id.eu/fr/trends/myunisoft-franchit-le-cap-des-100-000-participants-peppol",
+        "https://www.statut-services.fr/service/myunisoft/aujourd-hui",
+        "https://www.devis-factures.com/logiciels-de-comptabilite/my-fiteco/",
+        "https://catalogue.myunisoft.fr/calendrier",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://myfiteco.fiteco.com/",
+        "https://myunisoft.fr/wp-content/uploads/2025/07/condition-generales-de-vente-myunisoft-07-2025.pdf",
+        "https://www.fiteco.com/wp-content/uploads/2024/09/My-fiteco-DEVIS-FACTURES.pdf",
+        "https://mysupply.ai/wp-content/uploads/sites/17/2024/10/GTC-mysupply-supplier_EN_version-2.0_08.04.2020.pdf",
+        "https://www.myunisoft.fr/outils/o/Pr%C3%A9requis%20Techniques%20MyUnisoft.pdf",
+        "https://www.e-conomic.dk/sites/default/files10/2026-02/Visma_e-conomics_ISAE_3402_Type_2_-_FINAL_040226.pdf"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "b13d9c1afd06bf7f40a7347ee4ba2363ff53713521892276532118881ac7b808"
+    },
+    {
+      "id": 10,
+      "queries": [
+        "\"N2F\" incident sécurité nouveautés novembre 2026",
+        "\"Neotimo\" incident nouveautés novembre 2026",
+        "\"NTT DATA\" plateforme agréée incident sécurité novembre 2026",
+        "\"Odoo\" incident sécurité novembre 2026 France"
+      ],
+      "resultUrls": [
+        "https://leo-cd01.nttdata.com/global/ja/news/release/2026/110200/",
+        "https://www.entireweb.com/fr/status/odoo",
+        "https://japanhacked.jp/en/organizations/ntt-data",
+        "https://plateformes-agreees-facturation-electronique.fr/plateformes/ntt-data/",
+        "https://pa.l0g.fr/incidents/?plateforme=indy",
+        "https://downdetector.fr/statut/odoo/",
+        "https://nttdata-solutions.com/fr/salle-de-presse/",
+        "https://neotimo.com/tutorial",
+        "https://www.actuia.com/domaine/telecommunications/",
+        "https://facturclair.fr/plateformes-agreees/ntt-data-business-solutions",
+        "https://neotimo.com/neo-actu",
+        "https://www.ixemelis.fr/en/blog/news-3/fuite-de-donnees-blgcloud-les-mecanismes-de-l-attaque-et-comment-s-en-premunir-avec-odoo-12",
+        "https://dam.nttdata.com/api/public/content/Radar_114_May_2026?v=cf436465",
+        "https://www.reddit.com/r/Odoo/comments/1wq53tf/whats_going_on_with_odoos_support/",
+        "https://www.theinvoicinghub.com/wp-content/uploads/2026/04/The-Invoicing-Hub-Le-Grand-Benchmark-des-Plateformes-Agreees-3e-edition-Avril-2026.pdf",
+        "https://dam.nttdata.com/api/public/content/Radar-107-October-2025-ENG?v=11a4d9c4",
+        "https://dam.nttdata.com/api/public/content/6a2ec28eb8f4446699f8eccb9c1c25ab?v=c31baef6",
+        "https://nttdata-solutions.com/wp-content/usermedia/NTT-DATA-BS-GSR-2024-2025-EN-WEB.pdf",
+        "https://curia.europa.eu/site/upload/docs/application/pdf/2025-05/liste-web2024_contrats-spec_art3_3-e_p.pdf",
+        "https://www.reddit.com/r/Odoo/comments/1wmcz3l/odoo_wants_us_to_pay_for_13_users_or_face/",
+        "https://www.reddit.com/r/Odoo/comments/1rcj14q/odoo_is_down/",
+        "https://www.reddit.com/r/Odoo/comments/1wdhbbw/bug_odoo/",
+        "https://fr.wikipedia.org/wiki/NTT_Data",
+        "https://www.reddit.com/r/Odoo/comments/1gfmjk4",
+        "https://www.reddit.com/r/Odoo/comments/1rjsh52/odoo_experience/",
+        "https://www.reddit.com/r/Odoo/comments/1nk7xsn/summary_of_odoo_experience_2025_any_blog/",
+        "https://fr.wikipedia.org/wiki/Odoo",
+        "https://www.reddit.com/r/impotsfrance/comments/1w0r5jy/la_facturation_%C3%A9lectronique_en_france_d%C3%A9bute_dans/",
+        "https://fr.wikipedia.org/wiki/Odoo_SA"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "96532e1776625f2c548956fceffbdc443f37486325274a737b6d905baca5e399"
+    },
+    {
+      "id": 11,
+      "queries": [
+        "\"DARVA\" facturation incident sécurité nouveautés novembre 2026",
+        "\"Officein\" incident sécurité nouveautés novembre 2026",
+        "\"Pagero\" France PPF incident November 2026",
+        "\"One Up\" plateforme agréée incident sécurité novembre 2026"
+      ],
+      "resultUrls": [
+        "https://status.pagero.com/",
+        "https://isdown.app/status/pagero/incidents/681918-delays-in-france-s-clearance-flow-due-to-ppf-outage",
+        "https://pa.l0g.fr/incidents/",
+        "https://www.darva.com/fr/actualites/facturation-electronique-ofeli-entre-en-production/",
+        "https://pa.l0g.fr/changements/",
+        "https://support.ebp.com/hc/fr/articles/6047146541213-Nouveaut%C3%A9s-et-corrections-des-versions-Automobile-M%C3%A9Ca",
+        "https://comparateur-efacturation.fr/guide/liste-plateformes-agreees",
+        "https://pa.l0g.fr/plateformes/officein/",
+        "https://digitiz.fr/plateformes-dematerialisation-partenaire-agrees/",
+        "https://peppolcheck.fr/pdp/one-up",
+        "https://www.myfrenchtool.com/plateformes-agreees",
+        "https://facturclair.fr/plateformes-agreees/one-up",
+        "https://assistance.armor-info.fr/MAJMOB/Contenu.pdf",
+        "https://www.darva.com/ts-doc/Politique_Horodatage.pdf",
+        "https://cyber.gouv.fr/sites/default/files/document/catalogue-produits-services-qualifies-agrees-certifies-anssi_0.pdf",
+        "https://www.darva.com/wp-content/uploads/2025/02/dossier_presse.pdf",
+        "https://fr.wikipedia.org/wiki/D%C3%A9veloppement_d%27applications_sur_r%C3%A9seaux_%C3%A0_valeur_ajout%C3%A9e"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "7b66ae9c07f5c695f7f6e37a2345b033ba223ddab51b6b76b0cdb9952abbad3a"
+    },
+    {
+      "id": 12,
+      "queries": [
+        "\"Open Bee\" incident sécurité nouveautés novembre 2026",
+        "\"OpenText\" France e-invoicing incident security November 2026",
+        "\"Infologic\" plateforme agréée incident novembre 2026",
+        "\"Payflows\" incident sécurité nouveautés novembre 2026"
+      ],
+      "resultUrls": [
+        "https://pa.l0g.fr/incidents/",
+        "https://www.openbee.com/notre-actualite/",
+        "https://quelleplateforme.fr/infologic-copilote-est-il-plateforme-agreee.html",
+        "https://www.monauditpa.fr/liste-plateformes-agreees-dgfip",
+        "https://www.openbee.com/presse/",
+        "https://facturematch.fr/plateformes-agreees",
+        "https://fr.linkedin.com/posts/open-bee_et-si-on-parlait-de-la-s%C3%A9curit%C3%A9-de-tous-activity-7518707589807890432-cDpy",
+        "https://www.pingoru.io/providers/opentext/outage-history",
+        "https://clivio.fr/facturation-electronique-2026/liste-plateformes-agreees",
+        "https://www.pulsapi.com/services/opentext/incidents",
+        "https://pa.l0g.fr/incidents/?plateforme=indy",
+        "https://quelleplateforme.fr/annuaire.html",
+        "https://www.opentext.com/fr/media/service-overview/e-invoicing-readiness-check-sro-en.pdf",
+        "https://api-avis-situation-sirene.insee.fr/identification/pdf/91261064900010",
+        "https://actify.fr/entreprises-liquidation-judiciaire/open-bee-france/?print-posts=pdf",
+        "https://contenu.openbee.com/plezi_file/5c74021654067a4162170136/note-securite-hebergement-donnees-open-bee.pdf",
+        "https://www.thegazette.co.uk/London/issue/900760/data.pdf",
+        "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.pdf",
+        "https://fr.wikipedia.org/wiki/OpenText"
+      ],
+      "tool": "web.run",
+      "evidenceFormat": "tool_text",
+      "sha256": "8f7cb4a7a98152e6130baa85be42a603081d7248131bb399aefcb2e6665a36e3"
+    }
+  ],
+  "evidence": [
+    {
+      "key": "esker",
+      "url": "https://www.trustesker.com/?env=G",
+      "finalUrl": "https://www.trustesker.com/?env=G",
+      "status": 200,
+      "bytes": 59896,
+      "sha256": "3cd9d5a92e3a52727e5740f2a19de6d3b024d6d75fe882e250e55bb464bda010",
+      "fetchedAt": "2026-11-12T09:33:27.307405+00:00"
+    },
+    {
+      "key": "fulll",
+      "url": "https://status.fulll.io/en/incidents",
+      "finalUrl": "https://status.fulll.io/en/incidents",
+      "status": 200,
+      "bytes": 197009,
+      "sha256": "06ffd59ceb1f3f3c55ef25db33494644a8378aee412d5a4b75b5e38a84a25bbf",
+      "fetchedAt": "2026-11-12T09:33:27.478248+00:00"
+    },
+    {
+      "key": "pagero",
+      "url": "https://status.pagero.com/",
+      "finalUrl": "https://status.pagero.com/",
+      "status": 200,
+      "bytes": 135148,
+      "sha256": "102f52bf822ad31ac1fb19f5cca970d23ce0bcaa68de3c08f52528bb96565e6b",
+      "fetchedAt": "2026-11-12T09:33:27.860793+00:00"
+    },
+    {
+      "key": "myunisoft",
+      "url": "https://meteo.myunisoft.fr/api/incidents.json",
+      "finalUrl": "https://meteo.myunisoft.fr/api/incidents.json",
+      "status": 200,
+      "bytes": 12642,
+      "sha256": "a4dc08e7d37739d21bee19a440bd4cbee0ba1a97157dae517a873be6eed4ef10",
+      "fetchedAt": "2026-11-12T09:33:27.312350+00:00"
+    },
+    {
+      "key": "flowie-changelog",
+      "url": "https://docs.get-flowie.com/changelog",
+      "finalUrl": "https://docs.get-flowie.com/changelog",
+      "status": 200,
+      "bytes": 347792,
+      "sha256": "b51ae16c95a7fe3ebe5b1ccadbef0d9ed50b3b5931c0950f4c731ac75beb6f1c",
+      "fetchedAt": "2026-11-12T09:33:27.563353+00:00"
+    },
+    {
+      "key": "fulll-1120747",
+      "url": "https://status.fulll.io/en/incident/1120747",
+      "finalUrl": "https://status.fulll.io/en/incident/1120747",
+      "status": 200,
+      "bytes": 163125,
+      "sha256": "fb0b23fc068d7e1929782b6ec95bc53f9692bc844e8a2e508fe334a7eb8fb6a5",
+      "fetchedAt": "2026-11-12T09:35:25.559897+00:00"
+    },
+    {
+      "key": "fulll-1119878",
+      "url": "https://status.fulll.io/en/incident/1119878",
+      "finalUrl": "https://status.fulll.io/en/incident/1119878",
+      "status": 200,
+      "bytes": 242611,
+      "sha256": "ff086695f62bd988c419c32899e650efe70c39aceb0bc10a17b12adc72b41732",
+      "fetchedAt": "2026-11-12T09:35:25.579259+00:00"
+    },
+    {
+      "key": "fulll-1116679",
+      "url": "https://status.fulll.io/en/incident/1116679",
+      "finalUrl": "https://status.fulll.io/en/incident/1116679",
+      "status": 200,
+      "bytes": 130541,
+      "sha256": "d223bc84207b5cff49cfcecc9325744515654aaaf3634147d8fcd2bfd906f90c",
+      "fetchedAt": "2026-11-12T09:35:25.528159+00:00"
+    },
+    {
+      "key": "fulll-1116653",
+      "url": "https://status.fulll.io/en/incident/1116653",
+      "finalUrl": "https://status.fulll.io/en/incident/1116653",
+      "status": 200,
+      "bytes": 139600,
+      "sha256": "994e4ddb1cf8195c3981899b8625a2f80ddb8a0b02543f72aaa5c49e65624be1",
+      "fetchedAt": "2026-11-12T09:35:25.530662+00:00"
+    },
+    {
+      "key": "fulll-1115547",
+      "url": "https://status.fulll.io/en/incident/1115547",
+      "finalUrl": "https://status.fulll.io/en/incident/1115547",
+      "status": 200,
+      "bytes": 132837,
+      "sha256": "090dbc3558851a6cbaa4541b4240099989e38a999f100333f796eac00facaa49",
+      "fetchedAt": "2026-11-12T09:35:25.745517+00:00"
+    },
+    {
+      "key": "fulll-1112385",
+      "url": "https://status.fulll.io/en/incident/1112385",
+      "finalUrl": "https://status.fulll.io/en/incident/1112385",
+      "status": 200,
+      "bytes": 132831,
+      "sha256": "f25a6f9f2cba6ff5711dad38f676fde50ad8d84455b54ed964cf2298f099a820",
+      "fetchedAt": "2026-11-12T09:35:25.781479+00:00"
+    },
+    {
+      "key": "gestav-cgv",
+      "url": "https://gestav.com/cgv",
+      "finalUrl": "https://gestav.com/cgv",
+      "status": 200,
+      "bytes": 372131,
+      "sha256": "7b6c7d54d5ef04d97633588b459c2cd6d3310edab36b85075eccd53dd69b5c5d",
+      "fetchedAt": "2026-11-12T09:35:25.863090+00:00"
+    },
+    {
+      "key": "gestav-portability",
+      "url": "https://gestav.com/portabilite",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "klekoon",
+      "url": "https://www.klekoon.com/facturation-electronique",
+      "error": "<urlopen error [Errno 54] Connection reset by peer>"
+    },
+    {
+      "key": "macompta-reception",
+      "url": "https://help.macompta.fr/fr/articles/806988-recevoir-et-traiter-automatiquement-vos-factures-fournisseurs-via-la-plateforme-agreee",
+      "finalUrl": "https://help.macompta.fr/fr/articles/806988-recevoir-et-traiter-automatiquement-vos-factures-fournisseurs-via-la-plateforme-agreee",
+      "status": 200,
+      "bytes": 157446,
+      "sha256": "b27f2392509045dad9163555f286f84d275035fbf901f5e94d64d1aaa3354090",
+      "fetchedAt": "2026-11-12T09:35:26.296692+00:00"
+    },
+    {
+      "key": "konica-faq",
+      "url": "https://digital-solutions.konicaminolta.fr/faq-client-komi-doc-sans-pa/",
+      "finalUrl": "https://digital-solutions.konicaminolta.fr/faq-client-komi-doc-sans-pa/",
+      "status": 200,
+      "bytes": 114946,
+      "sha256": "f3061203e82a25b5df86188c410ba2482c106d69fd486b48e3632a8bed979841",
+      "fetchedAt": "2026-11-12T09:35:26.262586+00:00"
+    },
+    {
+      "key": "konica-pa",
+      "url": "https://digital-solutions.konicaminolta.fr/gestion-documentaire/article-quest-ce-quune-plateforme-agreee-pa/",
+      "finalUrl": "https://digital-solutions.konicaminolta.fr/gestion-documentaire/article-quest-ce-quune-plateforme-agreee-pa/",
+      "status": 200,
+      "bytes": 106199,
+      "sha256": "fe335952c7b5273d39427a59d12a1a4efb5cc30386d532593cd5a9444d4a0457",
+      "fetchedAt": "2026-11-12T09:35:26.262304+00:00"
+    },
+    {
+      "key": "flowie-procurement",
+      "url": "https://docs.get-flowie.com/guides/procurement",
+      "finalUrl": "https://docs.get-flowie.com/guides/procurement",
+      "status": 200,
+      "bytes": 42460,
+      "sha256": "e95c3910e4729c282e418133c9ba842f2104ffad762f6dcd93330e810213360d",
+      "fetchedAt": "2026-11-12T09:35:26.018578+00:00"
+    },
+    {
+      "key": "pagero-delivery",
+      "url": "https://status.pagero.com/incidents/rbhs8s3vcrnq",
+      "finalUrl": "https://status.pagero.com/incidents/rbhs8s3vcrnq",
+      "status": 200,
+      "bytes": 59893,
+      "sha256": "a01db88831088fc2ee793a64a6a1fd94829ad1d3306b53c277568fb7430e1bb2",
+      "fetchedAt": "2026-11-12T09:38:05.124783+00:00"
+    },
+    {
+      "key": "pagero-clearance",
+      "url": "https://status.pagero.com/incidents/tmcf9ljd0z83",
+      "finalUrl": "https://status.pagero.com/incidents/tmcf9ljd0z83",
+      "status": 200,
+      "bytes": 56520,
+      "sha256": "4d2c63bbedba12d6f13e2318d70caf0acd0c6a48f1707a7f7356091494c19101",
+      "fetchedAt": "2026-11-12T09:38:05.031912+00:00"
+    },
+    {
+      "key": "lucca-eu2",
+      "url": "https://status.lucca.fr/incidents/zhgqxpryvyj6",
+      "finalUrl": "https://status.lucca.fr/incidents/zhgqxpryvyj6",
+      "status": 200,
+      "bytes": 76054,
+      "sha256": "db26735c07d667bb4a54002211ef0e4ff35484934ab951291c5b0af3850c25e3",
+      "fetchedAt": "2026-11-12T09:38:05.104184+00:00"
+    },
+    {
+      "key": "ntt-japan-security",
+      "url": "https://www.nttdata.com/global/ja/news/release/2026/110200/",
+      "finalUrl": "https://www.nttdata.com/global/ja/news/release/2026/110200/",
+      "status": 200,
+      "bytes": 40708,
+      "sha256": "3addd32691a73e93d6327b441722fdf305bfde82b7755e7af330951dbc449663",
+      "fetchedAt": "2026-11-12T09:38:05.271390+00:00"
+    },
+    {
+      "key": "esker.html",
+      "provenance": "collecte publique déterministe réutilisée",
+      "status": 200,
+      "bytes": 59896,
+      "sha256": "8ac54fde06f26fa2730a07620002244dbef9c29201ad3c723623657b8322c39b",
+      "fetchedAt": "2026-11-12T09:32:17.128Z",
+      "archivePath": "tmp/incident-watch/2026-11-12T09-32-17-128Z/esker.html"
+    },
+    {
+      "key": "fiskaltrust.xml",
+      "provenance": "collecte publique déterministe réutilisée",
+      "status": 200,
+      "bytes": 6188,
+      "sha256": "4ce4eed53dddf86745dd19e2f63acfac190da197acfb1eaa69a65554d6f9eb8c",
+      "fetchedAt": "2026-11-12T09:32:17.128Z",
+      "archivePath": "tmp/incident-watch/2026-11-12T09-32-17-128Z/fiskaltrust.xml"
+    },
+    {
+      "key": "flowie.xml",
+      "provenance": "collecte publique déterministe réutilisée",
+      "status": 200,
+      "bytes": 444,
+      "sha256": "dadeacf3710d73e30dd81ca0b5292389d46e98581002f4b199a989ac3e901cbc",
+      "fetchedAt": "2026-11-12T09:32:17.128Z",
+      "archivePath": "tmp/incident-watch/2026-11-12T09-32-17-128Z/flowie.xml"
+    },
+    {
+      "key": "invopop.xml",
+      "provenance": "collecte publique déterministe réutilisée",
+      "status": 200,
+      "bytes": 3004,
+      "sha256": "ab57c49ae1fabdd8917aa77e1586e2417ae2e0c5dee0f06b48c068b5c990788a",
+      "fetchedAt": "2026-11-12T09:32:17.128Z",
+      "archivePath": "tmp/incident-watch/2026-11-12T09-32-17-128Z/invopop.xml"
+    },
+    {
+      "key": "lucca.xml",
+      "provenance": "collecte publique déterministe réutilisée",
+      "status": 200,
+      "bytes": 64931,
+      "sha256": "fd46f3957c56d50ca0ca78c12253090ea4a81b42dc623bed77252c69f9644a85",
+      "fetchedAt": "2026-11-12T09:32:17.128Z",
+      "archivePath": "tmp/incident-watch/2026-11-12T09-32-17-128Z/lucca.xml"
+    },
+    {
+      "key": "myunisoft.json",
+      "provenance": "collecte publique déterministe réutilisée",
+      "status": 200,
+      "bytes": 12642,
+      "sha256": "a4dc08e7d37739d21bee19a440bd4cbee0ba1a97157dae517a873be6eed4ef10",
+      "fetchedAt": "2026-11-12T09:32:17.128Z",
+      "archivePath": "tmp/incident-watch/2026-11-12T09-32-17-128Z/myunisoft.json"
+    },
+    {
+      "key": "n2f.xml",
+      "provenance": "collecte publique déterministe réutilisée",
+      "status": 200,
+      "bytes": 8464,
+      "sha256": "e8febae3b07f98c6add2eba9c65fd81ccba9ac378ec1580ddb9a6ea0955afaac",
+      "fetchedAt": "2026-11-12T09:32:17.128Z",
+      "archivePath": "tmp/incident-watch/2026-11-12T09-32-17-128Z/n2f.xml"
+    }
+  ],
+  "profileFindings": [
+    {
+      "platformSlug": "flowie",
+      "fields": [
+        "publicApi",
+        "exportDocumented",
+        "importantUnknowns"
+      ]
+    },
+    {
+      "platformSlug": "gestav",
+      "fields": [
+        "exportDocumented",
+        "importantUnknowns"
+      ]
+    },
+    {
+      "platformSlug": "macompta",
+      "fields": [
+        "receivesInvoices"
+      ]
+    }
+  ],
+  "incidentIds": [
+    "fulll-1112385",
+    "fulll-1115547",
+    "fulll-authentication-20261105",
+    "fulll-1119878",
+    "fulll-1120747",
+    "lucca-zhgqxpryvyj6",
+    "esker-peppol-20261029"
+  ],
+  "updatedIncidentIds": [
+    "pagero-ppf-20261101"
+  ],
+  "exclusions": [
+    {
+      "platformSlug": "esker",
+      "url": "https://pingoru.io/providers/esker",
+      "reason": "Le moniteur tiers décrit deux composants PA/Document Processing partiellement indisponibles le 9 novembre de 07:30 à 07:40 UTC. Aucune notification correspondante n’est retrouvée sur la page primaire courante. Ne pas transformer ces observations de surveillance ni leur intervalle échantillonné en incident primaire confirmé ou en durée de panne."
+    },
+    {
+      "platformSlug": "ntt-data",
+      "url": "https://www.nttdata.com/global/ja/news/release/2026/110200/",
+      "reason": "Incident confirmé par NTT DATA le 2 novembre, mais services de titres financiers STdirectServices au Japon et SaaS Securitize Japan. Le communiqué décrit accès non autorisé le 29 octobre et données d’investisseurs, sans lien avec NTT DATA Business Solutions PA française. Hors périmètre du journal de facturation."
+    },
+    {
+      "platformSlug": "pagero",
+      "url": "https://status.pagero.com/",
+      "reason": "Le ralentissement EU1/Schematron des 4–5 novembre exclut explicitement EU2 France. Les incidents de rapprochement Nordea sont bancaires suédois. Les opérations Chorus Pro des 7, 10 et 14 sont des maintenances planifiées, dont celle du 14 est future au contrôle."
+    },
+    {
+      "platformSlug": "fulll",
+      "url": "https://status.fulll.io/en/incidents",
+      "reason": "Maintenance Production Compta/Paie du 5 novembre distincte des incidents de disponibilité ; hors compteur. L’avis 1116679 est regroupé avec 1116653 pour éviter un doublon d’accès."
+    },
+    {
+      "platformSlug": "flowie",
+      "url": "https://docs.get-flowie.com/changelog",
+      "reason": "Les correctifs SIREN, journaux de requête et OAuth de novembre sont des notes produit. Ils ne déclarent pas d’accès non autorisé ou de compromission."
+    },
+    {
+      "platformSlug": "gestav",
+      "url": "https://gestav.com/portabilite",
+      "reason": "Chemin cité dans les CGS répondant 404 au contrôle. Les modalités contractuelles restent documentées, mais aucun inventaire opérationnel de formats n’est prétendu avoir été lu."
+    },
+    {
+      "platformSlug": "klekoon",
+      "url": "https://www.klekoon.com/facturation-electronique",
+      "reason": "Lecture directe interrompue par le serveur. Le prix 5 €/mois vu chez des tiers n’est pas ajouté sans clarification HT/TTC et périmètre primaire."
+    }
+  ],
+  "limits": [
+    "Recherche web publique nominative ; avis privés, pages non indexées ou historiques retirés hors couverture complète.",
+    "Les heures de notification, de début réel et de reprise restent distinctes.",
+    "Les lectures HTTP en échec sont archivées ; elles ne constituent pas des incidents des éditeurs."
+  ],
+  "primaryEvidence": [
+    {
+      "sourceId": "esker-peppol-20261029-20261112",
+      "url": "https://www.trustesker.com/?env=G",
+      "retrievedOn": "2026-11-12",
+      "evidenceFormat": "tool_text",
+      "sha256": "30dad869aa87bfe7f3f8210f4a8532663b19013e8925c6a82fe09a6ea88b834e",
+      "quotation": "Peppol services were interrupted from Wednesday, October 28 10:30pm CET to Thursday, October 29 00:30am CET.",
+      "parsedPublication": "2026-10-29T10:11:00Z",
+      "interpretation": "Capture indexée de la page primaire : erreurs de vérification d’expéditeur, reprise Peppol rapportée, retraitement chez Esker encore recherché. Le message a disparu de la lecture HTTP directe du 12 novembre ; sa fin n’est pas déduite."
+    }
+  ]
+}

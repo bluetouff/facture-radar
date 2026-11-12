@@ -24,7 +24,7 @@ const corpusSelectionSchema = z.object({
     reach: z.string().min(1),
     reachSourceIds: z.array(z.string().min(1)).min(1),
     reason: z.string().min(1),
-  })).length(155),
+  })).length(159),
   replaced: z.array(z.object({
     slug: z.string().regex(/^[a-z0-9-]+$/),
     reason: z.string().min(1),
@@ -40,7 +40,7 @@ const checkedSiteObservations = publicSiteObservationsSchema.parse(publicSiteObs
 const sourceIds = new Set(checkedSources.map((source) => source.id));
 if (sourceIds.size !== checkedSources.length) throw new Error("Un identifiant de source est dupliqué");
 const sourcesById = new Map(checkedSources.map((source) => [source.id, source]));
-const officialPlatformSourceIds = new Set(["dgfip-list-2026-09-10", "dgfip-list-20261014", "dgfip-list-20261101"]);
+const officialPlatformSourceIds = new Set(["dgfip-list-2026-09-10", "dgfip-list-20261014", "dgfip-list-20261101", "dgfip-list-20261112"]);
 const hasOfficialPlatformSource = (sourceIds: readonly string[]) => sourceIds.some((sourceId) =>
   officialPlatformSourceIds.has(sourceId) && sourcesById.get(sourceId)?.type === "official-list",
 );
@@ -326,11 +326,11 @@ for (const source of checkedSources) {
   if (!referencedSourceIds.has(source.id)) throw new Error(`Source orpheline non liée au corpus : ${source.id}`);
 }
 
-if (officialDirectory.approved.length !== 155) {
-  throw new Error(`La liste approuvée doit contenir 155 opérateurs, reçu ${officialDirectory.approved.length}`);
+if (officialDirectory.approved.length !== 159) {
+  throw new Error(`La liste approuvée doit contenir 159 opérateurs, reçu ${officialDirectory.approved.length}`);
 }
-if (officialDirectory.pending.length !== 10) {
-  throw new Error(`La liste en attente doit contenir 10 opérateurs, reçu ${officialDirectory.pending.length}`);
+if (officialDirectory.pending.length !== 6) {
+  throw new Error(`La liste en attente doit contenir 6 opérateurs, reçu ${officialDirectory.pending.length}`);
 }
 
 console.log(`Données valides : ${checkedPlatforms.length} fiches sélectionnées, ${checkedSources.length} sources liées, ${checkedPassportRoutes.length} routes Passeport, ${officialDirectory.approved.length} PA approuvées, ${officialDirectory.pending.length} en attente.`);
