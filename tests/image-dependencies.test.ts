@@ -19,10 +19,10 @@ function assertMinimum(version: string, minimum: readonly number[], name: string
   }
 }
 
-test("le lock exclut les versions Astro et Sharp affectées par les alertes AVIF", () => {
-  // GHSA-26w7-cxv4-gfx2 and GHSA-rgj7-g3m4-5g8c; include nested/platform copies.
+test("le lock exclut les versions Astro et Sharp affectées par les alertes connues", () => {
+  // AVIF, GHSA-mh32-jxcr-mh9f and GHSA-r3h5-4585-7x3w; include nested/platform copies.
   const requirements = [
-    { path: /(?:^|\/)node_modules\/astro$/, minimum: [7, 2, 8] },
+    { path: /(?:^|\/)node_modules\/astro$/, minimum: [7, 4, 7] },
     { path: /(?:^|\/)node_modules\/sharp$/, minimum: [0, 35, 4] },
     { path: /(?:^|\/)node_modules\/@img\/sharp-(?!libvips-)/, minimum: [0, 35, 4] },
     { path: /(?:^|\/)node_modules\/@img\/sharp-libvips-/, minimum: [1, 3, 3] },
@@ -38,6 +38,7 @@ test("le lock exclut les versions Astro et Sharp affectées par les alertes AVIF
 });
 
 test("le service image charge Sharp et libheif corrigés", () => {
+  assertMinimum(require("astro/package.json").version, [7, 4, 7], "Astro chargé");
   assertMinimum(sharp.versions.sharp, [0, 35, 4], "Sharp chargé par Astro");
   assertMinimum(sharp.versions.heif, [1, 23, 2], "libheif chargé par Sharp");
 });
