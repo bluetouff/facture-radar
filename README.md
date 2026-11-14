@@ -22,7 +22,7 @@ PA Check vise une réponse immédiatement utile. Chaque information importante c
 
 ## Lancer le projet
 
-Prérequis : Node.js 22 ou plus récent.
+Prérequis : Node.js 22.23.4 ou plus récent.
 
 ```bash
 npm ci
@@ -42,7 +42,7 @@ npm run data:refresh -- /chemin/liste-approuvees.xlsx /chemin/liste-attente.xlsx
 
 `npm run build` valide les données, vérifie les composants Astro, exécute les tests, génère le site statique dans `dist/` puis construit le serveur MCP autonome dans `dist-mcp/`.
 
-L’import des classeurs officiels (`npm run data:refresh`) utilise Python 3 et sa bibliothèque standard. Le build requiert Node ≥22.19 ; le bundle MCP est testé séparément sous Node 20.19.2 en CI.
+L’import des classeurs officiels (`npm run data:refresh`) utilise Python 3 et sa bibliothèque standard. Le build requiert Node ≥22.23.4 ; le bundle MCP est testé séparément sous Node 20.19.2 en CI.
 
 ## Accès pour les agents
 
