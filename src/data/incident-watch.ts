@@ -7,7 +7,7 @@ import rawResearch from "./incident-research.json" with { type: "json" };
 import { incidentDateAfter } from "../lib/incident-dates.ts";
 
 export const INCIDENT_WATCH_SINCE = "2026-09-01";
-export const INCIDENT_WATCH_CHECKED_AT = "2026-11-12";
+export const INCIDENT_WATCH_CHECKED_AT = "2026-11-16";
 const timestamp = z.union([z.iso.datetime({ offset: true }), z.iso.date()]);
 export const incidentSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
@@ -419,6 +419,307 @@ const novemberCoverage: Record<string, { platformSlug: string; sourceIds: string
     "note": "La page Welyb conserve le rétablissement des modifications de statuts annoncé le 16 octobre. Le connecteur et l’infrastructure de la PA gardent leurs périmètres distincts."
   }
 };
+const november16Coverage: Record<string, { platformSlug: string; sourceIds: string[]; checkedAt: string; status: "partial" | "reviewed"; note: string }> = {
+  "avalara": {
+    "platformSlug": "avalara",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": ["avalara-watch-2026-09","avalara-vat-20261116"],
+    "note": "Avis VAT Reporting du 16 novembre relu et exclu du journal faute de rattachement à la facturation électronique française. Les maintenances restent séparées. L’avis VAT Reporting du 16 novembre décrit les déclarations fiscales cloud, sans lien établi avec la PA française ; il reste hors du journal."
+  },
+  "axway": {
+    "platformSlug": "axway",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "axway-watch-2026-09"
+    ],
+    "note": "Compte rendu Amplify Fusion du 4 novembre relu, dernière mise à jour du 11 : plan de contrôle américain, flux de données déclarés actifs. Hors périmètre PA France."
+  },
+  "blg": {
+    "platformSlug": "blg",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "blg-watch-2026-09"
+    ],
+    "note": "Flux de disponibilité relu. Le communiqué de sécurité du 10 septembre reste le dernier suivi primaire qualifié pour l’exfiltration de l’été."
+  },
+  "docoon": {
+    "platformSlug": "docoon",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "docoon-invoice-watch-20260920"
+    ],
+    "note": "Flux ou API public relu le 16 novembre ; les avis nouveaux restent qualifiés par service, pays et nature avant publication."
+  },
+  "dokapi": {
+    "platformSlug": "dokapi",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "dokapi-watch-2026-09"
+    ],
+    "note": "Flux ou API public relu le 16 novembre ; les avis nouveaux restent qualifiés par service, pays et nature avant publication."
+  },
+  "ecosio-intercom": {
+    "platformSlug": "ecosio-intercom",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "ecosio-intercom-watch-2026-09"
+    ],
+    "note": "Flux ou API public relu le 16 novembre ; les avis nouveaux restent qualifiés par service, pays et nature avant publication."
+  },
+  "eezi": {
+    "platformSlug": "eezi",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "eezi-watch-2026-09"
+    ],
+    "note": "Flux ou API public relu le 16 novembre ; les avis nouveaux restent qualifiés par service, pays et nature avant publication."
+  },
+  "ademico": {
+    "platformSlug": "ademico",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "ademico-watch-2026-09"
+    ],
+    "note": "Flux ou API public relu le 16 novembre ; les avis nouveaux restent qualifiés par service, pays et nature avant publication."
+  },
+  "abby": {
+    "platformSlug": "abby",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "abby-status-20261112"
+    ],
+    "note": "RSS public relu, sans entrée dans la fenêtre retournée. Sa date de canal ancienne limite son utilité pour établir un historique."
+  },
+  "cecurity": {
+    "platformSlug": "cecurity",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": ["cecurity-status-20261116","welyb-status-20261116","cecurity-4cj1y96440xl-review-20261116","cecurity-n1tp3ns7qq2r-review-20261116","cecurity-d1w80mcc2gbr-review-20261116","cecurity-ftxpms96h2x9-review-20261116","cecurity-d5vhdjf02pdb-review-20261116","cecurity-q3d0ytg0cvhy-review-20261116","cecurity-szq1qc4980vj-review-20261116","cecurity-php-review-20261116"],
+    "note": "Historique officiel Cecurity relu de septembre à novembre : six avis de facturation historiques ajoutés et un avis de réception MFA Office 365 du 13 novembre. Les flux RSS et Atom annoncés répondent 404 et ne sont pas raccordés. Welyb annonce les factures manquantes récupérées le 29 octobre. La maintenance préventive PHP de Factomos reste séparée des incidents ; aucune exploitation n’est annoncée dans cet avis."
+  },
+  "docuware": {
+    "platformSlug": "docuware",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "docuware-m365-20261112-review-20261116"
+    ],
+    "note": "Avis global du 12 novembre : envoi et importation des e-mails Microsoft 365, reprise puis résolution annoncée le 14. Le traitement de la PA France demeure non précisé ; avis de test du 5 novembre exclu."
+  },
+  "dext": {
+    "platformSlug": "dext",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "sourceIds": [
+      "dext-status-20261116"
+    ],
+    "note": "Rapport public Dext Prepare Web App relu le 16 novembre : contrôles HTTP du 10 au 16 affichés opérationnels. La portée de ce contrôle applicatif sur sept jours reste distincte de l’historique PA."
+  },
+  "esker": {
+    "platformSlug": "esker",
+    "checkedAt": "2026-11-16",
+    "sourceIds": [
+      "esker-status-20261116"
+    ],
+    "status": "partial",
+    "note": "La page courante n’affiche pas de nouvel avis ni de clôture explicite des alertes historiques retirées. Les pistes de moniteurs tiers restent séparées du journal."
+  },
+  "fiskaltrust": {
+    "platformSlug": "fiskaltrust",
+    "checkedAt": "2026-11-16",
+    "sourceIds": [
+      "fiskaltrust-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Flux officiel relu le 16 novembre. Les avis publiés restent limités aux composants et à la fenêtre accessibles."
+  },
+  "flowie": {
+    "platformSlug": "flowie",
+    "checkedAt": "2026-11-16",
+    "sourceIds": [
+      "flowie-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Flux officiel relu le 16 novembre. Les avis publiés restent limités aux composants et à la fenêtre accessibles."
+  },
+  "invopop": {
+    "platformSlug": "invopop",
+    "checkedAt": "2026-11-16",
+    "sourceIds": [
+      "invopop-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Flux officiel relu le 16 novembre. Les avis publiés restent limités aux composants et à la fenêtre accessibles."
+  },
+  "lucca": {
+    "platformSlug": "lucca",
+    "checkedAt": "2026-11-16",
+    "sourceIds": [
+      "lucca-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Le flux conserve l’incident EU2 du 3 novembre déjà publié et une maintenance prévue le 18 novembre ; celle-ci est exclue des incidents."
+  },
+  "myunisoft": {
+    "platformSlug": "myunisoft",
+    "checkedAt": "2026-11-16",
+    "sourceIds": [
+      "myunisoft-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Page et calendrier relus : l’accès à Gestion financière, hors gamme First, est annoncé rétabli le 13 novembre. Les horaires de la page restent sans fuseau et la PA n’est pas nommée."
+  },
+  "n2f": {
+    "platformSlug": "n2f",
+    "checkedAt": "2026-11-16",
+    "sourceIds": [
+      "n2f-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Flux officiel relu le 16 novembre. Les avis publiés restent limités aux composants et à la fenêtre accessibles."
+  },
+  "fulll": {
+    "platformSlug": "fulll",
+    "checkedAt": "2026-11-16",
+    "sourceIds": [
+      "fulll-status-20261116"
+    ],
+    "status": "partial",
+    "note": "Pages et RSS officiels relus : trois avis applicatifs ajoutés les 13, 14 et 16 novembre, tous annoncés rétablis. Le RSS est proposé pour le même relevé quotidien, sans surveillance supplémentaire."
+  },
+  "sage": {
+    "platformSlug": "sage",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "L’avis Cloud Services du 13 novembre nomme Ciel Données Mobiles France et les codes e-mail Microsoft. Sage annonce la clôture le 16. Les avis étrangers du flux sont exclus du journal français.",
+    "sourceIds": [
+      "sage-status-2026-09",
+      "sage-ctpq7mlgypct-20261116"
+    ]
+  },
+  "pagero": {
+    "platformSlug": "pagero",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "Le support par e-mail est annoncé rétabli le 13 novembre après la perturbation Exchange. L’avis Nordea porte sur la compensation suédoise ; les maintenances Chorus Pro restent exclues du décompte.",
+    "sourceIds": [
+      "pagero-csbgcpdbx24r-20261116"
+    ]
+  },
+  "tungsten": {
+    "platformSlug": "tungsten",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "Un avis européen de surveillance des intégrations e-mail, dont eInvoice Connect et eInvoice Network, est clôturé le 16 novembre. Les effets précis sur la PA française restent à établir. Printix seul et les maintenances demeurent hors compteur.",
+    "sourceIds": [
+      "tungsten-watch-2026-09",
+      "tungsten-email-20261112-20261116"
+    ]
+  },
+  "superpdp": {
+    "platformSlug": "superpdp",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "La page courante affiche l’API opérationnelle ; l’historique conserve l’alerte du 5 novembre sans reprise datée. L’état de cet avis reste non précisé.",
+    "sourceIds": [
+      "superpdp-watch-2026-09",
+      "superpdp-history-20261116"
+    ]
+  },
+  "veryswing": {
+    "platformSlug": "veryswing",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "L’avis VSDB conserve la résolution publiée le 5 novembre. Le périmètre reste celui de la réplication du groupe 1, distinct des flux PA.",
+    "sourceIds": [
+      "veryswing-watch-2026-09",
+      "veryswing-201-resolution-20261112"
+    ]
+  },
+  "pennylane": {
+    "platformSlug": "pennylane",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "Le flux conserve la résolution du 10 novembre pour l’application web. Le livre blanc sécurité v3.1 complète séparément la fiche ; son édition d’octobre reste distincte de cette date de revue.",
+    "sourceIds": [
+      "pennylane-status-2026-09",
+      "pennylane-hn2l065z54hr-20261112"
+    ]
+  },
+  "tiime": {
+    "platformSlug": "tiime",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "La collecte de l’API publique réussit avec une liste d’événements vide dans sa fenêtre glissante de trente jours. Ce relevé ne fournit pas l’historique depuis septembre.",
+    "sourceIds": [
+      "tiime-watch-2026-09"
+    ]
+  },
+  "sps-commerce": {
+    "platformSlug": "sps-commerce",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "Le flux public conserve la résolution du 9 novembre sur le traitement de documents, avec périmètre PA français non précisé.",
+    "sourceIds": [
+      "sps-status-20261020",
+      "sps-0l1110y8gs76-20261112"
+    ]
+  },
+  "weproc": {
+    "platformSlug": "weproc",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "Le flux relu contient des avis de maintenance Chorus Pro planifiée, conservés hors du compteur des incidents. Le dernier incident qualifié garde sa date historique.",
+    "sourceIds": [
+      "weproc-watch-2026-09"
+    ]
+  },
+  "swile": {
+    "platformSlug": "swile",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "Le flux public reste sans nouvel avis de septembre à novembre. Les publications de juillet et la maintenance d’août conservent leurs dates et restent hors période.",
+    "sourceIds": [
+      "swile-status-20261101"
+    ]
+  },
+  "storecove": {
+    "platformSlug": "storecove",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "Le dernier incident renvoyé par le RSS est daté d’août. La fenêtre du flux ne fournit pas de nouvel avis depuis septembre.",
+    "sourceIds": [
+      "storecove-watch-2026-09"
+    ]
+  },
+  "pitney-bowes": {
+    "platformSlug": "pitney-bowes",
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "L’avis récent vise Expedited Delivery et une API USPS aux États-Unis. Le périmètre PB Invoice Services France reste non documenté pour cette alerte.",
+    "sourceIds": [
+      "pitney-bowes-watch-2026-09"
+    ]
+  },
+  "spendesk": {
+    "platformSlug": "spendesk",
+    "sourceIds": [
+      "spendesk-watch-2026-09"
+    ],
+    "checkedAt": "2026-11-16",
+    "status": "partial",
+    "note": "Source officielle relue le 16 novembre. Le journal retient les services et pays nommés dans chaque avis ; la fenêtre publiée limite la profondeur de la revue."
+  }
+};
 export const incidentCoverage = [
   ...initialIncidentCoverage,
   ...incidentFeeds.filter(feed => feed.platformSlugs.length && !initialIncidentCoverage.some(item => feed.platformSlugs.includes(item.platformSlug))).flatMap(feed => feed.platformSlugs.map(platformSlug => ({
@@ -435,9 +736,13 @@ export const incidentCoverage = [
   {"platformSlug": "atgp", "sourceIds": ["atgp-status-2026-09", "atgp-beefact-20261022", "atgp-final-20261101"], "checkedAt": "2026-11-01", "status": "partial", "note": "@GP annonce l’ensemble des services rétabli le 22 octobre à 19 h, après l’accès BEE-FACT annoncé le matin. Les traitements EDI sont restés actifs. L’éditeur attribue l’interruption à une mesure préventive et déclare ses systèmes et données épargnés."},
   {"platformSlug": "fulll", "sourceIds": ["fulll-incident-1097346-20261101", "fulll-incident-1089867-20261101"], "checkedAt": "2026-11-01", "status": "partial", "note": "Treize pages d’incidents du 16 septembre au 31 octobre ont été relues. Douze avis sont regroupés après exclusion d’un doublon Caisse. Les messages PA des 14 et 21 octobre sont séparés des autres composants et des reprises successives."},
 ].map(item => {
-  const update = novemberCoverage[item.platformSlug];
-  return update ? { ...item, ...update, sourceIds: [...new Set([...item.sourceIds, ...update.sourceIds])] } : item;
-});
+  const previous = novemberCoverage[item.platformSlug];
+  const update = november16Coverage[item.platformSlug] ?? novemberCoverage[item.platformSlug];
+  return update ? { ...item, ...update, sourceIds: [...new Set([...item.sourceIds, ...(previous?.sourceIds ?? []), ...update.sourceIds])] } : item;
+}).map((item, _index, items) => ({
+  ...item,
+  sourceIds: [...new Set(items.filter(candidate => candidate.platformSlug === item.platformSlug).flatMap(candidate => candidate.sourceIds))],
+})).filter((item, index, items) => items.findIndex(candidate => candidate.platformSlug === item.platformSlug) === index);
 for (const item of incidentCoverage) {
   if (!platforms.some(platform => platform.slug === item.platformSlug)) throw new Error(`PA de couverture inconnue : ${item.platformSlug}`);
   for (const id of item.sourceIds) {
@@ -447,10 +752,10 @@ for (const item of incidentCoverage) {
 }
 export const incidentWatchLimit = "Ce journal réunit les avis des éditeurs, les notifications relayées et les revendications à confirmer. Chaque signalement précise son niveau de confirmation et le service concerné. Certains avis se recoupent. La couverture reste partielle ; l’évaluation de la disponibilité et de la sécurité exige aussi des mesures techniques et des audits.";
 export const securityReview = {
-  checkedAt: "2026-11-12",
+  checkedAt: "2026-11-16",
   status: "public_search_completed" as const,
   platformCount: incidentResearch.length,
-  note: "Les 159 acteurs courants ont fait l’objet d’une recherche nominative au 12 novembre. Le suivi de sécurité blgCloud publié en septembre complète l’incident de l’été, avec un périmètre ERP distinct des flux PA. Les six avis déjà suivis gardent leur niveau de confirmation. Les vulnérabilités et les mesures préventives restent séparées des incidents. La portée publique de cette recherche dépend des sources accessibles.",
+  note: "Recherche nominative des 159 PA actualisée le 16 novembre. Le communiqué La Poste du 15 novembre confirme la fuite Maileva, classée hors annuaire PA. Les sept avis déjà suivis conservent leurs dates de publication et leur niveau de confirmation. Les vulnérabilités publiées par le CERT-FR sont examinées séparément des incidents.",
   sourceIds: ["tradeshift-php-notice-20261022", "axway-php-response-20261023", "axonaut-claim-20260629", "fiducial-security-20261001", "aife-vosfactures-reprise-20261004", "aife-vosfactures-20261002", "factuali-notification-relayed-20261001", "fuitesinfos-vosfactures-20261001", "fakturownia-security-20260929", "cert-fr-sap-20260908", "cert-fr-sap-20261013", "sap-patch-day-20261013", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration", "frenchbreaches-zenfirst-20260917", "zenfirst-integration-20260920", "frenchbreaches-altagem-20260921", "altagem-iopole-integration-20260923", "frenchbreaches-faktus-20260919", "faktus-financement-20260923"],
   findings: [
     {"platformSlug": "tradeshift", "type": "vulnerability_advisory", "title": "Tradeshift : mesures préventives PHP, périmètres distingués", "note": "L’avis du 22 octobre déclare PA et Babelway non affectés, applications auxiliaires corrigées et prestataires en revue. Ces déclarations de l’éditeur ne constituent pas un nouvel incident confirmé.", "sourceIds": ["tradeshift-php-notice-20261022"]},

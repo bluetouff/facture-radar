@@ -69,8 +69,11 @@ export const secondWavePlatforms: Platform[] = [
     targets: ["pme", "eti", "ge"], ecosystem: ["API", "ERP", "POS", "conformité internationale"],
     sendsInvoices: documented(true, ["cleartax-france-2026"]), receivesInvoices: documented(true, ["cleartax-france-2026"]), eReporting: documented(true, ["cleartax-france-2026"]), publicApi: documented({ available: true, includedInFree: null }, ["cleartax-france-2026"]),
     formats: documented(["Factur-X", "UBL 2.1", "CII"], ["cleartax-requirements-2026"]), integrations: documented(["API unifiée", "ERP", "POS"], ["cleartax-france-2026"]),
-    importantUnknowns: ["Tarification", "Volumes", "Hébergement de l'offre française", "Export complet"],
-  }),
+    importantUnknowns: ["Tarification","Volumes","Périmètre contractuel du déploiement S3NS France","Certificat applicable à la PA","Export complet"],
+
+"hostingCountries": {"value":["France"],"status":"declared","sourceIds":["cleartax-trust-20261116"],"checkedAt":"2026-11-16","note":"Le centre de confiance attribue à l’offre France une infrastructure S3NS France et annonce une résidence locale des données de facturation en fonctionnement normal. Le contrat, les accès de support et le service exact restent à vérifier."},
+"iso27001": {"value":true,"status":"declared","sourceIds":["cleartax-trust-20261116"],"checkedAt":"2026-11-16","note":"ISO/IEC 27001:2022 est annoncée au centre de confiance, sans certificat téléchargeable, numéro, organisme, dates ou périmètre français vérifiés."}
+}),
   expand({
     slug: "digital-technologies", displayName: "Digital Technologies", officialName: "DIGITAL TECHNOLOGIES", registeredAt: "2025-12-15",
     summary: "Plateforme globale de facturation électronique et de conformité du groupe Namirial.",
@@ -248,7 +251,7 @@ export const secondWavePlatforms: Platform[] = [
     slug: "open-bee", displayName: "Open Bee", officialName: "OPEN BEE", registeredAt: "2026-01-13",
     summary: "GED et plateforme agréée pour TPE, PME et ETI, avec coffre-fort et workflows.",
     targets: ["tpe", "pme", "eti"], ecosystem: ["GED", "Peppol", "Chorus Pro", "API"],
-    sendsInvoices: documented(true, ["openbee-pa-2026"]), receivesInvoices: documented(true, ["openbee-pa-2026"]), eReporting: documented(true, ["openbee-pa-2026"]), publicApi: declared({ available: true, includedInFree: null }, ["openbee-pa-2026"], "Les API et connecteurs dépendent de l'offre."), exportDocumented: documented(true, ["openbee-pa-2026"], "Des exports comptables standard ou avancés sont annoncés selon l'offre."), formats: documented(["Factur-X", "UBL", "EDI"], ["openbee-pa-2026"]), integrations: documented(["Peppol", "Chorus Pro", "API", "connecteurs", "exports comptables"], ["openbee-pa-2026"]), hostingCountries: declared(["France"], ["openbee-pa-2026"]), iso27001: declared(true, ["openbee-pa-2026"]),
+    sendsInvoices: documented(true, ["openbee-pa-2026"]), receivesInvoices: documented(true, ["openbee-pa-2026"]), eReporting: documented(true, ["openbee-pa-2026"]), publicApi: declared({ available: true, includedInFree: null }, ["openbee-pa-2026"], "Les API et connecteurs dépendent de l'offre."), exportDocumented: documented(true, ["openbee-pa-2026"], "Des exports comptables standard ou avancés sont annoncés selon l'offre."), formats: documented(["Factur-X", "UBL", "EDI"], ["openbee-pa-2026"]), integrations: documented(["Peppol", "Chorus Pro", "API", "connecteurs", "exports comptables"], ["openbee-pa-2026"]), hostingCountries: {"value":["France"],"status":"declared","sourceIds":["openbee-pa-2026","openbee-hosting-20261013-20261116"],"checkedAt":"2026-11-16","note":"L’article du 13 octobre attribue à la PA et à la GED un hébergement français qualifié SecNumCloud chez Orange Business depuis septembre 2026. Le service qualifié et le déploiement souscrit doivent être identifiés au contrat."}, iso27001: declared(true, ["openbee-pa-2026"]),
     importantUnknowns: ["Prix et volumes", "CII", "Périmètre des fonctions par offre", "Réversibilité"],
   }),
   expand({

@@ -1,9 +1,9 @@
 {
-  "snapshotDate": "2026-11-12",
+  "snapshotDate": "2026-11-16",
   "sourcePage": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
   "approvedSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
   "pendingSource": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
-  "approvedSha256": "efc4bff7a2d8a9986930afb4db4edc517b87577aa7abdb73cef7ba85cc30772b",
+  "approvedSha256": "d90846ee6c67cc5d8faa9124335d9ddffdf537832637b740e17871f39540d503",
   "pendingSha256": "65c96830044f977de227c368e550909f1eea7ca129c784aacabcc5f60f8e09e7",
   "approved": [
     {
@@ -156,8 +156,8 @@
       "postalCode": "92380",
       "city": "Garches",
       "website": "https://www.basikon.com/fr",
-      "contact": "info@fiskaltrust.fr",
-      "registeredAt": "En attente"
+      "contact": "support@basikon.io",
+      "registeredAt": "2026-11-09"
     },
     {
       "name": "B2BRouter",

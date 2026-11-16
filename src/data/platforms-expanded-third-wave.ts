@@ -425,5 +425,9 @@ export const thirdWavePlatforms: Platform[] = [
     importantUnknowns: ["Émission et réception opérationnelles", "E-reporting", "Prix par dossier", "Formats, hébergement et sortie"],
 
     formats: {"value":["Factur-X"],"status":"documented","sourceIds":["ytems-faq-20261022"],"checkedAt":"2026-10-22","note":"La FAQ décrit la génération de factures Factur-X pour les clients BNC. Les autres formats et la matrice de réception ne sont pas précisés."},
-  }),
+
+"hostingCountries": {"value":["France"],"status":"declared","sourceIds":["ytems-faq-20261116"],"checkedAt":"2026-11-16","note":"La FAQ déclare un stockage des documents en France. Le prestataire, les sites et le périmètre technique propre à la PA restent à préciser."},
+"exportDocumented": {"value":true,"status":"documented","sourceIds":["ytems-faq-20261116"],"checkedAt":"2026-11-16","note":"La FAQ décrit le téléchargement de documents sélectionnés en PDF depuis l’interface. La restitution structurée complète et les modalités après résiliation restent à documenter."},
+"iso27001": {"value":true,"status":"declared","sourceIds":["ytems-iso-declaration-20260427-20261116"],"checkedAt":"2026-11-16","note":"L’article mis à jour le 27 avril 2026 déclare une certification du SMSI couvrant l’entreprise et ses processus. Certificat, organisme et dates de validité non publiés dans cet article."}
+}),
 ];

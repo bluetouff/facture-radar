@@ -1,0 +1,763 @@
+{
+  "checkedAt": "2026-11-16",
+  "actorCount": 53,
+  "actors": [
+    {
+      "platformSlug": "one-up",
+      "checkedAt": "2026-11-16",
+      "query": "\"One Up\" facturation sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-0.json"
+    },
+    {
+      "platformSlug": "open-bee",
+      "checkedAt": "2026-11-16",
+      "query": "\"Open Bee\" facturation sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.openbee.com/notre-actualite/page/7/",
+        "https://www.openbee.com/articles/immatriculation-definitive-plateforme-agreee/",
+        "https://www.openbee.com/articles/secnumcloud-ged-securite-documentaire/",
+        "https://www.openbee.com/wp-content/uploads/2020/04/cgu-openbee.pdf"
+      ],
+      "outcome": "Complément de fiche qualifié auprès des sources primaires, avec date propre de publication conservée.",
+      "evidenceFile": "lot2-search-0.json"
+    },
+    {
+      "platformSlug": "opentext",
+      "checkedAt": "2026-11-16",
+      "query": "\"OpenText\" facturation sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://statusfield.com/services/opentext/incidents",
+        "https://itnews.it-news-and-events.info/archive?section=OpenText-News"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-0.json"
+    },
+    {
+      "platformSlug": "pagero",
+      "checkedAt": "2026-11-16",
+      "query": "\"Pagero\" incident security November 2026 France",
+      "status": "searched",
+      "resultUrls": [
+        "https://isdown.app/status/pagero/",
+        "https://pingoru.io/providers/pagero",
+        "https://app.pageroonline.com/document/errors",
+        "https://status.pagero.com,",
+        "https://europe.thomsonreuters.com/es/trust-center/carrier-general-terms-conditions",
+        "https://legal.thomsonreuters.com/content/dam/ewp-m/documents/thomsonreuters/en/pdf/other/highq-pst.pdf"
+      ],
+      "outcome": "Nouvel avis de disponibilité qualifié auprès de la source primaire, périmètre de dépendance conservé.",
+      "evidenceFile": "lot2-search-0.json"
+    },
+    {
+      "platformSlug": "paragon",
+      "checkedAt": "2026-11-16",
+      "query": "\"Paragon\" \"facturation\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-1.json"
+    },
+    {
+      "platformSlug": "payflows",
+      "checkedAt": "2026-11-16",
+      "query": "\"Payflows\" sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.earlystagestartups.com/companies/payflows"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-1.json"
+    },
+    {
+      "platformSlug": "pennylane",
+      "checkedAt": "2026-11-16",
+      "query": "\"Pennylane\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.clubic.com/actualite-638593-pennylane-en-panne-le-numero-1-de-la-facturation-electronique-rencontre-des-problemes-ce-mardi-matin.html",
+        "https://www.bugalert.fr/panne-pennylane-ralentissements-et-factures-rejetees/",
+        "https://mactips.fr/service/pennylane/",
+        "https://isdown.app/status/pennylane",
+        "https://assets.ctfassets.net/b76knntgaaiu/1Y80VKBwZq1BSHAWQ9GgME/76e043cdaa81df2586b4591eb80f4e37/Pennylane_Security_Whitepaper_v3.1.pdf",
+        "https://www.newsminimalist.com/articles/pennylane-outage-french-e-invoicing-leader-hit-by-stability-issues-tuesday-666a76c8",
+        "https://statusgator.com/services/pennylane",
+        "https://www.pennylane.com/fr/securite",
+        "https://help.pennylane.com/fr/articles/323970-securiser-les-paiements-avec-l-approbation-des-iban-fournisseurs",
+        "https://assets.ctfassets.net/b76knntgaaiu/6QWS8hJBKRd9yNnusjsX0V/56c4f4670336c37633d3a9f6b018fc63/Pennylane_Incident_Response_Plan_v2.0.pdf",
+        "https://assets.ctfassets.net/b76knntgaaiu/5xI5OW53DQCseVvcsO0mlS/3f83a47a18631c1ed09ea9e23a3ab6b9/PENNYLANE_CABINETS_CGPU_DEC25.pdf",
+        "https://www.pennylane.com/fr/securite.",
+        "https://fr.wikipedia.org/wiki/Pennylane"
+      ],
+      "outcome": "Complément de fiche qualifié auprès des sources primaires, avec date propre de publication conservée.",
+      "evidenceFile": "lot2-search-1.json"
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "checkedAt": "2026-11-16",
+      "query": "\"Pitney Bowes\" \"Invoice\" incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.pitneybowes.com/us/supplier-information/payment-invoices.html",
+        "https://www.pitneybowes.com/content/dam/pitneybowes/us/en/our-company/faq.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-1.json"
+    },
+    {
+      "platformSlug": "ponsot-conseil-gestion",
+      "checkedAt": "2026-11-16",
+      "query": "\"Ponsot Conseil Gestion\" facturation sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.ponsotconseilgestion.com/cgu",
+        "https://www.ponsotconseilgestion.com/",
+        "https://www.ponsotconseilgestion.com/guides"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-2.json"
+    },
+    {
+      "platformSlug": "qonto",
+      "checkedAt": "2026-11-16",
+      "query": "\"Qonto\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://qonto.com/fr/product/whats-new",
+        "https://www.upstreamstatus.com/status/qonto",
+        "https://qonto.com/fr/press",
+        "https://apps.apple.com/fr/app/qonto-plus-quun-compte-pro/id1214811644",
+        "https://cestpasquemoi.fr/qonto",
+        "https://qonto.com/fr/blog/tendances/nouveautes",
+        "https://qonto.pactsafe.io/versions/6530dc62dd73af156710c2b9.pdf",
+        "https://storage.googleapis.com/qover-assets/documents/qonto/Qonto_T%26C_FR_Plus.pdf",
+        "https://qonto-assets.s3.eu-central-1.amazonaws.com/documents/QONTO-CONTRACT-FR.pdf",
+        "https://www.reddit.com/r/france/comments/1wpthb8/nouveau_compte_qonto_toujours_bloqu%C3%A9_depuis_pr%C3%A8s/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1wnz2p8/d%C3%A9j%C3%A0_en_train_de_regretter_qonto_mon_nouveau/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1wpti2h/service_client_qonto_attention_arnaque/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1vo1jtm/le_service_client_chez_qonto_priez_ou_fuyez/",
+        "https://www.reddit.com/r/france/comments/1u2ta0u/la_banque_qonto_%C3%A0_%C3%A9viter_absolument_priez_pour_ne/",
+        "https://fr.wikipedia.org/wiki/Qonto",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1tb5why/le_service_client_chez_qonto_priez_ou_fuyez/",
+        "https://www.reddit.com/r/vosfinances/comments/1usmgjv/qonto_est_la_pire_banque_pour_les_professionnels/",
+        "https://www.lemonde.fr/economie/article/2025/07/03/la-fintech-francaise-qonto-veut-devenir-une-banque-a-part-entiere_6617469_3234.html",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1usmew9/qonto_est_la_pire_banque_pour_les_professionnels/",
+        "https://www.reddit.com/r/jobhuntify/comments/1vvedm9/remote_job_qonto_site_reliability_engineer/",
+        "https://en.wikipedia.org/wiki/Qonto"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-2.json"
+    },
+    {
+      "platformSlug": "qweeby",
+      "checkedAt": "2026-11-16",
+      "query": "\"Qweeby\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-2.json"
+    },
+    {
+      "platformSlug": "ratioo",
+      "checkedAt": "2026-11-16",
+      "query": "\"Ratioo\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-2.json"
+    },
+    {
+      "platformSlug": "sage",
+      "checkedAt": "2026-11-16",
+      "query": "\"Sage\" France \"incident\" novembre 2026 12 13 16",
+      "status": "searched",
+      "resultUrls": [
+        "https://mactips.fr/service/sage/",
+        "https://statusgator.com/services/sage/sage-online-fr",
+        "https://squidgrid.net/incident-sage-65536f1a21",
+        "https://fr-kb.sage.com/portal/app/portlets/results/viewsolution.jsp%3Bjsessionid%3D54E8EE65AAF0230123EE29CC9395DC66?solutionid=240807121926410&view=print",
+        "https://pingoru.io/providers/sage-intacct/incidents/10613955"
+      ],
+      "outcome": "Nouvel avis de disponibilité qualifié auprès de la source primaire, périmètre de dépendance conservé.",
+      "evidenceFile": "lot2-search-3.json"
+    },
+    {
+      "platformSlug": "sap",
+      "checkedAt": "2026-11-16",
+      "query": "\"SAP\" \"France\" e-invoicing security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3667098",
+        "https://workzone.one.int.sap/site#workzone-home&/groups/CK8AhwChqYjMisy8oYSfgv/workpage_tabs/LxnjcOht6DIhuitgncZLhH",
+        "https://app.qa.regulatory-change-manager.cloud.sap/index.html#/detail/GSCBEMEAM-4510",
+        "https://www.sap.com/france/about/trust-center/security/incident-management.html",
+        "https://sapinsider.org/wp-content/uploads/2025/09/SAPinsider-Global-E-invoicing-Management-in-SAP-S4HANA-Migrations-Detailed-Finding_09.2025.pdf",
+        "https://www.sap.com/docs/download/agreements/product-use-and-support-terms/cls/en/list-of-data-centers-for-sap-cloud-services-english-v.5-2024.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-3.json"
+    },
+    {
+      "platformSlug": "scribee",
+      "checkedAt": "2026-11-16",
+      "query": "\"Scribee\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-3.json"
+    },
+    {
+      "platformSlug": "seeburger",
+      "checkedAt": "2026-11-16",
+      "query": "\"Seeburger\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://seeburger.cloud/wp-content/uploads/legal/en/data-processing-agreement.pdf",
+        "https://www.seeburger.com/fileadmin/pdf/presentation-downloads/SEEBURGER-Webcast-MTE-2024-09-24-Security-EN.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-3.json"
+    },
+    {
+      "platformSlug": "sellsy",
+      "checkedAt": "2026-11-16",
+      "query": "\"Sellsy\" nouveautés incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://docs.sellsy.com/api/v2/changelog.html",
+        "https://help.sellsy.com/fr/articles/12691213-securiser-votre-compte-sellsy",
+        "https://help.sellsy.com/fr/articles/11829269-positionnement-de-sellsy",
+        "https://sellsy.betteruptime.com/",
+        "https://docs.sellsy.com/api/v2/private/changelog.html",
+        "https://help.sellsy.com/fr/articles/12927826-acces-confidentialite-et-mesures-organisationnelles",
+        "https://go.sellsy.com/informations-legales/politique-de-divulgation-de-vulnerabilite",
+        "https://go.sellsy.com/blog-categorie/nouveautes-produit",
+        "https://go.sellsy.com/offres"
+      ],
+      "outcome": "Complément de fiche qualifié auprès des sources primaires, avec date propre de publication conservée.",
+      "evidenceFile": "lot2-search-4.json"
+    },
+    {
+      "platformSlug": "septeo",
+      "checkedAt": "2026-11-16",
+      "query": "\"Septeo\" facturation sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.pappers.fr/entreprise/genapi-septeo-solutions-notaires-348065046/comptes/GENAPI%20SEPTEO%20SOLUTIONS%20NOTAIRES%20-%20Comptes%20sociaux%202022%2015-12-2023.pdf",
+        "https://www.septeo.com/fr/articles/ingeneo-suite-conforme-facturation-electronique",
+        "https://www.pappers.fr/entreprise/septeo-790675037/comptes/SEPTEO%20-%20Comptes%20sociaux%202023%2005-07-2024.pdf",
+        "https://page.septeo.com/hubfs/Corporate/press/DossierDePresse_2025.pdf",
+        "https://fr.wikipedia.org/wiki/Septeo"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-4.json"
+    },
+    {
+      "platformSlug": "seqino",
+      "checkedAt": "2026-11-16",
+      "query": "\"Seqino\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-4.json"
+    },
+    {
+      "platformSlug": "serensia",
+      "checkedAt": "2026-11-16",
+      "query": "\"Serensia\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://serensia.com/vous-etes-deja-client-serensia-vos-questions/"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-4.json"
+    },
+    {
+      "platformSlug": "seres",
+      "checkedAt": "2026-11-16",
+      "query": "\"Seres\" e-facture sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.groupseres.com/hubfs/3.CONTENIDO/Gu%C3%ADas%20Plataformas/Manual_Usuario.pdf?hsLang=es",
+        "https://peppolstatus.com/providers/seres/",
+        "https://www.lapostegroupe.com/assets/media/le-groupe-laposte/aTrwL3NYClf9oEkk_20251211_CPDocaposteagr%C3%A9mentSeres_vDEF.pdf",
+        "https://www.pappers.fr/entreprise/seres-343778163/comptes/SERES%20-%20Comptes%20sociaux%202024%2022-07-2025.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-5.json"
+    },
+    {
+      "platformSlug": "shine",
+      "checkedAt": "2026-11-16",
+      "query": "\"Shine\" facturation sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://help.shine.fr/fr/articles/10490776-nos-offres-evoluent-quels-sont-les-changements-prevus",
+        "https://help.shine.fr/shine-facture/fr/articles/13401672-activer-la-facturation-electronique-sur-shine",
+        "https://www.shine.fr/lp/cgu-mcp-facturation/",
+        "https://help.shine.fr/shine-facture/fr/collections/19702827-suivre-les-nouveautes-de-l-outil",
+        "https://www.shine.fr/experts-comptables/lp/guide-rfe-collecte-et-facturation/",
+        "https://help.shine.fr/shine-facture/fr/articles/15885445-l-auto-validation-devient-partage-automatique",
+        "https://digitiz.fr/shine-facture/",
+        "https://www.shine.fr/blog/shine-facture-plateforme-agreee/",
+        "https://www.shine.fr/blog/shine-mcp-gerer-facturation-ia/",
+        "https://fr.wikipedia.org/wiki/Shine_France_%28banque%29"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-5.json"
+    },
+    {
+      "platformSlug": "sni",
+      "checkedAt": "2026-11-16",
+      "query": "\"SNI\" e-invoicing security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://en.wikipedia.org/wiki/SNI"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-5.json"
+    },
+    {
+      "platformSlug": "solo",
+      "checkedAt": "2026-11-16",
+      "query": "\"Solo\" \"facturation\" sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.solo.fr/facturation"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-5.json"
+    },
+    {
+      "platformSlug": "sovos",
+      "checkedAt": "2026-11-16",
+      "query": "\"Sovos\" France security incident November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-6.json"
+    },
+    {
+      "platformSlug": "spendesk",
+      "checkedAt": "2026-11-16",
+      "query": "\"Spendesk\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://thirdpartyindex.com/vendors/spendesk",
+        "https://uptimerankings.com/vendors/spendesk",
+        "https://isdown.app/status/spendesk",
+        "https://pingoru.io/providers/spendesk",
+        "https://status.spendesk.com,",
+        "https://status.spendesk.com.",
+        "https://fr.wikipedia.org/wiki/Spendesk"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-6.json"
+    },
+    {
+      "platformSlug": "sps-commerce",
+      "checkedAt": "2026-11-16",
+      "query": "\"SPS Commerce\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://stackpulse.app/services/sps-commerce",
+        "https://statusfield.com/services/sps-commerce/incidents",
+        "https://uptimus.app/status/service/sps-commerce",
+        "https://www.pagerly.io/is-it-down/sps-commerce-status",
+        "https://statusgator.com/services/sps-commerce",
+        "https://www.statusstack.com/service/spscommerce",
+        "https://investors.spscommerce.com/static-files/88ae0842-d91e-4a93-8e2b-9cee4d2c4c01"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-6.json"
+    },
+    {
+      "platformSlug": "srci",
+      "checkedAt": "2026-11-16",
+      "query": "\"SRCI\" facturation sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-6.json"
+    },
+    {
+      "platformSlug": "storecove",
+      "checkedAt": "2026-11-16",
+      "query": "\"Storecove\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://storecove.statuspage.io/",
+        "https://www.storecove.com/fileadmin/user_upload/achievements/Data_Privacy_Policy_Storecove_final_website.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-7.json"
+    },
+    {
+      "platformSlug": "superpdp",
+      "checkedAt": "2026-11-16",
+      "query": "\"SuperPDP\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.superpdp.tech/legal/donnees-personnelles/."
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-7.json"
+    },
+    {
+      "platformSlug": "swile",
+      "checkedAt": "2026-11-16",
+      "query": "\"Swile\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.statut-services.fr/service/swile",
+        "https://fr.trustpilot.com/review/www.swile.co?page=3",
+        "https://statusgator.com/services/swile",
+        "https://isdown.app/status/swile/",
+        "https://help.swile.co/hc/fr/articles/360020434960-Comment-r%C3%A9agir-en-cas-de-doute-sur-la-s%C3%A9curit%C3%A9-de-votre-compte",
+        "https://public-files.swile.co/marketing-website/documents/Swile_Rapport_RSE_2024_version%20longue.pdf",
+        "https://fr.wikipedia.org/wiki/Swile",
+        "https://res.cloudinary.com/hb395gw1l/image/upload/v1661101969/legal/TR/Entreprises/02.08.2022_-_SWILE_-_CGV_entreprises_-_TR.pdf",
+        "https://en.wikipedia.org/wiki/SWILE"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-7.json"
+    },
+    {
+      "platformSlug": "symtrax",
+      "checkedAt": "2026-11-16",
+      "query": "\"Symtrax\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.symtrax.com/resources/news/",
+        "https://www.symtrax.com/fr/ressources/news/"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-7.json"
+    },
+    {
+      "platformSlug": "taxera",
+      "checkedAt": "2026-11-16",
+      "query": "\"Taxera\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://peppolstatus.com/providers/taxera/"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-8.json"
+    },
+    {
+      "platformSlug": "tenor",
+      "checkedAt": "2026-11-16",
+      "query": "\"Tenor\" \"facturation\" sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://tenorsolutions.com/solutions/facture-electronique/",
+        "https://tenorsolutions.com/category/actualite/",
+        "https://tenorsolutions.com/wp-content/uploads/2025/01/cgv-tenor.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-8.json"
+    },
+    {
+      "platformSlug": "tesisquare",
+      "checkedAt": "2026-11-16",
+      "query": "\"Tesisquare\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-8.json"
+    },
+    {
+      "platformSlug": "tessi",
+      "checkedAt": "2026-11-16",
+      "query": "\"Tessi\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.tessi.eu/fr/?p=0%2F",
+        "https://acteurspublics.fr/articles/fraude-sociale-tessi-sengage-pour-aider-les-acteurs-publics-a-mieux-controler-sans-complexifier-lacces-aux-prestations/",
+        "https://www.tessi.eu/en/news/",
+        "https://www.tessi.eu/wp-content/uploads/2025/06/rapport-rse-2024-fr.pdf",
+        "https://www.tessi.eu/wp-content/uploads/2025/07/tessi-politique-droits-humains-fr.pdf",
+        "https://fr.wikipedia.org/wiki/Tessi"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-8.json"
+    },
+    {
+      "platformSlug": "tiime",
+      "checkedAt": "2026-11-16",
+      "query": "\"Tiime\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://support.tiime.fr/fr/articles/522862-securiser-votre-compte-tiime-avec-la-sca",
+        "https://www.tiime.fr/securite",
+        "https://apps.tiime.fr/signin",
+        "https://www.tiime.fr/hubfs/tiime-guide-facturation-electronique-cible-entrepreneurs.pdf",
+        "https://www.tiime.fr/hubfs/Tiime/FAQ%20Tiime/tiime-infog-faq-facturation-electronique.pdf",
+        "https://fr.wikipedia.org/wiki/Tiime"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-9.json"
+    },
+    {
+      "platformSlug": "tradeshift",
+      "checkedAt": "2026-11-16",
+      "query": "\"Tradeshift\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.upguard.com/security-report/tradeshift",
+        "https://tradeshift.com/security/",
+        "https://block.support.tradeshift.com/",
+        "https://agc.support.tradeshift.com/knowledgebase/section/201300944",
+        "https://tradeshift.com/agreements/information-security-policy/",
+        "https://startup.genisisiq.com/tradeshift-ecf2a2/",
+        "https://tradeshift-support.s3.amazonaws.com/cdn/knowledgebase/Block%20Supplier%20Onboarding%20-%20Tradeshift%20User%20Guide%2029.08.2023.pdf",
+        "https://support.tradeshift.com/knowledgebase/article/5403227252626",
+        "https://en.wikipedia.org/wiki/Tradeshift",
+        "https://de.wikipedia.org/wiki/Tradeshift"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-9.json"
+    },
+    {
+      "platformSlug": "transalis",
+      "checkedAt": "2026-11-16",
+      "query": "\"Transalis\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-9.json"
+    },
+    {
+      "platformSlug": "treso2",
+      "checkedAt": "2026-11-16",
+      "query": "\"Treso2\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.peppoldata.com/providers/treso2/",
+        "https://fr.linkedin.com/posts/treso2-pytheas_facturation%C3%A9lectronique-cybers%C3%A9curit%C3%A9-activity-7498999894599311361-Bbz-"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-9.json"
+    },
+    {
+      "platformSlug": "tungsten",
+      "checkedAt": "2026-11-16",
+      "query": "\"Tungsten\" \"Europe\" incident November 2026 13 16",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.mfn.se/a/eurobattery-minerals/tungsten-san-juan-initiates-administrative-procedure-for-the-temporary-suspension-of-mining-activities",
+        "https://en.wikipedia.org/wiki/Tungsten"
+      ],
+      "outcome": "Nouvel avis de disponibilité qualifié auprès de la source primaire, périmètre de dépendance conservé.",
+      "evidenceFile": "lot2-search-10.json"
+    },
+    {
+      "platformSlug": "tx2",
+      "checkedAt": "2026-11-16",
+      "query": "\"TX2\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.safetygas.com/media/productattach/f/i/fiche_produit_d_tecteur_2_gaz_tango_tx2_industrial_scientific-fr_1.pdf",
+        "https://www.safetygas.com/media/productattach/m/a/manuel_d_utilisation_du_produit_tango_tx2.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-10.json"
+    },
+    {
+      "platformSlug": "ventya",
+      "checkedAt": "2026-11-16",
+      "query": "\"Ventya\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.deedz.fr/entreprise/ventya-sas-821839982",
+        "https://fr.linkedin.com/company/ventya",
+        "https://www.ventya.fr/a-propos-de-ventya/",
+        "https://www.pappers.fr/entreprise/ventya-sas-821839982/comptes/VENTYA%20SAS%20-%20Comptes%20sociaux%202025%2009-04-2026.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-10.json"
+    },
+    {
+      "platformSlug": "veryswing",
+      "checkedAt": "2026-11-16",
+      "query": "\"Veryswing\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://status.veryswing.com/incidents/199",
+        "https://fr.linkedin.com/company/veryswing"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-10.json"
+    },
+    {
+      "platformSlug": "village-connecte",
+      "checkedAt": "2026-11-16",
+      "query": "\"Village Connecté\" sécurité incident facturation novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.peppoldata.com/providers/le-village-connecte/",
+        "https://ifec.fr/wp-content/uploads/2026/04/PA-12-mars-BORDEAUX.pdf",
+        "https://village-connecte.fr/app/uploads/sites/735/2025/06/AB9-Communique-de-presse-LVC-Le-Village-Connecte-annonce-que-sa-PDP-est-prete-VF.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-11.json"
+    },
+    {
+      "platformSlug": "vosfactures",
+      "checkedAt": "2026-11-16",
+      "query": "\"VosFactures\" sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www2.assemblee-nationale.fr/static/17/questions/jo/jo_anq_202644.pdf",
+        "https://www.thesiteoueb.net/actualite/article-9706-vosfactures-piratee-30-jours-apres-la-reforme-la-plateforme-agreee-touchee-via-son-prestataire-polonais.html",
+        "https://vulnpocalypse.dev/advisories/fakturownia-poland-and-its-french-brand-vosfactures-factuali-sas/",
+        "https://www.newsminimalist.com/articles/cyberattack-on-approved-e-invoicing-platform-vosfactures-exposes-confidential-data-in-france-2a8fee13",
+        "https://vosfactures.fr/securite",
+        "https://vosfactures.fr",
+        "https://pdfkami.com/en/blog/vosfactures-hack-pdf-generator/",
+        "https://vosfactures.fr/"
+      ],
+      "outcome": "Résultats récents retrouvés ; relecture des avis de sécurité primaire coordonnée par le responsable de revue.",
+      "evidenceFile": "lot2-search-11.json"
+    },
+    {
+      "platformSlug": "voxel",
+      "checkedAt": "2026-11-16",
+      "query": "\"Voxel\" \"Bavel\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.voxelgroup.net/descargas/extranethelp/en/accespartnerportal.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-11.json"
+    },
+    {
+      "platformSlug": "weproc",
+      "checkedAt": "2026-11-16",
+      "query": "\"WeProc\" \"WeInvoice\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-11.json"
+    },
+    {
+      "platformSlug": "wisetech",
+      "checkedAt": "2026-11-16",
+      "query": "\"WiseTech\" security incident e-invoicing November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://financialfilings.com/filings/wisetech-global-limited/annual-report/2026/69439437/",
+        "https://www.wisetechglobal.com/media/4o1lj2yf/wisetech-global-2026-annual-report.pdf",
+        "https://www.wisetechglobal.com/media/pw5ngfnd/wtg-data-processing-addendum-english-6-march-2026.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-12.json"
+    },
+    {
+      "platformSlug": "xelya",
+      "checkedAt": "2026-11-16",
+      "query": "\"Xelya\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://status.xelya.info/",
+        "https://www.xelya.com/qui-sommes-nous/",
+        "https://www.pappers.fr/entreprise/xelya-480607894/comptes/XELYA%20-%20Comptes%20sociaux%202023%2030-07-2024.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-12.json"
+    },
+    {
+      "platformSlug": "yooz",
+      "checkedAt": "2026-11-16",
+      "query": "\"Yooz\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://apps.apple.com/fr/app/yoozmobile-rising/id6450786905?platform=watch",
+        "https://www.getyooz.com/hubfs/YOOZ_TERMS_CONDITIONS_DPA.pdf",
+        "https://www.groupe-fimac.fr/wp-content/uploads/2025/12/YOOZ_Conditions-ParticuliSres.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-12.json"
+    },
+    {
+      "platformSlug": "ytems",
+      "checkedAt": "2026-11-16",
+      "query": "\"Ytems\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://apps.apple.com/fr/app/ytems/id1535819997?platform=ipad",
+        "https://com.ytems.app/faq",
+        "https://www.comparateur-facturation-electronique.fr/produit/ytems/",
+        "https://www.modulyx.fr/plateformes-agreees/ytems",
+        "https://com.ytems.app/blog",
+        "https://com.ytems.app/blog?9641f2e2_page=2"
+      ],
+      "outcome": "Complément de fiche qualifié auprès des sources primaires, avec date propre de publication conservée.",
+      "evidenceFile": "lot2-search-12.json"
+    },
+    {
+      "platformSlug": "zefyr",
+      "checkedAt": "2026-11-16",
+      "query": "\"Zefyr\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.specifiedby.com/zefyr-group/zefyr-ground-access-hatches/zefyr-ltd_ground-access-hatches_techspec_6_52f7beb1-a481-4eb4-9816-b287cb995a90.pdf"
+      ],
+      "outcome": "Pistes examinées ; aucun ajout qualifié dans les résultats accessibles. Sources privées ou non indexées hors recherche.",
+      "evidenceFile": "lot2-search-13.json"
+    }
+  ],
+  "exclusions": [
+    {
+      "platformSlug": "sage",
+      "ids": [
+        "hmvw4vsn0ppp",
+        "5lkbzz6492bl",
+        "nfpdb066ddtk"
+      ],
+      "reason": "HCM USA, banque Absa Afrique du Sud, Brightpearl MTD UK/US ; aucun rattachement français de facturation établi.",
+      "source": "tmp/incident-watch/2026-11-16T19-00-21-745Z/sage.xml"
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "id": "ys9bhz6g1jky",
+      "url": "https://status.pitneybowes.com/incidents/ys9bhz6g1jky",
+      "reason": "API USPS et Expedited Delivery aux États-Unis, sans PB Invoice Services France."
+    },
+    {
+      "platformSlug": "pagero",
+      "url": "https://status.pagero.com/",
+      "reason": "Incident Nordea BgMax/SEK Batch de compensation suédoise ; maintenances prévues Chorus Pro/Health/Masters India exclues."
+    },
+    {
+      "platformSlug": "tungsten",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M7HPWX7Y4NS6GZS8C4FZXJF1",
+      "reason": "Printix Capture vers OneDrive/SharePoint, composant Printix seul. Défaillances observées le 14 et publication le 16 ; rattachement à la facturation française non établi."
+    },
+    {
+      "platformSlug": "sap",
+      "url": "https://www.sap.com/france/about/trust-center/security/incident-management.html",
+      "reason": "Avis de vulnérabilités et procédure de sécurité, sans incident de PA établi."
+    },
+    {
+      "platformSlug": "seres",
+      "url": "https://peppolstatus.com/providers/seres/",
+      "reason": "Expiration de certificat annoncée par un moniteur tiers : signal technique non qualifié comme incident réel de la PA."
+    },
+    {
+      "platformSlug": "treso2",
+      "url": "https://www.peppoldata.com/providers/treso2/",
+      "reason": "Mesure indépendante et ancienne, périmètre de sondes et attribution insuffisants pour créer un incident."
+    },
+    {
+      "platformSlug": "septeo",
+      "url": "https://www.pappers.fr/entreprise/septeo-790675037/comptes/SEPTEO%20-%20Comptes%20sociaux%202023%2005-07-2024.pdf",
+      "reason": "Rançongiciel du 29 janvier 2023, hors période de veille depuis septembre 2026."
+    }
+  ]
+}

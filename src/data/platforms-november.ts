@@ -24,7 +24,7 @@ export const novemberPlatforms: Platform[] = [
 /** Admissions présentes dans le relevé DGFiP du 12 novembre. */
 export const november12Platforms: Platform[] = [
   expand({
-    slug: "basikon", displayName: "Basikon", officialName: "Basikon", registeredAt: "En attente",
+    slug: "basikon", displayName: "Basikon", officialName: "Basikon", registeredAt: "2026-11-09",
     summary: "Acteur des logiciels de financement désormais présent dans la liste des PA agréées. Le périmètre et les conditions de son offre PA restent à préciser.",
     targets: [], ecosystem: [], importantUnknowns: ["Offre PA et activation", "Prix et volumes", "Fonctions disponibles en production", "API, hébergement et restitution"],
 
@@ -70,5 +70,8 @@ export const november12Platforms: Platform[] = [
   platform.registeredAt.note = platform.registeredAt.value === "En attente"
     ? "La DGFiP classe cet acteur parmi les PA agréées, avec En attente dans la colonne date. La date précise demeure inconnue."
     : "Date reproduite du relevé DGFiP du 12 novembre 2026.";
+  if (platform.slug === "basikon") {
+    platform.registeredAt = { value: "2026-11-09", status: "official", sourceIds: ["dgfip-list-20261116"], checkedAt: "2026-11-16", note: "Le relevé du 16 novembre précise la date auparavant indiquée En attente." };
+  }
   return platform;
 });

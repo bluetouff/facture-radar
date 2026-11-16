@@ -5126,5 +5126,389 @@
     "url": "https://www.itforbusiness.fr/emmanuel-spinat-aife-facturation-electronique-bilan-108971",
     "type": "press",
     "accessedAt": "2026-11-12"
+  },
+  {
+    "id": "cecurity-4cj1y96440xl-review-20261116",
+    "title": "Cecurity : factures bloquées en préparation, ressources augmentées",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/incidents/4cj1y96440xl",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cecurity-n1tp3ns7qq2r-review-20261116",
+    "title": "Cecurity : téléchargement des factures rétabli après correction des droits",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/incidents/n1tp3ns7qq2r",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cecurity-d1w80mcc2gbr-review-20261116",
+    "title": "Cecurity : flux ralentis pendant des mises à jour, puis débloqués",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/incidents/d1w80mcc2gbr",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cecurity-ftxpms96h2x9-review-20261116",
+    "title": "Cecurity : factures en importation débloquées après correction de configuration",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/incidents/ftxpms96h2x9",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cecurity-d5vhdjf02pdb-review-20261116",
+    "title": "Cecurity : traitement des factures stabilisé après saturation mémoire",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/incidents/d5vhdjf02pdb",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cecurity-q3d0ytg0cvhy-review-20261116",
+    "title": "Cecurity : eFacture et ePaie rétablis après un incident chez l’hébergeur",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/incidents/q3d0ytg0cvhy",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cecurity-szq1qc4980vj-review-20261116",
+    "title": "Cecurity : accès MFA perturbé par Microsoft 365, puis rétabli",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/incidents/szq1qc4980vj",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "docuware-m365-20261112-review-20261116",
+    "title": "DocuWare : envoi et importation des e-mails Microsoft 365 rétablis",
+    "publisher": "DocuWare",
+    "url": "https://statusportal.docuware.cloud/overview/incident/4e302d8a-0547-4592-b296-53ba522b66f9?lang=fr",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "welyb-acces-20261110-review-20261116",
+    "title": "Welyb : accès à la plateforme rétabli le 10 novembre",
+    "publisher": "Welyb",
+    "url": "https://support.welyb.fr/statut-plateforme",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "welyb-status-20261116",
+    "title": "Welyb : météo des services, mise à jour du 10 novembre",
+    "publisher": "Welyb",
+    "url": "https://support.welyb.fr/statut-plateforme",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "blg-security-followup-review-20261116",
+    "title": "blgCloud : suivi de sécurité du 10 septembre relu le 16 novembre",
+    "publisher": "blgCloud",
+    "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-09-26-notification-d-incident-de-securite-et-mesures-de-protection-547",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cecurity-status-20261116",
+    "title": "Cecurity : historique public de disponibilité",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cecurity-php-review-20261116",
+    "title": "Cecurity : maintenance préventive de Factomos après alerte PHP",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/incidents/h1fq5ht689pd",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cleartax-trust-20261116",
+    "title": "ClearTax : centre de confiance et résidence des données par région",
+    "publisher": "ClearTax",
+    "url": "https://www.cleartax.com/global/trust-center",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "dext-status-20261116",
+    "title": "Dext Prepare Web App : contrôle HTTP sur sept jours",
+    "publisher": "Dext",
+    "url": "https://status.dext.com/389219",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "avalara-vat-20261116",
+    "title": "Avalara : services Managed VAT Reporting et VAT Reporting Cloud",
+    "publisher": "Avalara",
+    "url": "https://status.avalara.com/incidents/3xbj9gqmsnkb",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "fulll-status-20261116",
+    "title": "fulll : état des services, historique et flux RSS",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "fulll-incident-1124140-20261116",
+    "title": "fulll : avis officiel 1124140",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1124140",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "fulll-incident-1125581-20261116",
+    "title": "fulll : avis officiel 1125581",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1125581",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "fulll-incident-1126769-20261116",
+    "title": "fulll : avis officiel 1126769",
+    "publisher": "fulll",
+    "url": "https://status.fulll.io/en/incident/1126769",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "myunisoft-financial-20261113-20261116",
+    "title": "MyUnisoft : problème de connexion Gestion financière du 13 novembre",
+    "publisher": "MyUnisoft",
+    "url": "https://meteo.myunisoft.fr/incident/4d1180aa-4305-444a-a8bb-f2b8d62d9c46/",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "flowie-changelog-20261116",
+    "title": "Flowie Exchange : motifs obligatoires de refus et guide Stripe des 13 et 15 novembre",
+    "publisher": "Flowie",
+    "url": "https://docs.get-flowie.com/changelog",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "flowie-stripe-20261116",
+    "title": "Flowie : guide Sovos e-invoicing pour Stripe",
+    "publisher": "Flowie",
+    "url": "https://docs.get-flowie.com/guides/stripe.html",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "esker-status-20261116",
+    "title": "Esker : page publique des environnements relue le 16 novembre",
+    "publisher": "Esker",
+    "url": "https://www.trustesker.com/?env=G",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "sage-ctpq7mlgypct-20261116",
+    "title": "Sage : incident Cloud Services Azure et connexions Ciel Données Mobiles France",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/ctpq7mlgypct",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "pagero-csbgcpdbx24r-20261116",
+    "title": "Pagero : courriels du support affectés par Exchange Online",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/incidents/csbgcpdbx24r",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "tungsten-email-20261112-20261116",
+    "title": "Tungsten Europe : intégrations de messagerie et incident Microsoft",
+    "publisher": "Tungsten Automation",
+    "url": "https://status.tungstencloud.com/europe/incidents/01M78N6QNAGPXW4MRGRCY12RGK",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "openbee-hosting-20261013-20261116",
+    "title": "Open Bee : extension de l’hébergement qualifié à la GED, publiée le 13 octobre",
+    "publisher": "Open Bee",
+    "url": "https://www.openbee.com/articles/secnumcloud-ged-securite-documentaire/",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "orange-secnumcloud-20261007-20261116",
+    "title": "Orange Business : offres Cloud Avenue SecNum et qualification SecNum Dynamic",
+    "publisher": "Orange Business",
+    "url": "https://newsroom.orange.com/new-secnumcloud-qualification-orange-business-expands-its-trusted-cloud-portfolio-for-critical-applications-and-ai-505993/?lang=fra",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "pennylane-whitepaper-v31-20261116",
+    "title": "Pennylane : livre blanc sécurité v3.1, octobre 2026",
+    "publisher": "Pennylane",
+    "url": "https://assets.ctfassets.net/b76knntgaaiu/1Y80VKBwZq1BSHAWQ9GgME/76e043cdaa81df2586b4591eb80f4e37/Pennylane_Security_Whitepaper_v3.1.pdf",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "sellsy-api-20261113-20261116",
+    "title": "Sellsy : API publique version 2.319.0 du 13 novembre",
+    "publisher": "Sellsy",
+    "url": "https://docs.sellsy.com/api/v2/changelog.html",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "ytems-iso-declaration-20260427-20261116",
+    "title": "Ytems : déclaration ISO 27001, article mis à jour le 27 avril",
+    "publisher": "Ytems",
+    "url": "https://com.ytems.app/blog/ytems-certification-iso-27001-securite-bnc",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "ytems-faq-20261116",
+    "title": "Ytems : FAQ, hébergement français et récupération des documents PDF",
+    "publisher": "Ytems",
+    "url": "https://com.ytems.app/faq",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "superpdp-history-20261116",
+    "title": "SuperPDP : historique public des alertes, contrôle du 16 novembre",
+    "publisher": "SUPER PDP",
+    "url": "https://status.superpdp.tech/status-page/superpdp/history",
+    "type": "documentation",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "frenchbreaches-welyb-20260915-relecture-20261116",
+    "title": "Welyb / AGIRIS : notification de fuite de données relayée le 15 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+    "type": "press",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "frenchbreaches-zenfirst-20260917-relecture-20261116",
+    "title": "Zenfirst : revendication de fuite de données du 17 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+    "type": "press",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "frenchbreaches-altagem-20260921-relecture-20261116",
+    "title": "Altagem : revendication d’accès aux données",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+    "type": "press",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "cyberattaque-altagem-20260921-relecture-20261116",
+    "title": "Altagem : revendication visant clients et données opérationnelles",
+    "publisher": "Cyberattaque.org",
+    "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+    "type": "press",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "frenchbreaches-faktus-20260919-relecture-20261116",
+    "title": "Faktus : revendication de fuite de données, mise à jour du 20 septembre",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+    "type": "press",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "factuali-notification-relayed-20261001-relecture-20261116",
+    "title": "Notification Factuali / VosFactures : capture publiée par Fuites Infos",
+    "publisher": "Factuali, notification reproduite par Fuites Infos",
+    "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+    "type": "press",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "fuitesinfos-vosfactures-20261001-relecture-20261116",
+    "title": "VosFactures : cyberattaque chez le prestataire Fakturownia et notification aux utilisateurs",
+    "publisher": "Fuites Infos / Christophe Boutry",
+    "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+    "type": "press",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "fakturownia-security-20260929-relecture-20261116",
+    "title": "Incident Fakturownia : communiqué du 29 septembre actualisé le 1er octobre",
+    "publisher": "Fakturownia",
+    "url": "https://fakturownia.pl/incydent",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "fiducial-security-20261001-relecture-20261116",
+    "title": "FIDUCIAL : clarification sur une intrusion chez un client utilisant un logiciel local",
+    "publisher": "FIDUCIAL",
+    "url": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "blg-security-20260810-relecture-20261116",
+    "title": "blgCloud : notification du 10 août sur l’attaque de fin juillet",
+    "publisher": "blgCloud",
+    "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "blg-security-20260910-relecture-20261116",
+    "title": "blgCloud : point de sécurité et mesures au 10 septembre",
+    "publisher": "blgCloud",
+    "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-09-26-notification-d-incident-de-securite-et-mesures-de-protection-547",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "dgfip-list-20261116",
+    "title": "DGFiP : liste des plateformes agréées, relevé du 16 novembre 2026",
+    "publisher": "Direction générale des Finances publiques",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "laposte-maileva-20261115",
+    "title": "La Poste : cyberattaque de Maileva, confirmation du 15 novembre",
+    "publisher": "La Poste Groupe",
+    "url": "https://www.lapostegroupe.com/fr/actualite/cyberattaque-de-maileva-ce-quil-faut-savoir",
+    "type": "security",
+    "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "foh-maileva-20261103",
+    "title": "Flandre Opale Habitat : information sur l’incident Maileva",
+    "publisher": "Flandre Opale Habitat",
+    "url": "https://flandreopalehabitat.fr/actualites/information-incident-de-securite-chez-notre-prestataire-maileva",
+    "type": "security",
+    "accessedAt": "2026-11-16"
   }
 ]

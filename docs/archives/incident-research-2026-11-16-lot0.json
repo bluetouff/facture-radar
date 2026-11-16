@@ -1,0 +1,653 @@
+{
+  "checkedAt": "2026-11-16",
+  "actorCount": 53,
+  "actors": [
+    {
+      "platformSlug": "a-cube",
+      "checkedAt": "2026-11-16",
+      "query": "\"A-Cube\" fatturazione incident security novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 0
+    },
+    {
+      "platformSlug": "abby",
+      "checkedAt": "2026-11-16",
+      "query": "\"Abby\" facturation sécurité panne nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://abby.fr/ai-info",
+        "https://abby.fr/documents/etude-abby-facturation-electronique-2026.pdf",
+        "https://aide.abby.fr/fr/articles/15276234-la-facturation-electronique-est-elle-gratuite-sur-abby",
+        "https://community.abby.fr/c/facturation/facturation-electronique/19",
+        "https://idees.abby.fr/fr"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 0
+    },
+    {
+      "platformSlug": "accenture",
+      "checkedAt": "2026-11-16",
+      "query": "\"Accenture\" plateforme agréée facturation novembre 2026 incident",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 0
+    },
+    {
+      "platformSlug": "ademico",
+      "checkedAt": "2026-11-16",
+      "query": "\"Ademico\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 0
+    },
+    {
+      "platformSlug": "agena3000",
+      "checkedAt": "2026-11-16",
+      "query": "\"Agena 3000\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 1
+    },
+    {
+      "platformSlug": "agicap",
+      "checkedAt": "2026-11-16",
+      "query": "\"Agicap\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 1
+    },
+    {
+      "platformSlug": "ags-records",
+      "checkedAt": "2026-11-16",
+      "query": "\"AGS Records\" plateforme facturation incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.ags-recordsmanagement.com/fr/",
+        "https://www.ags-recordsmanagement.com/fr/wp-content/uploads/2025/11/PA-WiDOFACT-Fiche-produit.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 1
+    },
+    {
+      "platformSlug": "arratech",
+      "checkedAt": "2026-11-16",
+      "query": "\"Arratech\" e-invoicing security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://docs.arratech.com/countries/france",
+        "https://www.arratech.com/blog",
+        "https://www.arratech.com/blog/one-month-into-france-s-e-invoicing-mandate-what-we-have-learned",
+        "https://www.arratech.com/e-invoicing-in-the-uae",
+        "https://www.arratech.com/faqs"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 1
+    },
+    {
+      "platformSlug": "arteva",
+      "checkedAt": "2026-11-16",
+      "query": "\"Arteva\" facturation incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 2
+    },
+    {
+      "platformSlug": "aruba",
+      "checkedAt": "2026-11-16",
+      "query": "\"Aruba OneSuite\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 2
+    },
+    {
+      "platformSlug": "atgp",
+      "checkedAt": "2026-11-16",
+      "query": "\"@GP\" facturation incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.atgp.net/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 2
+    },
+    {
+      "platformSlug": "avalara",
+      "checkedAt": "2026-11-16",
+      "query": "\"Avalara\" e-invoicing security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://avalara.pactsafe.io/versions/6532e82fa137c91218c8c146.pdf",
+        "https://avalara.pactsafe.io/versions/65668d453f9ebf116887adef.pdf",
+        "https://avalara.pactsafe.io/versions/68f259499c40199a63b2124c.pdf",
+        "https://knowledge.avalara.com/bundle/lhf1709119169198_lhf1709119169198/page/ggh3707248864762.html",
+        "https://newsroom.avalara.com/press-releases",
+        "https://status.avalara.com/",
+        "https://status.avalara.com/incidents/3xbj9gqmsnkb",
+        "https://www.avalara.com/content/dam/assets/documents/document-avalara-e-invoicing-and-live-reporting-us.pdf",
+        "https://www.avalara.com/us/en/about/trust-center.html"
+      ],
+      "outcome": "Nouvel avis VAT Reporting du 16 novembre confirmé mais hors journal : services de déclarations fiscales sans rattachement documenté à la PA France.",
+      "searchBatch": 2
+    },
+    {
+      "platformSlug": "axelor",
+      "checkedAt": "2026-11-16",
+      "query": "\"Axelor\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://axelor.com/fr/blog/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 3
+    },
+    {
+      "platformSlug": "axonaut",
+      "checkedAt": "2026-11-16",
+      "query": "\"Axonaut\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://axonaut.com/cgv/politiqueconfidentialite.pdf",
+        "https://axonaut.com/content/presse"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 3
+    },
+    {
+      "platformSlug": "axway",
+      "checkedAt": "2026-11-16",
+      "query": "\"Axway\" incident e-invoicing November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://status.axway.com/uptime",
+        "https://www.axway.com/en/newsroom",
+        "https://www.axway.com/sites/default/files/legal_documents/product_description/SI_eInvoicing_AM_Multi-Tenant_EN_v1.25.3.pdf",
+        "https://www.axway.com/sites/default/files/slas_support_policies/Axway_Support_Policy_and_Procedures_-_EN.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 3
+    },
+    {
+      "platformSlug": "azopio",
+      "checkedAt": "2026-11-16",
+      "query": "\"Azopio\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.azopio.com/fr/security-policy/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 3
+    },
+    {
+      "platformSlug": "b2brouter",
+      "checkedAt": "2026-11-16",
+      "query": "\"B2Brouter\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://docs.b2brouter.net/fr/trust-center/gdpr/dpa/",
+        "https://docs.b2brouter.net/fr/trust-center/gdpr/tom/",
+        "https://www.b2brouter.net/fr/reception-de-factures-electroniques/",
+        "https://www.b2brouter.net/fr/wp-content/uploads/sites/11/2022/06/Guide-utilisateur-b2brouter-FR-2022_v2-1.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 4
+    },
+    {
+      "platformSlug": "b4value",
+      "checkedAt": "2026-11-16",
+      "query": "\"b4value\" e-invoicing incident security November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 4
+    },
+    {
+      "platformSlug": "basikon",
+      "checkedAt": "2026-11-16",
+      "query": "\"Basikon\" plateforme agréée nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.basikon.com/fr/news",
+        "https://www.basikon.com/fr/platform"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 4
+    },
+    {
+      "platformSlug": "basware",
+      "checkedAt": "2026-11-16",
+      "query": "\"Basware\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://news.basware.com/en",
+        "https://www.basware.com/en/why-basware/trust/",
+        "https://www2.basware.com/hubfs/Legal/basware-personal-data-processing-appendix-customers-v28102021.pdf",
+        "https://www2.basware.com/hubfs/Resource%20files/Reports/basware-sustainability-report-april-2024.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 4
+    },
+    {
+      "platformSlug": "bc-solutions",
+      "checkedAt": "2026-11-16",
+      "query": "\"BC Solutions\" plateforme agréée incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 5
+    },
+    {
+      "platformSlug": "befresh",
+      "checkedAt": "2026-11-16",
+      "query": "\"Be Fresh\" facturation incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 5
+    },
+    {
+      "platformSlug": "billit",
+      "checkedAt": "2026-11-16",
+      "query": "\"Billit\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://billit.creativeshelter.be/Content/Legal%20Files/Billit_-_EU_Terms_and_Conditions.pdf",
+        "https://blog.billit.io/",
+        "https://my.billit.eu/Content/Legal%20Files/Billit_-_EU_Terms_and_Conditions.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 5
+    },
+    {
+      "platformSlug": "blg",
+      "checkedAt": "2026-11-16",
+      "query": "\"blgCloud\" sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-09-26-notification-d-incident-de-securite-et-mesures-de-protection-547"
+      ],
+      "outcome": "Communiqué du 10 septembre relu : même suivi historique de l’exfiltration de l’été, aucune clôture plus récente qualifiée.",
+      "searchBatch": 5
+    },
+    {
+      "platformSlug": "cbs",
+      "checkedAt": "2026-11-16",
+      "query": "\"cbs e-world\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 6
+    },
+    {
+      "platformSlug": "cecurity",
+      "checkedAt": "2026-11-16",
+      "query": "\"Cecurity\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://status.cecurity.com/",
+        "https://status.cecurity.com/incidents/4cj1y96440xl",
+        "https://status.cecurity.com/incidents/d1w80mcc2gbr",
+        "https://status.cecurity.com/incidents/d5vhdjf02pdb",
+        "https://status.cecurity.com/incidents/ftxpms96h2x9",
+        "https://status.cecurity.com/incidents/h1fq5ht689pd",
+        "https://status.cecurity.com/incidents/n1tp3ns7qq2r",
+        "https://status.cecurity.com/incidents/q3d0ytg0cvhy",
+        "https://status.cecurity.com/incidents/szq1qc4980vj",
+        "https://support.welyb.fr/statut-plateforme"
+      ],
+      "outcome": "Nouveaux avis de disponibilité et rattrapage historique qualifiés auprès des sources primaires ; périmètres distincts conservés.",
+      "searchBatch": 6
+    },
+    {
+      "platformSlug": "cegedim",
+      "checkedAt": "2026-11-16",
+      "query": "\"Cegedim\" incident sécurité facturation novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://cegedim.cloud/wp-content/uploads/2025/11/RFC2350-cegedim.cloud_-1.pdf",
+        "https://psco.cegedim.com/CPS/IGC%20CEGEDIM%20-%20PC%20ANY%20CA%20V1.4.pdf",
+        "https://www.cegedim-sante.com/wp-content/uploads/2026/03/Cegedim_Communique26022026.pdf",
+        "https://www.cegedim.com/Communique/Cegedim_Revenue_3Q2026_ENG.pdf",
+        "https://www.cegedim.fr/Docs_Communiques/CEGEDIM_Rapport_Durabilite_FR.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 6
+    },
+    {
+      "platformSlug": "cegi-alfa",
+      "checkedAt": "2026-11-16",
+      "query": "\"CEGI Alfa\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 6
+    },
+    {
+      "platformSlug": "cegid",
+      "checkedAt": "2026-11-16",
+      "query": "\"Cegid\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://retail-docs.cegid.cloud/api/khub/documents/2LWDCKMdhHruA0PgUbPG5g/content",
+        "https://www.cegid.com/global/press-releases/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 7
+    },
+    {
+      "platformSlug": "chaintrust",
+      "checkedAt": "2026-11-16",
+      "query": "\"Chaintrust\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 7
+    },
+    {
+      "platformSlug": "cleartax",
+      "checkedAt": "2026-11-16",
+      "query": "\"ClearTax\" e-invoicing incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://assets1.cleartax-cdn.com/finfo/wg-utils/retool/72aa3bd9-fb61-4ee5-9504-fba073aa1ac5.pdf",
+        "https://cleartax.in/s/trust/index.html",
+        "https://www.cleartax.com/global/trust-center"
+      ],
+      "outcome": "Centre de confiance primaire complété : résidence et prestataire France déclarés ; certificat applicable encore à vérifier. Date de publication inconnue, complément découvert le 16 novembre.",
+      "searchBatch": 7
+    },
+    {
+      "platformSlug": "comarch",
+      "checkedAt": "2026-11-16",
+      "query": "\"Comarch\" e-invoicing incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 7
+    },
+    {
+      "platformSlug": "cyclope",
+      "checkedAt": "2026-11-16",
+      "query": "\"Cyclope\" \"Gallo\" facturation incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.gallo.fr/en/electronic-invoicing/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 8
+    },
+    {
+      "platformSlug": "darva",
+      "checkedAt": "2026-11-16",
+      "query": "\"DARVA\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.darva.com/ts-doc/Politique_Horodatage.pdf",
+        "https://www.darva.com/ts-doc/Politique_OREA_qualifie.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 8
+    },
+    {
+      "platformSlug": "dext",
+      "checkedAt": "2026-11-16",
+      "query": "\"Dext\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://dext.com/fr/ressources/nouveautes-produit",
+        "https://status.dext.com/389219"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 8
+    },
+    {
+      "platformSlug": "digipharmacie",
+      "checkedAt": "2026-11-16",
+      "query": "\"Digipharmacie\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://digipharmacie.fr/digipa-la-facturation-electronique-en-officine-en-clair"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 8
+    },
+    {
+      "platformSlug": "digital-technologies",
+      "checkedAt": "2026-11-16",
+      "query": "\"Digital Technologies\" \"e-invoicing\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 9
+    },
+    {
+      "platformSlug": "docnova",
+      "checkedAt": "2026-11-16",
+      "query": "\"Docnova\" facturation incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://docnova.ai/fr/categorie/nouvelles/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 9
+    },
+    {
+      "platformSlug": "docoon",
+      "checkedAt": "2026-11-16",
+      "query": "\"Docoon\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 9
+    },
+    {
+      "platformSlug": "docuware",
+      "checkedAt": "2026-11-16",
+      "query": "\"DocuWare\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://docuwarecontentdelivery.blob.core.windows.net/software/DW711/DW7.11_MinorUpdate.pdf",
+        "https://knowledgecenter.docuware.com/docs/docuware-cloud-status-page-web-client",
+        "https://knowledgecenter.docuware.com/docs/orgnaization-security-settings",
+        "https://statusportal.docuware.cloud/",
+        "https://statusportal.docuware.cloud/overview/incident/4e302d8a-0547-4592-b296-53ba522b66f9?lang=fr",
+        "https://support.docuware.com/_entity/annotation/98d48083-bb5c-ec11-8f8f-000d3ad96fb6/7b138792-1090-45b6-9241-8f8d96d8c372",
+        "https://support.docuware.com/en-us/knowledgebase/article/KBA-37464"
+      ],
+      "outcome": "Nouveaux avis de disponibilité et rattrapage historique qualifiés auprès des sources primaires ; périmètres distincts conservés.",
+      "searchBatch": 9
+    },
+    {
+      "platformSlug": "dokapi",
+      "checkedAt": "2026-11-16",
+      "query": "\"Dokapi\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.dokapi.io/fr-be/security",
+        "https://www.dokapi.io/security"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 10
+    },
+    {
+      "platformSlug": "dougs",
+      "checkedAt": "2026-11-16",
+      "query": "\"Dougs\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.dougs.fr/blog/levee-fonds-dougs/",
+        "https://www.dougs.fr/politique-confidentialite/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 10
+    },
+    {
+      "platformSlug": "doxallia",
+      "checkedAt": "2026-11-16",
+      "query": "\"Doxallia\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.doxallia.com/doxallia-publie-son-premier-rapport-dimpact-rse/",
+        "https://www.doxallia.com/wp-content/uploads/2024/09/2024-09-26-DoxAlliance-N%C2%B02-bd.pdf",
+        "https://www.doxallia.com/wp-content/uploads/2025/11/S08-07-06-01-Guide-pratique-a-lusage-du-lanceur-dalerte.pdf",
+        "https://www.doxallia.com/wp-content/uploads/2025/12/CP-Doxallia-Immatriculation-definitive-PA.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 10
+    },
+    {
+      "platformSlug": "ecosio-intercom",
+      "checkedAt": "2026-11-16",
+      "query": "\"ecosio\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://ecosio.com/app/uploads/2025/10/2025-10-20_agb_ecosio_all-annexes_en.pdf",
+        "https://ecosio.com/de/security-trust-center/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 10
+    },
+    {
+      "platformSlug": "edicom",
+      "checkedAt": "2026-11-16",
+      "query": "\"Edicom\" France incident security November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 11
+    },
+    {
+      "platformSlug": "edicom-group",
+      "checkedAt": "2026-11-16",
+      "query": "\"Edicom Group\" plateforme agréée incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 11
+    },
+    {
+      "platformSlug": "edics",
+      "checkedAt": "2026-11-16",
+      "query": "\"EDICS\" facturation incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 11
+    },
+    {
+      "platformSlug": "edieyes",
+      "checkedAt": "2026-11-16",
+      "query": "\"Edieyes\" facturation incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.edieyes.fr/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 11
+    },
+    {
+      "platformSlug": "edt",
+      "checkedAt": "2026-11-16",
+      "query": "\"EDT\" \"facturation\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 12
+    },
+    {
+      "platformSlug": "eezi",
+      "checkedAt": "2026-11-16",
+      "query": "\"EEZI\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://eezi.io/legal/terms/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 12
+    },
+    {
+      "platformSlug": "effinum",
+      "checkedAt": "2026-11-16",
+      "query": "\"Effinum\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://effinum.fr/"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 12
+    },
+    {
+      "platformSlug": "enerj",
+      "checkedAt": "2026-11-16",
+      "query": "\"Enerj\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 12
+    },
+    {
+      "platformSlug": "entropics",
+      "checkedAt": "2026-11-16",
+      "query": "\"Entropics\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://entropics.fr/nos-engagements/",
+        "https://entropics.fr/notre-politique-hse/",
+        "https://entropics.fr/wp-content/uploads/2022/04/DZ602-Modalites-dexecution-des-prestations-de-support.pdf"
+      ],
+      "outcome": "Aucune nouveauté qualifiée depuis le 12 novembre dans les résultats publics consultés ; sources privées, bloquées ou non indexées hors couverture.",
+      "searchBatch": 13
+    }
+  ],
+  "exclusions": [
+    {
+      "platformSlug": "avalara",
+      "title": "Managed VAT Reporting / VAT Reporting Cloud, 16 novembre",
+      "url": "https://status.avalara.com/incidents/3xbj9gqmsnkb",
+      "decision": "outside_pa_scope",
+      "note": "Avis primaire réel sur les déclarations fiscales, rétabli le 16 à 15 h 00 UTC. Périmètre français de facturation électronique non établi. Pas de nouvel avis de sécurité."
+    },
+    {
+      "platformSlug": "cecurity",
+      "title": "Factomos : maintenance préventive PHP du 22 octobre",
+      "url": "https://status.cecurity.com/incidents/h1fq5ht689pd",
+      "decision": "preventive_maintenance",
+      "note": "Source classée maintenance planifiée, fonction historique Factomos désactivée préventivement le 22 et remise le 28 octobre selon compte rendu du 4 novembre. Une exploitation ou fuite de données n’est pas annoncée."
+    },
+    {
+      "platformSlug": "cecurity",
+      "title": "Maintenances Chorus Pro et eFacture",
+      "url": "https://status.cecurity.com/",
+      "decision": "scheduled_maintenance",
+      "note": "Maintenances annoncées des 10,14,25 novembre et de septembre : conservées dans les preuves, hors compteur des incidents."
+    },
+    {
+      "platformSlug": "docuware",
+      "title": "Test opérationnel du 5 novembre",
+      "url": "https://statusportal.docuware.cloud/overview/incident/8f713fe4-a108-4a62-bc20-288a083dfc22?lang=fr",
+      "decision": "test_notice",
+      "note": "Le titre et le corps demandent explicitement d’ignorer cet avis de test."
+    },
+    {
+      "platformSlug": "chaintrust",
+      "title": "ChainTrustLabs blockchain",
+      "url": "https://www.sotwe.com/chaintrustlabs",
+      "decision": "homonym",
+      "note": "Compte d’analyse blockchain sans lien établi avec le logiciel français Chaintrust."
+    },
+    {
+      "platformSlug": "cegedim",
+      "title": "MLM fin2025, communiqué du 26 février",
+      "url": "https://www.cegedim-sante.com/wp-content/uploads/2026/03/Cegedim_Communique26022026.pdf",
+      "decision": "outside_period",
+      "note": "Incident de Cegedim Santé antérieur à septembre2026 ; aucune nouvelle atteinte de la PA française déduite."
+    }
+  ]
+}

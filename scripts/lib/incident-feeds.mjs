@@ -26,7 +26,7 @@ function incidentUrl(source, value) {
     statuspage: /^\/incidents\/[a-z0-9]+$/,
     statuspal: /^\/{1,2}incidents\/[A-Za-z0-9]+$/,
     "incident-io": /^\/europe\/incidents\/[A-Za-z0-9]+$/,
-    betterstack: /^(?:\/fr)?\/incident\/\d+$/,
+    betterstack: /^(?:\/(?:fr|en))?\/incident\/\d+$/,
     cachet: /^(?:\/incident\/\d+\/|\/incidents\/\d+)$/,
     instatus: /^\/incident\/[a-z0-9]+$/,
     ohdear: /^(?:\/|\/(?:updates|incidents)\/[a-z0-9-]+\/?)$/,

@@ -1,0 +1,429 @@
+{
+  "checkedAt": "2026-11-16",
+  "collection": {
+    "checkedAt": "2026-11-16T19:00:21.745Z",
+    "sources": [
+      {
+        "sourceId": "sage",
+        "url": "https://status.sage.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "6f041e72c489d752ce8fe42bc8f33a7ab7a71f8134e9166639e3ff4a8108e545",
+        "candidateCount": 13
+      },
+      {
+        "sourceId": "pennylane",
+        "url": "https://status.pennylane.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "4ae839feb7758166b41fe64d257cc9c9294db12c9d0aca7f6aad64580ae10c45",
+        "candidateCount": 3
+      },
+      {
+        "sourceId": "esker",
+        "url": "https://www.trustesker.com/?env=G",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "9086d389baca7eb338511a86772ebf58244c5a58e913727edbbe99038432c6b0",
+        "candidateCount": 15
+      },
+      {
+        "sourceId": "avalara",
+        "url": "https://status.avalara.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "aded75bda1cd6af883732620bed9f8a0776636ce97207471ccd0521d6be97506",
+        "candidateCount": 3
+      },
+      {
+        "sourceId": "axway",
+        "url": "https://status.axway.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "89213217dc560d82ae11da033df2d768d696794eca17951e9fd90807094f75c4",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "blg",
+        "url": "https://status.blgcloud.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "9ac001ad0eac0620ccb78f9f5ceb39758ba6c3e39d904018945b88bd4b4e9886",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "docoon",
+        "url": "https://docooninvoice.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "80f9e9063587398ef797e5b3ba55e13fd3dce0e2c138906b16be92dd64da9d33",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "dokapi",
+        "url": "https://dokapi.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "8b5249f9e01bc28d483345778fe62ea88b963b1102473c1f73ecf7fc53c09164",
+        "candidateCount": 1
+      },
+      {
+        "sourceId": "ecosio-intercom",
+        "url": "https://www.ecosio-status.com/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "ec3a4a8fb1bb184ed33ec2a6665921f11eb30df8d795f31ace7e5bb04f02852d",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "fiskaltrust",
+        "url": "https://status.fiskaltrust.eu/feed",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "4ce4eed53dddf86745dd19e2f63acfac190da197acfb1eaa69a65554d6f9eb8c",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "flowie",
+        "url": "https://flowie.betteruptime.com/feed",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "dadeacf3710d73e30dd81ca0b5292389d46e98581002f4b199a989ac3e901cbc",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "invopop",
+        "url": "https://status.invopop.com/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "3b8949312ee17594c682c54cb393976b62ac2a4670d6d05e31ded0a2b632dee0",
+        "candidateCount": 3
+      },
+      {
+        "sourceId": "lucca",
+        "url": "https://status.lucca.fr/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "54d249c2a3cff1533d57f805cc8c102e20c3b2294cd51306aea8aab9ac080be5",
+        "candidateCount": 5
+      },
+      {
+        "sourceId": "n2f",
+        "url": "https://status.n2f.com/fr/feed",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "e8febae3b07f98c6add2eba9c65fd81ccba9ac378ec1580ddb9a6ea0955afaac",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "pitney-bowes",
+        "url": "https://status.pitneybowes.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "0cec2b40b45d5d3fc7ba437475f5368e1546bfaa2f0b70f9e981e26287a75992",
+        "candidateCount": 11
+      },
+      {
+        "sourceId": "spendesk",
+        "url": "https://status.spendesk.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "61cabfa4f1282606104253990455c5a4c12748cb29149bf566797b7c06e0066f",
+        "candidateCount": 12
+      },
+      {
+        "sourceId": "storecove",
+        "url": "https://storecove.statuspage.io/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "fb8ed4d7c7590370fd32b7e8a21c9be89c0c3db1fcc27e11cdcc33214e7bc3ca",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "superpdp",
+        "url": "https://status.superpdp.tech/rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "aa2c201340b144608209aec9e513be0c1b905adf47935bae39b06d5243f3ef3b",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "weproc",
+        "url": "https://status.weinvoice.fr/feed",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "2dd418762da66eb165f173cd8ad8c35d33f33685f574df05726a981a333f1e86",
+        "candidateCount": 12
+      },
+      {
+        "sourceId": "veryswing",
+        "url": "https://status.veryswing.com/",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "be47de57b621eb4a7ac78be4f27847fe744da7874b607274892cc31cb7a9e078",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "eezi",
+        "url": "https://eezi.instatus.com/af-na/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "e8b46b18f2868711a3b4371173296f936f17d00cc3e1076236104dd422695760",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "tungsten",
+        "url": "https://status.tungstencloud.com/europe/feed.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "7dc487d4933b2e74dbed1869f72bcdd3f88e7d6933f1b72ffca94359e930b8c7",
+        "candidateCount": 12
+      },
+      {
+        "sourceId": "myunisoft",
+        "url": "https://meteo.myunisoft.fr/api/incidents.json",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "c2bc43c6cebd138e0a275fc2e17d4fb0ac0c621a83a8b77d0af93f75711307c8",
+        "candidateCount": 7
+      },
+      {
+        "sourceId": "tiime",
+        "url": "https://status.tiime.fr/api/getEventFeed/KoA7Nf881q",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "5ccad11f3d42abba83a8e8aa1d9fbe9b161128c8fa80573cf1a6e8cf1cab5825",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "ademico",
+        "url": "https://status.ademico-software.com/api/getEventFeed/kME5WtnQZ0",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "92f1d9be76cf41be6d388e1c4a15102925a83db69dc946662625cbe4c087d96f",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "cert-fr",
+        "url": "https://cert.cyber.gouv.fr/feed/",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "26291f3fec743af4b0db6cf87e41ae485758003780a7ca4ed5adf7ee5821114f",
+        "candidateCount": 40
+      },
+      {
+        "sourceId": "sps-commerce",
+        "url": "https://status.spscommerce.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "ad0acd6c268b55d0e33f234334e2a2fd820c960e57bd2388123ba4a9add8d20c",
+        "candidateCount": 2
+      },
+      {
+        "sourceId": "swile",
+        "url": "https://status.swile.co/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "1f84302ee569864294b571c0aa995dd76d8322b24cafc6b95825f581db4c63d8",
+        "candidateCount": 0
+      },
+      {
+        "sourceId": "abby",
+        "url": "https://abby-france.instatus.com/history.rss",
+        "status": "collected",
+        "checkedAt": "2026-11-16T19:00:21.745Z",
+        "sha256": "eec3cb50afe5d2f540059e297a9078001e7c7a778e8ac2384eca4f5f2ab07941",
+        "candidateCount": 0
+      }
+    ],
+    "changesToReview": 56,
+    "ciRun": 43902226048
+  },
+  "primaryReadings": [
+    {
+      "url": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "sourceId": "frenchbreaches-welyb-20260915-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.028581+00:00",
+      "status": 200,
+      "finalUrl": "https://frenchbreaches.com/alertes/welyb-agiris-mu2m3x9bh33cfsst2bl",
+      "sha256": "813ab8f4b65c28ce05e829f31d723d0ed2ba7cf0df8602a03681b731a901fde3",
+      "bytes": 90534
+    },
+    {
+      "url": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "sourceId": "frenchbreaches-zenfirst-20260917-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.030058+00:00",
+      "status": 200,
+      "finalUrl": "https://frenchbreaches.com/alertes/zenfirst-mu5htqiwd1qoi6ixtx5",
+      "sha256": "e32190163afd9d7ada682b57b41f37e086f91e773a09d9efa8575a442c9d07f2",
+      "bytes": 88669
+    },
+    {
+      "url": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "sourceId": "frenchbreaches-altagem-20260921-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.030444+00:00",
+      "status": 200,
+      "finalUrl": "https://frenchbreaches.com/alertes/altagem-mubgua4y1pn9jonb1uu",
+      "sha256": "5d0864bd47aa5b885ee13eb11c9739a87bd84ebc4e23b62e98818b6c50391fd8",
+      "bytes": 97641
+    },
+    {
+      "url": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "sourceId": "cyberattaque-altagem-20260921-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.030737+00:00",
+      "status": 200,
+      "finalUrl": "https://www.cyberattaque.org/altagem-clients-equipes-et-donnees-operationnelles-exposes-apres-une-cyberattaque/",
+      "sha256": "efe19fdbc129c65dc0e1206b765e6f733aeb029dfd1e32be676671ffc36dd4eb",
+      "bytes": 76323
+    },
+    {
+      "url": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "sourceId": "frenchbreaches-faktus-20260919-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.344179+00:00",
+      "status": 200,
+      "finalUrl": "https://frenchbreaches.com/alertes/faktus-mu8r9zho1hh7afgp9w8i",
+      "sha256": "3e864938406634ce268031b1dfa0fd7cf1435b61cf831be3b4d8650a569cea50",
+      "bytes": 100061
+    },
+    {
+      "url": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "sourceId": "factuali-notification-relayed-20261001-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.433355+00:00",
+      "status": 200,
+      "finalUrl": "https://fuitesinfos.fr/uploads/2026/10/vosfactures-notification.webp",
+      "sha256": "b929d7f120a94cb7d1fe06eba5f6012ac98a33781dd0b58b44ee31007a5ccd11",
+      "bytes": 127712
+    },
+    {
+      "url": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "sourceId": "fuitesinfos-vosfactures-20261001-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.443018+00:00",
+      "status": 200,
+      "finalUrl": "https://fuitesinfos.fr/article/2026-10-01-vosfactures",
+      "sha256": "05e140f59ff15c067234c4036d9f6dd1a4328a6c32da2de9cbcf088f47e6fcd5",
+      "bytes": 51577
+    },
+    {
+      "url": "https://fakturownia.pl/incydent",
+      "sourceId": "fakturownia-security-20260929-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.550992+00:00",
+      "status": 200,
+      "finalUrl": "https://fakturownia.pl/incydent",
+      "sha256": "606d6d531150ba136b13bf1504845c48d2821f5a361462278177f5220aa6938a",
+      "bytes": 167785
+    },
+    {
+      "url": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "sourceId": "fiducial-security-20261001-relecture-20261112",
+      "checkedAt": "2026-11-16T19:01:47.551547+00:00",
+      "status": 200,
+      "finalUrl": "https://www.fiducial.fr/fr/Actualites-FIDUCIAL/Information-quant-a-une-fuite-de-donnees-evoquee-dans-la-presse",
+      "sha256": "76c87b1c52df7929ff92b584020cb2b926dafe7e48ffc3110570d2f876eaa1e1",
+      "bytes": 49592
+    },
+    {
+      "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545",
+      "sourceId": "blg-security-20260810-review-20261112",
+      "checkedAt": "2026-11-16T19:01:47.581409+00:00",
+      "status": 200,
+      "finalUrl": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545",
+      "sha256": "7b00209e0da24736ff442c1aaa0fb252a0e6103fcde679b02bb37069906bdf69",
+      "bytes": 84957
+    },
+    {
+      "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-09-26-notification-d-incident-de-securite-et-mesures-de-protection-547",
+      "sourceId": "blg-security-20260910",
+      "checkedAt": "2026-11-16T19:01:47.611176+00:00",
+      "status": 200,
+      "finalUrl": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-09-26-notification-d-incident-de-securite-et-mesures-de-protection-547",
+      "sha256": "b0e6c269439a038eb5b58cb0fd9925df05c3ec5b7ed7242bac5a72b417b898b8",
+      "bytes": 86193
+    },
+    {
+      "url": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/notification-d-incident-de-securite-et-mesures-de-protection-blgcloud-545",
+      "sourceId": "blg-security-20260810",
+      "checkedAt": "2026-11-16T19:01:47.718945+00:00",
+      "status": 200,
+      "finalUrl": "https://www.blgcloud.fr/press-release-blg/communique-de-presse-18/10-08-26-notification-d-incident-de-securite-et-mesures-de-protection-545",
+      "sha256": "7cdc9a1fa2154e2daba024ec9b175b3a323ea53625caf1f68e36f6de1842f950",
+      "bytes": 84957
+    },
+    {
+      "id": "laposte-maileva-20261115",
+      "url": "https://www.lapostegroupe.com/fr/actualite/cyberattaque-de-maileva-ce-quil-faut-savoir",
+      "status": 200,
+      "sha256": "96873c69c52463df347b0612181059aceb407d5a232ac7e7ca6a8b462bd1ecb0"
+    },
+    {
+      "id": "foh-maileva-20261103",
+      "url": "https://flandreopalehabitat.fr/actualites/information-incident-de-securite-chez-notre-prestataire-maileva",
+      "status": 200,
+      "sha256": "577506bd8fa0209814e9b2bc85f674f6970801da94dbed2503f6e4920f075aab"
+    },
+    {
+      "id": "dgfip-page-20261116",
+      "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+      "status": 200,
+      "sha256": "a9044f866a4bc30ed56bbca01843a804f936ab27dd51392b85a20c292693d9e2"
+    }
+  ],
+  "securityTextComparison": [
+    {
+      "id": "frenchbreaches-welyb-20260915",
+      "sameText": false,
+      "diffLines": 68
+    },
+    {
+      "id": "frenchbreaches-zenfirst-20260917",
+      "sameText": false,
+      "diffLines": 68
+    },
+    {
+      "id": "frenchbreaches-altagem-20260921",
+      "sameText": false,
+      "diffLines": 68
+    },
+    {
+      "id": "cyberattaque-altagem-20260921",
+      "sameText": false,
+      "diffLines": 11
+    },
+    {
+      "id": "frenchbreaches-faktus-20260919",
+      "sameText": false,
+      "diffLines": 68
+    },
+    {
+      "id": "factuali-notification-relayed-20261001",
+      "sameBytes": true
+    },
+    {
+      "id": "fuitesinfos-vosfactures-20261001",
+      "sameText": true,
+      "diffLines": 0
+    },
+    {
+      "id": "fakturownia-security-20260929",
+      "sameText": true,
+      "diffLines": 0
+    },
+    {
+      "id": "fiducial-security-20261001",
+      "sameText": true,
+      "diffLines": 0
+    }
+  ],
+  "feedValidation": {
+    "url": "https://status.fulll.io/en/feed.rss",
+    "bytes": 149564,
+    "sha256": "a4b026cb89f85b5363b5b3257d07a679e34c9f6627d377e912d87c3468437509",
+    "status": 200,
+    "profile": "betterstack",
+    "requiredChange": "Autoriser le préfixe de langue en dans les chemins Better Stack, en plus de fr et de l’absence de langue ; contrôles d’origine, identifiant, query/hash et taille conservés.",
+    "validation": "Parseur du registre réel validé ; 250 notifications RSS regroupées en 22 avis depuis septembre. Trois tests réussis avec contrôles d’origine, langue, chemin encodé, requête, ancre, identifiants, date future, fuseau et DTD.",
+    "entries": 250,
+    "candidates": 22,
+    "testsPassed": 3,
+    "parseEvidence": "tmp/review-2026-11-16/lot1-raw/fulll-parse.json"
+  }
+}

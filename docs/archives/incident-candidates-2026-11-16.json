@@ -1,0 +1,734 @@
+{
+  "checkedAt": "2026-11-16",
+  "newIncidents": [
+    {
+      "id": "cecurity-4cj1y96440xl",
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "kind": "availability",
+      "scope": "pa",
+      "verification": "primary_notice",
+      "affectedService": "Factures reçues et émises, WebAdmin et API publiques Cecurity",
+      "title": "Cecurity : factures bloquées en préparation, ressources augmentées",
+      "summary": "Cecurity signale le 5 septembre des factures d’achat bloquées en préparation, puis annonce le rétablissement. Son compte rendu attribue le blocage à une capacité insuffisante face à un envoi massif et décrit une augmentation des ressources.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-09-05T12:08:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-09-05T14:15:00Z",
+      "updatedAt": "2026-09-05T17:07:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "cecurity-4cj1y96440xl-review-20261116"
+      ],
+      "limitations": "Avis historique retrouvé le 16 novembre. Le corps de la résolution donne 14 h 00 à 16 h 13 UTC, mais sa publication est affichée à 16 h 15 CEST, soit 14 h 15 UTC. Ces horaires se contredisent ; le début réel et la durée restent indéterminés. Les dates précises retenues sont celles des notifications, avec le compte rendu ultérieur."
+    },
+    {
+      "id": "cecurity-n1tp3ns7qq2r",
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "kind": "availability",
+      "scope": "pa",
+      "verification": "primary_notice",
+      "affectedService": "Factures reçues et émises, WebAdmin et API publiques Cecurity",
+      "title": "Cecurity : téléchargement des factures rétabli après correction des droits",
+      "summary": "Cecurity signale le 7 septembre des anomalies de téléchargement de documents, puis annonce le retour à la normale. Le compte rendu du 9 septembre attribue l’indisponibilité du téléchargement des factures à des droits techniques à rehausser.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-09-07T05:29:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-09-07T05:48:00Z",
+      "updatedAt": "2026-09-09T17:27:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "cecurity-n1tp3ns7qq2r-review-20261116"
+      ],
+      "limitations": "Avis historique retrouvé le 16 novembre. La résolution est publiée à 07 h 48 CEST, soit 05 h 48 UTC, alors que son corps donne une plage 06 h 45 à 07 h 45 UTC. Les horaires publiés se contredisent ; le début réel et la durée restent inconnus. Le périmètre exact des utilisateurs affectés n’est pas quantifié."
+    },
+    {
+      "id": "cecurity-d1w80mcc2gbr",
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "kind": "availability",
+      "scope": "pa",
+      "verification": "primary_notice",
+      "affectedService": "Factures reçues et émises, WebAdmin et API publiques Cecurity",
+      "title": "Cecurity : flux ralentis pendant des mises à jour, puis débloqués",
+      "summary": "Cecurity attribue les ralentissements du 9 septembre à des mises à jour en cours. L’éditeur annonce ensuite la disparition des ralentissements et le déblocage des flux concernés. Les factures reçues et émises, WebAdmin et les API sont nommés.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-09-09T13:21:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-09-09T16:36:00Z",
+      "updatedAt": "2026-09-09T16:36:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "cecurity-d1w80mcc2gbr-review-20261116"
+      ],
+      "limitations": "Avis historique retrouvé le 16 novembre. Le début réel, le nombre de clients et le volume de factures affectées ne sont pas publiés. L’intervalle entre les notifications ne mesure pas une durée de panne."
+    },
+    {
+      "id": "cecurity-ftxpms96h2x9",
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "kind": "availability",
+      "scope": "pa",
+      "verification": "primary_notice",
+      "affectedService": "Factures reçues et émises, WebAdmin et API publiques Cecurity",
+      "title": "Cecurity : factures en importation débloquées après correction de configuration",
+      "summary": "Cecurity annonce le 14 septembre le rétablissement des factures bloquées en importation ou en préparation. Son compte rendu attribue le problème à une anomalie de configuration des files de traitement introduite lors d’un déploiement. Les factures en attente ont été résorbées selon l’éditeur.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-09-14T14:15:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-09-14T20:15:00Z",
+      "updatedAt": "2026-09-14T20:21:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "cecurity-ftxpms96h2x9-review-20261116"
+      ],
+      "limitations": "Avis historique retrouvé le 16 novembre. Le premier message public est déjà une annonce de reprise sous surveillance. Il évoque une fin d’impact à 11 h 30 et un rattrapage vers 16 h 00 sans fuseau explicite dans le texte. Le début et la durée de la perturbation restent inconnus."
+    },
+    {
+      "id": "cecurity-d5vhdjf02pdb",
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "kind": "availability",
+      "scope": "pa",
+      "verification": "primary_notice",
+      "affectedService": "Factures reçues et émises, WebAdmin et API publiques Cecurity",
+      "title": "Cecurity : traitement des factures stabilisé après saturation mémoire",
+      "summary": "Cecurity décrit le 16 septembre un ralentissement puis un blocage du traitement des factures. L’éditeur annonce la reprise et le rattrapage des flux, puis la résolution. Le compte rendu relève des redémarrages du service entrant et une saturation mémoire Java ; une augmentation de mémoire a stabilisé le service, avec analyse applicative encore prévue.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-09-16T13:54:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-09-16T20:10:00Z",
+      "updatedAt": "2026-09-16T20:20:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "cecurity-d5vhdjf02pdb-review-20261116"
+      ],
+      "limitations": "Avis historique retrouvé le 16 novembre. Les heures d’impact 15 h 45 et de rattrapage vers 18 h 30 sont déclarées dans le corps sans fuseau explicite ; le début exact n’est pas normalisé. La résolution de service est annoncée, tandis que l’analyse de la consommation mémoire demeure décrite comme en cours dans le compte rendu."
+    },
+    {
+      "id": "cecurity-q3d0ytg0cvhy",
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "kind": "availability",
+      "scope": "pa",
+      "verification": "primary_notice",
+      "affectedService": "Factures reçues et émises, WebAdmin et API publiques Cecurity",
+      "title": "Cecurity : eFacture et ePaie rétablis après un incident chez l’hébergeur",
+      "summary": "Cecurity signale le 5 octobre l’indisponibilité de ses services de factures et de paie, avec accumulation des factures en attente. Après la reprise, son compte rendu attribue l’événement à un incident chez l’hébergeur 3DScale et déclare une indisponibilité inférieure à quinze minutes.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-10-05T13:41:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-10-05T14:05:00Z",
+      "updatedAt": "2026-10-05T14:19:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "cecurity-q3d0ytg0cvhy-review-20261116"
+      ],
+      "limitations": "Avis historique retrouvé le 16 novembre. L’attribution à l’hébergeur et la durée inférieure à quinze minutes viennent de Cecurity. Les bornes de cette durée ne sont pas publiées ; l’intervalle entre les notifications est distinct de la durée déclarée."
+    },
+    {
+      "id": "cecurity-szq1qc4980vj",
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "kind": "availability",
+      "scope": "upstream",
+      "verification": "primary_notice",
+      "affectedService": "Réception des codes MFA Cecurity via Microsoft 365 / Outlook Online",
+      "title": "Cecurity : accès MFA perturbé par Microsoft 365, puis rétabli",
+      "summary": "Cecurity rapporte des difficultés à recevoir les codes MFA pour les utilisateurs passant par une messagerie Office 365 et les attribue à une panne Microsoft 365 / Outlook Online. Le message final publié le 14 novembre annonce un fonctionnement rétabli pour tous les utilisateurs et situe l’impact du 12 novembre à 21 h 30 au 13 novembre à 12 h 40 UTC.",
+      "status": "resolved",
+      "startedAt": "2026-11-12T21:30:00Z",
+      "firstReportedAt": "2026-11-13T08:10:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-14T08:52:00Z",
+      "updatedAt": "2026-11-14T08:52:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "cecurity-szq1qc4980vj-review-20261116"
+      ],
+      "limitations": "Cecurity nomme les composants factures reçues et émises, WebAdmin et API, mais décrit un problème de réception du code MFA. La source n’établit pas une interruption de traitement de tous les flux PA. La fin d’impact déclarée le 13 novembre est distincte de la publication de résolution le 14."
+    },
+    {
+      "id": "docuware-m365-20261112",
+      "platformSlugs": [
+        "docuware"
+      ],
+      "kind": "availability",
+      "scope": "upstream",
+      "verification": "primary_notice",
+      "affectedService": "DocuWare Connect to Mail et notifications via les comptes Microsoft 365 des clients",
+      "title": "DocuWare : envoi et importation des e-mails Microsoft 365 rétablis",
+      "summary": "DocuWare signale le 12 novembre des retards sur les notifications envoyées par les comptes Microsoft 365 des clients et sur l’importation des boîtes Microsoft 365 avec Connect to Mail. L’éditeur annonce la reprise le 13, avec livraison des messages retardés, puis la résolution le 14. Les clients utilisant la messagerie DocuWare ou un autre fournisseur sont annoncés épargnés.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-12T20:55:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-14T17:39:29Z",
+      "updatedAt": "2026-11-14T17:39:29Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "docuware-m365-20261112-review-20261116"
+      ],
+      "limitations": "Avis global attribuant le problème à Microsoft Exchange Online, consulté dans le portail public rendu. Le traitement des factures PA françaises n’est pas décrit. La durée affichée par le portail suit ses notifications ; elle n’est pas reprise comme durée de panne. Horaires affichés en UTC+1, convertis en UTC."
+    },
+    {
+      "id": "welyb-acces-20261110",
+      "platformSlugs": [],
+      "kind": "availability",
+      "scope": "ecosystem_service",
+      "verification": "primary_notice",
+      "affectedService": "Accès web à la plateforme Welyb",
+      "title": "Welyb : accès à la plateforme rétabli le 10 novembre",
+      "summary": "Welyb signale le 10 novembre que certains utilisateurs accèdent difficilement à la plateforme. Un complément annonce l’incident terminé et l’accès pleinement rétabli à 14 h 22.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-10",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-10",
+      "updatedAt": "2026-11-10",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "welyb-acces-20261110-review-20261116"
+      ],
+      "limitations": "Avis du 10 novembre retrouvé lors de la relecture du 16. L’heure de reprise est publiée sans fuseau explicite ; les dates normalisées restent au jour près. Le début et les services précis touchés ne sont pas détaillés. Cet avis concerne Welyb, acteur hors de l’annuaire PA."
+    },
+    {
+      "id": "fulll-1124140",
+      "platformSlugs": [
+        "fulll"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "fulll : authentification, Activity Center et portail perturbés",
+      "affectedService": "Services d’authentification, Activity Center et portail fulll",
+      "summary": "Le 13 novembre, fulll signale une indisponibilité de l’authentification, puis d’Activity Center et du portail. La chronologie annonce les reprises successives et clôt l’avis avec le retour du portail à 08 h 40 UTC.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-13T08:22:20Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-13T08:40:37Z",
+      "updatedAt": "2026-11-13T08:40:37Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "fulll-incident-1124140-20261116"
+      ],
+      "limitations": "Les dates sont celles des notifications de l’éditeur. Le début réel et le nombre de clients touchés restent inconnus. Les composants publiés relèvent de l’application ; l’avis ne rattache pas la perturbation aux flux PA."
+    },
+    {
+      "id": "fulll-1125581",
+      "platformSlugs": [
+        "fulll"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "fulll : Production Fiscale rétablie dans la nuit du 14 au 15 novembre",
+      "affectedService": "fulll Production Fiscale",
+      "summary": "fulll signale une indisponibilité de Production Fiscale le 14 novembre à 23 h 33 UTC, soit le 15 novembre à 00 h 33 à Paris. L’éditeur annonce la reprise à 23 h 36 UTC, le 15 novembre à 00 h 36 à Paris.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-14T23:33:35Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-14T23:36:12Z",
+      "updatedAt": "2026-11-14T23:36:12Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "fulll-incident-1125581-20261116"
+      ],
+      "limitations": "Les dates sont celles des notifications de l’éditeur. Le début réel et le nombre de clients touchés restent inconnus. Les composants publiés relèvent de l’application ; l’avis ne rattache pas la perturbation aux flux PA."
+    },
+    {
+      "id": "fulll-1126769",
+      "platformSlugs": [
+        "fulll"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "fulll : portail, RH, alertes, Image et CRM rétablis",
+      "affectedService": "Portail, Portail RH, Module Alertes, Image et CRM fulll",
+      "summary": "L’avis du 16 novembre regroupe plusieurs interruptions successives du portail, d’Image, du CRM, du Portail RH et du Module Alertes. Les messages annoncent des reprises distinctes ; la dernière publication confirme le retour du portail à 14 h 57 UTC.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-16T13:19:35Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-16T14:57:41Z",
+      "updatedAt": "2026-11-16T14:57:41Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "fulll-incident-1126769-20261116"
+      ],
+      "limitations": "Les dates sont celles des notifications de l’éditeur. Le début réel et le nombre de clients touchés restent inconnus. Les composants publiés relèvent de l’application ; l’avis ne rattache pas la perturbation aux flux PA. Les alertes successives ne décrivent pas une panne continue sur toute la plage."
+    },
+    {
+      "id": "myunisoft-financial-20261113",
+      "platformSlugs": [
+        "myunisoft"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "MyUnisoft : accès à Gestion financière rétabli, hors gamme First",
+      "affectedService": "MyUnisoft Gestion financière, hors gamme First",
+      "summary": "MyUnisoft signale le 13 novembre des difficultés d’accès à Gestion financière, en excluant la gamme First. La page classe l’impact comme majeur et annonce l’incident résolu le même jour.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-13",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-13",
+      "updatedAt": "2026-11-13",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "myunisoft-financial-20261113-20261116"
+      ],
+      "limitations": "La page affiche une création à 11 h 28, un message à 11 h 30 et une résolution à 11 h 40 sans préciser leur fuseau : les dates restent au jour près. Le calendrier public conserve ses bornes UTC, sans les transformer en durée réelle de panne. Le périmètre PA n’est pas indiqué."
+    },
+    {
+      "id": "sage-ctpq7mlgypct",
+      "platformSlugs": [
+        "sage"
+      ],
+      "kind": "availability",
+      "scope": "upstream",
+      "verification": "primary_notice",
+      "affectedService": "Ciel Données Mobiles France et accès aux produits Sage par codes e-mail Microsoft",
+      "title": "Sage : connexions Ciel Données Mobiles et codes e-mail rétablis",
+      "summary": "Sage rapporte le 13 novembre des connexions intermittentes et des déconnexions dans Ciel Données Mobiles en France, ainsi que des difficultés d’accès pour les utilisateurs recevant leurs codes 2FA via une messagerie Microsoft. L’éditeur attribue ces perturbations à un incident Microsoft. Les services sont annoncés opérationnels sous surveillance le 13 au soir ; Sage clôt l’avis le 16 novembre à 11 h 49 UTC.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-13T07:47:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-16T11:49:00Z",
+      "updatedAt": "2026-11-16T11:49:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "sage-ctpq7mlgypct-20261116"
+      ],
+      "limitations": "Le périmètre français est explicitement nommé. Les transmissions réglementaires PA et le volume de clients concernés restent à préciser. L’attribution à Microsoft provient de Sage. Les dates de surveillance et de clôture ne représentent pas une panne continue jusqu’au 16 novembre."
+    },
+    {
+      "id": "pagero-email-20261113",
+      "platformSlugs": [
+        "pagero"
+      ],
+      "kind": "availability",
+      "scope": "upstream",
+      "verification": "primary_notice",
+      "affectedService": "Courriels du support Pagero et envois de documents à numériser",
+      "title": "Pagero : messagerie du support rétablie après la perturbation Exchange",
+      "summary": "Pagero signale le 13 novembre des retards dans les courriels de son support en raison d’une perturbation Exchange Online. Le téléphone, le chat et le portail d’assistance sont proposés comme alternatives. L’avis recommande aussi de différer les documents non urgents envoyés par e-mail pour numérisation. Les échanges sont annoncés rétablis sous surveillance à 13 h 13 CET, puis l’avis est clôturé à 17 h 08 CET.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-13T07:36:00Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-13T16:08:00Z",
+      "updatedAt": "2026-11-13T16:08:00Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "pagero-csbgcpdbx24r-20261116"
+      ],
+      "limitations": "L’avis nomme Help & Support. L’atteinte aux transmissions de factures de la PA française reste non documentée. Pagero annonce le traitement d’un retard de messages à 13 h 13, sans dater sa résorption complète. Le rattachement à Microsoft reste attribué à l’éditeur."
+    },
+    {
+      "id": "tungsten-email-20261112",
+      "platformSlugs": [
+        "tungsten"
+      ],
+      "kind": "availability",
+      "scope": "upstream",
+      "verification": "primary_notice",
+      "affectedService": "Intégrations e-mail de Tungsten Europe, dont eInvoice Connect et eInvoice Network",
+      "title": "Tungsten : avis sur les intégrations e-mail clôturé le 16 novembre",
+      "summary": "Tungsten Europe publie le 12 novembre un avis de surveillance lié aux difficultés Mail/Exchange de Microsoft. L’éditeur indique que ses services utilisant les e-mails peuvent être affectés et cite notamment eInvoice Connect et eInvoice Network parmi les composants concernés. Il annonce la résolution le 16 novembre à 06 h 58 UTC.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-12T19:54:24Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-16T06:58:37Z",
+      "updatedAt": "2026-11-16T06:58:37Z",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "tungsten-email-20261112-20261116"
+      ],
+      "limitations": "Le texte décrit un risque de perturbation des intégrations e-mail au niveau européen. Les clients français, les documents touchés et les flux PA réglementaires ne sont pas détaillés. La clôture est publiée sans bilan technique ni heure de reprise effective. Horodatages UTC lus dans les données structurées de la page et recoupés avec le flux RSS ; le rendu web varie selon le fuseau."
+    },
+    {
+      "id": "maileva-security-confirmation-20261115",
+      "platformSlugs": [],
+      "kind": "security",
+      "scope": "ecosystem_service",
+      "verification": "primary_notice",
+      "affectedService": "Envoi de documents et de courriers par Maileva",
+      "title": "Maileva : fuite de données confirmée, 22 millions de destinataires concernés",
+      "summary": "Le 15 novembre, La Poste confirme une cyberattaque de Maileva survenue à la mi-septembre et une fuite des noms, prénoms et adresses postales de 22 millions de destinataires. Des clients de Maileva signalent aussi une exposition possible du contenu de leurs courriers : Flandre Opale Habitat cite notamment des montants de factures. La Poste déclare la CNIL notifiée, une plainte déposée et une enquête judiciaire en cours.",
+      "status": "unknown",
+      "startedAt": null,
+      "detectedAt": null,
+      "firstReportedAt": null,
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-11-15",
+      "checkedAt": "2026-11-16",
+      "sourceIds": [
+        "laposte-maileva-20261115",
+        "foh-maileva-20261103"
+      ],
+      "limitations": "Le 15 novembre date la confirmation du groupe ; des signalements antérieurs existent, sans première publication précisément établie ici. Le début exact et la clôture restent non datés. Les 22 millions désignent des destinataires de courriers, pas des utilisateurs de PA. Maileva est hors de l’annuaire des PA ; le lien de groupe avec Docaposte n’établit aucun impact sur Seres ou sur les échanges réglementaires. Les catégories de données supplémentaires varient selon le client."
+    }
+  ],
+  "updatedIncidents": [
+    {
+      "id": "welyb-cecurity-recuperation-20261014",
+      "patch": {
+        "title": "Welyb / eFacture : factures manquantes récupérées le 29 octobre",
+        "summary": "Welyb annonce le 29 octobre la récupération des factures manquantes provenant d’eFacture/Cecurity et de JeFacture.com. Ce complément clôt la perturbation de récupération dans le portail ; les services des PA conservent leur périmètre distinct.",
+        "status": "resolved",
+        "resolutionReportedAt": "2026-10-29",
+        "updatedAt": "2026-10-29",
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "welyb-status-20261116"
+        ],
+        "limitations": "Le complément du 29 octobre est retrouvé lors de la relecture du 16 novembre. L’avis initial était sans date de publication propre et observé le 14 octobre. La reprise porte sur la récupération des factures dans Welyb ; les bornes horaires et volumes concernés restent inconnus."
+      }
+    },
+    {
+      "id": "blg-security-followup-20260910",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "blg-security-followup-review-20261116"
+        ]
+      }
+    },
+    {
+      "id": "esker-french-b2b-20260915",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "esker-status-20261116"
+        ]
+      }
+    },
+    {
+      "id": "esker-documents-j-20260929",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "esker-status-20261116"
+        ]
+      }
+    },
+    {
+      "id": "esker-response-e-20261001",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "esker-status-20261116"
+        ]
+      }
+    },
+    {
+      "id": "esker-interconnexion-pa-20261002",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "esker-status-20261116"
+        ]
+      }
+    },
+    {
+      "id": "esker-response-e-20261005",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "esker-status-20261116"
+        ]
+      }
+    },
+    {
+      "id": "esker-affichage-20261009",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "esker-status-20261116"
+        ]
+      }
+    },
+    {
+      "id": "esker-peppol-20261029",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "esker-status-20261116"
+        ]
+      }
+    },
+    {
+      "id": "pennylane-hn2l065z54hr",
+      "patch": {
+        "checkedAt": "2026-11-16"
+      }
+    },
+    {
+      "id": "spendesk-5q8bzzg6ck1j",
+      "patch": {
+        "checkedAt": "2026-11-16"
+      }
+    },
+    {
+      "id": "sps-commerce-0l1110y8gs76",
+      "patch": {
+        "checkedAt": "2026-11-16"
+      }
+    },
+    {
+      "id": "veryswing-vsdb-20261028",
+      "patch": {
+        "checkedAt": "2026-11-16"
+      }
+    },
+    {
+      "id": "superpdp-errors-20261105",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "superpdp-history-20261116"
+        ],
+        "summary": "SuperPDP publie le 5 novembre une alerte sur un nombre anormal d’erreurs 500 renvoyées par ses serveurs. L’historique conserve un message d’analyse en cours. Au contrôle du 16 novembre, la page courante affiche le service API opérationnel, sans notification de résolution datée pour cet avis."
+      }
+    },
+    {
+      "id": "welyb-agiris-securite-20260901",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "frenchbreaches-welyb-20260915-relecture-20261116"
+        ]
+      }
+    },
+    {
+      "id": "zenfirst-claim-20260917",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "frenchbreaches-zenfirst-20260917-relecture-20261116"
+        ]
+      }
+    },
+    {
+      "id": "altagem-claim-20260921",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "frenchbreaches-altagem-20260921-relecture-20261116",
+          "cyberattaque-altagem-20260921-relecture-20261116"
+        ]
+      }
+    },
+    {
+      "id": "faktus-claim-20260919",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "frenchbreaches-faktus-20260919-relecture-20261116"
+        ]
+      }
+    },
+    {
+      "id": "vosfactures-fakturownia-20260929",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "factuali-notification-relayed-20261001-relecture-20261116",
+          "fuitesinfos-vosfactures-20261001-relecture-20261116",
+          "fakturownia-security-20260929-relecture-20261116"
+        ]
+      }
+    },
+    {
+      "id": "fiducial-client-onpremise-20261001",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "fiducial-security-20261001-relecture-20261116"
+        ]
+      }
+    },
+    {
+      "id": "blg-security-followup-20260910",
+      "patch": {
+        "checkedAt": "2026-11-16",
+        "sourceIds": [
+          "blg-security-20260810-relecture-20261116",
+          "blg-security-20260910-relecture-20261116"
+        ]
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "platformSlug": "avalara",
+      "title": "Managed VAT Reporting / VAT Reporting Cloud, 16 novembre",
+      "url": "https://status.avalara.com/incidents/3xbj9gqmsnkb",
+      "decision": "outside_pa_scope",
+      "note": "Avis primaire réel sur les déclarations fiscales, rétabli le 16 à 15 h 00 UTC. Périmètre français de facturation électronique non établi. Pas de nouvel avis de sécurité."
+    },
+    {
+      "platformSlug": "cecurity",
+      "title": "Factomos : maintenance préventive PHP du 22 octobre",
+      "url": "https://status.cecurity.com/incidents/h1fq5ht689pd",
+      "decision": "preventive_maintenance",
+      "note": "Source classée maintenance planifiée, fonction historique Factomos désactivée préventivement le 22 et remise le 28 octobre selon compte rendu du 4 novembre. Une exploitation ou fuite de données n’est pas annoncée."
+    },
+    {
+      "platformSlug": "cecurity",
+      "title": "Maintenances Chorus Pro et eFacture",
+      "url": "https://status.cecurity.com/",
+      "decision": "scheduled_maintenance",
+      "note": "Maintenances annoncées des 10,14,25 novembre et de septembre : conservées dans les preuves, hors compteur des incidents."
+    },
+    {
+      "platformSlug": "docuware",
+      "title": "Test opérationnel du 5 novembre",
+      "url": "https://statusportal.docuware.cloud/overview/incident/8f713fe4-a108-4a62-bc20-288a083dfc22?lang=fr",
+      "decision": "test_notice",
+      "note": "Le titre et le corps demandent explicitement d’ignorer cet avis de test."
+    },
+    {
+      "platformSlug": "chaintrust",
+      "title": "ChainTrustLabs blockchain",
+      "url": "https://www.sotwe.com/chaintrustlabs",
+      "decision": "homonym",
+      "note": "Compte d’analyse blockchain sans lien établi avec le logiciel français Chaintrust."
+    },
+    {
+      "platformSlug": "cegedim",
+      "title": "MLM fin2025, communiqué du 26 février",
+      "url": "https://www.cegedim-sante.com/wp-content/uploads/2026/03/Cegedim_Communique26022026.pdf",
+      "decision": "outside_period",
+      "note": "Incident de Cegedim Santé antérieur à septembre2026 ; aucune nouvelle atteinte de la PA française déduite."
+    },
+    {
+      "platformSlug": "invopop",
+      "reason": "Le résultat Degraded performance in our API and the Console pointe vers un avis du 19 mai 2026 : hors période, aucune alerte de novembre déduite.",
+      "url": "https://status.invopop.com/incidents/01KS08Y8JEFNCEQEVPX383MJ1Z"
+    },
+    {
+      "platformSlug": "lucca",
+      "reason": "Maintenance planifiée du 18 novembre exclue des incidents.",
+      "url": "https://status.lucca.fr/incidents/wthnvhtcdz8q"
+    },
+    {
+      "platformSlug": "esker",
+      "reason": "Les mesures de moniteurs tiers du 15 novembre ne sont pas corroborées par un avis primaire ; pas de panne ou de durée publiée sur cette seule base.",
+      "url": "https://www.peppoldata.com/providers/esker/"
+    },
+    {
+      "platformSlug": "flowie",
+      "reason": "Correctif de validation de motif et nouvelle intégration : notes produit, pas déclaration de compromission.",
+      "url": "https://docs.get-flowie.com/changelog"
+    },
+    {
+      "platformSlug": "esalink",
+      "reason": "Article sécurité du 15 octobre déjà intégré ; relecture sans nouveauté matérielle retenue.",
+      "url": "https://www.esalink.com/blog/securite-facturation-electronique-hubtimize/"
+    },
+    {
+      "platformSlug": "indy",
+      "reason": "L’aide du 22 septembre conserve l’émission PA indisponible, déjà documentée dans la fiche ; aucun lancement ultérieur déduit.",
+      "url": "https://wikicompta.indy.fr/fr/articles/17058407-pourquoi-je-ne-peux-pas-encore-emettre-mes-factures-electroniques-avec-indy"
+    },
+    {
+      "platformSlug": "fulll",
+      "reason": "L’avis 1097770 suit le service Caisse resté indisponible après les correctifs PHP du 21 octobre, déjà distingué dans l’entrée 1097346. Le badge Resolved du résiduel contredit son unique message Caisse reste inaccessible. Pas de nouvel incident ni de résolution globale déduite ; ce cas reste dans les limites de l’avis existant.",
+      "url": "https://status.fulll.io/en/incident/1097770"
+    },
+    {
+      "platformSlug": "sage",
+      "ids": [
+        "hmvw4vsn0ppp",
+        "5lkbzz6492bl",
+        "nfpdb066ddtk"
+      ],
+      "reason": "HCM USA, banque Absa Afrique du Sud, Brightpearl MTD UK/US ; aucun rattachement français de facturation établi.",
+      "source": "tmp/incident-watch/2026-11-16T19-00-21-745Z/sage.xml"
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "id": "ys9bhz6g1jky",
+      "url": "https://status.pitneybowes.com/incidents/ys9bhz6g1jky",
+      "reason": "API USPS et Expedited Delivery aux États-Unis, sans PB Invoice Services France."
+    },
+    {
+      "platformSlug": "pagero",
+      "url": "https://status.pagero.com/",
+      "reason": "Incident Nordea BgMax/SEK Batch de compensation suédoise ; maintenances prévues Chorus Pro/Health/Masters India exclues."
+    },
+    {
+      "platformSlug": "tungsten",
+      "url": "https://status.tungstencloud.com/europe/incidents/01M7HPWX7Y4NS6GZS8C4FZXJF1",
+      "reason": "Printix Capture vers OneDrive/SharePoint, composant Printix seul. Défaillances observées le 14 et publication le 16 ; rattachement à la facturation française non établi."
+    },
+    {
+      "platformSlug": "sap",
+      "url": "https://www.sap.com/france/about/trust-center/security/incident-management.html",
+      "reason": "Avis de vulnérabilités et procédure de sécurité, sans incident de PA établi."
+    },
+    {
+      "platformSlug": "seres",
+      "url": "https://peppolstatus.com/providers/seres/",
+      "reason": "Expiration de certificat annoncée par un moniteur tiers : signal technique non qualifié comme incident réel de la PA."
+    },
+    {
+      "platformSlug": "treso2",
+      "url": "https://www.peppoldata.com/providers/treso2/",
+      "reason": "Mesure indépendante et ancienne, périmètre de sondes et attribution insuffisants pour créer un incident."
+    },
+    {
+      "platformSlug": "septeo",
+      "url": "https://www.pappers.fr/entreprise/septeo-790675037/comptes/SEPTEO%20-%20Comptes%20sociaux%202023%2005-07-2024.pdf",
+      "reason": "Rançongiciel du 29 janvier 2023, hors période de veille depuis septembre 2026."
+    },
+    {
+      "topic": "CERT-FR",
+      "decision": "Les nouvelles vulnérabilités du flux restent des avis de correctifs, sans compromission PA établie."
+    },
+    {
+      "topic": "IMPAAKT / OPSYSWEB",
+      "decision": "Pistes de fuites hors annuaire ; lien de traitement des factures électroniques réglementaires non établi, pas d’ajout au journal."
+    },
+    {
+      "topic": "Fakturownia / VosFactures",
+      "decision": "Communiqué prestataire et notification reproduite inchangés depuis le 12 novembre. La relecture ne déplace pas leur publication du 1er octobre."
+    }
+  ],
+  "feedValidation": {
+    "url": "https://status.fulll.io/en/feed.rss",
+    "bytes": 149564,
+    "sha256": "a4b026cb89f85b5363b5b3257d07a679e34c9f6627d377e912d87c3468437509",
+    "status": 200,
+    "profile": "betterstack",
+    "requiredChange": "Autoriser le préfixe de langue en dans les chemins Better Stack, en plus de fr et de l’absence de langue ; contrôles d’origine, identifiant, query/hash et taille conservés.",
+    "validation": "Parseur du registre réel validé ; 250 notifications RSS regroupées en 22 avis depuis septembre. Trois tests réussis avec contrôles d’origine, langue, chemin encodé, requête, ancre, identifiants, date future, fuseau et DTD.",
+    "entries": 250,
+    "candidates": 22,
+    "testsPassed": 3,
+    "parseEvidence": "tmp/review-2026-11-16/lot1-raw/fulll-parse.json"
+  }
+}

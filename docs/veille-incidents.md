@@ -15,7 +15,7 @@ Dernière revue : 1er novembre 2026. Le relevé initial du 30 septembre et ses c
 
 La fréquence demandée est **un relevé quotidien**, pas une surveillance à la minute. Le workflow `.github/workflows/incidents.yml` lance la collecte à 06 h 17 UTC. GitHub peut décaler l’exécution. Il n’y a aucune boucle de relance automatique.
 
-Le registre `src/data/incident-watch-sources.json` contient **28 sources au total : 27 PA et le CERT-FR**, après ajout du flux Swile le 1er novembre : RSS, trois API JSON et les pages publiques TrustEsker et Veryswing. Une exécution effectue au plus 28 lectures de contenu, avec quatre sources simultanées. La résolution DNS publique épinglée génère ses propres échanges réseau. Les sources d’un même opérateur sont interrogées une seule fois.
+Le registre `src/data/incident-watch-sources.json` contient **30 sources au total : 29 PA et le CERT-FR**, après ajout des flux Abby le 12 novembre et fulll le 16 : RSS, trois API JSON et les pages publiques TrustEsker et Veryswing. Une exécution effectue au plus 30 lectures de contenu, avec quatre sources simultanées. La résolution DNS publique épinglée génère ses propres échanges réseau. Les sources d’un même opérateur sont interrogées une seule fois.
 
 ```sh
 npm run incidents:collect
@@ -40,7 +40,7 @@ Les nouveaux éléments restent dans la file de revue même après un relevé sa
 
 ## Revue utile, sans travail répété
 
-Le réveil automatique Codex est **en pause** pour éviter la consommation automatique de tokens. Le workflow GitHub est un script déterministe, sans appel à un modèle. À la demande de l’utilisateur, lire d’abord les artifacts existants et examiner les changements utiles. Une recherche web supplémentaire répond à un signal concret ; la recherche générale des 155 PA n’est pas répétée chaque jour.
+Le réveil automatique Codex est **en pause** pour éviter la consommation automatique de tokens. Le workflow GitHub est un script déterministe, sans appel à un modèle. À la demande de l’utilisateur, lire d’abord les artifacts existants et examiner les changements utiles. Une recherche web supplémentaire répond à un signal concret ; la recherche générale des 159 PA n’est pas répétée chaque jour.
 
 1. Lire la source originale et identifier l’entreprise, le produit, les pays et les services effectivement concernés.
 2. Recontrôler les avis ouverts : paiements par carte Spendesk, raccordement Welyb/eFacture, statuts Welyb/jefacture.com et envois Welyb aux applications tierces. La réception des factures Spendesk et la clôture des exercices Welyb sont annoncées rétablies. Les messages Esker des environnements G et J ont disparu ; leurs états finaux restent à confirmer. La disparition d’une entrée du flux n’est pas une preuve de résolution.
@@ -96,3 +96,8 @@ Les 155 recherches nominatives et les 27 sources sont relues. Le journal contien
 ## Revue du 1er novembre 2026
 
 La liste officielle redevient accessible : 155 PA, dix dossiers en attente, Swile ajouté et DocProcess conservé en historique. La recherche porte sur les 155 acteurs courants et DocProcess. Le corpus réunit 119 avis, dont 113 de disponibilité et six de sécurité. Veryswing passe du flux Atom disparu à sa page d’historique ; le CERT-FR accepte son nouveau domaine officiel avec www. Les origines, chemins et dates restent contrôlés. Swile rejoint la collecte quotidienne, portant le registre à 28 sources, sans modèle ni changement de fréquence. Les erreurs d’acquisition restent des échecs de collecte, sans attribution de panne à une PA. Voir [la revue et ses preuves](revue-pa-2026-11-01.md).
+
+
+## Revue du 16 novembre 2026
+
+La liste officielle conserve 159 PA et six dossiers en attente. Basikon est daté du 9 novembre et son contact est corrigé. Le journal atteint 150 avis : 142 de disponibilité et huit de sécurité. Les ajouts comprennent six rattrapages Cecurity et la confirmation Maileva publiée le 15 novembre, classée hors annuaire PA. Le RSS fulll, lié depuis le site officiel, rejoint le registre après validation : 250 notifications regroupées en 22 avis, sans changement de fréquence. Les chemins anglais Better Stack conservent les contrôles d’origine, de format, de date et de XML. La couverture par PA est dédoublonnée lors du raccordement d’un flux à une source déjà revue manuellement.
