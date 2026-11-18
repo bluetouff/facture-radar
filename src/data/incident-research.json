@@ -1,1173 +1,1176 @@
 [
   {
     "platformSlug": "a-cube",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "abby",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "abby"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "accenture",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ademico",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "ademico"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "agena3000",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
-    "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "feedIds": [
+      "agena3000-edi1",
+      "agena3000-edi2"
+    ],
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "agicap",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ags-records",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "arratech",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "arteva",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "aruba",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "atgp",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "avalara",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "avalara"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "axelor",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "axonaut",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "axway",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "axway"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "azopio",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "b2brouter",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "b4value",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "basikon",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "basware",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "bc-solutions",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "befresh",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "billit",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "blg",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "blg"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "cbs",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "cecurity",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "cegedim",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "cegi-alfa",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "cegid",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "chaintrust",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "cleartax",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "comarch",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "cyclope",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "darva",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "dext",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "digipharmacie",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "digital-technologies",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "docnova",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "docoon",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "docoon"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "docuware",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "dokapi",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "dokapi"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "dougs",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "doxallia",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ecosio-intercom",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "ecosio-intercom"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "edicom",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "edicom-group",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "edics",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "edieyes",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "edt",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "eezi",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "eezi"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "effinum",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "enerj",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "entropics",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "esalink",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "esi",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "esker",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "esker"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "euro-information",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "facnote",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "factureapp",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "fiducial-cloud",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "fiskaltrust",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "fiskaltrust"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "flowie",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "flowie"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "fonoa",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "freedz",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "fulll",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "fulll"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "generix",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "gep",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "gestav",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "groupe-sigma",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "gurusoft",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "iaf",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "icd",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "iedi",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "iga-assurance",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "indicom",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "indy",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "infologic",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "insiders-technologies",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "intesa",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "invopop",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "invopop"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "iopole",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ipaidthat",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "itesoft",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "jefacture",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "kalanda",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "klekoon",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "kolecto",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "kolecto-pdp",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "konica-minolta",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "legalinvoice",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "logilec",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "lucca",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "lucca"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "lundi-matin",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "macompta",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "marosa",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "medius",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "my-eddy",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "my-fiteco",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "mykinexo",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "mysupply",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "myunisoft",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "myunisoft"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "n2f",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "n2f"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "neotimo",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ntt-data",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "odoo",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "officein",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "one-up",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "open-bee",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "opentext",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "pagero",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "paragon",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "payflows",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "pennylane",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "pennylane"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "pitney-bowes",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "pitney-bowes"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ponsot-conseil-gestion",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "qonto",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "qweeby",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ratioo",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "sage",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "sage"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "sap",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "scribee",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "seeburger",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "sellsy",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "septeo",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "seqino",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "serensia",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "seres",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "shine",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "sni",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "solo",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "sovos",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "spendesk",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "spendesk"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "sps-commerce",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "sps-commerce"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "srci",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "storecove",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "storecove"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "superpdp",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "superpdp"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "swile",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "swile"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "symtrax",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "taxera",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "tenor",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "tesisquare",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "tessi",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "tiime",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "tiime"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "tradeshift",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "transalis",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "treso2",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "tungsten",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "tungsten"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "tx2",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ventya",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "veryswing",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "veryswing"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "village-connecte",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "vosfactures",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "voxel",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "weproc",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [
       "weproc"
     ],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "wisetech",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "xelya",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "yooz",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "ytems",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   },
   {
     "platformSlug": "zefyr",
-    "checkedAt": "2026-11-16",
+    "checkedAt": "2026-11-18",
     "status": "searched",
     "feedIds": [],
-    "note": "Recherche nominative du 16 novembre : nouveautés depuis le 12 et rattrapage de l’historique depuis septembre. Les résultats retenus sont vérifiés auprès des auteurs ; les sources privées, bloquées ou non indexées limitent la couverture."
+    "note": "Recherche nominative du 18 novembre : nouveautés depuis le 16 et compléments historiques vérifiés auprès des sources disponibles. Les avis des logiciels connectés gardent leur auteur et leur périmètre ; les sources privées, bloquées ou non indexées limitent la recherche."
   }
 ]

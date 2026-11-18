@@ -1,0 +1,717 @@
+{
+  "checkedAt": "2026-11-18",
+  "actorCount": 53,
+  "actors": [
+    {
+      "platformSlug": "one-up",
+      "checkedAt": "2026-11-18",
+      "query": "\"One Up\" facturation incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://support.oneup.com/hc/fr/articles/217620377-La-s%C3%A9curit%C3%A9-ONE-UP"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "open-bee",
+      "checkedAt": "2026-11-18",
+      "query": "\"Open Bee\" facturation incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/open-bee_et-si-on-parlait-de-la-s%C3%A9curit%C3%A9-de-tous-activity-7518707589807890432-cDpy",
+        "https://www.openbee.com/notre-actualite/page/7/",
+        "https://www.openbee.com/plateforme-dematerialisation-partenaire/",
+        "https://www.openbee.com/articles/secnumcloud-ged-securite-documentaire/",
+        "https://www.openbee.com/wp-content/uploads/2020/04/cgu-openbee.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "opentext",
+      "checkedAt": "2026-11-18",
+      "query": "\"OpenText\" invoicing incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://statusfield.com/services/opentext/incidents",
+        "https://www.opentext.com/en/media/documentation/technical-and-organizational-measures-documentation-en.pdf",
+        "https://cypro.co.uk/insights/cyber-bulletins/opentext-ransomware-claim-by-mimori-unverified/",
+        "https://www.opentext.com/file_source/OpenText/en_US/PDF/opentext-notification-services.pdf",
+        "https://www.opentext.com/assets/documents/en-US/pdf/opentext-position-paper-overview-of-the-opentext-cloud-en.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "pagero",
+      "checkedAt": "2026-11-18",
+      "query": "\"Pagero\" incident security November 2026 France",
+      "status": "searched",
+      "resultUrls": [
+        "https://pingoru.io/providers/pagero",
+        "https://isdown.app/status/pagero/"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "paragon",
+      "checkedAt": "2026-11-18",
+      "query": "\"Paragon\" facturation incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://status3.useparagon.com/incidents",
+        "https://thirdpartyindex.com/vendors/forge-technology-inc-aka-paragon",
+        "https://www.lemonde.fr/pixels/article/2025/01/31/pres-d-une-centaine-de-personnes-visees-par-un-logiciel-espion-de-la-societe-israelienne-paragon-selon-whatsapp_6525644_4408996.html",
+        "https://fr.wikipedia.org/wiki/Paragon_Solutions",
+        "https://fr.wikipedia.org/wiki/Paragon_ID"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "payflows",
+      "checkedAt": "2026-11-18",
+      "query": "\"Payflows\" sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.earlystagestartups.com/companies/payflows"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "pennylane",
+      "checkedAt": "2026-11-18",
+      "query": "\"Pennylane\" incident sécurité nouveautés novembre 2026 17 18",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.clubic.com/actualite-638593-pennylane-en-panne-le-numero-1-de-la-facturation-electronique-rencontre-des-problemes-ce-mardi-matin.html",
+        "https://mactips.fr/service/pennylane/",
+        "https://www.bugalert.fr/panne-pennylane-ralentissements-et-factures-rejetees/",
+        "https://www.pulsapi.com/services/pennylane/incidents",
+        "https://www.newsminimalist.com/articles/pennylane-outage-french-e-invoicing-leader-hit-by-stability-issues-tuesday-666a76c8",
+        "https://assets.ctfassets.net/b76knntgaaiu/6QWS8hJBKRd9yNnusjsX0V/56c4f4670336c37633d3a9f6b018fc63/Pennylane_Incident_Response_Plan_v2.0.pdf",
+        "https://assets.ctfassets.net/b76knntgaaiu/7Y97y2SFCTKpwAaX1QhQf/bbee205a184e57b40deb2aabd2716fe8/Pennylane_-_Incident_response_plan.pdf",
+        "https://fr.wikipedia.org/wiki/Pennylane"
+      ],
+      "outcome": "Élément primaire qualifié dans ce lot ; voir les décisions et sources."
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "checkedAt": "2026-11-18",
+      "query": "\"Pitney Bowes\" Invoice incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://statusfield.com/services/pitney-bowes/incidents",
+        "https://stackpulse.app/services/pitney-bowes",
+        "https://en.wikipedia.org/wiki/Pitney_Bowes"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "ponsot-conseil-gestion",
+      "checkedAt": "2026-11-18",
+      "query": "\"Ponsot Conseil Gestion\" facturation nouveautés sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.ponsotconseilgestion.com/cgu",
+        "https://www.ponsotconseilgestion.com/",
+        "https://www.ponsotconseilgestion.com/guides"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "qonto",
+      "checkedAt": "2026-11-18",
+      "query": "\"Qonto\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://support-fr.qonto.com/hc/fr/articles/45991915547409-Qonto-est-d%C3%A9sormais-une-banque-titulaire-d-un-agr%C3%A9ment-bancaire-complet-qu-est-ce-que-cela-change-pour-vous",
+        "https://qonto.com/fr/product/whats-new",
+        "https://www.prnewswire.com/news-releases/qonto-has-been-granted-banking-license-marking-a-historic-milestone-in-its-european-development-302942703.html",
+        "https://www.prnewswire.com/news-releases/qonto-obtient-son-agrement-bancaire-marquant-une-etape-historique-dans-son-developpement-europeen-302942715.html",
+        "https://apps.apple.com/fr/app/qonto-plus-quun-compte-pro/id1214811644",
+        "https://qonto.com/fr/press",
+        "https://qonto.pactsafe.io/versions/6530dc62dd73af156710c2b9.pdf",
+        "https://storage.googleapis.com/qover-assets/documents/qonto/Qonto_T%26C_FR_Plus.pdf",
+        "https://www.reddit.com/r/france/comments/1wpthb8/nouveau_compte_qonto_toujours_bloqu%C3%A9_depuis_pr%C3%A8s/",
+        "https://qonto-assets.s3.eu-central-1.amazonaws.com/documents/QONTO-CONTRACT-FR.pdf",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1wnz2p8/d%C3%A9j%C3%A0_en_train_de_regretter_qonto_mon_nouveau/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1vo1jtm/le_service_client_chez_qonto_priez_ou_fuyez/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1wpti2h/service_client_qonto_attention_arnaque/",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1tb5why/le_service_client_chez_qonto_priez_ou_fuyez/",
+        "https://www.reddit.com/r/france/comments/1u2ta0u/la_banque_qonto_%C3%A0_%C3%A9viter_absolument_priez_pour_ne/",
+        "https://fr.wikipedia.org/wiki/Qonto",
+        "https://www.reddit.com/r/vosfinances/comments/1usmgjv/qonto_est_la_pire_banque_pour_les_professionnels/",
+        "https://www.lemonde.fr/economie/article/2025/07/03/la-fintech-francaise-qonto-veut-devenir-une-banque-a-part-entiere_6617469_3234.html",
+        "https://www.reddit.com/r/EntreprendreenFrance/comments/1usmew9/qonto_est_la_pire_banque_pour_les_professionnels/",
+        "https://en.wikipedia.org/wiki/Qonto"
+      ],
+      "outcome": "Élément primaire qualifié dans ce lot ; voir les décisions et sources."
+    },
+    {
+      "platformSlug": "qweeby",
+      "checkedAt": "2026-11-18",
+      "query": "\"Qweeby\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "ratioo",
+      "checkedAt": "2026-11-18",
+      "query": "\"Ratioo\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "sage",
+      "checkedAt": "2026-11-18",
+      "query": "\"Sage\" France incident novembre 2026 17 18",
+      "status": "searched",
+      "resultUrls": [
+        "https://status.sage.com/",
+        "https://blogs.mediapart.fr/georges-andre/blog/171126/vent-violent-pour-sage-manif-ce-17-11-pour-justice-sociale-contre-cout-de-la-vie",
+        "https://www.sageinfonews.com/actualites",
+        "https://www.prefectures-regions.gouv.fr/pays-de-la-loire/irecontenu/telechargement/129021/950616/file/Livret%20de%20pr%C3%A9sentation%20outil%20SAGE.pdf",
+        "https://www.eau-et-rivieres.org/sites/erb.fr/files/pdf/2601%20-%20Communique%CC%81%20%28travaux%20SAGE%20Vilaine%29.pdf",
+        "https://fr.wikipedia.org/wiki/Pierre_Sage"
+      ],
+      "outcome": "Élément primaire qualifié dans ce lot ; voir les décisions et sources."
+    },
+    {
+      "platformSlug": "sap",
+      "checkedAt": "2026-11-18",
+      "query": "\"SAP\" France e-invoicing security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3667098",
+        "https://www.sap.com/france/about/trust-center/security/incident-management.html",
+        "https://www.sap.com/about/trust-center/security/incident-management.html",
+        "https://sapinsider.org/wp-content/uploads/2025/09/SAPinsider-Global-E-invoicing-Management-in-SAP-S4HANA-Migrations-Detailed-Finding_09.2025.pdf",
+        "https://assets.cdn.sap.com/agreements/product-use-and-support-terms/cls/en/sample_version_2a_mcca_package_enus-english-v11-2025.pdf",
+        "https://www.techradar.com/pro/security/sap-fixes-serious-security-issues-heres-how-to-stay-safe",
+        "https://www.techradar.com/pro/security/sap-users-patch-now-worrying-s-4hana-vulnerability-being-exploited-in-the-wild",
+        "https://www.reddit.com/r/KibernetinisSaugumas/comments/1xso4h9/sap_i%C5%A1tais%C4%97_keturias_kritines_cvss_100_spragas/",
+        "https://www.techradar.com/pro/security/three-critical-vulnerabilities-patched-by-sap-heres-what-we-know",
+        "https://www.techradar.com/pro/sap-sides-with-customers-by-making-it-easier-to-switch-to-rival-service-providers-and-end-contracts-changes-may-help-dodge-possible-eu-antitrust-fine",
+        "https://en.wikipedia.org/wiki/SAP",
+        "https://www.techradar.com/pro/security/watch-out-this-sap-netweaver-bug-has-a-maximum-severity-score-and-it-could-target-your-servers-next",
+        "https://www.reddit.com/r/pwnhub/comments/1xsxuj7/sap_patches_four_maximum_severity_flaws_in/"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "scribee",
+      "checkedAt": "2026-11-18",
+      "query": "\"Scribee\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "seeburger",
+      "checkedAt": "2026-11-18",
+      "query": "\"Seeburger\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.upguard.com/security-report/seeburger",
+        "https://www.seeburger.com/fileadmin/pdf/presentation-downloads/SEEBURGER-Webcast-MTE-2024-09-24-Security-EN.pdf",
+        "https://servicedesk-old.seeburger.de/portal/Content/downloads/SEEBURGER_Service_Guideline_EN_2025-07-08.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "sellsy",
+      "checkedAt": "2026-11-18",
+      "query": "\"Sellsy\" nouveautés incident sécurité novembre 2026 17 18",
+      "status": "searched",
+      "resultUrls": [
+        "https://sellsy.betteruptime.com/",
+        "https://docs.sellsy.com/api/v2/changelog.html",
+        "https://go.sellsy.com/informations-legales/politique-de-divulgation-de-vulnerabilite",
+        "https://go.sellsy.com/blog-categorie/nouveautes-produit",
+        "https://go.sellsy.com/offres",
+        "https://gp.linkedin.com/company/sellsyapp"
+      ],
+      "outcome": "Élément primaire qualifié dans ce lot ; voir les décisions et sources."
+    },
+    {
+      "platformSlug": "septeo",
+      "checkedAt": "2026-11-18",
+      "query": "\"Septeo\" facturation sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.septeo.com/fr/presse",
+        "https://www.pappers.fr/entreprise/genapi-septeo-solutions-notaires-348065046/comptes/GENAPI%20SEPTEO%20SOLUTIONS%20NOTAIRES%20-%20Comptes%20sociaux%202022%2015-12-2023.pdf",
+        "https://www.septeo.com/fr/hospitality/solutions/plateforme-agree-facturation-electronique",
+        "https://www.septeo.com/fr/articles/ingeneo-suite-conforme-facturation-electronique",
+        "https://www.pappers.fr/entreprise/septeo-790675037/comptes/SEPTEO%20-%20Comptes%20sociaux%202023%2005-07-2024.pdf",
+        "https://page.septeo.com/hubfs/Corporate/press/DossierDePresse_2025.pdf",
+        "https://fr.wikipedia.org/wiki/Septeo"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "seqino",
+      "checkedAt": "2026-11-18",
+      "query": "\"Seqino\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/thomasdemonti_facturation%C3%A9lectronique-seqino-activity-7528047042372222976-lz2r",
+        "https://www.cm-arkea.com/arkea/banque/upload/docs/application/pdf/2026-06/20260603_communique_-_seqino_lance_une_offre_de_compte_professionnel_en_marque_blanche_dedie_aux_cabinets_comptables_pour_le.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "serensia",
+      "checkedAt": "2026-11-18",
+      "query": "\"Serensia\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://serensia.com/vous-etes-deja-client-serensia-vos-questions/"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "seres",
+      "checkedAt": "2026-11-18",
+      "query": "\"Seres\" e-facture sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.groupseres.com/hubfs/3.CONTENIDO/Gu%C3%ADas%20Plataformas/Manual%20e-factura%202023.pdf?hsLang=es-ar",
+        "https://www.lapostegroupe.com/assets/media/le-groupe-laposte/aTrwL3NYClf9oEkk_20251211_CPDocaposteagr%C3%A9mentSeres_vDEF.pdf",
+        "https://www.pappers.fr/entreprise/seres-343778163/comptes/SERES%20-%20Comptes%20sociaux%202024%2022-07-2025.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "shine",
+      "checkedAt": "2026-11-18",
+      "query": "\"Shine\" facturation incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://help.shine.fr/fr/articles/10490776-nos-offres-evoluent-quels-sont-les-changements-prevus",
+        "https://help.shine.fr/shine-facture/fr/articles/13401672-activer-la-facturation-electronique-sur-shine",
+        "https://help.shine.fr/shine-facture/fr/collections/19702827-suivre-les-nouveautes-de-l-outil",
+        "https://www.shine.fr/lp/cgu-mcp-facturation/",
+        "https://help.shine.fr/fr/articles/12067200-traiter-une-facture-electronique-recue",
+        "https://www.shine.fr/experts-comptables/lp/guide-rfe-collecte-et-facturation/",
+        "https://help.shine.fr/shine-facture/fr/articles/15885445-l-auto-validation-devient-partage-automatique",
+        "https://help.shine.fr/shine-facture/fr/articles/17563362-limites-de-l-offre-et-facturation",
+        "https://help.shine.fr/shine-facture/fr/articles/13419479-contacter-le-service-client-shine-facture",
+        "https://help.shine.fr/shine-facture/fr/articles/16614246-paiement-de-mes-factures-par-carte",
+        "https://help.shine.fr/shine-facture/fr/articles/16768862-comment-suivre-l-envoi-de-ma-e-facture",
+        "https://26730884.fs1.hubspotusercontent-eu1.net/hubfs/26730884/Shine%20FR%20_%20Pricing%20PDF.pdf",
+        "https://fr.wikipedia.org/wiki/Shine_France_%28banque%29"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "sni",
+      "checkedAt": "2026-11-18",
+      "query": "\"SNI\" e-invoicing security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://en.wikipedia.org/wiki/SNI"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "solo",
+      "checkedAt": "2026-11-18",
+      "query": "\"Solo\" facturation incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "sovos",
+      "checkedAt": "2026-11-18",
+      "query": "\"Sovos\" France security incident November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "spendesk",
+      "checkedAt": "2026-11-18",
+      "query": "\"Spendesk\" incident security November 2026 17 18",
+      "status": "searched",
+      "resultUrls": [
+        "https://thirdpartyindex.com/vendors/spendesk",
+        "https://pingoru.io/providers/spendesk/outage-history",
+        "https://pingoru.io/providers/spendesk"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "sps-commerce",
+      "checkedAt": "2026-11-18",
+      "query": "\"SPS Commerce\" incident security November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://stackpulse.app/services/sps-commerce",
+        "https://uptimus.app/status/service/sps-commerce",
+        "https://www.pulsapi.com/services/sps-commerce/incidents",
+        "https://www.upguard.com/security-report/sps-commerce",
+        "https://www.spscommerce.com/press/",
+        "https://www.board-cybersecurity.com/annual-reports/tracker/20260219-sps-commerce-cybersecurity-10k",
+        "https://investors.spscommerce.com/static-files/88ae0842-d91e-4a93-8e2b-9cee4d2c4c01",
+        "https://investors.spscommerce.com/financial-information/sec-filings?field_nir_sec_cik_value=efguxgtcxgdz&field_nir_sec_date_filed_value=&items_per_page=10&items_per_page_toggle=1&mobile=1&order=field_nir_sec_form&page=81&sort=asc",
+        "https://marketplace.oracle.com/media/99978680/other/SPS_Commerce-2021-Type_2_SOC_2-Final_Report_.pdf",
+        "https://en.wikipedia.org/wiki/SPS_Commerce"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "srci",
+      "checkedAt": "2026-11-18",
+      "query": "\"SRCI\" facturation sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.francenum.gouv.fr/activateurs/srci"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "storecove",
+      "checkedAt": "2026-11-18",
+      "query": "\"Storecove\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.storecove.com/fileadmin/user_upload/achievements/Data_Privacy_Policy_Storecove_final_website.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "superpdp",
+      "checkedAt": "2026-11-18",
+      "query": "\"SuperPDP\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "swile",
+      "checkedAt": "2026-11-18",
+      "query": "\"Swile\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://swile.statuspage.io/",
+        "https://status.swile.co/history",
+        "https://www.statusstack.com/service/swile",
+        "https://isdown.app/status/swile/",
+        "https://statusgator.com/services/swile",
+        "https://public-files.swile.co/marketing-website/documents/Swile_Rapport_RSE_2024_version%20longue.pdf",
+        "https://res.cloudinary.com/hb395gw1l/image/upload/v1661101969/legal/TR/Entreprises/02.08.2022_-_SWILE_-_CGV_entreprises_-_TR.pdf",
+        "https://fr.wikipedia.org/wiki/Swile",
+        "https://en.wikipedia.org/wiki/SWILE"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "symtrax",
+      "checkedAt": "2026-11-18",
+      "query": "\"Symtrax\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.symtrax.com/fr/ressources/news/",
+        "https://www.comparateur-facturation-electronique.fr/produit/symtrax/",
+        "https://fr.gridinsoft.com/online-virus-scanner/url/symtraxnow-com"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "taxera",
+      "checkedAt": "2026-11-18",
+      "query": "\"Taxera\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "tenor",
+      "checkedAt": "2026-11-18",
+      "query": "\"Tenor\" facturation sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://maplateformefacturation.fr/plateformes/tenor",
+        "https://facturoscope.fr/plateformes-agreees/tenor/",
+        "https://mobicheckin-assets.s3.amazonaws.com/uploads/events/64103d7dd6f5e866d2b147cc/person_files/livrable_2_NNLKCW7_Communiqu%C3%A9_de_presse_PDP-Tenor-Mars2025.pdf",
+        "https://tenorsolutions.com/wp-content/uploads/2025/01/cgv-tenor.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "tesisquare",
+      "checkedAt": "2026-11-18",
+      "query": "\"Tesisquare\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "tessi",
+      "checkedAt": "2026-11-18",
+      "query": "\"Tessi\" facturation sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://fr.linkedin.com/company/tessi",
+        "https://www.tessi.eu/fr/actualites/page/3/",
+        "https://www.tessi.eu/wp-content/uploads/2025/12/cp-tessi-immatriculation-pa-digital-invoice-by-tessi.pdf",
+        "https://tessi.ch/fr/cgv.html",
+        "https://www.ledauphine.com/economie/2025/12/09/facturation-electronique-pour-tessi-toutes-les-entreprises-ne-sont-pas-assez-informees",
+        "https://www.comparateur-facturation-electronique.fr/produit/tessi-technologies/",
+        "https://ma-facture-electronique.org/plateforme-agreee/liste-officielle/tessi/",
+        "https://mx.linkedin.com/company/tessi",
+        "https://www.altares.com/2024/10/07/temoignage-tessi-faciliter-le-passage-a-la-facturation-electronique/",
+        "https://www.tessi.eu/wp-content/uploads/2025/06/rapport-rse-2024-fr.pdf",
+        "https://fr.wikipedia.org/wiki/Tessi"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "tiime",
+      "checkedAt": "2026-11-18",
+      "query": "\"Tiime\" nouveautés incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.statut-services.fr/service/tiime",
+        "https://support.tiime.fr/fr/articles/522862-securiser-votre-compte-tiime-avec-la-sca",
+        "https://nodva.fr/compatibilite/compatibilite-tiime",
+        "https://www.decideurs-magazine.com/finance/65699-maxime-digue-tiime-facturation-electronique-suspendre-la-reforme-apres-son-entree-en-vigueur-serait-une-erreur.html",
+        "https://facturationelectronique.net/plateformes/tiime/",
+        "https://www.tiime.fr/hubfs/tiime-guide-facturation-electronique-cible-entrepreneurs.pdf",
+        "https://www.tiime.fr/hubfs/CGU%20TIIME%202025%20V2.pdf",
+        "https://fr.wikipedia.org/wiki/Tiime"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "tradeshift",
+      "checkedAt": "2026-11-18",
+      "query": "\"Tradeshift\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.upguard.com/security-report/tradeshift",
+        "https://sodexo.support.tradeshift.com/knowledgebase/section/201300944",
+        "https://startup.genisisiq.com/tradeshift-ecf2a2/",
+        "https://www.rankiteo.com/company/tradeshift",
+        "https://apis.io/security/tradeshift/tradeshift-vulnerability-disclosure/",
+        "https://tradeshift-support.s3.amazonaws.com/cdn/knowledgebase/Block%20Supplier%20Onboarding%20-%20Tradeshift%20User%20Guide%2029.08.2023.pdf",
+        "https://tradeshift.com/wp-content/uploads/Tradeshift-cXML-User-Guide.pdf",
+        "https://en.wikipedia.org/wiki/Tradeshift",
+        "https://de.wikipedia.org/wiki/Tradeshift"
+      ],
+      "outcome": "Élément primaire qualifié dans ce lot ; voir les décisions et sources."
+    },
+    {
+      "platformSlug": "transalis",
+      "checkedAt": "2026-11-18",
+      "query": "\"Transalis\" security incident November 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "treso2",
+      "checkedAt": "2026-11-18",
+      "query": "\"Treso2\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "tungsten",
+      "checkedAt": "2026-11-18",
+      "query": "\"Tungsten\" eInvoice Connect incident November 2026 17 18",
+      "status": "searched",
+      "resultUrls": [
+        "https://statuspage.incident.io/tungstencloud/europe/incidents/01M7MKSVTQMQ6QSK14RDM9E47D",
+        "https://status.tungstencloud.com/europe/history",
+        "https://isdown.app/status/tungsten-automation-emea",
+        "https://docshield.tungstenautomation.com/eInvoiceConnect/en_US/help/eInvoiceConnect_help/eInvoiceConnect_help/c_whatsnew.html",
+        "https://pingoru.io/providers/tungsten-automation/outage-history",
+        "https://statusgator.com/services/tungsten-automation-europe/einvoice-connect",
+        "https://statusfield.com/services/tungsten-automation-europe/einvoice-connect",
+        "https://instatus.com/now/tungstenautomation.com",
+        "https://docshield.tungstenautomation.com/eInvoiceConnect/en_US/print/TungstenEInvoiceConnectTechnicalSpecification_2026.1_EN.pdf",
+        "https://docshield.tungstenautomation.com/eInvoiceNetwork/en_US/print/TungsteneInvoiceNetworkPortalAccountManagementGuide_EN.pdf",
+        "https://docshield.azurewebsites.net/eInvoiceNetwork/en_US/print/TungsteneInvoiceNetworkPortalAccountManagementGuide_EN.pdf",
+        "https://docshield.tungstenautomation.com/InvoicePortal/en_US/print/TungstenEInvoiceConnectFeaturesGuide_EN.pdf",
+        "https://en.wikipedia.org/wiki/Tungsten_Network"
+      ],
+      "outcome": "Élément primaire qualifié dans ce lot ; voir les décisions et sources."
+    },
+    {
+      "platformSlug": "tx2",
+      "checkedAt": "2026-11-18",
+      "query": "\"TX2\" facturation sécurité incident novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "ventya",
+      "checkedAt": "2026-11-18",
+      "query": "\"Ventya\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "veryswing",
+      "checkedAt": "2026-11-18",
+      "query": "\"Veryswing\" incident sécurité novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://status.veryswing.com/incidents/199"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "village-connecte",
+      "checkedAt": "2026-11-18",
+      "query": "\"Le Village Connecté\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://fr.linkedin.com/posts/le-village-connecte_carrousel-hiver-2026-activity-7520786728891346944-jdiF",
+        "https://village-connecte.fr/app/uploads/sites/735/2025/06/AB9-Communique-de-presse-LVC-Le-Village-Connecte-annonce-que-sa-PDP-est-prete-VF.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "vosfactures",
+      "checkedAt": "2026-11-18",
+      "query": "\"VosFactures\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.thesiteoueb.net/actualite/article-9706-vosfactures-piratee-30-jours-apres-la-reforme-la-plateforme-agreee-touchee-via-son-prestataire-polonais.html",
+        "https://vosfactures.fr/securite",
+        "https://vosfactures.fr/conditions-utilisation",
+        "https://www.newsminimalist.com/articles/cyberattack-on-approved-e-invoicing-platform-vosfactures-exposes-confidential-data-in-france-2a8fee13",
+        "https://pdfkami.com/en/blog/vosfactures-hack-pdf-generator/"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "voxel",
+      "checkedAt": "2026-11-18",
+      "query": "\"Voxel\" Bavel security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.voxelgroup.net/descargas/extranethelp/en/accespartnerportal.pdf",
+        "https://www.voxelgroup.net/descargas/extranethelp/fr/partnerportalusermanual.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "weproc",
+      "checkedAt": "2026-11-18",
+      "query": "\"Weproc\" incident sécurité nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://status.weproc.com/"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "wisetech",
+      "checkedAt": "2026-11-18",
+      "query": "\"WiseTech\" invoicing security incident November 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.wisetechglobal.com/news/",
+        "https://www.wisetechglobal.com/media/4o1lj2yf/wisetech-global-2026-annual-report.pdf",
+        "https://www.freightwaves.com/news/accc-executes-search-warrant-at-logistics-software-giant-wisetech-in-competition-probe",
+        "https://theloadstar.com/dsv-weighs-early-cargowise-move-as-wisetech-tackles-pricing-and-accc-scrutiny/",
+        "https://www.wisetechglobal.com/media/paodhtpu/wisetech-global-data-processing-addendum-english-9-april-2025.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "xelya",
+      "checkedAt": "2026-11-18",
+      "query": "\"Xelya\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://status.xelya.info/",
+        "https://www.xelya.com/actualites/",
+        "https://www.pappers.fr/entreprise/xelya-480607894/comptes/XELYA%20-%20Comptes%20sociaux%202024%2018-06-2025.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "yooz",
+      "checkedAt": "2026-11-18",
+      "query": "\"Yooz\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://www.upguard.com/security-report/yooz",
+        "https://www.getyooz.com/hubfs/2025_YOOZ_TERMS_CONDITIONS_DPA.pdf"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "ytems",
+      "checkedAt": "2026-11-18",
+      "query": "\"Ytems\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://com.ytems.app/faq",
+        "https://www.modulyx.fr/plateformes-agreees/ytems",
+        "https://com.ytems.app/blog",
+        "https://com.ytems.app/blog?9641f2e2_page=2"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    },
+    {
+      "platformSlug": "zefyr",
+      "checkedAt": "2026-11-18",
+      "query": "\"Zefyr\" sécurité incident nouveautés novembre 2026",
+      "status": "searched",
+      "resultUrls": [
+        "https://logiciel-de-gestion-commerciale.fr/plateformes-agreees/zefyr/",
+        "https://www.zefyr.net/facturation-electronique"
+      ],
+      "outcome": "Recherche effectuée ; aucun élément nouveau suffisamment documenté retenu dans les résultats publics consultés."
+    }
+  ],
+  "exclusions": [
+    {
+      "platformSlug": "sage",
+      "url": "https://status.sage.com/incidents/89lthk8xcz62",
+      "title": "Paie France du 18 novembre",
+      "decision": "outside_invoice_scope",
+      "note": "Avis sur le service Paie ; aucun lien facturation électronique décrit."
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "title": "UPS RateShipment et Expedited Delivery",
+      "decision": "outside_france_pa_scope",
+      "note": "API de transport et d’expédition, sans lien documenté avec la PA française."
+    },
+    {
+      "platformSlug": "pagero",
+      "title": "Nordea / BgMax et maintenances Chorus Pro",
+      "decision": "foreign_service_or_planned_maintenance",
+      "note": "Le correctif Nordea suit la compensation suédoise. Les interventions Chorus Pro sont planifiées, avec clôtures publiées."
+    },
+    {
+      "platformSlug": "tungsten",
+      "title": "Maintenances RPA / Printix / eInvoice Network",
+      "decision": "planned_maintenance",
+      "note": "Notifications déclarées comme maintenance ; pas d’incident PA supplémentaire déduit."
+    },
+    {
+      "platformSlug": "tradeshift",
+      "title": "PHP : revue préventive clôturée",
+      "decision": "vulnerability_advisory_update",
+      "note": "Le 18 novembre, Tradeshift publie la confirmation finale de ses prestataires reçue le 10. PA, Babelway et plateforme principale sont déclarés non affectés. Aucun nouvel incident ajouté."
+    },
+    {
+      "platformSlug": "qonto",
+      "title": "Annonce bancaire et registre",
+      "decision": "attributed_announcement_only",
+      "note": "Annonce réelle de licence obtenue, distincte de la demande de 2025. REGAFI courant illisible en extraction ; l’index ancien et le registre DNB au 17 indiquent encore paiement. Conditions PA, gratuité et compte obligatoire restent inchangés."
+    }
+  ]
+}

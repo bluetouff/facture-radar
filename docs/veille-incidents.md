@@ -1,8 +1,10 @@
 # Veille publique des incidents PA
 
-Dernière revue : 1er novembre 2026. Le relevé initial du 30 septembre et ses compléments restent décrits ci-dessous. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
+Dernière revue : [18 novembre 2026](revue-pa-2026-11-18.md). La recherche couvre les 159 PA courantes. Le journal réunit 161 avis : 151 de disponibilité et dix de sécurité. Les relevés précédents restent décrits ci-dessous. Période étudiée : depuis le 1er septembre 2026, heure de Paris.
 
-## Recherche initiale et publications
+## Relevé initial et premiers compléments
+
+Les chiffres de cette section décrivent le relevé initial et ses premiers compléments. Les revues datées en fin de document retracent les évolutions ultérieures.
 
 - Les **149 PA** ont fait l’objet de deux recherches nominatives le 16 septembre, puis d’une recherche nominative d’actualisation le 20 septembre. Les requêtes et URL trouvées sont archivées dans `docs/archives/incident-research-2026-09-16.json` et `docs/archives/incident-research-2026-09-20.json`. Ces résultats de recherche sont des pistes, pas des preuves de compromission. `src/data/incident-research.json` conserve la date et le périmètre par PA.
 - **38 fiches de couverture de disponibilité** ont été examinées, avec des limites propres à chaque source : flux glissant, historique vide, page dynamique, ancien portail désactivé. La recherche des 149 noms et la lecture d’un historique sont deux contrôles différents.
@@ -15,7 +17,7 @@ Dernière revue : 1er novembre 2026. Le relevé initial du 30 septembre et ses c
 
 La fréquence demandée est **un relevé quotidien**, pas une surveillance à la minute. Le workflow `.github/workflows/incidents.yml` lance la collecte à 06 h 17 UTC. GitHub peut décaler l’exécution. Il n’y a aucune boucle de relance automatique.
 
-Le registre `src/data/incident-watch-sources.json` contient **30 sources au total : 29 PA et le CERT-FR**, après ajout des flux Abby le 12 novembre et fulll le 16 : RSS, trois API JSON et les pages publiques TrustEsker et Veryswing. Une exécution effectue au plus 30 lectures de contenu, avec quatre sources simultanées. La résolution DNS publique épinglée génère ses propres échanges réseau. Les sources d’un même opérateur sont interrogées une seule fois.
+Le registre `src/data/incident-watch-sources.json` contient **32 sources au total, couvrant 30 PA et le CERT-FR**, après ajout des flux Abby le 12 novembre, fulll le 16 et des deux environnements AGENA le 18 : RSS, trois API JSON et les pages publiques TrustEsker et Veryswing. Une exécution effectue au plus 32 lectures de contenu, avec quatre sources simultanées. La résolution DNS publique épinglée génère ses propres échanges réseau. Chaque URL est interrogée une seule fois ; une PA peut posséder plusieurs environnements de statut distincts.
 
 ```sh
 npm run incidents:collect
@@ -43,7 +45,7 @@ Les nouveaux éléments restent dans la file de revue même après un relevé sa
 Le réveil automatique Codex est **en pause** pour éviter la consommation automatique de tokens. Le workflow GitHub est un script déterministe, sans appel à un modèle. À la demande de l’utilisateur, lire d’abord les artifacts existants et examiner les changements utiles. Une recherche web supplémentaire répond à un signal concret ; la recherche générale des 159 PA n’est pas répétée chaque jour.
 
 1. Lire la source originale et identifier l’entreprise, le produit, les pays et les services effectivement concernés.
-2. Recontrôler les avis ouverts : paiements par carte Spendesk, raccordement Welyb/eFacture, statuts Welyb/jefacture.com et envois Welyb aux applications tierces. La réception des factures Spendesk et la clôture des exercices Welyb sont annoncées rétablies. Les messages Esker des environnements G et J ont disparu ; leurs états finaux restent à confirmer. La disparition d’une entrée du flux n’est pas une preuve de résolution.
+2. Recontrôler les avis encore ouverts d’après leur dernier état dans le corpus : notamment SuperPDP, les accès Ciel Données Mobiles, les rubriques Welyb en cours et la surveillance de Divalto. Conserver les reprises déjà annoncées. Les anciens messages Esker retirés restent à qualifier avec leur historique ; le retrait d’un message ne clôt pas automatiquement l’avis.
 3. Vérifier les dates : début réel nullable, premier signalement, publication de résolution, dernière mise à jour et date de notre contrôle. Un intervalle entre notifications n’est pas une durée de panne.
 4. Distinguer facturation électronique (`pa`), application (`publisher_service`) dépendance (`upstream`) service connecté (`connected_service`) et logiciel hors annuaire PA (`ecosystem_service`). Une revendication utilise `verification: reported_claim` et `status: unknown`. Le rattachement à une PA exige sa propre source ; un incident chez un partenaire ne démontre pas une atteinte à la PA.
 5. Ajouter les faits relus aux sources et au corpus, conserver les incertitudes et mettre à jour les contrôles de livraison. Exécuter `npm run build` et `npm run mcp:smoke`, puis vérifier les surfaces modifiées.
@@ -101,3 +103,9 @@ La liste officielle redevient accessible : 155 PA, dix dossiers en attente, Swil
 ## Revue du 16 novembre 2026
 
 La liste officielle conserve 159 PA et six dossiers en attente. Basikon est daté du 9 novembre et son contact est corrigé. Le journal atteint 150 avis : 142 de disponibilité et huit de sécurité. Les ajouts comprennent six rattrapages Cecurity et la confirmation Maileva publiée le 15 novembre, classée hors annuaire PA. Le RSS fulll, lié depuis le site officiel, rejoint le registre après validation : 250 notifications regroupées en 22 avis, sans changement de fréquence. Les chemins anglais Better Stack conservent les contrôles d’origine, de format, de date et de XML. La couverture par PA est dédoublonnée lors du raccordement d’un flux à une source déjà revue manuellement.
+
+## Revue du 18 novembre 2026
+
+Les 159 PA sont recherchées ; les listes DGFiP restent identiques au 16, avec six dossiers en attente. Quatre fiches sont complétées et le journal atteint 161 avis : 151 de disponibilité et dix de sécurité. Les onze ajouts comprennent trois historiques AGENA, deux rubriques Welyb déjà observées le 16, ainsi que Divalto et ConsonanceWeb. Divalto confirme une cyberattaque sur ses services SaaS et annonce leur reprise sous surveillance le 18 à 15 h 50 Paris ; le raccordement Docoon est documenté séparément. ConsonanceWeb confirme un accès dans une réponse relayée, avec application non nommée : l’avis reste hors rattachement PA, malgré le partenariat EsaLink d’une autre offre identifiée. Le suivi AIFE conserve la reprise des échanges VosFactures du 2 octobre au soir, précisée par une réponse gouvernementale publiée le 3 novembre.
+
+La collecte existante réussit sur 30 sources. Deux RSS AGENA validés séparément portent le registre à 32 lectures quotidiennes couvrant 30 PA et le CERT-FR, sans modèle ni changement de cadence. La revue des huit avis de sécurité antérieurs conserve leurs qualifications. Les dates opérationnelles, les publications et notre observation restent séparées dans les [archives et le rapport](revue-pa-2026-11-18.md).

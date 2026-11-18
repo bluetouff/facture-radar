@@ -1,0 +1,939 @@
+{
+  "checkedAt": "2026-11-18",
+  "newIncidents": [
+    {
+      "id": "agena-edi-network-20261005",
+      "platformSlugs": [
+        "agena3000"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "AGENA3000 : réception AS2 et portail ralentis le 5 octobre",
+      "summary": "AGENA3000 rapporte des ralentissements de réception AS2 et du portail EDI le 5 octobre. Son compte rendu attribue la dégradation aux sauvegardes complètes et signale des retards et des doublons dans les systèmes destinataires. L’avis annonce le rétablissement le même jour.",
+      "status": "resolved",
+      "startedAt": "2026-10-05",
+      "firstReportedAt": "2026-10-05T07:52:59Z",
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": "2026-10-05T08:58:36Z",
+      "updatedAt": "2026-10-05T09:04:25Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "agena-y7hfb5t177yh-20261118"
+      ],
+      "limitations": "Avis historique retrouvé le 18 novembre. Les heures du récit opérationnel sont sans fuseau explicite ; le début reste au jour près. Les notifications sont en UTC : reprise publiée à 08 h 58, compte rendu à 09 h 04. L’éditeur nomme les services EDI, sans préciser un impact sur les flux de la PA française.",
+      "affectedService": "A3 EDI : réception AS2, portail et services de transfert"
+    },
+    {
+      "id": "agena-edi-as2-followup-20260917",
+      "platformSlugs": [
+        "agena3000"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "AGENA3000 : suivi de septembre sur des retards AS2 survenus en août",
+      "summary": "Le compte rendu publié le 17 septembre revient sur un ralentissement AS2 du 3 août. AGENA3000 décrit des messages non copiés vers la plateforme EDI, des retards de réception de factures et la relance des flux. L’éditeur indique que les échanges ont finalement été traités et que des changements de sauvegarde et de supervision ont été apportés.",
+      "status": "resolved",
+      "startedAt": "2026-08-03",
+      "firstReportedAt": "2026-08-03T12:48:34Z",
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": "2026-09-17T12:46:30Z",
+      "updatedAt": "2026-09-17T13:17:03Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "agena-2vh0kgg58lk1-20261118"
+      ],
+      "limitations": "La clôture et le compte rendu du 17 septembre qualifient ce suivi dans la période. L’incident décrit s’est produit en août : ces publications ne datent pas une nouvelle panne de septembre ou un arrêt continu jusqu’au 17. Les heures opérationnelles du récit sont sans fuseau explicite. Le rattachement aux flux PA français reste inconnu.",
+      "affectedService": "A3 EDI : réception AS2 et transfert des messages"
+    },
+    {
+      "id": "agena-edi-translation-20260908",
+      "platformSlugs": [
+        "agena3000"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "AGENA3000 : traduction EDI perturbée puis rétablie le 8 septembre",
+      "summary": "AGENA3000 signale le 8 septembre un incident affectant ses services A3 EDI et annonce leur rétablissement le même jour. Les composants mentionnés comprennent la traduction EDI, le portail et les services de transfert.",
+      "status": "resolved",
+      "startedAt": "2026-09-08",
+      "firstReportedAt": "2026-09-08T08:27:36Z",
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": "2026-09-08T08:27:53Z",
+      "updatedAt": "2026-09-08T08:27:53Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "agena-3xz5m4shykqn-20261118"
+      ],
+      "limitations": "Avis historique retrouvé le 18 novembre. Le récit mentionne 2 h et 7 h 20 sans fuseau, conservés séparément des notifications UTC. La publication de résolution à 08 h 27 ne mesure pas la durée d’interruption. Les opérations de facturation et le périmètre PA ne sont pas détaillés.",
+      "affectedService": "A3 EDI : traduction et transfert de messages"
+    },
+    {
+      "id": "cegid-loop-states-20261116",
+      "platformSlugs": [
+        "cegid"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "Cegid Loop : aperçu des états rétabli après un correctif",
+      "summary": "Cegid Loop indique que l’aperçu de certains états affichait une page blanche entre le 13 et le 16 novembre. Le téléchargement permettait une édition correcte. Le correctif 5.57.1 est annoncé déployé le 16 novembre, avec incident résolu.",
+      "status": "resolved",
+      "startedAt": "2026-11-13",
+      "firstReportedAt": null,
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": "2026-11-16",
+      "updatedAt": "2026-11-16T15:33:31Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "cegid-loop-states-20261116-20261118"
+      ],
+      "limitations": "Le début et le retour du service restent au jour près, les heures du récit étant sans fuseau explicite. Le HTML horodate la mise à jour de l’article au 16 novembre à 15 h 33 min 31 s UTC ; sa première publication reste inconnue. L’aperçu des états comptables est concerné ; les échanges de facturation électronique de la PA ne sont pas cités.",
+      "affectedService": "Cegid Loop : aperçu des états comptables"
+    },
+    {
+      "id": "welyb-office-password-20261118",
+      "platformSlugs": [],
+      "kind": "availability",
+      "scope": "ecosystem_service",
+      "verification": "primary_notice",
+      "title": "Welyb : ouverture de documents Office perturbée après changement de mot de passe",
+      "summary": "Le support Welyb signale que l’ouverture de documents Office sur le poste Windows peut échouer après un changement de mot de passe Welyb. Il propose une procédure locale de réinitialisation des identifiants enregistrés puis de redémarrage.",
+      "status": "unknown",
+      "startedAt": null,
+      "firstReportedAt": null,
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": null,
+      "updatedAt": null,
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "welyb-status-20261118"
+      ],
+      "limitations": "Rubrique sans date propre, déjà présente dans la capture du 16 novembre et ajoutée au journal lors du rattrapage du 18. La date globale du 17 novembre ne date pas le début du problème. La page ne fournit pas de clôture générale. Le service Welyb et l’ouverture locale des documents sont concernés, sans impact PA documenté.",
+      "affectedService": "Welyb : ouverture de documents Office sous Windows"
+    },
+    {
+      "id": "welyb-themes-access-20261118",
+      "platformSlugs": [],
+      "kind": "availability",
+      "scope": "ecosystem_service",
+      "verification": "primary_notice",
+      "title": "Welyb : affectation des thèmes et accès aux répertoires perturbés",
+      "summary": "Welyb signale un défaut d’affectation automatique des thèmes aux utilisateurs Espace Pro lors de l’affectation de dossiers en masse. Les utilisateurs concernés ne voient alors que la corbeille dans les dossiers clients. Un correctif est en préparation et une affectation manuelle est proposée ; le support annonce qu’un rattrapage automatique ne sera pas possible.",
+      "status": "investigating",
+      "startedAt": null,
+      "firstReportedAt": null,
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": null,
+      "updatedAt": null,
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "welyb-status-20261118"
+      ],
+      "limitations": "Rubrique sans date propre, déjà visible dans la capture du 16 novembre et ajoutée au journal lors du rattrapage du 18. Première publication, début réel, nombre de dossiers et date de correction restent inconnus. Ce défaut de droits et d’affichage concerne Welyb, sans lien établi avec une indisponibilité de PA.",
+      "affectedService": "Welyb Espace Pro : thèmes et accès aux dossiers"
+    },
+    {
+      "id": "sage-jfqdhfkzr7b7",
+      "platformSlugs": [
+        "sage"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "affectedService": "Ciel Données Mobiles pour Sage 50 France",
+      "title": "Sage : connexions à Ciel Données Mobiles perturbées, service sous surveillance",
+      "summary": "Sage rapporte le 17 novembre des déconnexions de certains clients français de Sage 50 utilisant Ciel Données Mobiles. Un premier rétablissement est annoncé sous surveillance. Le 18, l’avis est rouvert pour des difficultés de connexion ; à 10 h 54 UTC, Sage annonce le service revenu au fonctionnement attendu et poursuit la surveillance.",
+      "status": "monitoring",
+      "startedAt": null,
+      "detectedAt": null,
+      "firstReportedAt": "2026-11-17T17:26:47Z",
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-11-18T10:54:09Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "sage-ciel-jfqdhfkzr7b7-20261118"
+      ],
+      "limitations": "L’avis concerne l’accès à l’application Ciel Données Mobiles Sage 50 FR. Son impact sur les échanges réglementaires de la PA reste à préciser. Le début effectif et le nombre de clients touchés ne sont pas publiés ; les notifications du 17 et du 18 ne définissent pas une panne continue."
+    },
+    {
+      "id": "pennylane-kcyb49qwcrz9",
+      "platformSlugs": [
+        "pennylane"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "affectedService": "Chat de l’assistance Pennylane",
+      "title": "Pennylane : chat d’assistance rétabli après une interruption partielle",
+      "summary": "Le 18 novembre à 15 h 35 CET, Pennylane signale une interruption partielle du chat, rendant son assistance plus difficile à joindre. La résolution est annoncée à 15 h 56 CET.",
+      "status": "resolved",
+      "startedAt": null,
+      "detectedAt": null,
+      "firstReportedAt": "2026-11-18T14:35:31Z",
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": "2026-11-18T14:56:58Z",
+      "updatedAt": "2026-11-18T14:56:58Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "pennylane-chat-kcyb49qwcrz9-20261118"
+      ],
+      "limitations": "Le composant publié est Customer support. L’avis porte sur le canal de chat et ne signale pas une interruption de la facturation électronique. Le début réel et le nombre d’utilisateurs touchés restent non publiés."
+    },
+    {
+      "id": "tungsten-connect-20261117",
+      "platformSlugs": [
+        "tungsten"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "affectedService": "Tungsten eInvoice Connect, page de statut Europe",
+      "title": "Tungsten : connexion et API eInvoice Connect rétablies",
+      "summary": "Le 17 novembre, Tungsten signale un blocage des connexions et de l’accès API eInvoice Connect. Des capacités supplémentaires sont ajoutées pendant l’analyse de la cause. À 12 h 18 UTC, l’éditeur annonce les accès rétablis sous surveillance, puis clôt l’avis à 13 h 03 UTC après contrôle du fonctionnement.",
+      "status": "resolved",
+      "startedAt": null,
+      "detectedAt": null,
+      "firstReportedAt": "2026-11-17T11:20:47.189Z",
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": "2026-11-17T13:03:10.512Z",
+      "updatedAt": "2026-11-17T13:03:10.512Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "tungsten-connect-20261117-20261118"
+      ],
+      "limitations": "La source primaire nomme eInvoice Connect dans le portail Europe ; les pays et clients concernés, ainsi que l’impact précis sur les flux de la PA française, restent non détaillés. Les horodatages UTC proviennent des données de la page et sont recoupés avec le RSS. Les notifications ne mesurent pas la durée effective de l’interruption."
+    },
+    {
+      "id": "divalto-security-20261112",
+      "platformSlugs": [
+        "docoon"
+      ],
+      "kind": "security",
+      "scope": "connected_service",
+      "verification": "primary_notice",
+      "affectedService": "Plateforme SaaS Divalto et environnements ERP / CRM hébergés",
+      "relationship": {
+        "note": "Divalto documente son connecteur de facturation électronique avec Docoon. L’incident est annoncé par Divalto et concerne ses services SaaS ; une atteinte aux systèmes de Docoon reste non documentée.",
+        "sourceIds": [
+          "divalto-docoon-integration-20261118"
+        ]
+      },
+      "title": "Divalto : cyberattaque ciblée, services rétablis sous surveillance",
+      "summary": "Après un premier avis de sécurité le 12 novembre, Divalto annonce le 15 de nouvelles tentatives d’attaques contrées et un nouvel isolement préventif de sa plateforme. Le 18 novembre, l’éditeur déclare les modalités habituelles d’accès rétablies depuis 15 h 50, avec des services fonctionnant normalement sous surveillance accrue. Il indique qu’à ce stade ses investigations ne montrent pas de compromission des données métier des clients.",
+      "status": "monitoring",
+      "startedAt": null,
+      "detectedAt": null,
+      "firstReportedAt": "2026-11-12",
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-11-18T14:50:00Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "divalto-erp-security-20261118",
+        "divalto-crm-security-20261118"
+      ],
+      "limitations": "La première communication du 12 novembre est retrouvée dans une copie indexée de la page primaire. Le message courant de reprise est daté du 18 par son horodatage public, distinct du début réel de l’attaque, non publié. Les anciennes annonces conservées dans le calendrier se recoupent ; elles ne décrivent pas une interruption continue. Le raccordement à Docoon est documenté séparément. Les avis ne précisent pas l’impact sur les flux PA français."
+    },
+    {
+      "id": "consonanceweb-security-20261117",
+      "platformSlugs": [],
+      "kind": "security",
+      "scope": "ecosystem_service",
+      "verification": "relayed_notice",
+      "affectedService": "Application ConsonanceWeb non nommée",
+      "relationship": {
+        "note": "ConsonanceWeb commercialise une offre de gestion commerciale raccordée à EsaLink. L’application affectée par cet incident n’est pas identifiée : aucun rattachement de cet accès au connecteur de facturation n’est établi.",
+        "sourceIds": [
+          "consonanceweb-esalink-integration-20261118"
+        ]
+      },
+      "title": "ConsonanceWeb : accès à une application confirmé dans une réponse relayée, ampleur contestée",
+      "summary": "Après la revendication publiée le 17 novembre, FrenchBreaches relaie le 18 une réponse de ConsonanceWeb confirmant un accès non autorisé à une application entre le 13 et le 15 novembre. L’éditeur évoque quelques milliers de tiers potentiellement concernés et conteste le chiffre initial d’un million de personnes. Des données personnelles, notamment bancaires, ont pu être consultées. Il annonce une notification à la CNIL, l’information du client concerné et le dépôt d’une plainte.",
+      "status": "unknown",
+      "startedAt": null,
+      "detectedAt": null,
+      "firstReportedAt": "2026-11-17",
+      "firstObservedAt": "2026-11-18",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-11-18",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "frenchbreaches-consonanceweb-20261117"
+      ],
+      "limitations": "La confirmation est relayée par FrenchBreaches ; aucun communiqué original distinct n’a été retrouvé sur le site de l’éditeur. L’application et le client touchés ne sont pas nommés. Le début précis, la clôture et le nombre de personnes restent à établir. Les volumes initiaux sont contestés. L’offre reliée à EsaLink est documentée, mais aucun impact sur les systèmes EsaLink ou les flux de sa PA n’est établi."
+    }
+  ],
+  "updatedIncidents": [
+    {
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "scope": "connected_service",
+      "verification": "relayed_notice",
+      "affectedService": "Welyb / Portail AGIRIS CONNECT",
+      "relationship": {
+        "note": "Welyb propose un connecteur vers eFacture by Cecurity. La fiche Cecurity référence cet avis en raison de cette intégration. Le service concerné est précisé dans l’avis.",
+        "sourceIds": [
+          "welyb-cecurity-integration"
+        ]
+      },
+      "kind": "security",
+      "startedAt": null,
+      "detectedAt": "2026-09-01",
+      "firstReportedAt": "2026-09-15",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-09-15",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "frenchbreaches-welyb-20260915",
+        "frenchbreaches-welyb-20260915-relecture-20261112",
+        "frenchbreaches-welyb-20260915-relecture-20261116"
+      ],
+      "id": "welyb-agiris-securite-20260901",
+      "title": "Welyb / AGIRIS CONNECT : fuite de données signalée",
+      "summary": "FrenchBreaches relaie le 15 septembre une notification de fuite détectée le 1er septembre. Elle concerne un composant lié à Welyb / AGIRIS CONNECT : coordonnées, identifiants d’entreprise et mots de passe hachés sont cités.",
+      "status": "unknown",
+      "limitations": "Notification consultée par l’intermédiaire de FrenchBreaches ; confirmation directe de l’éditeur à obtenir. L’impact sur la PA Cecurity et sur les factures reste non établi."
+    },
+    {
+      "id": "zenfirst-claim-20260917",
+      "platformSlugs": [],
+      "kind": "security",
+      "scope": "ecosystem_service",
+      "verification": "reported_claim",
+      "affectedService": "Zenfirst",
+      "relationship": {
+        "note": "Zenfirst documente une connexion comptable à iSuite (ACD). Cette documentation ne nomme pas la PA partenaire : le rattachement reste à établir.",
+        "sourceIds": [
+          "zenfirst-integration-20260920"
+        ]
+      },
+      "title": "Zenfirst : revendication de fuite de données à confirmer",
+      "summary": "FrenchBreaches rapporte le 17 septembre une revendication visant des données d’utilisateurs, de prospects et de factures de Zenfirst. Zenfirst est un éditeur de logiciels de facturation et de trésorerie, absent de la liste des PA agréées consultée le 20 septembre.",
+      "status": "unknown",
+      "startedAt": null,
+      "detectedAt": null,
+      "firstReportedAt": "2026-09-17",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-09-17",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "frenchbreaches-zenfirst-20260917",
+        "frenchbreaches-zenfirst-20260917-relecture-20261112",
+        "frenchbreaches-zenfirst-20260917-relecture-20261116"
+      ],
+      "limitations": "La date d’accès, l’étendue et la cause technique restent à établir. L’impact sur une PA est non documenté ; cet avis est attribué uniquement à Zenfirst."
+    },
+    {
+      "id": "altagem-claim-20260921",
+      "platformSlugs": [
+        "iopole"
+      ],
+      "kind": "security",
+      "scope": "connected_service",
+      "title": "Altagem : revendication d’accès aux données à confirmer",
+      "summary": "FrenchBreaches et Cyberattaque.org rapportent le 21 septembre une revendication visant Altagem, logiciel de gestion et de facturation. Les données revendiquées concernent des clients, des comptes et des activités opérationnelles.",
+      "status": "unknown",
+      "startedAt": null,
+      "firstReportedAt": "2026-09-21",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-09-21",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "frenchbreaches-altagem-20260921",
+        "cyberattaque-altagem-20260921",
+        "frenchbreaches-altagem-20260921-relecture-20261112",
+        "cyberattaque-altagem-20260921-relecture-20261112",
+        "frenchbreaches-altagem-20260921-relecture-20261116",
+        "cyberattaque-altagem-20260921-relecture-20261116"
+      ],
+      "limitations": "La confirmation directe d’Altagem, l’étendue et la date réelle de l’accès restent à obtenir. L’impact sur la PA Iopole et sur les flux de facturation est non établi.",
+      "verification": "reported_claim",
+      "affectedService": "Altagem",
+      "relationship": {
+        "note": "Altagem documente un partenariat et une connexion de facturation électronique avec Iopole. Ce lien explique la présence de cet avis sur la fiche Iopole ; la revendication vise Altagem.",
+        "sourceIds": [
+          "altagem-iopole-integration-20260923"
+        ]
+      }
+    },
+    {
+      "id": "faktus-claim-20260919",
+      "platformSlugs": [],
+      "kind": "security",
+      "scope": "ecosystem_service",
+      "title": "Faktus : revendication de fuite de données à confirmer",
+      "summary": "FrenchBreaches rapporte une revendication visant des données clients, financières et des documents attribués à Faktus, service de financement de factures du BTP. L’article du 19 septembre est complété le 20 avec des éléments revendiqués sur ses outils de relation client.",
+      "status": "unknown",
+      "startedAt": null,
+      "firstReportedAt": "2026-09-19",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-09-20",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "frenchbreaches-faktus-20260919",
+        "frenchbreaches-faktus-20260919-relecture-20261112",
+        "frenchbreaches-faktus-20260919-relecture-20261116"
+      ],
+      "limitations": "La date d’accès et les volumes avancés reposent sur la revendication. Confirmation de l’entreprise et périmètre complet à établir. Aucun impact sur une PA n’est documenté.",
+      "verification": "reported_claim",
+      "affectedService": "Faktus",
+      "relationship": {
+        "note": "Faktus présente un service de financement de factures. L’entreprise est absente de la liste DGFiP consultée le 23 septembre ; cet avis reste hors des fiches PA.",
+        "sourceIds": [
+          "faktus-financement-20260923"
+        ]
+      }
+    },
+    {
+      "id": "vosfactures-fakturownia-20260929",
+      "platformSlugs": [
+        "vosfactures"
+      ],
+      "kind": "security",
+      "scope": "upstream",
+      "verification": "relayed_notice",
+      "affectedService": "Données du logiciel VosFactures traitées par Fakturownia",
+      "title": "VosFactures : données exposées chez Fakturownia, extraction confirmée par le prestataire",
+      "summary": "Factuali confirme un accès non autorisé à des données VosFactures chez Fakturownia. Le complément officiel du prestataire, daté du 1er octobre, confirme la copie d’une grande partie de sa base sur les serveurs de l’attaquant et situe l’accès entre le 27 et le 28 septembre. Le périmètre des données françaises reste à préciser. Factuali déclare épargnés les services de facturation électronique directement opérés dans son propre environnement et les données de cartes de paiement. L’invalidation des codes API est annoncée pour le 1er octobre ; son exécution reste à vérifier. Le rétablissement des échanges avec l’AIFE est documenté dans un avis de disponibilité distinct ; l’investigation de sécurité reste en cours.",
+      "status": "investigating",
+      "startedAt": null,
+      "detectedAt": "2026-09-28",
+      "firstReportedAt": "2026-10-01",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-10-01",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "factuali-notification-relayed-20261001",
+        "fuitesinfos-vosfactures-20261001",
+        "fakturownia-security-20260929",
+        "factuali-notification-relayed-20261001-relecture-20261112",
+        "fuitesinfos-vosfactures-20261001-relecture-20261112",
+        "fakturownia-security-20260929-relecture-20261112",
+        "factuali-notification-relayed-20261001-relecture-20261116",
+        "fuitesinfos-vosfactures-20261001-relecture-20261116",
+        "fakturownia-security-20260929-relecture-20261116"
+      ],
+      "limitations": "La période du 27 au 28 septembre décrit l’accès aux systèmes du prestataire ; le début propre à l’exposition des comptes VosFactures reste inconnu. Le 28 correspond à la détection chez Fakturownia, le 29 à l’information de Factuali. Le volume, le détail des données françaises et leur extraction effective restent à préciser. Les bornes historiques des données polonaises ne sont pas transposées à VosFactures. Le prestataire poursuit son investigation avec CERT Polska."
+    },
+    {
+      "id": "vosfactures-aife-suspension-20261002",
+      "platformSlugs": [
+        "vosfactures"
+      ],
+      "kind": "availability",
+      "scope": "pa",
+      "affectedService": "Échanges FACTUALI / VosFactures avec les services de l’AIFE",
+      "title": "VosFactures / AIFE : reprise des échanges datée du 2 octobre au soir",
+      "summary": "La réponse gouvernementale publiée le 3 novembre précise que les échanges avec Factuali / VosFactures ont été rétablis le 2 octobre en fin de journée, après transmission de preuves à l’AIFE. L’administration déclare que ses vérifications ont confirmé l’absence d’impacts identifiés sur les environnements SecNumCloud. L’entretien du directeur de l’AIFE publié le 27 octobre décrivait une suspension de 48 heures. La clôture de la surveillance et l’investigation chez Fakturownia restent distinctes.",
+      "status": "monitoring",
+      "startedAt": "2026-10-01",
+      "firstReportedAt": null,
+      "firstObservedAt": "2026-10-02",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-11-03",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "aife-vosfactures-reprise-20261004",
+        "aife-vosfactures-20261002",
+        "aife-interview-20261027-20261112",
+        "an-vosfactures-reponse-20261103"
+      ],
+      "limitations": "Le 3 novembre date la réponse publiée au Journal officiel ; le rétablissement est situé au 2 octobre en fin de journée, sans heure précise. Les 48 heures sont déclarées dans l’entretien, sans bornes horaires complètes. La fin de surveillance et la clôture de l’incident chez le prestataire restent non datées.",
+      "verification": "relayed_notice"
+    },
+    {
+      "id": "fiducial-client-onpremise-20261001",
+      "platformSlugs": [],
+      "kind": "security",
+      "scope": "ecosystem_service",
+      "title": "Client d’un logiciel FIDUCIAL : intrusion dans son environnement local",
+      "summary": "Dans son communiqué du 1er octobre, FIDUCIAL rapporte une intrusion chez un client utilisant un logiciel FIDUCIAL Informatique installé dans son propre environnement. L’entreprise concernée a mis en place des mesures de remédiation et de sécurisation ; FIDUCIAL lui a recommandé de déclarer l’incident à la CNIL. Le groupe déclare son propre système d’information épargné.",
+      "status": "unknown",
+      "startedAt": null,
+      "firstReportedAt": "2026-10-01",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-10-01",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "fiducial-security-20261001",
+        "fiducial-security-20261001-relecture-20261112",
+        "fiducial-security-20261001-relecture-20261116"
+      ],
+      "limitations": "Le client et le logiciel ne sont pas nommés. La source est la déclaration de FIDUCIAL ; les dates de l’intrusion, son volume et sa résolution restent inconnus. Le communiqué ne rattache pas cet environnement à la PA FIDUCIAL Cloud / Facilia. Cet avis reste classé comme service hors annuaire PA et n’est attribué à aucune PA.",
+      "affectedService": "Client non nommé d’un logiciel FIDUCIAL Informatique installé localement"
+    },
+    {
+      "id": "welyb-ami-compta-20261014",
+      "platformSlugs": [],
+      "kind": "availability",
+      "scope": "ecosystem_service",
+      "title": "Welyb / Ami Compta : connexions et envois de documents perturbés",
+      "summary": "Welyb décrit des erreurs inhabituelles d’Ami Compta et des difficultés pour connecter de nouveaux dossiers ou envoyer des documents. Ses équipes ont contacté celles d’Ami Compta et orientent les utilisateurs vers leur support. La rubrique reste dans les perturbations lors de la lecture du 20 octobre.",
+      "status": "investigating",
+      "startedAt": null,
+      "firstReportedAt": null,
+      "resolutionReportedAt": null,
+      "updatedAt": null,
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "welyb-status-20261101",
+        "welyb-status-20261112",
+        "welyb-status-20261118"
+      ],
+      "limitations": "La rubrique reste sans date propre. La première copie conservée le 14 octobre portait une date générale de mise à jour du 13. La relecture du 20 confirme la présence de l’avis, sans nouvel horaire de début ni notification de résolution. L’attribution vient de Welyb et aucun opérateur PA particulier n’est désigné.",
+      "affectedService": "Connecteur Welyb vers Ami Compta",
+      "firstObservedAt": "2026-10-14"
+    },
+    {
+      "id": "welyb-cecurity-recuperation-20261014",
+      "platformSlugs": [
+        "cecurity"
+      ],
+      "kind": "availability",
+      "scope": "connected_service",
+      "title": "Welyb / eFacture : factures manquantes récupérées le 29 octobre",
+      "summary": "Welyb annonce le 29 octobre la récupération des factures manquantes provenant d’eFacture/Cecurity et de JeFacture.com. Ce complément clôt la perturbation de récupération dans le portail ; les services des PA conservent leur périmètre distinct.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": null,
+      "resolutionReportedAt": "2026-10-29",
+      "updatedAt": "2026-10-29",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "welyb-status-20261101",
+        "welyb-status-20261112",
+        "welyb-status-20261116",
+        "welyb-status-20261118"
+      ],
+      "limitations": "Le complément du 29 octobre est retrouvé lors de la relecture du 16 novembre. L’avis initial était sans date de publication propre et observé le 14 octobre. La reprise porte sur la récupération des factures dans Welyb ; les bornes horaires et volumes concernés restent inconnus.",
+      "affectedService": "Récupération des factures eFacture by Cecurity dans Welyb",
+      "firstObservedAt": "2026-10-14",
+      "relationship": {
+        "note": "Welyb documente sa connexion à la PA eFacture by Cecurity. Cet avis porte sur la récupération des factures par ce service connecté.",
+        "sourceIds": [
+          "welyb-cecurity-integration"
+        ]
+      }
+    },
+    {
+      "id": "welyb-mobile-download-20261101",
+      "platformSlugs": [],
+      "kind": "availability",
+      "scope": "ecosystem_service",
+      "verification": "primary_notice",
+      "affectedService": "Téléchargement de documents dans Welyb mobile",
+      "title": "Welyb mobile : téléchargement direct de documents perturbé",
+      "summary": "Welyb indique que le téléchargement direct est temporairement indisponible sur les versions mobiles 8.14.6 à 8.16 incluses. Une mise à jour corrective est annoncée en cours de déploiement ; le téléchargement depuis le navigateur est proposé.",
+      "status": "investigating",
+      "startedAt": null,
+      "firstReportedAt": null,
+      "firstObservedAt": "2026-11-01",
+      "resolutionReportedAt": null,
+      "updatedAt": null,
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "welyb-status-20261101",
+        "welyb-status-20261112",
+        "welyb-status-20261118"
+      ],
+      "limitations": "La page d’ensemble est datée du 30 octobre, sans date propre de début ou de première publication pour cette rubrique. Le service Welyb est concerné ; aucun impact sur les infrastructures d’une PA n’est établi."
+    },
+    {
+      "id": "welyb-mobile-viewer-20261101",
+      "platformSlugs": [],
+      "kind": "availability",
+      "scope": "ecosystem_service",
+      "verification": "primary_notice",
+      "affectedService": "Visualisation des documents dans Welyb mobile",
+      "title": "Welyb mobile : consultation de documents perturbée sur certains appareils Apple",
+      "summary": "Welyb signale une visualisation des documents indisponible pour certains utilisateurs sur iPhone ou iPad. L’investigation se poursuit ; le support propose la consultation depuis le navigateur du téléphone.",
+      "status": "investigating",
+      "startedAt": null,
+      "firstReportedAt": null,
+      "firstObservedAt": "2026-11-01",
+      "resolutionReportedAt": null,
+      "updatedAt": null,
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "welyb-status-20261101",
+        "welyb-status-20261112",
+        "welyb-status-20261118"
+      ],
+      "limitations": "La page d’ensemble est datée du 30 octobre, sans date propre de début ou de première publication pour cette rubrique. Le service Welyb est concerné ; aucun impact sur les infrastructures d’une PA n’est établi."
+    },
+    {
+      "id": "veryswing-vsdb-20261028",
+      "platformSlugs": [
+        "veryswing"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "title": "Veryswing : réplication VSDB rétablie après un incident réseau",
+      "summary": "Après le redémarrage du 29 octobre, Veryswing signale encore des coupures de réplication le 2 novembre. Le 5 novembre à 11 h 30 heure de Paris, l’éditeur annonce l’incident réseau résolu et le service rétabli. Il attribue les interruptions à des pertes de paquets sur une liaison privée entre deux zones techniques, provoquant des redémarrages d’interface réseau.",
+      "status": "resolved",
+      "startedAt": "2026-10-28T16:48:00Z",
+      "detectedAt": null,
+      "firstReportedAt": "2026-10-29T10:09:28Z",
+      "firstObservedAt": "2026-11-01",
+      "resolutionReportedAt": "2026-11-05T10:30:09Z",
+      "updatedAt": "2026-11-05T10:30:09Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "veryswing-vsdb-20261029",
+        "veryswing-201-resolution-20261112"
+      ],
+      "limitations": "L’incident vise la réplication VSDB du groupe 1. Le composant Facturation électronique est affiché opérationnel ; un impact sur les flux PA n’est pas établi. Les dates exactes des commentaires proviennent de leur attribut HTML Posted at, et non des libellés relatifs. La résolution publiée le 5 novembre ne permet pas de transformer toute la période depuis le 28 octobre en panne continue."
+    },
+    {
+      "id": "blg-security-followup-20260910",
+      "platformSlugs": [
+        "blg"
+      ],
+      "kind": "security",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "affectedService": "Instances du logiciel ERP blgCloud et extranets clients",
+      "title": "blgCloud : suivi de l’exfiltration de l’été publié en septembre",
+      "summary": "blgCloud confirme le 10 août une exfiltration sur certaines instances de son logiciel à la fin juillet. Dans son point du 10 septembre, l’éditeur précise que 2,7 % des instances clientes sont touchées et décrit le suivi des publications de données ainsi que les mesures de protection encore en déploiement. Il déclare avoir informé les clients concernés et la CNIL, avec une disponibilité ERP préservée.",
+      "status": "monitoring",
+      "startedAt": null,
+      "firstReportedAt": "2026-08-10",
+      "firstObservedAt": "2026-11-12",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-09-10",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "blg-security-20260810-review-20261112",
+        "blg-security-20260910",
+        "blg-security-20260810",
+        "blg-security-followup-review-20261116",
+        "blg-security-20260810-relecture-20261116",
+        "blg-security-20260910-relecture-20261116"
+      ],
+      "limitations": "Le communiqué initial situe l’attaque à la fin juillet ; son début exact reste inconnu. Le point de septembre actualise un incident antérieur et ne signale pas une nouvelle attaque de septembre. Le suivi en cours est celui décrit le 10 septembre, sans clôture plus récente identifiée. La portée sur la PA et les flux réglementaires français reste non établie. Volumes et déclarations de protection sont attribués à l’éditeur."
+    },
+    {
+      "id": "pennylane-hn2l065z54hr",
+      "platformSlugs": [
+        "pennylane"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "affectedService": "Application web Pennylane (app.pennylane.com)",
+      "title": "Pennylane : application rétablie après des instabilités le 10 novembre",
+      "summary": "Pennylane signale des erreurs et des instabilités dans son application web le 10 novembre. Une amélioration est annoncée à 12 h 05 CET, avec des perturbations encore possibles, puis la résolution à 14 h 40 CET.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-10T08:39:00Z",
+      "firstObservedAt": "2026-11-12",
+      "resolutionReportedAt": "2026-11-10T13:40:00Z",
+      "updatedAt": "2026-11-10T13:40:00Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "pennylane-hn2l065z54hr-20261112"
+      ],
+      "limitations": "La source nomme app.pennylane.com. Les flux réglementaires PA et leur éventuel impact ne sont pas précisés. Le début réel reste inconnu ; les notifications à la minute ne constituent pas une mesure de panne."
+    },
+    {
+      "id": "spendesk-5q8bzzg6ck1j",
+      "platformSlugs": [
+        "spendesk"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "affectedService": "Codes SMS, connexion, approbation de paiements et actions sensibles Spendesk",
+      "title": "Spendesk : vérifications SMS et authentification forte rétablies",
+      "summary": "Certains clients ne recevaient plus les codes SMS requis pour se connecter, approuver des paiements par carte et effectuer des actions sensibles. Après plusieurs étapes de reprise et de correction, Spendesk annonce à 18 h 24 CET un rétablissement complet effectif à 18 h 17 CET le 3 novembre.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-03T12:25:00Z",
+      "firstObservedAt": "2026-11-12",
+      "resolutionReportedAt": "2026-11-03T17:24:00Z",
+      "updatedAt": "2026-11-03T17:24:00Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "spendesk-5q8bzzg6ck1j-20261112"
+      ],
+      "limitations": "Il s’agit d’un incident de disponibilité de l’authentification, sans violation de données signalée par cette source. Les cartes, connexions et paiements sont cités ; les flux PA ne le sont pas. Les annonces successives ne prouvent pas une panne continue."
+    },
+    {
+      "id": "superpdp-errors-20261105",
+      "platformSlugs": [
+        "superpdp"
+      ],
+      "kind": "availability",
+      "scope": "pa",
+      "verification": "primary_notice",
+      "affectedService": "API api.superpdp.tech",
+      "title": "SuperPDP : nombre anormal d’erreurs 500 signalé le 5 novembre",
+      "summary": "SuperPDP publie le 5 novembre une alerte sur un nombre anormal d’erreurs 500 renvoyées par ses serveurs. L’historique conserve un message d’analyse en cours. Au contrôle du 16 novembre, la page courante affiche le service API opérationnel, sans notification de résolution datée pour cet avis.",
+      "status": "unknown",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-05",
+      "firstObservedAt": "2026-11-12",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-11-05",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "superpdp-errors-20261105-20261112",
+        "superpdp-history-20261116",
+        "superpdp-history-20261118"
+      ],
+      "limitations": "La page historique affiche 11 h 32 CET et le RSS 11 h 32 UTC : conservation au jour près devant cette contradiction. Le statut courant opérationnel ne date pas la reprise de cet incident. Début réel, opérations touchées et volumes restent inconnus."
+    },
+    {
+      "id": "sps-commerce-0l1110y8gs76",
+      "platformSlugs": [
+        "sps-commerce"
+      ],
+      "kind": "availability",
+      "scope": "publisher_service",
+      "verification": "primary_notice",
+      "affectedService": "Document Processing de SPS Commerce",
+      "title": "SPS Commerce : traitement des documents rétabli le 9 novembre",
+      "summary": "SPS Commerce signale un problème identifié sur le traitement de documents le 9 novembre. Un correctif est annoncé à 9 h 07 CST, suivi de la résolution à 9 h 15 CST.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-09T14:53:00Z",
+      "firstObservedAt": "2026-11-12",
+      "resolutionReportedAt": "2026-11-09T15:15:00Z",
+      "updatedAt": "2026-11-09T15:15:00Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "sps-0l1110y8gs76-20261112"
+      ],
+      "limitations": "Le composant Document Processing est cité. La source ne détaille pas les types de documents, les pays, les clients ou un effet sur la PA française. Les horaires CST sont convertis en UTC ; début réel inconnu."
+    },
+    {
+      "id": "welyb-acces-20261110",
+      "platformSlugs": [],
+      "kind": "availability",
+      "scope": "ecosystem_service",
+      "verification": "primary_notice",
+      "affectedService": "Accès web à la plateforme Welyb",
+      "title": "Welyb : accès à la plateforme rétabli le 10 novembre",
+      "summary": "Welyb signale le 10 novembre que certains utilisateurs accèdent difficilement à la plateforme. Un complément annonce l’incident terminé et l’accès pleinement rétabli à 14 h 22.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-10",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-10",
+      "updatedAt": "2026-11-10",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "welyb-acces-20261110-review-20261116",
+        "welyb-status-20261118"
+      ],
+      "limitations": "Avis du 10 novembre retrouvé lors de la relecture du 16. L’heure de reprise est publiée sans fuseau explicite ; les dates normalisées restent au jour près. Le début et les services précis touchés ne sont pas détaillés. Cet avis concerne Welyb, acteur hors de l’annuaire PA."
+    },
+    {
+      "id": "tungsten-email-20261112",
+      "platformSlugs": [
+        "tungsten"
+      ],
+      "kind": "availability",
+      "scope": "upstream",
+      "verification": "primary_notice",
+      "affectedService": "Intégrations e-mail de Tungsten Europe, dont eInvoice Connect et eInvoice Network",
+      "title": "Tungsten : avis sur les intégrations e-mail clôturé le 16 novembre",
+      "summary": "Tungsten Europe publie le 12 novembre un avis de surveillance lié aux difficultés Mail/Exchange de Microsoft. L’éditeur indique que ses services utilisant les e-mails peuvent être affectés et cite notamment eInvoice Connect et eInvoice Network parmi les composants concernés. Il annonce la résolution le 16 novembre à 06 h 58 UTC.",
+      "status": "resolved",
+      "startedAt": null,
+      "firstReportedAt": "2026-11-12T19:54:24Z",
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": "2026-11-16T06:58:37Z",
+      "updatedAt": "2026-11-16T06:58:37Z",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "tungsten-email-20261112-20261116"
+      ],
+      "limitations": "Le texte décrit un risque de perturbation des intégrations e-mail au niveau européen. Les clients français, les documents touchés et les flux PA réglementaires ne sont pas détaillés. La clôture est publiée sans bilan technique ni heure de reprise effective. Horodatages UTC lus dans les données structurées de la page et recoupés avec le flux RSS ; le rendu web varie selon le fuseau."
+    },
+    {
+      "id": "maileva-security-confirmation-20261115",
+      "platformSlugs": [],
+      "kind": "security",
+      "scope": "ecosystem_service",
+      "verification": "primary_notice",
+      "affectedService": "Envoi de documents et de courriers par Maileva",
+      "title": "Maileva : fuite de données confirmée, 22 millions de destinataires concernés",
+      "summary": "Le 15 novembre, La Poste confirme une cyberattaque de Maileva survenue à la mi-septembre et une fuite des noms, prénoms et adresses postales de 22 millions de destinataires. Des clients de Maileva signalent aussi une exposition possible du contenu de leurs courriers : Flandre Opale Habitat cite notamment des montants de factures. La Poste déclare la CNIL notifiée, une plainte déposée et une enquête judiciaire en cours.",
+      "status": "unknown",
+      "startedAt": null,
+      "detectedAt": null,
+      "firstReportedAt": null,
+      "firstObservedAt": "2026-11-16",
+      "resolutionReportedAt": null,
+      "updatedAt": "2026-11-15",
+      "checkedAt": "2026-11-18",
+      "sourceIds": [
+        "laposte-maileva-20261115",
+        "foh-maileva-20261103"
+      ],
+      "limitations": "Le 15 novembre date la confirmation du groupe ; des signalements antérieurs existent, sans première publication précisément établie ici. Le début exact et la clôture restent non datés. Les 22 millions désignent des destinataires de courriers, pas des utilisateurs de PA. Maileva est hors de l’annuaire des PA ; le lien de groupe avec Docaposte n’établit aucun impact sur Seres ou sur les échanges réglementaires. Les catégories de données supplémentaires varient selon le client."
+    }
+  ],
+  "exclusions": [
+    {
+      "platformSlug": "accenture",
+      "title": "FBIJobs.gov / Oracle PeopleSoft",
+      "decision": "foreign_client_not_pa",
+      "note": "Le récit SANS du 9 octobre relaie un client américain et un prestataire nommé par des sources anonymes. Aucun lien avec la PA française ou les flux de facturation n’est établi. Pas de nouvel avis attribué à Accenture PA.",
+      "url": "https://www.sans.org/newsletters/newsbites/xxviii-75"
+    },
+    {
+      "platformSlug": "axway",
+      "title": "Amplify Fusion US du 17 novembre",
+      "decision": "foreign_control_plane",
+      "note": "Plan de contrôle américain et journaux de transactions ; pas de panne des flux PA français établie."
+    },
+    {
+      "platformSlug": "agena3000",
+      "title": "Correctifs PHP et maintenances",
+      "decision": "preventive_maintenance",
+      "note": "La mise à jour PHP du 23 octobre annonce les services opérationnels et une absence d’indicateur de compromission constaté par l’éditeur. Les maintenances planifiées de novembre et décembre ne sont pas des incidents.",
+      "url": "https://a3edi1-status.agena3000.com/incidents/db196n8jl5nk"
+    },
+    {
+      "platformSlug": "dext",
+      "title": "Émission Dext",
+      "decision": "already_documented",
+      "note": "L’aide du 6 octobre est relue ; l’émission et ses cinq documents de vente annuels gratuits sont déjà documentés dans la fiche."
+    },
+    {
+      "platformSlug": "flowie",
+      "url": "https://docs.get-flowie.com/changelog",
+      "decision": "already_documented",
+      "note": "Lecture HTTPS fraîche : dernière entrée du 15 novembre, déjà documentée. L’ancien domaine back.flowie.ink est plus ancien ; il ne remplace pas la source courante."
+    },
+    {
+      "platformSlug": "gestav",
+      "url": "https://gestav.com/facturation-electronique/tarifs",
+      "decision": "already_documented",
+      "note": "Les offres TTC annuelles Conformité et les offres ERP+PA HT ont déjà leurs unités, plafonds et engagement de douze mois dans la fiche."
+    },
+    {
+      "platformSlug": "macompta",
+      "url": "https://help.macompta.fr/fr/articles/806988-recevoir-et-traiter-automatiquement-vos-factures-fournisseurs-via-la-plateforme-agreee",
+      "decision": "already_documented",
+      "note": "Réception et autofacturation déjà documentées le 12 novembre ; la date relative de la page ne date pas une nouveauté du 18."
+    },
+    {
+      "platformSlug": "indy",
+      "url": "https://wikicompta.indy.fr/fr/articles/13306020-les-evolutions-d-indy",
+      "decision": "historical_general_article",
+      "note": "Article daté du 7 octobre, nouveautés générales ; ne démontre pas une nouvelle activation PA en émission au 18 novembre."
+    },
+    {
+      "platformSlug": "n2f",
+      "url": "https://www.n2f.com/fr/nos-ressources/bilan-2026-et-feuille-de-route-n2f-facturation-electronique-ia-budget/",
+      "decision": "future_webinar",
+      "note": "Webinaire prévu le 10 décembre, sans nouveauté opérationnelle suffisamment précise à publier maintenant."
+    },
+    {
+      "platformSlug": "myunisoft",
+      "url": "https://meteo.myunisoft.fr/incident/4bc58847-ee70-4f9e-80fa-9feb6149c9a3/",
+      "decision": "outside_period",
+      "note": "La page trouvée par recherche décrit janvier 2026, antérieur à la période ; aucun nouvel avis ne lui est attribué."
+    },
+    {
+      "platformSlug": "iopole",
+      "url": "https://release.iopole.com/releases/index.json",
+      "decision": "release_notes_not_incident",
+      "note": "Les correctifs et améliorations cités dans les versions restent de la documentation API. Ils ne sont pas transformés en violation de sécurité ou incident de disponibilité."
+    },
+    {
+      "platformSlug": "fulll",
+      "decision": "already_published_and_historical_duplicates",
+      "note": "Les trois derniers avis sont ceux des 13, 14 et 16 novembre déjà intégrés. Le résiduel Caisse de l’avis PHP du 21 octobre reste rattaché à l’incident historique, sans nouveau comptage."
+    },
+    {
+      "platformSlug": "sage",
+      "url": "https://status.sage.com/incidents/89lthk8xcz62",
+      "title": "Paie France du 18 novembre",
+      "decision": "outside_invoice_scope",
+      "note": "Avis sur le service Paie ; aucun lien facturation électronique décrit."
+    },
+    {
+      "platformSlug": "pitney-bowes",
+      "title": "UPS RateShipment et Expedited Delivery",
+      "decision": "outside_france_pa_scope",
+      "note": "API de transport et d’expédition, sans lien documenté avec la PA française."
+    },
+    {
+      "platformSlug": "pagero",
+      "title": "Nordea / BgMax et maintenances Chorus Pro",
+      "decision": "foreign_service_or_planned_maintenance",
+      "note": "Le correctif Nordea suit la compensation suédoise. Les interventions Chorus Pro sont planifiées, avec clôtures publiées."
+    },
+    {
+      "platformSlug": "tungsten",
+      "title": "Maintenances RPA / Printix / eInvoice Network",
+      "decision": "planned_maintenance",
+      "note": "Notifications déclarées comme maintenance ; pas d’incident PA supplémentaire déduit."
+    },
+    {
+      "platformSlug": "tradeshift",
+      "title": "PHP : revue préventive clôturée",
+      "decision": "vulnerability_advisory_update",
+      "note": "Le 18 novembre, Tradeshift publie la confirmation finale de ses prestataires reçue le 10. PA, Babelway et plateforme principale sont déclarés non affectés. Aucun nouvel incident ajouté."
+    },
+    {
+      "platformSlug": "qonto",
+      "title": "Annonce bancaire et registre",
+      "decision": "attributed_announcement_only",
+      "note": "Annonce réelle de licence obtenue, distincte de la demande de 2025. REGAFI courant illisible en extraction ; l’index ancien et le registre DNB au 17 indiquent encore paiement. Conditions PA, gratuité et compte obligatoire restent inchangés."
+    },
+    {
+      "topic": "Image liée au bouton Communiqué",
+      "url": "https://frenchbreaches.com/assets/uploads/thread_92780d9f2e6b4bad0de65acebe444356.webp",
+      "decision": "generic_illustration_not_evidence",
+      "note": "L’image montre un logo sur un ordinateur ; ce n’est pas une notification et elle reste exclue des sources du corpus."
+    },
+    {
+      "topic": "Volumes de la revendication",
+      "decision": "not_confirmed_and_contested",
+      "note": "Le million de personnes revendiqué n’est pas retenu comme bilan confirmé. Les échantillons et fichiers volés n’ont pas été téléchargés."
+    }
+  ],
+  "feedValidation": [
+    {
+      "sourceId": "agena3000-edi1",
+      "url": "https://a3edi1-status.agena3000.com/history.rss",
+      "pageUrl": "https://a3edi1-status.agena3000.com/",
+      "checkedAt": "2026-11-18",
+      "profile": "statuspage",
+      "status": "validated",
+      "candidateCount": 4,
+      "candidateIds": [
+        "agena3000-edi1-db196n8jl5nk",
+        "agena3000-edi1-y7hfb5t177yh",
+        "agena3000-edi1-2vh0kgg58lk1",
+        "agena3000-edi1-3xz5m4shykqn"
+      ],
+      "decision": "Flux officiel validé avec le parseur existant ; chaque avis reste qualifié avant publication."
+    },
+    {
+      "sourceId": "agena3000-edi2",
+      "url": "https://a3edi2-status.agena3000.com/history.rss",
+      "pageUrl": "https://a3edi2-status.agena3000.com/",
+      "checkedAt": "2026-11-18",
+      "profile": "statuspage",
+      "status": "validated",
+      "candidateCount": 1,
+      "candidateIds": [
+        "agena3000-edi2-ynxm9yttf28q"
+      ],
+      "decision": "Flux officiel validé avec le parseur existant ; chaque avis reste qualifié avant publication."
+    }
+  ],
+  "snapshotPolicy": "Les avis sont copiés depuis le corpus intégré final, après revue indépendante des dates, périmètres et doublons."
+}

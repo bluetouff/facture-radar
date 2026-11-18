@@ -7,7 +7,7 @@ import rawResearch from "./incident-research.json" with { type: "json" };
 import { incidentDateAfter } from "../lib/incident-dates.ts";
 
 export const INCIDENT_WATCH_SINCE = "2026-09-01";
-export const INCIDENT_WATCH_CHECKED_AT = "2026-11-16";
+export const INCIDENT_WATCH_CHECKED_AT = "2026-11-18";
 const timestamp = z.union([z.iso.datetime({ offset: true }), z.iso.date()]);
 export const incidentSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
@@ -720,6 +720,344 @@ const november16Coverage: Record<string, { platformSlug: string; sourceIds: stri
     "note": "Source officielle relue le 16 novembre. Le journal retient les services et pays nommés dans chaque avis ; la fenêtre publiée limite la profondeur de la revue."
   }
 };
+const november18Coverage: Record<string, {platformSlug: string; sourceIds: string[]; checkedAt: string; status: "partial" | "reviewed"; note: string}> = {
+  "avalara": {
+    "platformSlug": "avalara",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "avalara-watch-2026-09"
+    ],
+    "note": "Flux officiel relu le 18 novembre. Les services et pays effectivement nommés déterminent la qualification ; la fenêtre fournie reste limitée."
+  },
+  "axway": {
+    "platformSlug": "axway",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "axway-watch-2026-09"
+    ],
+    "note": "Le nouvel avis Amplify Fusion du 17 novembre concerne le plan de contrôle américain et les journaux de transactions. Les flux de données sont annoncés actifs ; le périmètre PA France reste non établi, avis exclu du journal."
+  },
+  "blg": {
+    "platformSlug": "blg",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "blg-watch-2026-09"
+    ],
+    "note": "Flux officiel relu le 18 novembre. Les services et pays effectivement nommés déterminent la qualification ; la fenêtre fournie reste limitée."
+  },
+  "docoon": {
+    "platformSlug": "docoon",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "divalto-erp-security-20261118",
+      "divalto-crm-security-20261118",
+      "divalto-docoon-integration-20261118"
+    ],
+    "note": "Divalto, connecté à Docoon pour la facturation électronique, confirme une cyberattaque sur ses propres services SaaS et une reprise sous surveillance le 18 novembre. L’avis reste attribué au service Divalto ; aucun impact sur les systèmes de la PA Docoon n’est établi par ces sources."
+  },
+  "dokapi": {
+    "platformSlug": "dokapi",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "dokapi-watch-2026-09"
+    ],
+    "note": "Flux officiel relu le 18 novembre. Les services et pays effectivement nommés déterminent la qualification ; la fenêtre fournie reste limitée."
+  },
+  "ecosio-intercom": {
+    "platformSlug": "ecosio-intercom",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "ecosio-intercom-watch-2026-09"
+    ],
+    "note": "Flux officiel relu le 18 novembre. Les services et pays effectivement nommés déterminent la qualification ; la fenêtre fournie reste limitée."
+  },
+  "eezi": {
+    "platformSlug": "eezi",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "eezi-watch-2026-09"
+    ],
+    "note": "Flux officiel relu le 18 novembre. Les services et pays effectivement nommés déterminent la qualification ; la fenêtre fournie reste limitée."
+  },
+  "ademico": {
+    "platformSlug": "ademico",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "ademico-watch-2026-09"
+    ],
+    "note": "Flux officiel relu le 18 novembre. Les services et pays effectivement nommés déterminent la qualification ; la fenêtre fournie reste limitée."
+  },
+  "abby": {
+    "platformSlug": "abby",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "abby-status-20261112"
+    ],
+    "note": "Flux officiel relu le 18 novembre. Les services et pays effectivement nommés déterminent la qualification ; la fenêtre fournie reste limitée."
+  },
+  "agena3000": {
+    "platformSlug": "agena3000",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "agena3000-edi1-status-20261118",
+      "agena3000-edi2-status-20261118",
+      "agena-y7hfb5t177yh-20261118",
+      "agena-2vh0kgg58lk1-20261118",
+      "agena-3xz5m4shykqn-20261118",
+      "agena-php-20261118"
+    ],
+    "note": "Deux environnements A3 EDI sont suivis : trois avis historiques de l’environnement 1 sont qualifiés, dont un compte rendu de septembre sur une panne d’août ; l’environnement 2 ne fournit dans la fenêtre que le correctif PHP. Les maintenances et la mise à jour préventive PHP restent séparées des incidents. Le périmètre de la PA française est à documenter."
+  },
+  "cecurity": {
+    "platformSlug": "cecurity",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "cecurity-status-20261118",
+      "welyb-status-20261118"
+    ],
+    "note": "La page courante conserve l’avis MFA Microsoft rétabli ; aucune nouvelle panne qualifiée n’est retrouvée. Welyb conserve la récupération des factures manquantes annoncée le 29 octobre. Les autres symptômes Welyb gardent leur périmètre applicatif."
+  },
+  "cegid": {
+    "platformSlug": "cegid",
+    "checkedAt": "2026-11-18",
+    "status": "partial",
+    "sourceIds": [
+      "cegid-loop-states-20261116-20261118"
+    ],
+    "note": "Le support Loop documente une page blanche d’aperçu des états, résolue par le correctif du 16 novembre. Cet avis applicatif ne décrit pas de panne des échanges PA."
+  },
+  "esker": {
+    "platformSlug": "esker",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "esker-status-20261116"
+    ],
+    "status": "partial",
+    "note": "La lecture des quinze environnements TrustEsker ne présente aucun avis courant. Les avis historiques retirés conservent leurs états de clôture inconnus."
+  },
+  "fiskaltrust": {
+    "platformSlug": "fiskaltrust",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "fiskaltrust-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Le flux officiel répond avec une liste vide ; la fenêtre retournée limite l’historique disponible."
+  },
+  "flowie": {
+    "platformSlug": "flowie",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "flowie-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Le flux officiel est vide. Le changelog primaire relu séparément reste à son entrée du 15 novembre, déjà intégrée à la fiche."
+  },
+  "invopop": {
+    "platformSlug": "invopop",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "invopop-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Le flux conserve trois avis historiques ; le dernier, sur le traitement et le téléchargement de documents, est annoncé rétabli le 3 octobre."
+  },
+  "lucca": {
+    "platformSlug": "lucca",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "lucca-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Le flux conserve les avis publiés, dont celui du 3 novembre déjà intégré. La maintenance prévue le 18 novembre reste séparée des incidents."
+  },
+  "myunisoft": {
+    "platformSlug": "myunisoft",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "myunisoft-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "L’API publique conserve sept avis ; le plus récent concerne Gestion financière le 13 novembre et figure déjà au journal. Les horaires du calendrier restent distincts d’une durée réelle de panne."
+  },
+  "n2f": {
+    "platformSlug": "n2f",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "n2f-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Le flux officiel répond avec une liste vide. Le webinaire du 10 décembre présente une feuille de route future, sans incident ni lancement supplémentaire qualifié."
+  },
+  "fulll": {
+    "platformSlug": "fulll",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "fulll-status-20261116"
+    ],
+    "status": "partial",
+    "note": "Les 250 notifications du flux se regroupent en 22 avis. Le dernier est clôturé le 16 novembre ; les avis déjà publiés et les doublons historiques sont conservés sans nouvel ajout."
+  },
+  "mysupply": {
+    "platformSlug": "mysupply",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "mysupply-manual-status-2026-09"
+    ],
+    "status": "partial",
+    "note": "L’ancien historique renvoie toujours vers la page de contact Inexchange. Cette page commerciale ne fournit pas l’historique d’incidents de la PA française."
+  },
+  "odoo": {
+    "platformSlug": "odoo",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "odoo-manual-status-2026-09"
+    ],
+    "status": "partial",
+    "note": "La page d’état renvoie vers les messages du compte OdooStatus sur X et demande une connexion pour les consulter. La réponse publique obtenue ne restitue pas d’historique qualifiable."
+  },
+  "iopole": {
+    "platformSlug": "iopole",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "iopole-manual-status-2026-09"
+    ],
+    "status": "partial",
+    "note": "La page publique Iopole Api SLA répond avec une coquille d’interface ; les événements chargés dynamiquement restent non vérifiés. Les notes de version de l’API constituent une source distincte, sans bilan de disponibilité déduit."
+  },
+  "sage": {
+    "platformSlug": "sage",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "sage-ciel-jfqdhfkzr7b7-20261118",
+      "sage-status-2026-09"
+    ],
+    "status": "partial",
+    "note": "L’avis Ciel Données Mobiles Sage 50 FR des 17 et 18 novembre est sous surveillance après rétablissement annoncé. La paie française et les services étrangers ne sont pas assimilés aux flux PA."
+  },
+  "pennylane": {
+    "platformSlug": "pennylane",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "pennylane-chat-kcyb49qwcrz9-20261118",
+      "pennylane-status-2026-09"
+    ],
+    "status": "partial",
+    "note": "Un avis sur le chat d’assistance du 18 novembre est annoncé résolu ; son périmètre reste distinct de la facturation électronique. L’avis applicatif du 10 demeure clos."
+  },
+  "tungsten": {
+    "platformSlug": "tungsten",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "tungsten-connect-20261117-20261118",
+      "tungsten-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "L’avis eInvoice Connect du 17 novembre annonce le retour des connexions et de l’API puis sa clôture. La page Europe ne détaille pas le périmètre français. Les maintenances RPA, Printix et eInvoice Network restent séparées."
+  },
+  "superpdp": {
+    "platformSlug": "superpdp",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "superpdp-history-20261118",
+      "superpdp-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "L’historique relu le 18 novembre conserve l’alerte d’erreurs 500 du 5 sans reprise datée. Le flux courant vide et l’API affichée opérationnelle ne clôturent pas cet avis."
+  },
+  "pagero": {
+    "platformSlug": "pagero",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "pagero-status-20261118"
+    ],
+    "status": "partial",
+    "note": "La page courante conserve les avis français déjà qualifiés et affiche des maintenances Chorus Pro achevées le 18. Le suivi Nordea/BgMax porte sur la compensation suédoise et reste hors du journal français."
+  },
+  "veryswing": {
+    "platformSlug": "veryswing",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "veryswing-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "L’avis VSDB conserve la résolution du 5 novembre ; la réplication du groupe 1 garde un périmètre distinct de la PA."
+  },
+  "spendesk": {
+    "platformSlug": "spendesk",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "spendesk-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Les derniers avis qualifiés conservent leurs résolutions. Les pistes de moniteurs tiers sur Twilio ou Segment ne sont pas attribuées à la PA française."
+  },
+  "sps-commerce": {
+    "platformSlug": "sps-commerce",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "sps-status-20261020"
+    ],
+    "status": "partial",
+    "note": "Le flux conserve la résolution du 9 novembre sur le traitement des documents. Le périmètre de la PA française reste non précisé."
+  },
+  "weproc": {
+    "platformSlug": "weproc",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "weproc-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Les nouveaux éléments du flux portent sur les maintenances Chorus Pro, hors compteur des incidents. Le dernier avis qualifié garde sa date historique."
+  },
+  "swile": {
+    "platformSlug": "swile",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "swile-status-20261101"
+    ],
+    "status": "partial",
+    "note": "Le flux valide ne retourne pas d’avis dans la fenêtre consultée. La profondeur de l’historique et les composants couverts limitent ce suivi."
+  },
+  "storecove": {
+    "platformSlug": "storecove",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "storecove-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Le flux valide ne retourne pas d’avis dans la fenêtre consultée ; ce résultat ne mesure pas la disponibilité de la PA."
+  },
+  "pitney-bowes": {
+    "platformSlug": "pitney-bowes",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "pitney-bowes-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "Les avis récents portent sur les API d’expédition et transporteurs, dont UPS et USPS ; leur lien avec PB Invoice Services France reste non documenté."
+  },
+  "tiime": {
+    "platformSlug": "tiime",
+    "checkedAt": "2026-11-18",
+    "sourceIds": [
+      "tiime-watch-2026-09"
+    ],
+    "status": "partial",
+    "note": "L’API publique retourne une liste d’événements vide dans sa fenêtre glissante. L’historique depuis septembre reste limité aux sources disponibles."
+  }
+};
 export const incidentCoverage = [
   ...initialIncidentCoverage,
   ...incidentFeeds.filter(feed => feed.platformSlugs.length && !initialIncidentCoverage.some(item => feed.platformSlugs.includes(item.platformSlug))).flatMap(feed => feed.platformSlugs.map(platformSlug => ({
@@ -737,8 +1075,9 @@ export const incidentCoverage = [
   {"platformSlug": "fulll", "sourceIds": ["fulll-incident-1097346-20261101", "fulll-incident-1089867-20261101"], "checkedAt": "2026-11-01", "status": "partial", "note": "Treize pages d’incidents du 16 septembre au 31 octobre ont été relues. Douze avis sont regroupés après exclusion d’un doublon Caisse. Les messages PA des 14 et 21 octobre sont séparés des autres composants et des reprises successives."},
 ].map(item => {
   const previous = novemberCoverage[item.platformSlug];
-  const update = november16Coverage[item.platformSlug] ?? novemberCoverage[item.platformSlug];
-  return update ? { ...item, ...update, sourceIds: [...new Set([...item.sourceIds, ...(previous?.sourceIds ?? []), ...update.sourceIds])] } : item;
+  const november16 = november16Coverage[item.platformSlug];
+  const update = november18Coverage[item.platformSlug] ?? november16 ?? previous;
+  return update ? { ...item, ...update, sourceIds: [...new Set([...item.sourceIds, ...(previous?.sourceIds ?? []), ...(november16?.sourceIds ?? []), ...update.sourceIds])] } : item;
 }).map((item, _index, items) => ({
   ...item,
   sourceIds: [...new Set(items.filter(candidate => candidate.platformSlug === item.platformSlug).flatMap(candidate => candidate.sourceIds))],
@@ -752,13 +1091,13 @@ for (const item of incidentCoverage) {
 }
 export const incidentWatchLimit = "Ce journal réunit les avis des éditeurs, les notifications relayées et les revendications à confirmer. Chaque signalement précise son niveau de confirmation et le service concerné. Certains avis se recoupent. La couverture reste partielle ; l’évaluation de la disponibilité et de la sécurité exige aussi des mesures techniques et des audits.";
 export const securityReview = {
-  checkedAt: "2026-11-16",
+  checkedAt: "2026-11-18",
   status: "public_search_completed" as const,
   platformCount: incidentResearch.length,
-  note: "Recherche nominative des 159 PA actualisée le 16 novembre. Le communiqué La Poste du 15 novembre confirme la fuite Maileva, classée hors annuaire PA. Les sept avis déjà suivis conservent leurs dates de publication et leur niveau de confirmation. Les vulnérabilités publiées par le CERT-FR sont examinées séparément des incidents.",
-  sourceIds: ["tradeshift-php-notice-20261022", "axway-php-response-20261023", "axonaut-claim-20260629", "fiducial-security-20261001", "aife-vosfactures-reprise-20261004", "aife-vosfactures-20261002", "factuali-notification-relayed-20261001", "fuitesinfos-vosfactures-20261001", "fakturownia-security-20260929", "cert-fr-sap-20260908", "cert-fr-sap-20261013", "sap-patch-day-20261013", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration", "frenchbreaches-zenfirst-20260917", "zenfirst-integration-20260920", "frenchbreaches-altagem-20260921", "altagem-iopole-integration-20260923", "frenchbreaches-faktus-20260919", "faktus-financement-20260923"],
+  note: "Recherche nominative des 159 PA actualisée le 18 novembre. Divalto confirme une cyberattaque sur ses services SaaS et une reprise sous surveillance. La réponse de ConsonanceWeb est relayée avec un périmètre et des volumes précisés. Le raccordement Divalto à Docoon est documenté. L’application affectée chez ConsonanceWeb reste non identifiée : le dossier demeure hors des fiches PA. Les huit avis précédents gardent leurs dates de publication. Les bulletins de vulnérabilités sont suivis hors du compteur des incidents.",
+  sourceIds: ["tradeshift-php-notice-20261022", "tradeshift-php-review-20261118", "axway-php-response-20261023", "axonaut-claim-20260629", "fiducial-security-20261001", "aife-vosfactures-reprise-20261004", "aife-vosfactures-20261002", "factuali-notification-relayed-20261001", "fuitesinfos-vosfactures-20261001", "fakturownia-security-20260929", "cert-fr-sap-20260908", "cert-fr-sap-20261013", "sap-patch-day-20261013", "blg-security-20260810", "frenchbreaches-welyb-20260915", "welyb-cecurity-integration", "frenchbreaches-zenfirst-20260917", "zenfirst-integration-20260920", "frenchbreaches-altagem-20260921", "altagem-iopole-integration-20260923", "frenchbreaches-faktus-20260919", "faktus-financement-20260923"],
   findings: [
-    {"platformSlug": "tradeshift", "type": "vulnerability_advisory", "title": "Tradeshift : mesures préventives PHP, périmètres distingués", "note": "L’avis du 22 octobre déclare PA et Babelway non affectés, applications auxiliaires corrigées et prestataires en revue. Ces déclarations de l’éditeur ne constituent pas un nouvel incident confirmé.", "sourceIds": ["tradeshift-php-notice-20261022"]},
+    {"platformSlug":"tradeshift","type":"vulnerability_advisory","title":"Tradeshift : revue PHP clôturée, prestataires confirmés","note":"L’avis du 18 novembre clôt la revue préventive : dernière confirmation prestataire reçue le 10. Tradeshift déclare sa plateforme, Babelway et la PA non affectés ; les applications web auxiliaires ont été corrigées le 21 octobre. Son investigation n’identifie pas d’exploitation réussie ou d’accès aux données clients.","sourceIds":["tradeshift-php-notice-20261022","tradeshift-php-review-20261118"]},
     {"platformSlug": "axway", "type": "vulnerability_advisory", "title": "Axway : correctifs PHP déclarés dans le cloud", "note": "Le Trust Center annonce le 23 octobre des environnements cloud corrigés. Les clients utilisant PHP dans leurs installations sont invités à vérifier les mises à jour. Cet avis préventif reste distinct d’un signalement de compromission.", "sourceIds": ["axway-php-response-20261023"]},
     { platformSlug: "axonaut", type: "outside_period" as const, title: "Clients Axonaut : revendication publiée en juin", note: "FrenchBreaches rapporte le 29 juin une revendication de documents attribués à huit entreprises clientes d’Axonaut. L’authenticité, le point d’accès et une compromission de l’éditeur restent à confirmer. La publication est antérieure au 1er septembre et reste hors du journal de la période.", sourceIds: ["axonaut-claim-20260629"] },
     { platformSlug: "sap", type: "vulnerability_advisory" as const, title: "SAP : correctifs de sécurité d’octobre", note: "Le CERT-FR publie le 13 octobre un avis sur plusieurs produits SAP. Le Patch Day de l’éditeur décrit les correctifs de différents composants, dont Cloud Connector, NetWeaver et S/4HANA. L’impact sur la PA française doit être documenté séparément ; ces bulletins restent hors du compteur des incidents.", sourceIds: ["cert-fr-sap-20261013", "sap-patch-day-20261013"] },

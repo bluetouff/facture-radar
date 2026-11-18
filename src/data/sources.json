@@ -5510,5 +5510,229 @@
     "url": "https://flandreopalehabitat.fr/actualites/information-incident-de-securite-chez-notre-prestataire-maileva",
     "type": "security",
     "accessedAt": "2026-11-16"
+  },
+  {
+    "id": "agena3000-edi1-status-20261118",
+    "title": "AGENA3000 : historique officiel A3 EDI 1",
+    "publisher": "AGENA3000",
+    "url": "https://a3edi1-status.agena3000.com/history",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "agena3000-edi2-status-20261118",
+    "title": "AGENA3000 : historique officiel A3 EDI 2",
+    "publisher": "AGENA3000",
+    "url": "https://a3edi2-status.agena3000.com/",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "agena-y7hfb5t177yh-20261118",
+    "title": "AGENA3000 : réception AS2 et portail perturbés le 5 octobre",
+    "publisher": "AGENA3000",
+    "url": "https://a3edi1-status.agena3000.com/incidents/y7hfb5t177yh",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "agena-2vh0kgg58lk1-20261118",
+    "title": "AGENA3000 : retour du 17 septembre sur les retards AS2 du 3 août",
+    "publisher": "AGENA3000",
+    "url": "https://a3edi1-status.agena3000.com/incidents/2vh0kgg58lk1",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "agena-3xz5m4shykqn-20261118",
+    "title": "AGENA3000 : traduction EDI perturbée puis rétablie le 8 septembre",
+    "publisher": "AGENA3000",
+    "url": "https://a3edi1-status.agena3000.com/incidents/3xz5m4shykqn",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "agena-php-20261118",
+    "title": "AGENA3000 : correctifs PHP déclarés le 23 octobre",
+    "publisher": "AGENA3000",
+    "url": "https://a3edi1-status.agena3000.com/incidents/db196n8jl5nk",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "cegid-loop-states-20261116-20261118",
+    "title": "Cegid Loop : aperçu des états rétabli après un correctif le 16 novembre",
+    "publisher": "Cegid",
+    "url": "https://aide.loopsoftware.fr/hc/fr/articles/40799749697810-16-11-2026-Incident-r%C3%A9solu-page-blanche-lors-de-l-aper%C3%A7u-des-%C3%A9tats",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "welyb-status-20261118",
+    "title": "Welyb : état des fonctionnalités, page mise à jour le 17 novembre",
+    "publisher": "Welyb",
+    "url": "https://support.welyb.fr/statut-plateforme",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "axonaut-pricing-20261118",
+    "title": "Axonaut : tarifs mensuels et facturation électronique incluse",
+    "publisher": "Axonaut",
+    "url": "https://axonaut.com/content/prix",
+    "type": "pricing",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "axonaut-pricing-landing-20261118",
+    "title": "Axonaut : prix du premier utilisateur et des utilisateurs supplémentaires",
+    "publisher": "Axonaut",
+    "url": "https://axonaut.com/landing/graph-photo",
+    "type": "pricing",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "cecurity-status-20261118",
+    "title": "Cecurity : état et derniers avis publics",
+    "publisher": "Cecurity",
+    "url": "https://status.cecurity.com/",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "iopole-release-index-20261118",
+    "title": "Iopole : index officiel des versions, v0.300.1 du 3 novembre",
+    "publisher": "Iopole",
+    "url": "https://release.iopole.com/releases/index.json",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "sage-ciel-jfqdhfkzr7b7-20261118",
+    "title": "Sage : accès Ciel Données Mobiles Sage 50 FR perturbé les 17 et 18 novembre",
+    "publisher": "Sage",
+    "url": "https://status.sage.com/incidents/jfqdhfkzr7b7",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "pennylane-chat-kcyb49qwcrz9-20261118",
+    "title": "Pennylane : interruption partielle du chat d’assistance le 18 novembre",
+    "publisher": "Pennylane",
+    "url": "https://status.pennylane.com/incidents/kcyb49qwcrz9",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "tungsten-connect-20261117-20261118",
+    "title": "Tungsten : accès applicatif et API eInvoice Connect rétablis le 17 novembre",
+    "publisher": "Tungsten Automation",
+    "url": "https://status.tungstencloud.com/europe/incidents/01M7MKSVTQMQ6QSK14RDM9E47D",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "sellsy-api-20261118",
+    "title": "Sellsy : changelog API des 16 et 18 novembre",
+    "publisher": "Sellsy",
+    "url": "https://docs.sellsy.com/api/v2/changelog.html",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "qonto-bank-help-20261118",
+    "title": "Qonto : annonce du passage au statut bancaire à compter du 18 novembre",
+    "publisher": "Qonto",
+    "url": "https://support-fr.qonto.com/hc/fr/articles/45991915547409-Qonto-est-d%C3%A9sormais-une-banque-titulaire-d-un-agr%C3%A9ment-bancaire-complet-qu-est-ce-que-cela-change-pour-vous",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "qonto-bank-release-20261118",
+    "title": "Qonto : communiqué sur l’agrément bancaire et la clientèle européenne",
+    "publisher": "Qonto / PRNewswire",
+    "url": "https://www.prnewswire.com/news-releases/qonto-obtient-son-agrement-bancaire-marquant-une-etape-historique-dans-son-developpement-europeen-302942715.html",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "tradeshift-php-review-20261118",
+    "title": "Tradeshift : revue PHP clôturée, confirmation finale des prestataires",
+    "publisher": "Tradeshift",
+    "url": "https://onboardingsuppliers.support.tradeshift.com/knowledgebase/article/40039733487250",
+    "type": "security",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "superpdp-history-20261118",
+    "title": "SuperPDP : historique des avis relu le 18 novembre",
+    "publisher": "SuperPDP",
+    "url": "https://status.superpdp.tech/status-page/superpdp/history",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "pagero-status-20261118",
+    "title": "Pagero : historique et maintenances publics du 18 novembre",
+    "publisher": "Pagero",
+    "url": "https://status.pagero.com/",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "dgfip-list-20261118",
+    "title": "DGFiP : liste des plateformes agréées, relevé du 18 novembre",
+    "publisher": "Direction générale des Finances publiques",
+    "url": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "type": "official-list",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "divalto-erp-security-20261118",
+    "title": "Divalto : incident de sécurité SaaS et reprise sous surveillance, ERP",
+    "publisher": "Divalto",
+    "url": "https://status.divaltocloud.com/ERP",
+    "type": "security",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "divalto-crm-security-20261118",
+    "title": "Divalto : incident de sécurité SaaS et reprise sous surveillance, CRM",
+    "publisher": "Divalto",
+    "url": "https://status.divaltocloud.com/CRM",
+    "type": "security",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "divalto-docoon-integration-20261118",
+    "title": "Divalto : connecteur natif avec Docoon pour la facturation électronique",
+    "publisher": "Divalto",
+    "url": "https://www.divalto.com/facturation-electronique-ou-en-etes-vous/",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "an-vosfactures-reponse-20261103",
+    "title": "Réponse gouvernementale à la question n°18943 : reprise des échanges Factuali le 2 octobre",
+    "publisher": "Gouvernement / Journal officiel de l’Assemblée nationale",
+    "url": "https://www2.assemblee-nationale.fr/static/17/questions/jo/jo_anq_202644.pdf#page=124",
+    "type": "institutional",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "frenchbreaches-consonanceweb-20261117",
+    "title": "ConsonanceWeb : réponse de l’éditeur relayée le 18 novembre après la revendication du 17",
+    "publisher": "FrenchBreaches",
+    "url": "https://frenchbreaches.com/alertes/consonanceweb-piratage-lunarissec-fuite-donnees-million-personnes-mwkqj0w5acgs50xvng",
+    "type": "press",
+    "accessedAt": "2026-11-18"
+  },
+  {
+    "id": "consonanceweb-esalink-integration-20261118",
+    "title": "ConsonanceWeb : gestion commerciale et partenariat EsaLink",
+    "publisher": "ConsonanceWeb",
+    "url": "https://www.consonanceweb.com/gestion-commerciale",
+    "type": "documentation",
+    "accessedAt": "2026-11-18"
   }
 ]
